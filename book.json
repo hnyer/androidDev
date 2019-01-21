@@ -1,0 +1,92 @@
+{
+    "title" : "Aivin开发笔记",
+    "description" : "Aivin开发笔记",
+    "author"   : "Aivin",
+    "generator": "site",
+    "language" : "zh-hans",
+    "styles":{
+        "website": "styles/website.css"
+    } ,
+    "plugins": [
+        "-search",
+        "search-plus",
+        "todo" ,
+        "anchor-navigation-ex" ,
+        "copy-code-button",
+        "versions-select",
+	    	"fontsettings",
+		    "sharing",
+        "tbfed-pagefooter",
+        "donate",
+        "local-video",
+	    	"splitter",
+	    	"edit-link",
+	    	"expandable-chapters",
+	    	"favicon" ,
+        "theme-comscore",
+        "local-video"
+    ],
+
+    "pluginsConfig": {
+
+      	"fontsettings": {
+                  "theme": "sepia",
+                  "family": "sans",
+                  "size": 2
+      	},
+
+    	"sharing": {
+    		"weibo": true,
+    		"facebook": false,
+    		"twitter": false,
+    		"google": true,
+    		"instapaper": false,
+    		"vk": false,
+    		"all": [
+          "facebook",
+          "google",
+          "twitter",
+      		"weibo",
+          "instapaper"]
+    	},
+
+    	"tbfed-pagefooter": {
+    		"copyright":"无版权 可以无限制使用！",
+    		"modify_label": "该文件更新时间：",
+    		"modify_format": "YYYY-MM-DD HH:mm:ss"
+    	},
+
+  	 "favicon":{
+          "shortcut": "assets/images/favicon.ico",
+          "bookmark": "assets/images/favicon.ico"
+      },
+
+  	"donate": {
+  	  "wechat": "https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_微信收款码.png",
+  	  "alipay": "https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_支付宝收款码.png",
+  	  "title": "",
+  	  "button": "打赏",
+  	  "alipayText": "支付宝打赏",
+  	  "wechatText": "微信打赏"
+  	},
+
+  	 "expandable-chapters":{
+  	 },
+
+
+       "versions": {
+               "options": [
+                 {
+                     "value": "https://www.aivin666.cn/java_android/",
+                     "text": "v1.0"
+                 } 
+               ]
+           } ,
+
+  	"edit-link": {
+  		   "base": "https://www.baidu.com/",
+  		   "label": "托管页面"
+  		}
+
+    }
+}
