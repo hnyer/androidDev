@@ -1,14 +1,18 @@
 
-#个人信息
+# 说明
 本博客不保证完整性和正确性。请自行甄别。
 
 ![aivin](https://img.shields.io/badge/Aivin-aivinlinux%40qq.com-green.svg)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [github](https://github.com/hnyer) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [开源中国](https://gitee.com/hnyer) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[web学习总结](https://www.aivin666.cn/FrontEnd)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[linux等](https://www.aivin666.cn/AndroidAvInfo)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[简易博客前端](https://www.aivin666.cn/blogshow/)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[简易博客后台管理](https://www.aivin666.cn/blogsys)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[backDev](http://yhmpianzi.imwork.net:8087/backDev)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[gameDev](http://yhmpianzi.imwork.net:8087/gameDev)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[nativeDev](http://yhmpianzi.imwork.net:8087/nativeDev)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[webDev](http://yhmpianzi.imwork.net:8087/webDev)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+~~[博客前端](https://www.aivin666.cn/blogshow/)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~
+~~[博客后台管理](https://www.aivin666.cn/blogsys)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~
 
 <br><br><br><br>
 
@@ -28,13 +32,7 @@
 嘟蜜科技是一家创业公司。
 公司的“嘟蜜”App在好莱坞娱乐科技北美中国创业大赛中获得第二名的成绩（总共700 个项目）。
 ```
-http://ol35d7dtp.bkt.clouddn.com/domestyle3d.mp4
-{% raw %}
-  <video id="my-video" class="video-js"    controls preload="auto"     width="800" height="300"
-  poster="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201804181342_osChina_player.png"   data-setup='{}' >
-  <source src="http://ol35d7dtp.bkt.clouddn.com/domestyle3d.mp4" type='video/mp4'>
-  </video>
-{% endraw %}
+
 
 
 
@@ -55,28 +53,13 @@ http://ol35d7dtp.bkt.clouddn.com/domestyle3d.mp4
 8、基于OpenglES实现在native层实现YUV数据流的渲染
 9、代码优化重构、基于git进行文档编写更新
 ```
-http://ol35d7dtp.bkt.clouddn.com/walkeraDrone.mp4
-{% raw %}
-  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-  poster="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201804181342_osChina_player.png" data-setup="{}">
-  <source src="http://ol35d7dtp.bkt.clouddn.com/walkeraDrone.mp4" type='video/mp4'>
-  </video>
-{% endraw %}
 
-<br>
 
 
 ## findStar
 
-{% raw %}
-  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-  poster="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201804181342_osChina_player.png" data-setup="{}">
-  <source src="http://ol35d7dtp.bkt.clouddn.com/findstar.mp4" type='video/mp4'>
-  </video>
-{% endraw %}
 
 
-<br>
 
 ##  广东省商务厅App
 ```xml
@@ -87,39 +70,21 @@ http://ol35d7dtp.bkt.clouddn.com/walkeraDrone.mp4
 3、图片选择、裁剪、压缩 、上传
 4、数据表格显示
 ```
-https://gitee.com/hnyer/filesOfGitbook/raw/master/files/20181026swy.mp4
-{% raw %}
-  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-  poster="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201804181342_osChina_player.png" data-setup="{}">
-  <source src="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/20181026swy.mp4" type='video/mp4'>
-  </video>
-{% endraw %}
 
-<br>
 
-##  WkPlayer_audio （demo项目）
 
-```xml
-https://gitee.com/hnyer/WkPlayer_audio/tree/master/WkPlayer
-```
+##   [WkPlayer_audio](https://gitee.com/hnyer/WkPlayer_audio/tree/master/WkPlayer)（demo项目）
 
-<br>
 
-##  WkPlayer_vedio （demo项目）
-```xml
-https://gitee.com/hnyer/WkPlayer_video/tree/master/WkPlayer
-```
+
+##  [WkPlayer_vedio](https://gitee.com/hnyer/WkPlayer_video/tree/master/WkPlayer) （demo项目）
+
 
 
 # 微信小程序项目
 ## 相册展示Demo
 自己玩的
-{% raw %}
-  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-  poster="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201804181342_osChina_player.png" data-setup="{}">
-  <source src="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201810261339_osChina_smallprogram.mp4" type='video/mp4'>
-  </video>
-{% endraw %}
+
 
 # web前端
 ## 简易博客-展示端
