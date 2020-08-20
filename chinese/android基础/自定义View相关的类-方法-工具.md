@@ -71,14 +71,6 @@ ViewGroup特有的方法，View并没有。
 ##### performClick( )
 这个方法会去调用onClick( )方法。所以在代码中调用performClick 来达到模拟人工点击的效果。
 
-#####  
-#####
-#####
-#####
-#####
-
-
-
 
 ##### Configuration
 获取 输入模式，屏幕大小， 屏幕方向等
