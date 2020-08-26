@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/SUMMARY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/APP的启动流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/andrid进阶/APP的启动流程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/Glide图片三级缓存.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/andrid进阶/Glide图片三级缓存.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/SDK开发.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/andrid进阶/SDK开发.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/apk瘦身.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/andrid进阶/apk瘦身.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/代码混淆.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/andrid进阶/代码混淆.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/多渠道打包.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/屏幕适配.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/andrid进阶/屏幕适配.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/性能优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/andrid进阶/性能优化.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/热补丁动态修复.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/andrid进阶/虚拟机对比.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/andrid进阶/虚拟机对比.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/Handler详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/Handler详解.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/svg绘制不规则图形.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/svg绘制不规则图形.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/json解析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/心跳机制.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/心跳机制.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/抽象类_接口.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/抽象类_接口.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/泛型通配符extends与super的区别.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/泛型通配符extends与super的区别.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/深度拷贝.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/深度拷贝.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/父类的静态方法能否被子类重写.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/父类的静态方法能否被子类重写.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/类加载机制.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/类加载机制.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/线程相关/可重入.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/线程相关/可重入.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/自定义异常.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/自定义异常.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/产品经理/常用概念.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/产品经理/常用概念.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/人工智能/人工智能相关概念.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/人工智能/人工智能相关概念.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/人工智能/机器学习.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/通信方式/通信方式.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/通信方式/通信方式.md" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="38" column="21" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chinese/java基础/父类的静态方法能否被子类重写.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chinese/java基础/类加载机制.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1863">
+              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chinese/java基础/自定义异常.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-373">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chinese/java基础/抽象类_接口.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chinese/java基础/泛型通配符extends与super的区别.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="104" column="1" lean-forward="true" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#236#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chinese/产品经理/常用概念.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="174" column="1" selection-start-line="174" selection-start-column="1" selection-end-line="174" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>enqueueMessage</find>
+      <find>多渠道</find>
+      <find>热补丁动态修复</find>
+      <find>quitAllowed</find>
+      <find>机器</find>
+      <find>&lt;br&gt;</find>
+      <find>常用</find>
+      <find>json</find>
+      <find>toJSONString</find>
+      <find>buf</find>
+      <find>平台</find>
+      <find>深度拷贝</find>
+      <find>src</find>
+      <find>静态</find>
+      <find>value0</find>
+      <find>text</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/chinese/android基础/Handler详解.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/svg绘制不规则图形.md" />
+        <option value="$PROJECT_DIR$/chinese/andrid进阶/屏幕适配.md" />
+        <option value="$PROJECT_DIR$/chinese/andrid进阶/apk瘦身.md" />
+        <option value="$PROJECT_DIR$/chinese/andrid进阶/SDK开发.md" />
+        <option value="$PROJECT_DIR$/chinese/andrid进阶/性能优化.md" />
+        <option value="$PROJECT_DIR$/chinese/andrid进阶/Glide图片三级缓存.md" />
+        <option value="$PROJECT_DIR$/chinese/andrid进阶/代码混淆.md" />
+        <option value="$PROJECT_DIR$/chinese/andrid进阶/虚拟机对比.md" />
+        <option value="$PROJECT_DIR$/chinese/andrid进阶/APP的启动流程.md" />
+        <option value="$PROJECT_DIR$/chinese/人工智能/人工智能相关概念.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/线程相关/可重入.md" />
+        <option value="$PROJECT_DIR$/chinese/通信方式/通信方式.md" />
+        <option value="$PROJECT_DIR$/SUMMARY.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/json解析.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/数据解析.md" />
+        <option value="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/心跳机制.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/深度拷贝.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/父类的静态方法能否被子类重写.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/类加载机制.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/自定义异常.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/抽象类_接口.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/泛型通配符extends与super的区别.md" />
+        <option value="$PROJECT_DIR$/chinese/产品经理/常用概念.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="4" />
+    <option name="width" value="1022" />
+    <option name="height" value="710" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+              <item name="chinese" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+              <item name="chinese" type="462c0819:PsiDirectoryNode" />
+              <item name="java基础" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+              <item name="chinese" type="462c0819:PsiDirectoryNode" />
+              <item name="产品经理" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+              <item name="chinese" type="462c0819:PsiDirectoryNode" />
+              <item name="常用软件" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+              <item name="chinese" type="462c0819:PsiDirectoryNode" />
+              <item name="通信方式" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="F:/sdk2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="" />
+      <created>1598402836357</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598402836357</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1293" height="777" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.16547334" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="GenProtobuf" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Find" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Statistic" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/Handler详解.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3898">
+          <caret line="215" column="22" lean-forward="true" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/svg绘制不规则图形.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/屏幕适配.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="57" column="3" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/多渠道打包.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/热补丁动态修复.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/SDK开发.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-479">
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/apk瘦身.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/Glide图片三级缓存.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/代码混淆.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/性能优化.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/虚拟机对比.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/andrid进阶/APP的启动流程.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/人工智能/机器学习.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/人工智能/人工智能相关概念.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/人工智能/TensorFlow.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/线程相关/可重入.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/线程相关/并发编程_多线程.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/通信方式/通信方式.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2047">
+          <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
+          <folding>
+            <element signature="e#3043#3044#0" expanded="true" />
+            <element signature="e#3073#3074#0" expanded="true" />
+            <element signature="e#3459#3460#0" expanded="true" />
+            <element signature="e#3495#3496#0" expanded="true" />
+            <element signature="e#4419#4420#0" expanded="true" />
+            <element signature="e#4457#4458#0" expanded="true" />
+            <element signature="e#6464#6465#0" expanded="true" />
+            <element signature="e#6524#6525#0" expanded="true" />
+            <element signature="e#3493#3494#0" expanded="true" />
+            <element signature="e#3541#3542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/json解析.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1978">
+          <caret line="404" lean-forward="true" selection-start-line="404" selection-end-line="404" />
+          <folding>
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#0#2051#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/心跳机制.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#110#111#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/数据解析.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/内存.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3400" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_book/search_index.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret column="116967" selection-start-column="116967" selection-end-column="116967" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/内部类.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/深度拷贝.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/父类的静态方法能否被子类重写.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/类加载机制.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1863">
+          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/自定义异常.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-373">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/抽象类_接口.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/泛型通配符extends与super的区别.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="104" column="1" lean-forward="true" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/产品经理/常用概念.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="174" column="1" selection-start-line="174" selection-start-column="1" selection-end-line="174" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
