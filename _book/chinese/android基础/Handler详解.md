@@ -215,3 +215,27 @@ HandlerThread 是一个内部实现了 Looper循环的线程 。
 执行完之后循环线程处于等待状态，直到下一个新的耗时任务被投放进来。  
 减少不停地新建、销毁线程带来的资源消耗。  
 ```
+
+
+## 自定义Handle详解
+```text
+private static class MyHandler1 extends Handler {
+    //WeakReference 当GC执行时，无论当前内存是否充足，都会将若引用关联的对象回收掉。
+    private final WeakReference<InfoHudViewHolder> weakReference;
+
+    public MyHandler1(InfoHudViewHolder controller) {
+        weakReference = new WeakReference<>(controller );
+    }
+
+    @Override
+    public void handleMessage(Message msg) {
+        InfoHudViewHolder holder = weakReference.get() ;
+        if(holder==null){
+            return;
+        }
+
+    }
+}
+// 使用
+MyHandler  myHandler =new MyHandler(this) ;
+```
