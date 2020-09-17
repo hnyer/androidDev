@@ -9,8 +9,10 @@ Service 是运行在主线程中的， 如果有耗时操作在Service里，就�
 2、用在一些不适合activity的的场景。例如音乐播放和文件下载等场景 。
 ```
 
-
 ## Service 启动方式
+因为 startService 方式不能获得service的方法，所以不能不能拿到AIDL定义的接口，无法双向通信。
+所以aidl中只能用 bindService 方式，根据 ServiceConnection 获得接口。
+
 ### start模式
 一旦启动，Service将一直运行在后台，即便启动Service的组件已被destroy。
 ```text
