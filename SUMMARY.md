@@ -67,6 +67,7 @@
     * [APP的启动流程](chinese/android基础/APP的启动流程.md)
     * [屏幕适配](chinese/android基础/屏幕适配.md)
     * [Android外挂](chinese/android基础/Android外挂.md)
+    * [智能家居](chinese/android基础/智能家居.md)
 * [andrid自定义控件实例](chinese/自定义控件/分贝波形图.md)
     * [分贝波形图](chinese/自定义控件/分贝波形图.md)
 * [源码阅读](chinese/源码阅读/LeakCanary源码阅读.md)
