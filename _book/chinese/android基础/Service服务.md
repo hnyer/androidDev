@@ -127,4 +127,15 @@ xx.stopForeground(true);// 停止前台服务--参数：表示是否移除之前
 3、任务结束后会自动停止。无需手动调用停止代码。 解决Service内存泄漏问题。
 ```
 
+## Service 和 Activity 通信
+```text
+1、bindService 启动的服务 
+通过 ServiceConnection  拿到 service的引用，给它发送数据。   activity - > service
+通过发送广播，广播在通过回调接口 把消息传给 activity 。   service -> activity
+
+2、startService 启动的服务
+eventbus等第三方库 实现  activity - > service 。 // 如果不用第三方库 怎么实现？
+通过广播 发消息给activity 。  service -> activity
+```
+ 
  
