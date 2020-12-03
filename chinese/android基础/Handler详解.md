@@ -18,21 +18,26 @@ public final class Message implements Parcelable{
     ......
 }
 
-//不推荐
-Message msg = new Message();
-msg.what =100;
+// 获取 Message 的方式
+Message message ;
+message= new Message();
 
-//推荐
-msg= Message.obtain();
-msg= Message.obtain(Handler h, int what)//有多个方法重载
+// Return a new Message instance from the global pool.
+// Allows us to avoid allocating new objects in many cases.
+message= Message.obtain();
+message= Message.obtain( message ) ;
+message= Message.obtain( handler ) ;
+message= Message.obtain( handler, what) ;
+message= Message.obtain( handler ,runnable) ;
 
-//推荐
-msg= handler.obtainMessage();
-msg= handler.obtainMessage(int what);
+// 效果跟  Message.obtain( handler ) 一样 ，因为最终也是执行到了 Message.obtain( handler )
+message= handler.obtainMessage();
+message= handler.obtainMessage( what);
 ```
 
 ## MessageQueue
-消息队列 ,提供入队、出队等功能。系统只会自动给主线程建立 MessageQueue。(其他子线程也可以有 MessageQueue，只是需要调用 Looper.prepare();//创建该子线程的Looper )
+消息队列 ,提供入队、出队等功能。系统只会自动给主线程建立 MessageQueue。
+(子线程也可以有 MessageQueue，只是需要调用 Looper.prepare();  )
 ```text
 boolean enqueueMessage(Message msg, long when)
 Message next()
@@ -41,70 +46,16 @@ Message next()
 ## Handle
 负责 Message 的发送和执行处理等。
 ```text
-handler.post(Runnable r) ;
-handler.postAtFrontOfQueue(Runnable r);
-handler.postDelayed(Runnable r, long delayMillis);
-
-handler.sendEmptyMessage(int what);
-handler.sendMessage(Message msg); //往队列里添加一条信息
-handler.sendMessageDelayed(Message msg, long delayMillis);
-
-//接收Msg (重写当前方法，处理接收的值)
-handler.handleMessage(Message msg);
-
-//分发消息，可以做拦截操作
-handler.dispatchMessage(Message msg);
-public void dispatchMessage(Message msg){
-     //Runnable getCallback()
-    if (msg.callback != null)  {
-        handleCallback(msg);
-    } else {
-        if (mCallback != null)  {
-            if (mCallback.handleMessage(msg))   {
-                return;
-            }
-        }
-        handleMessage(msg);
-    }
-}
-
-// 使用场景如下： 在子线程中调用post()  ，handler是在主线程中创建的
-handler.post(new Runnable(){
-    @Override
-    public void run()  {
-       //为什么此处可以更新UI？  
-       // 因为跟踪源码会最终发现 ，这个runnable会在这个handler所依附线程中运行，而这个handler是在UI线程中创建的，所以  自然地依附在主线程中了。
-    }
-});
-
-// handler 为什么可以更新UI 、为什么可以实现线程切换
-例如现在有A、B两个线程，在A线程中有创建了handler，然后在B线程中调用handler发送一个message。
-当在A线程中创建handler的时候，同时创建了 MessageQueue与Looper，Looper在A线程中调用loop进入一个无限的for循环从MessageQueue中取消息，
-当B线程调用handler发送一个message的时候，会通过msg.target.dispatchMessage(msg);将message插入到handler对应的MessageQueue中，
-Looper发现有message插入到MessageQueue中，便取出message执行相应的逻辑，
-因为Looper.loop()是在A线程中启动的，所以则回到了A线程，达到了从B线程切换到A线程的目的。
-
-// Handler.postDelayed()是如何 实现实现延时执行的。这种延时方法是一定非常精准吗？
-答：会马上进入队列的，而不是等时间到了再加入队列。大概流程如下：
-1、比如postDelay 一个延时10秒钟的A消息进队，MessageQueue调用 nativePollOnce ()阻塞，Looper阻塞；
-2、紧接着post 一个B消息进队，判断现在A时间还没到、正在阻塞，把B插入消息队列的头部（A的前面），然后调用nativeWake()方法唤醒线程；
-3、MessageQueue.next()方法被唤醒后，重新开始读取消息链表，第一个消息B无延时，直接返回给Looper；
-4、Looper处理完这个消息再次调用next()方法，MessageQueue继续读取消息链表，第二个消息A还没到时间，
-计算一下剩余时间（假如还剩9秒）继续调用nativePollOnce()阻塞；直到阻塞时间到或者下一次有Message进队再次唤醒；
-
-这种延时方法不准确，如果上一个runable耗时操作的话，就很不准确了。
-handler.post( new Runnable() {
-    public void run() {
-        SystemClock.sleep(1000);
-    }
-});
-final  long startime = System.currentTimeMillis() ;
-handler.postDelayed(new Runnable() {
-    public void run() {
-        Log.i("handlerTag" , "时间差="+ (System.currentTimeMillis()- startime)) ;
-        // 时间差=1045 附近，反正不是500
-    }
-} , 500) ;
+handler.post(runnable) ;
+handler.postAtTime(runnable ,0) ;
+handler.postDelayed( runnable ,0) ;
+handler.sendMessage(message);
+handler.sendEmptyMessage( 1 );
+handler.sendMessageDelayed(message, 0);
+//  以上 6个函数 都最后会 被执行到 sendMessageAtTime()
+handler.sendMessageAtTime(message ,0) ;
+// 插入到消息队列最前面
+handler.postAtFrontOfQueue(runnable) ;
 ```
 
 ## Looper
@@ -112,72 +63,38 @@ handler.postDelayed(new Runnable() {
 
 ```text
 Looper 在prepare中通过ThreadLocal保证了每个线程Looper对象的唯一性， 对于每个线程，有唯一的Looper对象和MessageQueue队列。
-oop()是一个死循环，会不断调用 MessageQueue 的next()，当有消息就处理，否则就阻塞等待。
+loop() 中有一个死循环 for (;;)  ，会不断调用 MessageQueue 的next()，当有消息就处理，否则就阻塞等待。
 
-// ThreadLocal.java 
-private static void prepare(boolean quitAllowed){
-   sThreadLocal.set(new Looper(quitAllowed)); // 将新创建的对象的引用保存到各线程的自己的一个map中.
+Looper.loop(); // 死循环 判断是否有需要处理的 Message
+public static void loop(){
+    final Looper me = myLooper();
+    final MessageQueue queue = me.mQueue;
+    for (;;)    {
+        Message msg = queue.next();       //如果没有消息则阻塞。
+        msg.target.dispatchMessage(msg); //将消息进行分发 处理 
+    }
 }
-public static @Nullable Looper myLooper(){
-  return sThreadLocal.get();//执行ThreadLocal.get()时，各线程从自己的map中取出放进去的对象， 因此取出来的是各自自己线程中的对象
-}
+```
 
-// 主线程中的Looper.loop()一直无限循环为什么不会造成ANR？
-为什么当主线程处于死循环的 Message msg = queue.next() 这句会阻塞线程的代码的时候不会产生 ANR 异常, 
-先说结论：阻塞是有的，但是不会卡住 
-1、当没有消息的时候会阻塞
-2、其他线程有消息发过来，它马上就会被唤醒，去分发message。
-
-// ANR 原理
-Application Not Responding ，ANR的监控和处理，是在系统层做的。系统服务(例如ActivityManagerService,AMS) 发出一条指令后会在约定的时间等待返回，
-如果在时间内返回，系统就会给出弹窗提示。
-
-//线程中默认没有 Looper，调用 Looper.prepare() 方法为当前线程创建一个 Looper
-Looper.prepare();
+## 一个线程有几个Looper
+```text
+因为在调用 Looper.prepare() 给当前线程新建 Looper 时有判断 , 所以 只能有一个 Looper
 private static void prepare(boolean quitAllowed){
     if (sThreadLocal.get() != null)  {
-        // Android如何保证一个线程最多只能有一个Looper？
-        throw new RuntimeException("Only one Looper may be created per thread"); //确保一个线程中只有一个Looper对象
+        throw new RuntimeException("Only one Looper may be created per thread"); 
     }
     sThreadLocal.set(new Looper(quitAllowed));
 }
-
-//调用 loop() 方法调度消息。
-Looper.loop();
-public static void loop(){
-    final Looper me = myLooper();
-    if (me == null) {
-        throw new RuntimeException("No Looper; Looper.prepare() wasn't called on this thread.");
-    }
-    final MessageQueue queue = me.mQueue;
-
-    for (;;)    {
-        Message msg = queue.next();   //取出一条消息，如果没有消息则阻塞。
-         msg.target.dispatchMessage(msg); //将消息进行分发 处理 
-    }
-}
 ```
 
-
-# 判断是否是主线程
+## 判断是否是主线程
 ```text
-public static boolean isMainThread(){
-   return  Looper.myLooper() == Looper.getMainLooper();
-}//
-
-public static @Nullable Looper myLooper(){
-    return sThreadLocal.get();
-}
-
-public static Looper getMainLooper(){
-    synchronized (Looper.class){
-        return sMainLooper;
-    }
-}
+通过判断两个线程的 Looper 是否是同一个。
+return  Looper.myLooper() == Looper.getMainLooper();
 ```
 
 
-#   HandlerThread
+##   HandlerThread
 ```text
 HandlerThread extends Thread..
 
@@ -188,11 +105,85 @@ HandlerThread 是一个内部实现了 Looper循环的线程 。
 减少不停地新建、销毁线程带来的资源消耗。  
 ```
 
+## ThreadLocal
+从ThreadLocal这个名字看，它带着浓浓的“本地线程”的味道；
+其实 ThreadLocal并不是用来操作什么本地线程而是用于实现不同线程的数据副本。
+每一个线程都可以独立地改变自己的副本并且不会影响其它线程所持有的对应的副本。
+```text
+在 Looper.java 中 有使用到 ThreadLocal 的这特性。
+static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
+//将新创建的对象的引用保存到各线程的自己的一个map中 
+sThreadLocal.set(new Looper(quitAllowed));
 
-## 自定义Handle详解
+public static Looper myLooper() {
+// 各线程从自己的map中取出放进去的对象，
+// 因此取出来的是各自自己线程中的对象 ,使得每个 thread 都有自己独立的 handle
+    return sThreadLocal.get();  
+ }
+```
+
+## Can't create handler inside thread that has not called Looper.prepare()
+```text
+在子线程中 直接调用 Handler handler=new Handler() ,会提示这个错误。
+因为 在 Handle 的构造函数中 对 Looper 进行检查 
+
+mLooper = Looper.myLooper();
+if (mLooper == null) {
+    throw new RuntimeException( "Can't create handler inside thread " + Thread.currentThread()  + " that has not called Looper.prepare()");
+}
+
+所以需要 手动调用  Looper.prepare()
+private static void prepare(boolean quitAllowed) {
+    if (sThreadLocal.get() != null) {
+        throw new RuntimeException("Only one Looper may be created per thread");
+    }
+    sThreadLocal.set(new Looper(quitAllowed)); // 通过 ThreadLocal 给当前线程设置 looper
+}
+
+而且需要手动调用 Looper.loop() ,开启 handle 对应 looper 的死循环  for (;;)
+```
+
+## 为什么主线程中 新建Handle 不要手动调用 Looper.prepare() 和 Looper.loop()
+```text
+因为在 ActivityThread.java 中的  public static void main(String[] args) 函数中
+系统已经 启用了  Looper.prepareMainLooper() 、Looper.loop() 
+```
+
+## 主线程中的Looper.loop()一直无限循环为什么不会造成ANR
+```text
+为什么当主线程处于死循环的 Message msg = queue.next() 这句会阻塞线程的代码的时候不会产生 ANR 异常, 
+
+1、当没有消息的时候会阻塞
+2、其他线程有消息发过来，它马上就会被唤醒，去分发message。
+所以 阻塞是有的，但是不会报ANR 。
+因为ANR的根本原因是在等待的时间内没有回应，
+你都没有 Message 要处理，我当然不需要任何回应。 
+```
+
+## ANR (Application Not Responding )原理
+```text
+ANR的监控和处理，是在系统层做的。
+系统服务发出一条指令后会在约定的时间等待返回，
+如果在约定时间内没有返回，系统就会给出 ANR 提示。
+```
+
+## 为什么 Handler 有潜在内存泄露
+```text
+在 Activity 中 用这种内部类的方式 新建 handle， handle就会持有外部类 activity 的引用，
+Handler handler = new Handler() { ... };
+
+同理 ，Runnable 也会拥有 外部类 activity 的引用
+handler.postDelayed(new Runnable() {   public void run() { ... }   })
+Runnable 被封装成 Message 被 MessageQueue 持有，所以 activity 被 MessageQueue 间接持有了。
+activity 退出时，如果延时时间还没到，所以 activity 无法被释放掉。
+
+至于为什么 内部类会持有外部类的引用 ，可以查阅其他博客。
+```
+
+## 通过 WeakReference 解决 handle 内存泄漏 
 ```text
 private static class MyHandler1 extends Handler {
-    //WeakReference 当GC执行时，无论当前内存是否充足，都会将若引用关联的对象回收掉。
+    //WeakReference 当GC执行时，无论当前内存是否充足，都会将弱引用关联的对象回收掉。
     private final WeakReference<InfoHudViewHolder> weakReference;
 
     public MyHandler1(InfoHudViewHolder controller) {
@@ -205,43 +196,193 @@ private static class MyHandler1 extends Handler {
         if(holder==null){
             return;
         }
-
     }
 }
 // 使用
 MyHandler  myHandler =new MyHandler(this) ;
 ```
 
-# runOnUiThread
+
+## 为什么 在子线程中调用 activity.runOnUiThread() 也可以更新UI
 ```text
-在子线程中 使用 runOnUiThread 为什么可以更新UI ?
-findViewById(R.id.testBtn).setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        new Thread(new Runnable() {
-            public void run() {
-                activity.runOnUiThread(new Runnable() {
-                    public void run() {
-                        infoTv.setText("work thread");
-                    }
-                });
-            }
-        }).start();
-    }
-});
+new Thread(new Runnable() {  activity.runOnUiThread(new Runnable() ... )  }).start();
 
-// 首先说一个容易忽略的事实， 子线程不允许更改ui 只是安卓定下的一个机制。
-从实现上来讲子线程是可以更改布局界面的，只是在代码只做了限制，更新ui的时候会判断线程是不是主线程，如果不是就报异常，这是一种机制。
-如果 直接在 onCreate 中新建一个线程 更改ui ，然后不做其他事情马上退出，还来不及检查是否在主线程，线程就退出了，此时UI改变了，但是并不会报错。
-
-至于为什么说 在子线程中 调用 runOnUiThread 就可以更新UI，原理如下 ，
 public final void runOnUiThread(Runnable action) {
     if (Thread.currentThread() != mUiThread) {
-        mHandler.post(action); // 如果是子线程中 调用 runOnUiThread ， 就将 runnable 加入到 activity所以在线程中(即主线程)的的消息队列中，然后通过
-                                // Looper 轮询时取出，交给 处于主线程中的 handler进行处理， handler是在主线程中创建的，所以就在主线程中可以更新UI了。
+        mHandler.post(action);
     } else {
-        action.run(); // 如果是在主线程中调用 runOnUiThread ， 就立即执行，不需要用handler进行转发。
+        action.run();
     }
 }
 
+从源码可以得知 ，如果调用 runOnUiThread()的线程就是主线程，就立马执行。
+如果是在子线程中调用，就会把 Runnable 封装成 Message ，进入消息队列，
+最后会转发给 创建 mHandler 所在的线程执行 ，Handler mHandler = new Handler();
+mHandler 是系统在 Activity.java 中创建，所以最后会在主线程中执行了。
 ```
+ 
+## 为什么 在子线程中调用 handler.post(new Runnable...)  也可以更新UI
+```text
+// 前提条件 ： handler是在 主线程中新建的 
+new Thread(new Runnable() {  handler.post(new Runnable() { // 更新 UI  }   ).start();
+
+跟踪源码发现 执行 post 后 ，会经过 一系列函数 ，将 Runnable 包装成 Message ，
+最后分发回  handler所依附线程(主线程)中运行。
+
+private static Message getPostMessage(Runnable r) {
+    Message m = Message.obtain(); // 包装 Runnable 给 Message
+    m.callback = r;
+    return m;
+}
+
+public void dispatchMessage(@NonNull Message msg) {
+    if (msg.callback != null) {
+        handleCallback(msg); //  执行 Runnable 的run 函数
+    }  
+}
+    
+private static void handleCallback(Message message) {
+    message.callback.run();
+}
+```
+
+## handler 为什么可以更新UI 、为什么可以实现线程间通信
+``text
+现在有A、B两个线程，在A线程中创建了handler，然后在B线程中调用 A线程的 handler发送一个message。
+
+当A线程创建handler的时候，同时创建了 MessageQueue 与 Looper，
+Looper在A线程中被调用，进入 for (;;) 循环 ，轮询 MessageQueue 是否有需要处理的消息。
+
+在B线程使用 A线程中的 handler发送一个message ,将message插入到handler对应的MessageQueue中，
+Looper发现有message插入到MessageQueue中，便取出message执行相应的逻辑，
+
+因为Looper.loop() 是在A线程中启动的，对应的 MessageQueue 和 Looper 都是属于 A线程的 ，
+所以  Handle 的方法 handleMessage() 是在 A线程中执行。
+``
+
+##  Runnable 是一定运行在子线程中吗
+```text
+Runnable 运行在子线程中是错误的观念。
+runnable只是创建了一个执行任务的对象，但是它本身并不会创建一个新的子线程。
+最终的执行线程是要看 所依附的线程 。
+
+1、举例 handler.post(runnable)
+// The runnable will be run on the thread to which this handler is  attached. 
+public final boolean post(@NonNull Runnable r) {
+   return  sendMessageDelayed(getPostMessage(r), 0);
+}
+
+2、举例view.post(runnable)
+The runnable will be run on the user interface thread.
+```
+
+##  MessageQueue 如何对 Message 排序的
+```text
+
+```
+
+## Handler.postDelayed()是如何 实现实现延时执行的 ,这种延时方法是一定非常精准吗
+```text
+// Handler.postDelayed()是如何 实现实现延时执行的。
+答：会马上进入队列的，而不是等时间到了再加入队列。大概流程如下：
+1、比如postDelay 一个延时10秒钟的A消息进队，MessageQueue调用 nativePollOnce ()阻塞，Looper阻塞；
+2、紧接着post 一个B消息进队，判断现在A时间还没到、正在阻塞，把B插入消息队列的头部（A的前面），然后调用nativeWake()方法唤醒线程；
+3、MessageQueue.next()方法被唤醒后，重新开始读取消息链表，第一个消息B无延时，直接返回给Looper；
+4、Looper处理完这个消息再次调用next()方法，MessageQueue继续读取消息链表，第二个消息A还没到时间，
+计算一下剩余时间（假如还剩9秒）继续调用nativePollOnce()阻塞；直到阻塞时间到或者下一次有Message进队再次唤醒；
+
+这种延时方法不准确，如果上一个runable耗时操作的话，就很不准确了。
+
+```
+
+## 如何退出 Looper 循环 、退出 Handle
+```text
+handler.getLooper().quit(); // 我手动调用这个代码
+// Looper.java
+public void quit() {
+    mQueue.quit(false);
+}
+
+// MessageQueue.java 
+void quit(boolean safe) {
+    synchronized (this) {
+        if (mQuitting) {
+            return;
+        }
+        mQuitting = true; // 1、标记可以退出
+        if (safe) {
+            removeAllFutureMessagesLocked(); // 2、删除相关数据
+        } else {
+            removeAllMessagesLocked();
+        }
+        nativeWake(mPtr); // 3、唤醒线程
+    }
+}
+
+然后再来看 Looper.java 中的 loop() 函数
+public static void loop() {
+    for (;;) {
+        Message msg = queue.next(); // might block ，
+        if (msg == null) {
+            // 6、nex 返回空 ，退出 loop循环 
+            return;
+        }
+        msg.recycleUnchecked();
+    }
+}
+
+// MessageQueue.java 
+Message next() {
+    for (;;) {
+        // nativePollOnce 用于“等待”, 直到下一条消息可用为止
+        // 4、被step3唤醒 ，继续往下执行
+        nativePollOnce(ptr, nextPollTimeoutMillis);
+        synchronized (this) {
+            if (mQuitting) { // 5、mQuitting 在 step 1被设置为 true了 ，所以返回 null
+                dispose();
+                return null;
+            }
+    }
+``` 
+
+##  主线程 的 looper 能否 quit()
+```text
+void quit(boolean safe) {
+    if (!mQuitAllowed) {
+        throw new IllegalStateException("Main thread not allowed to quit.");
+    }
+   }
+从源码可知，主线程的Looper 禁止开发者 quit 。
+因为主线程中的 handle 要处理很多事情，退出之后 整个APP就没得玩了。
+
+private class H extends Handler｛
+    public void handleMessage(Message msg) {
+    switch (msg.what) {
+        case LAUNCH_ACTIVITY 
+        case RELAUNCH_ACTIVITY: {
+        case PAUSE_ACTIVITY: {
+        case PAUSE_ACTIVITY_FINISHING: 
+        case STOP_ACTIVITY_SHOW: 
+        case STOP_ACTIVITY_HIDE:  
+        case LOCAL_VOICE_INTERACTION_STARTED:
+        ...
+```
+
+## Handler 如何确保线程安全
+```text
+// 与 handle 对应的 MessageQueue ，Message 进入队列 synchronized 上锁了
+boolean enqueueMessage(Message msg, long when) { // MessageQueue.java 
+    synchronized (this) {
+            
+// Looper 中获取 Message 时 MessageQueue 的next 也被上锁了
+for (;;) { // Looper.java 
+  Message msg = queue.next(); 
+
+Message next() { // MessageQueue.java  
+ synchronized (this) { ...  }   }
+```
+
+## 手写 handle 机制 实现 线程间通信
+handle 不仅仅只用于 主线程 和子线程的通信 ，也可以实现 子线程和子线程的通信 。
+可以参考我的 demo  https://gitee.com/hnyer/my-handle 
+ 

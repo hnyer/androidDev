@@ -14,15 +14,13 @@
         "anchor-navigation-ex" ,
         "copy-code-button",
         "versions-select",
-	    	"fontsettings",
-		    "sharing",
+        "fontsettings",
         "tbfed-pagefooter",
         "donate",
         "local-video",
-	    	"splitter",
-	    	"edit-link",
-	    	"expandable-chapters",
-	    	"favicon" ,
+	    "splitter",
+	    "expandable-chapters",
+        "favicon" ,
         "theme-comscore",
         "local-video"
     ],
@@ -30,25 +28,11 @@
     "pluginsConfig": {
 
       	"fontsettings": {
-                  "theme": "sepia",
+                  "theme": "white",
                   "family": "sans",
                   "size": 2
       	},
 
-    	"sharing": {
-    		"weibo": true,
-    		"facebook": false,
-    		"twitter": false,
-    		"google": true,
-    		"instapaper": false,
-    		"vk": false,
-    		"all": [
-          "facebook",
-          "google",
-          "twitter",
-      		"weibo",
-          "instapaper"]
-    	},
 
     	"tbfed-pagefooter": {
     		"copyright":"无版权 可以无限制使用！",
@@ -81,12 +65,9 @@
                      "text": "v1.0"
                  } 
                ]
-           } ,
+           }
 
-  	"edit-link": {
-  		   "base": "https://www.baidu.com/",
-  		   "label": "托管页面"
-  		}
+
 
     }
 }
