@@ -3,6 +3,14 @@
 
 简单的说：一个线程开启一个无限循环模式，不断遍历自己的消息列表，如果有消息就挨个拿出来做处理，如果列表没消息，自己就堵塞（相当于wait，让出cpu资源给其他线程），其他线程如果想让该线程做什么事，就往该线程的消息队列插入消息，该线程会不断从队列里拿出消息做处理。 
 
+```text
+Looper.prepare() --> sThreadLocal.set(new Looper(quitAllowed));
+ Looper.loop()
+ 
+ // 记住这点就不会弄错执行线程的问题
+handleMessage 最终在哪个线程执行 , 要看 Looper 是由哪个 线程创建的。
+```
+
 ##  Message
 定义了消息必要的描述和属性数据。
 ```text
@@ -76,33 +84,30 @@ public static void loop(){
 }
 ```
 
-## 一个线程有几个Looper
-```text
-因为在调用 Looper.prepare() 给当前线程新建 Looper 时有判断 , 所以 只能有一个 Looper
-private static void prepare(boolean quitAllowed){
-    if (sThreadLocal.get() != null)  {
-        throw new RuntimeException("Only one Looper may be created per thread"); 
-    }
-    sThreadLocal.set(new Looper(quitAllowed));
-}
-```
-
-## 判断是否是主线程
-```text
-通过判断两个线程的 Looper 是否是同一个。
-return  Looper.myLooper() == Looper.getMainLooper();
-```
-
-
 ##   HandlerThread
 ```text
 HandlerThread extends Thread..
-
 HandlerThread 是一个内部实现了 Looper循环的线程 。
-具有以下特点：
-当有耗时任务投放到该循环线程中时，线程执行耗时任务，
-执行完之后循环线程处于等待状态，直到下一个新的耗时任务被投放进来。  
-减少不停地新建、销毁线程带来的资源消耗。  
+
+Android中多线程的场景很多，为了解决多线程问题，Android提供了很多方案。
+线程池整体量级有些偏重，
+HandlerThread 是一种轻量的多线程解决方案。
+
+mHandler = new Handler(  mHandlerThread.getLooper()){
+    public void handleMessage(Message msg){
+        // 这里是子线程 ，可以执行耗时操作
+        activity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                // 这里是主线程
+            }
+        });
+    }
+};
+
+mHandler.sendEmptyMessage(MSG_UPDATE_INFO);
+mHandler.removeMessages(MSG_UPDATE_INFO);
+mHandlerThread.quit();
 ```
 
 ## ThreadLocal
@@ -121,6 +126,25 @@ public static Looper myLooper() {
     return sThreadLocal.get();  
  }
 ```
+
+
+## 一个线程有几个Looper
+```text
+因为在调用 Looper.prepare() 给当前线程新建 Looper 时有判断 , 所以 只能有一个 Looper
+private static void prepare(boolean quitAllowed){
+    if (sThreadLocal.get() != null)  {
+        throw new RuntimeException("Only one Looper may be created per thread"); 
+    }
+    sThreadLocal.set(new Looper(quitAllowed));
+}
+```
+
+## 判断是否是主线程
+```text
+通过判断两个线程的 Looper 是否是同一个。
+return  Looper.myLooper() == Looper.getMainLooper();
+```
+
 
 ## Can't create handler inside thread that has not called Looper.prepare()
 ```text
@@ -208,9 +232,11 @@ MyHandler  myHandler =new MyHandler(this) ;
 new Thread(new Runnable() {  activity.runOnUiThread(new Runnable() ... )  }).start();
 
 public final void runOnUiThread(Runnable action) {
-    if (Thread.currentThread() != mUiThread) {
+    if (Thread.currentThread() != mUiThread) { 
+    // 在子线程中调用activity.runOnUiThread( ... ) 的情况 
         mHandler.post(action);
     } else {
+    // 在主线程中调用activity.runOnUiThread( ... ) 的情况 
         action.run();
     }
 }
@@ -278,21 +304,117 @@ The runnable will be run on the user interface thread.
 
 ##  MessageQueue 如何对 Message 排序的
 ```text
-
+通过事件排序 。
+public final boolean postDelayed(@NonNull Runnable r, long delayMillis) {
+    return sendMessageDelayed(getPostMessage(r), delayMillis);
+}
+    
+public final boolean sendMessageDelayed(@NonNull Message msg, long delayMillis) {
+    ...
+    // SystemClock.uptimeMillis()  Returns milliseconds since boot, not counting time spent in deep sleep
+    return sendMessageAtTime(msg, SystemClock.uptimeMillis() + delayMillis);
+}
+        
+boolean enqueueMessage(Message msg, long when) {
+    synchronized (this) {
+        ...
+        msg.when = when;
+        Message p = mMessages; // 下一条信息
+        boolean needWake;
+        // 根据 when 进行顺序排序，将消息插入到其中
+        if (p == null || when == 0 || when < p.when) {
+            // 当前队列插在队首
+            msg.next = p;
+            mMessages = msg;
+            needWake = mBlocked;
+        } else {
+            Message prev;
+            for (;;) {
+                // 根据 执行事件 when ，将 当前消息排在对应的位置 
+                prev = p;
+                p = p.next;
+                if (p == null || when < p.when) {
+                    break;
+                }
+                if (needWake && p.isAsynchronous()) {
+                    needWake = false;
+                }
+            }
+            // 插入操作
+            msg.next = p;  
+            prev.next = msg;
+        }
+         // 唤醒队列进行取消息
+        if (needWake) {
+            nativeWake(mPtr);
+        }
+    }
+    return true;
+}
 ```
 
-## Handler.postDelayed()是如何 实现实现延时执行的 ,这种延时方法是一定非常精准吗
+## Handler.postDelayed()是如何 实现实现延时执行的  
 ```text
-// Handler.postDelayed()是如何 实现实现延时执行的。
-答：会马上进入队列的，而不是等时间到了再加入队列。大概流程如下：
-1、比如postDelay 一个延时10秒钟的A消息进队，MessageQueue调用 nativePollOnce ()阻塞，Looper阻塞；
-2、紧接着post 一个B消息进队，判断现在A时间还没到、正在阻塞，把B插入消息队列的头部（A的前面），然后调用nativeWake()方法唤醒线程；
-3、MessageQueue.next()方法被唤醒后，重新开始读取消息链表，第一个消息B无延时，直接返回给Looper；
-4、Looper处理完这个消息再次调用next()方法，MessageQueue继续读取消息链表，第二个消息A还没到时间，
-计算一下剩余时间（假如还剩9秒）继续调用nativePollOnce()阻塞；直到阻塞时间到或者下一次有Message进队再次唤醒；
+会马上进入队列的，而不是等时间到了再加入队列。 Handler 不是自己处理 Delay，而是交给了MessageQueue处理。
 
-这种延时方法不准确，如果上一个runable耗时操作的话，就很不准确了。
+大概流程如下：
+1、postDelay 一个延时10秒钟的A消息进队，MessageQueue调用 nativePollOnce ()阻塞，Looper阻塞；
+2、紧接着post 一个B消息进队，判断现在A时间还没到、正在阻塞，把B插入消息队列的头部（A的前面），
+然后调用nativeWake()方法唤醒线程；
+3、MessageQueue.next()方法被唤醒后，读取消息链表，第一个消息B无延时，直接返回给Looper，执行B消息。
+4、Looper for(;;) 处理完这个消息再次调用next()方法，MessageQueue继续读取消息链表，
+假如消息A还没到时间，继续阻塞；直到阻塞时间到或者下一次有Message进队再次唤醒；
 
+这样就实现了延时。
+```
+
+##  Handler.postDelayed() 的延时方法是一定非常精准吗
+```text
+这种方式是不精准的。
+Message的执行时机是在加入队列时就计算好的。
+sendMessageAtTime(msg, SystemClock.uptimeMillis() + delayMillis);
+
+然后 Looper.looper()函数中的 for (;;) 是串行执行的，执行了上一条后再去判断下一个Message 是否要执行。
+(handle 和 Looper 是处于一个线程，所以执行一条才能下一条)。
+
+举个夸张的例子， 
+myThread1.handler1.postDelayed(new Runnable() {
+    @Override
+    public void run() {
+        long time =System.currentTimeMillis()  - timeStart ;
+        Wklog.d("延时5秒执行="+ Thread.currentThread().getId()+"  间隔描述="+ (time/1000));
+    }
+} ,5*1000) ;
+
+myThread1.handler1.post(new Runnable() {
+    @Override
+    public void run() {
+        timeStart = System.currentTimeMillis() ;
+        Wklog.d("马上执行线程="+ Thread.currentThread().getId()  );
+        Thread.sleep(3*1000);
+        //Thread.sleep(7*1000);
+        }
+    }
+}) ;
+
+handler1.postDelayed 按计划是延时5秒执行的，
+handler1.post 是马上执行的 。
+如果 post的 Handle在5秒内执行完毕， postDelayed的Runable 还是按照原计划 5秒后执行，
+如果 post的 Handle 超过5秒执行完毕， postDelayed的Runable 就不能实现延时5秒了，而是7秒了。
+
+因为，本来应该在 for(;;)判断是否要执行下一条的时间里 却在执行 耗时操作，错过了。
+```
+![](../pics/postdely延时.png)
+
+
+## MessageQueue 中为什么不用 wait 而用 epoll 进行等待呢
+```text
+在旧版本中，是用的wait 实现等待。
+后来需要处理 native 层的一些事情，改成 select 再改成 epoll
+private native void nativePollOnce(long ptr, int timeoutMillis)
+实现等待 。
+
+https://android.googlesource.com/platform/frameworks/base/+/46b9ac0ae2162309774a7478cd9d4e578747bfc2%5E%21/#F16  
 ```
 
 ## 如何退出 Looper 循环 、退出 Handle
@@ -384,5 +506,7 @@ Message next() { // MessageQueue.java
 
 ## 手写 handle 机制 实现 线程间通信
 handle 不仅仅只用于 主线程 和子线程的通信 ，也可以实现 子线程和子线程的通信 。
-可以参考我的 demo  https://gitee.com/hnyer/my-handle 
+可以参考我的 demo  https://gitee.com/hnyer/my-handle  
+
+
  
