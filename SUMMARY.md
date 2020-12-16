@@ -1,8 +1,8 @@
 # Summary
 
 * [项目介绍](README.md)
-* [开发规范](chinese/doc/开发规范.md)
 * [常用网站](chinese/doc/常用网站.md)
+* [开发规范](chinese/doc/开发规范.md)
 * [常用软件和框架](chinese/常用软件/常用软件和框架.md)
 * [常用数据结构](chinese/数据结构/常用数据结构.md)
 * [常用代码块](chinese/android基础/常用代码块.md)
@@ -70,10 +70,9 @@
     * [智能家居](chinese/android基础/智能家居.md)
 * [andrid自定义控件实例](chinese/自定义控件/分贝波形图.md)
     * [分贝波形图](chinese/自定义控件/分贝波形图.md)
-* [源码阅读](chinese/源码阅读/LeakCanary源码阅读.md)
+* [源码阅读](chinese/源码阅读/源码阅读配置.md)
 * [人工智能](chinese/人工智能/人工智能相关概念.md)
     * [人工智能相关概念](chinese/人工智能/人工智能相关概念.md)
     * [TensorFlow](chinese/人工智能/TensorFlow.md)
 * [产品经理](chinese/产品经理/常用概念.md)
-//* [flutter](chinese/flutter/flutter.md)
 

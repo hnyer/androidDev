@@ -136,12 +136,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../doc/开发规范.html">
+        <li class="chapter " data-level="1.2" data-path="../doc/常用网站.html">
             
-                <a href="../doc/开发规范.html">
+                <a href="../doc/常用网站.html">
             
                     
-                    开发规范
+                    常用网站
             
                 </a>
             
@@ -149,12 +149,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../doc/常用网站.html">
+        <li class="chapter " data-level="1.3" data-path="../doc/开发规范.html">
             
-                <a href="../doc/常用网站.html">
+                <a href="../doc/开发规范.html">
             
                     
-                    常用网站
+                    开发规范
             
                 </a>
             
@@ -1063,9 +1063,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="../源码阅读/LeakCanary源码阅读.html">
+        <li class="chapter " data-level="1.11" data-path="../源码阅读/源码阅读配置.html">
             
-                <a href="../源码阅读/LeakCanary源码阅读.html">
+                <a href="../源码阅读/源码阅读配置.html">
             
                     
                     源码阅读
@@ -1414,15 +1414,17 @@ private static void handleCallback(Message message) {
 }
 </code></pre>
 <h2 id="handler-&#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;ui-&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7EBF;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;"><a name="handler-&#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;ui-&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7EBF;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;" class="anchor-navigation-ex-anchor" href="#handler-&#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;ui-&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7EBF;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.17. handler &#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;UI &#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7EBF;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;</h2>
-<p>``text
-&#x73B0;&#x5728;&#x6709;A&#x3001;B&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x5728;A&#x7EBF;&#x7A0B;&#x4E2D;&#x521B;&#x5EFA;&#x4E86;handler&#xFF0C;&#x7136;&#x540E;&#x5728;B&#x7EBF;&#x7A0B;&#x4E2D;&#x8C03;&#x7528; A&#x7EBF;&#x7A0B;&#x7684; handler&#x53D1;&#x9001;&#x4E00;&#x4E2A;message&#x3002;</p>
-<p>&#x5F53;A&#x7EBF;&#x7A0B;&#x521B;&#x5EFA;handler&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x540C;&#x65F6;&#x521B;&#x5EFA;&#x4E86; MessageQueue &#x4E0E; Looper&#xFF0C;
-Looper&#x5728;A&#x7EBF;&#x7A0B;&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x8FDB;&#x5165; for (;;) &#x5FAA;&#x73AF; &#xFF0C;&#x8F6E;&#x8BE2; MessageQueue &#x662F;&#x5426;&#x6709;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
-<p>&#x5728;B&#x7EBF;&#x7A0B;&#x4F7F;&#x7528; A&#x7EBF;&#x7A0B;&#x4E2D;&#x7684; handler&#x53D1;&#x9001;&#x4E00;&#x4E2A;message ,&#x5C06;message&#x63D2;&#x5165;&#x5230;handler&#x5BF9;&#x5E94;&#x7684;MessageQueue&#x4E2D;&#xFF0C;
-Looper&#x53D1;&#x73B0;&#x6709;message&#x63D2;&#x5165;&#x5230;MessageQueue&#x4E2D;&#xFF0C;&#x4FBF;&#x53D6;&#x51FA;message&#x6267;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x903B;&#x8F91;&#xFF0C;</p>
-<p>&#x56E0;&#x4E3A;Looper.loop() &#x662F;&#x5728;A&#x7EBF;&#x7A0B;&#x4E2D;&#x542F;&#x52A8;&#x7684;&#xFF0C;&#x5BF9;&#x5E94;&#x7684; MessageQueue &#x548C; Looper &#x90FD;&#x662F;&#x5C5E;&#x4E8E; A&#x7EBF;&#x7A0B;&#x7684; &#xFF0C;
+<pre><code class="lang-text">&#x73B0;&#x5728;&#x6709;A&#x3001;B&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x5728;A&#x7EBF;&#x7A0B;&#x4E2D;&#x521B;&#x5EFA;&#x4E86;handler&#xFF0C;&#x7136;&#x540E;&#x5728;B&#x7EBF;&#x7A0B;&#x4E2D;&#x8C03;&#x7528; A&#x7EBF;&#x7A0B;&#x7684; handler&#x53D1;&#x9001;&#x4E00;&#x4E2A;message&#x3002;
+
+&#x5F53;A&#x7EBF;&#x7A0B;&#x521B;&#x5EFA;handler&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x540C;&#x65F6;&#x521B;&#x5EFA;&#x4E86; MessageQueue &#x4E0E; Looper&#xFF0C;
+Looper&#x5728;A&#x7EBF;&#x7A0B;&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x8FDB;&#x5165; for (;;) &#x5FAA;&#x73AF; &#xFF0C;&#x8F6E;&#x8BE2; MessageQueue &#x662F;&#x5426;&#x6709;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x6D88;&#x606F;&#x3002;
+
+&#x5728;B&#x7EBF;&#x7A0B;&#x4F7F;&#x7528; A&#x7EBF;&#x7A0B;&#x4E2D;&#x7684; handler&#x53D1;&#x9001;&#x4E00;&#x4E2A;message ,&#x5C06;message&#x63D2;&#x5165;&#x5230;handler&#x5BF9;&#x5E94;&#x7684;MessageQueue&#x4E2D;&#xFF0C;
+Looper&#x53D1;&#x73B0;&#x6709;message&#x63D2;&#x5165;&#x5230;MessageQueue&#x4E2D;&#xFF0C;&#x4FBF;&#x53D6;&#x51FA;message&#x6267;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x903B;&#x8F91;&#xFF0C;
+
+&#x56E0;&#x4E3A;Looper.loop() &#x662F;&#x5728;A&#x7EBF;&#x7A0B;&#x4E2D;&#x542F;&#x52A8;&#x7684;&#xFF0C;&#x5BF9;&#x5E94;&#x7684; MessageQueue &#x548C; Looper &#x90FD;&#x662F;&#x5C5E;&#x4E8E; A&#x7EBF;&#x7A0B;&#x7684; &#xFF0C;
 &#x6240;&#x4EE5;  Handle &#x7684;&#x65B9;&#x6CD5; handleMessage() &#x662F;&#x5728; A&#x7EBF;&#x7A0B;&#x4E2D;&#x6267;&#x884C;&#x3002;
-``</p>
+</code></pre>
 <h2 id="runnable-&#x662F;&#x4E00;&#x5B9A;&#x8FD0;&#x884C;&#x5728;&#x5B50;&#x7EBF;&#x7A0B;&#x4E2D;&#x5417;"><a name="runnable-&#x662F;&#x4E00;&#x5B9A;&#x8FD0;&#x884C;&#x5728;&#x5B50;&#x7EBF;&#x7A0B;&#x4E2D;&#x5417;" class="anchor-navigation-ex-anchor" href="#runnable-&#x662F;&#x4E00;&#x5B9A;&#x8FD0;&#x884C;&#x5728;&#x5B50;&#x7EBF;&#x7A0B;&#x4E2D;&#x5417;"><i class="fa fa-link" aria-hidden="true"></i></a>1.18. Runnable &#x662F;&#x4E00;&#x5B9A;&#x8FD0;&#x884C;&#x5728;&#x5B50;&#x7EBF;&#x7A0B;&#x4E2D;&#x5417;</h2>
 <pre><code class="lang-text">Runnable &#x8FD0;&#x884C;&#x5728;&#x5B50;&#x7EBF;&#x7A0B;&#x4E2D;&#x662F;&#x9519;&#x8BEF;&#x7684;&#x89C2;&#x5FF5;&#x3002;
 runnable&#x53EA;&#x662F;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x672C;&#x8EAB;&#x5E76;&#x4E0D;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B50;&#x7EBF;&#x7A0B;&#x3002;
@@ -1438,7 +1440,7 @@ public final boolean post(@NonNull Runnable r) {
 The runnable will be run on the user interface thread.
 </code></pre>
 <h2 id="messagequeue-&#x5982;&#x4F55;&#x5BF9;-message-&#x6392;&#x5E8F;&#x7684;"><a name="messagequeue-&#x5982;&#x4F55;&#x5BF9;-message-&#x6392;&#x5E8F;&#x7684;" class="anchor-navigation-ex-anchor" href="#messagequeue-&#x5982;&#x4F55;&#x5BF9;-message-&#x6392;&#x5E8F;&#x7684;"><i class="fa fa-link" aria-hidden="true"></i></a>1.19. MessageQueue &#x5982;&#x4F55;&#x5BF9; Message &#x6392;&#x5E8F;&#x7684;</h2>
-<pre><code class="lang-text">&#x901A;&#x8FC7;&#x4E8B;&#x4EF6;&#x6392;&#x5E8F; &#x3002;
+<pre><code class="lang-text">&#x901A;&#x8FC7;&#x65F6;&#x95F4;&#x6392;&#x5E8F; &#x3002;
 public final boolean postDelayed(@NonNull Runnable r, long delayMillis) {
     return sendMessageDelayed(getPostMessage(r), delayMillis);
 }
@@ -1464,7 +1466,7 @@ boolean enqueueMessage(Message msg, long when) {
         } else {
             Message prev;
             for (;;) {
-                // &#x6839;&#x636E; &#x6267;&#x884C;&#x4E8B;&#x4EF6; when &#xFF0C;&#x5C06; &#x5F53;&#x524D;&#x6D88;&#x606F;&#x6392;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E; 
+                // &#x6839;&#x636E; &#x6267;&#x884C;&#x65F6;&#x95F4; when &#xFF0C;&#x5C06; &#x5F53;&#x524D;&#x6D88;&#x606F;&#x6392;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E; 
                 prev = p;
                 p = p.next;
                 if (p == null || when &lt; p.when) {
@@ -1628,7 +1630,7 @@ Message next() { // MessageQueue.java
 <p>handle &#x4E0D;&#x4EC5;&#x4EC5;&#x53EA;&#x7528;&#x4E8E; &#x4E3B;&#x7EBF;&#x7A0B; &#x548C;&#x5B50;&#x7EBF;&#x7A0B;&#x7684;&#x901A;&#x4FE1; &#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0; &#x5B50;&#x7EBF;&#x7A0B;&#x548C;&#x5B50;&#x7EBF;&#x7A0B;&#x7684;&#x901A;&#x4FE1; &#x3002;
 &#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6211;&#x7684; demo  <a href="https://gitee.com/hnyer/my-handle" target="_blank">https://gitee.com/hnyer/my-handle</a>  </p>
 <footer class="page-footer"><span class="copyright">&#x65E0;&#x7248;&#x6743; &#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x5236;&#x4F7F;&#x7528;&#xFF01; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;
-2020-12-07 14:21:51
+2020-12-07 15:34:12
 </span></footer>
                                 
                                 </section>
@@ -1672,7 +1674,7 @@ Message next() { // MessageQueue.java
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Handle详解","level":"1.9.10","depth":2,"next":{"title":"Fragment详解","level":"1.9.11","depth":2,"path":"chinese/android基础/Fragment详解.md","ref":"chinese/android基础/Fragment详解.md","articles":[]},"previous":{"title":"Service 服务","level":"1.9.9","depth":2,"path":"chinese/android基础/Service服务.md","ref":"chinese/android基础/Service服务.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","versions-select","fontsettings","tbfed-pagefooter","donate","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"无版权 可以无限制使用！","modify_label":"该文件更新时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"donate":{"alipay":"https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_支付宝收款码.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_微信收款码.png","wechatText":"微信打赏"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"versions":{"options":[{"value":"https://www.aivin666.cn/java_android/","text":"v1.0"}]},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/android基础/Handler详解.md","mtime":"2020-12-07T06:21:51.980Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-07T06:22:33.347Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Handle详解","level":"1.9.10","depth":2,"next":{"title":"Fragment详解","level":"1.9.11","depth":2,"path":"chinese/android基础/Fragment详解.md","ref":"chinese/android基础/Fragment详解.md","articles":[]},"previous":{"title":"Service 服务","level":"1.9.9","depth":2,"path":"chinese/android基础/Service服务.md","ref":"chinese/android基础/Service服务.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","versions-select","fontsettings","tbfed-pagefooter","donate","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"无版权 可以无限制使用！","modify_label":"该文件更新时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"donate":{"alipay":"https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_支付宝收款码.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_微信收款码.png","wechatText":"微信打赏"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"versions":{"options":[{"value":"https://www.aivin666.cn/java_android/","text":"v1.0"}]},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/android基础/Handler详解.md","mtime":"2020-12-07T07:34:12.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-16T00:58:43.449Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

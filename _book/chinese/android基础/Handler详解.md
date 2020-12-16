@@ -273,7 +273,7 @@ private static void handleCallback(Message message) {
 ```
 
 ## handler 为什么可以更新UI 、为什么可以实现线程间通信
-``text
+```text
 现在有A、B两个线程，在A线程中创建了handler，然后在B线程中调用 A线程的 handler发送一个message。
 
 当A线程创建handler的时候，同时创建了 MessageQueue 与 Looper，
@@ -284,7 +284,7 @@ Looper发现有message插入到MessageQueue中，便取出message执行相应的
 
 因为Looper.loop() 是在A线程中启动的，对应的 MessageQueue 和 Looper 都是属于 A线程的 ，
 所以  Handle 的方法 handleMessage() 是在 A线程中执行。
-``
+```
 
 ##  Runnable 是一定运行在子线程中吗
 ```text
@@ -304,7 +304,7 @@ The runnable will be run on the user interface thread.
 
 ##  MessageQueue 如何对 Message 排序的
 ```text
-通过事件排序 。
+通过时间排序 。
 public final boolean postDelayed(@NonNull Runnable r, long delayMillis) {
     return sendMessageDelayed(getPostMessage(r), delayMillis);
 }
@@ -330,7 +330,7 @@ boolean enqueueMessage(Message msg, long when) {
         } else {
             Message prev;
             for (;;) {
-                // 根据 执行事件 when ，将 当前消息排在对应的位置 
+                // 根据 执行时间 when ，将 当前消息排在对应的位置 
                 prev = p;
                 p = p.next;
                 if (p == null || when < p.when) {
