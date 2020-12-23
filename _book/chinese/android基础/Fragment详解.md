@@ -31,3 +31,8 @@ onAttach 、onDetach 、onActivityCreated 、onViewCreated 、onCreateView 、on
 
 ### getBackStackEntryCount
 从管理器中得到Fragment当前已加入Fragment回退栈中的fragment的数量。
+
+### onHiddenChanged
+```text
+onHiddenChanged 不是生命周期函数 ，通过 hide 和 show 进行触发。
+```

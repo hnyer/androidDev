@@ -24,14 +24,28 @@
 其中 PhoneWindow 就是一个私有API .
 
 #### 硬件加速
-硬件加速使用GPU进行View上的绘制操作。
-硬件加速可以在一下四个级别开启或关闭：
-Application ： 关、开
-Activity： 关、开
-Window： 开
-View： 关
+```text
+图形的绘制如果是 GPU处理的就是 硬件加速绘制，如果是 CPU 处理的 就是软件绘制。
+硬件加速使用 GPU 进行View上的绘制操作。
+
+硬件加速可以在以下四个级别开启或关闭：
+Application ：  为整个 APP开启
+<application android:hardwareAccelerated="true" ...>
+
+Activity：  activity 范围
+<activity android:hardwareAccelerated="false" />
+
+Window： window 范围
+getWindow().setFlags( WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED
+
+View：  view 范围
+oneView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+```
+
 并非所有的2D绘图操作支持硬件加速。所以硬件加速的开关分为四个层次。
 以下是已知不支持硬件加速的绘图操作(需要最新的请查阅[官网](https://developer.android.google.cn/guide/topics/graphics/hardware-accel.html))
+
+
 #### 支持硬件加速情况
 
 Canvas | 第一次支持 | Paint | 第一次支持

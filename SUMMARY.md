@@ -1,6 +1,6 @@
 # Summary
 
-* [项目介绍](README.md)
+* [首页](README.md)
 * [常用网站](chinese/doc/常用网站.md)
 * [开发规范](chinese/doc/开发规范.md)
 * [常用软件和框架](chinese/常用软件/常用软件和框架.md)

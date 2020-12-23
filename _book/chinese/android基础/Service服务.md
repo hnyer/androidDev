@@ -1,5 +1,6 @@
 # Service 服务
-Service 是运行在主线程中的， 如果有耗时操作在Service里，就必须开启一个单独的线程来处理 。
+Service 是运行在主线程中的， 所以 Service 处理不当 也是会引起 ANR 的。
+如果有耗时操作在Service里，就必须用子线程处理 。
 
 ### Service的意义
 ```text
@@ -83,6 +84,22 @@ BIND_ABOVE_CLIENT   // 如果当绑定服务期间遇到OOM需要杀死进程，
 BIND_WAIVE_PRIORITY //  被绑定的服务进程不会被OOM列入猎杀对象中。
 ```
 
+##  service 生命周期
+```text
+// 手动调用方法 
+startService() 
+stopService()	 
+bindService()	 
+unbindService() 
+
+// 内部自动调用的方法 
+onCreat() 
+onStartCommand()	开始服务
+onDestroy() 
+onBind()	 
+onUnbind()	 
+```
+![](../pics/service生命周期.png)
  
 ## onStartCommand()
 默认情况下， onStartCommand 返回值 START_STICKY_COMPATIBILITY 或 START_STICKY 。
