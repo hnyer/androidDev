@@ -36,8 +36,9 @@
 - [x]  ANR 是怎么回事？怎么查？Service会引起 ANR 么 
 - [x]  TCP和UDP区别，TCP为何是三次握手，为何是四次挥手
 - [x]  为什么 Activity.finish() 之后 10s 才 onDestroy 
-- [ ]  recycleview 原理
-- [ ]  RecyclerView的特点和缓存
+- [x]  MediaPlayer 能同时播放多个音频么？ 如果需要播放多个提示音，如何实现
+- [ ]  RecyclerView 的 原理、特点、缓存 、懒加载、 和 ListView 有什么区别  、局部刷新
+- [ ]  RecyclerView 使用时多种type场景下怎么避免滑动卡顿。 怎么优化滑动体验。
 - [ ]  activity，Window，view的关系
 - [ ]  activity有几个Window
 - [ ]  savedInstanceState知道么，干什么用的，什么时候有值，什么时候为空，平时是怎么用的
@@ -52,7 +53,6 @@
 - [ ]  Synchronize关键字后面跟类或者对象有什么不同。
 - [ ]  单例的DCL方式下，那个单例的私有变量要不要加volatile关键字，这个关键字有什么用
 - [ ]  SparseArray和ArrayMap各自的数据结构，前者的查找是怎么实现的，与HashMap的区别
-- [ ]  RecyclerView和ListView有什么区别？局部刷新？前者使用时多种type场景下怎么避免滑动卡顿。懒加载怎么实现，怎么优化滑动体验。
 - [ ]  SQLite的数据库升级用过么
 - [ ]  Scroller有什么方法，怎么使用的
 - [ ]  webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗
@@ -136,7 +136,6 @@
 - [ ]  View绘制流程；requestLayout和invalidate区别；invalidate每次都会触发onDraw么？View#onLayout每次会触发么？
 - [ ]  屏幕适配方案；头条适配方案核心原理。
 - [ ]  如何上传数据？请求头关键字段和请求体格式
-- [ ]  MediaPlayer能同时播放多个音频么？如果需要播放多个提示音，如何实现？
 - [ ]  drawable下所以的格式都能转成webp么？哪些不能转？
 - [ ]  讲下arraylist、hashmap、linkedlist、linkedhashmap的实现。linkedhashmap为何会有这样的特性(lru)?它有个参数，表示命中率和使用次数。
 - [ ]  lru是通过linkedhashmap实现的么？
@@ -154,7 +153,6 @@
 - [ ]  内存泄漏
 - [ ]  怎么获取view的宽高，如何确定值是准确的，说了view.post()补充 viewTreeObserverOnGlobalLayoutListener
 - [ ]  ARouter路由原理
-- [ ]  看视频的时候网络请求很慢怎么优化？
 - [ ]  说说HTTP3.0有什么改进？
 - [ ]  图片的三级缓存中,图片加载到内存中,如果内存快爆了,会发生什么？怎么处理？
 - [ ]  描述一次跨进程通讯
@@ -170,6 +168,7 @@
 - [ ]  如何触发重新绘制？
 - [ ]  requestLayout 和 invalidate 的流程
 - [ ]  requestLayout 和 invalidate 的区别
+- [ ]  看视频的时候网络请求很慢怎么优化？
 
 ## 非技术问题
 - [x]  代码质量如何控制
@@ -177,4 +176,4 @@
 - [x]  如何提高线上代码质量 
 - [x]  界面卡顿怎么排查和优化 ，何监测应用的 FPS
 - [x]  App上线后 用户使用时卡顿 ，怎么查看是什么原因
-- [ ]  如何进行单元测试，如何保证App稳定 
+- [x]  如何进行单元测试，如何保证App稳定 
