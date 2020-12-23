@@ -73,4 +73,8 @@
     * [屏幕适配](chinese/android基础/屏幕适配.md)
     * [Android外挂](chinese/android基础/Android外挂.md)
     * [智能家居](chinese/android基础/智能家居.md)
+* [python部分](chinese/python/python基础.md)
+    * [python基础](chinese/python/python基础.md)
+    * [python爬虫](chinese/python/python爬虫.md)
 * [人工智能](chinese/人工智能/人工智能相关概念.md)
+
