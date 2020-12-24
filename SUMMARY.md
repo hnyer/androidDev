@@ -76,5 +76,9 @@
 * [python部分](chinese/python/python基础.md)
     * [python基础](chinese/python/python基础.md)
     * [python爬虫](chinese/python/python爬虫.md)
+* [kotlin部分](chinese/kotlin/kotlin部分.md)
+* [flutter部分](chinese/flutter/flutter部分.md)
+* [服务器部分](chinese/server/服务器部分.md)
+* [web部分](chinese/webDev/web部分.md)
 * [人工智能](chinese/人工智能/人工智能相关概念.md)
 
