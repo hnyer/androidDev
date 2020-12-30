@@ -29,23 +29,23 @@ https://hnyer.gitee.io   //红尘之声|
 - [x]  TCP和UDP区别，TCP为何是三次握手，为何是四次挥手
 - [x]  为什么 Activity.finish() 之后 10s 才 onDestroy 
 - [x]  MediaPlayer 能同时播放多个音频么？ 如果需要播放多个提示音，如何实现
+- [x]  SQLite 的数据库升级 
+- [ ]  ARouter 路由原理
 - [ ]  RecyclerView 的 原理、特点、缓存 、懒加载、 和 ListView 有什么区别  、局部刷新
 - [ ]  RecyclerView 使用时多种type场景下怎么避免滑动卡顿。 怎么优化滑动体验。
-- [ ]  activity，Window，view的关系
-- [ ]  activity有几个Window
+- [ ]  activity，Window，view 的关系
+- [ ]  activity 有几个 Window
 - [ ]  savedInstanceState知道么，干什么用的，什么时候有值，什么时候为空，平时是怎么用的
 - [ ]  SharedPrefrences的apply和commit有什么区别
 - [ ]  ragment的replace和end？？的区别
 - [ ]  ACTION_CANCEL什么时候触发，触摸button然后滑动到外部抬起会触发点击事件吗，在+ + 滑动回去抬起会么
 - [ ]  怎么处理嵌套View的滑动冲突问题
-- [ ]  多模块开发的时候不同的负责人可能会引入重复资源，相同的字符串，相同的icon等但是文件名并不一样，怎样去重？
 - [ ]  canvas lock的缓冲区是怎么回事
 - [ ]  有什么提高编译速度的方法
 - [ ]  想改变listview的高度，怎么做
 - [ ]  Synchronize关键字后面跟类或者对象有什么不同。
 - [ ]  单例的DCL方式下，那个单例的私有变量要不要加volatile关键字，这个关键字有什么用
 - [ ]  SparseArray和ArrayMap各自的数据结构，前者的查找是怎么实现的，与HashMap的区别
-- [ ]  SQLite的数据库升级用过么
 - [ ]  Scroller有什么方法，怎么使用的
 - [ ]  webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗
 - [ ]  Android 中Activity、Window、ViewRoot、DecorView之间的联系
@@ -85,7 +85,6 @@ https://hnyer.gitee.io   //红尘之声|
 - [ ]  线程池如何配置，核心线程数你一般给多少
 - [ ]  hdpi和xxhdpi的手机，分别加载xhdpi下的图片，会缩放图片么？如果会缩放，是如何缩放的，像素点是如何补全或者减少的？图片在内存中的大小会如何变化？
 - [ ]  jetpack组件库使用过么？讲下具体组件
-- [ ]  函数式编程如何理解？
 - [ ]  t1、t2、t3三个线程，如何让三个线程按照顺序依次打印1-100。
 - [ ]  悬浮窗如何实现
 - [ ]  通知的类别
@@ -115,7 +114,7 @@ https://hnyer.gitee.io   //红尘之声|
 - [ ]  图片内存的计算。
 - [ ]  ①在不影响图片质量的前提下，如何减少内存？
 - [ ]  ②图片显示不全、变形怎么处理？
-- [ ]  http和https：
+- [ ]  http和 https 
 - [ ]  ①它们的区别：https多了tls层。对称加密和非对称加密。
 - [ ]  Application启动流程
 - [ ]  ContentProvider启动流程
@@ -134,17 +133,14 @@ https://hnyer.gitee.io   //红尘之声|
 - [ ]  线程的使用。讲下线程池的类型，线程池对象的参数，线程池最大线程数和核心线程数的关系，task的优先级如何实现？（优先级队列）
 - [ ]  讲下事件分发。如果onInterceptTouchEvent返回true，但是onTouchEvent返回了false，是什么效果？如果还想让其他View接收事件，该怎么做？
 - [ ]  大图加载；xhdpi的图片放到xxhdp的手机上，内存会如何变化；Bitmap内存复用
-- [ ]  网络优化，数据库优化
 - [ ]  ThreadLocal，LocalBroadcastReceiver实现
 - [ ]  binder的mmap
 - [ ]  Java内存模型
 - [ ]  说一说Android中如何查看一个对象的回收情况 ？
 - [ ]  Apk的大小如何压缩
-- [ ]  如何通过Gradle配置多渠道包
 - [ ]  Bitmap高效加载
 - [ ]  内存泄漏
 - [ ]  怎么获取view的宽高，如何确定值是准确的，说了view.post()补充 viewTreeObserverOnGlobalLayoutListener
-- [ ]  ARouter路由原理
 - [ ]  说说HTTP3.0有什么改进？
 - [ ]  图片的三级缓存中,图片加载到内存中,如果内存快爆了,会发生什么？怎么处理？
 - [ ]  描述一次跨进程通讯
@@ -168,4 +164,8 @@ https://hnyer.gitee.io   //红尘之声|
 - [x]  如何提高线上代码质量 
 - [x]  界面卡顿怎么排查和优化 ，何监测应用的 FPS
 - [x]  App上线后 用户使用时卡顿 ，怎么查看是什么原因
+- [ ]  网络优化 ，数据库优化
 - [x]  如何进行单元测试，如何保证App稳定 
+- [x]  多模块开发，不同的人可能会引入重复资源。相同的字符串，相同的icon等但是文件名并不一样，怎样去重
+- [x]  函数式编程 如何理解
+- [x]  如何通过 Gradle 配置多渠道包

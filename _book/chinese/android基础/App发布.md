@@ -1,7 +1,7 @@
 # 代码混淆
 [混淆规则 guardsquare](https://www.guardsquare.com/en/proguard)
 
-##  androidstudio 使用混淆  
+##  androidstudio 混淆配置  
 ```text
 // build.gradle 文件下 (这是系统默认生成的，可以修改)
 1、导入 xxx\tools\proguard\proguard-android.txt 。 这里面是一些比较常规的不能被混淆的代码规则。
@@ -12,9 +12,9 @@ proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pr
 minifyEnabled true
 ```
 
-###  不参与混淆部分
+##  不能混淆的内容
 混淆了这些内容，会导致出错。
-```xml  
+```text  
 1、 自定义控件
 2、 枚举
 3、 第三方库中的类 （作者一般会标明）
@@ -24,8 +24,8 @@ minifyEnabled true
 7、 Parcelable 的子类和 Creator 静态成员变量不混淆
 ```
 
-### 保留整个包
-```xml
+## 设置 不参与混淆
+```text
 # 保持该包下的类名 (子包下的会被混淆)
 -keep class cn.wk.test.*
 # 把本包和所含子包下的类名都保持
@@ -34,9 +34,8 @@ minifyEnabled true
 -keep class com.example.bean.** { *; }
 ```
 
-
-### 自用的 aar 混淆
-```xml
+## 自用的 aar 混淆
+```text
 # 代码混淆压缩比，在0~7之间，默认为5,一般不下需要修改
 -optimizationpasses 5
 # 混淆时不使用大小写混合，混淆后的类名为小写
@@ -157,4 +156,49 @@ minifyEnabled true
 # nineoldandroids.jar
 #-libraryjars ./libs/nineoldandroids-2.4.0.jar
 -keep class  com.nineoldandroids.** { *; }
+```
+
+# 渠道包
+## 为什么需要打渠道包
+```text
+1、为了区分用户从哪个 渠道下载的，比如官网、应用宝、华为、小米等商店，
+因为一般是分渠道进行推广的，这样就能统计出每个渠道的推广效果进而进行调整。
+
+2、可以针对每个不同渠道的 APP配置不同的 APP名字 和APP logo、包名。
+例如 搜狗输入法小米版、搜狗输入法华为版。
+```
+##  多渠道 打包 方案
+目前公司APP集中于官网发布，暂时用不上。需要的时候再来更新具体使用方法。
+```text
+1、gradle 官方方案。
+2、其他一些第三方的插件，例如美团就有一个 
+Walle（瓦力）https://github.com/Meituan-Dianping/walle
+```
+
+# Sqlite 数据库升级
+```text
+public class XXXHelper extends SQLiteOpenHelper {
+    /**
+     * 1、在第一次打开数据库的时候才会走
+     * 2、在清除数据之后再次运行-->打开数据库，这个方法会走
+     * 3、没有清除数据，不会走这个方法
+     * 4、数据库升级的时候这个方法不会走
+     */
+    @Override
+    public void onCreate(SQLiteDatabase db) {   }
+    /**
+     * 1、这个方法只有当数据库已经存在，而且版本升高的时候，才会调用
+     * 2、第一次创建数据库的时候，这个方法不会走
+     * 3、清除数据后再次运行(相当于第一次创建)这个方法也不会走
+     */
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {   }
+}
+
+onCreate() onUpgrade() 是数据库创建和升级的重要函数，在里面进行 sql 语句操作即可。
+只是 在升级的逻辑会比较麻烦和繁琐， 因为升级情况会比较多，
+比如用户可能是从 版本1 、2、3、4... 升级到版本10的，要针对这几种情况都要做相应的逻辑。
+
+如果不想写sql 语句，可以使用 郭霖 开源的 LitePal Android 数据库。
+封装的比较好 ，增删改查、数据库升级 事务操作都有。
 ```

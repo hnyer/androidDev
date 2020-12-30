@@ -17,7 +17,7 @@ java8新特性 | 说明
 ## Java Lambda
 Lambda是Java8的新特性 ，是一个语法糖
 
-```java
+```text
 // 语法格式
 (params) -> expression
 (params) -> statement
@@ -55,10 +55,9 @@ listSort.forEach( (sutdent) -> {
     System.out.println(sutdent.name+" : "+sutdent.age);
 });
 ```
-
-<br>
+ 
 #### 接口的默认方法与静态方法
-```java
+```text
 public interface MyMathTool {
     // 被 default关键字 修饰过的 sqrt 方法 将在子类上可以直接使用.
     // 可以有多个 默认方法
@@ -74,17 +73,13 @@ static double cacle(int a, int b){
 }
 ```
 
-## 函数式编程
-```xml
-函数式接口是Java支持函数式编程的基础。
-"函数式编程"是一种"编程范式"
-```
 
-<br>
+
+ 
 
 ## 方法引用
-```xml
-方法引用是lambda表达式的一种语法糖, 为了简化代码和加速开发。
+```text
+方法引用是 lambda 表达式的一种语法糖, 为了简化代码和加速开发。
 
 当我们想要实现一个函数式接口的那个抽象方法，但是已经有类实现了我们想要的功能，
 这个时候我们就可以用方法引用来直接使用现有类的功能去实现。（至于为什么可以这样，我暂时还不知道，没看源码。）
@@ -100,7 +95,7 @@ static double cacle(int a, int b){
 引用构造器|
 引用数组|
 
-```java
+```text
 // 实例::实例方法名
 Consumer<String> consumer = System.out::println;
 consumer.accept("This is Major Tom");
@@ -123,31 +118,37 @@ StringBuffer buffer = fun.apply(10);
 //  引用数组
 Function<Integer, Integer[]> fun2 = Integer[]::new;
 Integer[] arr2 = fun2.apply(10);
-
 ```
+ 
 
-
-<br>
-
-## 函数式接口
-为了更友好的支持Lambda表达式，Java 8引入了函数式接口的概念。
-所谓的函数式接口，当然首先是一个接口，然后就是在这个接口里面只能有一个抽象方法。
-```java
+## 函数式接口 Functional Interface
+为了更友好的支持 Lambda 表达式，Java 8引入了函数式接口的概念。
+所谓的函数式接口，就是是一个接口，这个接口只能有一个 抽象方法 。
+```text
 1、Java 8为函数式接口引入了一个新注解 @FunctionalInterface，主要用于编译级错误检查，
 加上该注解，当你写的接口不符合函数式接口定义的时候，编译器会报错。
 
 2、加不加@FunctionalInterface对于接口是不是函数式接口没有影响，
-该注解知识提醒编译器去检查该接口是否仅包含一个抽象方法
+该注解只是提醒编译器去检查该接口是否仅包含一个抽象方法
 
 3、函数式接口里是可以包含默认方法 、静态方法、Object里的public方法
-```
 
-```java
+当一个类是函数式接口的时候，我们可以直接使用Lambda表达式来实例化它，
+而不用写很多模板式代码。 
 @FunctionalInterface
-public interface Consumer <String>{
+public interface Consumer {
     void accept(String msg);
 }
+
+// 传统 命令式、面向对象 编程
+Consumer consumer = new Consumer() {
+    @Override
+    public void accept(String msg) {   }
+};
+// Lambda 表达式写法 更简洁
+Consumer consumer2 = (String msg) -> { } ;
 ```
+ 
 
 ### 内置的函数式接口
 为了方便开发者，java8内置了一批函数式接口。
@@ -204,25 +205,72 @@ ToLongFunction<T>|||接受一个输入参数，返回一个long类型结果。
 UnaryOperator<T>|||接受一个参数为类型T,返回值类型也为T。
 
 
-<br>
+## 函数式编程 functional programming
+```text
+命令式 编程语言包括 过程式编程 和 面向对象编程(OOP) 。
+函数式编程( FP ) 是一种 编程范式 ，是一种编程思想。
+
+// 命令式编程 
+更加注重 “如何做”，主要思想是关注计算机执行的步骤，即一步一步告诉计算机先做什么再做什么。
+//  声明式编程
+主要思想是告诉计算机应该做什么，但不指定具体要怎么做，SQL语句就是最明显的一种声明式编程的例子。
+//函数式编程  
+函数式编程和声明式编程是有所关联的，他们都只关注做什么而不是怎么做。
+但函数式编程不仅仅局限于声明式编程。
+OOP 关注对象方法的调用，而 FP关注函数之间的调用。
+
+// 函数式编程的特点
+1、函数是一等公民。函数可以作为参数 也可以作为返回值。
+函数与其他数据类型一样，处于平等地位。
+var print = function(i){ console.log(i);};
+[1,2,3].forEach(print); // print 就是一个函数，可以作为另一个函数的参数。
+
+2、无副作用。
+所有功能就是返回一个新的值，没有其它行为，不修改外部的值 ,不改变 input。
+
+3、引用透明
+只依赖于输入的参数，任何时候只要参数相同，引用函数所得到的返回值总是相同的。
+
+4、易于 并发编程
+因为它不修改变量，所以根本不存在"锁"线程的问题。 
+  
+总是感觉 Java8的函数式编程有点奇怪。 
+网上很多文章直接将 函数式编程跟 lambd 或 流式 对应。感觉不太对。
+
+以下举例来自 阮一峰 的博客
+现在有这样一个数学表达式 (1 + 2) * 3 - 4 ，
+传统的过程式编程，可能这样写：
+var a = 1 + 2;
+var b = a * 3;
+var c = b - 4;
+函数式编程要求使用函数，我们可以把运算过程定义为不同的函数，然后写成下面这样
+var result = subtract( multiply( add(1,2) , 3), 4);
+```
+
+## 为什么 函数式编程 又被大量采用和支持
+c++ 11 、Java8 都纷纷加入支持
+```text
+1、精简代码，去掉冗余的模板代码
+
+2、函数式编程 天生的 可以并行特性 。
+现在 cpu 和 内存 越来越够用 ，
+对于越来越庞大的代码，与其 费大力气去 解决 各种锁和同步问题，
+不如直接改用根本不会导致这些问题的 FP 方案 。
+``` 
 
 ## 匿名函数
 参考匿名类。 匿名函数就是一个没有名字的函数。
 常与 Lambda 搭配使用
-```java
-// 新建了一个Runnable 对象。省略了 Runnable 的run函数的名字，并在函数里面打印了一句话
+```text
+// 新建了一个Runnable 对象。省略了 Runnable 的run函数的名字.
 Runnable r = () -> System.out.println("Thread start...");
-// 使用这个新建的对象
 new Thread(r).start();
 ```
-
-<br>
+ 
 
 ## Optional
-
-```xml
 是一个封装了一个元素的容器，而这个元素可以是null也可以是其它任意类型的。
-```
+
 Optional 的方法 | 说明
 -|-
 Optional.of(T t) | 创建一个 Optional 实例
@@ -232,19 +280,18 @@ optional.get() | 获取Optional中的值
 optional.isPresent() | 判断optional对象是否有值
 
 
-<br>
+ 
 ## Stream
-```xml
-这个Stream并不是我们以前认识的IO流，
+```text
+这个 Stream 并不是我们以前认识的IO流，
 而是一个数据渠道，用于操作数据源（集合、数组等）所生成的元素序列。
 Stream API 提供了一种高效且易于使用的处理数据的方式 ，例如 非常复杂的查找、过滤和映射数据等 。
-
-注意：Stream 不会改变源对象。它会返回一个持有结果的新Stream（这样可以链式编程）。
+Stream 不会改变源对象。它会返回一个持有结果的新Stream（这样可以链式编程）。
 ```
 ## Stream 延迟执行
 只要Stream的方法返回的对象是Stream，这些方法就是延迟执行的方法 。
-一般在Stream流中，一个方法返回的不是Stream，基本就是迫切方法 。
-```java
+一般在Stream流中，一个方法返回的不是Stream，基本就是 迫切方法 。
+```text
 // 由集合创建 Stream
 List<String> list = new ArrayList<>();
 //获取一个顺序流
@@ -304,16 +351,15 @@ Set<Integer> resultSet = list2.stream() .collect(Collectors.toSet());
 ```
 
 
-<br>
+ 
 
 ## 日期时间 API
-```xml
+```text
 在旧版的 Java 中，日期时间 API 存在很多问题，比如线程安全问题 、命名、设计、分包不合理等问题。
 Java 8 提供的日期时间 API都在java.time包下，
 这个包涵盖了所有处理日期(date)，时间(time)，日期/时间(datetime)，
 时区（zone)，时刻（instant），间隔（duration）与时钟（clock）的操作
-```
-```java
+
 // 获取当前日期时间
 LocalDateTime now = LocalDateTime.now();
 int year = now.getYear();
@@ -326,14 +372,12 @@ LocalDateTime dateTime3 = now.plusDays(5);
 // 构造一个指定日期时间的对象 , 年 月 日 时 分
 LocalDateTime dateTime = LocalDateTime.of(2016, 10, 23, 8, 20);
 
-
 // 获取当前时间的时间戳
 Instant instant = Instant.now();
 // 结果跟System.currentTimeMillis()一样
 long milli = instant.toEpochMilli();
 // 时区偏移
 OffsetDateTime dateTime4 = instant.atOffset(ZoneOffset.ofHours(8));
-
 
 //时间间隔
 LocalTime start = LocalTime.now();
@@ -360,17 +404,14 @@ ZonedDateTime now3 = ZonedDateTime.now();
 //获取美国洛杉矶时区的日期时间
 ZonedDateTime USANow = ZonedDateTime.now(ZoneId.of("America/Los_Angeles"));
 ```
-
-<br>
+ 
 
 ## 重复注解
-```xml
+```text
 在 java8 以前，同一个程序元素前最多只能有一个相同类型的注解；
 如果需要在同一个元素前使用多个相同类型的注解，则必须使用注解“容器”。
-
 java8简化了使用的步骤，虽然仍然要定义“容器” 。但是直接使用的就是注解。
-```
-```java
+
 // java8 之前的写法
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Authority {
@@ -384,9 +425,7 @@ public @interface Authorities {
 
 @Authorities({@Authority(role = "Admin"), @Authority(role = "Manager")})
 private void test( ) { ... }
-```
-
-```java
+ 
 // java8 及之后的写法
 @Retention(RetentionPolicy.RUNTIME)
 @Repeatable(Authorities.class)

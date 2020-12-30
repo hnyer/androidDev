@@ -1,4 +1,4 @@
-# 性能优化 、 APP优化
+# 性能优化
 ## 启动优化
 ```text
 // 冷启动 、热启动
@@ -16,8 +16,6 @@
 在app 退出时 不要finish ，而是 moveTaskToBack ，即模拟 HOME按键的事件 。
 ```
 
-
-
 ##  UI流畅度优化 、界面卡顿 排查及优化
 Skipped 60 frames!  The application may be doing too much work on its main thread.
 ```text
@@ -26,7 +24,7 @@ Skipped 60 frames!  The application may be doing too much work on its main threa
 就会导致跳过帧的渲染，也就是导致界面看起来不流畅，卡顿。
 ```
 
-### 卡顿引起的具体原因
+## 卡顿引起的具体原因
 ```text
 1、cpu 占用过高，容易卡顿 。一般是 后台线程处理的东西太繁忙。
 注意逻辑的优化，线程不要空跑。
@@ -35,7 +33,7 @@ Skipped 60 frames!  The application may be doing too much work on its main threa
 UI的层级别太大 ，不要冗余嵌套 
 ```
 
-### 卡顿检测 Choreographer
+## 卡顿检测 Choreographer
 ```text
 使用 Androidstudio 自带的 工具，和一些第三方的监控工具 例如 BlockCanary 就差不多了。
 
@@ -71,7 +69,7 @@ Choreographer.getInstance()
         });
 ```
 
-### 排查 线上App ,用户反馈卡顿的问题
+## 排查 线上App ,用户反馈卡顿的问题
 ```text
 1、记录用户的使用机型和使用场景。例如操作流程、网络环境
 2、加入卡顿检测机制，有第三方的 SDK 也可以自己写 ，
@@ -84,6 +82,16 @@ Choreographer.getInstance()
 2、控制好对象的引用，防止对象一直无法释放。
 ```
 
+
+## apk瘦身
+最主要的是 从图片资源 、第三方库 和 .so 方面考虑 。
+```text
+1、 用lint检查， 删除无用资源
+2、 用tinypng等压缩图片。
+3、用webp格式图片
+4、开启代码混淆
+5、删除冗余代码。
+```
 
 # 稳定性 优化
 ```text
@@ -141,7 +149,7 @@ Choreographer.getInstance()
 // TDD ( Test-Driven Development ) 测试驱动开发 
 ```
 
-###   JUnit4 方案
+##  单元测试 JUnit4 方案
 Androidstudio 自带。
 ```text
 测试运行在本地开发环境的Java虚拟机上，无需连接Android设备或模拟器。
@@ -171,7 +179,7 @@ public void valueAdd() {
 }
 ```
 
-### Instrumentation 方案
+## 单元测试 Instrumentation 方案
 ```text
 需要将整个项目打包成apk，上传到模拟器或真机上，就跟运行了一次app 。
 最近的文章(20201222)讲到 Androidstudio +Instrumentation 比较少，
@@ -179,7 +187,7 @@ Androidstudio3.4.1 默认生成的代码中也没有 Instrumentation 相关配�
 是被替代了吗，暂时去看看其他的方案。
 ```
 
-### robolectric 方案
+## 单元测试 robolectric 方案
 With Robolectric, your tests run in a simulated Android environment inside a JVM, 
 without the overhead of an emulator.
 ```text
