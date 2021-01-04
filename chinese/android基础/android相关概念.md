@@ -1,4 +1,24 @@
 # 安卓基本概念
+
+##  虚拟机对比
+### JVM
+Java Virtual Machine。基于栈 ，运行java字节码。
+
+### DVM 
+```text
+Dalvik Virtual Machine 。
+运行自谷歌定义的 .dex字节码格式。
+Dalvik 基于寄存器的架构， 更适合资源紧张的系统。
+```
+
+### ART 
+```text
+Android runtime 。
+Android 4.4 开始加入 ART模式。
+ART下，应用在第一次安装的时候，字节码就会预编译成机器码，首次启动会变慢，
+但是以后每次启动执行的时候，都可以直接运行。（空间换时间）
+```
+
 ## 双缓冲
 ```text
 两个线程配合完成某一项工作，一个线程做A部分（例如绘制UI），

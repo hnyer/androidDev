@@ -41,7 +41,6 @@
     * [数据解析](chinese/java基础/数据解析.md)
 * [android部分](chinese/android基础/android相关概念.md)
     * [android相关概念](chinese/android基础/android相关概念.md)
-    * [虚拟机对比](chinese/android基础/虚拟机对比.md)
     * [常用代码](chinese/android基础/常用代码块.md)
     * [android坐标体系](chinese/android基础/android坐标体系.md)
     * [事件分发机制](chinese/android基础/事件分发机制.md)
