@@ -121,4 +121,13 @@ apply() 进行提交会先写入内存，然后异步写入磁盘， commit() �
 如果频繁操作的话 apply 的性能会优于 commit 。 
 如果希望立刻获取存储操作的结果，并据此做相应的其他操作，应当使用 commit。
 ```
+
+## Application 
+```text
+// Application 中显示 Dialog (AlertDialog) 
+借助 ActivityLifecycleCallbacks 的生命周期回调 获得 Context
+new AlertDialog.Builder(mContext);   
+
+// 通过 Application  传值 缺点 
+```
  

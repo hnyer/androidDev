@@ -46,7 +46,6 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] 为什么 Activity.finish() 之后 10s 才 onDestroy 
 - [x] MediaPlayer 能同时播放多个音频么？ 如果需要播放多个提示音，如何实现
 - [x] SQLite 的数据库升级 
-- [ ] AQS 了解吗？
 - [ ] AMS交互调用生命周期是顺序的吗？
 - [ ] Activity生命周期
 - [x] SharedPreference 原理 ，读取xml是在哪个线程
@@ -81,30 +80,28 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] Android 中Activity、Window、ViewRoot、DecorView之间的联系
 - [ ] View的分发机制，滑动冲突
 - [ ] 你如何自己实现一个LRUCache？Android里面的LRUCache是如何实现的
-- [ ] JMM可见性，原子性，有序性，synchronized可以保证什么？
-- [ ] 讲下synchronized和volatile；读写锁和ReentrantLock，synchronized和读写锁的区别。
-- [ ] Lock的实现，以及与synchronized的区别
-- [ ] 平常有用到什么锁，synchronized底层原理是什么
-- [ ] synchronized是公平锁还是非公平锁,ReteranLock是公平锁吗？是怎么实现的
-- [ ] synchronized跟ReentranLock有什么区别？
-- [ ] synchronized与ReentranLock发生异常的场景.
-- [ ] 讲一下锁，synchronized 和Lock。CAS原理
-- [ ] 锁之间的区别
-- [ ] 双锁单例，为什么要价violate
-- [ ] synchronized 的同步原语
-- [ ] synchronized和volatile的区别？为何不用volatile替代synchronized？类锁和对象锁互斥么
+- [x] JMM 可见性 、原子性 、有序性 、synchronized 可以保证什么
+- [x] 重入锁 ReentrantLock 、synchronized 和 读写锁 ReadWriteLock 的区别 
+- [x] Lock 接口 的实现，以及与 synchronized 的区别
+- [ ] 平常有用到什么锁，锁之间的区别 ,synchronized 底层原理是什么
+- [x] synchronized 是公平锁还是非公平锁 , ReteranLock 是公平锁吗？ 是怎么实现的
+- [x] synchronized 跟 ReentranLock 有什么区别？ 发生异常的场景
+- [ ] 双锁单例，为什么要价 volatile
+- [ ] synchronized 和 volatile 的区别？为何不用 volatile 替代 synchronized？
+- [x] 类锁和对象锁互斥么
+- [x] CAS 原理
+- [ ] AQS 了解吗
 - [ ] gcroot的类型
-- [ ] MeasureSpec讲一下
-- [ ] Application中可以显示Dialog么？为什么？
+- [ ] MeasureSpec 讲一下
 - [ ] 泛型擦除，为何会有擦除？擦除的时机。通配符。
 - [ ] 泛型：为何会有协变和逆变，PECS规则。
 - [ ] 泛型是怎么解析的，比如在retrofit中的泛型是怎么解析的
 - [ ] 泛型有什么优点？
 - [ ] 泛型为什么要擦除？ kotlin的泛型了解吗？泛型的pecs原则
-- [ ]kotlin空安全的原理是什么？
-- [ ]kotlinc与javac编译字节码有什么区别？
-- [ ]kotlin lazy使用,lazy viewmodel
-- [ ]kotlin与Java互相调用有什么问题？
+- [ ] kotlin空安全的原理是什么？
+- [ ] kotlinc与javac编译字节码有什么区别？
+- [ ] kotlin lazy使用,lazy viewmodel
+- [ ] kotlin与Java互相调用有什么问题？
 - [ ] kotlin ?的原理
 - [ ] IdleHandler 调用时机
 - [ ] IdleHandler用过吗 ？IdleHandler 应用场景
@@ -123,7 +120,6 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 讲下arraylist、hashmap、linkedlist、linkedhashmap的实现。linkedhashmap为何会有这样的特性(lru)?它有个参数，表示命中率和使用次数。
 - [ ] lru是通过linkedhashmap实现的么？
 - [ ] 讲讲LinkedHashMap的数据结构
-- [ ] application中持有静态的用户信息，有何缺点？如何改进？
 - [ ] 单例的几种实现方式：DCL、enum，静态内部类。还有饿汉式。懒汉式的使用场景：占用内存大、延迟初始化
 - [ ] ArrayMap和SparseArray的区别，实现。
 - [ ] 自定义View的几种方式。onMeasure、onLayout、onDraw方法都何时需要重写。
@@ -174,10 +170,12 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] https与http有什么区别
 - [ ] http与 https 有什么区别
 - [ ] 说说 HTTP3.0 有什么改进？
-- [ ] Application启动流程
 - [ ] ContentProvider启动流程
-- [ ] 使用Application#onTrimMemory优化
-- [ ] 使用ActivityLifecycleCallbacks做了哪些事情？
+- [ ] Application 启动流程
+- [ ] 使用 Application#onTrimMemory 优化
+- [ ] Application 中持有 静态的信息，有何缺点 ？如何改进 
+- [x] Application 中可以显示Dialog么 ？为什么？
+- [x] 使用 ActivityLifecycleCallbacks 做了哪些事情？
 - [ ] 成员变量和局部变量的区别。为何成员变量需要jvm在对象初始话过程中赋默认值？
 - [ ] 垃圾回收机制与 jvm 结构
 - [ ] Jvm 的内存结构，Jvm的垃圾回收，方法区有什么东西？
