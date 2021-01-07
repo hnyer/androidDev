@@ -251,6 +251,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 登陆功能，登陆成功然后跳转到一个新Activity，中间涉及什么？从事件传递，网络请求,AMS交互角度分析
 
 # 事件分发 UI绘制
+- [ ] MeasureSpec 讲一下
 - [ ] ACTION_CANCEL什么时候触发，触摸button然后滑动到外部抬起会触发点击事件吗，在+ + 滑动回去抬起会么
 - [ ] 获取TextView的行数时，StaticLayout原理
 - [ ] MotionEvent#offsetLocation事件转发。
@@ -258,7 +259,6 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] View 绘制流程 ； invalidate每次都会触发onDraw么？View#onLayout每次会触发么？
 - [ ] 怎么获取view的宽高，如何确定值是准确的，说了view.post()补充 viewTreeObserverOnGlobalLayoutListener
 - [ ] 首次 View 的绘制流程是在什么时候触发的？
-- [ ] MeasureSpec 讲一下
 - [ ] 如何触发重新绘制？
 - [ ] 绘制的数据是如何提交到远端的SurfaceFlinger
 - [ ] requestLayout 和 invalidate 的流程
