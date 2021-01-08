@@ -9,17 +9,14 @@ https://blog.csdn.net/dengpanwen  //CSDN|
 https://hnyer.gitee.io  //红尘之声|
 
 
-
 因为博客页数太多会导致编译时间较长，我不太喜欢。所以采用面试技术点的方式展示，善用左上角的搜索功能即可。
 # Java基础
-- [x] Java 内存模型
-- [ ] 垃圾回收机制与 jvm 结构
-- [ ] Jvm 的内存结构，Jvm的垃圾回收，方法区有什么东西？
-- [ ] 说说Java的内存分区
-- [ ] 讲讲你对垃圾回收机制的了解，老年代有什么算法？
+- [x] Java 内存模型、内存结构、Java的内存分区
+- [ ] jvm 结构
+- [ ] jvm 垃圾回收机制、老年代有什么算法？
+- [ ] 方法区有什么东西 
 - [ ] JVM 类加载机制了解吗，类什么时候会被加载？类加载的过程具体生命周期是怎样的？
 - [ ] 拉圾回收的 GCRoot 是什么？
-- [ ] 说一说Android中如何查看一个对象的回收情况 ？
 - [ ] 讲下 equals 和 hashcode ，他们为何必须一起重写
 - [ ] 成员变量和局部变量的区别。为何成员变量需要jvm在对象初始话过程中赋默认值？
 - [ ] GCRoot，举例说明。比如说Activity和它的匿名内部类Handler，分析下引用链，对应的gcroot是哪个？
@@ -28,33 +25,18 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 字节码注入
 - [ ] java和 字节码 有什么区别？
 - [ ] 自动装箱发生在什么时候？编译期还是运行期
-- [ ] 冷启优化的一些方案 
 - [ ] 内部类访问外部类
 - [ ] java有什么特性，继承有什么用处，多态有什么用处
 - [ ] 对象加载的过程，属性先加载还是方法先加载
-- [ ] 说说你对类加载机制的了解？DexClassLoader与PathClassLoader的区别
-- [ ] Seriazable与Parceable的区别
-- [ ] Bundle是什么数据结构?利用什么传递数据
-- [ ] 两个getDrawable取得的对象，有什么区别？
+- [x] 讲下Java的 双亲委派
+- [ ] 说说你对类加载机制的了解？ DexClassLoader与PathClassLoader的区别
 - [x] java 里带$的函数 是什么意思
 - [x] 硬件加速 是什么原理
 - [x] 进程优先级
-- [ ] 讲下Java的 双亲委派
 - [ ] 反射 是什么，在哪里用到，怎么利用反射创建一个对象
 - [ ] 反射可以反射final修饰的字段吗？
 - [ ] 静态方法，静态对象为什么不能继承
-- [ ] savedInstanceState知道么，干什么用的，什么时候有值，什么时候为空，平时是怎么用的
-- [ ] ragment的replace和end？？的区别
-- [ ] canvas lock的缓冲区是怎么回事
-- [ ] 有什么提高编译速度的方法
-- [ ] 想改变listview的高度，怎么做
-- [ ] Synchronize关键字后面跟类或者对象有什么不同。
 - [ ] 单例的DCL方式下，那个单例的私有变量要不要加volatile关键字，这个关键字有什么用
-- [ ] Scroller有什么方法，怎么使用的
-- [ ] webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗
-- [ ] Android 中Activity、Window、ViewRoot、DecorView之间的联系
-- [ ] View的分发机制，滑动冲突
-- [ ] 你如何自己实现一个LRUCache？Android里面的LRUCache是如何实现的
 - [x] JMM 可见性 、原子性 、有序性 、synchronized 可以保证什么
 - [x] 重入锁 ReentrantLock 、synchronized 和 读写锁 ReadWriteLock 的区别 
 - [x] Lock 接口 的实现，以及与 synchronized 的区别
@@ -63,7 +45,8 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] synchronized 跟 ReentranLock 有什么区别？ 发生异常的场景
 - [ ] 双锁单例，为什么要价 volatile
 - [ ] synchronized 和 volatile 的区别？为何不用 volatile 替代 synchronized？
-- [ ]说说你对 volatile 字段有什么用途？
+- [ ] 说说你对 volatile 字段有什么用途？
+- [ ] Synchronize 关键字后面跟类或者对象有什么不同
 - [x] 类锁和对象锁互斥么
 - [x] CAS 原理
 - [ ] AQS 了解吗
@@ -108,18 +91,14 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 方法内部的匿名内部类，比如说给View设置的OnClickListener，它里面相关调用外部方法的形参，必须使用final修饰这个形参，为何？
 - [ ] Android里面进程间通信方式，ContentProvider可以用file实现么？
 - [ ] Activity启动模式，以及各启动模式生命周期问题
-- [ ] Activity怎么启动Service，Activity与Service交互，Service与Thread的区别
-- [ ] ANR了解过吗？有没有实际的ANR定位问题的经历
+- [x] Activity怎么启动 Service 、Activity 与 Service 交互，Service 与 Thread 的区别
+- [x] ANR 了解过吗？有没有实际的ANR定位问题的经历
 - [ ] mainfest中配置LargeHeap，真的能分配到大内存吗？
-- [ ] 一个大致有序的数组如何排序，最快时间复杂度
-- [ ] 如果叫你实现，你会怎样实现一个多主题的效果
-- [ ] 在项目中有直接使用tcp,socket来发送消息吗
 - [ ] 生命周期都是通过什么调用的？有用过AIDL吗？
 - [ ] AIDL in out oneWay 代表什么意思
 - [ ] put post有什么区别
 - [ ] 本地广播为何效率高？
 - [ ] 广播与RxBus的区别，全局广播与局部广播区别
-- [ ] jsBridge实现方式
 - [ ] Rxjava是怎么实现线程切换的
 - [ ] Rxjava自定义操作符
 - [ ] RXJava 怎么切换线程
@@ -136,6 +115,16 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 为什么会有R文件这个映射表？直接使用资源的路径不好么？
 - [ ] dex文件结构了解过么？为何会有65535的限制？mutildex技术了解么？这项技术的目的是什么？
 - [ ] ThreadLocal，LocalBroadcastReceiver实现
+- [ ] Android 中Activity、Window、ViewRoot、DecorView之间的联系
+- [ ] Seriazable与Parceable的区别
+- [ ] Bundle是什么数据结构?利用什么传递数据
+- [ ] 两个getDrawable取得的对象，有什么区别？
+- [ ] savedInstanceState知道么，干什么用的，什么时候有值，什么时候为空，平时是怎么用的
+- [ ] ragment的replace和end？？的区别
+- [ ] Scroller有什么方法，怎么使用的
+- [ ] 想改变listview的高度，怎么做
+- [ ] canvas lock的缓冲区是怎么回事
+- [ ] 有什么提高编译速度的方法
 
 # Android 动画
 - [x] 介绍一下 Android 动画
@@ -165,6 +154,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 如何上传数据？请求头关键字段和请求体格式
 - [ ] 实现一个下载功能的接口
 - [ ] 平常抓包用什么工具？
+- [x] 在项目中有直接使用tcp 、socket 来发送消息吗
 
 # 线程 、进程 、跨平台
 - [x] 多线程如何实现 ,有哪些方式 、四种线程池原理 ,线程池的类型 
@@ -199,10 +189,12 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] native 如何对 h5 进行鉴权，让某些页面可以调，某些页面不能调
 - [ ] @JavaScriptInterface为什么不通过多个方法来实现 
 - [ ] 为什么不利用同步方法来做 jsBridge交互？ 同步可以做异步，异步不能做同步 
+- [ ] jsBridge 实现方式
 - [ ] PathClassLoader与DexClassLoader有什么区别
 - [ ] CoordinatorLayout自定义behavior,可以拦截什么？
 - [ ] 视频播放,一个player怎么实现预加载，避免loading
 - [ ] webView加载本地图片，如何从安全方面考虑 
+- [ ] webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗
 - [ ] retrofit怎么做post请求
 
 
@@ -251,38 +243,40 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 登陆功能，登陆成功然后跳转到一个新Activity，中间涉及什么？从事件传递，网络请求,AMS交互角度分析
 
 # 事件分发 UI绘制
-- [ ] MeasureSpec 讲一下
-- [ ] ACTION_CANCEL什么时候触发，触摸button然后滑动到外部抬起会触发点击事件吗，在+ + 滑动回去抬起会么
+- [x] View 绘制流程
+- [x] onMeasure 、onLayout 、onDraw关系
+- [x] 自定义 View 的几种方式。onMeasure、onLayout、onDraw 方法都何时需要重写 
+- [x] MeasureSpec 讲一下
+- [x] 讲下 onMeasure方法 , 如何测量 ，测量模式 ，入参为什么是int类型 
+- [x] 怎么获取view的宽高，如何确定值是准确的 ,有遇到是0的情况吗
+- [x] 为什么 view.post 可以获得宽高，有看过view.post的源码吗 
+- [x] 自定义 LinearLayout ，怎么测量子 View宽高
+- [x] onCreate 、onResume 、onStart里面，什么地方可以获得宽高
+- [x] 如何触发重新绘制
+- [ ] 首次 View 的绘制流程是在什么时候触发的
+- [x] invalidate 每次都会触发 onDraw 么？invalidate 每次会触发 View#onLayout 么？
+- [ ] 为什么会多次调用 onMeasure 和 onLayout 方法
+- [ ] ACTION_CANCEL 什么时候触发，触摸button然后滑动到外部抬起会触发点击事件吗，在+ + 滑动回去抬起会么
 - [ ] 获取TextView的行数时，StaticLayout原理
 - [ ] MotionEvent#offsetLocation事件转发。
-- [ ] 为什么会多次调用onMeasure和onLayout方法
-- [ ] View 绘制流程 ； invalidate每次都会触发onDraw么？View#onLayout每次会触发么？
-- [ ] 怎么获取view的宽高，如何确定值是准确的，说了view.post()补充 viewTreeObserverOnGlobalLayoutListener
-- [ ] 首次 View 的绘制流程是在什么时候触发的？
-- [ ] 如何触发重新绘制？
 - [ ] 绘制的数据是如何提交到远端的SurfaceFlinger
 - [ ] requestLayout 和 invalidate 的流程
 - [ ] requestLayout 和 invalidate 的区别
 - [ ] requestLayout调用后，都会调用哪些方法？
-- [ ] 自定义LinearLayout，怎么测量子View宽高
-- [ ] 自定义View的几种方式。onMeasure、onLayout、onDraw方法都何时需要重写。
 - [ ] 滑动冲突如何解决？有几种方式？具体从哪个事件开始拦截？在哪里拦截？比如双层ViewPager嵌套的滑动冲突如何解决。
-- [ ] 讲下onMeasure方法： 如何测量 ，测量模式 ，入参为什么是int类型？
 - [ ] 讲下事件传递 ，总体流程，DOWN事件拦截后，后续事件如何处理？，dispatchTouchEvent方法返回true后事件如何处理？
 - [ ] setOnTouchListener,onClickeListener 和 onTouchEvent 的关系
 - [ ] dispatchTouchEvent , onInterceptEvent , onTouchEvent 顺序，关系
 - [ ] 说说 事件分发机制，怎么写一个不能滑动的ViewPager
 - [ ] RecyclerView是怎么处理内部ViewClick冲突的
 - [ ] 手势操作 ActionCancel 后怎么取消
-- [ ] onMeasure,onLayout,onDraw关系
 - [ ] 伪代码实现一个长按事件
 - [ ] 说说你对屏幕刷新机制的了解，双重缓冲，三重缓冲，黄油模型
-- [ ] onCreate,onResume,onStart里面，什么地方可以获得宽高
-- [ ] 为什么view.post可以获得宽高，有看过view.post的源码吗？
 - [ ] attachToWindow什么时候调用？
 - [ ] ViewGroup在Action_Move时onIntercept返回true，事件怎么传递
 - [ ] ViewPager中嵌套ViewPager怎么处理滑动冲突
 - [ ] 怎么处理嵌套View的滑动冲突问题
+- [ ] View的分发机制，滑动冲突
 - [ ] 如果onInterceptTouchEvent返回true，但是onTouchEvent返回了false，是什么效果？如果还想让其他View接收事件，该怎么做？
 
 # 自定义控件
@@ -328,6 +322,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 了解哪些算法
 - [ ] 删除数组中的重复元素
 - [ ] 反转数组
+- [ ] 一个大致有序的数组如何排序，最快时间复杂度
 - [ ] 手写双检查单例模式，各个步骤有什么区别
 - [ ] 斐波那契台阶
 - [ ] 手写生产者消息者模型
@@ -379,6 +374,8 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 技术选型上，为什么这么考虑？从开发效率，产品性能，产品质量，产品体验等方面考虑
 - [ ] 你们网络框架用的什么？为什么？
 - [ ] 如果 Android 和 iOS 调一个接口，一个通了一个没通(或者响应速度一个块一个慢)，你会如何解决
+- [ ] 说一说Android中如何查看一个对象的回收情况 ？
+- [ ] 冷启优化的一些方案 
 
 
 
@@ -414,6 +411,8 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 设计一个上传日志的大小，涉及到，性能、文件大小、怎样压缩、时机、TopK问题等
 - [ ] 如果产品要求你开发一个音频播放功能，你会怎么着手？预计会有什么坑？
 - [ ] 你觉得 XX 目前的APP有什么问题？
+- [ ] 如果叫你实现，你会怎样实现一个多主题的效果
+- [ ] 你如何自己实现一个LRUCache？Android里面的LRUCache是如何实现的
 
 # 设计模式
 - [ ] 你在项目中有用到什么设计模式吗
