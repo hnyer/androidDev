@@ -30,7 +30,7 @@
     * [深度拷贝](chinese/java基础/深度拷贝.md)
     * [java多态](chinese/java基础/java多态.md)
     * [类_接口](chinese/java基础/类_接口.md)
-    * [泛型通配符extends与super的区别](chinese/java基础/泛型通配符extends与super的区别.md)
+    * [泛型详解](chinese/java基础/泛型详解.md)
     * [容器类之间的区别](chinese/java基础/容器类之间的区别.md)
     * [为什么要使用泛型](chinese/java基础/为什么要使用泛型.md)
     * [Java枚举](chinese/java基础/Java枚举.md)

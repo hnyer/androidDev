@@ -50,21 +50,20 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] 类锁和对象锁互斥么
 - [x] CAS 原理
 - [ ] AQS 了解吗
-- [ ] gcroot的类型
-- [ ] 泛型擦除，为何会有擦除？擦除的时机。通配符。
-- [ ] 泛型：为何会有协变和逆变，PECS规则。
-- [ ] 泛型是怎么解析的，比如在retrofit中的泛型是怎么解析的
-- [ ] 泛型有什么优点？
-- [ ] 泛型为什么要擦除？ kotlin的泛型了解吗？泛型的pecs原则
-- [ ] string,equals,==有什么区别
+- [ ] gcroot 的类型
+- [x] 泛型是什么、泛型有什么优点
+- [x] 泛型通配符
+- [x] 泛型擦除 是什么，为何会有擦除 、擦除的时机 
+- [ ] 泛型是怎么解析的，比如在 retrofit 中的泛型是怎么解析的
+- [x] 泛型 为何会有 协变 和 逆变，PECS 规则
+- [x] string 比较 equals 和 == 有什么区别
 - [x] 函数式编程 如何理解
-- [ ] 说说你对注解的了解，是怎么解析的
+- [ ] 说说你对 注解 的了解，是怎么解析的
 - [ ] 编译时注解与运行时注解，为什么retrofit要使用运行时注解？什么时候用运行时注解？
 
 # android 基础
 - [ ] Activity与AppCompactActivity区别，Activity会打包到包里面去吗？
-- [x] Android APP的 入口函数 在哪里
-- [x] 冷启动、热启动优化
+- [x] Android APP的 入口函数 在哪里 
 - [x] activity 启动模式
 - [x] Activity 生命周期有哪些，知道 onRestart 么； A启动B ，A的 onStop 一定会执行吗；按 Home 按键后的生命周期
 - [x] activity 启动另外一个activity的时候横屏切换再点击返回，过程中发生的生命周期
@@ -79,6 +78,9 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] ANR 是怎么回事？怎么查？Service会引起 ANR 么 
 - [x] 为什么 Activity.finish() 之后 10s 才 onDestroy 
 - [x] SQLite 的数据库升级 
+- [ ] AMS交互调用生命周期是顺序的吗
+- [x] SharedPreference 原理 ，读取xml是在哪个线程
+- [x] SharedPreferences 的 apply 和 commit 有什么区别
 - [ ] ContentProvider具体实现。
 - [ ] binderService方法中的回调具体运行在哪个线程？binder线程池最大线程数是多少？自定义的Callback远程调用，运行在哪个线程？为何不是主线程，如果运行在主线程会有哪些问题？
 - [ ] jetpack组件库使用过么？讲下具体组件
@@ -124,7 +126,6 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] Scroller有什么方法，怎么使用的
 - [ ] 想改变listview的高度，怎么做
 - [ ] canvas lock的缓冲区是怎么回事
-- [ ] 有什么提高编译速度的方法
 
 # Android 动画
 - [x] 介绍一下 Android 动画
@@ -137,10 +138,6 @@ https://hnyer.gitee.io  //红尘之声|
 # 网络相关
 - [x] TCP和UDP区别，TCP为何是三次握手，为何是四次挥手
 - [x] MediaPlayer 能同时播放多个音频么？ 如果需要播放多个提示音，如何实现
-- [ ] AMS交互调用生命周期是顺序的吗？
-- [ ] Activity 生命周期
-- [x] SharedPreference 原理 ，读取xml是在哪个线程
-- [x] SharedPreferences 的 apply 和 commit 有什么区别
 - [ ] SharedPreferences 可以跨进程通信吗？如何改造成可以跨进程通信的.commit和apply的区别.
 - [ ] 如何在网络框架里直接避免内存泄漏，不需要在presenter中释放订阅
 - [ ] hdpi和xxhdpi的手机，分别加载xhdpi下的图片，会缩放图片么？如果会缩放，是如何缩放的，像素点是如何补全或者减少的？图片在内存中的大小会如何变化？
@@ -153,7 +150,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 网络封装怎么实现？
 - [ ] 如何上传数据？请求头关键字段和请求体格式
 - [ ] 实现一个下载功能的接口
-- [ ] 平常抓包用什么工具？
+- [x] 平常抓包用什么工具
 - [x] 在项目中有直接使用tcp 、socket 来发送消息吗
 
 # 线程 、进程 、跨平台
@@ -198,7 +195,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] retrofit怎么做post请求
 
 
-# 启动流程 和 加载流程
+# 启动流程 、加载流程
 - [ ] 从桌面点击icon图标开始，整个启动activity的启动过程
 - [ ] ContentProvider启动流程
 - [ ] Application 启动流程
@@ -209,16 +206,17 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] LifeCycle的原理是怎样的？
 - [ ] Parcelable和Serializable本质区别，不要说用法，说原理。
 - [ ] ViewRootImpl 创建的时机？
-- [ ] ViewRootImpl 和 DecorView 的关系是什么？
-- [ ] DecorView 的布局是什么样的？
+- [ ] PhoneWindow 是在哪里初始化的
+- [ ] DecorView 的布局是什么样的 
 - [ ] DecorView 的创建时机？
 - [ ] setContentView 的流程
 - [ ] LayoutInflate 的流程
 - [ ] Activity、PhoneWindow、DecorView、ViewRootImpl 的关系？
-- [ ] PhoneWindow 的创建时机？
-- [ ] LayoutInflater是如何把xml布局文件转换成View对象的（反射）？View树如何生成的？怎么优化？
 - [ ] activity，Window，view 的关系
 - [ ] activity 有几个 Window
+- [ ] Activity#setContentView中的xml文件是如何转化成View并显示到Activity中的。
+- [ ] Window 和 Activity 的对应关系。除了Activity还有别的方式显示 Window 出来么？
+- [ ] LayoutInflater是如何把xml布局文件转换成View对象的（反射）？View树如何生成的？怎么优化？
 - [ ] RecyclerView的缓存结构是怎样的？缓存的是什么？cachedView会执行onBindView吗?
 - [ ] RecyclerView嵌套RecyclerView，NestScrollView嵌套ScrollView滑动冲突
 - [ ] 讲一下 RecyclerView 的缓存机制,滑动10个，再滑回去，会有几个执行onBindView
@@ -236,9 +234,6 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 如何求当前Activity View的深度
 - [ ] setFactory和setFactory2有什么区别？
 - [ ] 如何自定义实现一个FlexLayout
-- [ ] Activity#setContentView中的xml文件是如何转化成View并显示到Activity中的。
-- [ ] PhoneWindow是在哪里初始化的
-- [ ] Window和Activity的对应关系。除了Activity还有别的方式显示Window出来么？
 - [ ] A Activity打开B Activity的生命周期变化，会有什么方法打断吗？
 - [ ] 登陆功能，登陆成功然后跳转到一个新Activity，中间涉及什么？从事件传递，网络请求,AMS交互角度分析
 
@@ -370,12 +365,12 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 你们项目的稳定性如何？有做过什么稳定性优化的工作？
 - [x] 如何进行单元测试，如何保证App稳定 
 - [x] 代码质量如何控制
-- [x] 技术选型是如何做
-- [ ] 技术选型上，为什么这么考虑？从开发效率，产品性能，产品质量，产品体验等方面考虑
+- [x] 技术选型是如何做 ，为什么这么考虑？从开发效率，产品性能，产品质量，产品体验等方面考虑
 - [ ] 你们网络框架用的什么？为什么？
 - [ ] 如果 Android 和 iOS 调一个接口，一个通了一个没通(或者响应速度一个块一个慢)，你会如何解决
 - [ ] 说一说Android中如何查看一个对象的回收情况 ？
-- [ ] 冷启优化的一些方案 
+- [x] 冷启动、热启动 优化方案
+- [ ] 有什么提高编译速度的方法
 
 
 
