@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chinese/pics/上界下界通配符.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/未使用泛型.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/逆变协变.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/SUMMARY.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/view的加载流程-原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/view的加载流程-原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/java基础/泛型通配符extends与super的区别.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/java基础/泛型详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/泛型详解.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+            <state relative-caret-position="141">
+              <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -38,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chinese/java基础/泛型详解.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-73">
-              <caret line="167" column="37" lean-forward="true" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
+            <state relative-caret-position="379">
+              <caret line="200" column="56" lean-forward="true" selection-start-line="200" selection-start-column="56" selection-end-line="200" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -48,7 +40,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>newSingleThread</find>
       <find>类型</find>
       <find>ThreadPoolExecutor</find>
       <find>Executors</find>
@@ -78,6 +69,7 @@
       <find>通配符</find>
       <find>###</find>
       <find>PECS</find>
+      <find>说明泛型 不是 协变</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -690,13 +682,6 @@
     <entry file="file://$PROJECT_DIR$/chinese/pics/类型擦除.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/pics/逆变协变.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -706,10 +691,17 @@
     <entry file="file://$PROJECT_DIR$/chinese/pics/上界下界通配符.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/java基础/泛型详解.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="167" column="37" lean-forward="true" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
+        <state relative-caret-position="379">
+          <caret line="200" column="56" lean-forward="true" selection-start-line="200" selection-start-column="56" selection-end-line="200" selection-end-column="56" />
         </state>
       </provider>
     </entry>
