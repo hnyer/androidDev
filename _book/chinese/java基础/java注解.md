@@ -125,7 +125,7 @@ public Person person ;
 ```text
 JDK 7 才有。
 阻止编译器产生 unchecked 这样的警告，效果跟 @SuppressWarnings("unchecked")相同
-使用了这种注解后，开发者要确保自己的类型转换是没有问题的，否则运行时会报错的
+使用了这种注解后，开发者要确保自己的类型转换是没有问题的，否则运行时可能会报错。
 ```
 
 ### @FunctionalInterface  

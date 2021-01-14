@@ -37,6 +37,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 静态方法，静态对象为什么不能继承
 - [ ] 单例的DCL方式下，那个单例的私有变量要不要加volatile关键字，这个关键字有什么用
 - [x] JMM 可见性 、原子性 、有序性 、synchronized 可以保证什么
+- [ ] 线程间同步的方法
 - [x] 重入锁 ReentrantLock 、synchronized 和 读写锁 ReadWriteLock 的区别 
 - [x] Lock 接口 的实现，以及与 synchronized 的区别
 - [ ] 平常有用到什么锁，锁之间的区别 ,synchronized 底层原理是什么
@@ -163,20 +164,20 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] IdleHandler 调用时机
 - [ ] IdleHandler用过吗 ？IdleHandler 应用场景
 - [ ] Handler休眠是怎样的？epoll的原理是什么？如何实现延时消息，如果移除一个延时消息会解除休眠吗？
-- [ ] Handler内存泄漏 的GCRoot是什么？
-- [ ] 说说你对Handler机制的了解，同步消息，异步消息等
-- [ ] Handler机制了解吗？一个线程有几个Looper？为什么？
-- [ ] 简单描述下Handler,Handler是怎么切换线程的,Handler同步屏障
+- [x] Handler内存泄漏 的GCRoot是什么？
+- [x] 说说你对Handler机制的了解，同步消息，异步消息等
+- [x] Handler机制了解吗？一个线程有几个Looper？为什么？
+- [x] 简单描述下Handler,Handler是怎么切换线程的
+- [ ] Handler同步屏障
 - [ ] Launcher启动App的流程，中间有几种跨进程通信(socket)
-- [ ] 描述一次跨进程通讯
-- [ ] 跨进程通信了解多少？管道了解吗？
-- [ ] 线程间同步的方法
-- [ ] 你们用的什么消息通信机制
-- [ ] 说说 binder 机制的原理
-- [ ] binder 的 mmap
-- [ ] android跨进程通信了解吗？共享内存用过吗？binder怎么验证pid?binder驱动了解吗？
-- [ ] binder进程间通信可以调用原进程方法吗？
-- [ ] Handler 通信，Binder通信
+- [x] 跨进程通信了解多少？管道了解吗？
+- [x] 描述一次跨进程通讯
+- [x] 说说 binder 机制的原理
+- [x] binder 的 mmap()
+- [x] android 跨进程通信了解吗？ 共享内存用过吗？binder驱动了解吗？
+- [ ] binder 怎么验证 pid ? 
+- [ ] binder 进程间通信可以调用原进程方法吗 ？
+- [x] 你们用的什么消息通信机制
 
 # html5 
 - [ ] .h5 与 native 交互做过什么工作
