@@ -35,7 +35,7 @@
     * [为什么要使用泛型](chinese/java基础/为什么要使用泛型.md)
     * [Java枚举](chinese/java基础/Java枚举.md)
     * [自定义异常](chinese/java基础/自定义异常.md)
-    * [java注解](chinese/java基础/java注解.md)
+    * [注解详解](chinese/java基础/java注解.md)
     * [java8新特性](chinese/java基础/java8新特性.md)
     * [通信方式](chinese/通信方式/通信方式.md)
     * [数据解析](chinese/java基础/数据解析.md)
