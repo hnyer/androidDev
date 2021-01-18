@@ -17,7 +17,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 方法区有什么东西 
 - [ ] JVM 类加载机制了解吗，类什么时候会被加载？类加载的过程具体生命周期是怎样的？
 - [ ] 拉圾回收的 GCRoot 是什么？
-- [ ] 讲下 equals 和 hashcode ，他们为何必须一起重写
+- [x] 讲下 equals 和 hashcode ，他们为何必须一起重写
 - [ ] 成员变量和局部变量的区别。为何成员变量需要jvm在对象初始话过程中赋默认值？
 - [ ] GCRoot，举例说明。比如说Activity和它的匿名内部类Handler，分析下引用链，对应的gcroot是哪个？
 - [ ] class文件的组成？常量池里面有什么内容？
@@ -32,9 +32,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] java 里带$的函数 是什么意思
 - [x] 硬件加速 是什么原理
 - [x] 进程优先级
-- [ ] 反射 是什么，在哪里用到，怎么利用反射创建一个对象
-- [ ] 反射可以反射final修饰的字段吗？
-- [ ] 静态方法，静态对象为什么不能继承
+- [x] 静态方法，静态对象为什么不能继承 （此问题错误，可以被继承，不能被重写）
 - [ ] 单例的DCL方式下，那个单例的私有变量要不要加volatile关键字，这个关键字有什么用
 - [x] JMM 可见性 、原子性 、有序性 、synchronized 可以保证什么
 - [ ] 线程间同步的方法
@@ -61,9 +59,10 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] 说说你对 注解 的了解，是怎么解析的
 - [ ] 编译时注解 与 运行时注解，为什么retrofit要使用运行时注解？什么时候用运行时注解？
 - [x] 编译期注解处理的是字节码还是java文件
+- [ ] 反射 是什么，在哪里用到，怎么利用反射创建一个对象
+- [ ] 反射可以反射final修饰的字段吗？
 
 # android 基础
-- [ ] Activity与AppCompactActivity区别，Activity会打包到包里面去吗？
 - [x] Android APP的 入口函数 在哪里 
 - [x] activity 启动模式
 - [x] Activity 生命周期有哪些，知道 onRestart 么； A启动B ，A的 onStop 一定会执行吗；按 Home 按键后的生命周期
@@ -361,7 +360,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] 界面卡顿怎么排查和优化 ，何监测应用的 FPS
 - [ ] 网络优化 ，数据库优化
 - [ ] view的优化，减少层级，异步加载，x2c框架引入，优缺点，textview的优化。
-- [ ] 怎么优化xml inflate的时间，涉及IO与反射。了解compose吗？
+- [ ] 怎么优化xml inflate的时间，涉及IO与反射。了解 compose 吗？
 - [ ] 讲下你做过的 首页优化
 - [ ] 你们项目的稳定性如何？有做过什么稳定性优化的工作？
 - [x] 如何进行单元测试，如何保证App稳定 
@@ -376,25 +375,29 @@ https://hnyer.gitee.io  //红尘之声|
 
 
 # 内存泄漏 、图片 、图片加载
-- [ ] drawable下所以的格式都能转成 webp么 ？哪些不能转 
-- [ ] 图片内存的计算
-- [ ] Bitmap高效加载 、Bitmap内存复用
-- [ ] 大图加载优化，原理。
-- [ ] 你碰到过什么 内存泄漏 ，怎么处理
-- [ ] AsyncTask内存泄露
+- [x] 图片内存的计算
+- [x] 大图加载 原理和优化，长图加载
+- [x] Bitmap高效加载 、Bitmap内存复用 inBitmap
+- [x] inJustDecodeBounds 是什么？
+- [x] Bitmap 内存 和 drawable 目录的关系
+- [x] xhdpi 的图片放到 xxhdp 的手机上，内存会如何变化
+- [x] Bitmap 不改变图片质量的情况下,如何减少内存
+- [x] 图片显示不全、变形怎么处理
+- [x] 一个 wrap_content 的 ImageView ，加载远程图片，传什么参数裁剪比较好?
+- [x] Androidstudio drawable 下所以的格式都能转成 webp 么 ？哪些不能转 
+- [x] 如何跨进程传递大图
 - [ ] 图片的三级缓存中,图片加载到内存中,如果内存快爆了,会发生什么 ？怎么处理 
-- [ ] xhdpi的图片放到xxhdp的手机上，内存会如何变化；
-- [ ] 在不影响图片质量的前提下，如何减少内存
-- [ ] 图片显示不全、变形怎么处理
-- [ ] glide 默认 Bitmap 的 Config 配置是 ARGB_8888 么
-- [ ] Glide的缓存，有用过Glide的什么深入的API，自定义model是在Glide的什么阶段
-- [ ] 一个 wrap_content 的 ImageView ，加载远程图片，传什么参数裁剪比较好?
+- [x] glide 默认 Bitmap 的 Config 配置是 ARGB_8888 么
+- [ ] Glide 的缓存，有用过Glide的什么深入的API，自定义model是在Glide的什么阶段
+- [ ] 你碰到过什么 内存泄漏 ，怎么处理
+- [ ] AsyncTask 内存泄露
 
 
 # 打包发布
 - [ ] 项目搭建过程中有什么经验,有用到什么gradle脚本，分包有做什么操作
 - [x] 如何通过 Gradle 配置多渠道包
 - [ ] 了解APK打包的过程吗？
+- [ ] Activity 与 AppCompactActivity 区别，Activity 会打包到包里面去吗？
 
 
 # 适配
