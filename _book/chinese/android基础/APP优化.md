@@ -93,6 +93,38 @@ Choreographer.getInstance()
 5、删除冗余代码。
 ```
 
+# 内存泄漏
+## Handler 内存泄漏
+请查看 Handle 详解 这一块。
+
+## AsyncTask 内存泄露
+```text
+AsyncTask 的内存泄漏的原因跟 Handle 原因类似。
+由于 持有外部类 activity 的强引用 ，
+如果 activity 退出时， AsyncTask 还在执行操作，导致 activity 无法释放。
+解决办法有2个：
+1、在退出是 手动调用  asyncTask.execute() 
+2、static + WeakReference 
+private static class MyTask extends AsyncTask<Bundle, Integer, Bundle> {
+    private final WeakReference<MainActivity> weakReference;
+    private MyTask(MainActivity activity) {
+        weakReference = new WeakReference<>(activity);
+    }
+    @Override
+    protected Bundle doInBackground(Bundle... bundles) {
+        return bundle; // 耗时操作
+    }
+    @Override
+    protected void onPostExecute(Bundle bundle) {
+        if (weakReference.get() == null){
+            return;
+        }
+        weakReference.get().handleResult(bundle);
+    }
+}
+```
+
+
 # 稳定性 优化
 ```text
 稳定的纬度：

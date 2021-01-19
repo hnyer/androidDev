@@ -201,7 +201,7 @@ handler.postDelayed(new Runnable() {   public void run() { ... }   })
 Runnable 被封装成 Message 被 MessageQueue 持有，所以 activity 被 MessageQueue 间接持有了。
 activity 退出时，如果延时时间还没到，所以 activity 无法被释放掉。
 
-至于为什么 内部类会持有外部类的引用 ，可以查阅其他博客。
+至于为什么 内部类会持有外部类的引用，可以查阅其他资料 ，这里不讲解。
 ```
 
 ## 通过 WeakReference 解决 handle 内存泄漏 

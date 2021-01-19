@@ -131,3 +131,57 @@ new AlertDialog.Builder(mContext);
 // 通过 Application  传值 缺点 
 ```
  
+## 序列化
+```text
+序列化，将内存中保存的是对象以二进制数据流的形式进行处理，
+可以实现对象的保存或者是网络传输。
+与序列化相对的是反序列化，它将流转换为对象。
+```
+
+### Bunder 传递对象为什么需要序列化
+```text
+因为 Bunder + intent 是支持跨进程传递的，
+而 Android 进程间是不支持 对象传递的，
+所以要讲对象序列化成二进制。
+```
+
+### serialVersionUID 的作用
+```text
+serialVersionUID 主要是一种安全机制。
+
+序列化的时候系统会把当前类的 serialVersionUID 写入序列化文件中，
+当反序列化的时候系统会去检测文件中的serialVersionUID,看他是否和当前类的一致，如果一致，
+说明序列化类的版本和当前类的版本是相同的，这个时候成功反序列化，
+否则说明当前类和序列化的类相比发生某些变换，这个时候无法正常反序列化，会报错。
+ 
+如果不手动指定 serialVersionUID ，那么将对象序列化时系统生成一个 serialVersionUID值 一起持久化了。
+此时如果你给这个对象增加了一个属性，再次持久化时，此时生成 serialVersionUID 值是不一样的。
+
+如果你不想进行这样严格的校验，你手动手动 serialVersionUID =1L ，那么即使你新增或者减少了属性，
+反序列化的时候也不会报错，只是被忽略或者默认置为0 。 
+ 
+Androidstudio中生成  serialVersionUID的方法。
+preferences->Inspections->serialization issues->Serializable class without 'serialVersionUID' 勾上 。
+此时会提示生成严格验证的 serialVersionUID的方法 。如果不想严格校验可以直接写成1 。
+```
+
+### Serializable 与 Parcelable 的区别
+```text
+Serializable 是一种标识接口,是一个空接口。
+对某个类实现 Serializable 后，Java便会对这个对象进行序列化操作。
+这种方法使用了反射原理，序列化的过程较慢。
+会在序列化的时候创建许多的临时对象，可能会引起频繁的GC。
+使用起来简单但是开销很大，序列化和反序列化过程需要大量I/O操作。
+Serializable 主要用于持久化存储对象 ，保存在磁盘或者网络传输。
+
+Parcelable 方式的实现原理是将一个完整的对象进行分解， 
+而分解后的每一部分都是Intent所支持的数据类型，这样也就实现传递对象的功能了。
+因为我们已经清楚地知道了序列化的过程，而不需要使用反射来推断。
+为了这种高效分解组合，我们需要按要求进行一些代码书写。
+
+Parcelable 是直接在内存中读写 ，
+无法将数据进行持久化 ，只能用于程序内内存间进行对象传输 。
+
+在 Androidstudio 中，我们可以使用 插件 " Parcelable code generator " 
+来自动生成一些代码。减少代码书写量。
+``` 

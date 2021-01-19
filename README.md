@@ -11,9 +11,9 @@ https://hnyer.gitee.io  //红尘之声|
 
 因为博客页数太多会导致编译时间较长，我不太喜欢。所以采用面试技术点的方式展示，善用左上角的搜索功能即可。
 # Java基础
+- [ ] JVM 架构
 - [x] Java 内存模型、内存结构、Java的内存分区
-- [ ] jvm 结构
-- [ ] jvm 垃圾回收机制、老年代有什么算法？
+- [ ] JVM 垃圾回收机制、老年代有什么算法？
 - [ ] 方法区有什么东西 
 - [ ] JVM 类加载机制了解吗，类什么时候会被加载？类加载的过程具体生命周期是怎样的？
 - [ ] 拉圾回收的 GCRoot 是什么？
@@ -108,24 +108,20 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] ARouter怎么实现接口调用
 - [ ] ARouter怎么实现页面拦截
 - [ ] 同步屏障
-- [ ] 有用DSL,anko写过布局吗？
-- [ ] 如何封装一个字符串转数字的工具类
-- [ ] 多进程 怎么实现？如果启动一个多进程APP，会有几个进程运行？
-- [ ] 怎么中止一个线程，Thread.Interupt一定有效吗？
+- [ ] 有用DSL , anko写过布局吗？
 - [ ] bugly日志收集的原理是什么？
 - [ ] 做过一些SDK的操作吗？
 - [ ] 为什么会有R文件这个映射表？直接使用资源的路径不好么？
 - [ ] dex文件结构了解过么？为何会有65535的限制？mutildex技术了解么？这项技术的目的是什么？
-- [ ] ThreadLocal，LocalBroadcastReceiver实现
-- [ ] Android 中Activity、Window、ViewRoot、DecorView之间的联系
-- [ ] Seriazable与Parceable的区别
-- [ ] Bundle是什么数据结构?利用什么传递数据
-- [ ] 两个getDrawable取得的对象，有什么区别？
-- [ ] savedInstanceState知道么，干什么用的，什么时候有值，什么时候为空，平时是怎么用的
-- [ ] ragment的replace和end？？的区别
-- [ ] Scroller有什么方法，怎么使用的
+- [x] Parcelable 和 Serializable 本质区别 。说原理 ,不要说用法
+- [ ] Bundle 是什么数据结构 ? 利用什么传递数据
+- [ ] 两个 getDrawable 取得的对象，有什么区别？
+- [x] onSaveInstanceState() 、onRestoreInstanceState() 平时是怎么用的 , 什么时候有值，什么时候为空
+- [ ] ragment的replace和end？ 的区别
+- [ ] Scroller 有什么方法，怎么使用的
 - [ ] 想改变listview的高度，怎么做
 - [ ] canvas lock的缓冲区是怎么回事
+- [ ] ThreadLocal，LocalBroadcastReceiver实现
 
 # Android 动画
 - [x] 介绍一下 Android 动画
@@ -135,23 +131,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 动画连续调用 的原理是什么
 
 
-# 网络相关
-- [x] TCP和UDP区别，TCP为何是三次握手，为何是四次挥手
-- [x] MediaPlayer 能同时播放多个音频么？ 如果需要播放多个提示音，如何实现
-- [ ] SharedPreferences 可以跨进程通信吗？如何改造成可以跨进程通信的.commit和apply的区别.
-- [ ] 如何在网络框架里直接避免内存泄漏，不需要在presenter中释放订阅
-- [ ] hdpi和xxhdpi的手机，分别加载xhdpi下的图片，会缩放图片么？如果会缩放，是如何缩放的，像素点是如何补全或者减少的？图片在内存中的大小会如何变化？
-- [ ] http 与 https 有什么区别 。https 多了tls层。对称加密和非对称加密。
-- [ ] http1.0 、http1.1 、http1.2 、 HTTP3.0 有什么区别
-- [ ] OkHttp 里面用到了什么设计模式？
-- [ ] OkHttp连接池是怎么实现的？里面怎么处理SSL？
-- [ ] OkHttp网络拦截器，应用拦截器 ? OKHttp有哪些拦截器，分别起什么作用
-- [ ] OkHttp怎么实现连接池
-- [ ] 网络封装怎么实现？
-- [ ] 如何上传数据？请求头关键字段和请求体格式
-- [ ] 实现一个下载功能的接口
-- [x] 平常抓包用什么工具
-- [x] 在项目中有直接使用tcp 、socket 来发送消息吗
+
 
 # 线程 、进程 、跨平台
 - [x] 多线程如何实现 ,有哪些方式 、四种线程池原理 ,线程池的类型 
@@ -177,22 +157,10 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] binder 怎么验证 pid ? 
 - [ ] binder 进程间通信可以调用原进程方法吗 ？
 - [x] 你们用的什么消息通信机制
+- [ ] 多进程 怎么实现？如果启动一个多进程APP，会有几个进程运行？
+- [ ] 怎么中止一个线程，Thread.Interupt一定有效吗？
 
-# html5 
-- [ ] .h5 与 native 交互做过什么工作
-- [ ] 项目中的 Webview 与 native 通信
-- [ ] h5 与 native 交互，webView.loadUrl 与 webView.evaluateUrl 区别
-- [ ] 项目中对 WebView 的功能进行了怎样的增强
-- [ ] native 如何对 h5 进行鉴权，让某些页面可以调，某些页面不能调
-- [ ] @JavaScriptInterface为什么不通过多个方法来实现 
-- [ ] 为什么不利用同步方法来做 jsBridge交互？ 同步可以做异步，异步不能做同步 
-- [ ] jsBridge 实现方式
-- [ ] PathClassLoader与DexClassLoader有什么区别
-- [ ] CoordinatorLayout自定义behavior,可以拦截什么？
-- [ ] 视频播放,一个player怎么实现预加载，避免loading
-- [ ] webView加载本地图片，如何从安全方面考虑 
-- [ ] webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗
-- [ ] retrofit怎么做post请求
+
 
 
 # 启动流程 、加载流程
@@ -202,9 +170,11 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] Application 中持有 静态的信息，有何缺点 ？如何改进 
 - [x] Application 中可以显示Dialog么 ？为什么？
 - [x] 使用 ActivityLifecycleCallbacks 做了哪些事情？
+- [ ] Android 中Activity、Window、ViewRoot、DecorView之间的联系
+- [ ] 说说App的启动过程,在ActivityThread的main方法里面做了什么事，什么时候启动第一个Activity？
+- [ ] 如何求当前 Activity View的深度
 - [ ] etPack组件用过哪些？lifeCycle 的原理是什么？如果在onStart里面订阅，会回调onCreate吗？
 - [ ] LifeCycle的原理是怎样的？
-- [ ] Parcelable和Serializable本质区别，不要说用法，说原理。
 - [ ] ViewRootImpl 创建的时机？
 - [ ] PhoneWindow 是在哪里初始化的
 - [ ] DecorView 的布局是什么样的 
@@ -230,8 +200,6 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] Activity内LinearLayout红色wrap_content,包含View绿色wrap_content,求界面颜色
 - [ ] viewpager切换掉帧有什么处理经验？
 - [ ] ViewPager2原理
-- [ ] 说说App的启动过程,在ActivityThread的main方法里面做了什么事，什么时候启动第一个Activity？
-- [ ] 如何求当前Activity View的深度
 - [ ] setFactory和setFactory2有什么区别？
 - [ ] 如何自定义实现一个FlexLayout
 - [ ] A Activity打开B Activity的生命周期变化，会有什么方法打断吗？
@@ -313,6 +281,40 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] 协程 怎么取消
 - [ ] 讲一个 协程 的 scope 与 context，协程的+号 代表什么
 
+# html5 
+- [ ] .h5 与 native 交互做过什么工作
+- [ ] 项目中的 Webview 与 native 通信
+- [ ] h5 与 native 交互，webView.loadUrl 与 webView.evaluateUrl 区别
+- [ ] 项目中对 WebView 的功能进行了怎样的增强
+- [ ] native 如何对 h5 进行鉴权，让某些页面可以调，某些页面不能调
+- [ ] @JavaScriptInterface为什么不通过多个方法来实现 
+- [ ] 为什么不利用同步方法来做 jsBridge交互？ 同步可以做异步，异步不能做同步 
+- [ ] jsBridge 实现方式
+- [ ] PathClassLoader与DexClassLoader有什么区别
+- [ ] CoordinatorLayout自定义behavior,可以拦截什么？
+- [ ] 视频播放,一个player怎么实现预加载，避免loading
+- [ ] webView加载本地图片，如何从安全方面考虑 
+- [ ] webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗
+- [ ] retrofit怎么做post请求
+
+# 网络相关
+- [x] TCP和UDP区别，TCP为何是三次握手，为何是四次挥手
+- [x] MediaPlayer 能同时播放多个音频么？ 如果需要播放多个提示音，如何实现
+- [ ] SharedPreferences 可以跨进程通信吗？如何改造成可以跨进程通信的.commit和apply的区别.
+- [ ] 如何在网络框架里直接避免内存泄漏，不需要在presenter中释放订阅
+- [ ] hdpi和xxhdpi的手机，分别加载xhdpi下的图片，会缩放图片么？如果会缩放，是如何缩放的，像素点是如何补全或者减少的？图片在内存中的大小会如何变化？
+- [ ] http 与 https 有什么区别 。https 多了tls层。对称加密和非对称加密。
+- [ ] http1.0 、http1.1 、http1.2 、 HTTP3.0 有什么区别
+- [ ] OkHttp 里面用到了什么设计模式？
+- [ ] OkHttp连接池是怎么实现的？里面怎么处理SSL？
+- [ ] OkHttp网络拦截器，应用拦截器 ? OKHttp有哪些拦截器，分别起什么作用
+- [ ] OkHttp怎么实现连接池
+- [ ] 网络封装怎么实现？
+- [ ] 如何上传数据？请求头关键字段和请求体格式
+- [ ] 实现一个下载功能的接口
+- [x] 平常抓包用什么工具
+- [x] 在项目中有直接使用tcp 、socket 来发送消息吗
+
 # 算法
 - [ ] 了解哪些算法
 - [ ] 删除数组中的重复元素
@@ -390,7 +392,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] glide 默认 Bitmap 的 Config 配置是 ARGB_8888 么
 - [ ] Glide 的缓存，有用过Glide的什么深入的API，自定义model是在Glide的什么阶段
 - [ ] 你碰到过什么 内存泄漏 ，怎么处理
-- [ ] AsyncTask 内存泄露
+- [x] AsyncTask 内存泄露
 
 
 # 打包发布
@@ -412,6 +414,7 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 你觉得 XX 目前的APP有什么问题？
 - [ ] 如果叫你实现，你会怎样实现一个多主题的效果
 - [ ] 你如何自己实现一个LRUCache？Android里面的LRUCache是如何实现的
+- [ ] 如何封装一个字符串转数字的工具类
 
 # 设计模式
 - [ ] 你在项目中有用到什么设计模式吗
