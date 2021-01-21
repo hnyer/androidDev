@@ -1,12 +1,11 @@
 ﻿本博客不保证完整性和正确性,请自行甄别。 左上角的 搜索功能 进行关键字搜索。 <br>
 托管地址 https://gitee.com/hnyer/androidDev
 
-博客链接  | 
-- | - | 
-http://hnyer.gitee.io/androidDev |
-http://hnyer.gitee.io/nativeDev //cpp jni |
-https://blog.csdn.net/dengpanwen  //CSDN|
-https://hnyer.gitee.io  //红尘之声|
+| 博客链接  |
+| --- |
+| email：aivin666@qq.com 、wechat: Aivin666666|
+|https://blog.csdn.net/dengpanwen  //CSDN |
+|https://hnyer.gitee.io  //红尘之声 |
 
 
 因为博客页数太多会导致编译时间较长，我不太喜欢。所以采用面试技术点的方式展示，善用左上角的搜索功能即可。
