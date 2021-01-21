@@ -171,22 +171,17 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] Application 中持有 静态的信息，有何缺点 ？如何改进 
 - [x] Application 中可以显示Dialog么 ？为什么？
 - [x] 使用 ActivityLifecycleCallbacks 做了哪些事情？
-- [ ] Android 中Activity、Window、ViewRoot、DecorView之间的联系
-- [ ] 说说App的启动过程,在ActivityThread的main方法里面做了什么事，什么时候启动第一个Activity？
+- [ ] 说说App的启动过程 , 在ActivityThread的main方法里面做了什么事，什么时候启动第一个Activity？
 - [ ] 如何求当前 Activity View的深度
-- [ ] etPack组件用过哪些？lifeCycle 的原理是什么？如果在onStart里面订阅，会回调onCreate吗？
-- [ ] LifeCycle 的原理是怎样的？
-- [ ] DecorView 的布局是什么样的 
-- [ ] DecorView 的创建时机？
-- [ ] setContentView 的流程
-- [ ] LayoutInflate 的流程
 - [x] Activity、Window 、PhoneWindow、DecorView、View、ViewRootImpl 的关系 
 - [x] activity 有几个 Window
-- [ ] 除了 Activity 还有别的方式显示 Window 出来么 ？
-- [ ] ViewRootImpl 创建的时机？
-- [ ] PhoneWindow 是在哪里初始化的
-- [ ] Activity#setContentView中的xml文件是如何转化成View并显示到Activity中的。
-- [ ] LayoutInflater是如何把xml布局文件转换成View对象的（反射）？View树如何生成的？怎么优化？
+- [x] 除了 Activity 还有别的方式显示 Window 出来么 
+- [x] DecorView 的布局是什么样的 
+- [x] DecorView 的创建时机
+- [x] ViewRootImpl 创建的时机 
+- [x] PhoneWindow 是在哪里初始化的
+- [ ] setContentView 是如何把xml文件 化成View并显示到 Activity中的 
+- [ ] LayoutInflater 是如何把xml布局文件转换成View对象的（反射）？View树如何生成的？怎么优化？
 - [ ] RecyclerView的缓存结构是怎样的？缓存的是什么？cachedView会执行onBindView吗?
 - [ ] RecyclerView嵌套RecyclerView，NestScrollView嵌套ScrollView滑动冲突
 - [ ] 讲一下 RecyclerView 的缓存机制,滑动10个，再滑回去，会有几个执行onBindView
@@ -195,6 +190,8 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] RecyclerView 和 ListView 区别、特点、缓存 、懒加载、局部刷新 ,多种type场景下怎么避免滑动卡顿 ,怎么优化滑动
 - [ ] RecyclerView 缓存结构，RecyclerView预取，RecyclerView局部刷新
 - [ ] Launcher启动图标，有几个进程？
+- [ ] etPack组件用过哪些？lifeCycle 的原理是什么？如果在onStart里面订阅，会回调onCreate吗？
+- [ ] LifeCycle 的原理是怎样的？
 - [ ] 源码中有哪里用到了AtomicInt
 - [ ] 有看过哪些框架的源码吗？
 - [ ] Activity内 LinearLayout 红色 wrap_content ,包含View绿色wrap_content,求界面颜色
