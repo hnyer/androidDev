@@ -282,4 +282,33 @@ implementation project(':butterknife_compiler')
 demo地址 https://gitee.com/hnyer/annotation-test
 ```
  
+# Java反射
+```text
+JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；
+对于任意一个对象，都能够调用它的任意方法和属性；
+这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。
+```
 
+## 反射可以 修改 final 修饰的字段吗
+```text
+对静态的final修饰的字段(赋值或者不赋值)进行修改，
+都会报错：java.lang.IllegalAccessException错误。
+
+对于非静态的final成员变量，在没有赋值的情况下是可以使用反射对其进行赋值的；
+对于已经初始化赋值的变量，反射不能真正该变变量的值，
+虽然用反射 fieldXX.get(bean)方法可以获得新值，但是用对象实例访问得到的是旧值。
+
+private final String v1 = null;
+private final String v2 = "v2";
+FinalDemo finalDemo = new FinalDemo();
+Field f1 = finalDemo.getClass().getDeclaredField("v1");
+Field f2 = finalDemo.getClass().getDeclaredField("v2");
+f1.setAccessible(true);
+f2.setAccessible(true);
+f1.set(finalDemo, "new_v1");
+f2.set(finalDemo, "new_v2");
+finalDemo.getV1()); // new_v1
+f1.get(finalDemo)); // new_v1
+finalDemo.getV2()); // V2
+f2.get(finalDemo)); // new_v2
+```

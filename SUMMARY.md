@@ -41,7 +41,7 @@
     * [常用代码](chinese/android基础/常用代码块.md)
     * [Android坐标体系](chinese/android基础/android坐标体系.md)
     * [事件分发机制](chinese/android基础/事件分发机制.md)
-    * [View的加载流程与原理](chinese/android基础/view的加载流程-原理.md)
+    * [View加载流程](chinese/android基础/view的加载流程-原理.md)
     * [自定义控件](chinese/android基础/自定义控件.md)
     * [进程通信](chinese/android基础/进程通信.md)
     * [通信方式详解](chinese/通信方式/通信方式详解.md)

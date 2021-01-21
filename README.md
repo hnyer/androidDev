@@ -17,7 +17,8 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] 方法区有什么东西 
 - [ ] JVM 类加载机制了解吗，类什么时候会被加载？类加载的过程具体生命周期是怎样的？
 - [ ] 说说你对类加载机制的了解？ DexClassLoader 与 PathClassLoader的区别
-- [ ] 对象加载的过程，属性先加载还是方法先加载
+- [x] 类加载的过程，属性先加载还是方法先加载
+- [ ] 对象创建过程
 - [x] 讲下Java的 双亲委派
 - [ ] 拉圾回收的 GCRoot 是什么？
 - [x] 讲下 equals 和 hashcode ，他们为何必须一起重写
@@ -59,8 +60,8 @@ https://hnyer.gitee.io  //红尘之声|
 - [x] 说说你对 注解 的了解，是怎么解析的
 - [ ] 编译时注解 与 运行时注解，为什么retrofit要使用运行时注解？什么时候用运行时注解？
 - [x] 编译期注解处理的是字节码还是java文件
-- [ ] 反射 是什么，在哪里用到，怎么利用反射创建一个对象
-- [ ] 反射可以反射final修饰的字段吗？
+- [x] 反射 是什么，在哪里用到，怎么利用反射创建一个对象
+- [x] 反射可以反射final修饰的字段吗？
 
 # android 基础
 - [x] Android APP的 入口函数 在哪里 
@@ -174,18 +175,17 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] 说说App的启动过程,在ActivityThread的main方法里面做了什么事，什么时候启动第一个Activity？
 - [ ] 如何求当前 Activity View的深度
 - [ ] etPack组件用过哪些？lifeCycle 的原理是什么？如果在onStart里面订阅，会回调onCreate吗？
-- [ ] LifeCycle的原理是怎样的？
-- [ ] ViewRootImpl 创建的时机？
-- [ ] PhoneWindow 是在哪里初始化的
+- [ ] LifeCycle 的原理是怎样的？
 - [ ] DecorView 的布局是什么样的 
 - [ ] DecorView 的创建时机？
 - [ ] setContentView 的流程
 - [ ] LayoutInflate 的流程
-- [ ] Activity、PhoneWindow、DecorView、ViewRootImpl 的关系？
-- [ ] activity，Window，view 的关系
-- [ ] activity 有几个 Window
+- [x] Activity、Window 、PhoneWindow、DecorView、View、ViewRootImpl 的关系 
+- [x] activity 有几个 Window
+- [ ] 除了 Activity 还有别的方式显示 Window 出来么 ？
+- [ ] ViewRootImpl 创建的时机？
+- [ ] PhoneWindow 是在哪里初始化的
 - [ ] Activity#setContentView中的xml文件是如何转化成View并显示到Activity中的。
-- [ ] Window 和 Activity 的对应关系。除了Activity还有别的方式显示 Window 出来么？
 - [ ] LayoutInflater是如何把xml布局文件转换成View对象的（反射）？View树如何生成的？怎么优化？
 - [ ] RecyclerView的缓存结构是怎样的？缓存的是什么？cachedView会执行onBindView吗?
 - [ ] RecyclerView嵌套RecyclerView，NestScrollView嵌套ScrollView滑动冲突
@@ -197,8 +197,8 @@ https://hnyer.gitee.io  //红尘之声|
 - [ ] Launcher启动图标，有几个进程？
 - [ ] 源码中有哪里用到了AtomicInt
 - [ ] 有看过哪些框架的源码吗？
-- [ ] Activity内LinearLayout红色wrap_content,包含View绿色wrap_content,求界面颜色
-- [ ] viewpager切换掉帧有什么处理经验？
+- [ ] Activity内 LinearLayout 红色 wrap_content ,包含View绿色wrap_content,求界面颜色
+- [ ] ViewPager 切换掉帧 有什么处理经验？
 - [ ] ViewPager2原理
 - [ ] setFactory和setFactory2有什么区别？
 - [ ] 如何自定义实现一个FlexLayout
