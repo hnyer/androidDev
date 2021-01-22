@@ -78,13 +78,12 @@
 - [x] ANR 是怎么回事？怎么查？Service会引起 ANR 么 
 - [x] 为什么 Activity.finish() 之后 10s 才 onDestroy 
 - [x] SQLite 的数据库升级 
-- [ ] AMS交互调用生命周期是顺序的吗
-- [x] SharedPreference 原理 ，读取xml是在哪个线程
+- [x] SharedPreferences 原理 ，读取xml是在哪个线程
 - [x] SharedPreferences 的 apply 和 commit 有什么区别
+- [x] SharedPreferences 可以跨进程通信吗？ 如何改造成可以跨进程通信的?   
 - [ ] ContentProvider具体实现。
 - [ ] binderService方法中的回调具体运行在哪个线程？binder线程池最大线程数是多少？自定义的Callback远程调用，运行在哪个线程？为何不是主线程，如果运行在主线程会有哪些问题？
 - [ ] jetpack组件库使用过么？讲下具体组件
-- [ ] t1、t2、t3三个线程，如何让三个线程按照顺序依次打印1-100。
 - [ ] 悬浮窗如何实现
 - [ ] 通知的类别
 - [ ] ANR的log中关键字是什么
@@ -96,8 +95,6 @@
 - [x] Activity怎么启动 Service 、Activity 与 Service 交互，Service 与 Thread 的区别
 - [x] ANR 了解过吗？有没有实际的ANR定位问题的经历
 - [ ] mainfest中配置LargeHeap，真的能分配到大内存吗？
-- [ ] 生命周期都是通过什么调用的？有用过AIDL吗？
-- [ ] AIDL in out oneWay 代表什么意思
 - [ ] put post有什么区别
 - [ ] 本地广播为何效率高？
 - [ ] 广播与RxBus的区别，全局广播与局部广播区别
@@ -108,7 +105,6 @@
 - [ ] ARouter怎么实现接口调用
 - [ ] ARouter怎么实现页面拦截
 - [ ] 同步屏障
-- [ ] 有用DSL , anko写过布局吗？
 - [ ] bugly日志收集的原理是什么？
 - [ ] 做过一些SDK的操作吗？
 - [ ] 为什么会有R文件这个映射表？直接使用资源的路径不好么？
@@ -156,6 +152,8 @@
 - [x] android 跨进程通信了解吗？ 共享内存用过吗？binder驱动了解吗？
 - [ ] binder 怎么验证 pid ? 
 - [ ] binder 进程间通信可以调用原进程方法吗 ？
+- [ ] 生命周期都是通过什么调用的？有用过AIDL吗？
+- [x] AIDL in out oneWay 代表什么意思
 - [x] 你们用的什么消息通信机制
 - [ ] 多进程 怎么实现？如果启动一个多进程APP，会有几个进程运行？
 - [ ] 怎么中止一个线程，Thread.Interupt一定有效吗？
@@ -172,6 +170,7 @@
 - [x] 使用 ActivityLifecycleCallbacks 做了哪些事情？
 - [ ] 说说App的启动过程 , 在ActivityThread的main方法里面做了什么事，什么时候启动第一个Activity？
 - [ ] 如何求当前 Activity View的深度
+- [ ] AMS 交互调用生命周期是顺序的吗
 - [x] Activity、Window 、PhoneWindow、DecorView、View、ViewRootImpl 的关系 
 - [x] activity 有几个 Window
 - [x] 除了 Activity 还有别的方式显示 Window 出来么 
@@ -179,8 +178,8 @@
 - [x] DecorView 的创建时机
 - [x] ViewRootImpl 创建的时机 
 - [x] PhoneWindow 是在哪里初始化的
-- [ ] setContentView 是如何把xml文件 化成View并显示到 Activity中的 
-- [ ] LayoutInflater 是如何把xml布局文件转换成View对象的（反射）？View树如何生成的？怎么优化？
+- [x] setContentView 是如何把xml文件 化成View并显示到 Activity中的 
+- [x] LayoutInflater 是如何把xml布局文件转换成View对象的（反射）？View树如何生成的？怎么优化？
 - [ ] RecyclerView的缓存结构是怎样的？缓存的是什么？cachedView会执行onBindView吗?
 - [ ] RecyclerView嵌套RecyclerView，NestScrollView嵌套ScrollView滑动冲突
 - [ ] 讲一下 RecyclerView 的缓存机制,滑动10个，再滑回去，会有几个执行onBindView
@@ -268,6 +267,7 @@
 
 
 # kotlin
+- [ ] 有用 Anko DSL  写过布局吗 
 - [ ] kotlin空安全的原理是什么？
 - [ ] kotlinc与javac编译字节码有什么区别？
 - [ ] kotlin lazy使用,lazy viewmodel
@@ -296,7 +296,6 @@
 # 网络相关
 - [x] TCP和UDP区别，TCP为何是三次握手，为何是四次挥手
 - [x] MediaPlayer 能同时播放多个音频么？ 如果需要播放多个提示音，如何实现
-- [ ] SharedPreferences 可以跨进程通信吗？如何改造成可以跨进程通信的.commit和apply的区别.
 - [ ] 如何在网络框架里直接避免内存泄漏，不需要在presenter中释放订阅
 - [ ] hdpi和xxhdpi的手机，分别加载xhdpi下的图片，会缩放图片么？如果会缩放，是如何缩放的，像素点是如何补全或者减少的？图片在内存中的大小会如何变化？
 - [ ] http 与 https 有什么区别 。https 多了tls层。对称加密和非对称加密。
@@ -337,6 +336,7 @@
 - [ ] lru是通过linkedhashmap实现的么？
 - [ ] 讲讲LinkedHashMap的数据结构
 - [ ] ArrayMap和SparseArray的区别，实现。
+- [ ] t1、t2、t3三个线程 ，如何让三个线程按照顺序依次打印 1-100
 
 # 优化 、稳定性 、技术选型
 - [ ] 图片加载优化有什么经验吗

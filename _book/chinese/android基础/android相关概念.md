@@ -117,10 +117,35 @@ private void startLoadFromDisk() {
 
 ## SharedPreferences  apply 和  commit 的区别
 ```text
-apply() 进行提交会先写入内存，然后异步写入磁盘， commit() 是直接写入磁盘。
+apply()：提交后同步写入内存，然后异步写入磁盘，没有返回值。
+commit()：需要等异步回写磁盘完成后才返回，有返回值。
 如果频繁操作的话 apply 的性能会优于 commit 。 
-如果希望立刻获取存储操作的结果，并据此做相应的其他操作，应当使用 commit。
 ```
+
+## SharedPreferences   是线程安全的吗 
+```text
+SharedPreferences 是线程安全的，因为内部有 synchronized 关键字保障。
+```
+
+
+## SharedPreferences 是进程安全的吗？ 如何保证进程安全  
+```text
+因为 SharedPreferences 会从内存取值，但是进程间内存不是共享的，所以不是多进程安全的。
+// SharedPreferencesImpl.java
+public String getString(String key, @Nullable String defValue) {
+    synchronized (mLock) {
+        awaitLoadedLocked();
+        String v = (String)mMap.get(key); // 从内存取值
+        return v != null ? v : defValue;
+    }
+}
+
+SharedPreferences sharedPreferences =
+context.getSharedPreferences("xxxName", Context.MODE_MULTI_PROCESS);
+// 因为对多进程支持不完善，MODE_MULTI_PROCESS (也不可靠) 模式也已经被废弃，
+//  官方推荐 ContentProvider 或者 第三方框架 MMKV
+```
+
 
 ## Application 
 ```text

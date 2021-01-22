@@ -195,10 +195,27 @@ public static final int ID_ANDROID_CONTENT = com.android.internal.R.id.content;
 
 ## setContentView 如何把xml文件显示到 Activity中的
 ```text
+setContentView(R.layout.activity_main)
+将布局文件交给 PhoneWindow ，
+1、PhoneWindow 会实例化一个 DecorView(这是每个Activity根布局)往这个布局里添加了一个 LinearLayout
 
+2、PhoneWindow 最终交给 LayoutInflater 去处理 ，获得一个 Viwe (会被放到 DecorView中)。
+先创建最外层的 View
+ // Temp is the root view that was found in the xml
+final View temp = createViewFromTag(root, name, inflaterContext, attrs);
+然后用反射的方式 获得子View ，并添加到 temp 。
+
+3、PhoneWindow 用 Callback 通知刷新 UI
+final Callback cb = getCallback();
+cb.onContentChanged();
 ```
+![](../pics/布局加载流程.png)
 
 ## LayoutInflater 如何把xml文件显示到 Activity中的 
 ```text
+LayoutInflater inflater = (LayoutInflater) mCtx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+View rootView = inflater.inflate(R.layout.lonlatinputwindow, null);
+this.setContentView(rootView);
 
+具体流程参看 setContentView 的流程。
 ```
