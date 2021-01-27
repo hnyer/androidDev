@@ -82,10 +82,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="事件分发机制.html" />
+    <link rel="next" href="APP的启动流程.html" />
     
     
-    <link rel="prev" href="常用代码块.html" />
+    <link rel="prev" href="android相关概念.html" />
     
 
     
@@ -623,12 +623,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1" data-path="android相关概念.html">
+        <li class="chapter " data-level="1.10.1" data-path="常用代码块.html">
             
-                <a href="android相关概念.html">
+                <a href="常用代码块.html">
             
                     
-                    Android相关概念
+                    常用代码
             
                 </a>
             
@@ -636,12 +636,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="常用代码块.html">
+        <li class="chapter " data-level="1.10.2" data-path="android相关概念.html">
             
-                <a href="常用代码块.html">
+                <a href="android相关概念.html">
             
                     
-                    常用代码
+                    Android相关概念
             
                 </a>
             
@@ -662,12 +662,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.4" data-path="事件分发机制.html">
+        <li class="chapter " data-level="1.10.4" data-path="APP的启动流程.html">
             
-                <a href="事件分发机制.html">
+                <a href="APP的启动流程.html">
             
                     
-                    事件分发机制
+                    APP启动流程
             
                 </a>
             
@@ -688,12 +688,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.6" data-path="APP的启动流程.html">
+        <li class="chapter " data-level="1.10.6" data-path="事件分发机制.html">
             
-                <a href="APP的启动流程.html">
+                <a href="事件分发机制.html">
             
                     
-                    APP启动流程
+                    事件分发机制
             
                 </a>
             
@@ -701,12 +701,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.7" data-path="自定义控件.html">
+        <li class="chapter " data-level="1.10.7" data-path="控件绘制流程.html">
             
-                <a href="自定义控件.html">
+                <a href="控件绘制流程.html">
             
                     
-                    自定义控件
+                    控件绘制流程
             
                 </a>
             
@@ -1270,30 +1270,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;"><a name="&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;" class="anchor-navigation-ex-anchor" href="#&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;</h4>
-<p>&#x5728;Android&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x5C4F;&#x5E55;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x662F;&#x5750;&#x6807;&#x7CFB;&#x7EDF;&#x7684;&#x539F;&#x70B9;&#xFF08;0,0&#xFF09;&#x5750;&#x6807;&#x3002;</p>
-<p>&#x539F;&#x70B9;&#x5411;&#x53F3;&#x5EF6;&#x4F38;&#x662F;X&#x8F74;&#x6B63;&#x65B9;&#x5411;&#xFF0C;&#x539F;&#x70B9;&#x5411;&#x4E0B;&#x5EF6;&#x4F38;&#x662F;Y&#x8F74;&#x6B63;&#x65B9;&#x5411;&#x3002;</p>
-<p><img src="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201801301450_osChina_&#x5750;&#x6807;&#x7CFB;.png" alt=""></p>
-<p>&#xA0;&#xA0;
-&#xA0;&#xA0;</p>
-<h4 id="view&#x5750;&#x6807;&#x7CFB;"><a name="view&#x5750;&#x6807;&#x7CFB;" class="anchor-navigation-ex-anchor" href="#view&#x5750;&#x6807;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>View&#x5750;&#x6807;&#x7CFB;</h4>
-<p>View&#x5750;&#x6807;&#x7CFB;&#x4EE5;&#x7236;&#x89C6;&#x56FE;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;&#x5750;&#x6807;&#x539F;&#x70B9;&#x3002;</p>
-<p>getTop();       //&#x83B7;&#x53D6;&#x5B50;View&#x5DE6;&#x4E0A;&#x89D2;&#x8DDD;&#x7236;View&#x9876;&#x90E8;&#x7684;&#x8DDD;&#x79BB;</p>
-<p>getLeft();      //&#x83B7;&#x53D6;&#x5B50;View&#x5DE6;&#x4E0A;&#x89D2;&#x8DDD;&#x7236;View&#x5DE6;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;</p>
-<p>getBottom();    //&#x83B7;&#x53D6;&#x5B50;View&#x53F3;&#x4E0B;&#x89D2;&#x8DDD;&#x7236;View&#x9876;&#x90E8;&#x7684;&#x8DDD;&#x79BB;</p>
-<p>getRight();     //&#x83B7;&#x53D6;&#x5B50;View&#x53F3;&#x4E0B;&#x89D2;&#x8DDD;&#x7236;View&#x5DE6;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;</p>
-<p><img src="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201801301453_osChina_&#x5B50;view&#x4E0E;&#x7236;view&#x7684;&#x5750;&#x6807;&#x5173;&#x7CFB;.png" alt=""></p>
-<p>&#xA0;&#xA0;
-&#xA0;&#xA0;
-<img src="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201801301958_osChina_getraw.png" alt=""></p>
-<p>//&#x89E6;&#x6478;&#x70B9;&#x76F8;&#x5BF9;&#x4E8E;&#x5176;&#x6240;&#x5728;&#x89C6;&#x56FE;&#x5750;&#x6807;&#x7684;&#x5750;&#x6807;</p>
-<p>event.getX();    </p>
-<p>event.getY();</p>
-<p>//&#x89E6;&#x6478;&#x70B9;&#x76F8;&#x5BF9;&#x4E8E;&#x5C4F;&#x5E55;&#x7684;&#x5750;&#x6807;</p>
-<p>event.getRawX();   </p>
-<p>event.getRawY();</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;"><b>1. </b>&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;</a></li><li><span class="title-icon "></span><a href="#view&#x5750;&#x6807;&#x7CFB;"><b>2. </b>View&#x5750;&#x6807;&#x7CFB;</a></li></ul></div><a href="#&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;"><a name="&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;" class="anchor-navigation-ex-anchor" href="#&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5C4F;&#x5E55;&#x5750;&#x6807;&#x7CFB;</h1>
+<pre><code class="lang-text">&#x5728;Android&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x5C4F;&#x5E55;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x662F;&#x5750;&#x6807;&#x7CFB;&#x7EDF;&#x7684;&#x539F;&#x70B9;&#xFF08;0,0&#xFF09;&#x5750;&#x6807;&#x3002;
+&#x539F;&#x70B9;&#x5411;&#x53F3;&#x5EF6;&#x4F38;&#x662F;X&#x8F74;&#x6B63;&#x65B9;&#x5411;&#xFF0C;&#x539F;&#x70B9;&#x5411;&#x4E0B;&#x5EF6;&#x4F38;&#x662F;Y&#x8F74;&#x6B63;&#x65B9;&#x5411;&#x3002;
+</code></pre>
+<p><img src="../pics/201801301450_osChina_&#x5750;&#x6807;&#x7CFB;.png" alt=""></p>
+<h1 id="view&#x5750;&#x6807;&#x7CFB;"><a name="view&#x5750;&#x6807;&#x7CFB;" class="anchor-navigation-ex-anchor" href="#view&#x5750;&#x6807;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>2. View&#x5750;&#x6807;&#x7CFB;</h1>
+<pre><code class="lang-text">View&#x5750;&#x6807;&#x7CFB;&#x4EE5;&#x7236;&#x89C6;&#x56FE;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;&#x5750;&#x6807;&#x539F;&#x70B9;&#x3002;
+getTop();   //&#x83B7;&#x53D6;&#x5B50;View&#x5DE6;&#x4E0A;&#x89D2;&#x8DDD;&#x7236;View&#x9876;&#x90E8;&#x7684;&#x8DDD;&#x79BB;
+getLeft();  //&#x83B7;&#x53D6;&#x5B50;View&#x5DE6;&#x4E0A;&#x89D2;&#x8DDD;&#x7236;View&#x5DE6;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;
+getBottom();//&#x83B7;&#x53D6;&#x5B50;View&#x53F3;&#x4E0B;&#x89D2;&#x8DDD;&#x7236;View&#x9876;&#x90E8;&#x7684;&#x8DDD;&#x79BB;
+getRight(); //&#x83B7;&#x53D6;&#x5B50;View&#x53F3;&#x4E0B;&#x89D2;&#x8DDD;&#x7236;View&#x5DE6;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;
+event.getX(); //&#x89E6;&#x6478;&#x70B9;&#x76F8;&#x5BF9;&#x4E8E;&#x5176;&#x6240;&#x5728;&#x89C6;&#x56FE;&#x5750;&#x6807;&#x7684;&#x5750;&#x6807;    
+event.getY();
+event.getRawX();//&#x89E6;&#x6478;&#x70B9;&#x76F8;&#x5BF9;&#x4E8E;&#x5C4F;&#x5E55;&#x7684;&#x5750;&#x6807;
+event.getRawY();
+</code></pre>
+<p><img src="../pics/&#x5750;&#x6807;&#x4F53;&#x7CFB;.png" alt=""></p>
 <footer class="page-footer"><span class="copyright">&#x65E0;&#x7248;&#x6743; &#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x5236;&#x4F7F;&#x7528;&#xFF01; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;
-2020-08-19 17:20:00
+2021-01-22 11:57:19
 </span></footer>
                                 
                                 </section>
@@ -1321,12 +1316,12 @@
 
             
                 
-                <a href="常用代码块.html" class="navigation navigation-prev " aria-label="Previous page: 常用代码">
+                <a href="android相关概念.html" class="navigation navigation-prev " aria-label="Previous page: Android相关概念">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="事件分发机制.html" class="navigation navigation-next " aria-label="Next page: 事件分发机制">
+                <a href="APP的启动流程.html" class="navigation navigation-next " aria-label="Next page: APP启动流程">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1337,7 +1332,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Android坐标体系","level":"1.10.3","depth":2,"next":{"title":"事件分发机制","level":"1.10.4","depth":2,"path":"chinese/android基础/事件分发机制.md","ref":"chinese/android基础/事件分发机制.md","articles":[]},"previous":{"title":"常用代码","level":"1.10.2","depth":2,"path":"chinese/android基础/常用代码块.md","ref":"chinese/android基础/常用代码块.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","versions-select","fontsettings","tbfed-pagefooter","donate","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"无版权 可以无限制使用！","modify_label":"该文件更新时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"donate":{"alipay":"https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_支付宝收款码.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_微信收款码.png","wechatText":"微信打赏"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"versions":{"options":[{"value":"https://www.aivin666.cn/java_android/","text":"v1.0"}]},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/android基础/android坐标体系.md","mtime":"2020-08-19T09:20:00.598Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-22T02:07:10.621Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Android坐标体系","level":"1.10.3","depth":2,"next":{"title":"APP启动流程","level":"1.10.4","depth":2,"path":"chinese/android基础/APP的启动流程.md","ref":"chinese/android基础/APP的启动流程.md","articles":[]},"previous":{"title":"Android相关概念","level":"1.10.2","depth":2,"path":"chinese/android基础/android相关概念.md","ref":"chinese/android基础/android相关概念.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","versions-select","fontsettings","tbfed-pagefooter","donate","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"无版权 可以无限制使用！","modify_label":"该文件更新时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"donate":{"alipay":"https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_支付宝收款码.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_微信收款码.png","wechatText":"微信打赏"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"versions":{"options":[{"value":"https://www.aivin666.cn/java_android/","text":"v1.0"}]},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/android基础/android坐标体系.md","mtime":"2021-01-22T03:57:19.362Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-27T01:14:28.023Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -17,7 +17,7 @@ PhoneWindow 通过 Activity 去控制 View 。
 ```
 
 
-## WindowManager.java
+## WindowManager.java ( interface )
 ```text
 WindowManager 是外界访问Window的入口 ,
 WindowManager 的主要功能是提供简单的API使得使用者可以方便地将一个控件作为一个窗口添加到系统中，
@@ -28,7 +28,7 @@ WindowManager 的主要功能是提供简单的API使得使用者可以方便地
 最终把具体的实现工作交给 WindowManagerService。
 ```
 
-## WindowManagerImpl.java
+## WindowManagerImpl.java ( class )
  ```text
 private final WindowManagerGlobal mGlobal; // 实际实现者
 private final Display mDisplay; //保存所属屏幕

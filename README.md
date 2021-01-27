@@ -101,12 +101,9 @@
 - [ ] Rxjava是怎么实现线程切换的
 - [ ] Rxjava自定义操作符
 - [ ] RXJava 怎么切换线程
-- [ ] ARouter的原理
-- [ ] ARouter怎么实现接口调用
-- [ ] ARouter怎么实现页面拦截
 - [ ] 同步屏障
 - [ ] bugly日志收集的原理是什么？
-- [ ] 做过一些SDK的操作吗？
+- [ ] 做过一些 SDK 的操作吗？
 - [ ] 为什么会有R文件这个映射表？直接使用资源的路径不好么？
 - [ ] dex文件结构了解过么？为何会有65535的限制？mutildex技术了解么？这项技术的目的是什么？
 - [x] Parcelable 和 Serializable 本质区别 。说原理 ,不要说用法
@@ -145,6 +142,7 @@
 - [x] 简单描述下Handler,Handler是怎么切换线程的
 - [ ] Handler同步屏障
 - [ ] Launcher启动App的流程，中间有几种跨进程通信(socket)
+- [ ] 源码中有哪里用到了 AtomicInteger
 - [x] 跨进程通信了解多少？管道了解吗？
 - [x] 描述一次跨进程通讯
 - [x] 说说 binder 机制的原理
@@ -156,7 +154,7 @@
 - [x] AIDL in out oneWay 代表什么意思
 - [x] 你们用的什么消息通信机制
 - [ ] 多进程 怎么实现？如果启动一个多进程APP，会有几个进程运行？
-- [ ] 怎么中止一个线程，Thread.Interupt一定有效吗？
+- [ ] 怎么终止一个线程，thread.interrupt() 一定有效吗
 
 
 
@@ -169,7 +167,6 @@
 - [x] Application 中可以显示Dialog么 ？为什么？
 - [x] 使用 ActivityLifecycleCallbacks 做了哪些事情？
 - [ ] 说说App的启动过程 , 在ActivityThread的main方法里面做了什么事，什么时候启动第一个Activity？
-- [ ] 如何求当前 Activity View的深度
 - [ ] AMS 交互调用生命周期是顺序的吗
 - [x] Activity、Window 、PhoneWindow、DecorView、View、ViewRootImpl 的关系 
 - [x] activity 有几个 Window
@@ -180,8 +177,8 @@
 - [x] PhoneWindow 是在哪里初始化的
 - [x] setContentView 是如何把xml文件 化成View并显示到 Activity中的 
 - [x] LayoutInflater 是如何把xml布局文件转换成View对象的（反射）？View树如何生成的？怎么优化？
-- [ ] RecyclerView的缓存结构是怎样的？缓存的是什么？cachedView会执行onBindView吗?
-- [ ] RecyclerView嵌套RecyclerView，NestScrollView嵌套ScrollView滑动冲突
+- [ ] RecyclerView 的缓存结构是怎样的？缓存的是什么？cachedView会执行onBindView吗?
+- [ ] RecyclerView 嵌套 RecyclerView，NestScrollView嵌套ScrollView滑动冲突
 - [ ] 讲一下 RecyclerView 的缓存机制,滑动10个，再滑回去，会有几个执行onBindView
 - [ ] 如何实现RecyclerView的局部更新，用过payload吗,notifyItemChange方法中的参数？
 - [ ] RecyclerView 防止内存OOM的一道题，充分利用自身的缓存机制
@@ -190,55 +187,58 @@
 - [ ] Launcher启动图标，有几个进程？
 - [ ] etPack组件用过哪些？lifeCycle 的原理是什么？如果在onStart里面订阅，会回调onCreate吗？
 - [ ] LifeCycle 的原理是怎样的？
-- [ ] 源码中有哪里用到了AtomicInt
 - [ ] 有看过哪些框架的源码吗？
 - [ ] Activity内 LinearLayout 红色 wrap_content ,包含View绿色wrap_content,求界面颜色
 - [ ] ViewPager 切换掉帧 有什么处理经验？
 - [ ] ViewPager2原理
 - [ ] setFactory和setFactory2有什么区别？
-- [ ] 如何自定义实现一个FlexLayout
+- [ ] 如何自定义实现一个 FlexLayout
 - [ ] A Activity打开B Activity的生命周期变化，会有什么方法打断吗？
 - [ ] 登陆功能，登陆成功然后跳转到一个新Activity，中间涉及什么？从事件传递，网络请求,AMS交互角度分析
 
-# 事件分发 UI绘制
+# UI 绘制 
 - [x] View 绘制流程
 - [x] onMeasure 、onLayout 、onDraw关系
 - [x] 自定义 View 的几种方式。onMeasure、onLayout、onDraw 方法都何时需要重写 
 - [x] MeasureSpec 讲一下
 - [x] 讲下 onMeasure方法 , 如何测量 ，测量模式 ，入参为什么是int类型 
+- [ ] 为什么会多次调用 onMeasure 和 onLayout 方法
 - [x] 怎么获取view的宽高，如何确定值是准确的 ,有遇到是0的情况吗
 - [x] 为什么 view.post 可以获得宽高，有看过view.post的源码吗 
 - [x] 自定义 LinearLayout ，怎么测量子 View宽高
 - [x] onCreate 、onResume 、onStart里面，什么地方可以获得宽高
 - [x] 如何触发重新绘制
-- [ ] 首次 View 的绘制流程是在什么时候触发的
 - [x] invalidate 每次都会触发 onDraw 么？invalidate 每次会触发 View#onLayout 么？
-- [ ] 为什么会多次调用 onMeasure 和 onLayout 方法
-- [ ] ACTION_CANCEL 什么时候触发，触摸button然后滑动到外部抬起会触发点击事件吗，在+ + 滑动回去抬起会么
-- [ ] 获取TextView的行数时，StaticLayout原理
-- [ ] MotionEvent#offsetLocation事件转发。
-- [ ] 绘制的数据是如何提交到远端的SurfaceFlinger
 - [ ] requestLayout 和 invalidate 的流程
 - [ ] requestLayout 和 invalidate 的区别
+- [ ] ACTION_CANCEL 什么时候触发，触摸button然后滑动到外部抬起会触发点击事件吗，在+ + 滑动回去抬起会么
+- [ ] 获取TextView的行数时，StaticLayout原理。
+- [ ] 绘制的数据是如何提交到远端的SurfaceFlinger
 - [ ] requestLayout调用后，都会调用哪些方法？
+- [ ] 手势操作 ActionCancel 后怎么取消
+- [ ] 说说你对屏幕刷新机制的了解，双重缓冲，三重缓冲，黄油模型
+- [ ] attachToWindow 什么时候调用？
+
+# 事件分发 
+- [ ] 伪代码实现一个长按事件
+- [ ] 首次 View 的绘制流程是在什么时候触发的
+- [ ] MotionEvent#offsetLocation事件转发
 - [ ] 滑动冲突如何解决？有几种方式？具体从哪个事件开始拦截？在哪里拦截？比如双层ViewPager嵌套的滑动冲突如何解决。
 - [ ] 讲下事件传递 ，总体流程，DOWN事件拦截后，后续事件如何处理？，dispatchTouchEvent方法返回true后事件如何处理？
 - [ ] setOnTouchListener,onClickeListener 和 onTouchEvent 的关系
 - [ ] dispatchTouchEvent , onInterceptEvent , onTouchEvent 顺序，关系
 - [ ] 说说 事件分发机制，怎么写一个不能滑动的ViewPager
 - [ ] RecyclerView是怎么处理内部ViewClick冲突的
-- [ ] 手势操作 ActionCancel 后怎么取消
-- [ ] 伪代码实现一个长按事件
-- [ ] 说说你对屏幕刷新机制的了解，双重缓冲，三重缓冲，黄油模型
-- [ ] attachToWindow什么时候调用？
 - [ ] ViewGroup在Action_Move时onIntercept返回true，事件怎么传递
 - [ ] ViewPager中嵌套ViewPager怎么处理滑动冲突
 - [ ] 怎么处理嵌套View的滑动冲突问题
 - [ ] View的分发机制，滑动冲突
 - [ ] 如果onInterceptTouchEvent返回true，但是onTouchEvent返回了false，是什么效果？如果还想让其他View接收事件，该怎么做？
 
+
+
 # 自定义控件
-- [ ]自定义圆角图片
+- [ ] 自定义圆角图片
 - [ ] 自定义实现一个九宫格如何实现
 
 
@@ -251,15 +251,18 @@
 - [ ] 插件化的原理，startActivity hook了哪个方法
 - [ ] 插件化的主要优点和缺点是什么？
 - [ ] 插件化的原理，以及hook点，大概有两个
-- [ ] 组件化有详细了解过吗？ARouter详细原理
 - [ ] 说说热修复的原理？
 - [ ] 热修复的原理，资源的热修复的原理,会不会有资源冲突的问题
 - [ ] tinker的原理是什么,还用过什么热修复框架，robust的原理是什么？
 - [ ] 热修复，主要说了ClassLoader的方式和Rubost的插装方式，重点介绍了Rubost的原理。
 - [ ] 组件化的实现方案
 - [x] 多模块开发，不同的人可能会引入重复资源。相同的字符串，相同的icon等但是文件名并不一样，怎样去重
+- [ ] 组件化有详细了解过吗？ARouter详细原理
 - [ ] ARouter 路由原理？注解处理器是处理java还是字节码
 - [ ] ARouter的原理是怎样的？
+- [ ] ARouter 的原理
+- [ ] ARouter 怎么实现接口调用
+- [ ] ARouter 怎么实现页面拦截
 - [ ] ARouter的原理是什么？如果不用ARouter，你会怎么去解藕。接口？设计接口有什么需要注意的？
 - [ ] Drawable与View有什么区别,Drawable有哪些子类
 
@@ -294,12 +297,11 @@
 - [ ] retrofit怎么做post请求
 
 # 网络相关
-- [x] TCP和UDP区别，TCP为何是三次握手，为何是四次挥手
+- [x] TCP 和 UDP 区别，TCP为何是三次握手，为何是四次挥手
 - [x] MediaPlayer 能同时播放多个音频么？ 如果需要播放多个提示音，如何实现
-- [ ] 如何在网络框架里直接避免内存泄漏，不需要在presenter中释放订阅
-- [ ] hdpi和xxhdpi的手机，分别加载xhdpi下的图片，会缩放图片么？如果会缩放，是如何缩放的，像素点是如何补全或者减少的？图片在内存中的大小会如何变化？
-- [ ] http 与 https 有什么区别 。https 多了tls层。对称加密和非对称加密。
-- [ ] http1.0 、http1.1 、http1.2 、 HTTP3.0 有什么区别
+- [ ] 如何在网络框架里直接避免内存泄漏，不需要在 presenter 中释放订阅
+- [x] http 与 https 有什么区别 
+- [x] http1.0 、http1.1 、http1.2 、 HTTP3.0 有什么区别
 - [ ] OkHttp 里面用到了什么设计模式？
 - [ ] OkHttp连接池是怎么实现的？里面怎么处理SSL？
 - [ ] OkHttp网络拦截器，应用拦截器 ? OKHttp有哪些拦截器，分别起什么作用
@@ -325,7 +327,7 @@
 - [ ] 二叉树的最大深度
 - [ ] 二叉树的每一层最左边节点
 - [ ] 链表求和
-- [ ] 有用过什么加密算法？AES,RAS什么原理？
+- [x] 有用过什么加密算法？AES , RAS什么原理？
 - [x] 非对称加密 、对称加密
 - [ ] token放在本地如何保存？ 如何加密比较好
 - [ ] HashMap 讲一下，数据结构、hash过程、扩容、加载因子为何是0.75等。
@@ -333,10 +335,11 @@
 - [ ] SparseArray 和 ArrayMap 各自的数据结构，前者的查找是怎么实现的，与HashMap的区别
 - [ ] 说说HashMap的原理 HashMap查找的时间复杂度是多少？
 - [ ] 讲下arraylist、hashmap、linkedlist、linkedhashmap的实现。linkedhashmap为何会有这样的特性(lru)?它有个参数，表示命中率和使用次数。
-- [ ] lru是通过linkedhashmap实现的么？
-- [ ] 讲讲LinkedHashMap的数据结构
-- [ ] ArrayMap和SparseArray的区别，实现。
+- [ ] lru是通过 linkedhashmap实现的么？
+- [ ] 讲讲 LinkedHashMap 的数据结构
+- [ ] ArrayMap 和 SparseArray 的区别，实现。
 - [ ] t1、t2、t3三个线程 ，如何让三个线程按照顺序依次打印 1-100
+- [ ] 如何求当前 Activity View 的深度
 
 # 优化 、稳定性 、技术选型
 - [ ] 图片加载优化有什么经验吗
@@ -379,6 +382,7 @@
 - [x] inJustDecodeBounds 是什么？
 - [x] Bitmap 内存 和 drawable 目录的关系
 - [x] xhdpi 的图片放到 xxhdp 的手机上，内存会如何变化
+- [ ] hdpi 和xxhdpi的手机，分别加载xhdpi下的图片，会缩放图片么？如果会缩放，是如何缩放的，像素点是如何补全或者减少的？图片在内存中的大小会如何变化？
 - [x] Bitmap 不改变图片质量的情况下,如何减少内存
 - [x] 图片显示不全、变形怎么处理
 - [x] 一个 wrap_content 的 ImageView ，加载远程图片，传什么参数裁剪比较好?
