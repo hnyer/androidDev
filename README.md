@@ -101,7 +101,6 @@
 - [ ] Rxjava是怎么实现线程切换的
 - [ ] Rxjava自定义操作符
 - [ ] RXJava 怎么切换线程
-- [ ] 同步屏障
 - [ ] bugly日志收集的原理是什么？
 - [ ] 做过一些 SDK 的操作吗？
 - [ ] 为什么会有R文件这个映射表？直接使用资源的路径不好么？
@@ -140,7 +139,7 @@
 - [x] 说说你对Handler机制的了解，同步消息，异步消息等
 - [x] Handler机制了解吗？一个线程有几个Looper？为什么？
 - [x] 简单描述下Handler,Handler是怎么切换线程的
-- [ ] Handler同步屏障
+- [x] Handler 同步屏障
 - [ ] Launcher启动App的流程，中间有几种跨进程通信(socket)
 - [ ] 源码中有哪里用到了 AtomicInteger
 - [x] 跨进程通信了解多少？管道了解吗？
@@ -154,7 +153,7 @@
 - [x] AIDL in out oneWay 代表什么意思
 - [x] 你们用的什么消息通信机制
 - [ ] 多进程 怎么实现？如果启动一个多进程APP，会有几个进程运行？
-- [ ] 怎么终止一个线程，thread.interrupt() 一定有效吗
+- [x] 怎么终止一个线程，thread.interrupt() 一定有效吗
 
 
 

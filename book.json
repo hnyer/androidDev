@@ -35,8 +35,8 @@
 
 
     	"tbfed-pagefooter": {
-    		"copyright":"无版权 可以无限制使用！",
-    		"modify_label": "该文件更新时间：",
+    		"copyright":"( no Copyright，enjoy youself ! )",
+    		"modify_label": "The file was updated at :",
     		"modify_format": "YYYY-MM-DD HH:mm:ss"
     	},
 
@@ -63,7 +63,11 @@
                  {
                      "value": "https://www.aivin666.cn/java_android/",
                      "text": "v1.0"
-                 } 
+                 } ,
+                 {
+                   "value": "https://www.baidu.com/",
+                   "text": "v2.0 (已与百度达成战略合作,善用搜索)"
+                 }
                ]
            }
 

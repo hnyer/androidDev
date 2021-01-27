@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chinese/pics/201801301450_osChina_坐标系.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/201802071433_osChina_tcp_ip协议族.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/201808161609_osChina_分贝波形图.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/FontMetrics.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/坐标体系.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/文字基准点.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/SUMMARY.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/androidDev.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/kotlinc.xml" beforeDir="false" />
@@ -67,6 +60,8 @@
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/屏幕适配.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/常用代码块.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/常用代码块.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/控件绘制流程.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/控件绘制流程.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/智能家居.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/智能家居.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/权限配置.html" beforeDir="false" />
@@ -75,8 +70,6 @@
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/沉浸式.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/相机模块.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/相机模块.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/自定义控件.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/自定义控件.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/进程通信.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/进程通信.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/doc/常用网站.html" beforeDir="false" />
@@ -135,11 +128,15 @@
       <change beforePath="$PROJECT_DIR$/_book/chinese/native/音视频.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/native/音视频第三方库.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/native/音视频第三方库.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/pics/201801301450_osChina_坐标系.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/201802061638_osChina_java容器.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/pics/201802071433_osChina_tcp_ip协议族.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/201802231617_osChina_Binder架构示意图.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/201802231617_osChina_Binder通信示意图.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/201803021451_osChina_查看task.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/pics/201808161609_osChina_分贝波形图.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/DecorView结构.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/pics/FontMetrics.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/JVM-Architecture.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/JVM架构.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/SVG_demo.png" beforeDir="false" />
@@ -158,10 +155,12 @@
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/五大过程组.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/十大知识领域.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/图片内存测试.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/pics/坐标体系.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/字节码表.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/对象内存布局.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/布局加载流程.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/数字信号模拟信号.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/pics/文字基准点.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/未使用泛型.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/点击桌面图标启动APP.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/适配方案.png" beforeDir="false" />
@@ -253,12 +252,10 @@
       <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/styles/website.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/View加载流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/View加载流程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/android坐标体系.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/android坐标体系.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/自定义控件.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/java基础/线程详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/线程详解.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book.json" beforeDir="false" afterPath="$PROJECT_DIR$/book.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/Handler详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/Handler详解.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/native/音视频.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/native/音视频.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -280,29 +277,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="157" selection-start-line="157" selection-end-line="157" />
+            <state relative-caret-position="141">
+              <caret line="141" column="17" lean-forward="true" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chinese/android基础/控件绘制流程.md">
+        <entry file="file://$PROJECT_DIR$/SUMMARY.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="197">
+              <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chinese/android基础/View加载流程.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chinese/android基础/Handler详解.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+            <state relative-caret-position="41">
+              <caret line="519" lean-forward="true" selection-start-line="519" selection-end-line="519" />
             </state>
           </provider>
         </entry>
@@ -311,18 +308,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>```text++</find>
-      <find>```xml</find>
-      <find>源码</find>
-      <find>oneWay</find>
-      <find>out</find>
-      <find>AIDL</find>
-      <find>AMS</find>
-      <find>SharedPreferences</find>
-      <find>Fragment</find>
-      <find>掉帧</find>
-      <find>http 、https 方式</find>
-      <find>在Android系统中，屏幕的左上角是坐标系统的原点</find>
       <find>201801301453_osChina_子view与父view的坐标关系</find>
       <find>tls</find>
       <find>绘制</find>
@@ -338,9 +323,21 @@
       <find>参数类型对应的字节数</find>
       <find>rectF</find>
       <find>UNSPECIFIED</find>
-      <find>setMeasuredDimension</find>
       <find>WindowManager.java</find>
       <find>getChildMeasureSpec</find>
+      <find>setMeasuredDimension</find>
+      <find>requestLayout</find>
+      <find>performTraversals</find>
+      <find>以下是我瞎猜的。</find>
+      <find>无版权 可以无限制使用</find>
+      <find>versions</find>
+      <find>relayoutWindow</find>
+      <find>ViewRootImpl</find>
+      <find>怎么终止一个线程</find>
+      <find>Handle详解</find>
+      <find>list</find>
+      <find>屏障</find>
+      <find>Handle</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -357,7 +354,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chinese/android基础/权限配置.md" />
         <option value="$PROJECT_DIR$/chinese/自定义控件/自定义控件实例.md" />
         <option value="$PROJECT_DIR$/chinese/源码阅读/源码阅读配置.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/虚拟机对比.md" />
@@ -379,7 +375,6 @@
         <option value="$PROJECT_DIR$/chinese/android基础/自定义控件.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/svg绘制不规则图形.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/图片加载详解.md" />
-        <option value="$PROJECT_DIR$/chinese/android基础/Handler详解.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/Activity详解.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/Java枚举.md" />
@@ -392,7 +387,6 @@
         <option value="$PROJECT_DIR$/chinese/android基础/view的加载流程-原理.md" />
         <option value="$PROJECT_DIR$/chinese/native/ccpp.md" />
         <option value="$PROJECT_DIR$/chinese/native/Linux.md" />
-        <option value="$PROJECT_DIR$/chinese/native/音视频.md" />
         <option value="$PROJECT_DIR$/chinese/native/系统编译剪裁.md" />
         <option value="$PROJECT_DIR$/chinese/native/NDK.md" />
         <option value="$PROJECT_DIR$/chinese/native/音视频第三方库.md" />
@@ -403,11 +397,14 @@
         <option value="$PROJECT_DIR$/chinese/android基础/android坐标体系.md" />
         <option value="$PROJECT_DIR$/SUMMARY.md" />
         <option value="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/线程详解.md" />
         <option value="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" />
-        <option value="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/View加载流程.md" />
+        <option value="$PROJECT_DIR$/chinese/native/音视频.md" />
+        <option value="$PROJECT_DIR$/book.json" />
+        <option value="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/Handler详解.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -426,7 +423,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -435,21 +431,11 @@
               <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
               <item name="androidDev" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-              <item name="chinese" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-              <item name="chinese" type="462c0819:PsiDirectoryNode" />
-              <item name="pics" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -510,8 +496,8 @@
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.20578778" weight="0.24048583" />
-      <window_info id="Structure" order="3" sideWeight="0.7942122" side_tool="true" visible="true" weight="0.24048583" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4726688" weight="0.24048583" />
+      <window_info active="true" id="Structure" order="3" sideWeight="0.5273312" side_tool="true" visible="true" weight="0.27854252" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.48231512" weight="0.32955465" />
@@ -520,7 +506,7 @@
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.36334404" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.4807074" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.522508" />
@@ -609,19 +595,6 @@
     <state x="341" y="114" width="598" height="536" key="find.popup/0.0.1280.764@0.0.1280.764" timestamp="1604277265246" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/Fragment详解.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/BroadcastReceiver.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/pics/201803021451_osChina_查看task.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/Activity详解.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -752,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/native/音视频.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="1069" column="23" selection-start-line="1069" selection-start-column="23" selection-end-line="1069" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/native/音视频第三方库.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -826,20 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/java基础/线程详解.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/pics/文字基准点.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -856,6 +808,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/View加载流程.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Temp.md">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -863,24 +822,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/_book/search_plus_index.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret column="404176" selection-start-column="404176" selection-end-column="404176" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/native/音视频.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="128" column="17" lean-forward="true" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
+          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/控件绘制流程.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        <state relative-caret-position="95">
+          <caret line="451" column="33" lean-forward="true" selection-start-line="451" selection-start-column="33" selection-end-line="451" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/View加载流程.md">
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/线程详解.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        <state relative-caret-position="289">
+          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/Handler详解.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="519" lean-forward="true" selection-start-line="519" selection-end-line="519" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="141" column="17" lean-forward="true" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
         </state>
       </provider>
     </entry>

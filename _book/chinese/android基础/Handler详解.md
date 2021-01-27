@@ -504,6 +504,35 @@ Message next() { // MessageQueue.java
  synchronized (this) { ...  }   }
 ```
 
+## Handle 屏障消息 、同步屏障
+```text
+Message分为3种：普通消息（同步消息）、屏障消息（同步屏障）和异步消息。
+我们通常使用的都是普通消息，而屏障消息就是在消息队列中插入一个屏障，
+在屏障之后的所有普通消息都会被挡着，不能被处理。屏障不会挡住异步消息，
+因此可以这样认为：屏障消息就是为了确保异步消息的优先级，
+设置了屏障后，只能处理其后的异步消息，同步消息会被挡住，除非撤销屏障。
+
+屏障消息和普通消息的区别在于屏障没有 tartget，普通消息有 target 是因为它需要将消息分发给对应的 target，
+而屏障不需要被分发，它就是用来挡住普通消息来保证异步消息优先处理的。
+
+插入和移除屏障消息 用反射调用 MessageQueue.java 中的私有方法 postSyncBarrier() 、removeSyncBarrier()
+注意一点  插入普通消息会唤醒消息队列，但是插入屏障不会。
+
+Message message = Message.obtain(); // 默认是 同步消息
+message.setAsynchronous(true); // 设置为 异步消息
+
+// 插入同步屏障消息
+MessageQueue queue=handler.getLooper().getQueue();//  android 6.0 才有
+Method method=MessageQueue.class.getDeclaredMethod("postSyncBarrier");
+method.setAccessible(true);
+int token= (int) method.invoke(queue);// token用来移除屏障
+
+MessageQueue queue=handler.getLooper().getQueue();
+Method method=MessageQueue.class.getDeclaredMethod("removeSyncBarrier",int.class);
+method.setAccessible(true);
+method.invoke(queue,token);
+```
+
 ## 手写 handle 机制 实现 线程间通信
 handle 不仅仅只用于 主线程 和子线程的通信 ，也可以实现 子线程和子线程的通信 。
 可以参考我的 demo  https://gitee.com/hnyer/my-handle  
