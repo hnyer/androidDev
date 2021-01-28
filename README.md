@@ -71,7 +71,6 @@
 - [ ] Fragment hide show生命周期变化
 - [ ] Fragment replace生命周期变化
 - [ ] ViewPager切换Fragment什么最耗时？
-- [ ] Fragment hide show生命周期
 - [ ] Activity和Fragment的通信方式；系统为何会设计Fragment#setArgument方法。
 - [x] Service的生命周期，两种启动方法，有什么区别
 - [x] 有什么工具可以看到 Activity栈信息么？多个栈话，有方法分别得到各个栈的Activity列表么
@@ -83,9 +82,8 @@
 - [x] SharedPreferences 可以跨进程通信吗？ 如何改造成可以跨进程通信的?   
 - [ ] ContentProvider具体实现。
 - [ ] binderService方法中的回调具体运行在哪个线程？binder线程池最大线程数是多少？自定义的Callback远程调用，运行在哪个线程？为何不是主线程，如果运行在主线程会有哪些问题？
-- [ ] jetpack组件库使用过么？讲下具体组件
+- [ ] Jetpack 组件库使用过么？讲下具体组件
 - [ ] 悬浮窗如何实现
-- [ ] 通知的类别
 - [ ] ANR的log中关键字是什么
 - [ ] Activity的onSaveInstance方法何时调用？它跟onPause、onStop的调用顺序如何？
 - [ ] 讲下 leakCanary 原理，为什么不用虚引用？引用队列里面存的是什么？
@@ -94,17 +92,19 @@
 - [ ] Activity启动模式，以及各启动模式生命周期问题
 - [x] Activity怎么启动 Service 、Activity 与 Service 交互，Service 与 Thread 的区别
 - [x] ANR 了解过吗？有没有实际的ANR定位问题的经历
-- [ ] mainfest中配置LargeHeap，真的能分配到大内存吗？
-- [ ] put post有什么区别
-- [ ] 本地广播为何效率高？
-- [ ] 广播与RxBus的区别，全局广播与局部广播区别
-- [ ] Rxjava是怎么实现线程切换的
-- [ ] Rxjava自定义操作符
+- [x] AndroidManifest.xml 中 application 中配置 largeHeap ，真的能分配到大内存吗？
+- [ ] 通知的类别
+- [ ] ThreadLocal 实现
+- [x] 全局广播与局部广播区别 
+- [x] 本地广播 LocalBroadcastManager  实现 ,为何效率高 ?
+- [ ] 广播与RxBus的区别
+- [ ] Rxjava 是怎么实现线程切换的
+- [ ] Rxjava 自定义操作符
 - [ ] RXJava 怎么切换线程
-- [ ] bugly日志收集的原理是什么？
+- [ ] Bugly 日志收集的原理是什么？
 - [ ] 做过一些 SDK 的操作吗？
 - [ ] 为什么会有R文件这个映射表？直接使用资源的路径不好么？
-- [ ] dex文件结构了解过么？为何会有65535的限制？mutildex技术了解么？这项技术的目的是什么？
+- [ ] dex文件结构了解过么？为何会有65535的限制？ mutildex技术了解么？这项技术的目的是什么？
 - [x] Parcelable 和 Serializable 本质区别 。说原理 ,不要说用法
 - [ ] Bundle 是什么数据结构 ? 利用什么传递数据
 - [ ] 两个 getDrawable 取得的对象，有什么区别？
@@ -113,7 +113,6 @@
 - [ ] Scroller 有什么方法，怎么使用的
 - [ ] 想改变listview的高度，怎么做
 - [ ] canvas lock的缓冲区是怎么回事
-- [ ] ThreadLocal，LocalBroadcastReceiver实现
 
 # Android 动画
 - [x] 介绍一下 Android 动画
@@ -310,6 +309,7 @@
 - [ ] 实现一个下载功能的接口
 - [x] 平常抓包用什么工具
 - [x] 在项目中有直接使用tcp 、socket 来发送消息吗
+- [ ] get 、 put 、 post 有什么区别
 
 # 算法
 - [ ] 了解哪些算法
@@ -417,9 +417,9 @@
 
 # 设计模式
 - [ ] 你在项目中有用到什么设计模式吗
-- [ ] 单例模式有什么缺点
 - [ ] 动态代理 的实现 ， 动态代理有什么作用 
 - [ ] 代理模式与装饰模式的区别，手写一个静态代理，一个动态代理
+- [ ] 单例模式有什么缺点
 - [ ] 单例的几种实现方式：DCL、enum，静态内部类。还有饿汉式。懒汉式的使用场景：占用内存大、延迟初始化
 - [x] Android中常用的设计模式，说三个比较高级的
 - [ ] android源码中有哪些设计模式
