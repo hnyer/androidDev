@@ -1,0 +1,265 @@
+# 性能优化
+## 启动优化
+```text
+// 冷启动 、热启动
+当启动应用时，后台已有该应用的进程，
+所以在已有进程的情况下，这种启动会从已有的进程中来启动应用，这个方式叫热启动。
+按back键、home键，应用虽然会退出，但是该应用的进程是依然会保留在后台。
+因为一个应用从新进程的创建到进程的销毁，Application只会初始化一次，
+所以热启动的过程只需要创建和初始化一个 MainActivity 就行了，而不必创建和初始化 Application 。
+
+冷启动就是从0开始启动 App 。
+// 冷启动优化
+1、Application中对 第三方的SDK进行异步或延时初始化 。
+2、做一个闪屏界面。在展示的这段时间里，去加载下一页需要的资源。
+// 热启动优化
+在app 退出时 不要finish ，而是 moveTaskToBack ，即模拟 HOME按键的事件 。
+```
+
+##  UI流畅度优化 、界面卡顿 排查及优化
+Skipped 60 frames!  The application may be doing too much work on its main thread.
+```text
+在大部分Android平台的设备上，Android系统是 16ms (1000 /60 = 16.67 ) 刷新一次，也就是一秒钟60帧。 
+要达到这种刷新速度就要求在ui线程中处理的任务时间必须要小于16ms，如果ui线程中处理时间长，
+就会导致跳过帧的渲染，也就是导致界面看起来不流畅，卡顿。
+```
+
+## 卡顿引起的具体原因
+```text
+1、cpu 占用过高，容易卡顿 。一般是 后台线程处理的东西太繁忙。
+注意逻辑的优化，线程不要空跑。
+
+2、主线程 绘制时间过长。
+UI的层级别太大 ，不要冗余嵌套 
+```
+
+## 卡顿检测 Choreographer
+```text
+使用 Androidstudio 自带的 工具，和一些第三方的监控工具 例如 BlockCanary 就差不多了。
+
+// FPS ( Frames Per Second )
+即 Frame Rate，单位 fps，是指 gpu 生成帧的速率 ，Android中更帧率相关的类是 SurfaceFlinger 。
+SurfaceFlinger (SurfaceFlinger.h) 是Android的一个 native进程 ，
+接受多个来源的图形显示数据，将他们合成，然后发送到显示设备。
+
+// VSync (Synchronization ) ,垂直同步 信号。
+Android系统每隔16ms发出 VSync 信号，触发对UI进行渲染，
+Android 4.1 开始引入 VSync 机制，用来同步渲染，
+让 UI 和 SurfaceFlinger 可以按硬件产生的 VSync 节奏进行工作。
+
+WkHeartBeatTool wkHeartBeatTool =  new WkHeartBeatTool();
+wkHeartBeatTool.startTheBeatAction(new HeartBeatTask() {
+    @Override
+    public void run() {
+        // 一秒钟统计一次 ，如果小于 60 ，就说明掉帧了
+        WkLogTool.showLog("fps===="+count);
+        count= 0 ;
+    }
+} ,1000);
+
+// Choreographer 编舞者 ，统计一秒内 count 的数量 ，
+Choreographer.getInstance()
+        .postFrameCallback( new Choreographer.FrameCallback() {
+            // frameTimeNanos: The time in nanoseconds when the frame started being rendered,
+            @Override
+            public void doFrame(long frameTimeNanos) {
+                count++ ;
+                Choreographer.getInstance().postFrameCallback(this);
+            }
+        });
+```
+
+## 排查 线上App ,用户反馈卡顿的问题
+```text
+1、记录用户的使用机型和使用场景。例如操作流程、网络环境
+2、加入卡顿检测机制，有第三方的 SDK 也可以自己写 ，
+将卡顿时的堆栈信息记录并回传，定位分析。
+```
+
+## 内存优化
+```text
+1、别频繁GC
+2、控制好对象的引用，防止对象一直无法释放。
+```
+
+
+## apk瘦身
+最主要的是 从图片资源 、第三方库 和 .so 方面考虑 。
+```text
+1、 用lint检查， 删除无用资源
+2、 用tinypng等压缩图片。
+3、用webp格式图片
+4、开启代码混淆
+5、删除冗余代码。
+```
+
+# 内存泄漏
+## Handler 内存泄漏
+请查看 Handle 详解 这一块。
+
+## AsyncTask 内存泄露
+```text
+AsyncTask 的内存泄漏的原因跟 Handle 原因类似。
+由于 持有外部类 activity 的强引用 ，
+如果 activity 退出时， AsyncTask 还在执行操作，导致 activity 无法释放。
+解决办法有2个：
+1、在退出是 手动调用  asyncTask.execute() 
+2、static + WeakReference 
+private static class MyTask extends AsyncTask<Bundle, Integer, Bundle> {
+    private final WeakReference<MainActivity> weakReference;
+    private MyTask(MainActivity activity) {
+        weakReference = new WeakReference<>(activity);
+    }
+    @Override
+    protected Bundle doInBackground(Bundle... bundles) {
+        return bundle; // 耗时操作
+    }
+    @Override
+    protected void onPostExecute(Bundle bundle) {
+        if (weakReference.get() == null){
+            return;
+        }
+        weakReference.get().handleResult(bundle);
+    }
+}
+```
+
+
+# 稳定性 优化
+```text
+稳定的纬度：
+1、崩溃角度
+非常重要，出现闪退现象会导致用户体验非常差。
+容错机制，发生异常尽量不要闪退，而是给出提示。
+不要随意使用try catch去隐藏问题：而应该从源头 了解崩溃的本质原因，保证后面的运行流程。
+ 
+2、性能稳定
+启动速度、流畅卡顿程度、内存占用、耗电量、界面绘制速度、网络流量、 
+保证业务功能可用。ANR 响应超时、 能持续运行多长时间
+
+3、业务可用性纬度。
+保证APP主流程 和核心路径的稳定可用性。确保核心业务高可用。因为核心业务覆盖的人群最多。
+其他方面只有经常用的人才有可能触发。
+保证业务可用的高效可用，性能不能相差起伏太大。
+
+解决方案：
+1、预防为主、监控修复为辅
+①、开发阶段 ，采用成熟稳定方案、加强编码能力；
+对APP的 cpu、内存、进程线程数、网络流量、耗电量、log记录、启动页耗时 等信息记录和分析
+
+②测试阶段：加强机型覆盖测试、压力测试、特殊场景测试(例如无网络、故意下发错乱数据等)；
+从用户角度入手，尽量模拟真实使用场景、测试验证。不要从开发者角度进行测试。
+线下大规模覆盖测试、发现问题 解决问题；
+
+③发布阶段：进行灰度发布、多轮发布 ；
+发布前多测试、捕获异常上传并分析 、发新包修复或者热修复。 
+如果新发布的功能出现BUG，可以通过远程开关进行关闭功能模块，不让该功能显示。
+ 
+④ 运维阶段： 版本回退策略、热修复、发布新版本
+线上定位问题 定位机型。
+发生崩溃异常时，需要远程上报相关信息，包括 报错信息、机型、系统版本、APP版本、渠道等。
+
+监控工具：
+1、例如Android 自带的 monkey 
+2、 腾讯的 Bugly 
+3、阿里的  mobileperf  
+```
+
+## 单元测试
+```text
+// 黑盒测试
+一般而言，都是自己或者测试做做黑盒测试，模仿用户使用场景 使用即可。
+我问过很多人，他们基本都是这样测试后就上线了。
+
+// 白盒测试
+1、对于一些 要求严谨的大型 app ，例如 微信 支付宝，肯定是要做白盒测试了。
+黑盒测试无法完全覆盖，一旦出错，损失无法承受 ，当然，这种级别的测试，都有专门的测试人员。
+
+2、有一些大型的app ,编译时间比较长，或者路径比较深。采用手动点击试验看效果的方法，会比较浪费时间。
+为了免去编译安装的等待时间，要引入白盒测试，缩短自测的时间。
+
+// TDD ( Test-Driven Development ) 测试驱动开发 
+```
+
+##  单元测试 JUnit4 方案
+Androidstudio 自带。
+```text
+测试运行在本地开发环境的Java虚拟机上，无需连接Android设备或模拟器。
+因此，无法获得Android相关的API，只能测试只使用Java API的一些功能。
+
+@Test	表示此方法为测试方法
+@Before	在每个测试方法前执行，可做初始化操作
+@After	在每个测试方法后执行，可做释放资源操作
+@Ignore	忽略的测试方法
+
+assertEquals	断言传入的预期值与实际值是相等的
+assertArrayEquals	断言传入的预期数组与实际数组是相等的
+assertNull	断言传入的对象是为空
+assertTrue	断言条件为真
+assertSame	断言两个对象引用同一个对象，相当于“==”
+assertThat	断言实际值是否满足指定的条件
+
+@Ignore("等会再测")
+@Test
+public void getAppVersion(){  }
+
+@Test
+public void valueAdd() {
+    MyDeviceTool tool = new MyDeviceTool() ;
+    int sum = tool.valueAdd(10 ,5);
+    assertEquals(5 ,sum);
+}
+```
+
+## 单元测试 Instrumentation 方案
+```text
+需要将整个项目打包成apk，上传到模拟器或真机上，就跟运行了一次app 。
+最近的文章(20201222)讲到 Androidstudio +Instrumentation 比较少，
+Androidstudio3.4.1 默认生成的代码中也没有 Instrumentation 相关配置，
+是被替代了吗，暂时去看看其他的方案。
+```
+
+## 单元测试 robolectric 方案
+With Robolectric, your tests run in a simulated Android environment inside a JVM, 
+without the overhead of an emulator.
+```text
+http://robolectric.org
+https://github.com/robolectric/robolectric
+
+// 配置
+testImplementation 'junit:junit:4.12'
+testImplementation 'org.robolectric:robolectric:4.1'
+testImplementation 'org.robolectric:shadows-multidex:4.1'
+
+testOptions {
+    unitTests {
+        includeAndroidResources = true
+    }
+}
+    
+// 会提示下载文件失败，你可以手动下载一下。
+Downloading: org/robolectric/android-all/9-robolectric-4913185-2/android-all-9-robolectric-4913185-2.jar 
+from repository sonatype at https://oss.sonatype.org/content/groups/public/
+Transferring 118099K from sonatype
+
+下载地址就是按提示拼接一下,将下载好的文件放到 android-all-9-robolectric-4913185-2.jar.tmp 目录下 ，
+用 everything 全局搜索一下。
+---->
+https://oss.sonatype.org/content/groups/public/org/robolectric/android-all/9-robolectric-4913185-2/android-all-9-robolectric-4913185-2.jar
+
+// 简单示范
+@RunWith(RobolectricTestRunner.class)
+@Config( sdk = 28)
+public class TestShow {
+    @Test
+    public void myTest(){
+        Context context =  RuntimeEnvironment.application.getApplicationContext() ;
+        MyDeviceTool myDeviceTool =  new MyDeviceTool();
+        String packageName =myDeviceTool.getPackageName(context) ;
+        WkLogTool.showLog("packageName="+packageName);
+    }
+}
+
+我用的较少，一般只是用来测试一下逻辑。
+```
+ 

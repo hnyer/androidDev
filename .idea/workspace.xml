@@ -23,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/Temp.md">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="419" column="29" selection-start-line="419" selection-start-column="29" selection-end-line="419" selection-end-column="29" />
+            <state relative-caret-position="204">
+              <caret line="420" column="16" selection-start-line="420" selection-start-column="16" selection-end-line="420" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -41,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/chinese/设计模式/模式详解.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="69">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
               <folding>
                 <element signature="e#7#2317#0" />
                 <element signature="e#11#18#0" />
@@ -51,7 +51,6 @@
                 <element signature="e#909#918#0" />
                 <element signature="e#1482#1499#0" />
                 <element signature="e#2540#2550#0" />
-                <element signature="e#0#96#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,7 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>relayoutWindow</find>
       <find>ViewRootImpl</find>
       <find>怎么终止一个线程</find>
       <find>Handle详解</find>
@@ -90,6 +88,7 @@
       <find>ListView</find>
       <find>etPack</find>
       <find>抽象不应该依赖于细节，细节应当依赖于抽象。换言之，要针</find>
+      <find>```</find>
       <find>打包</find>
     </findStrings>
     <replaceStrings>
@@ -255,7 +254,7 @@
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
       <window_info content_ui="combo" id="Project" order="2" sideWeight="0.46463022" weight="0.15708502" />
-      <window_info active="true" id="Structure" order="3" sideWeight="0.53536975" side_tool="true" visible="true" weight="0.21700405" />
+      <window_info id="Structure" order="3" sideWeight="0.53536975" side_tool="true" visible="true" weight="0.21700405" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.48231512" weight="0.32955465" />
@@ -264,7 +263,7 @@
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.44855306" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.44855306" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.522508" />
@@ -578,13 +577,6 @@
     <entry file="file://$PROJECT_DIR$/chinese/pics/R文件结构.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/View加载流程.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1651">
@@ -627,17 +619,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Temp.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="419" column="29" selection-start-line="419" selection-start-column="29" selection-end-line="419" selection-end-column="29" />
+        <state relative-caret-position="204">
+          <caret line="420" column="16" selection-start-line="420" selection-start-column="16" selection-end-line="420" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chinese/设计模式/模式详解.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
           <folding>
             <element signature="e#7#2317#0" />
             <element signature="e#11#18#0" />
@@ -647,7 +646,6 @@
             <element signature="e#909#918#0" />
             <element signature="e#1482#1499#0" />
             <element signature="e#2540#2550#0" />
-            <element signature="e#0#96#0" expanded="true" />
           </folding>
         </state>
       </provider>
