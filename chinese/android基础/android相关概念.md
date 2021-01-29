@@ -1,17 +1,15 @@
-# 安卓基本概念
-
-##  虚拟机对比
-### JVM
+#  虚拟机对比
+## JVM
 Java Virtual Machine。基于栈 ，运行java字节码。
 
-### DVM 
+## DVM 
 ```text
 Dalvik Virtual Machine 。
 运行自谷歌定义的 .dex字节码格式。
 Dalvik 基于寄存器的架构， 更适合资源紧张的系统。
 ```
 
-### ART 
+## ART 
 ```text
 Android runtime 。
 Android 4.4 开始加入 ART模式。
@@ -19,7 +17,48 @@ ART下，应用在第一次安装的时候，字节码就会预编译成机器�
 但是以后每次启动执行的时候，都可以直接运行。（空间换时间）
 ```
 
-## 双缓冲
+# R.java 文件结构 
+![](../pics/R文件结构.png)
+```text
+R.java 定义了res目录中全部资源的id ，
+系统会对工程中的 字符串、图片、xml等资源进行搜索生成一个索引文件，
+每一个资源对应一个唯一的ID。
+将 id 作为 key，去 resource.arsc 里面去查找对应的真正的资源。
+这个 ID，用 32 位的 int 表示。格式为 PPTTNNNN。
+
+前 8 位 PP (Package) 表示资源所属包类型，0x7f 表示应用 Apk 包资源，0x01 表示系统包资源。
+中间 8 位 TT(Type) 代表资源 id 的类型
+0x02：drawable
+0x03：layout
+0x04：values
+0x05：xml
+0x06：raw
+0x07：color
+0x08：menu
+最后 16 位表示资源在此类型里面的编号。
+```
+
+## R文件的设计目的是啥，为什么不直接使用资源路径
+```text
+用 R.java 来映射资源文件 ，大概有以下一些优点。
+1、编程工具会对res下的资源进行扫描，删除或增加都会自动更新R文件，
+维护一个最新的R文件，相当于维护这一个索引，智能提示提高开发者的开发速度。
+
+2、方便引入非文件资源，例如 字符串和颜色配置等。
+3、将每个资源都映射成一个32的int (比很长的文件名节省空间) 。 
+
+其他的等待补充。
+```
+
+# .dex 文件 为什么不能超过 65535 个方法
+```text
+UNEXPECTED TOP-LEVEL EXCEPTION:  
+java.lang.IllegalArgumentException: method ID not in [0, 0xffff]: 65536
+
+```
+
+
+# 双缓冲
 ```text
 两个线程配合完成某一项工作，一个线程做A部分（例如绘制UI），
 另一个线程做B事情（例如读取资源，计算数据）。 
@@ -40,7 +79,7 @@ ART下，应用在第一次安装的时候，字节码就会预编译成机器�
 
 
 
-## 硬件加速
+# 硬件加速
 ```text
 图形的绘制如果是 GPU处理的就是 硬件加速绘制，如果是 CPU 处理的 就是软件绘制。
 硬件加速使用 GPU 进行View上的绘制操作。
@@ -63,7 +102,7 @@ oneView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 以下是已知不支持硬件加速的绘图操作(需要最新的请查阅[官网](https://developer.android.google.cn/guide/topics/graphics/hardware-accel.html))
 
 
-### 支持硬件加速情况
+## 支持硬件加速情况
 
 Canvas | 第一次支持 | Paint | 第一次支持
 -|-
@@ -99,7 +138,7 @@ Complex Shapes*	|✗
 drawPath()	|✗
 Shadow layer	|✗
 
-## SharedPreferences
+# SharedPreferences
 一些简单的、无安全风险的键值对数据，可以通过 SharedPreferences 保存。
 SharedPreferences 是一个轻量级的xml键值对文件 。
 ```text
@@ -147,7 +186,7 @@ context.getSharedPreferences("xxxName", Context.MODE_MULTI_PROCESS);
 ```
 
 
-## Application 
+# Application 
 ```text
 // Application 中显示 Dialog (AlertDialog) 
 借助 ActivityLifecycleCallbacks 的生命周期回调 获得 Context
@@ -156,21 +195,123 @@ new AlertDialog.Builder(mContext);
 // 通过 Application  传值 缺点 
 ```
  
-## 序列化
+ #  ListView 动态改变高度
+ ```text
+ public void setListViewHeightBasedOnChildren2(ListView listView) {
+     ListAdapter listAdapter = listView.getAdapter();
+     if (listAdapter == null) {
+         return;
+     }
+     int totalHeight = 0;
+     for (int i = 0; i < listAdapter.getCount(); i++) {
+         View listItem = listAdapter.getView(i, null, listView);
+         // 对 子View item 不做限制，要多大就报上来多大
+         listItem.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+         totalHeight += listItem.getMeasuredHeight();
+     }
+ 
+     ViewGroup.LayoutParams params = listView.getLayoutParams();
+     params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() -1));
+     listView.setLayoutParams(params);
+ }
+ ```
+
+
+
+# RecyclerView
+```text
+implementation 'com.android.support:appcompat-v7:24.2.1'
+implementation 'androidx.recyclerview:recyclerview:1.0.0'
+在添加依赖的时候，要用小写字母去搜索。
+```
+
+##  RecyclerView 与 listview 的区别
+```text
+RecyclerView 是 listview 的升级版，具有更高灵活、扩展 。
+
+1、RecyclerView 默认实现了 线性布局、网格布局、流式布局。
+2、RecyclerView 取消了 setEmptyView() 、 addHeaderView() 、 addFooterView() 对应的 UI效果需要自己去实现。
+3、RecyclerView 提供了 局部刷新的 接口  notifyItemChanged(position) 
+4、RecyclerView 提供了部分 动画效果。listview 完全靠自定义 。
+5、RecyclerView 实现嵌套滚动机制 。
+```
+ 
+
+##  RecyclerView ItemDecoration 间隔线
+```text
+recyclerView.addItemDecoration(xx);
+https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/RecyclerView/RecyclerViewMarginDecoration.java
+```
+ 
+
+## RecyclerView 添加动画
+默认实现一些基础动画。
+```text
+
+```
+
+## RecyclerView 局部刷新 原理
+```text
+
+```
+
+## RecyclerView 缓存 机制
+默认已经实现了 View的复用，不需要类似 if(convertView == null) 的实现 
+```text
+
+```
+
+## RecyclerView 复用 机制
+默认已经实现了 View的复用，不需要类似 if(convertView == null) 的实现 
+```text
+
+```
+
+##  RecyclerView 回收机制
+```text
+
+```
+
+
+ 
+
+##  RecyclerView 嵌套滑动 机制
+Android 5.0推出了嵌套滑动机制，在之前，一旦子View处理了触摸事件，
+父View就没有机会再处理这次的触摸事件，而嵌套滑动机制解决了这个问题
+```text
+
+```
+
+##  RecyclerView 多种 type场景下怎么避免滑动卡顿
+```text
+
+```
+
+
+##  RecyclerView 万能适配器
+以上是讲解 recyclerview 的原理，实际使用中 可以使用 一些封装过的 第三方 适配器，提高开发速度。
+```text
+https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+```
+
+ 
+
+ 
+# 序列化
 ```text
 序列化，将内存中保存的是对象以二进制数据流的形式进行处理，
 可以实现对象的保存或者是网络传输。
 与序列化相对的是反序列化，它将流转换为对象。
 ```
 
-### Bunder 传递对象为什么需要序列化
+## Bunder 传递对象为什么需要序列化
 ```text
 因为 Bunder + intent 是支持跨进程传递的，
 而 Android 进程间是不支持 对象传递的，
-所以要讲对象序列化成二进制。
+所以要将对象序列化成二进制。
 ```
 
-### serialVersionUID 的作用
+## serialVersionUID 的作用
 ```text
 serialVersionUID 主要是一种安全机制。
 
@@ -190,7 +331,7 @@ preferences->Inspections->serialization issues->Serializable class without 'seri
 此时会提示生成严格验证的 serialVersionUID的方法 。如果不想严格校验可以直接写成1 。
 ```
 
-### Serializable 与 Parcelable 的区别
+## Serializable 与 Parcelable 的区别
 ```text
 Serializable 是一种标识接口,是一个空接口。
 对某个类实现 Serializable 后，Java便会对这个对象进行序列化操作。

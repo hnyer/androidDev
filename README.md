@@ -71,6 +71,7 @@
 - [ ] Fragment hide show生命周期变化
 - [ ] Fragment replace生命周期变化
 - [ ] ViewPager切换Fragment什么最耗时？
+- [ ] fragment 的 replace 和end？ 的区别
 - [ ] Activity和Fragment的通信方式；系统为何会设计Fragment#setArgument方法。
 - [x] Service的生命周期，两种启动方法，有什么区别
 - [x] 有什么工具可以看到 Activity栈信息么？多个栈话，有方法分别得到各个栈的Activity列表么
@@ -82,7 +83,6 @@
 - [x] SharedPreferences 可以跨进程通信吗？ 如何改造成可以跨进程通信的?   
 - [ ] ContentProvider具体实现。
 - [ ] binderService方法中的回调具体运行在哪个线程？binder线程池最大线程数是多少？自定义的Callback远程调用，运行在哪个线程？为何不是主线程，如果运行在主线程会有哪些问题？
-- [ ] Jetpack 组件库使用过么？讲下具体组件
 - [ ] 悬浮窗如何实现
 - [ ] ANR的log中关键字是什么
 - [ ] Activity的onSaveInstance方法何时调用？它跟onPause、onStop的调用顺序如何？
@@ -103,15 +103,13 @@
 - [ ] RXJava 怎么切换线程
 - [ ] Bugly 日志收集的原理是什么？
 - [ ] 做过一些 SDK 的操作吗？
-- [ ] 为什么会有R文件这个映射表？直接使用资源的路径不好么？
-- [ ] dex文件结构了解过么？为何会有65535的限制？ mutildex技术了解么？这项技术的目的是什么？
+- [x] 为什么会有 R文件映射表 ？直接使用资源的路径不好么？
+- [ ] dex 文件结构了解过么？为何会有 65535 的限制？ mutildex 技术了解么？这项技术的目的是什么？
 - [x] Parcelable 和 Serializable 本质区别 。说原理 ,不要说用法
 - [ ] Bundle 是什么数据结构 ? 利用什么传递数据
 - [ ] 两个 getDrawable 取得的对象，有什么区别？
 - [x] onSaveInstanceState() 、onRestoreInstanceState() 平时是怎么用的 , 什么时候有值，什么时候为空
-- [ ] ragment的replace和end？ 的区别
 - [ ] Scroller 有什么方法，怎么使用的
-- [ ] 想改变listview的高度，怎么做
 - [ ] canvas lock的缓冲区是怎么回事
 
 # Android 动画
@@ -178,17 +176,18 @@
 - [ ] RecyclerView 的缓存结构是怎样的？缓存的是什么？cachedView会执行onBindView吗?
 - [ ] RecyclerView 嵌套 RecyclerView，NestScrollView嵌套ScrollView滑动冲突
 - [ ] 讲一下 RecyclerView 的缓存机制,滑动10个，再滑回去，会有几个执行onBindView
-- [ ] 如何实现RecyclerView的局部更新，用过payload吗,notifyItemChange方法中的参数？
+- [ ] 如何实现 RecyclerView 的局部更新，用过payload吗,notifyItemChange方法中的参数？
 - [ ] RecyclerView 防止内存OOM的一道题，充分利用自身的缓存机制
 - [ ] RecyclerView 和 ListView 区别、特点、缓存 、懒加载、局部刷新 ,多种type场景下怎么避免滑动卡顿 ,怎么优化滑动
 - [ ] RecyclerView 缓存结构，RecyclerView预取，RecyclerView局部刷新
+- [x] 想改变 ListView 的高度，怎么做
 - [ ] Launcher启动图标，有几个进程？
-- [ ] etPack组件用过哪些？lifeCycle 的原理是什么？如果在onStart里面订阅，会回调onCreate吗？
-- [ ] LifeCycle 的原理是怎样的？
+- [ ] Jetpack 组件用过哪些？
+- [ ] LifeCycle 的原理是什么？如果在onStart里面订阅，会回调onCreate吗？
 - [ ] 有看过哪些框架的源码吗？
-- [ ] Activity内 LinearLayout 红色 wrap_content ,包含View绿色wrap_content,求界面颜色
+- [ ] Activity内 LinearLayout 红色 wrap_content ,包含View绿色 wrap_content ,求界面颜色
 - [ ] ViewPager 切换掉帧 有什么处理经验？
-- [ ] ViewPager2原理
+- [ ] ViewPager2 原理
 - [ ] setFactory和setFactory2有什么区别？
 - [ ] 如何自定义实现一个 FlexLayout
 - [ ] A Activity打开B Activity的生命周期变化，会有什么方法打断吗？
@@ -341,7 +340,6 @@
 - [ ] 如何求当前 Activity View 的深度
 
 # 优化 、稳定性 、技术选型
-- [ ] 图片加载优化有什么经验吗
 - [ ] WebView 性能优化做过什么工作
 - [ ] 使用 Application#onTrimMemory 优化
 - [ ] 启动优化做过什么工作？ 如果首页就要用到的初始化 
@@ -375,6 +373,7 @@
 
 
 # 内存泄漏 、图片 、图片加载
+- [ ] 图片加载优化有什么经验吗
 - [x] 图片内存的计算
 - [x] 大图加载 原理和优化，长图加载
 - [x] Bitmap高效加载 、Bitmap内存复用 inBitmap
@@ -416,7 +415,7 @@
 - [ ] 如何封装一个字符串转数字的工具类
 
 # 设计模式
-- [ ] 你在项目中有用到什么设计模式吗
+- [x] 你在项目中有用到什么设计模式吗
 - [ ] 动态代理 的实现 ， 动态代理有什么作用 
 - [ ] 代理模式与装饰模式的区别，手写一个静态代理，一个动态代理
 - [ ] 单例模式有什么缺点
@@ -439,14 +438,14 @@
 
 
 #  其他问题
-- [ ] 介绍一下你们项目的架构
-- [ ] 介绍一下你自已和项目 ，项目有什么难点  
-- [ ] 你们的项目中做过什么比较难的工作
-- [ ] 这些年有做一些什么比较难的工作
-- [ ] 说说为什么考虑离职 ,为什么考虑换工作 ，说说对你们原来公司的印象
-- [ ] 为什么考虑换一份工作 ，在你们公司这几年感觉怎么样
-- [ ] 你在团队中是怎样一个角色 ，有没有做什么推进项目的工作
-- [ ] 你们的产品为什么被砍掉，从哪方面考虑
-- [ ] 在这几年里，你有做过什么觉得最有价值的工作
-- [ ] 平常是怎么了解一些新知识与业界动态的，最近有什么印象深刻的文章
-- [ ] 你还有什么要问我的吗？目前有几个offer，倾向性是怎样的
+- [x] 介绍一下你们项目的架构
+- [x] 介绍一下你自已和项目 ，项目有什么难点  
+- [x] 你们的项目中做过什么比较难的工作
+- [x] 这些年有做一些什么比较难的工作
+- [x] 说说为什么考虑离职 ,为什么考虑换工作 ，说说对你们原来公司的印象
+- [x] 为什么考虑换一份工作 ，在你们公司这几年感觉怎么样
+- [x] 你在团队中是怎样一个角色 ，有没有做什么推进项目的工作
+- [x] 你们的产品为什么被砍掉，从哪方面考虑
+- [x] 在这几年里，你有做过什么觉得最有价值的工作
+- [x] 平常是怎么了解一些新知识与业界动态的，最近有什么印象深刻的文章
+- [x] 你还有什么要问我的吗？目前有几个offer，倾向性是怎样的
