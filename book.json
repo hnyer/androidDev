@@ -7,30 +7,38 @@
     "styles":{
         "website": "styles/website.css"
     } ,
+
+
     "plugins": [
         "-search",
         "search-plus",
         "todo" ,
         "anchor-navigation-ex" ,
         "copy-code-button",
-        "versions-select",
         "fontsettings",
         "tbfed-pagefooter",
-        "donate",
         "local-video",
 	    "splitter",
 	    "expandable-chapters",
         "favicon" ,
         "theme-comscore",
-        "local-video"
+        "local-video" ,
+        "valine"
     ],
 
+
+
     "pluginsConfig": {
+
+      "valine": {
+        "appId": "1Kf3qBNn0jP6bDmEwdxRDjrw-MdYXbMMI",
+        "appKey": "brJGxz10LLKF0zEmywV3WegD"
+      },
 
       	"fontsettings": {
                   "theme": "white",
                   "family": "sans",
-                  "size": 2
+                  "size": 1
       	},
 
 
@@ -45,31 +53,10 @@
           "bookmark": "assets/images/favicon.ico"
       },
 
-  	"donate": {
-  	  "wechat": "https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_微信收款码.png",
-  	  "alipay": "https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201803011956_osChina_支付宝收款码.png",
-  	  "title": "",
-  	  "button": "打赏",
-  	  "alipayText": "支付宝打赏",
-  	  "wechatText": "微信打赏"
-  	},
+
 
   	 "expandable-chapters":{
-  	 },
-
-
-       "versions": {
-               "options": [
-                 {
-                     "value": "https://www.aivin666.cn/java_android/",
-                     "text": "v1.0"
-                 } ,
-                 {
-                   "value": "https://www.baidu.com/",
-                   "text": "v2.0 (已与百度达成战略合作,善用搜索)"
-                 }
-               ]
-           }
+  	 }
 
 
 
