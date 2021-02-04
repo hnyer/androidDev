@@ -15,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/_book/.ignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/Temp.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/assets/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/book_备份.json.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/APP优化.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/APP优化.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/APP的启动流程.html" beforeDir="false" />
@@ -218,8 +219,6 @@
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-anchor-navigation-ex/lib/plugin.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-copy-code-button/toggle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-donate/plugin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-donate/plugin.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-fontsettings/fontsettings.js" beforeDir="false" />
@@ -240,8 +239,6 @@
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-tbfed-pagefooter/footer.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-theme-comscore/test.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-theme-comscore/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-versions-select/plugin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-versions-select/plugin.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/images/apple-touch-icon-precomposed-152.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/gitbook/images/favicon.ico" beforeDir="false" />
@@ -253,143 +250,8 @@
       <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/styles/website.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/book.json" beforeDir="false" afterPath="$PROJECT_DIR$/book.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/APP优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/APP优化.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/examples/normal-usage.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/examples/normal-usage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/examples/safe-string.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/examples/safe-string.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/.colors.js.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/colors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/custom/trap.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/custom/trap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/custom/zalgo.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/custom/zalgo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/extendStringPrototype.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/extendStringPrototype.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/maps/america.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/maps/america.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/maps/rainbow.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/maps/rainbow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/maps/random.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/maps/random.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/maps/zebra.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/maps/zebra.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/system/has-flag.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/system/has-flag.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/system/supports-colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/lib/system/supports-colors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/safe.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/safe.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/safe.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/safe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/colors/themes/generic-logging.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/colors/themes/generic-logging.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/gitbook-plugin-anchor-navigation-ex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/gitbook-plugin-anchor-navigation-ex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/markdown-navigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/watcherTasks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/assets/lib/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/assets/lib/plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/doc/updateRecord-en.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/doc/updateRecord-en.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/doc/updateRecord.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/doc/updateRecord.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-back-to-top-button/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-back-to-top-button/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-back-to-top-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-back-to-top-button/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/book/toggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/book/toggle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/assets/plugin.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/assets/plugin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/assets/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/assets/plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/book/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/book/plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/.project" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/book/expandable-chapters.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/book/expandable-chapters.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/book/expandable-chapters.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/book/expandable-chapters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/_layouts/favicon.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/_layouts/favicon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/_layouts/website/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/_layouts/website/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/assets/fontsettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/assets/fontsettings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/assets/website.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/assets/website.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/assets/video.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/assets/video.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/_layouts/website/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/_layouts/website/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/jquery.mark.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/jquery.mark.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/assets/buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/assets/buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/book/splitter.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/book/splitter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/book/splitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/book/splitter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/assets/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/assets/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/book/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/book/test.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/book/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/book/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/assets/plugin.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/assets/plugin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/assets/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/assets/plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/源码阅读/源码阅读配置.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/源码阅读/源码阅读配置.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -412,10 +274,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/111222.txt">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3059">
-              <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
+            <state relative-caret-position="271">
+              <caret line="390" column="44" selection-start-line="390" selection-start-column="44" selection-end-line="390" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -423,26 +285,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SUMMARY.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/book.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+            <state relative-caret-position="161">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book_备份.json.txt">
+        <entry file="file://$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="70" column="18" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="18" />
+            <state relative-caret-position="409">
+              <caret line="296" selection-start-line="296" selection-end-line="296" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chinese/源码阅读/源码阅读配置.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -530,7 +392,6 @@
         <option value="$PROJECT_DIR$/chinese/doc/常用网站.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/进程通信.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/android坐标体系.md" />
-        <option value="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/线程详解.md" />
         <option value="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/View加载流程.md" />
@@ -541,13 +402,14 @@
         <option value="$PROJECT_DIR$/chinese/android基础/BroadcastReceiver.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/常用代码块.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" />
-        <option value="$PROJECT_DIR$/chinese/源码阅读/源码阅读配置.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/android相关概念.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/chinese/设计模式/模式详解.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
         <option value="$PROJECT_DIR$/book_备份.json" />
         <option value="$PROJECT_DIR$/book.json" />
+        <option value="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" />
+        <option value="$PROJECT_DIR$/chinese/源码阅读/源码阅读配置.md" />
       </list>
     </option>
   </component>
@@ -572,22 +434,6 @@
             <path>
               <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
               <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -656,8 +502,8 @@
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4630225" visible="true" weight="0.16194332" />
-      <window_info id="Structure" order="3" sideWeight="0.53697747" side_tool="true" weight="0.15708502" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.46141478" weight="0.16194332" />
+      <window_info id="Structure" order="3" sideWeight="0.5385852" side_tool="true" visible="true" weight="0.16194332" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.48231512" weight="0.32955465" />
@@ -666,7 +512,7 @@
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.12861736" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.5868167" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.522508" />
@@ -866,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="201" column="7" lean-forward="true" selection-start-line="201" selection-start-column="7" selection-end-line="201" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/pics/文字基准点.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -966,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/源码阅读/源码阅读配置.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/android相关概念.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -998,13 +830,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/新建文本文档 (2).txt" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9660">
-          <caret line="420" column="16" selection-start-line="420" selection-start-column="16" selection-end-line="420" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -1017,31 +842,17 @@
         <state relative-caret-position="-207" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/111222.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3059">
-          <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book_备份.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="37" column="25" lean-forward="true" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1052,10 +863,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book.json">
+    <entry file="file://$USER_HOME$/111222.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+        <state relative-caret-position="187">
+          <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Temp.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="390" column="44" selection-start-line="390" selection-start-column="44" selection-end-line="390" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="296" selection-start-line="296" selection-end-line="296" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/源码阅读/源码阅读配置.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
