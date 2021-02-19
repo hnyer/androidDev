@@ -13,6 +13,7 @@
 - [x] JVM 架构
 - [x] Java 内存模型、内存结构、Java的内存分区
 - [ ] JVM 垃圾回收机制、老年代有什么算法？
+- [ ] 说一下 Android 用的是哪几种垃圾回收算法
 - [x] 方法区有什么东西 
 - [ ] JVM 类加载机制了解吗，类什么时候会被加载？类加载的过程具体生命周期是怎样的？
 - [ ] 说说你对类加载机制的了解？ DexClassLoader 与 PathClassLoader的区别
@@ -104,11 +105,11 @@
 - [ ] Bugly 日志收集的原理是什么？
 - [ ] 做过一些 SDK 的操作吗？
 - [x] 为什么会有 R文件映射表 ？直接使用资源的路径不好么？
-- [ ] dex 文件结构了解过么？为何会有 65535 的限制 
+- [x] dex 文件结构了解过么？为何会有 65535 的限制 
 - [ ] mutildex 技术了解么？这项技术的目的是什么？
 - [x] Parcelable 和 Serializable 本质区别 。说原理 ,不要说用法
 - [ ] Bundle 是什么数据结构 ? 利用什么传递数据
-- [ ] 两个 getDrawable 取得的对象，有什么区别？
+- [ ] 两个 getDrawable 取得的对象，有什么区别 ？
 - [x] onSaveInstanceState() 、onRestoreInstanceState() 平时是怎么用的 , 什么时候有值，什么时候为空
 - [ ] Scroller 有什么方法，怎么使用的
 - [ ] canvas lock的缓冲区是怎么回事
@@ -181,6 +182,7 @@
 - [ ] RecyclerView 防止内存OOM的一道题，充分利用自身的缓存机制
 - [ ] RecyclerView 和 ListView 区别、特点、缓存 、懒加载、局部刷新 ,多种type场景下怎么避免滑动卡顿 ,怎么优化滑动
 - [ ] RecyclerView 缓存结构，RecyclerView预取，RecyclerView局部刷新
+- [ ] RecyclerView 里面那个 changedSrape, attachedScrape 之类的到底是在做什么 ? 
 - [x] 想改变 ListView 的高度，怎么做
 - [ ] Launcher启动图标，有几个进程？
 - [ ] Jetpack 组件用过哪些？
@@ -304,6 +306,7 @@
 - [ ] OkHttp连接池是怎么实现的？里面怎么处理SSL？
 - [ ] OkHttp网络拦截器，应用拦截器 ? OKHttp有哪些拦截器，分别起什么作用
 - [ ] OkHttp怎么实现连接池
+- [ ] OkHttp 连接池的复用机制 
 - [ ] 网络封装怎么实现？
 - [ ] 如何上传数据？请求头关键字段和请求体格式
 - [ ] 实现一个下载功能的接口
@@ -336,6 +339,7 @@
 - [ ] 讲下arraylist、hashmap、linkedlist、linkedhashmap的实现。linkedhashmap为何会有这样的特性(lru)?它有个参数，表示命中率和使用次数。
 - [ ] lru是通过 linkedhashmap实现的么？
 - [ ] 讲讲 LinkedHashMap 的数据结构
+- [ ] ConcurrentHashMap  锁分段技术
 - [ ] ArrayMap 和 SparseArray 的区别，实现。
 - [ ] t1、t2、t3三个线程 ，如何让三个线程按照顺序依次打印 1-100
 - [ ] 如何求当前 Activity View 的深度

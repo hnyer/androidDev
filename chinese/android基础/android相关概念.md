@@ -55,6 +55,9 @@ R.java 定义了res目录中全部资源的id ，
 UNEXPECTED TOP-LEVEL EXCEPTION:  
 java.lang.IllegalArgumentException: method ID not in [0, 0xffff]: 65536
 
+Java源文件在打包成一个DEX文件，这个文件就是优化过的、Dalvik虚拟机可执行的文件，
+Dalvik虚拟机在执行DEX文件时，它使用了 short 这个类型（16 bit）索引DEX文件中的方法，
+这意味着单个DEX文件可以被定义的方法最多只能是65535个，当超过这个数量时就会发生编译错误。
 ```
 
 

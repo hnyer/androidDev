@@ -302,6 +302,13 @@ public final boolean post(@NonNull Runnable r) {
 The runnable will be run on the user interface thread.
 ```
 
+##  一个 Message ，Handler 可以 post 两次吗
+```text
+不能，Message 在进入 queue 的时候会标记 inUse  ,
+msg 被回收后，重新 obtain的时候 inUse 标记会清除，这时候可以再次 post
+```
+
+
 ##  MessageQueue 如何对 Message 排序的
 ```text
 通过时间排序 。
@@ -531,6 +538,15 @@ MessageQueue queue=handler.getLooper().getQueue();
 Method method=MessageQueue.class.getDeclaredMethod("removeSyncBarrier",int.class);
 method.setAccessible(true);
 method.invoke(queue,token);
+
+所谓消息屏障和异步消息是一种插队机制。
+viewrootimpl 在 scheduletraversal 的时候在在messagequeue的头部放一个target为null的message，
+messagequeue的next方法在取下一个消息的时候，发现头部是这样的message，
+会忽略普通消息，在列表中只找标记了异步的消息，如果找不到，
+即使列表中有其他正常的message都不会去处理。
+而系统中发送异步消息的地方，是Choreographer中收到vsync信号的地方。
+这样做的效果是，一旦调用了requestlayout等方法，用户的其它代码所发送的消息，
+即使发送得更早，都会等layout代码优先执行
 ```
 
 ## 手写 handle 机制 实现 线程间通信
