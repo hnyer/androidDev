@@ -112,12 +112,23 @@ Linux的内存管理采取的是分页存取机制，
 ```
 
 ## 常见错误
-### ubuntu报错Syntax error: "(" unexpected解决方法。
+### ubuntu 报错Syntax error: "(" unexpected解决方法。
 ```text
 因为Ubuntu为了加快开机速度，用dash代替了传统的bash，是dash在捣鬼。
 解决方法是 取消dash，
 sudo dpkg-reconfigure dash
 在选择项中选No，即可。
+```
+
+###  ubuntu 重启时，提示 A STOP JOB IS RUNNING FOR UNATTENDED UPGRADES SHUTDOWN 
+A stop job is running for snappy daemon
+```text
+编辑system.conf文件  vim /etc/systemd/system.conf
+修改以下两个地方
+DefaultTimeoutStartSec=10s
+DefaultTimeoutStopSec=10s
+
+systemctl daemon-reload  // 执行使得配置生效
 ```
 
 
