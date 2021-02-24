@@ -444,12 +444,13 @@ Lint 已经被集成在 AS 中。
 
 ##  demo ( LinkedIn 方案) 
 ```text
-建一个 Java library 和 Android library。
-Java library是我们定义的lint规则，编译后会生成lint.jar。
-Android library是我们定义的空的android library，只为了打包aar。
+参考博客写的demo ，以 aar方式引用出了点问题。(只生效一次，暂时不知道原因)
+暂时只用 java lib 的方式 引用。
+具体的使用请参考代码 https://gitee.com/hnyer/aivin_lint_demo 
 
-Android Gradle Plugin 3.4.0 之前和之后的配置不一样的，
-因为 android gradle plugin 3.4.0之后用lintChecks不再支持将lint.jar打包进aar中。
-这里只讲 3.4 之后的方式。
-
+目前有的效果有 
+枚举检测、图片大小检测、系统日志检测、命名规范检测、xml 字段名命名检测
+手动创建线程检测、系统吐司检测、xml硬编码检测、代码中硬编码检测
 ```
+
+![](../pics/自定义lint.png)
