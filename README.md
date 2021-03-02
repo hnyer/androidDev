@@ -12,15 +12,15 @@
 # Java基础
 - [x] JVM 架构
 - [x] Java 内存模型、内存结构、Java的内存分区
-- [ ] JVM 垃圾回收机制、老年代有什么算法？
+- [x] JVM 垃圾回收机制、老年代有什么算法
 - [x] 说一下 Android 用的是哪几种 垃圾回收算法
 - [x] 方法区有什么东西 
-- [ ] JVM 类加载机制了解吗，类什么时候会被加载？类加载的过程具体生命周期是怎样的？
-- [ ] 说说你对类加载机制的了解？ DexClassLoader 与 PathClassLoader的区别
+- [x] 说说你对类加载机制的了解？类什么时候会被加载？ 类加载的过程具体生命周期是怎样的？
+- [ ] DexClassLoader 与 PathClassLoader 的区别
 - [x] 类加载的过程，属性先加载还是方法先加载
 - [ ] 对象创建过程
 - [x] 讲下Java的 双亲委派
-- [ ] 拉圾回收的 GCRoot 是什么？
+- [x] 拉圾回收的 GCRoot 是什么
 - [x] GCRoot 的类型 ,举例说明。比如说Activity和它的匿名内部类Handler，分析下引用链，对应的 gcroot 是哪个
 - [x] 讲下 equals 和 hashcode ，他们为何必须一起重写
 - [ ] 成员变量和局部变量的区别。为何成员变量需要jvm在对象初始话过程中赋默认值？
@@ -288,7 +288,6 @@
 - [ ] @JavaScriptInterface为什么不通过多个方法来实现 
 - [ ] 为什么不利用同步方法来做 jsBridge交互？ 同步可以做异步，异步不能做同步 
 - [ ] jsBridge 实现方式
-- [ ] PathClassLoader与DexClassLoader有什么区别
 - [ ] CoordinatorLayout自定义behavior,可以拦截什么？
 - [ ] 视频播放,一个player怎么实现预加载，避免loading
 - [ ] webView加载本地图片，如何从安全方面考虑 
