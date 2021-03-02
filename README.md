@@ -16,7 +16,7 @@
 - [x] 说一下 Android 用的是哪几种 垃圾回收算法
 - [x] 方法区有什么东西 
 - [x] 说说你对类加载机制的了解？类什么时候会被加载？ 类加载的过程具体生命周期是怎样的？
-- [ ] DexClassLoader 与 PathClassLoader 的区别
+- [x] DexClassLoader 与 PathClassLoader 的区别
 - [x] 类加载的过程，属性先加载还是方法先加载
 - [ ] 对象创建过程
 - [x] 讲下Java的 双亲委派
@@ -133,7 +133,7 @@
 - [ ] IdleHandler 调用时机
 - [ ] IdleHandler用过吗 ？IdleHandler 应用场景
 - [ ] Handler休眠是怎样的？epoll的原理是什么？如何实现延时消息，如果移除一个延时消息会解除休眠吗？
-- [x] Handler内存泄漏 的GCRoot是什么？
+- [x] Handler内存泄漏 的GCRoot是什么 ？
 - [x] 说说你对Handler机制的了解，同步消息，异步消息等
 - [x] Handler机制了解吗？一个线程有几个Looper？为什么？
 - [x] 简单描述下Handler,Handler是怎么切换线程的
