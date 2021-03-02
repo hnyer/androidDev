@@ -433,7 +433,7 @@ Android Lint 是 ADT 16 引入的一个代码扫描工具 ，
 Lint 已经被集成在 AS 中。
 原生 Lint 有时无法满足自己的需求，例如团队的编码规范。所以有时需要进行自定义 Lint 。
 
-自定义 lint 的方案目前主要有两种。
+自定义lint 的方案目前主要有两种。
 1、第一种当然是 谷歌官方的，https://sites.google.com/a/android.com/tools/tips/lint-custom-rules 
 不过这种方案有点不妥，这种方案配置的 lint 规则会 影响机器上所有的Android工程。
 拷贝到了 .android/lint 文件夹下了。所以一般采用第二种方案。

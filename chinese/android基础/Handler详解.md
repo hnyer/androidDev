@@ -226,6 +226,21 @@ private static class MyHandler1 extends Handler {
 MyHandler  myHandler =new MyHandler(this) ;
 ```
 
+## GcRoot 角度分析 Handler
+```text
+handler 中引起内存泄漏的根节点（造成无法被gc回收的原因），
+是一个静态对象，即“方法区中类静态属性引用的对象”
+
+// 引用链
+直接在 activity中声明handler，
+使 handler 持有了activity的引用( 因为匿名内部类的特点)。
+当任务未执行完，message未被执行完时，message持有了messageQueue的引用,
+messageQueue持有了 mLooper 的引用,
+mLooper持有sThreadLocal 的引用,
+sThreadLocal 是一个静态变量，无法被回收，最终导致了activity无法被回收，造成了内存泄漏。
+static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>(); 
+```
+
 
 ## 为什么 在子线程中调用 activity.runOnUiThread() 也可以更新UI
 ```text
