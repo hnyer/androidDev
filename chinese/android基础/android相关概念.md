@@ -297,7 +297,10 @@ Android 5.0推出了嵌套滑动机制，在之前，一旦子View处理了触�
 https://github.com/CymChad/BaseRecyclerViewAdapterHelper
 ```
 
- 
+##  RecyclerView  +  RadioGroup RadioButton 防止数据错乱 处理
+```text
+https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/PreFlightCheckAdapter.java
+``` 
 
  
 # 序列化
