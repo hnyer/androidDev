@@ -63,6 +63,7 @@
 # android 基础
 - [x] Android APP的 入口函数 在哪里 
 - [x] activity 启动模式
+- [ ] APP主页一般用哪种 启动模式 ，原因是什么
 - [x] Activity 生命周期有哪些，知道 onRestart 么； A启动B ，A的 onStop 一定会执行吗；按 Home 按键后的生命周期
 - [x] activity 启动另外一个activity的时候横屏切换再点击返回，过程中发生的生命周期
 - [x] Fragment#onHiddenChanged 是生命周期方法么？如何触发？
@@ -72,6 +73,7 @@
 - [ ] fragment 的 replace 和end？ 的区别
 - [ ] Activity和Fragment的通信方式；系统为何会设计Fragment#setArgument方法。
 - [x] Service的生命周期，两种启动方法，有什么区别
+- [ ] 如何在 Service 中打开一个 Activity  
 - [x] 有什么工具可以看到 Activity栈信息么？多个栈话，有方法分别得到各个栈的Activity列表么
 - [x] ANR 是怎么回事？怎么查？Service会引起 ANR 么 
 - [x] 为什么 Activity.finish() 之后 10s 才 onDestroy 
@@ -180,6 +182,7 @@
 - [ ] RecyclerView 和 ListView 区别、特点、缓存 、懒加载、局部刷新 ,多种type场景下怎么避免滑动卡顿 ,怎么优化滑动
 - [ ] RecyclerView 缓存结构，RecyclerView预取，RecyclerView局部刷新
 - [ ] RecyclerView 里面那个 changedSrape, attachedScrape 之类的到底是在做什么 ? 
+- [ ] RecyclerView 的 LayoutManager 有哪几种
 - [x] 想改变 ListView 的高度，怎么做
 - [ ] Launcher启动图标，有几个进程？
 - [ ] Jetpack 组件用过哪些？
@@ -203,6 +206,7 @@
 - [x] 怎么获取view的宽高，如何确定值是准确的 ,有遇到是0的情况吗
 - [x] 为什么 view.post 可以获得宽高，有看过view.post的源码吗 
 - [x] 自定义 LinearLayout ，怎么测量子 View宽高
+- [ ] 在 View 绘制中 ，一个View的宽高由哪些因素决定？ 在 activit 中要拿到 View 准确的宽高有哪些方式
 - [x] onCreate 、onResume 、onStart里面，什么地方可以获得宽高
 - [x] 如何触发重新绘制
 - [x] invalidate 每次都会触发 onDraw 么？invalidate 每次会触发 View#onLayout 么？
@@ -230,6 +234,7 @@
 - [ ] ViewPager中嵌套ViewPager怎么处理滑动冲突
 - [ ] 怎么处理嵌套View的滑动冲突问题
 - [ ] View的分发机制，滑动冲突
+- [ ] 说一下 touch 触摸时间的传递流程图
 - [ ] 如果onInterceptTouchEvent返回true，但是onTouchEvent返回了false，是什么效果？如果还想让其他View接收事件，该怎么做？
 
 
@@ -292,8 +297,15 @@
 - [ ] webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗
 - [ ] retrofit怎么做post请求
 
+
+# NDK JNI
+- [ ]  java 中 int 类型对应的本地类型是什么
+- [ ]  JNI 中静态注册和动态注册的区别
+
+
 # 网络相关
 - [x] TCP 和 UDP 区别，TCP为何是三次握手，为何是四次挥手
+- [ ] 说一下 tcp 的建立连结和结束连结的通信过程
 - [x] MediaPlayer 能同时播放多个音频么？ 如果需要播放多个提示音，如何实现
 - [ ] 如何在网络框架里直接避免内存泄漏，不需要在 presenter 中释放订阅
 - [x] http 与 https 有什么区别 
@@ -315,6 +327,8 @@
 - [ ] 删除数组中的重复元素
 - [ ] 反转数组
 - [ ] 一个大致有序的数组如何排序，最快时间复杂度
+- [ ] 实现一个快速排序
+- [ ] 实现一个双向链表
 - [ ] 斐波那契台阶
 - [ ] 手写生产者消息者模型
 - [ ] 如何让两个线程循环交替打印
@@ -343,6 +357,7 @@
 - [ ] WebView 性能优化做过什么工作
 - [ ] 使用 Application#onTrimMemory 优化
 - [ ] 启动优化做过什么工作？ 如果首页就要用到的初始化 
+- [ ] 你的APP冷启动时间是多少，普通页面打开时间是多少，举例几个认为比较好的优化方法
 - [ ] 有没有做过什么 WebView 秒开的一些优化
 - [ ] 界面优化的一些方法，ConstraintLayout实现三等分,ConstraintLayout动画
 - [ ] 包体积的极致优化
@@ -353,7 +368,7 @@
 - [ ] Apk的大小如何压缩
 - [ ] 看视频的时候网络请求很慢怎么优化？
 - [x] 如何提高线上代码质量 
-- [ ] 自定义 lint  
+- [x] 自定义 lint  
 - [x] App上线后 用户使用时卡顿 ，怎么查看是什么原因
 - [x] 界面卡顿怎么排查和优化 ，何监测应用的 FPS
 - [ ] 网络优化 ，数据库优化
@@ -374,6 +389,7 @@
 
 # 内存泄漏 、图片 、图片加载
 - [ ] 图片加载优化有什么经验吗
+- [ ] 说一个你熟悉的图片加载库的图片加载流程
 - [x] 图片内存的计算
 - [x] 大图加载 原理和优化，长图加载
 - [x] Bitmap高效加载 、Bitmap内存复用 inBitmap
@@ -390,6 +406,7 @@
 - [x] glide 默认 Bitmap 的 Config 配置是 ARGB_8888 么
 - [ ] Glide 的缓存，有用过Glide的什么深入的API，自定义model是在Glide的什么阶段
 - [ ] 你碰到过什么 内存泄漏 ，怎么处理
+- [ ] 你认为为了避免内存泄漏，写代码时应该注意哪些事项
 - [x] AsyncTask 内存泄露
 
 
@@ -431,10 +448,10 @@
 - [ ] MVP 怎么处理内存泄漏
 - [x] MVVM 双向数据绑定的原理是怎样的 
 - [x] MVVM 怎么更新UI, databinding 用得多吗, databinding的原理
-- [ ] viewModel的原理，为什么可以在Activity销毁后保存数据
-- [ ] viewModel 是怎么实现双向数据绑定的 
-- [ ] viewModel 怎么实现自动处理生命周期 
+- [ ] ViewModel 是怎么实现双向数据绑定的 
+- [ ] ViewModel 怎么实现自动处理生命周期 
 - [ ] ViewModel 为什么在旋转屏幕后不会丢失状态
+- [ ] ViewModel 的原理，为什么可以在Activity销毁后保存数据
 - [ ] ViewModel 的使用中有什么坑
 - [ ] 有没有看一下Google官方的 ViewModel demo
 - [ ] ViewModel 在 Activity 初始化与在 Fragment中初始化，有什么区别 
