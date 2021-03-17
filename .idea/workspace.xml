@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="" />
+    <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/APP优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/APP优化.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,20 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="127" selection-start-line="127" selection-end-line="127" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chinese/通信方式/通信方式详解.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="1288" column="22" selection-start-line="1288" selection-start-column="22" selection-end-line="1288" selection-end-column="22" />
+            <state relative-caret-position="325">
+              <caret line="488" lean-forward="true" selection-start-line="488" selection-end-line="488" />
             </state>
           </provider>
         </entry>
@@ -133,8 +126,8 @@
         <option value="$PROJECT_DIR$/chinese/设计模式/mvc等.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Temp.md" />
-        <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
         <option value="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
       </list>
     </option>
   </component>
@@ -244,8 +237,8 @@
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.17025863" weight="0.20809716" />
-      <window_info id="Structure" order="3" sideWeight="0.82974136" side_tool="true" weight="0.20809716" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.17041801" weight="0.20809716" />
+      <window_info active="true" id="Structure" order="3" sideWeight="0.829582" side_tool="true" visible="true" weight="0.32955465" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.3585209" weight="0.32955465" />
@@ -602,17 +595,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
+    <entry file="file://$PROJECT_DIR$/chinese/通信方式/通信方式详解.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        <state relative-caret-position="1492">
+          <caret line="1301" column="46" lean-forward="true" selection-start-line="1301" selection-start-column="46" selection-end-line="1301" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/通信方式/通信方式详解.md">
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="1288" column="22" selection-start-line="1288" selection-start-column="22" selection-end-line="1288" selection-end-column="22" />
+        <state relative-caret-position="325">
+          <caret line="488" lean-forward="true" selection-start-line="488" selection-end-line="488" />
         </state>
       </provider>
     </entry>
