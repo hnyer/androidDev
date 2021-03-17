@@ -146,13 +146,132 @@ app的网络访问功能会被禁用，同时延时执行作业，异步任务�
 9、Android8.0 增加 “后台位置限制”。
 ```
 
-## 检查统计 单个App的耗电情况
-```text
-com.wk.myapplication
- 
 
+
+## 耗电分析工具
+### Energy Profiler
+```text
+设备系统在 Android 8.0 以上的系统 使用 Energy Profiler
+Androidstudio 中 view -> Tool Windows --> Profiler
+其中会分栏显示 CPU 、 MEMORY 、NETWORK  、ENERGY
+其中 ENERGY 就是电量的消耗情况。
 ```
 
+### battery-historian 电量分析工具
+android 8.0 以下使用 battery-historian 
+```text
+https://github.com/google/battery-historian 
+在本地搭建 battery-historian 工具有两种方法
+第一种是用 dock 方式，第二种是 编译编码方式。
+具体步骤参考了 https://blog.csdn.net/cui130/article/details/103934363 
+但是可能是因为网络的问题
+走到 go get -d -u github.com/google/battery-historian/...  无法下载了...
+go get -d -u github.com/google/battery-historian/...
+go get github.com/google/battery-historian/...: module github.com/google/battery-historian: Get "https://proxy.golang.org/github.com/google/battery-historian/@v/list": dial tcp 172.217.161.145:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+以后有空再用编译源码的方式去弄了，
+暂时先用一个在线的服务
+https://bathist.ef.lc/
+
+// 获取手机电量报告信息
+adb shell dumpsys batterystats --enable full-wake-history //允许记录电池日志
+adb shell dumpsys batterystats --reset   // 清空日志
+
+adb bugreport bugreport.zip    //  7.0 和更高版本的开发设备中获得 bug 报告
+adb bugreport > bugreport.txt  // 6.0或更低版本的设备
+
+将导出的文件上传到 工具里进行分析 https://bathist.ef.lc/
+```
+
+## 检查统计 单个App的耗电情况
+```text
+battery-historian 、Energy Profiler 中均可以根据包名 选择指定的APP进行分析。
+```
+
+## 省电优化方案
+### 优化后台耗电
+```text
+避免后台长时间获取 WakeLock、WIFI 和蓝牙的扫描等。
+WakeLock 是android系统中一种锁的机制，只要有进程持有这个锁，系统就无法进入休眠状态。
+WakeLock 要记得释放。
+```
+
+### 制定 符合系统的耗电规则 
+```text
+1、Alarm Manager wakeup 不能唤醒过多：
+当手机不在充电状态， wakeup 唤醒次数 每小时不能大于 10 次。
+
+2、不能频繁使用局部唤醒锁，
+当手机不在充电状态，partial wake lock 持有不能超过1小时。
+
+3、后台网络使用量不能过高
+当手机不在充电状态而且应用在后台，每小时网络使用量不要超过 50MB。
+
+4、、后台 WiFi scans 不能过多
+当手机不在充电状态而且应用在后台，每小时 WiFi scans 不能 大于4次。
+```
+
+### CPU 时间片优化
+```text
+Android 手机包括 AP 和 BP 两个 CPU。
+AP 即 Application Processor，所有的用户界面以及 App 都是运行在 AP 上的。
+BP 即 Baseband Processor，手机射频都是运行在这个 CPU 上的。
+我们所说的耗电，PowerProfile 文件里面的 CPU，指的是 AP。
+
+CPU 耗电通常有两种情况：
+1、长期频繁唤醒。
+原本可以仅仅在 BP 上运行， 但是因为唤醒，AP 就会运作 增加耗电量。
+
+2、CPU 长期高负荷。
+例如 App 退到后台的时候没有停止动画，或者程序有不退出的死循环等等，导致 CPU 满频、满核地跑。
+
+3、一些计算不够优化
+例如浮点运算比整数运算更消耗 CPU 时间片，耗电也会增加。
+一些图像算法比较耗时，可以换个更优的算法也可以大大降低cpu使用。
+
+所以常用优化 CPU 时间片的方式有：
+1、定位并解决 CPU 占用率异常方法。
+2、减少应用在后台的唤醒和运行。
+```
+
+### 网络耗电优化
+```text
+通常情况下，使用 WIFI 连接网络时的功耗要低于使用移动网络的功耗。
+使用移动网络传输数据，电量的消耗有以下3种状态：
+Full power ：高功率状态，移动网络连接被激活，允许设备以最大的传输速率进行操作。
+Low power ：低功耗状态，对电量的消耗差不多是 Full power 状态下的 50%。
+Standby ：空闲态，没有数据连接需要传输，电量消耗最少。
+
+所以为了避免网络连接所带来的电量消耗，我们可以采用如下几种方案：
+1、尽量在 WIFI 环境下进行数据传输，在使用 WIFI 传输数据时，
+应该尽可能增大每个包的大小（不超过最大传输单元 MTU ），并降低发包的频率。
+
+2、在蜂窝移动网络下需要对请求时机及次数控制，
+可以延迟执行的网络请求稍后一起发送，最好做到批量执行，尽量避免频繁的间隔网络请求，
+以尽量多地保持在 Standby 状态。
+
+3、使用 JSON 和 Protobuf 进行数据压缩，减少网络使用时间。
+
+4、禁止使用轮询功能：轮询会导致网络请求一直处于被激活的状态，耗电过高。
+```
+
+### 定位耗电优化 、传感器耗电优化 、蓝牙耗电优化等
+```text
+1、根据场景谨慎选择定位模式。
+对定位准确度没那么高的场景可以选择低精度模式。
+
+2、可以考虑网络定位代替 GPS。
+
+3、使用后务必及时关闭，减少更新频率，
+例如定位开启一定时间后超过某个阈值可以执行一个兜底策略：强制关闭 GPS。
+```
+
+### 界面耗电优化
+```text
+1、离开界面后停止相关活动，例如关闭动画。
+
+2、耗电操作判断前后台，如果是后台则不执行相关操作。
+```
 
 
 # 启动优化
