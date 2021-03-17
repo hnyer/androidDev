@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp.md" beforeDir="false" afterPath="$PROJECT_DIR$/Temp.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/APP优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/APP优化.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,20 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Temp.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chinese/通信方式/通信方式详解.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="1270" selection-start-line="1270" selection-end-line="1270" />
+            <state relative-caret-position="184">
+              <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -257,8 +246,8 @@
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.17041801" visible="true" weight="0.20809716" />
-      <window_info active="true" id="Structure" order="3" sideWeight="0.829582" side_tool="true" visible="true" weight="0.20809716" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.17025863" weight="0.20809716" />
+      <window_info id="Structure" order="3" sideWeight="0.82974136" side_tool="true" weight="0.20809716" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.3585209" weight="0.32955465" />
@@ -608,6 +597,13 @@
     </entry>
     <entry file="file://$USER_HOME$/Downloads/12345678t.txt" />
     <entry file="file://$USER_HOME$/Downloads/batterystats.txt" />
+    <entry file="file://$PROJECT_DIR$/Temp.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -615,17 +611,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/通信方式/通信方式详解.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="1270" selection-start-line="1270" selection-end-line="1270" />
+        <state relative-caret-position="184">
+          <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
         </state>
       </provider>
     </entry>
