@@ -61,11 +61,6 @@ Choreographer.getInstance()
 将卡顿时的堆栈信息记录并回传，定位分析。
 ```
 
-## 内存优化
-```text
-1、别频繁GC
-2、控制好对象的引用，防止对象一直无法释放。
-```
 
 
 ## apk瘦身
@@ -94,6 +89,200 @@ Choreographer.getInstance()
 ```text
 
 ```
+
+
+# 内存优化
+```text
+1、别频繁GC
+2、控制好对象的引用，防止对象一直无法释放。
+
+需要注意的是，出现OOM是因为内存溢出导致，
+但是这种情况不一定会发生在相对应的代码处，
+也不一定是出现OOM的代码使用内存有问题，而是刚好执行到这段代码。
+
+内存泄漏就是在当前应用周期内不再使用的对象被 GC Roots 引用，
+导致不能回收，使实际可使用内存变小。
+```
+
+
+## 内存优化的作用
+```text
+1、减少OOM，提高应用稳定性。
+2、减少卡顿，提高应用流畅度。
+3、减少内存占用，提高应用后台运行时的存活率。
+```
+
+## 常见内存泄漏场景
+### 资源性对象未关闭
+```text
+对于资源性对象不再使用时，应该立即调用它的close()函数，将其关闭，然后再置为null。
+例如Bitmap等资源未关闭会造成内存泄漏，此时我们应该在 Activity 销毁时及时关闭。
+```
+
+###  注册对象未注销
+```text
+例如 BraodcastReceiver 、EventBus 未注销造成的内存泄漏，
+我们应该在Activity销毁时及时注销。
+```
+
+###  类的静态变量持有大数据对象
+```text
+尽量避免使用静态变量存储数据，特别是大数据对象，建议使用数据库存储。
+```
+
+
+###  单例造成的内存泄漏
+```text
+优先使用Application的Context，
+如需使用Activity的Context，可以在传入Context时使用弱引用进行封装 。
+```
+
+### Handler 内存泄漏
+请查看 Handle 详解 这一块。
+
+
+
+### AsyncTask 内存泄露
+```text
+AsyncTask 的内存泄漏的原因跟 Handle 原因类似。
+由于 持有外部类 activity 的强引用 ，
+如果 activity 退出时， AsyncTask 还在执行操作，导致 activity 无法释放。
+解决办法有2个：
+1、在退出是 手动调用  asyncTask.execute() 
+2、static + WeakReference 
+private static class MyTask extends AsyncTask<Bundle, Integer, Bundle> {
+    private final WeakReference<MainActivity> weakReference;
+    private MyTask(MainActivity activity) {
+        weakReference = new WeakReference<>(activity);
+    }
+    @Override
+    protected Bundle doInBackground(Bundle... bundles) {
+        return bundle; // 耗时操作
+    }
+    @Override
+    protected void onPostExecute(Bundle bundle) {
+        if (weakReference.get() == null){
+            return;
+        }
+        weakReference.get().handleResult(bundle);
+    }
+}
+```
+
+
+###  容器中的对象没清理造成的内存泄漏
+```text
+及时将集合里的东西clear，然后置为null，再退出。
+否则会造成集合越来越大，万一静态集合忘记退出和清空了，会造成内存泄漏。
+```
+
+
+### WebView Bug 造成内存泄漏
+```text
+WebView 因为bug ，都存在内存泄漏的问题。
+我们可以为 WebView开启一个独立的进程，使用AIDL与应用的主进程进行通信，
+WebView所在的进程可以根据业务的需要选择合适的时机进行销毁，
+达到正常释放内存的目的。
+```
+
+
+### ListView 使用不当造成内存泄漏
+```text
+如果不使用缓存 convertView 的话，调用getView时每次都会重新创建View，
+这样之前的View可能还没有销毁，
+加之不断的新建View势必会造成内存泄露。
+```
+
+
+## 内存优化方案
+###  减少自动装箱和拆箱 ，Autoboxing and unboxing 
+```text
+Integer total = 99;//自动装箱
+int totalprim = total; //自动拆箱
+在自动装箱转化时，都会产生一个新的对象，这样就会产生更多的内存和性能开销。
+```
+
+
+### 内存复用
+```text
+1、资源复用：通用的字符串、颜色定义、简单页面布局的复用。
+2、视图复用：可以使用ViewHolder实现ConvertView复用。
+3、对象池：显示创建对象池，实现复用逻辑，对相同的类型数据使用同一块内存空间。
+4、Bitmap对象的复用： 使用 inBitmap 选项
+```
+
+
+### 使用最优的数据类型
+```text
+1、 ArrayMap 比 HashMap 更省内存。  
+ 
+2、使用 IntDef 和 @IntDef @StringDe 替代枚举类型
+枚举最大的优点是类型安全 ，但是很消耗内存。
+```
+
+
+
+### 使用合理的缓存策略 LruCache (Least Recently Used)
+```text
+它内部维护了一个队列，每当从中取出一个值时，该值就移动到队列的头部。
+当缓存已满而继续添加时，会将队列尾部的值移除，方便GC。
+LruCache用于内存缓存，在避免程序发生OOM和提高执行效率有着良好表现。
+```
+
+
+
+### 图片内存优化
+```text
+具体跳转到 “图片加载详解” 一章查看。
+```
+
+
+
+### 列表 item 被回收不可见时释放掉对图片的引用
+```text
+ListView：因此每次item被回收后再次利用都会重新绑定数据，
+只需在ImageView onDetachFromWindow的时候释放掉图片引用即可。
+
+RecyclerView：因为被回收不可见时第一选择是放进mCacheView中，
+这里item被复用并不会只需bindViewHolder来重新绑定数据，
+只有被回收进mRecyclePool中后拿出来复用才会重新绑定数据，
+因此重写Recycler.Adapter中的onViewRecycled()方法
+来使item被回收进RecyclePool的时候去释放图片引用。
+```
+
+### 禁用字符串的拼接
+```text
+我们可以在字符串拼接的时候使用StringBuffer，StringBuilder。
+代替 字符串拼接。
+```
+
+### 自定义View中的内存优化
+```text
+在 onDraw 方法等频繁调用的函数里面不要执行对象的创建，
+一般来说，都应该在自定义View的构造器中创建对象。
+```
+
+
+
+
+### final 优化 (不同意)
+```text
+我看到有博客说是 用 static final 修饰字段会优化内存。
+但是在参考了一些其他资料后，没有发现 final 跟内存优化有关。
+
+使用final方法的原因有2个， 
+1、锁定，禁止再修改
+2、高效。编译器在遇到调用 final 时会转入内嵌机制，提高执行效率。 
+
+调用一个函数除了函数本身的执行时间之外，还需要额外的时间去寻找这个函数。
+所以减少函数调用次数就等于降低了性能消耗。
+编译器直接将 final 函数体内嵌到了调用函数的地方，这样的结果是节省了寻找函数的时间。
+```
+
+
+ 
+ 
+
 
 
 # 包体积优化
@@ -512,36 +701,8 @@ Standby ：空闲态，没有数据连接需要传输，电量消耗最少。
 在app 退出时 不要finish ，而是 moveTaskToBack ，即模拟 HOME按键的事件 。
 ```
 
-# 内存泄漏
-## Handler 内存泄漏
-请查看 Handle 详解 这一块。
+ 
 
-## AsyncTask 内存泄露
-```text
-AsyncTask 的内存泄漏的原因跟 Handle 原因类似。
-由于 持有外部类 activity 的强引用 ，
-如果 activity 退出时， AsyncTask 还在执行操作，导致 activity 无法释放。
-解决办法有2个：
-1、在退出是 手动调用  asyncTask.execute() 
-2、static + WeakReference 
-private static class MyTask extends AsyncTask<Bundle, Integer, Bundle> {
-    private final WeakReference<MainActivity> weakReference;
-    private MyTask(MainActivity activity) {
-        weakReference = new WeakReference<>(activity);
-    }
-    @Override
-    protected Bundle doInBackground(Bundle... bundles) {
-        return bundle; // 耗时操作
-    }
-    @Override
-    protected void onPostExecute(Bundle bundle) {
-        if (weakReference.get() == null){
-            return;
-        }
-        weakReference.get().handleResult(bundle);
-    }
-}
-```
 
 
 # 稳定性 优化
