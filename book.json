@@ -22,18 +22,12 @@
 	    "expandable-chapters",
         "favicon" ,
         "theme-comscore",
-        "local-video" ,
-        "valine"
+        "local-video"
     ],
 
 
 
     "pluginsConfig": {
-
-      "valine": {
-        "appId": "1Kf3qBNn0jP6bDmEwdxRDjrw-MdYXbMMI",
-        "appKey": "brJGxz10LLKF0zEmywV3WegD"
-      },
 
       	"fontsettings": {
                   "theme": "white",
