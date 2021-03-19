@@ -1,5 +1,6 @@
 # 性能优化
-
+应用的性能优化，需要建立一套成体系的性能优化方案，
+这套方案被业界称为 APM (Application Performance Manange)。
 
 ##  UI流畅度优化 、界面卡顿 排查及优化
 Skipped 60 frames!  The application may be doing too much work on its main thread.
@@ -79,6 +80,34 @@ Choreographer.getInstance()
 ```
 
 
+# 启动优化
+## 启动类型
+```text
+// 冷启动 
+冷启动就是从0开始启动 App 。
+从点击应用图标到UI界面完全显示且用户可操作的全部过程。
+
+// 温启动
+当启动应用时，后台已有该应用的进程，
+在已有进程的情况下，会从已有的进程中来启动应用 。
+只会重走 Activity 的生命周期，而不会重走进程的创建，不走 Application 的创建与生命周期等。
+
+// 热启动
+直接从后台切换到前台。
+```
+
+```text
+// 冷启动优化
+1、Application中对 第三方的SDK进行异步或延时初始化 。
+2、做一个闪屏界面。在展示的这段时间里，去加载下一页需要的资源。
+// 热启动优化
+在app 退出时 不要finish ，而是 moveTaskToBack ，即模拟 HOME按键的事件 。
+```
+
+ 
+ 
+ 
+
 # 卡顿优化
 ```text
 
@@ -91,7 +120,25 @@ Choreographer.getInstance()
 ```
 
 
-# 内存优化
+# IO 优化
+```text
+
+```
+
+
+
+# 存储优化
+```text
+
+```
+
+
+# 网络优化
+```text
+
+```
+
+# 内存优化 (完成)
 ```text
 1、别频繁GC
 2、控制好对象的引用，防止对象一直无法释放。
@@ -285,7 +332,7 @@ RecyclerView：因为被回收不可见时第一选择是放进mCacheView中，
 
 
 
-# 包体积优化
+# 包体积优化 (完成)
 ## 优化 APK 体积的意义
 ```text
 1、瘦身优化最主要的好处是对应用 下载转化率 的影响，
@@ -404,6 +451,22 @@ https://tukaani.org/xz/
 文件相同，文件名不同。可以通过MD5 去识别。
 ```
 
+
+### 自带的 资源去重 配置 
+```text
+// 防止同名资源
+1、从源头控制，配置 resourcePrefix 指定前缀，
+xml资源会红色提示(但是不影响运行)你要加前缀。
+图片资源没有提示，需要有意识地添加。
+android {
+    resourcePrefix "app_"
+}
+
+2、图片相同，名字不一样。文件去重 方法。
+这里写了一个 Md5文件去重 示例。
+https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/md5%E6%96%87%E4%BB%B6%E5%8E%BB%E9%87%8D/CalcMD5.java
+```
+
 ### 图片压缩、图片格式 (建议)
 ```text
 可以使用 https://tingpng.com/ 压缩图片大小。
@@ -467,6 +530,8 @@ https://github.com/bytedance/ByteX
 对此，我们可以 通过 resConfig 来配置使用哪些语言，从而让构建工具移除指定语言之外的所有资源。
 ```
 
+
+
 ### 资源在线化
 ```text
 一些图片等资源 可以放服务器，结合预加载技术，可以减少apk打包大小。
@@ -505,7 +570,7 @@ https://mp.weixin.qq.com/s/X58fK02imnNkvUMFt23OAg
 ```
 
 
-# 电池耗电优化
+# 电池耗电优化 (完成)
 ```text
 手机耗电是通过使用相应的硬件模块来消耗电能。
 CPU、屏幕、WIFI、数据网络、GPS、音视频通话在日常耗电量中占比最大。
@@ -677,35 +742,21 @@ Standby ：空闲态，没有数据连接需要传输，电量消耗最少。
 ```
 
 
-# 启动优化
-## 启动类型
+
+
+
+
+# 稳定性 优化 ( 完成 )
+
+## 崩溃率 、DAU
 ```text
-// 冷启动 
-冷启动就是从0开始启动 App 。
-从点击应用图标到UI界面完全显示且用户可操作的全部过程。
-
-// 温启动
-当启动应用时，后台已有该应用的进程，
-在已有进程的情况下，会从已有的进程中来启动应用 。
-只会重走 Activity 的生命周期，而不会重走进程的创建，不走 Application 的创建与生命周期等。
-
-// 热启动
-直接从后台切换到前台。
+DAU ( Daily Active User )，日活跃用户数量。
+崩溃率 是奔溃次数或人数除以 DAU 。
 ```
 
-```text
-// 冷启动优化
-1、Application中对 第三方的SDK进行异步或延时初始化 。
-2、做一个闪屏界面。在展示的这段时间里，去加载下一页需要的资源。
-// 热启动优化
-在app 退出时 不要finish ，而是 moveTaskToBack ，即模拟 HOME按键的事件 。
-```
-
- 
 
 
-
-# 稳定性 优化
+##  稳定的纬度 
 ```text
 稳定的纬度：
 1、崩溃角度
@@ -721,7 +772,10 @@ Standby ：空闲态，没有数据连接需要传输，电量消耗最少。
 保证APP主流程 和核心路径的稳定可用性。确保核心业务高可用。因为核心业务覆盖的人群最多。
 其他方面只有经常用的人才有可能触发。
 保证业务可用的高效可用，性能不能相差起伏太大。
+```
 
+## 稳定优化的方向
+```text
 解决方案：
 1、预防为主、监控修复为辅
 ①、开发阶段 ，采用成熟稳定方案、加强编码能力；
@@ -738,14 +792,18 @@ Standby ：空闲态，没有数据连接需要传输，电量消耗最少。
 ④ 运维阶段： 版本回退策略、热修复、发布新版本
 线上定位问题 定位机型。
 发生崩溃异常时，需要远程上报相关信息，包括 报错信息、机型、系统版本、APP版本、渠道等。
+```
 
-监控工具：
+
+## 稳定监控工具
+```text
 1、例如Android 自带的 monkey 
 2、 腾讯的 Bugly 
 3、阿里的  mobileperf  
 ```
 
-## 单元测试
+## APP单元测试
+### 单元测试
 ```text
 // 黑盒测试
 一般而言，都是自己或者测试做做黑盒测试，模仿用户使用场景 使用即可。
@@ -761,7 +819,7 @@ Standby ：空闲态，没有数据连接需要传输，电量消耗最少。
 // TDD ( Test-Driven Development ) 测试驱动开发 
 ```
 
-##  单元测试 JUnit4 方案
+###  单元测试 JUnit4 方案
 Androidstudio 自带。
 ```text
 测试运行在本地开发环境的Java虚拟机上，无需连接Android设备或模拟器。
@@ -791,7 +849,7 @@ public void valueAdd() {
 }
 ```
 
-## 单元测试 Instrumentation 方案
+### 单元测试 Instrumentation 方案
 ```text
 需要将整个项目打包成apk，上传到模拟器或真机上，就跟运行了一次app 。
 最近的文章(20201222)讲到 Androidstudio +Instrumentation 比较少，
@@ -799,7 +857,7 @@ Androidstudio3.4.1 默认生成的代码中也没有 Instrumentation 相关配�
 是被替代了吗，暂时去看看其他的方案。
 ```
 
-## 单元测试 robolectric 方案
+### 单元测试 robolectric 方案
 With Robolectric, your tests run in a simulated Android environment inside a JVM, 
 without the overhead of an emulator.
 ```text
@@ -844,9 +902,28 @@ public class TestShow {
 ```
  
  
+## crash 崩溃解决办法
+```text
+1、(线上) 常规Crash
+发版时或者通过热修复解决
+
+2、系统级 Crash 尝试Hook绕过
+
+3、疑难 Crash重点突破或更换方案
+目前技术能力暂时无法解决的就想办法规避问题，更换实现方案
+```
+ 
+## 如果发生了异常情况，怎么止损
+```text
+1、有异常情况，紧急关闭功能的入口，让App处于可控的状态。
+2、热修复。
+3、兜底策略，如果监测到连续多次在同一个地方奔溃，可以拦截此流程，
+给予用户相关提示，不要一直崩溃。然后再上报错误。
+``` 
  
  
-# 代码质量 控制
+ 
+# 代码质量 控制 (完成)
 ## 导致 代码质量问题 的原因
 ```text
 1、新手 ，经验和能力不足
@@ -869,7 +946,7 @@ public class TestShow {
 4、定期开总结大会，做分享，团队成员能力共同提高 
 ```
 
-# 技术选型
+# 技术选型 (完成)
 ```text
 首先要确保一点：技术选型是稳定压倒一切、先验证后使用。
 不稳定的技术或框架，在后期会带来很多的麻烦，
@@ -896,7 +973,9 @@ public class TestShow {
 所以你要留心并验证。
 ```
 
-# 如何 提高 线上代码 质量
+
+# 提问
+## 如何 提高 线上代码 质量
 ```text
 1、上线前先做好本地测试，加入 bugly等获取异常信息，以便排查修复
 2、支持热更新 ，无感知修复小bug
@@ -905,22 +984,9 @@ public class TestShow {
 
 
 
-# 资源去重 
-```text
-// 防止同名资源
-1、从源头控制，配置 resourcePrefix 指定前缀，
-xml资源会红色提示(但是不影响运行)你要加前缀。
-图片资源没有提示，需要有意识地添加。
-android {
-    resourcePrefix "app_"
-}
 
-2、图片相同，名字不一样。文件去重 方法。
-这里写了一个 Md5文件去重 示例。
-https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/md5%E6%96%87%E4%BB%B6%E5%8E%BB%E9%87%8D/CalcMD5.java
-```
-
-# 自定义 Lint
+ 
+## 如何自定义 Lint
 ```text
 Android Lint 是 ADT 16 引入的一个代码扫描工具 ，
 通过对代码进行静态分析，可以帮助开发者发现代码质量问题和提出一些改进建议。
@@ -936,7 +1002,7 @@ Lint 已经被集成在 AS 中。
 将lint.jar放到一个 aar 中。将需要 lint 检测的项目中引入这个 aar，仅对当前工程有效。
 ```
 
-##  demo ( LinkedIn 方案) 
+###  demo ( LinkedIn 方案) 
 ```text
 参考博客写的demo ，以 aar方式引用出了点问题。(只生效一次，暂时不知道原因)
 暂时只用 java lib 的方式 引用。

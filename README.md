@@ -415,6 +415,7 @@
 - [x] 如何通过 Gradle 配置多渠道包
 - [ ] 了解APK打包的过程吗？
 - [ ] Activity 与 AppCompactActivity 区别，Activity 会打包到包里面去吗？
+- [ ] Gradle 熟悉吗 ？ 常用哪些配置和命令
 
 
 # 适配
