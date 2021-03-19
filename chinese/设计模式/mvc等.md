@@ -129,14 +129,9 @@ implementation "android.arch.lifecycle:extensions:1.1.1"
 Jetpack 包含4个部分的组件：Architecture、Foundation、Behavior 以及 UI 。
 Architecture 全称 Android Architecture Component (AAC) 。
 AAC 包含 
-ViewModel 、//
-LiveData、//
-Room、//
-Lifecycles、//
-DataBinding、//
-Navigation、//
-Paging、//
-WorkManager //
+ViewModel 、LiveData、Room、
+Lifecycles、DataBinding、Navigation、
+Paging、WorkManager 、DataStore 
 ```
 
 ##  Navigation

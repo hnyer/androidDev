@@ -128,9 +128,31 @@ Choreographer.getInstance()
 
 
 # 存储优化
+## 需要优化存储的原因
 ```text
+1、储存耗时较长
+2、线程不安全
+3、有潜在的 ANR 
+4、不支持跨进程。
+```
+
+## 常用的存储方案
+```text
+1、SharedPreferences
+2、 DataStore
+DataStore 是 Jetpack 中的一员。
+
+3、MMKV 
+4、SQLite
+5、文件存储
+
 
 ```
+
+
+
+
+
 
 
 # 网络优化
