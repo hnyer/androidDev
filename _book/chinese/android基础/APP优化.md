@@ -64,20 +64,67 @@ Choreographer.getInstance()
 
 
 
-## apk瘦身
-最主要的是 从图片资源 、第三方库 和 .so 方面考虑 。
-```text
-1、 用lint检查， 删除无用资源
-2、 用tinypng等压缩图片。
-3、用webp格式图片
-4、开启代码混淆
-5、删除冗余代码。
-```
 
 # 布局优化
 ```text
-
+布局优化的核心问题就是要解决因布局渲染性能不佳而导致的应用卡顿问题。
+卡顿优化可以看做是卡顿优化的子集。
 ```
+
+##  卡顿分析工具 Systrace ，查看耗时/掉帧
+```text
+Systrace 是 Android4.1 中 新增的性能数据采样和分析工具。
+它可帮助开发者收集 Android 关键子系统（如 SurfaceFlinger/ Kernel/Input/Display 
+等 Framework 部分关键模块、服务，View系统等）的运行信息，
+从而帮助开发者更直观的分析系统瓶颈，改进性能。
+
+Systrace 的原理是在系统的一些关键链路插入一些信息(称之为Label)
+( 系统的渲染的关键步骤都有framework预置的label )，
+通过Label的开始和结束来确定某个核心过程的执行时间，
+然后把这些Label信息收集起来得到系统关键路径的运行时间信息，
+进而得到整个系统的运行性能信息。
+
+系统版本越高，Android Framework中添加的系统可用Label就越多，
+能够支持和分析的系统模块也就越多；
+因此，在可能的情况下，尽可能使用高版本的Android系统来进行分析；
+然后对待分析的App也有一个限制——需要是debuggable的。
+
+
+// 打开 Systrace 
+由于Androidstudio 不方便找到或者找不到 Systrace的入口，
+所以建议 去 F:\sdk2\tools\monitor.bat  双击打开
+
+在启动trace前指定采集哪些系统预置的标签。 
+Graphics: Graphic系统的相关信息，包括SerfaceFlinger，
+VSYNC消息，Texture，RenderThread等；用来分析卡顿。
+View System: View绘制系统的相关信息，比如onMeasure，onLayout等；用来分析卡顿。
+Activity Manager:  ActivityManager调用的相关信息；用来分析Activity的启动过程。
+Dalvik VM: 虚拟机相关信息，比如GC停顿等。
+CPU Scheduling: CPU调度的信息；你能看到CPU在每个时间段在运行什么线程；线程调度情况，比如锁信息。
+
+在 Chrome浏览器  地址栏输入 chrome://tracing ，
+(没启动这个服务，trace.html 打开有时是空白的)
+然后将生成的trace.html文件拖进来，或者通过load按钮导入。
+常用快捷键说明：
+W: 放大横轴，用于查看耗时方法细节；
+S: 缩小横轴，用于查看整体情况；
+A： 将面板左移； （左右的方向键也可以移动）
+D: 将面板右移；
+M: 高亮某一段耗时内容。
+
+找到自己APP包名的进程
+右侧有一行写有F的圈圈，表示每个Frame的综合评价。
+如果是绿色，表示这一帧的渲染是ok的。如果是红色或者黄色，表示渲染超时了。 
+点击这个F圆圈，在下部的窗口中会展示一些详细信息。
+如果这一帧的渲染没有任何问题，下面的内容是空的；
+如果这一帧有问题，会展示Alert信息。
+
+但是要注意的是 Systrace 只是能看到出错的类型和修改思路，
+并不能像在Androidstudio里面如果报错可以精确到具体的代码行。
+```
+
+![](../pics/Systrace打开.png)
+![](../pics/Systrace界面.png)
 
 
 # 启动优化
