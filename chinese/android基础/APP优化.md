@@ -1,71 +1,8 @@
-# 性能优化
+# App 优化
 应用的性能优化，需要建立一套成体系的性能优化方案，
 这套方案被业界称为 APM (Application Performance Manange)。
 
-##  UI流畅度优化 、界面卡顿 排查及优化
-Skipped 60 frames!  The application may be doing too much work on its main thread.
-```text
-在大部分Android平台的设备上，Android系统是 16ms (1000 /60 = 16.67 ) 刷新一次，也就是一秒钟60帧。 
-要达到这种刷新速度就要求在ui线程中处理的任务时间必须要小于16ms，如果ui线程中处理时间长，
-就会导致跳过帧的渲染，也就是导致界面看起来不流畅，卡顿。
-```
-
-## 卡顿引起的具体原因
-```text
-1、cpu 占用过高，容易卡顿 。一般是 后台线程处理的东西太繁忙。
-注意逻辑的优化，线程不要空跑。
-
-2、主线程 绘制时间过长。
-UI的层级别太大 ，不要冗余嵌套 
-```
-
-## 卡顿检测 Choreographer
-```text
-使用 Androidstudio 自带的 工具，和一些第三方的监控工具 例如 BlockCanary 就差不多了。
-
-// FPS ( Frames Per Second )
-即 Frame Rate，单位 fps，是指 gpu 生成帧的速率 ，Android中更帧率相关的类是 SurfaceFlinger 。
-SurfaceFlinger (SurfaceFlinger.h) 是Android的一个 native进程 ，
-接受多个来源的图形显示数据，将他们合成，然后发送到显示设备。
-
-// VSync (Synchronization ) ,垂直同步 信号。
-Android系统每隔16ms发出 VSync 信号，触发对UI进行渲染，
-Android 4.1 开始引入 VSync 机制，用来同步渲染，
-让 UI 和 SurfaceFlinger 可以按硬件产生的 VSync 节奏进行工作。
-
-WkHeartBeatTool wkHeartBeatTool =  new WkHeartBeatTool();
-wkHeartBeatTool.startTheBeatAction(new HeartBeatTask() {
-    @Override
-    public void run() {
-        // 一秒钟统计一次 ，如果小于 60 ，就说明掉帧了
-        WkLogTool.showLog("fps===="+count);
-        count= 0 ;
-    }
-} ,1000);
-
-// Choreographer 编舞者 ，统计一秒内 count 的数量 ，
-Choreographer.getInstance()
-        .postFrameCallback( new Choreographer.FrameCallback() {
-            // frameTimeNanos: The time in nanoseconds when the frame started being rendered,
-            @Override
-            public void doFrame(long frameTimeNanos) {
-                count++ ;
-                Choreographer.getInstance().postFrameCallback(this);
-            }
-        });
-```
-
-## 排查 线上App ,用户反馈卡顿的问题
-```text
-1、记录用户的使用机型和使用场景。例如操作流程、网络环境
-2、加入卡顿检测机制，有第三方的 SDK 也可以自己写 ，
-将卡顿时的堆栈信息记录并回传，定位分析。
-```
-
-
-
-
-# 布局优化
+# 布局优化  (完成)
 ```text
 布局优化的核心问题就是要解决因布局渲染性能不佳而导致的应用卡顿问题。
 卡顿优化可以看做是卡顿优化的子集。
@@ -229,47 +166,111 @@ fpsviewer 就是基于 Choreographer 开发的。
 ```
 
 
-# 启动优化
+# 启动优化 （未完成）
 ## 启动类型
+### 冷启动 
 ```text
-// 冷启动 
 冷启动就是从0开始启动 App 。
 从点击应用图标到UI界面完全显示且用户可操作的全部过程。
 
-// 温启动
-当启动应用时，后台已有该应用的进程，
-在已有进程的情况下，会从已有的进程中来启动应用 。
-只会重走 Activity 的生命周期，而不会重走进程的创建，不走 Application 的创建与生命周期等。
-
-// 热启动
-直接从后台切换到前台。
-```
-
-```text
 // 冷启动优化
 1、Application中对 第三方的SDK进行异步或延时初始化 。
 2、做一个闪屏界面。在展示的这段时间里，去加载下一页需要的资源。
+```
+
+
+### 温启动
+```text
+当启动应用时，后台已有该应用的进程，
+在已有进程的情况下，会从已有的进程中来启动应用 。
+只会重走 Activity 的生命周期，而不会重走进程的创建，不走 Application 的创建与生命周期等。
+```
+
+
+### 热启动
+```text
+直接从后台切换到前台。
+
 // 热启动优化
 在app 退出时 不要finish ，而是 moveTaskToBack ，即模拟 HOME按键的事件 。
 ```
+ 
+ 
 
  
  
  
 
-# 卡顿优化
+# 卡顿优化 （未完成）
+##  UI流畅度优化 、界面卡顿 排查及优化
+Skipped 60 frames!  The application may be doing too much work on its main thread.
+```text
+在大部分Android平台的设备上，Android系统是 16ms (1000 /60 = 16.67 ) 刷新一次，也就是一秒钟60帧。 
+要达到这种刷新速度就要求在ui线程中处理的任务时间必须要小于16ms，如果ui线程中处理时间长，
+就会导致跳过帧的渲染，也就是导致界面看起来不流畅，卡顿。
+```
+
+## 卡顿引起的具体原因
+```text
+1、cpu 占用过高，容易卡顿 。一般是 后台线程处理的东西太繁忙。
+注意逻辑的优化，线程不要空跑。
+
+2、主线程 绘制时间过长。
+UI的层级别太大 ，不要冗余嵌套 
+```
+
+## 卡顿检测 Choreographer
+```text
+使用 Androidstudio 自带的 工具，和一些第三方的监控工具 例如 BlockCanary 就差不多了。
+
+// FPS ( Frames Per Second )
+即 Frame Rate，单位 fps，是指 gpu 生成帧的速率 ，Android中更帧率相关的类是 SurfaceFlinger 。
+SurfaceFlinger (SurfaceFlinger.h) 是Android的一个 native进程 ，
+接受多个来源的图形显示数据，将他们合成，然后发送到显示设备。
+
+// VSync (Synchronization ) ,垂直同步 信号。
+Android系统每隔16ms发出 VSync 信号，触发对UI进行渲染，
+Android 4.1 开始引入 VSync 机制，用来同步渲染，
+让 UI 和 SurfaceFlinger 可以按硬件产生的 VSync 节奏进行工作。
+
+WkHeartBeatTool wkHeartBeatTool =  new WkHeartBeatTool();
+wkHeartBeatTool.startTheBeatAction(new HeartBeatTask() {
+    @Override
+    public void run() {
+        // 一秒钟统计一次 ，如果小于 60 ，就说明掉帧了
+        WkLogTool.showLog("fps===="+count);
+        count= 0 ;
+    }
+} ,1000);
+
+// Choreographer 编舞者 ，统计一秒内 count 的数量 ，
+Choreographer.getInstance()
+        .postFrameCallback( new Choreographer.FrameCallback() {
+            // frameTimeNanos: The time in nanoseconds when the frame started being rendered,
+            @Override
+            public void doFrame(long frameTimeNanos) {
+                count++ ;
+                Choreographer.getInstance().postFrameCallback(this);
+            }
+        });
+```
+
+
+## 排查 线上App ,用户反馈卡顿的问题
+```text
+1、记录用户的使用机型和使用场景。例如操作流程、网络环境
+2、加入卡顿检测机制，有第三方的 SDK 也可以自己写 ，
+将卡顿时的堆栈信息记录并回传，定位分析。
+```
+
+
+# 绘制优化 （未完成）
 ```text
 
 ```
 
 
-# 绘制优化
-```text
-
-```
-
-
-# IO 优化
+# IO 优化  （未完成）
 ```text
 使用事务进行批量数据操作： 
 数据库操作的本质是对磁盘文件的操作，频繁操作文件是一个耗时操作，影响数据库的存取速度。
@@ -278,7 +279,7 @@ fpsviewer 就是基于 Choreographer 开发的。
 
 
 
-# 存储优化
+# 存储优化  （未完成）
 ## 需要优化存储的原因
 ```text
 1、储存耗时较长
@@ -376,7 +377,7 @@ DataStore 是 Jetpack 中的一员。
 
 
 
-# 网络优化
+# 网络优化 （未完成）
 ```text
 
 ```
@@ -1166,30 +1167,13 @@ public class TestShow {
  
  
  
-# 代码质量 控制 (完成)
-## 导致 代码质量问题 的原因
-```text
-1、新手 ，经验和能力不足
-2、人员的调动和更换，导致对业务的理解有偏差
-3、没有一个约定的 代码规范 ，导致沟通和维护困难
-```
 
-## 如何保证代码质量
-```text
-1、架构师搭建、设置 合理优秀的基础框架。
-2、要求 开发者 单元测试、代码自测。bug率跟绩效挂钩。
 
-3、代码 评审、复查、 review 
-代码提交后，由其他人 一般是水平更高的人来评审代码，
-评审点可以放在 代码是否符合约定的代码规范、 设计思路和逻辑、性能 ，
-必要时要进行重构，实行老人带动新人成长 
-一般而言， 采用 以小组为单位，组长责任制的代码复查形式。
-小组长不要分配太多的开发任务，而是以指导设计、评审代码为主。
 
-4、定期开总结大会，做分享，团队成员能力共同提高 
-```
 
-# 技术选型 (完成)
+# 提问 （持续更新）
+
+## 如何技术选型  
 ```text
 首先要确保一点：技术选型是稳定压倒一切、先验证后使用。
 不稳定的技术或框架，在后期会带来很多的麻烦，
@@ -1217,16 +1201,35 @@ public class TestShow {
 ```
 
 
-# 提问
+## 导致 代码质量问题 的原因
+```text
+1、新手 ，经验和能力不足
+2、人员的调动和更换，导致对业务的理解有偏差
+3、没有一个约定的 代码规范 ，导致沟通和维护困难
+```
+
+## 如何保证代码质量
+```text
+1、架构师搭建、设置 合理优秀的基础框架。
+2、要求 开发者 单元测试、代码自测。bug率跟绩效挂钩。
+
+3、代码 评审、复查、 review 
+代码提交后，由其他人 一般是水平更高的人来评审代码，
+评审点可以放在 代码是否符合约定的代码规范、 设计思路和逻辑、性能 ，
+必要时要进行重构，实行老人带动新人成长 
+一般而言， 采用 以小组为单位，组长责任制的代码复查形式。
+小组长不要分配太多的开发任务，而是以指导设计、评审代码为主。
+
+4、定期开总结大会，做分享，团队成员能力共同提高 
+```
+
+
 ## 如何 提高 线上代码 质量
 ```text
 1、上线前先做好本地测试，加入 bugly等获取异常信息，以便排查修复
 2、支持热更新 ，无感知修复小bug
 3、全局异常捕捉，防止APP崩溃。
 ```
-
-
-
 
  
 ## 如何自定义 Lint
