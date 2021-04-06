@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/android基础/APP优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/APP优化.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,13 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="1175" column="5" selection-start-line="1175" selection-start-column="5" selection-end-line="1175" selection-end-column="5" />
-              <folding>
-                <element signature="e#3255#3263#0" />
-                <element signature="e#5390#5413#0" />
-                <element signature="e#4437#5543#0" />
-              </folding>
+            <state relative-caret-position="-112">
+              <caret line="308" selection-start-line="308" selection-end-line="308" />
             </state>
           </provider>
         </entry>
@@ -36,10 +32,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>擦除</find>
-      <find>观察者</find>
-      <find>viewModel</find>
-      <find>Navigation</find>
       <find>内存泄漏</find>
       <find>touch</find>
       <find>tcp</find>
@@ -66,6 +58,10 @@
       <find>json</find>
       <find>布局优化</find>
       <find>内存优化</find>
+      <find>TraceView</find>
+      <find>Multidex</find>
+      <find>异步启动器</find>
+      <find>IdleHandler</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -137,10 +133,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="590" />
-    <option name="y" value="202" />
-    <option name="width" value="2070" />
-    <option name="height" value="1038" />
+    <option name="x" value="400" />
+    <option name="y" value="212" />
+    <option name="width" value="1022" />
+    <option name="height" value="710" />
   </component>
   <component name="ProjectId" id="1jaZAoFfnKmD8tOMBrh82tjwXBP" />
   <component name="ProjectLevelVcsManager">
@@ -151,6 +147,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,7 +160,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -225,8 +221,8 @@
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.17684887" weight="0.16207455" />
-      <window_info active="true" id="Structure" order="3" sideWeight="0.7009646" side_tool="true" visible="true" weight="0.29335493" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.17684887" visible="true" weight="0.16450568" />
+      <window_info id="Structure" order="3" sideWeight="0.7009646" side_tool="true" weight="0.22447325" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.29903537" weight="0.32901135" />
@@ -251,27 +247,28 @@
     <layout-to-restore>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.18623482" />
-      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.17684887" weight="0.16207455" />
+      <window_info active="true" id="Structure" order="3" sideWeight="0.7009646" side_tool="true" visible="true" weight="0.22447325" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Resources Explorer" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Resources Explorer" order="6" sideWeight="0.29903537" weight="0.32901135" />
+      <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="GenProtobuf" order="0" />
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.45980707" />
-      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.43729904" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329582" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.8778135" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.41157556" />
       <window_info anchor="bottom" id="Statistic" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.329582" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Flutter Inspector" order="2" />
       <window_info anchor="right" id="Flutter Outline" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="ASMPlugin" order="5" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -591,13 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="1175" column="5" selection-start-line="1175" selection-start-column="5" selection-end-line="1175" selection-end-column="5" />
-          <folding>
-            <element signature="e#3255#3263#0" />
-            <element signature="e#5390#5413#0" />
-            <element signature="e#4437#5543#0" />
-          </folding>
+        <state relative-caret-position="-112">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
         </state>
       </provider>
     </entry>

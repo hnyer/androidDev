@@ -26,7 +26,6 @@ Systrace 的原理是在系统的一些关键链路插入一些信息(称之为L
 因此，在可能的情况下，尽可能使用高版本的Android系统来进行分析；
 然后对待分析的App也有一个限制——需要是debuggable的。
 
-
 // 打开 Systrace 
 由于Androidstudio 不方便找到或者找不到 Systrace的入口，
 所以建议 去 F:\sdk2\tools\monitor.bat  双击打开
@@ -166,28 +165,91 @@ fpsviewer 就是基于 Choreographer 开发的。
 ```
 
 
-# 启动优化 （未完成）
-## 启动类型
-### 冷启动 
+# 启动优化 （完成）
+启动速度是用户对我们App的第一体验，如果启动速度过慢，用户第一印象就会很差。
+
+## 启动卡顿常见现象
+```text
+1、点击图标很久都不响应
+这是因为预览窗口被禁用或设置为透明。
+
+2、首页显示太慢
+因为初始化任务太多。
+
+3、首页显示后无法进行操作
+太多延迟初始化任务占用主线程CPU时间片。
+```
+
+## 查看 APP 启动耗时
+```text
+1、在Android Studio Logcat中过滤关键字“ Displayed ” (线下使用，时间精确)
+会打印出对应的 activity 启动耗时时间 。
+
+2、用 adb 查看  (时间不是特别精确)
+// adb shell am start -W 包名/Activity全路径
+adb shell am start -W com.aivin.myapp/com.test.activity.MainActivity
+会打印出以下三个参数
+ThisTime: 1138 // 最后一个Activity启动耗时
+TotalTime: 1138  // 所有耗时，包括创建进程 + Application初始化 + Activity初始化到界面显示的过程。
+WaitTime: 1153 // AMS 启动Activity的总耗时, 即系统启动应用耗时。
+
+3、 代码打点/函数插桩 （可控部分插入时间统计代码） 
+这里严格说来并不是APP的启动耗时，而是只能统计到核心部分的耗时操作。
+
+3、AOP 切面编程 打点
+AOP(Aspect Oriented Programming) ，
+Android 端有 第三方工具 AspectJX 。
+在android中配置aspectj比较麻烦，
+可以直接参考这个 
+https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
+```
+
+## 启动速度分析工具 — TraceView
+```text
+1、使用方法1
+代码中添加：Debug.startMethodTracing()、检测方法、Debug.stopMethodTracing()。
+运行过一段时间后，将生成的 .trace 导出到电脑，
+然后用 Android Studio的 Profiler 进行加载后进行分析。
+load from file...
+
+2、或者直接将手机连接上电脑，直接调试，用 Android Studio的 Profiler 进行实时查看。
+打开 Profiler  ->  CPU   ->    点击 Record   ->  点击 Stop  ->  
+查看Profiler下方Top Down/Bottom Up 区域，以找出耗时的热点方法。
+```
+
+2017华语辩论老友赛  完整辩词
+
+## 冷启动
 ```text
 冷启动就是从0开始启动 App 。
 从点击应用图标到UI界面完全显示且用户可操作的全部过程。
 
-// 冷启动优化
+用户进行了一个点击操作，这个点击事件它会触发一个 IPC 的操作，
+之后便会执行到 Process 的 start 方法中，这个方法是用于进程创建的，
+接着便会执行到 ActivityThread 的 main 方法，这个方法可以看做是我们单个App进程的入口，
+相当于Java进程的main方法，在其中会执行消息循环的创建与主线程 Handler 的创建，
+创建完成之后，就会执行到 bindApplication 方法，在这里使用了反射去创建 Application 
+以及调用了 Application相关的生命周期，Application结束之后，
+便会执行Activity的生命周期，在Activity生命周期结束之后，
+最后，就会执行到 ViewRootImpl，这时才会进行真正的一个页面的绘制。
+
+// 冷启动涉及的相关任务
+ ->  启动App  ->  加载空白Window  -> 创建进程
+ ->  创建Application ->  启动主线程  ->  创建 MainActivity
+ ->  加载布局 ->  布置屏幕  -> 首帧绘制
+通常到了界面首帧绘制完成后，我们就可以认为启动已经结束了。
+```
+
+### 冷启动优化
+```text
+优化方向主要就是 Application 和 Activity 的生命周期 这个阶段。
 1、Application中对 第三方的SDK进行异步或延时初始化 。
 2、做一个闪屏界面。在展示的这段时间里，去加载下一页需要的资源。
 ```
 
 
-### 温启动
-```text
-当启动应用时，后台已有该应用的进程，
-在已有进程的情况下，会从已有的进程中来启动应用 。
-只会重走 Activity 的生命周期，而不会重走进程的创建，不走 Application 的创建与生命周期等。
-```
 
-
-### 热启动
+## 热启动优化
 ```text
 直接从后台切换到前台。
 
@@ -195,10 +257,55 @@ fpsviewer 就是基于 Choreographer 开发的。
 在app 退出时 不要finish ，而是 moveTaskToBack ，即模拟 HOME按键的事件 。
 ```
  
- 
+## 温启动优化
+```text
+当启动应用时，后台已有该应用的进程，
+在已有进程的情况下，会从已有的进程中来启动应用 。
+只会重走 Activity 的生命周期，而不会重走进程的创建，
+也不走 Application 的创建与生命周期等。
+```
 
- 
- 
+## 启动优化 方案总结
+```text
+闪屏页优化
+消除启动时的白屏/黑屏，市面上大部分App都采用了这种方法，非常简单，
+但是这只是一个障眼法，并不会缩短实际冷启动时间。
+
+1、懒加载第三方库
+对项目中用到的库进行按需初始化，特别是针对于一些应用启动时不需要初始化的库，
+可以等到用时才进行加载，减少启动时间。
+
+2、延迟初始化
+利用 IdleHandler特性 (闲时机制)  ，在CPU空闲时执行，对延迟任务进行初始化。
+
+3、异步初始化
+核心思想是子线程分担主线程任务，并行减少时间。
+如果有依赖关系，可以使用 CountDownLatch 来控制等待最后完成。
+
+4、对 Multidex 进行预加载优化 ( 减少 ANR ，并不是减少启动速度)
+dex的install过程比较复杂，容易引起ANR的发生。
+注意：很多博客说 对 Multidex 进行优化是可以减少启动时间，其实是减少 ANR 的。 
+方法思路一般有两种，1是开子线程去加载，2 是开子进程去加载 
+https://github.com/hnyer/MultiDexTest
+
+5、类预加载优化、Activity 预加载
+省略加载类的时间，做到极致。但是大部分APP业务都做不完，没这个必要做这些。
+
+6、WebView 启动优化
+因为 WebView 第一次创建比较耗时，所以可以预先创建WebView，提前将其初始化。
+而且要使用WebView缓存池，用到WebView的地方都从缓存池取，缓存池中没有缓存再创建。
+本地预置 html 和 css ，WebView创建的时候先预加载本地html，之后通过js脚本填充内容部分。
+减少 html 和css 从网络下载的等待时间。
+
+7、页面数据预加载
+在主页空闲时，将其它页面的数据先准备好，
+等到打开该页面时，就直接从内存或数据库取数据并显示。
+尤其是针对那些需要从网络读取的内容。
+例如pc端的浏览器，有的会有一个预加载功能。
+
+9、主页的绘制优化
+针对布局和绘制进行优化，减少加载和渲染时间。
+```
  
 
 # 卡顿优化 （未完成）
