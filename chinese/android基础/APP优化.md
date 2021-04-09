@@ -1,6 +1,33 @@
-# App 优化
+# App 优化 , APM
 应用的性能优化，需要建立一套成体系的性能优化方案，
 这套方案被业界称为 APM (Application Performance Manange)。
+
+
+# 绘制优化 （完成）
+```text
+在 Android 的每个 View 都会经过 Measure 和 Layout 
+来确定当前需要绘制的View所在的大小和位置，
+然后通过 Draw 绘制到 surface 上。
+在 Android 系统中整体的绘制源码是在 ViewRootImpl.performTraversals()方法，
+通过这个方法可以看出 Measure 和 Layout 都是递归来获取View的大小和位置，
+并且以深度作为优先级。
+显然，层级越深，元素越多，耗时就越长。
+
+所以，绘制优化最终的问题会转化为 布局优化 和卡顿优化。
+```
+
+##  绘制类型
+```text
+Android 支持两种绘制方式 ，即 软件绘制（CPU）、硬件绘制（GPU）
+
+硬件加速从 Android 3.0 开始支持，它在UI显示和绘制效率方面远高于软件绘制。
+但它的局限如下：
+耗电：GPU功耗高于CPU。
+兼容性：不兼容某些接口和函数。
+内存大：使用 OpenGL 的接口需要占用较大内存。
+```
+
+
 
 # 布局优化  (完成)
 ```text
@@ -162,6 +189,85 @@ fpsviewer 就是基于 Choreographer 开发的。
 
 2、在每一个版本上线之前，我们都会对我们的核心路径进行一次Review，
 确保我们的FPS、布局加载时间、布局层级等达到一个合理的状态。
+```
+
+
+
+
+# 卡顿优化 （完成）
+```text
+卡顿的按场景可以分成：UI绘制、应用启动、页面跳转、事件响应。
+
+造成卡顿的根本原因可以分为两大类：
+1、界面绘制
+页面复杂 、绘制层级深 、刷新不合理
+
+2、数据处理
+数据处理在UI线程 、
+占用CPU高，导致主线程拿不到时间片
+内存增加导致GC频繁，从而引起卡顿
+```
+
+
+##  UI流畅度优化 、界面卡顿 排查及优化
+Skipped 60 frames!  The application may be doing too much work on its main thread.
+```text
+在大部分Android平台的设备上，Android系统是 16ms (1000 /60 = 16.67 ) 刷新一次，也就是一秒钟60帧。 
+要达到这种刷新速度就要求在ui线程中处理的任务时间必须要小于16ms，如果ui线程中处理时间长，
+就会导致跳过帧的渲染，也就是导致界面看起来不流畅，卡顿。
+```
+
+## 卡顿引起的具体原因
+```text
+1、cpu 占用过高，容易卡顿 。一般是 后台线程处理的东西太繁忙。
+注意逻辑的优化，线程不要空跑。
+
+2、主线程 绘制时间过长。
+UI的层级别太大 ，不要冗余嵌套 
+```
+
+## 卡顿检测 Choreographer
+```text
+使用 Androidstudio 自带的 工具，和一些第三方的监控工具 例如 BlockCanary 就差不多了。
+
+// FPS ( Frames Per Second )
+即 Frame Rate，单位 fps，是指 gpu 生成帧的速率 ，Android中更帧率相关的类是 SurfaceFlinger 。
+SurfaceFlinger (SurfaceFlinger.h) 是Android的一个 native进程 ，
+接受多个来源的图形显示数据，将他们合成，然后发送到显示设备。
+
+// VSync (Synchronization ) ,垂直同步 信号。
+Android系统每隔16ms发出 VSync 信号，触发对UI进行渲染，
+Android 4.1 开始引入 VSync 机制，用来同步渲染，
+让 UI 和 SurfaceFlinger 可以按硬件产生的 VSync 节奏进行工作。
+
+WkHeartBeatTool wkHeartBeatTool =  new WkHeartBeatTool();
+wkHeartBeatTool.startTheBeatAction(new HeartBeatTask() {
+    @Override
+    public void run() {
+        // 一秒钟统计一次 ，如果小于 60 ，就说明掉帧了
+        WkLogTool.showLog("fps===="+count);
+        count= 0 ;
+    }
+} ,1000);
+
+// Choreographer 编舞者 ，统计一秒内 count 的数量 ，
+Choreographer.getInstance()
+        .postFrameCallback( new Choreographer.FrameCallback() {
+            // frameTimeNanos: The time in nanoseconds when the frame started being rendered,
+            @Override
+            public void doFrame(long frameTimeNanos) {
+                count++ ;
+                Choreographer.getInstance().postFrameCallback(this);
+            }
+        });
+```
+
+
+## 排查 线上App ,用户反馈卡顿的问题
+```text
+1、记录用户的使用机型和使用场景。例如操作流程、网络环境
+2、加入卡顿检测机制，有第三方的 SDK 也可以自己写 ，
+将卡顿时的堆栈信息记录并回传，定位分析。
 ```
 
 
@@ -407,73 +513,6 @@ Dex 文件用到的类和APK里面各种资源文件都比较小，
  
 
 
-# 卡顿优化 （完成）
-##  UI流畅度优化 、界面卡顿 排查及优化
-Skipped 60 frames!  The application may be doing too much work on its main thread.
-```text
-在大部分Android平台的设备上，Android系统是 16ms (1000 /60 = 16.67 ) 刷新一次，也就是一秒钟60帧。 
-要达到这种刷新速度就要求在ui线程中处理的任务时间必须要小于16ms，如果ui线程中处理时间长，
-就会导致跳过帧的渲染，也就是导致界面看起来不流畅，卡顿。
-```
-
-## 卡顿引起的具体原因
-```text
-1、cpu 占用过高，容易卡顿 。一般是 后台线程处理的东西太繁忙。
-注意逻辑的优化，线程不要空跑。
-
-2、主线程 绘制时间过长。
-UI的层级别太大 ，不要冗余嵌套 
-```
-
-## 卡顿检测 Choreographer
-```text
-使用 Androidstudio 自带的 工具，和一些第三方的监控工具 例如 BlockCanary 就差不多了。
-
-// FPS ( Frames Per Second )
-即 Frame Rate，单位 fps，是指 gpu 生成帧的速率 ，Android中更帧率相关的类是 SurfaceFlinger 。
-SurfaceFlinger (SurfaceFlinger.h) 是Android的一个 native进程 ，
-接受多个来源的图形显示数据，将他们合成，然后发送到显示设备。
-
-// VSync (Synchronization ) ,垂直同步 信号。
-Android系统每隔16ms发出 VSync 信号，触发对UI进行渲染，
-Android 4.1 开始引入 VSync 机制，用来同步渲染，
-让 UI 和 SurfaceFlinger 可以按硬件产生的 VSync 节奏进行工作。
-
-WkHeartBeatTool wkHeartBeatTool =  new WkHeartBeatTool();
-wkHeartBeatTool.startTheBeatAction(new HeartBeatTask() {
-    @Override
-    public void run() {
-        // 一秒钟统计一次 ，如果小于 60 ，就说明掉帧了
-        WkLogTool.showLog("fps===="+count);
-        count= 0 ;
-    }
-} ,1000);
-
-// Choreographer 编舞者 ，统计一秒内 count 的数量 ，
-Choreographer.getInstance()
-        .postFrameCallback( new Choreographer.FrameCallback() {
-            // frameTimeNanos: The time in nanoseconds when the frame started being rendered,
-            @Override
-            public void doFrame(long frameTimeNanos) {
-                count++ ;
-                Choreographer.getInstance().postFrameCallback(this);
-            }
-        });
-```
-
-
-## 排查 线上App ,用户反馈卡顿的问题
-```text
-1、记录用户的使用机型和使用场景。例如操作流程、网络环境
-2、加入卡顿检测机制，有第三方的 SDK 也可以自己写 ，
-将卡顿时的堆栈信息记录并回传，定位分析。
-```
-
-
-# 绘制优化 （未完成）
-```text
-
-```
 
 
 # IO 优化  （完成）
@@ -1555,7 +1594,7 @@ Standby ：空闲态，没有数据连接需要传输，电量消耗最少。
 
 
 
-# 稳定性 优化 ( 完成 )
+# 稳定性 优化 (完成)
 
 ## 崩溃率 、DAU
 ```text
