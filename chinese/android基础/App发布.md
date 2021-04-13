@@ -158,6 +158,158 @@ minifyEnabled true
 -keep class  com.nineoldandroids.** { *; }
 ```
 
+# Gradle 配置
+## Gradle 是什么
+```text
+Gradle 是一款强大的 构建工具 ，而不是语⾔。
+它使用了 Groovy 这个语言，创造了一种 DSL ，但它本身不是语⾔。
+```
+
+## Gradle 打包提速方案
+### Gradle 升级到 最新的版本
+```text
+将 Gradle 和 Android Gradle Plugin 的版本升至最新，
+所带来的的构建速度的提升效果是显而易见的，
+特别是当之前你所使用的版本很低的时候。
+```
+
+
+### Gradle 开启离线模式
+```text
+打开 Android Studio 的离线模式后，
+所有的编译操作都会走本地缓存 ,
+这将会极大地缩短编译时间。
+尤其是中国大陆的网络访问外网龟速的情况下。
+```
+
+
+###  增加 Androidstudio 的内存空间 、并行的处理器核心数 
+```text
+在性能好的电脑上给 AS 一个大的内存，会让 as 有更好的表现。
+maxProcessCount // cpu核心数
+```
+
+
+### 删除不必要的 Moudle 、合并部分 Module
+```text
+过多的 Moudle 会使项目中 Module 的依赖关系变得复杂，
+Gradle 在编译构建的时候会去检测各个 Module 之间的依赖关系，
+它会去梳理这些 Module 之间的依赖关系，
+以避免 Module 之间相互引用而带来的各种问题。
+除了删除不必要的 Moudle 或合并部分 Module 的方式外，
+我们也可以将稳定的底层 Module 打包成 aar，
+上传到公司的本地 Maven 仓库，通过远程方式依赖。
+```
+
+
+### 删除 项目中的无用资源
+```text
+1、如果我们不需要写单元测试代码，可以直接删除 test 目录。
+2、如果我们不需要写 UI 测试代码，也可以直接删除 androidTest 目录。
+3、此外，如果 Moudle 中只有纯代码，可以直接删除 res 目录。
+
+在 Android Studio 中提供 Remove Unused Resource 功能，
+将一些无用的图片 等资源删除，
+减少 gradle 分析时间。
+```
+
+
+### 优化第三方库的引用
+```text
+1、使用更小的库去替换现有的同类型的三方库。
+2、使用 exclude 来排除三方库中某些不需要或者是重复的依赖。
+3、使用 debugImplementation 来依赖仅在 debug 期间才会使用的库，
+如一些线下的性能检测工具。 
+```
+
+
+### resConfigs 去除多余的语言资源 
+```text
+如果你使用的库包含语言资源(例如使用的是AppCompat或 Google Play服务)， 
+则APK将包括这些库中消息的所有已翻译语言字符串，
+无论应用的其余部分是否翻译为同一语言。
+
+如果你想只保留应用正式支持的语言，则可以利用 resConfigs 属性指定这些语言。
+系统会移除未指定语言的所有资源。
+```
+
+
+
+### 使用增量编译 (新版gradle 已经开启 ，属性已经废弃)
+```text
+在 Gradle 4.10 版本之后便默认使用了增量编译 。
+```
+
+
+## Gradle 常用命令
+```text
+// gradlew -v   
+查看 gradle 版本
+
+// gradlew clean
+删除 build 文件夹 
+
+// gradlew clean build --refresh-dependencies
+强制更新最新依赖，清除构建后再构建
+
+// gradlew build
+编译 打包 (debug 和 release) 
+
+// gradlew build --info
+编译打包并打印日志
+
+// gradlew build --profile
+编译并输出性能报告，一般在构建工程根目录 build/reports/profile
+
+//  gradlew build --info --debug --stacktrace
+调试模式构建并打印堆栈日志
+
+// gradlew assembleRelease
+// gradlew aR  (简化版命令 )
+编译并打 Release 的包    
+     
+// gradlew assembleDebug
+// gradlew aD (简化版命令 )
+编译并打 Debug 包    
+
+// gradlew installDebug
+debug 模式打包并安装
+
+// gradlew installRelease
+Release 模式打包并安装
+
+// gradlew uninstallRelease
+卸载 Release 模式包
+
+// gradlew assemble
+debug 、release 模式全部渠道打包
+ 
+//  gradlew app:dependencies  > xxx.txt
+查找 app模块的依赖关系，并输出到 xxx.txt文件中。
+```
+
+
+## gradle 诊断报告工具
+### Profile report
+```text
+我们一般会使用如下命令来生成一份本地的构建分析报告：
+gradlew assembleDebug --profile
+xxx/build/reports/profile/profile-xxx.html
+可以查看各个模块、依赖、任务的执行时间。 
+```
+
+
+### Build Scan
+```text
+一个更细致的构建汇报工具，
+gradlew build --scan
+命令执行完成后，需要将一些信息上传到 https://scans.gradle.com 上，
+然后填写一个 email 地址接收最后的 scan 报告。
+```
+
+![](../pics/buildscan.png)
+
+
 # 渠道包
 ## 为什么需要打渠道包
 ```text
