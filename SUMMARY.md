@@ -70,6 +70,7 @@
 * [python部分](chinese/python/python基础.md)
     * [python基础](chinese/python/python基础.md)
     * [python爬虫](chinese/python/python爬虫.md)
+* [Groovy](chinese/gradle/Groovy.md)
 * [kotlin部分](chinese/kotlin/kotlin部分.md)
 * [flutter部分](chinese/flutter/flutter部分.md)
 * [native部分](chinese/native/ccpp.md)
