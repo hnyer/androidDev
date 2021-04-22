@@ -110,4 +110,9 @@ def static display(clos) {
 }
 ```
 
- 
+
+## 相等判断
+```text
+== 相当于 Java 的 equals，
+如果需要比较两个对象是否是同一个，需要使用 .is()。
+``` 

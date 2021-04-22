@@ -161,9 +161,394 @@ minifyEnabled true
 # Gradle 配置
 ## Gradle 是什么
 ```text
-Gradle 是一款强大的 构建工具 ，而不是语⾔。
-它使用了 Groovy 这个语言，创造了一种 DSL ，但它本身不是语⾔。
+Gradle 是一款强大的 构建工具 ，而不是语言。
+它使用了 Groovy 这个语言，创造了一种 DSL ，但它本身不是语言。
 ```
+
+
+
+## Gradle 基础命令
+```text
+// gradlew -v   
+查看 gradle 版本
+
+// gradlew clean
+删除 build 文件夹 
+
+// gradlew clean build --refresh-dependencies
+强制更新最新依赖，清除构建后再构建
+
+// gradlew build
+编译 打包 (debug 和 release) 
+
+// gradlew build --info
+编译打包并打印日志
+
+// gradlew build --profile
+编译并输出性能报告，一般在构建工程根目录 build/reports/profile
+
+//  gradlew build --info --debug --stacktrace
+调试模式构建并打印堆栈日志
+
+// gradlew assembleRelease
+// gradlew aR  (简化版命令 )
+编译并打 Release 的包    
+     
+// gradlew assembleDebug
+// gradlew aD (简化版命令 )
+编译并打 Debug 包    
+
+// gradlew installDebug
+debug 模式打包并安装
+
+// gradlew installRelease
+Release 模式打包并安装
+
+// gradlew uninstallRelease
+卸载 Release 模式包
+
+// gradlew assemble
+debug 、release 模式全部渠道打包
+ 
+//  gradlew app:dependencies  > xxx.txt
+查找 app模块的依赖关系，并输出到 xxx.txt文件中。
+
+// gradlew -q xxx
+运行xxx 插件  ，-q是quiet，不会生成gradle的日志信息。
+```
+
+## gradle - apk重命名
+```text
+android {
+ applicationVariants.all{
+        variant -> variant.outputs.all { output ->
+            def releaseTime =  new Date().format("yyyyMMdd-HHmm", TimeZone.getTimeZone("GMT+08:00")) ;
+            def outputFile = output.outputFile
+            if(outputFile != null && outputFile.name.endsWith('.apk')) {
+                def newName = "WkReader-${variant.buildType.name}-2.0.1.${releaseTime}.apk"
+                outputFileName = newName
+            }//
+        }
+    } //
+}
+```
+
+
+## gradle - 将apk拷贝到指定目录
+在项目根目录的 build.gradle 下添加
+```text
+subprojects(){
+    def releaseTasks = project.getTasksByName("assembleRelease",false)
+    def debugTasks = project.getTasksByName("assembleDebug",false)
+    copyApkFile(releaseTasks, project)
+    copyApkFile(debugTasks, project)
+}
+
+def copyApkFile(Set<Task> tasks , Project project) {
+    for (task in tasks) { // 删除上一次的 build 文件夹
+        def apkDirFile = new File(project.getProjectDir().getAbsolutePath() + "/build/outputs/apk")
+        if (apkDirFile.exists()) {
+            delete( project.getProjectDir().getAbsolutePath() + "/build/outputs/")
+        }
+        task.doLast {  // 拷贝 apk 到指定目录
+            if (apkDirFile.exists()) {
+                FileTree tree = fileTree(dir: apkDirFile.absolutePath)
+                tree.each {
+                    File myFile -> println ">>> myFile.name="+myFile.name
+                    if(myFile.name.endsWith(".apk")){
+                        copy{
+                            from myFile.absolutePath
+                            into "F:\\apks2"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+
+## gradle - 自动签名
+```text
+android {
+    def keystorePropertiesFile = rootProject.file("keystore.properties")
+    def keystoreProperties = new Properties()
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+    signingConfigs {
+        wk2017 {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+        }
+    }
+
+    defaultConfig {
+        signingConfig signingConfigs.wk2017
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.wk2017
+        }
+        debug {
+            signingConfig signingConfigs.wk2017
+        }
+    }
+}
+```
+
+
+##  gradle - 版本统一管理配置
+```text
+1、新建 配置文件 myconfig.gradle
+ext {
+    appLibversions = [
+            lib_compileSdkVersion      : 28,
+            lib_minSdkVersion      : 22 ,
+            lib_targetSdkVersion      : 28 ,
+            lib_versionCode      : 12 ,
+            lib_versionName      : "1.0.0.20210419"
+
+    ]
+    // 第三方依赖
+    my_libdependencies = [
+            lib_recyclerview: "com.simplecityapps:recyclerview-fastscroll:2.0.1"
+    ]
+
+}
+
+2、让配置生效 ，在根目录下的 build.gradle 添加
+apply from: 'myconfig.gradle'
+
+3、引用配置中的变量
+def appLibversions = rootProject.ext.appLibversions
+compileSdkVersion appLibversions.lib_compileSdkVersion
+buildToolsVersion "28.0.3"
+defaultConfig {
+    applicationId "com.wk.reader"
+    minSdkVersion appLibversions.lib_minSdkVersion
+    targetSdkVersion appLibversions.lib_targetSdkVersion
+    versionCode appLibversions.lib_versionCode
+    versionName  appLibversions.lib_versionName
+}
+```
+
+
+
+## Gradle 生命周期监控
+在 settings.gradle 中添加，
+```text
+gradle.addBuildListener(new BuildListener() {
+    void buildStarted(Gradle var1) {
+    // 这个函数没有触发，暂时不知道原因
+       println 'Gradle 开始构建'
+    }
+    void settingsEvaluated(Settings var1) {
+        println 'settings.gradle 代码执行完毕, Project 还未初始化'
+    }
+    void projectsLoaded(Gradle var1) {
+        println '项目结构加载完成 ，可访问根项目：' + var1.gradle.rootProject
+    }
+    void projectsEvaluated(Gradle var1) {
+        println '所有项目评估完成，配置阶段结束'
+    }
+    void buildFinished(BuildResult var1) {
+        println 'Gradle 构建结束 '
+    }
+})
+```
+
+
+## Gradle 耗时监控
+在 settings.gradle 中添加 
+```text
+long beginOfSetting = System.currentTimeMillis()
+def beginOfConfig
+def configHasBegin = false
+def beginOfProjectConfig = new HashMap()
+def beginOfProjectExcute
+
+gradle.projectsLoaded {
+    println '耗时信息>>> 初始化阶段 耗时：' + (System.currentTimeMillis() -beginOfSetting) + 'ms'
+}
+
+gradle.beforeProject { project ->
+    if (!configHasBegin) {
+        configHasBegin = true
+        beginOfConfig = System.currentTimeMillis()
+    }
+    beginOfProjectConfig.put(project, System.currentTimeMillis())
+}
+
+gradle.afterProject { project ->
+    def begin = beginOfProjectConfig.get(project)
+    println '耗时信息>>> 配置阶段 ' + project + '耗时：' +   (System.currentTimeMillis() - begin) + 'ms'
+}
+
+gradle.taskGraph.whenReady {
+    println '耗时信息>>> 配置阶段 总共耗时：' + (System.currentTimeMillis() -  beginOfConfig) + 'ms'
+    beginOfProjectExcute = System.currentTimeMillis()
+}
+
+gradle.taskGraph.beforeTask { task ->
+    task.doFirst {  task.ext.beginOfTask = System.currentTimeMillis()
+    }
+
+    task.doLast {
+        println '耗时信息>>> 执行阶段，' + task + '耗时：' +  (System.currentTimeMillis() - task.beginOfTask) + 'ms'
+    }
+}
+
+gradle.buildFinished {
+    println '耗时信息>>> 执行阶段，耗时：' + (System.currentTimeMillis() -  beginOfProjectExcute) + 'ms'
+}
+```
+
+
+
+## Gradle 相关API 和配置
+### getAllprojects ()
+获取所有 project 的实例。
+```text
+在根目录下的 build.gradle 添加
+def getProjects() {
+    println "getAllprojects>> Root Project Start "
+    this.getAllprojects().eachWithIndex { Project project, int index ->
+        if (index == 0) {
+            println "getAllprojects>> Root Project is $project"
+        } else {
+            println "getAllprojects>> child Project is $project"
+        }
+    }
+}
+this.getProjects()
+```
+
+
+### getSubprojects ()
+获取当前工程下所有子 project 的实例
+```text
+def getSubProjects() {
+    println " getSubProjects>> Sub Project Start "
+    this.getSubprojects().each { Project project ->
+        println "getSubProjects>> child Project is $project"
+    }
+}
+this.getSubProjects()
+```         
+
+
+### getParentProject ()
+获取当前 project 的父类
+```text
+def getParentProject(){
+    def name=this.getParent().name
+    println "getParentProject >> the parent project name is :${name}"
+}
+getParentProject()
+```
+
+
+### getRootProject ()
+获取当前的 project 实例
+```text
+def getRootPro() {
+    def rootProjectName = this.getRootProject().name
+    println "getRootProject >> root project is $rootProjectName"
+}
+this.getRootPro()
+```
+
+
+### getRootDir() 、 getBuildDir() 、getProjectDir()
+```text
+println "the root file path is:" + getRootDir().absolutePath
+println "this build file path is:" + getBuildDir().absolutePath
+println "this Project file path is:" + getProjectDir().absolutePath
+
+the root file path is:F:\sourceSpace\AivinReader
+this build file path is:F:\sourceSpace\AivinReader\app\build
+this Project file path is:F:\sourceSpace\AivinReader\app
+```
+
+
+
+
+### project 配置
+```text
+表示的是指定工程的实例，然后可以在闭包中对其进行操作。
+```
+
+
+
+
+
+### allprojects 配置
+```text
+表示用于配置当前 project 及其旗下的每一个子 project 。
+```
+
+
+
+
+
+### subprojects 配置
+```text
+统一配置当前 project 下的所有子 project 。
+```
+
+
+
+
+### gradle 文件操作
+```text
+// 获取单个文件内容
+this.getMyFile("config.gradle")
+def getMyFile(String path) {
+    try {
+        def mFile = file(path)
+        println('getfile>>'+ mFile.text);
+    } catch (GradleException e) {
+        println e.toString()
+        return null
+    }
+}
+
+// 获取多个文件内容
+this.getMyFileS("config.gradle", "build.gradle")
+def getMyFileS(String path1, String path2) {
+    try {
+        def mFiles = files(path1, path2)
+        println('getfiles>>'+ mFiles[0].text + mFiles[1].text );
+    } catch (GradleException e) {
+        println e.toString()
+        return null
+    }
+}
+```
+
+## gradle 诊断报告工具
+### Profile report
+```text
+我们一般会使用如下命令来生成一份本地的构建分析报告：
+gradlew assembleDebug --profile
+xxx/build/reports/profile/profile-xxx.html
+可以查看各个模块、依赖、任务的执行时间。 
+```
+
+### Build Scan
+```text
+一个更细致的构建汇报工具，
+gradlew build --scan
+命令执行完成后，需要将一些信息上传到 https://scans.gradle.com 上，
+然后填写一个 email 地址接收最后的 scan 报告。
+```
+
+![](../pics/buildscan.png)
+
 
 ## Gradle 打包提速方案
 ### Gradle 升级到 最新的版本
@@ -241,73 +626,28 @@ Gradle 在编译构建的时候会去检测各个 Module 之间的依赖关系�
 ```
 
 
-## Gradle 常用命令
+## Gradle plugin 
+### 插件方式1  Build script
 ```text
-// gradlew -v   
-查看 gradle 版本
+把插件写在 build.gradle 文件里，
+一般用于简单的逻辑，仅仅在该 build.gradle 文件里可见
+```
 
-// gradlew clean
-删除 build 文件夹 
+### 插件方式2  buildSrc 项目 
+```text
+仅仅对该项目中可见，适用于逻辑较为复杂，但又不须要外部可见的插件
+```
 
-// gradlew clean build --refresh-dependencies
-强制更新最新依赖，清除构建后再构建
-
-// gradlew build
-编译 打包 (debug 和 release) 
-
-// gradlew build --info
-编译打包并打印日志
-
-// gradlew build --profile
-编译并输出性能报告，一般在构建工程根目录 build/reports/profile
-
-//  gradlew build --info --debug --stacktrace
-调试模式构建并打印堆栈日志
-
-// gradlew assembleRelease
-// gradlew aR  (简化版命令 )
-编译并打 Release 的包    
-     
-// gradlew assembleDebug
-// gradlew aD (简化版命令 )
-编译并打 Debug 包    
-
-// gradlew installDebug
-debug 模式打包并安装
-
-// gradlew installRelease
-Release 模式打包并安装
-
-// gradlew uninstallRelease
-卸载 Release 模式包
-
-// gradlew assemble
-debug 、release 模式全部渠道打包
- 
-//  gradlew app:dependencies  > xxx.txt
-查找 app模块的依赖关系，并输出到 xxx.txt文件中。
+### 插件方式3  独立项目
+```text
+一个独立的 Groovy 和 Java 项目，
+能够把这个项目打包成 Jar 文件包，
+将文件包公布到托管平台上，供其它人使用。
 ```
 
 
-## gradle 诊断报告工具
-### Profile report
-```text
-我们一般会使用如下命令来生成一份本地的构建分析报告：
-gradlew assembleDebug --profile
-xxx/build/reports/profile/profile-xxx.html
-可以查看各个模块、依赖、任务的执行时间。 
-```
 
 
-### Build Scan
-```text
-一个更细致的构建汇报工具，
-gradlew build --scan
-命令执行完成后，需要将一些信息上传到 https://scans.gradle.com 上，
-然后填写一个 email 地址接收最后的 scan 报告。
-```
-
-![](../pics/buildscan.png)
 
 
 # 渠道包
@@ -354,3 +694,14 @@ onCreate() onUpgrade() 是数据库创建和升级的重要函数，在里面进
 如果不想写sql 语句，可以使用 郭霖 开源的 LitePal Android 数据库。
 封装的比较好 ，增删改查、数据库升级 事务操作都有。
 ```
+
+
+
+
+
+
+
+
+
+
+ 
