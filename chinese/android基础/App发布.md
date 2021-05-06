@@ -195,7 +195,6 @@ Gradle 是一款强大的 构建工具 ，而不是语言。
 编译并打 Release 的包    
      
 // gradlew assembleDebug
-// gradlew aD (简化版命令 )
 编译并打 Debug 包    
 
 // gradlew installDebug
@@ -625,6 +624,32 @@ Gradle 在编译构建的时候会去检测各个 Module 之间的依赖关系�
 在 Gradle 4.10 版本之后便默认使用了增量编译 。
 ```
 
+## Gradle 常用注解
+https://docs.gradle.org/current/javadoc/org/gradle/api/tasks/package-summary.html
+### @Input
+```text
+// 在代码中定义
+@Input
+public void checkString(boolean flag) {
+    this.strings = flag;
+}
+    
+// 在 build.gradle 中使用  
+// checkResources 是 task 的名字
+checkResources{
+    checkString true
+}
+```
+
+
+### @TaskAction
+```text
+Marks a method as the action to run when the task is executed.
+```
+
+
+ 
+
 
 ## Gradle plugin 
 ### 插件方式1  Build script
@@ -635,7 +660,48 @@ Gradle 在编译构建的时候会去检测各个 Module 之间的依赖关系�
 
 ### 插件方式2  buildSrc 项目 
 ```text
-仅仅对该项目中可见，适用于逻辑较为复杂，但又不须要外部可见的插件
+仅仅对该项目中可见，适用于逻辑较为复杂，但又不须要外部可见的插件。
+
+1、Module 的名字一定要是 buildsrc
+
+2、修改 module的 build.gradle文件内容为：
+apply plugin: 'groovy'
+apply plugin: 'maven'
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+repositories {
+    mavenCentral()
+}
+
+3、在main目录下新建groovy目录，在groovy目录下创建包名目录。
+Gradle插件本身用的是groovy语言，因为 groovy和Java可以互通，
+所以我们可以直接用Java来写。
+
+4、在包名目录下新建名为 xxx 的groovy文件,
+
+5、在main目录下新建resources目录，在resources目录里新建META-INF目录，
+再在META-INF里面新建gradle-plugins目录。
+
+6、gradle-plugins目录里面新建properties文件，
+如 xxx.properties,注意这个文件可以随意命名,但是后面使用这个插件的时候，
+apply plugin:'xxx'。
+
+7、properties 文件里指明Gradle插件的具体实现类：
+implementation-class=com.xxx.xxx.xxx
+
+// 使用方法
+1、在项目的根目录下的 build.gradle 下引入这个 插件 
+apply plugin:  'mytestplugin'
+
+2、在命令行输入 
+gradlew checkResources 
+// checkResources 是在代码中定义的 task 名字
+// GeekTask task = project.getTasks().create("checkResources", GeekTask.class)
+
+通过Androidstudio 创建task 自动运行的效果还未测试成功。
+稍缓。
 ```
 
 ### 插件方式3  独立项目
@@ -643,6 +709,26 @@ Gradle 在编译构建的时候会去检测各个 Module 之间的依赖关系�
 一个独立的 Groovy 和 Java 项目，
 能够把这个项目打包成 Jar 文件包，
 将文件包公布到托管平台上，供其它人使用。
+
+教程暂缓。
+```
+
+# Androidstudio 插件开发
+## 环境配置
+```text
+1、使用 IntelliJ IDEA 进行开发 
+创建 Intelli Platform Plugin 项目
+创建项目时可能找不到sdk，选择 IntelliJ IDEA 的根目录即可。
+ 
+2、如果开发的 plugin 拖放到 Androidstudio报错 
+com.intellij.diagnostic.PluginException: While loading class FirApkAction: 
+FirApkAction has been compiled by a more recent version of the Java Runtime (class file version 55.0), 
+this version of the Java Runtime only recognizes class file versions up to 52.0 
+[Plugin: com.aivin.firapkuploadplugin] [Plugin: com.aivin.firapkuploadplugin]
+
+这是由于 IntelliJ IDEA 版本过高导致的，我用的是 IntelliJ IDEA2021，结果需要 jdk11，
+但是 Androidstudio 用的是 jdk8 ，打不开 jdk11编译出来的jar包。
+最后我下载安装 ideaIC-2018.3.6.win 版本即可解决。
 ```
 
 

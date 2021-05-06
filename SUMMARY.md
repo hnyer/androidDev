@@ -61,6 +61,8 @@
     * [沉浸式](chinese/android基础/沉浸式.md)
     * [相机模块](chinese/android基础/相机模块.md)
     * [地图模块](chinese/android基础/地图模块.md)
+    * [插件化开发](chinese/android基础/插件化开发.md)
+    * [Androidstudio插件开发](chinese/android基础/Androidstudio插件开发.md)
     * [sdk开发](chinese/android基础/sdk开发.md)
     * [APP优化](chinese/android基础/APP优化.md)
     * [项目参数配置](chinese/android基础/项目参数配置.md)

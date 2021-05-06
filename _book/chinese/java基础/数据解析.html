@@ -927,7 +927,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.24" data-path="../android基础/sdk开发.html">
+        <li class="chapter " data-level="1.11.24" data-path="../android基础/插件化开发.html">
+            
+                <a href="../android基础/插件化开发.html">
+            
+                    
+                    插件化开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.25" data-path="../android基础/Androidstudio插件开发.html">
+            
+                <a href="../android基础/Androidstudio插件开发.html">
+            
+                    
+                    Androidstudio插件开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.26" data-path="../android基础/sdk开发.html">
             
                 <a href="../android基础/sdk开发.html">
             
@@ -940,7 +966,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.25" data-path="../android基础/APP优化.html">
+        <li class="chapter " data-level="1.11.27" data-path="../android基础/APP优化.html">
             
                 <a href="../android基础/APP优化.html">
             
@@ -953,7 +979,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.26" data-path="../android基础/项目参数配置.html">
+        <li class="chapter " data-level="1.11.28" data-path="../android基础/项目参数配置.html">
             
                 <a href="../android基础/项目参数配置.html">
             
@@ -966,7 +992,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.27" data-path="../android基础/App发布.html">
+        <li class="chapter " data-level="1.11.29" data-path="../android基础/App发布.html">
             
                 <a href="../android基础/App发布.html">
             
@@ -979,7 +1005,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.28" data-path="../android基础/Android外挂.html">
+        <li class="chapter " data-level="1.11.30" data-path="../android基础/Android外挂.html">
             
                 <a href="../android基础/Android外挂.html">
             
@@ -992,7 +1018,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.29" data-path="../android基础/智能家居.html">
+        <li class="chapter " data-level="1.11.31" data-path="../android基础/智能家居.html">
             
                 <a href="../android基础/智能家居.html">
             
@@ -1299,6 +1325,24 @@ String detail = JSON.toJSONString(listToStore) ; //list&#x6570;&#x7EC4;&#x8F6C;s
 JSONArray array = JSONArray.parseArray( string ); // string &#x8F6C;json&#x6570;&#x7EC4;
 List&lt;XXBean&gt; saveBeans = JSONObject.parseArray(array.toJSONString(), XXBean.class); // JSONArray &#x8F6C;List&#x5BF9;&#x8C61;
 XXBean item = JSON.parseObject(string, XXBean.class); //json&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5BF9;&#x8C61;
+
+#  fastjson &#x914D;&#x7F6E;  &#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;
+-keepattributes Singature
+-keepattributes *Annotation
+-dontwarn com.alibaba.fastjson.**
+-dontskipnonpubliclibraryclassmembers
+-dontskipnonpubliclibraryclasses
+-keep class com.alibaba.fastjson.**{*;}
+-keep class * implements java.io.Serializable { *; }
+#  fastjson &#x914D;&#x7F6E;  &#x2191;&#x2191;&#x2191;&#x2191;&#x2191;&#x2191;&#x2191;&#x2191;&#x2191;&#x2191;&#x2191;&#x2191;
+
+&#x6CE8;&#x610F;&#xFF1A;json&#x8F6C; Javabean&#xFF0C;&#x8981;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;
+implements Serializable
+
+&#x5B9E;&#x4F53;&#x7C7B;&#x751F;&#x6210;&#x63D2;&#x4EF6; GsonFormat
+&#x53EF;&#x4EE5;&#x6839;&#x636E;json&#x5B57;&#x7B26;&#x4E32; &#x5FEB;&#x901F;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;Java&#x7C7B;
+&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;
+&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B; ---&gt; &#x5728;&#x7C7B;&#x91CC;&#x9762;&#x53F3;&#x952E; ---&gt; Generate ---&gt; GsonFormat
 </code></pre>
 <h2 id="protocol-buffer"><a name="protocol-buffer" class="anchor-navigation-ex-anchor" href="#protocol-buffer"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Protocol Buffer</h2>
 <p><a href="https://developers.google.com/protocol-buffers/" target="_blank">developers protobuf </a>
@@ -1376,7 +1420,7 @@ private void test(){
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">( no Copyright&#xFF0C;enjoy youself ! ) all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">The file was updated at :
-2020-09-24 11:26:26
+2021-05-06 08:42:12
 </span></footer>
                                 
                                 </section>
@@ -1420,7 +1464,7 @@ private void test(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数据解析","level":"1.10.16","depth":2,"next":{"title":"Java8新特性","level":"1.10.17","depth":2,"path":"chinese/java基础/java8新特性.md","ref":"chinese/java基础/java8新特性.md","articles":[]},"previous":{"title":"注解详解","level":"1.10.15","depth":2,"path":"chinese/java基础/java注解.md","ref":"chinese/java基础/java注解.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","fontsettings","tbfed-pagefooter","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"( no Copyright，enjoy youself ! )","modify_label":"The file was updated at :","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/java基础/数据解析.md","mtime":"2020-09-24T03:26:26.599Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-22T00:27:24.835Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据解析","level":"1.10.16","depth":2,"next":{"title":"Java8新特性","level":"1.10.17","depth":2,"path":"chinese/java基础/java8新特性.md","ref":"chinese/java基础/java8新特性.md","articles":[]},"previous":{"title":"注解详解","level":"1.10.15","depth":2,"path":"chinese/java基础/java注解.md","ref":"chinese/java基础/java注解.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","fontsettings","tbfed-pagefooter","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"( no Copyright，enjoy youself ! )","modify_label":"The file was updated at :","modify_format":"YYYY-MM-DD HH:mm:ss"},"livereload":{},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/java基础/数据解析.md","mtime":"2021-05-06T00:42:12.268Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-06T01:21:11.918Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1455,6 +1499,10 @@ private void test(){
     
         
         <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

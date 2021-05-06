@@ -1230,6 +1230,83 @@ R8 是 Proguard 压缩与优化部分的替代品，并且它仍然使用与 Pro
 R8 与 Proguard 比较 ，
 R8 在 inline 内联容器类中更有效，并且在删除未使用的类，字段和方法上则更具侵略性。
 并且 ，R8 进行了 ProGuard 尚未提供的一些 Kotlin 的特定的优化。
+
+release {
+    // 启用代码收缩、混淆和优化。
+    minifyEnabled true
+    // 启用资源缩减
+    shrinkResources true
+    // proguard-android-optimize.txt 这是默认的配置文件，包含一些通用的混淆规则，在sdk/tools/proguard目录下
+    // proguard-rules.pro 供开发者自定义混淆规则
+    proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+}
+
+# google 推荐的混淆算法
+-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*
+# 指定执行几次优化，默认情况下，只执行一次优化。
+-optimizationpasses 5
+# 允许改变作用域的 ，例如将 public 改成 private ，如果是对外的lib，不要配置
+-allowaccessmodification
+# 不做预校验，预校验是作用在Java平台上的，Android平台上不需要这项功能
+-dontpreverify
+# 混淆时不使用大小写混合类名
+-dontusemixedcaseclassnames
+#不忽略库中的非public的类
+-dontskipnonpubliclibraryclasses
+# 输出详细信息
+-verbose
+#使指定的类不输出警告信息
+-dontwarn android.support.**
+# 保留指定的属性，不混淆
+-keepattributes *Annotation*
+# 保持指定包下的类名 不混淆
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService
+-keep class android.support.annotation.Keep
+#保持指定包下的类名以及类里面的内容
+-keep @android.support.annotation.Keep class * {*;}
+#保持指定包下的类名，不包括子包下的类名
+
+# 如果拥有某成员，保留类和类成员 ，防止被混淆
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+# 类成员 防止被移除或者被混淆
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);
+   *** get*();
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator CREATOR;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# 如果拥有某成员，保留类和类成员 ，防止被移除或者被混淆
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep <init>(...);
+}
 ```
 
 
@@ -1351,12 +1428,15 @@ access方法的影响
 所以 android官方文档建议尽量避免使用枚举。
 ```
 
-### R文件常量内联，R文件瘦身  （建议）
+### R文件常量内联，R文件瘦身  （减少体积有限，一两M就很厉害了）
 ```text
+我们可以通过内联 R Field 来进一步对代码进行瘦身，
+此外它也解决了 R Field 过多导致 MultiDex 65536 的问题。
+
 R.layout.activity_main 实际上对应的是一个 int 型的常量值，
 那么如果我们编译打包时，将所有这些对 R 类的引用直接替换成常量值，
 替换一个就会减少一个 R文件中的字段，R文件体积就会变小。
-setContentView(213196283); 效果也是一样的，那么 R.java 就存在优化的空间。
+例如 setContentView(213196283) 效果也是一样的。
 
 R.java  类里有2种数据类型，一种是 static final int 类型的，这种常量在运行时是不会修改的，
 另一种是 static final int[] 类型的，虽然它也是常量，但它是一个数组类型，
@@ -1369,6 +1449,12 @@ R文件的 Field 过多时 可能会导致 MultiDex 65536 的问题。
 
 可以使用地方的一些工具 快速实现R文件内联瘦身，例如 抖音的 ByteX
 https://github.com/bytedance/ByteX
+
+ProGuard 也会对R文件进行混淆，
+但是现在很多应用或者SDK里都有通过反射调用来获取资源，
+比如大家最常用的统计SDK友盟统计、友盟分享等，
+就要求 R 文件不能混淆掉，否则会报错，
+所以我们常用的做法是开启混淆，但 keep 住 R 文件
 ```
 
 ###  resConfigs 去除无用语言资源 （建议）
@@ -1376,6 +1462,10 @@ https://github.com/bytedance/ByteX
 例如使用了 AppCompat，如果不做任何配置的话，最终 APK 包中会包含 AppCompat 中所有已翻译语言字符串，
 无论应用的其余部分是否翻译为同一语言。
 对此，我们可以 通过 resConfig 来配置使用哪些语言，从而让构建工具移除指定语言之外的所有资源。
+
+defaultConfig {
+    resConfigs "en"
+}
 ```
 
 
