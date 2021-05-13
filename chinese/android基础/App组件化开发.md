@@ -115,19 +115,27 @@ ARouter.getInstance().build("/test/1")
 
 ## ARouter 路由原理
 ```text
-
-# 跳转原理
 ARouter 为了解耦, 在组件之间没有依赖时也可以彼此跳转。
-
 ARouter 中使用了 javapoet 注解处理器，生成额外的Java文件 ，
  将注解的key与类的路径通过一个Map关联起来了，
 要我们拿到这个Map,即可在运行时通过注解的key拿到类的路径 ，
-ARouter所做的即是在初始化时利用反射扫描指定包名下面的所有className，然后再添加map中 。
 
-ARouter的缺陷在于首次初始化时会通过反射扫描dex，同时将结果存储在SP中，会拖慢首次启动速度
-4.ARouter提供了插件实现在编译期实现路由表的自动加载，从而避免启动耗时，其原理是 ASM 字节码插桩
+#基本原理：
+Class targetClass = Class.forName("com.xxx.xxx.xxxActivity") ;
+Intent intent = new Intent(this , targetClass) ;
+startActivity(intent);
 
-# 路由表加载原理
+# ARouter代码体现
+1、加入 map中
+public void loadInto(Map<String, RouteMeta> atlas) {
+atlas.put("/lib_japaneese/JapneseShowActivity", RouteMeta.build(RouteType.ACTIVITY, JapneseShowActivity.class, "/lib_japaneese/japneseshowactivity", "lib_japaneese", null, -1, -2147483648));
+}
+
+2、从 map 中取出 class 生成 Intent ,最后启动activity
+RouteMeta routeMeta = Warehouse.routes.get(postcard.getPath());
+final Intent intent = new Intent(currentContext, postcard.getDestination());
+ActivityCompat.startActivityForResult((Activity) currentContext, intent, requestCode, postcard.getOptionsBundle());
+ActivityCompat.startActivity(currentContext, intent, postcard.getOptionsBundle());
 ```
 
 ## ARouter 组件之间通信、组件和APP主模块之间通信 ( 通过暴露服务 IProvider )

@@ -927,14 +927,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.24" >
+        <li class="chapter " data-level="1.11.24" data-path="Androidstudio插件开发.html">
             
-                <span>
+                <a href="Androidstudio插件开发.html">
             
                     
-                    [Androidstudio插件开发](chinese/android基础/Androidstudio插件开发.md
+                    Androidstudio插件开发
             
-                </span>
+                </a>
             
 
             
@@ -1428,19 +1428,27 @@ ARouter.getInstance().build(&quot;/test/1&quot;)
             .navigation();
 </code></pre>
 <h2 id="arouter-&#x8DEF;&#x7531;&#x539F;&#x7406;"><a name="arouter-&#x8DEF;&#x7531;&#x539F;&#x7406;" class="anchor-navigation-ex-anchor" href="#arouter-&#x8DEF;&#x7531;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. ARouter &#x8DEF;&#x7531;&#x539F;&#x7406;</h2>
-<pre><code class="lang-text">
-# &#x8DF3;&#x8F6C;&#x539F;&#x7406;
-ARouter &#x4E3A;&#x4E86;&#x89E3;&#x8026;, &#x5728;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x4F9D;&#x8D56;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x5F7C;&#x6B64;&#x8DF3;&#x8F6C;&#x3002;
-
+<pre><code class="lang-text">ARouter &#x4E3A;&#x4E86;&#x89E3;&#x8026;, &#x5728;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x4F9D;&#x8D56;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x5F7C;&#x6B64;&#x8DF3;&#x8F6C;&#x3002;
 ARouter &#x4E2D;&#x4F7F;&#x7528;&#x4E86; javapoet &#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x751F;&#x6210;&#x989D;&#x5916;&#x7684;Java&#x6587;&#x4EF6; &#xFF0C;
  &#x5C06;&#x6CE8;&#x89E3;&#x7684;key&#x4E0E;&#x7C7B;&#x7684;&#x8DEF;&#x5F84;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;Map&#x5173;&#x8054;&#x8D77;&#x6765;&#x4E86;&#xFF0C;
 &#x8981;&#x6211;&#x4EEC;&#x62FF;&#x5230;&#x8FD9;&#x4E2A;Map,&#x5373;&#x53EF;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x901A;&#x8FC7;&#x6CE8;&#x89E3;&#x7684;key&#x62FF;&#x5230;&#x7C7B;&#x7684;&#x8DEF;&#x5F84; &#xFF0C;
-ARouter&#x6240;&#x505A;&#x7684;&#x5373;&#x662F;&#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x5229;&#x7528;&#x53CD;&#x5C04;&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x5305;&#x540D;&#x4E0B;&#x9762;&#x7684;&#x6240;&#x6709;className&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6DFB;&#x52A0;map&#x4E2D; &#x3002;
 
-ARouter&#x7684;&#x7F3A;&#x9677;&#x5728;&#x4E8E;&#x9996;&#x6B21;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x4F1A;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x626B;&#x63CF;dex&#xFF0C;&#x540C;&#x65F6;&#x5C06;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;SP&#x4E2D;&#xFF0C;&#x4F1A;&#x62D6;&#x6162;&#x9996;&#x6B21;&#x542F;&#x52A8;&#x901F;&#x5EA6;
-4.ARouter&#x63D0;&#x4F9B;&#x4E86;&#x63D2;&#x4EF6;&#x5B9E;&#x73B0;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x5B9E;&#x73B0;&#x8DEF;&#x7531;&#x8868;&#x7684;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#xFF0C;&#x4ECE;&#x800C;&#x907F;&#x514D;&#x542F;&#x52A8;&#x8017;&#x65F6;&#xFF0C;&#x5176;&#x539F;&#x7406;&#x662F; ASM &#x5B57;&#x8282;&#x7801;&#x63D2;&#x6869;
+#&#x57FA;&#x672C;&#x539F;&#x7406;&#xFF1A;
+Class targetClass = Class.forName(&quot;com.xxx.xxx.xxxActivity&quot;) ;
+Intent intent = new Intent(this , targetClass) ;
+startActivity(intent);
 
-# &#x8DEF;&#x7531;&#x8868;&#x52A0;&#x8F7D;&#x539F;&#x7406;
+# ARouter&#x4EE3;&#x7801;&#x4F53;&#x73B0;
+1&#x3001;&#x52A0;&#x5165; map&#x4E2D;
+public void loadInto(Map&lt;String, RouteMeta&gt; atlas) {
+atlas.put(&quot;/lib_japaneese/JapneseShowActivity&quot;, RouteMeta.build(RouteType.ACTIVITY, JapneseShowActivity.class, &quot;/lib_japaneese/japneseshowactivity&quot;, &quot;lib_japaneese&quot;, null, -1, -2147483648));
+}
+
+2&#x3001;&#x4ECE; map &#x4E2D;&#x53D6;&#x51FA; class &#x751F;&#x6210; Intent ,&#x6700;&#x540E;&#x542F;&#x52A8;activity
+RouteMeta routeMeta = Warehouse.routes.get(postcard.getPath());
+final Intent intent = new Intent(currentContext, postcard.getDestination());
+ActivityCompat.startActivityForResult((Activity) currentContext, intent, requestCode, postcard.getOptionsBundle());
+ActivityCompat.startActivity(currentContext, intent, postcard.getOptionsBundle());
 </code></pre>
 <h2 id="arouter-&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x3001;&#x7EC4;&#x4EF6;&#x548C;app&#x4E3B;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;--&#x901A;&#x8FC7;&#x66B4;&#x9732;&#x670D;&#x52A1;-iprovider-"><a name="arouter-&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x3001;&#x7EC4;&#x4EF6;&#x548C;app&#x4E3B;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;--&#x901A;&#x8FC7;&#x66B4;&#x9732;&#x670D;&#x52A1;-iprovider-" class="anchor-navigation-ex-anchor" href="#arouter-&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x3001;&#x7EC4;&#x4EF6;&#x548C;app&#x4E3B;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;--&#x901A;&#x8FC7;&#x66B4;&#x9732;&#x670D;&#x52A1;-iprovider-"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. ARouter &#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x3001;&#x7EC4;&#x4EF6;&#x548C;APP&#x4E3B;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x901A;&#x4FE1; ( &#x901A;&#x8FC7;&#x66B4;&#x9732;&#x670D;&#x52A1; IProvider )</h2>
 <pre><code class="lang-text">// &#x5B9A;&#x4E49;&#x670D;&#x52A1;
@@ -1552,7 +1560,7 @@ ARouter.getInstance().build(RouteUtils.EnglishListActivity).navigation( context 
 PathReplaceService
 </code></pre>
 <footer class="page-footer"><span class="copyright">( no Copyright&#xFF0C;enjoy youself ! ) all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">The file was updated at :
-2021-05-13 08:29:23
+2021-05-13 14:34:52
 </span></footer>
                                 
                                 </section>
@@ -1596,7 +1604,7 @@ PathReplaceService
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"App组件化开发","level":"1.11.26","depth":2,"next":{"title":"sdk开发","level":"1.11.27","depth":2,"path":"chinese/android基础/sdk开发.md","ref":"chinese/android基础/sdk开发.md","articles":[]},"previous":{"title":"Apk插件化开发","level":"1.11.25","depth":2,"path":"chinese/android基础/Apk插件化开发.md","ref":"chinese/android基础/Apk插件化开发.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","fontsettings","tbfed-pagefooter","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"( no Copyright，enjoy youself ! )","modify_label":"The file was updated at :","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/android基础/App组件化开发.md","mtime":"2021-05-13T00:29:23.953Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-13T00:29:50.031Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"App组件化开发","level":"1.11.26","depth":2,"next":{"title":"sdk开发","level":"1.11.27","depth":2,"path":"chinese/android基础/sdk开发.md","ref":"chinese/android基础/sdk开发.md","articles":[]},"previous":{"title":"Apk插件化开发","level":"1.11.25","depth":2,"path":"chinese/android基础/Apk插件化开发.md","ref":"chinese/android基础/Apk插件化开发.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","fontsettings","tbfed-pagefooter","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"( no Copyright，enjoy youself ! )","modify_label":"The file was updated at :","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/android基础/App组件化开发.md","mtime":"2021-05-13T06:34:52.847Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-13T06:36:18.687Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
