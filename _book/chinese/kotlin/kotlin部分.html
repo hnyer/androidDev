@@ -1,0 +1,1894 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>kotlin部分 · Aivin开发笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Aivin">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../flutter/flutter部分.html" />
+    
+    
+    <link rel="prev" href="../gradle/Groovy.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <a target="_blank" href="https://support.qq.com/products/312736">
+            
+                    
+                    留言反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../doc/常用网站.html">
+            
+                <a href="../doc/常用网站.html">
+            
+                    
+                    常用网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../常用软件/常用软件和框架.html">
+            
+                <a href="../常用软件/常用软件和框架.html">
+            
+                    
+                    常用软件和框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../doc/开发规范.html">
+            
+                <a href="../doc/开发规范.html">
+            
+                    
+                    开发规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../源码阅读/源码阅读配置.html">
+            
+                <a href="../源码阅读/源码阅读配置.html">
+            
+                    
+                    源码阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../产品经理/常用概念.html">
+            
+                <a href="../产品经理/常用概念.html">
+            
+                    
+                    产品经理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../设计模式/设计模式.html">
+            
+                <a href="../设计模式/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../设计模式/设计模式.html">
+            
+                <a href="../设计模式/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../设计模式/模式详解.html">
+            
+                <a href="../设计模式/模式详解.html">
+            
+                    
+                    模式详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../设计模式/mvc等.html">
+            
+                <a href="../设计模式/mvc等.html">
+            
+                    
+                    mvc等
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../数据结构/常用数据结构.html">
+            
+                <a href="../数据结构/常用数据结构.html">
+            
+                    
+                    基本算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../数据结构/常用数据结构.html">
+            
+                <a href="../数据结构/常用数据结构.html">
+            
+                    
+                    常用数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../常用算法/算法术语.html">
+            
+                <a href="../常用算法/算法术语.html">
+            
+                    
+                    算法术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../常用算法/排序算法.html">
+            
+                <a href="../常用算法/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../常用算法/查找算法.html">
+            
+                <a href="../常用算法/查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../常用算法/大数相加.html">
+            
+                <a href="../常用算法/大数相加.html">
+            
+                    
+                    大数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../常用算法/集合的所有子集.html">
+            
+                <a href="../常用算法/集合的所有子集.html">
+            
+                    
+                    获得集合的所有子集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../常用算法/扫描线种子填充算法.html">
+            
+                <a href="../常用算法/扫描线种子填充算法.html">
+            
+                    
+                    扫描线种子填充算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../java基础/原码补码反码.html">
+            
+                <a href="../java基础/原码补码反码.html">
+            
+                    
+                    Java部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../java基础/原码补码反码.html">
+            
+                <a href="../java基础/原码补码反码.html">
+            
+                    
+                    原码补码反码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../java基础/JVM详解.html">
+            
+                <a href="../java基础/JVM详解.html">
+            
+                    
+                    JVM详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../java基础/类加载机制.html">
+            
+                <a href="../java基础/类加载机制.html">
+            
+                    
+                    类加载机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../java基础/内存模型.html">
+            
+                <a href="../java基础/内存模型.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../java基础/GC机制.html">
+            
+                <a href="../java基础/GC机制.html">
+            
+                    
+                    GC机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../java基础/对象内存布局.html">
+            
+                <a href="../java基础/对象内存布局.html">
+            
+                    
+                    对象内存布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../java基础/继承多态.html">
+            
+                <a href="../java基础/继承多态.html">
+            
+                    
+                    继承和多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../java基础/相等判断.html">
+            
+                <a href="../java基础/相等判断.html">
+            
+                    
+                    相等判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../java基础/Java容器类.html">
+            
+                <a href="../java基础/Java容器类.html">
+            
+                    
+                    Java容器类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../java基础/Java枚举.html">
+            
+                <a href="../java基础/Java枚举.html">
+            
+                    
+                    Java枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../java基础/自定义异常.html">
+            
+                <a href="../java基础/自定义异常.html">
+            
+                    
+                    自定义异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../java基础/深度拷贝.html">
+            
+                <a href="../java基础/深度拷贝.html">
+            
+                    
+                    深度拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../java基础/泛型详解.html">
+            
+                <a href="../java基础/泛型详解.html">
+            
+                    
+                    泛型详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="../java基础/线程详解.html">
+            
+                <a href="../java基础/线程详解.html">
+            
+                    
+                    线程详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="../java基础/java注解.html">
+            
+                <a href="../java基础/java注解.html">
+            
+                    
+                    注解详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.16" data-path="../java基础/数据解析.html">
+            
+                <a href="../java基础/数据解析.html">
+            
+                    
+                    数据解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.17" data-path="../java基础/java8新特性.html">
+            
+                <a href="../java基础/java8新特性.html">
+            
+                    
+                    Java8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../android基础/android相关概念.html">
+            
+                <a href="../android基础/android相关概念.html">
+            
+                    
+                    Android部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../android基础/常用代码块.html">
+            
+                <a href="../android基础/常用代码块.html">
+            
+                    
+                    常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../android基础/android相关概念.html">
+            
+                <a href="../android基础/android相关概念.html">
+            
+                    
+                    Android相关概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../android基础/android坐标体系.html">
+            
+                <a href="../android基础/android坐标体系.html">
+            
+                    
+                    Android坐标体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../android基础/APP的启动流程.html">
+            
+                <a href="../android基础/APP的启动流程.html">
+            
+                    
+                    APP启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../android基础/View加载流程.html">
+            
+                <a href="../android基础/View加载流程.html">
+            
+                    
+                    View加载流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../android基础/事件分发机制.html">
+            
+                <a href="../android基础/事件分发机制.html">
+            
+                    
+                    事件分发机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../android基础/控件绘制流程.html">
+            
+                <a href="../android基础/控件绘制流程.html">
+            
+                    
+                    控件绘制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../android基础/进程通信.html">
+            
+                <a href="../android基础/进程通信.html">
+            
+                    
+                    进程通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../通信方式/通信方式详解.html">
+            
+                <a href="../通信方式/通信方式详解.html">
+            
+                    
+                    通信方式详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="../android基础/Binder详解.html">
+            
+                <a href="../android基础/Binder详解.html">
+            
+                    
+                    Binder详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="../android基础/Handler详解.html">
+            
+                <a href="../android基础/Handler详解.html">
+            
+                    
+                    Handle详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.12" data-path="../android基础/Fragment详解.html">
+            
+                <a href="../android基础/Fragment详解.html">
+            
+                    
+                    Fragment详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.13" data-path="../android基础/Activity详解.html">
+            
+                <a href="../android基础/Activity详解.html">
+            
+                    
+                    Activity详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.14" data-path="../android基础/BroadcastReceiver.html">
+            
+                <a href="../android基础/BroadcastReceiver.html">
+            
+                    
+                    BroadcastReceiver详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.15" data-path="../android基础/Service服务.html">
+            
+                <a href="../android基础/Service服务.html">
+            
+                    
+                    Service详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.16" data-path="../android基础/动画详解.html">
+            
+                <a href="../android基础/动画详解.html">
+            
+                    
+                    动画详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.17" data-path="../android基础/屏幕刷新机制.html">
+            
+                <a href="../android基础/屏幕刷新机制.html">
+            
+                    
+                    屏幕刷新机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.18" data-path="../android基础/屏幕适配.html">
+            
+                <a href="../android基础/屏幕适配.html">
+            
+                    
+                    屏幕适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.19" data-path="../android基础/图片加载详解.html">
+            
+                <a href="../android基础/图片加载详解.html">
+            
+                    
+                    图片加载详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.20" data-path="../android基础/WebView详解.html">
+            
+                <a href="../android基础/WebView详解.html">
+            
+                    
+                    WebView详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.21" data-path="../android基础/沉浸式.html">
+            
+                <a href="../android基础/沉浸式.html">
+            
+                    
+                    沉浸式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.22" data-path="../android基础/相机模块.html">
+            
+                <a href="../android基础/相机模块.html">
+            
+                    
+                    相机模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.23" data-path="../android基础/地图模块.html">
+            
+                <a href="../android基础/地图模块.html">
+            
+                    
+                    地图模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.24" >
+            
+                <span>
+            
+                    
+                    [Androidstudio插件开发](chinese/android基础/Androidstudio插件开发.md
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.25" data-path="../android基础/Apk插件化开发.html">
+            
+                <a href="../android基础/Apk插件化开发.html">
+            
+                    
+                    Apk插件化开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.26" data-path="../android基础/App组件化开发.html">
+            
+                <a href="../android基础/App组件化开发.html">
+            
+                    
+                    App组件化开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.27" data-path="../android基础/sdk开发.html">
+            
+                <a href="../android基础/sdk开发.html">
+            
+                    
+                    sdk开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.28" data-path="../android基础/APP优化.html">
+            
+                <a href="../android基础/APP优化.html">
+            
+                    
+                    APP优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.29" data-path="../android基础/项目参数配置.html">
+            
+                <a href="../android基础/项目参数配置.html">
+            
+                    
+                    项目参数配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.30" data-path="../android基础/App发布.html">
+            
+                <a href="../android基础/App发布.html">
+            
+                    
+                    App发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.31" data-path="../android基础/Android外挂.html">
+            
+                <a href="../android基础/Android外挂.html">
+            
+                    
+                    Android外挂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.32" data-path="../android基础/智能家居.html">
+            
+                <a href="../android基础/智能家居.html">
+            
+                    
+                    智能家居
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../python/python基础.html">
+            
+                <a href="../python/python基础.html">
+            
+                    
+                    python部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../python/python基础.html">
+            
+                <a href="../python/python基础.html">
+            
+                    
+                    python基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../python/python爬虫.html">
+            
+                <a href="../python/python爬虫.html">
+            
+                    
+                    python爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../gradle/Groovy.html">
+            
+                <a href="../gradle/Groovy.html">
+            
+                    
+                    Groovy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="kotlin部分.html">
+            
+                <a href="kotlin部分.html">
+            
+                    
+                    kotlin部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../flutter/flutter部分.html">
+            
+                <a href="../flutter/flutter部分.html">
+            
+                    
+                    flutter部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../native/ccpp.html">
+            
+                <a href="../native/ccpp.html">
+            
+                    
+                    native部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../native/Linux.html">
+            
+                <a href="../native/Linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../native/ccpp.html">
+            
+                <a href="../native/ccpp.html">
+            
+                    
+                    cCpp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../native/NDK.html">
+            
+                <a href="../native/NDK.html">
+            
+                    
+                    NDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../native/系统编译剪裁.html">
+            
+                <a href="../native/系统编译剪裁.html">
+            
+                    
+                    系统编译剪裁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../native/音视频.html">
+            
+                <a href="../native/音视频.html">
+            
+                    
+                    音视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../native/音视频第三方库.html">
+            
+                <a href="../native/音视频第三方库.html">
+            
+                    
+                    音视频第三方库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../native/相关代码.html">
+            
+                <a href="../native/相关代码.html">
+            
+                    
+                    相关代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../server/服务器部分.html">
+            
+                <a href="../server/服务器部分.html">
+            
+                    
+                    服务器部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../webDev/web部分.html">
+            
+                <a href="../webDev/web部分.html">
+            
+                    
+                    web部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../人工智能/人工智能相关概念.html">
+            
+                <a href="../人工智能/人工智能相关概念.html">
+            
+                    
+                    人工智能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >kotlin部分</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#kotlin"><b>1. </b>kotlin</a></li><ul><li><span class="title-icon "></span><a href="#dsl&#xFF08;domain-specific-language&#xFF09;"><b>1.1. </b>DSL&#xFF08;domain specific language&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x76F8;&#x5173;-&#x5E93;&#x3001;&#x5DE5;&#x5177;"><b>1.2. </b>&#x76F8;&#x5173; &#x5E93;&#x3001;&#x5DE5;&#x5177;</a></li><li><span class="title-icon "></span><a href="#&#x8BBF;&#x95EE;&#x8303;&#x56F4;"><b>1.3. </b>&#x8BBF;&#x95EE;&#x8303;&#x56F4;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x7C7B;&#x578B;"><b>1.4. </b>&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x53D8;&#x91CF;-&#x3001;&#x5E38;&#x91CF;"><b>1.5. </b>&#x53D8;&#x91CF; &#x3001;&#x5E38;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><b>1.6. </b>&#x7C7B;&#x578B;&#x8F6C;&#x6362;</a></li><li><span class="title-icon "></span><a href="#&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;"><b>1.7. </b>&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x51FD;&#x6570;"><b>1.8. </b>&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x4E32;&#x6A21;&#x677F;"><b>1.9. </b>&#x5B57;&#x7B26;&#x4E32;&#x6A21;&#x677F;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;"><b>1.10. </b>&#x96C6;&#x5408;</a></li><li><span class="title-icon "></span><a href="#&#x7A7A;&#x6307;&#x9488;"><b>1.11. </b>&#x7A7A;&#x6307;&#x9488;</a></li><li><span class="title-icon "></span><a href="#let"><b>1.12. </b>let</a></li><li><span class="title-icon "></span><a href="#&#x6807;&#x7B7E;"><b>1.13. </b>@&#x6807;&#x7B7E;</a></li><li><span class="title-icon "></span><a href="#&#x5BF9;&#x8C61;"><b>1.14. </b>&#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#&#x7C7B;&#x521D;&#x59CB;&#x5316;"><b>1.15. </b>&#x7C7B;&#x521D;&#x59CB;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x7EE7;&#x627F;"><b>1.16. </b>&#x7EE7;&#x627F;</a></li><li><span class="title-icon "></span><a href="#&#x51FD;&#x6570;&#x91CD;&#x5199;&#x3001;&#x5C5E;&#x6027;&#x91CD;&#x5199;"><b>1.17. </b>&#x51FD;&#x6570;&#x91CD;&#x5199;&#x3001;&#x5C5E;&#x6027;&#x91CD;&#x5199;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;"><b>1.18. </b>&#x63A5;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#apply"><b>1.19. </b>apply</a></li><li><span class="title-icon "></span><a href="#with"><b>1.20. </b>with</a></li><li><span class="title-icon "></span><a href="#when"><b>1.21. </b>when</a></li><li><span class="title-icon "></span><a href="#intarrayof"><b>1.22. </b>intArrayOf</a></li><li><span class="title-icon "></span><a href="#&#x5FAA;&#x73AF;"><b>1.23. </b>&#x5FAA;&#x73AF;</a></li><li><span class="title-icon "></span><a href="#mapto"><b>1.24. </b>mapTo</a></li><li><span class="title-icon "></span><a href="#&#x4E09;&#x76EE;&#x8868;&#x8FBE;&#x5F0F;"><b>1.25. </b>&#x4E09;&#x76EE;&#x8868;&#x8FBE;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#data"><b>1.26. </b>data</a></li><li><span class="title-icon "></span><a href="#&#x53CC;&#x5192;&#x53F7;-"><b>1.27. </b>&#x53CC;&#x5192;&#x53F7; ::</a></li><li><span class="title-icon "></span><a href="#&#x539F;&#x751F;&#x5B57;&#x7B26;&#x4E32;-&#x4E09;&#x5F15;&#x53F7;"><b>1.28. </b>&#x539F;&#x751F;&#x5B57;&#x7B26;&#x4E32; &#x4E09;&#x5F15;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#&#x62D3;&#x5C55;&#x51FD;&#x6570;"><b>1.29. </b>&#x62D3;&#x5C55;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x4F34;&#x751F;&#x5BF9;&#x8C61;"><b>1.30. </b>&#x4F34;&#x751F;&#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x7C7B;"><b>1.31. </b>&#x6570;&#x636E;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#&#x5BC6;&#x5C01;&#x7C7B;"><b>1.32. </b>&#x5BC6;&#x5C01;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#&#x679A;&#x4E3E;"><b>1.33. </b>&#x679A;&#x4E3E;</a></li><li><span class="title-icon "></span><a href="#&#x6302;&#x8D77;&#x51FD;&#x6570;"><b>1.34. </b>&#x6302;&#x8D77;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x534F;&#x7A0B;--coroutine"><b>1.35. </b>&#x534F;&#x7A0B;  Coroutine</a></li><li><span class="title-icon "></span><a href="#kotlin-&#x534F;&#x7A0B;-&#x5F15;&#x5165;"><b>1.36. </b>kotlin &#x534F;&#x7A0B; &#x5F15;&#x5165;</a></li><li><span class="title-icon "></span><a href="#&#x534F;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;-coroutinescope"><b>1.37. </b>&#x534F;&#x7A0B;&#x4F5C;&#x7528;&#x57DF; CoroutineScope</a></li><li><span class="title-icon "></span><a href="#&#x534F;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;-coroutinecontext"><b>1.38. </b>&#x534F;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587; CoroutineContext</a></li><li><span class="title-icon "></span><a href="#&#x547D;&#x540D;&#x53C2;&#x6570;-&#x3001;-&#x9ED8;&#x8BA4;&#x53C2;&#x6570;"><b>1.39. </b>&#x547D;&#x540D;&#x53C2;&#x6570; &#x3001; &#x9ED8;&#x8BA4;&#x53C2;&#x6570;</a></li><li><span class="title-icon "></span><a href="#kotlin-main-&#x5165;&#x53E3;&#x51FD;&#x6570;"><b>1.40. </b>kotlin main &#x5165;&#x53E3;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#java-&#x8C03;&#x7528;-kotlin"><b>1.41. </b>java &#x8C03;&#x7528; kotlin</a></li><li><span class="title-icon "></span><a href="#kotlin-&#x8C03;&#x7528;-java"><b>1.42. </b>kotlin &#x8C03;&#x7528; java</a></li><li><span class="title-icon "></span><a href="#kotlin-&#x8C03;&#x7528;-jni"><b>1.43. </b>kotlin &#x8C03;&#x7528; jni</a></li><li><span class="title-icon "></span><a href="#init"><b>1.44. </b>init</a></li><li><span class="title-icon "></span><a href="#&#x5BF9;&#x8C61;&#x8868;&#x8FBE;&#x5F0F;"><b>1.45. </b>&#x5BF9;&#x8C61;&#x8868;&#x8FBE;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x76D1;&#x542C;&#x51FD;&#x6570;"><b>1.46. </b>&#x76D1;&#x542C;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;"><b>1.47. </b>&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;</a></li><li><span class="title-icon "></span><a href="#get-set-&#x65B9;&#x6CD5;"><b>1.48. </b>get set &#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x5EF6;&#x8FDF;&#x521D;&#x59CB;&#x5316;-&#x3001;-&#x61D2;&#x52A0;&#x8F7D;"><b>1.49. </b>&#x5EF6;&#x8FDF;&#x521D;&#x59CB;&#x5316; &#x3001; &#x61D2;&#x52A0;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#&#x59D4;&#x6258;-by"><b>1.50. </b>&#x59D4;&#x6258; by</a></li><li><span class="title-icon "></span><a href="#&#x661F;&#x53F7;-"><b>1.51. </b>&#x661F;&#x53F7; *</a></li><li><span class="title-icon "></span><a href="#&#x6CDB;&#x578B;"><b>1.52. </b>&#x6CDB;&#x578B;</a></li><li><span class="title-icon "></span><a href="#return"><b>1.53. </b>return@</a></li></ul></ul></div><a href="#kotlin" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="kotlin"><a name="kotlin" class="anchor-navigation-ex-anchor" href="#kotlin"><i class="fa fa-link" aria-hidden="true"></i></a>1. kotlin</h1>
+<p>Kotlin &#x662F; JetBrains &#x5F00;&#x53D1;&#x7684;&#x57FA;&#x4E8E; JVM &#x7684;&#x8BED;&#x8A00;&#x3002;&#x5B8C;&#x5168;&#x517C;&#x5BB9;java&#x3002;</p>
+<h2 id="dsl&#xFF08;domain-specific-language&#xFF09;"><a name="dsl&#xFF08;domain-specific-language&#xFF09;" class="anchor-navigation-ex-anchor" href="#dsl&#xFF08;domain-specific-language&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. DSL&#xFF08;domain specific language&#xFF09;</h2>
+<pre><code class="lang-text">&#x9886;&#x57DF;&#x4E13;&#x7528;&#x8BED;&#x8A00;&#xFF1A;&#x4E13;&#x95E8;&#x89E3;&#x51B3;&#x67D0;&#x4E00;&#x7279;&#x5B9A;&#x95EE;&#x9898;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#xFF0C;&#x6BD4;&#x5982; SQL &#x548C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;
+
+DSL &#x4E0E;&#x7CFB;&#x7EDF;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x8D70;&#x7684;&#x662F;&#x4E24;&#x4E2A;&#x6781;&#x7AEF;&#xFF0C;
+&#x7CFB;&#x7EDF;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x662F;&#x5E0C;&#x671B;&#x89E3;&#x51B3;&#x6240;&#x6709;&#x7684;&#x95EE;&#x9898;&#xFF0C;
+&#x6BD4;&#x5982; Java &#x8BED;&#x8A00;&#x5E0C;&#x671B;&#x80FD;&#x505A; Android &#x5F00;&#x53D1;&#xFF0C;&#x53C8;&#x5E0C;&#x671B;&#x80FD;&#x505A;&#x670D;&#x52A1;&#x5668;&#x5F00;&#x53D1;&#xFF0C;&#x5B83;&#x5177;&#x6709;&#x6A2A;&#x5411;&#x6269;&#x5C55;&#x7684;&#x7279;&#x6027;&#x3002;
+&#x800C; DSL &#x5177;&#x6709;&#x7EB5;&#x5411;&#x6DF1;&#x5165;&#x89E3;&#x51B3;&#x7279;&#x5B9A;&#x9886;&#x57DF;&#x4E13;&#x6709;&#x95EE;&#x9898;&#x7684;&#x7279;&#x6027;&#x3002;
+DSL &#x7684; &#x6838;&#x5FC3;&#x601D;&#x60F3; &#x5C31;&#x662F;&#xFF1A;&#x201C;&#x6C42;&#x4E13;&#x4E0D;&#x6C42;&#x5168;&#xFF0C;&#x89E3;&#x51B3;&#x7279;&#x5B9A;&#x9886;&#x57DF;&#x7684;&#x95EE;&#x9898;&#x201D;&#x3002;
+</code></pre>
+<h2 id="&#x76F8;&#x5173;-&#x5E93;&#x3001;&#x5DE5;&#x5177;"><a name="&#x76F8;&#x5173;-&#x5E93;&#x3001;&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#&#x76F8;&#x5173;-&#x5E93;&#x3001;&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x76F8;&#x5173; &#x5E93;&#x3001;&#x5DE5;&#x5177;</h2>
+<pre><code class="lang-text">// Anko
+&#x4EE5;&#x5F80;&#x7684;&#x5E03;&#x5C40;&#x90FD;&#x662F;&#x8981;&#x4ECE; XML &#x4E2D;&#x89E3;&#x6790;&#x51FA;&#x6765;&#x3002;
+&#x800C; Anko &#x5219;&#x662F;&#x76F4;&#x63A5;&#x521B;&#x5EFA; View&#xFF0C;&#x7528;&#x4EE3;&#x7801;&#x6784;&#x5EFA;&#x5E03;&#x5C40;&#xFF0C;&#x7701;&#x53BB;&#x4E86;&#x89E3;&#x6790; XML &#x7684;&#x65F6;&#x95F4;&#x3002;
+
+// ktor
+&#x7531; Kotlin &#x56E2;&#x961F;&#x6253;&#x9020;&#x7684; Web &#x6846;&#x67B6; &#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x7F16;&#x5199;&#x670D;&#x52A1;&#x5668;&#x3002;
+
+Kotlin Android &#x6269;&#x5C55; 
+https://www.kotlincn.net/docs/tutorials/android-plugin.html
+findViewById() &#x3002;&#x5C3D;&#x7BA1;&#x5B58;&#x5728;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5F00;&#x6E90;&#x5E93;&#x80FD;&#x591F;&#x4E3A;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5E26;&#x6765;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;
+&#x73B0;&#x5728; Kotlin &#x5B89;&#x5353;&#x6269;&#x5C55;&#x63D2;&#x4EF6;&#x80FD;&#x591F;&#x63D0;&#x4F9B;&#x4E0E;&#x8FD9;&#x4E9B;&#x5F00;&#x6E90;&#x5E93;&#x529F;&#x80FD;&#x76F8;&#x540C;&#x7684;&#x4F53;&#x9A8C;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4EFB;&#x4F55;&#x989D;&#x5916;&#x4EE3;&#x7801;&#x3002;
+apply plugin: &apos;kotlin-android-extensions&apos; //&#x6269;&#x5C55;&#x63D2;&#x4EF6;
+import kotlinx.android.synthetic.main.&#xFF1C;&#x5E03;&#x5C40;&#xFF1E;.*   //&#x5173;&#x8054;xml
+</code></pre>
+<h2 id="&#x8BBF;&#x95EE;&#x8303;&#x56F4;"><a name="&#x8BBF;&#x95EE;&#x8303;&#x56F4;" class="anchor-navigation-ex-anchor" href="#&#x8BBF;&#x95EE;&#x8303;&#x56F4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x8BBF;&#x95EE;&#x8303;&#x56F4;</h2>
+<pre><code class="lang-text">private,
+protected  //&#x5B50;&#x7C7B;&#x53EF;&#x89C1;
+internal // &#x540C;&#x4E00;&#x6A21;&#x5757;
+public
+</code></pre>
+<h2 id="&#x6570;&#x636E;&#x7C7B;&#x578B;"><a name="&#x6570;&#x636E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<pre><code class="lang-text">Byte&#x3001;Short&#x3001;Int&#x3001;Long&#x3001;Float&#x3001;Double &#x3001;Boolean &#x3001;String
+</code></pre>
+<h2 id="&#x53D8;&#x91CF;-&#x3001;&#x5E38;&#x91CF;"><a name="&#x53D8;&#x91CF;-&#x3001;&#x5E38;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x53D8;&#x91CF;-&#x3001;&#x5E38;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x53D8;&#x91CF; &#x3001;&#x5E38;&#x91CF;</h2>
+<pre><code class="lang-text">var value : Int = 10   // &#x53D8;&#x91CF;
+val name  : String =&quot;abcdedfdfa&quot;   // &#x5E38;&#x91CF;
+</code></pre>
+<h2 id="&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><a name="&#x7C7B;&#x578B;&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x7C7B;&#x578B;&#x8F6C;&#x6362;</h2>
+<pre><code class="lang-text">var info : String = &quot;100&quot;
+var info2 :Int = info.toInt()
+var info3 :String = info2.toString()
+
+&#x5C06;y&#x8F6C;&#x4E3A;String&#x7C7B;&#x578B; &#xFF0C;&#x5982;&#x679C;&#x8F6C;&#x6362;&#x5931;&#x8D25;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;null &#x3002;
+val x: String? = y as? String
+
+// &#x8F6C;&#x6362;&#x5931;&#x8D25;&#x5C31;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;
+val x: String? = y as String
+</code></pre>
+<h2 id="&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x4F4D;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<pre><code class="lang-text">shl  &#x2014;&#x2014; &#x7C7B;&#x4F3C;Java&#x7684;&lt;&lt;
+shr  &#x2014;&#x2014; &#x7C7B;&#x4F3C;Java&#x7684;&gt;&gt;
+ushr &#x2014;&#x2014; &#x7C7B;&#x4F3C;Java&#x7684;&gt;&gt;&gt;
+and  &#x2014;&#x2014; &#x7C7B;&#x4F3C;Java&#x7684;&amp;
+or   &#x2014;&#x2014; &#x7C7B;&#x4F3C;Java&#x7684;|
+xor  &#x2014;&#x2014;  &#x540C;Java&#x4E2D;&#x7684;&#x6309;&#x4F4D;&#x5F02;&#x6216; ^
+inv  &#x2014;&#x2014; Java&#x4E2D;&#x7684;&#x6309;&#x4F4D;&#x53D6;&#x53CD; -
+</code></pre>
+<h2 id="&#x51FD;&#x6570;"><a name="&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x51FD;&#x6570;</h2>
+<pre><code class="lang-text">// fun ,&#x6709;&#x53C2;&#x6570; &#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;
+fun sum(a: Int, b: Int): String {
+    return (a + b).toString()
+}
+
+// &#x65E0;&#x8FD4;&#x56DE;&#x503C;
+fun showInfo(a: Int, b: Int){
+}
+
+// vararg&#x662F;&#x5173;&#x952E;&#x5B57; &#x53EF;&#x53D8;&#x53C2;&#x6570; 
+fun vars(vararg v:Int){
+    for(vt in v){
+        //...
+    }
+}
+</code></pre>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x6A21;&#x677F;"><a name="&#x5B57;&#x7B26;&#x4E32;&#x6A21;&#x677F;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x6A21;&#x677F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. &#x5B57;&#x7B26;&#x4E32;&#x6A21;&#x677F;</h2>
+<pre><code class="lang-text">val age  :Int = 20
+var info :String =&quot;&#x5E74;&#x9F84;&#x662F;$age&quot;
+//&#x590D;&#x6742;&#x683C;&#x5F0F;
+var info2 = &quot;$info &#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x662F;${info.length}&quot;
+</code></pre>
+<h2 id="&#x96C6;&#x5408;"><a name="&#x96C6;&#x5408;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. &#x96C6;&#x5408;</h2>
+<pre><code class="lang-text">// List
+val list: List&lt;Any&gt; = listOf&lt;Any&gt;(1, &quot;2&quot;, 3)
+
+// Array 
+val faces = Array(5) {  &quot;a&quot;   } // Array&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5927;&#x5C0F;5&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x4E3A;&quot;a&quot;
+
+// Set 
+val set: Set&lt;Any&gt; = setOf&lt;Any&gt;(1, &quot;2&quot;, 3, &quot;3&quot;)
+
+// Map 
+val map: Map&lt;String, Any&gt; = mapOf(&quot;k1&quot; to &quot;v1&quot; , &quot;k2&quot; to 3)
+
+indices
+
+//collection.joinToString(xxx)
+&#x5BF9;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x7684;&#x62FC;&#x63A5;
+
+// collection.any(XXX)
+Returns `true` if at least one element matches the given [predicate].
+</code></pre>
+<h2 id="&#x7A7A;&#x6307;&#x9488;"><a name="&#x7A7A;&#x6307;&#x9488;" class="anchor-navigation-ex-anchor" href="#&#x7A7A;&#x6307;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. &#x7A7A;&#x6307;&#x9488;</h2>
+<pre><code class="lang-text">//?  &#x8868;&#x793A;&#x53EF;&#x4E3A;null
+var ageString : String ?
+//?.    &#x4E3A;&#x7A7A;&#x5C31;&#x8FD4;&#x56DE;null &#xFF0C;&#x4E0D;&#x662F;&#x7A7A; &#x5C31;&#x8FD4;&#x56DE; &#x5BF9;&#x5E94;&#x7684;&#x503C;
+ageString =student ?. name
+
+// ?:  ageString &#x4E3A;&#x7A7A;&#x5C31;&#x7528;&#x9ED8;&#x8BA4;&#x503C; &#xFF0C;&#x5426;&#x5219;&#x7528;&#x53D6;&#x5F97;&#x7684;&#x503C;
+var info :String?
+info =  ageString ?:  &quot;21&quot;
+
+// !!  &#x975E;&#x7A7A;&#x65AD;&#x8A00; ageString&#x4E0D;&#x4E3A;&#x7A7A;&#x65F6;&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x7684;&#x503C; &#xFF0C;&#x5426;&#x5219;&#x76F4;&#x63A5;&#x62A5;&#x9519; &#x3002;
+val length : Int  = ageString!!.length
+
+// &#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x7A7A;
+var flag : Boolean = ageString.isNullOrBlank()
+</code></pre>
+<h2 id="let"><a name="let" class="anchor-navigation-ex-anchor" href="#let"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. let</h2>
+<pre><code class="lang-text">&#x5E38;&#x4E0E;&#x975E;&#x7A7A;&#x5224;&#x65AD;&#x7B26;?. &#x4E00;&#x8D77;&#x4F7F;&#x7528;
+mSurfaceTexture?.let {
+    // compoundDrawables &#x4E0D;&#x4E3A;&#x7A7A;&#x5C31;&#x6267;&#x884C;...
+    // it &#x662F;&#x6307; mSurfaceTexture
+   mCamera?.setSurfaceTexture(it)  
+}
+</code></pre>
+<h2 id="&#x6807;&#x7B7E;"><a name="&#x6807;&#x7B7E;" class="anchor-navigation-ex-anchor" href="#&#x6807;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. @&#x6807;&#x7B7E;</h2>
+<pre><code class="lang-text">## return@
+return@XXlabel &#x8BED;&#x6CD5;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6B64;&#x8BED;&#x53E5;&#x4ECE;&#x51E0;&#x4E2A;&#x5D4C;&#x5957;&#x51FD;&#x6570;&#x4E2D;&#x8FD4;&#x56DE;&#x54EA;&#x4E2A;&#x51FD;&#x6570;&#x3002;
+</code></pre>
+<h2 id="&#x5BF9;&#x8C61;"><a name="&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>1.14. &#x5BF9;&#x8C61;</h2>
+<p>&#x6240;&#x6709;&#x7684;&#x7C7B;&#x90FD;&#x7EE7;&#x627F;&#x81EA; Any &#x3002;
+&#x9ED8;&#x8BA4;&#x6240;&#x6709;&#x7684;&#x7C7B;&#x90FD;&#x662F;final&#x7C7B;&#x578B; &#x3002;</p>
+<pre><code class="lang-text">// (info: String) &#x662F;&#x4E3B;&#x6784;&#x65B9;&#x6CD5;
+open  class Person  (info: String){
+   // &#x53EF;&#x4EE5;&#x88AB;&#x91CD;&#x5199;
+   open var info : String =&quot;&#x4EBA;&#x7C7B;&quot;
+   var age1 : Int = 25
+
+   // &#x6B21;&#x6784;&#x9020;&#x51FD;&#x6570;
+  constructor(info: String  ,age: Int) : this(info) {
+       this. info = info
+       this.age1 = age
+   }
+   // open &#x666E;&#x901A;&#x51FD;&#x6570;   ,&#x53EF;&#x4EE5;&#x88AB;&#x91CD;&#x65B0;
+   open fun showInfo(){
+   }
+
+   // &#x666E;&#x901A;&#x51FD;&#x6570; &#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x91CD;&#x65B0;
+   fun showInfo2(){
+   }
+}
+
+public class Student(info: String) : Person(info) {
+    override var info : String =info
+
+    // &#x6B21;&#x6784;&#x9020;&#x51FD;&#x6570;
+    constructor(info: String  ,age: Int) : this(info) {
+        this. info = info
+        this.age1 = age
+    }
+
+    // override &#x91CD;&#x5199;&#x51FD;&#x6570;
+    override fun showInfo() {
+        super.showInfo()
+    }
+
+}
+
+// &#x6D4B;&#x8BD5;
+var student1 : Student = Student(&quot;&#x65B0;&#x4EBA;&#x7C7B;&quot;  ,19)
+var student2 : Student = Student(&quot;&#x65B0;&#x4EBA;&#x7C7B;&quot;   )
+</code></pre>
+<h2 id="&#x7C7B;&#x521D;&#x59CB;&#x5316;"><a name="&#x7C7B;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>1.15. &#x7C7B;&#x521D;&#x59CB;&#x5316;</h2>
+<pre><code class="lang-text">kotlin&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5173;&#x952E;&#x5B57;init&#x7528;&#x6765;&#x5904;&#x7406;&#x7C7B;&#x7684;&#x521D;&#x59CB;&#x5316;&#x95EE;&#x9898;&#xFF0C;
+init&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;
+</code></pre>
+<h2 id="&#x7EE7;&#x627F;"><a name="&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.16. &#x7EE7;&#x627F;</h2>
+<p>Kotlin &#x4E2D;&#x6240;&#x6709;&#x7C7B;&#x90FD;&#x7EE7;&#x627F;&#x8BE5; Any&#x7C7B;&#xFF0C;Any&#x662F;&#x6240;&#x6709;&#x7C7B;&#x7684;&#x8D85;&#x7C7B;&#x3002;
+&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7C7B;&#x8981;&#x88AB;&#x7EE7;&#x627F;&#xFF0C;&#x9700;&#x8981;&#x7528;open &#x5173;&#x952E;&#x5B57;&#x8FDB;&#x884C;&#x4FEE;&#x9970;&#x3002;</p>
+<h2 id="&#x51FD;&#x6570;&#x91CD;&#x5199;&#x3001;&#x5C5E;&#x6027;&#x91CD;&#x5199;"><a name="&#x51FD;&#x6570;&#x91CD;&#x5199;&#x3001;&#x5C5E;&#x6027;&#x91CD;&#x5199;" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6570;&#x91CD;&#x5199;&#x3001;&#x5C5E;&#x6027;&#x91CD;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>1.17. &#x51FD;&#x6570;&#x91CD;&#x5199;&#x3001;&#x5C5E;&#x6027;&#x91CD;&#x5199;</h2>
+<p>&#x5728;&#x57FA;&#x7C7B;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;fun&#x58F0;&#x660E;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x80FD;&#x88AB;&#x5B50;&#x7C7B;&#x91CD;&#x5199;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x88AB;&#x5B50;&#x7C7B;&#x91CD;&#x5199;&#x3002; 
+&#x9700;&#x8981;&#x7528;open&#x4FEE;&#x9970;&#x5B83;, &#x7136;&#x540E;&#x5B50;&#x7C7B;&#x91CD;&#x5199;&#x65B9;&#x6CD5;&#x4F7F;&#x7528; override &#x8BF4;&#x660E; &#x3002;</p>
+<h2 id="&#x63A5;&#x53E3;"><a name="&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.18. &#x63A5;&#x53E3;</h2>
+<pre><code class="lang-text">interface  Language  {
+    fun chinease(msg :String )
+    fun english(msg :String )
+}
+
+// Person &#x662F;&#x7236;&#x7C7B; &#xFF0C; Language&#x662F;&#x63A5;&#x53E3;
+public class Student(info: String) : Person(info),Language{
+    override fun english(msg: String) {
+    }
+
+    override fun chinease(msg: String) {
+    }
+    ....
+}
+</code></pre>
+<h2 id="apply"><a name="apply" class="anchor-navigation-ex-anchor" href="#apply"><i class="fa fa-link" aria-hidden="true"></i></a>1.19. apply</h2>
+<pre><code class="lang-text">&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x7684;apply&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x8303;&#x56F4;&#x5185;&#xFF0C;
+&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x8C03;&#x7528;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x4EFB;&#x610F;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x5BF9;&#x8C61;&#x3002;
+</code></pre>
+<h2 id="with"><a name="with" class="anchor-navigation-ex-anchor" href="#with"><i class="fa fa-link" aria-hidden="true"></i></a>1.20. with</h2>
+<pre><code class="lang-text">&#x5C06;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x5185;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; this&#x6307;&#x4EE3;&#x8BE5;&#x5BF9;&#x8C61;&#x3002;
+&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x51FD;&#x6570;&#x7684;&#x6700;&#x540E;&#x4E00;&#x884C;&#x6216;return&#x8868;&#x8FBE;&#x5F0F;
+</code></pre>
+<h2 id="when"><a name="when" class="anchor-navigation-ex-anchor" href="#when"><i class="fa fa-link" aria-hidden="true"></i></a>1.21. when</h2>
+<pre><code class="lang-text">&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x4F3C; java &#x4E2D;&#x7684; switch .
+&#x53EF;&#x4EE5;&#x7528;when&#x66FF;&#x6362;&#x590D;&#x6742;&#x7684;if/else&#x8BED;&#x53E5; &#x3002;
+&#x5728;when&#x4E2D;&#xFF0C;else&#x540C;switch&#x7684;default&#x3002;&#x8FD9;&#x662F;&#x4F60;&#x7ED9;&#x51FA;&#x7684;&#x5F53;&#x4F60;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x6CA1;&#x6709;&#x8986;&#x76D6;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;
+</code></pre>
+<h2 id="intarrayof"><a name="intarrayof" class="anchor-navigation-ex-anchor" href="#intarrayof"><i class="fa fa-link" aria-hidden="true"></i></a>1.22. intArrayOf</h2>
+<pre><code class="lang-text">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;int&#x6570;&#x7EC4;
+</code></pre>
+<h2 id="&#x5FAA;&#x73AF;"><a name="&#x5FAA;&#x73AF;" class="anchor-navigation-ex-anchor" href="#&#x5FAA;&#x73AF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.23. &#x5FAA;&#x73AF;</h2>
+<pre><code class="lang-text">for(i in 0..9){
+    // [0,9]
+}
+
+(0 until 9){
+    // [0,9)
+}
+</code></pre>
+<h2 id="mapto"><a name="mapto" class="anchor-navigation-ex-anchor" href="#mapto"><i class="fa fa-link" aria-hidden="true"></i></a>1.24. mapTo</h2>
+<pre><code class="lang-text">// mapTo &#x4E0E;&#x5FAA;&#x73AF;&#x642D;&#x914D;&#x4F7F;&#x7528;&#x3002;&#x6B64;&#x5904;&#x7684;&#x89E3;&#x91CA;&#x662F;&#xFF1A;
+// [0 ,size)&#x4E2D;&#x5FAA;&#x73AF;&#x53D6;&#x7D22;&#x5F15;i &#xFF0C;&#x65B0;&#x5EFA;BeanB&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5C06;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x5168;&#x90E8;&#x6DFB;&#x52A0;&#x5230;&#x96C6;&#x5408; listA&#x4E2D; 
+(0 until mTitles.size)
+        .mapTo( listA) {
+                   BeanB( array1[it],  array2[it] ) 
+        }
+</code></pre>
+<h2 id="&#x4E09;&#x76EE;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x4E09;&#x76EE;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x76EE;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.25. &#x4E09;&#x76EE;&#x8868;&#x8FBE;&#x5F0F;</h2>
+<p>kotlin&#x4E0D;&#x652F;&#x6301;&#x3002; &#x8BF7;&#x76F4;&#x63A5;&#x4F7F;&#x7528; if else&#x6765;&#x4EE3;&#x66FF;</p>
+<h2 id="data"><a name="data" class="anchor-navigation-ex-anchor" href="#data"><i class="fa fa-link" aria-hidden="true"></i></a>1.26. data</h2>
+<p>data class  ,  &#x5728; Kotlin &#x4E2D;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x53BB;&#x5199;&#x4E00;&#x4E2A; JavaBean&#xFF0C;
+&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; DataClass&#xFF0C;&#x4F7F;&#x7528; DataClass &#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x9ED8;&#x9ED8;&#x5730;&#x5E2E;&#x6211;&#x4EEC;&#x751F;&#x6210;&#x4EE5;&#x4E0B;&#x51FD;&#x6570; &#x3002; </p>
+<h2 id="&#x53CC;&#x5192;&#x53F7;-"><a name="&#x53CC;&#x5192;&#x53F7;-" class="anchor-navigation-ex-anchor" href="#&#x53CC;&#x5192;&#x53F7;-"><i class="fa fa-link" aria-hidden="true"></i></a>1.27. &#x53CC;&#x5192;&#x53F7; ::</h2>
+<pre><code class="lang-text">// &#x8C03;&#x7528;d&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;getResult
+d::getResult
+</code></pre>
+<h2 id="&#x539F;&#x751F;&#x5B57;&#x7B26;&#x4E32;-&#x4E09;&#x5F15;&#x53F7;"><a name="&#x539F;&#x751F;&#x5B57;&#x7B26;&#x4E32;-&#x4E09;&#x5F15;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x751F;&#x5B57;&#x7B26;&#x4E32;-&#x4E09;&#x5F15;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>1.28. &#x539F;&#x751F;&#x5B57;&#x7B26;&#x4E32; &#x4E09;&#x5F15;&#x53F7;</h2>
+<pre><code class="lang-text">A raw string is delimited by a triple quote (&quot;&quot;&quot; xxx &quot;&quot;&quot;),
+ contains no escaping and can contain newlines and any other characters.
+val str:String= &quot;&quot;&quot; the price is$\d 199 &quot;&quot;&quot;
+</code></pre>
+<h2 id="&#x62D3;&#x5C55;&#x51FD;&#x6570;"><a name="&#x62D3;&#x5C55;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x62D3;&#x5C55;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.29. &#x62D3;&#x5C55;&#x51FD;&#x6570;</h2>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7C7B;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x67D0;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7C7B;&#x5916;&#xFF08;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x7684;&#x5730;&#x65B9;&#xFF09;&#x5199;&#x4E00;&#x4E2A;&#x62D3;&#x5C55;&#x51FD;&#x6570;&#x3002;
+&#x62D3;&#x5C55;&#x51FD;&#x6570;&#x540D;&#x53EF;&#x4EE5;&#x8DDF;&#x7C7B;&#x7684;&#x539F;&#x6709;&#x51FD;&#x6570;&#x540D;&#x5B57;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x7C7B;&#x7684;&#x539F;&#x6709;&#x51FD;&#x6570;&#x3002;
+&#x7A7A;&#x5BF9;&#x8C61;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x62D3;&#x5C55;&#x51FD;&#x6570;&#x3002; this&#x6307;&#x7684;&#x662F;&#x88AB;&#x6539;&#x9020;&#x7684;&#x90A3;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x4F8B;&#x3002;</p>
+<pre><code class="lang-text">class User(var name:String)
+
+/**&#x6269;&#x5C55;&#x51FD;&#x6570;**/
+fun User.Print(){
+    print(&quot;&#x7528;&#x6237;&#x540D; $name&quot;)
+}
+
+fun main(arg:Array&lt;String&gt;){
+    var user = User(&quot;Runoob&quot;)
+    user.Print()
+}
+</code></pre>
+<h2 id="&#x4F34;&#x751F;&#x5BF9;&#x8C61;"><a name="&#x4F34;&#x751F;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#&#x4F34;&#x751F;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>1.30. &#x4F34;&#x751F;&#x5BF9;&#x8C61;</h2>
+<p>Kotlin&#x79FB;&#x9664;&#x4E86;static&#x7684;&#x6982;&#x5FF5;&#x3002;
+&#x901A;&#x5E38;&#x7528; object &#x548C; companion object  &#x6765;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-text">&#x4F7F;&#x7528;&quot;object&quot;&#x4FEE;&#x9970;&#x9759;&#x6001;&#x7C7B;
+&#x88AB;&#x4FEE;&#x9970;&#x7684;&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7C7B;&#x540D;.&#x65B9;&#x6CD5;&#x540D;&#x7684;&#x5F62;&#x5F0F;&#x8C03;&#x7528;
+var version_name1 = Util.getName()
+object Util {
+    fun getName(): String {
+        return BuildConfig.VERSION_NAME
+    }
+}
+
+&#x4F7F;&#x7528;&quot;companion object&quot;&#x4FEE;&#x9970;&#x9759;&#x6001;&#x65B9;&#x6CD5;
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7C7B;&#x540D;.&#x65B9;&#x6CD5;&#x540D;&#x7684;&#x5F62;&#x5F0F;&#x8C03;&#x7528;
+var version_name2 = Util2.getName()
+class Util2 {
+    companion object {
+        fun getName(): String {
+            return BuildConfig.VERSION_NAME
+        }
+    }
+}
+</code></pre>
+<h2 id="&#x6570;&#x636E;&#x7C7B;"><a name="&#x6570;&#x636E;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.31. &#x6570;&#x636E;&#x7C7B;</h2>
+<p>kotlin&#x7684;&#x6570;&#x636E;&#x7C7B; &#x7C7B;&#x4F3C;java&#x4E2D;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x7684; javaBean &#xFF0C;&#x7528;&#x6765;&#x4F20;&#x9012;&#x6570;&#x636E; &#x3002;
+&#x7528;&#x5173;&#x952E;&#x5B57; data &#x7533;&#x660E;&#x3002; &#x6570;&#x636E;&#x7C7B;&#x4E0D;&#x80FD;&#x7EE7;&#x627F;&#x5176;&#x4ED6;&#x7C7B;&#xFF08;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5176;&#x4ED6;&#x63A5;&#x53E3;&#xFF09; &#x3002;
+&#x5728;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x65F6;&#xFF0C;&#x4E0E;&#x666E;&#x901A;&#x7C7B;&#x65E0;&#x5F02; &#x3002;</p>
+<h2 id="&#x5BC6;&#x5C01;&#x7C7B;"><a name="&#x5BC6;&#x5C01;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x5BC6;&#x5C01;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.32. &#x5BC6;&#x5C01;&#x7C7B;</h2>
+<p>&#x7528;&#x5173;&#x952E;&#x5B57; sealed &#x7533;&#x660E;&#x3002;
+&#x5BC6;&#x5C01;&#x7C7B;&#x5C31;&#x50CF;&#x4E00;&#x4E2A;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x679A;&#x4E3E;&#x3002;&#x5BC6;&#x5C01;&#x7C7B;&#x53EA;&#x6709;&#x56FA;&#x5B9A;&#x5B50;&#x7C7B; &#x3002;</p>
+<h2 id="&#x679A;&#x4E3E;"><a name="&#x679A;&#x4E3E;" class="anchor-navigation-ex-anchor" href="#&#x679A;&#x4E3E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.33. &#x679A;&#x4E3E;</h2>
+<pre><code class="lang-text">enum class Color{
+    RED,BLACK
+}
+
+&#x679A;&#x4E3E;&#x53EF;&#x4EE5;&#x88AB;&#x521D;&#x59CB;&#x5316;
+enum class Color(val rgb: Int) {
+    RED(0xFF0000),
+    GREEN(0x00FF00)
+}
+</code></pre>
+<h2 id="&#x6302;&#x8D77;&#x51FD;&#x6570;"><a name="&#x6302;&#x8D77;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6302;&#x8D77;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.34. &#x6302;&#x8D77;&#x51FD;&#x6570;</h2>
+<pre><code class="lang-text">&#x7528; Suspend &#x4FEE;&#x9970;
+&#x7B49;xx&#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#x624D;&#x4F1A;&#x8F93;&#x5165;&#x67D0;&#x4E2A;&#x7ED3;&#x679C;&#x3002; &#x4F46;&#x662F;&#x7EBF;&#x7A0B;&#x5E76;&#x4E0D;&#x4F1A;&#x963B;&#x585E;&#x3002;
+&#x7C7B;&#x4F3C;&#x56DE;&#x8C03;&#x7684;&#x4F7F;&#x7528;
+</code></pre>
+<h2 id="&#x534F;&#x7A0B;--coroutine"><a name="&#x534F;&#x7A0B;--coroutine" class="anchor-navigation-ex-anchor" href="#&#x534F;&#x7A0B;--coroutine"><i class="fa fa-link" aria-hidden="true"></i></a>1.35. &#x534F;&#x7A0B;  Coroutine</h2>
+<pre><code class="lang-text">&#x534F;&#x7A0B;&#x5E76;&#x4E0D;&#x662F; Kotlin &#x63D0;&#x51FA;&#x7684;&#xFF0C;&#x6982;&#x5FF5;&#x5DF2;&#x7ECF;&#x63D0;&#x51FA;&#x5F88;&#x4E45;&#x4E86;&#x3002;
+java &#x539F;&#x751F;&#x8BED;&#x6CD5;&#x6682;&#x672A;&#x652F;&#x6301; ,&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x6846;&#x67B6;&#x6765;&#x5B9E;&#x73B0;&#x3002;
+
+&#x5BF9;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6765;&#x8BF4;&#xFF0C;&#x7EBF;&#x7A0B;&#x662F;&#x6700;&#x5C0F;&#x7684;&#x6267;&#x884C;&#x5355;&#x5143;&#xFF0C;&#x8FDB;&#x7A0B;&#x662F;&#x6700;&#x5C0F;&#x7684;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5355;&#x5143;&#x3002;
+&#x534F;&#x7A0B;&#x4E0D;&#x662F;&#x88AB;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x6240;&#x7BA1;&#x7406;&#xFF0C;&#x662F;&#x5B8C;&#x5168;&#x7531;&#x7A0B;&#x5E8F;&#x6240;&#x63A7;&#x5236;&#x7684;&#x3002;
+&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E00;&#x6837;&#xFF0C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x3002;
+
+&#x5F53;&#x7CFB;&#x7EDF;&#x7EBF;&#x7A0B;&#x8F83;&#x5C11;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF0C;&#x5F53;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;&#x975E;&#x5E38;&#x591A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5374;&#x4EA7;&#x751F;&#x4E86;&#x95EE;&#x9898;&#x3002;
+&#x4E00;&#x662F;&#x7CFB;&#x7EDF;&#x7EBF;&#x7A0B;&#x4F1A;&#x5360;&#x7528;&#x975E;&#x5E38;&#x591A;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x4E8C;&#x662F;&#x8FC7;&#x591A;&#x7684;&#x7EBF;&#x7A0B;&#x5207;&#x6362;&#x4F1A;&#x5360;&#x7528;&#x5927;&#x91CF;&#x7684;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4;&#x3002;
+
+&#x534F;&#x7A0B;&#x8FD0;&#x884C;&#x5728;&#x7EBF;&#x7A0B;&#x4E4B;&#x4E0A;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4E3B;&#x52A8;&#x8BA9;&#x51FA;&#xFF0C;&#x8BA9;&#x53E6;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x8FD0;&#x884C;&#x5728;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x4E4B;&#x4E0A;&#x3002;
+&#x534F;&#x7A0B;&#x5E76;&#x6CA1;&#x6709;&#x589E;&#x52A0;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x7EBF;&#x7A0B;&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x901A;&#x8FC7; &#x5206;&#x65F6;&#x590D;&#x7528; &#x7684;&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#xFF0C;
+&#x534F;&#x7A0B;&#x7684;&#x5207;&#x6362;&#x5728;&#x7528;&#x6237;&#x6001;&#x5B8C;&#x6210;&#xFF0C;&#x5207;&#x6362;&#x7684;&#x4EE3;&#x4EF7;&#x6BD4;&#x7EBF;&#x7A0B;&#x4ECE;&#x7528;&#x6237;&#x6001;&#x5230;&#x5185;&#x6838;&#x6001;&#x7684;&#x4EE3;&#x4EF7;&#x5C0F;&#x5F88;&#x591A;&#x3002;
+
+&#x534F;&#x7A0B;&#x8DD1;&#x5728;&#x5355;&#x4E2A;&#x7EBF;&#x7A0B;&#x5185;&#xFF0C;&#x662F;&#x5355;&#x7EBF;&#x7A0B;&#x4E0B;&#x7684;&#x5E76;&#x53D1; &#x3002;&#x4E0D;&#x9002;&#x5408; CPU &#x5BC6;&#x96C6;&#x578B;&#x4EFB;&#x52A1; &#xFF0C;&#x9002;&#x5408; IO&#x5BC6;&#x96C6;&#x578B;&#x4EFB;&#x52A1;&#x3002;
+&#x6B64;&#x5916;&#xFF0C;&#x534F;&#x7A0B;&#x4EE3;&#x7801;&#x4E2D;&#x51B3;&#x4E0D;&#x80FD;&#x51FA;&#x73B0;&#x963B;&#x585E;&#xFF0C;&#x5426;&#x5219;&#x6574;&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x4F1A;&#x505C;&#x4E0B;&#x6765;&#x7B49;&#x5F85;&#x8BE5;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x3002;
+</code></pre>
+<h2 id="kotlin-&#x534F;&#x7A0B;-&#x5F15;&#x5165;"><a name="kotlin-&#x534F;&#x7A0B;-&#x5F15;&#x5165;" class="anchor-navigation-ex-anchor" href="#kotlin-&#x534F;&#x7A0B;-&#x5F15;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>1.36. kotlin &#x534F;&#x7A0B; &#x5F15;&#x5165;</h2>
+<p><a href="https://github.com/Kotlin/kotlinx.coroutines" target="_blank">https://github.com/Kotlin/kotlinx.coroutines</a></p>
+<pre><code class="lang-text">implementation &apos;org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2&apos;
+implementation &apos;org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2&apos;
+val jobWork= GlobalScope.launch( Dispatchers.Main ){    }// &#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;
+val mainWork =GlobalScope.launch(Dispatchers.IO) {   }// &#x4E3B;&#x7EBF;&#x7A0B;&#x5207;&#x6362;
+jobWork.cancel() // &#x53D6;&#x6D88;&#x534F;&#x7A0B;
+</code></pre>
+<h2 id="&#x534F;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;-coroutinescope"><a name="&#x534F;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;-coroutinescope" class="anchor-navigation-ex-anchor" href="#&#x534F;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;-coroutinescope"><i class="fa fa-link" aria-hidden="true"></i></a>1.37. &#x534F;&#x7A0B;&#x4F5C;&#x7528;&#x57DF; CoroutineScope</h2>
+<pre><code class="lang-text">&#x6682;&#x672A;&#x5B66;&#x4E60;
+</code></pre>
+<h2 id="&#x534F;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;-coroutinecontext"><a name="&#x534F;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;-coroutinecontext" class="anchor-navigation-ex-anchor" href="#&#x534F;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;-coroutinecontext"><i class="fa fa-link" aria-hidden="true"></i></a>1.38. &#x534F;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587; CoroutineContext</h2>
+<pre><code class="lang-text">&#x6682;&#x672A;&#x5B66;&#x4E60;
+</code></pre>
+<h2 id="&#x547D;&#x540D;&#x53C2;&#x6570;-&#x3001;-&#x9ED8;&#x8BA4;&#x53C2;&#x6570;"><a name="&#x547D;&#x540D;&#x53C2;&#x6570;-&#x3001;-&#x9ED8;&#x8BA4;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x547D;&#x540D;&#x53C2;&#x6570;-&#x3001;-&#x9ED8;&#x8BA4;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.39. &#x547D;&#x540D;&#x53C2;&#x6570; &#x3001; &#x9ED8;&#x8BA4;&#x53C2;&#x6570;</h2>
+<pre><code class="lang-text">&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#xFF1A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x90FD;&#x6709;&#x9ED8;&#x8BA4;&#x503C;
+fun reformat(str: String,  
+            normalizeCase: Boolean = true,
+            upperCaseFirstLetter: Boolean = true,
+            divideByCamelHumps: Boolean = false,  
+            wordSeparator: String= &quot;bbb&quot;)
+{
+  // ....
+}
+
+//&#x4E0D;&#x4F1A;&#x5F15;&#x8D77;&#x6B67;&#x4E49;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528; (&#x5168;&#x90E8;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C;)
+reformat(&quot;tom&quot;)
+//&#x6709;&#x6B67;&#x4E49;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x540D;&#x5B57;&#x3002; &#x6307;&#x5B9A;&#x547D;&#x540D;&#x3002;&#x5426;&#x5219;&#x4E0D;&#x77E5;&#x9053;&#x4F60;&#x8981;&#x5C06;&#x503C;&#x8D4B;&#x7ED9;&#x8C01;
+reformat(&quot;tom&quot; , upperCaseFirstLetter= false)
+</code></pre>
+<h2 id="kotlin-main-&#x5165;&#x53E3;&#x51FD;&#x6570;"><a name="kotlin-main-&#x5165;&#x53E3;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#kotlin-main-&#x5165;&#x53E3;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.40. kotlin main &#x5165;&#x53E3;&#x51FD;&#x6570;</h2>
+<pre><code class="lang-text">fun main(args: Array&lt;String&gt;){
+    println(&quot;hello kotlin&quot;)
+}
+</code></pre>
+<h2 id="java-&#x8C03;&#x7528;-kotlin"><a name="java-&#x8C03;&#x7528;-kotlin" class="anchor-navigation-ex-anchor" href="#java-&#x8C03;&#x7528;-kotlin"><i class="fa fa-link" aria-hidden="true"></i></a>1.41. java &#x8C03;&#x7528; kotlin</h2>
+<pre><code class="lang-text">// Companion &#x662F;&#x5173;&#x952E;&#x5B57; &#xFF0C; newInstance &#x662F;kotlin&#x4E2D;&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;
+mFragments[FIRST] = DeviceFragment.Companion.newInstance();
+</code></pre>
+<h2 id="kotlin-&#x8C03;&#x7528;-java"><a name="kotlin-&#x8C03;&#x7528;-java" class="anchor-navigation-ex-anchor" href="#kotlin-&#x8C03;&#x7528;-java"><i class="fa fa-link" aria-hidden="true"></i></a>1.42. kotlin &#x8C03;&#x7528; java</h2>
+<pre><code class="lang-text">val javaDemo =  JavaDemo() //&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;
+val msg =javaDemo.helloMsg // &#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;
+println(&quot;msg=&quot;+ msg)
+</code></pre>
+<h2 id="kotlin-&#x8C03;&#x7528;-jni"><a name="kotlin-&#x8C03;&#x7528;-jni" class="anchor-navigation-ex-anchor" href="#kotlin-&#x8C03;&#x7528;-jni"><i class="fa fa-link" aria-hidden="true"></i></a>1.43. kotlin &#x8C03;&#x7528; jni</h2>
+<p>external&#x8868;&#x793A;&#x5C06;&#x4E00;&#x4E2A;&#x58F0;&#x660E;&#x6807;&#x8BB0;&#x4E3A;&#x4E0D;&#x662F;&#x5728; Kotlin &#x4E2D;&#x5B9E;&#x73B0;.</p>
+<pre><code class="lang-text">init
+{
+    System.loadLibrary(&quot;joke-lib&quot;)
+}
+
+external fun getWXAPPID(): String
+</code></pre>
+<h2 id="init"><a name="init" class="anchor-navigation-ex-anchor" href="#init"><i class="fa fa-link" aria-hidden="true"></i></a>1.44. init</h2>
+<p>kotlin&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5173;&#x952E;&#x5B57; init &#x7528;&#x6765;&#x5904;&#x7406;&#x7C7B;&#x7684;&#x521D;&#x59CB;&#x5316;&#x95EE;&#x9898;&#xFF0C;
+init&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<h2 id="&#x5BF9;&#x8C61;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x5BF9;&#x8C61;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x8C61;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.45. &#x5BF9;&#x8C61;&#x8868;&#x8FBE;&#x5F0F;</h2>
+<p>&#x5BF9;&#x8C61;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x4EE3;&#x66FF;Java&#x4E2D;&#x7684;&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x3002;
+&#x4F7F;&#x7528;object&#x5173;&#x952E;&#x5B57;&#x6765;&#x8FDB;&#x884C;&#x7F16;&#x5199;&#x3002;&#x6BD4;&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x66F4;&#x5148;&#x8FDB;&#x3002;
+&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x63A5;&#x53E3;&#x3002;</p>
+<pre><code class="lang-text">// &#x5173;&#x952E;  object : &#x6307;&#x660E;
+tab_layout.setOnTabSelectListener( object : OnTabSelectListener {
+        //  &#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#x51FD;&#x6570;
+})
+</code></pre>
+<h2 id="&#x76D1;&#x542C;&#x51FD;&#x6570;"><a name="&#x76D1;&#x542C;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x76D1;&#x542C;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.46. &#x76D1;&#x542C;&#x51FD;&#x6570;</h2>
+<pre><code class="lang-text">private val onGestureListener = object : RecordButton.OnGestureListener {
+    override fun onUp() {   }
+}
+</code></pre>
+<h2 id="&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;"><a name="&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>1.47. &#x65B0;&#x5EFA;&#x5BF9;&#x8C61;</h2>
+<p>java&#x4E2D;&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;&#x8981;&#x7528;&#x5230;new &#x5173;&#x952E;&#x5B57;&#x3002; kotlin&#x4E2D;&#x6CA1;&#x6709;new&#x5173;&#x952E;&#x5B57;&#x3002;
+&#x76F4;&#x63A5;&#x5199;&#x7C7B;&#x540D; &#x5373;&#x53EF;&#x3002;</p>
+<h2 id="get-set-&#x65B9;&#x6CD5;"><a name="get-set-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#get-set-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.48. get set &#x65B9;&#x6CD5;</h2>
+<p>kotlin&#x4E2D;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x7528;&#x8C03;&#x7528; get&#x548C;set&#x65B9;&#x6CD5;&#x3002; </p>
+<pre><code class="lang-text">//&#x8FD9;&#x662F;FragmentActivity.java&#x4E2D;&#x7684;&#x6E90;&#x7801;
+public FragmentManager getSupportFragmentManager() {
+    return mFragments.getSupportFragmentManager();
+}
+&#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x4E00;&#x4E2A; FragmentManager &#x5B9E;&#x4F8B;&#xFF0C;
+java&#x4E2D;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x5199;  this.getSupportFragmentManager() , 
+&#x800C;kotlin&#x4E2D;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD9;&#x6837;&#x4F7F;&#x7528; this.supportFragmentManager
+&#x6CE8;&#x610F; getSupportFragmentManager &#x548C;getSupportFragmentManager &#x4E4B;&#x95F4;&#x7684;&#x7279;&#x70B9;&#x3002;&#xFF08;&#x7B26;&#x5408;set&#x548C;get&#x7684;&#x547D;&#x540D;&#x89C4;&#x8303;&#x7684;&#xFF09;
+
+//var &#x9ED8;&#x8BA4;&#x6709;get set&#x65B9;&#x6CD5;&#x3002;&#x4E0D;&#x5199;&#x5C31;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x3002;
+var heiht: Float = 145.4f
+        private set  // &#x8BF4;&#x660E;&#x8FD9;&#x4E2A;set&#x65B9;&#x6CD5;&#x662F;&#x79C1;&#x6709;&#x7684;
+
+// &#x91CD;&#x5199;&#x4E86;get&#x65B9;&#x6CD5;
+private val isViewAttached: Boolean
+    get() = mRootView != null
+</code></pre>
+<h2 id="&#x5EF6;&#x8FDF;&#x521D;&#x59CB;&#x5316;-&#x3001;-&#x61D2;&#x52A0;&#x8F7D;"><a name="&#x5EF6;&#x8FDF;&#x521D;&#x59CB;&#x5316;-&#x3001;-&#x61D2;&#x52A0;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x5EF6;&#x8FDF;&#x521D;&#x59CB;&#x5316;-&#x3001;-&#x61D2;&#x52A0;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.49. &#x5EF6;&#x8FDF;&#x521D;&#x59CB;&#x5316; &#x3001; &#x61D2;&#x52A0;&#x8F7D;</h2>
+<p> lateinit &#x548C; lazy  &#x3001;notNull</p>
+<pre><code class="lang-text">1&#x3001;lateinit &#x3001;notNull &#x53EA;&#x7528;&#x4E8E;var&#xFF0C;lazy&#x53EA;&#x7528;val
+
+2&#x3001;lateinit &#x4E0D;&#x80FD;&#x7528;&#x5728;&#x53EF;&#x7A7A;&#x7684;&#x5C5E;&#x6027;&#x4E0A;&#x548C; &#x57FA;&#x672C;&#x7C7B;&#x578B;&#x4E0A;&#x3002;
+&#x8BA9;&#x7F16;&#x8BD1;&#x671F;&#x5FFD;&#x7565;&#x5BF9;&#x5C5E;&#x6027;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x68C0;&#x67E5;&#xFF0C;&#x540E;&#x7EED;&#x5728;&#x54EA;&#x91CC;&#x4EE5;&#x53CA;&#x4F55;&#x65F6;&#x521D;&#x59CB;&#x5316;&#x8FD8;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x81EA;&#x5DF1;&#x51B3;&#x5B9A;&#x3002;
+&#xFF08;&#x8BA9;&#x7F16;&#x8BD1;&#x5668;&#x522B;BB&#xFF0C;&#x6211;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x4E00;&#x5B9A;&#x8981;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x522B;&#x8001;&#x662F;&#x63D0;&#x9192;&#x6211;&#xFF09;
+
+3&#x3001;lazy &#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x8C03;&#x7528;&#xFF0C;&#x751F;&#x6210;&#x8FC7;&#x7A0B;&#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;
+&#x591A;&#x6B21;&#x8C03;&#x7528;&#x7528;&#x5230;&#x7684;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x751F;&#x6210;&#x7684;&#x7ED3;&#x679C; &#x3002;
+
+private val linearLayoutManager by lazy {
+    LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+}
+
+4&#x3001;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4F7F;&#x7528;lateinit&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x6700;&#x4E3A;&#x4F18;&#x96C5;&#x3002;
+&#x5F53;&#x7C7B;&#x578B;&#x662F;&#x539F;&#x751F;&#x7C7B;&#x578B;&#xFF0C;&#x6216;&#x8005;&#x4E3A;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x53EA;&#x80FD;&#x53EA;&#x7528;notNull&#x59D4;&#x6258;&#x3002;
+var context: Context by Delegates.notNull()
+</code></pre>
+<h2 id="&#x59D4;&#x6258;-by"><a name="&#x59D4;&#x6258;-by" class="anchor-navigation-ex-anchor" href="#&#x59D4;&#x6258;-by"><i class="fa fa-link" aria-hidden="true"></i></a>1.50. &#x59D4;&#x6258; by</h2>
+<p>Kotlin &#x76F4;&#x63A5;&#x652F;&#x6301;&#x59D4;&#x6258;&#x6A21;&#x5F0F; &#x3002;  </p>
+<pre><code class="lang-text">&#x59D4;&#x6258;&#x5C5E;&#x6027;&#x4E5F;&#x662F;&#x4E00;&#x79CD; &#x7EA6;&#x5B9A; &#x3002;
+setValue &#x548C; getValue&#x90FD;&#x9700;&#x5E26;&#x6709; operator &#x5173;&#x952E;&#x5B57;&#x4FEE;&#x9970;&#x3002;
+operator fun getValue(thisRef: Any?, property: KProperty&lt;*&gt;): T {
+    return xx
+}
+
+operator fun setValue(thisRef: Any?, property: KProperty&lt;*&gt;, value: T) {
+    //
+}
+</code></pre>
+<h2 id="&#x661F;&#x53F7;-"><a name="&#x661F;&#x53F7;-" class="anchor-navigation-ex-anchor" href="#&#x661F;&#x53F7;-"><i class="fa fa-link" aria-hidden="true"></i></a>1.51. &#x661F;&#x53F7; *</h2>
+<pre><code class="lang-text">&#x5C06;&#x6570;&#x7EC4;&#x5C55;&#x5F00;&#x5E76;&#x4F20;&#x5165;&#x53EF;&#x53D8;&#x53C2;&#x6570;
+val arr = intArrayOf(2, 1, 3)
+sumTest( * arr) // &#x661F;&#x53F7;&#x7684;&#x610F;&#x601D;&#x662F;&#x5C06;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x503C;&#x53D6;&#x51FA;&#x6765;&#x4F5C;&#x4E3A;&#x53EF;&#x53D8;&#x53C2;&#x6570;
+
+private fun sumTest( vararg values :Int ){
+// &#x53C2;&#x6570;&#x662F;&#x53EF;&#x53D8;&#x53C2;&#x6570; 
+}
+</code></pre>
+<h2 id="&#x6CDB;&#x578B;"><a name="&#x6CDB;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6CDB;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.52. &#x6CDB;&#x578B;</h2>
+<p>&#x8DDF;java&#x7684;&#x6CDB;&#x578B;&#x5DEE;&#x4E0D;&#x591A;&#x3002;&#x53C2;&#x8003;java&#x5373;&#x53EF;&#x3002;</p>
+<h2 id="return"><a name="return" class="anchor-navigation-ex-anchor" href="#return"><i class="fa fa-link" aria-hidden="true"></i></a>1.53. return@</h2>
+<p>return@XXlabel &#x8BED;&#x6CD5;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6B64;&#x8BED;&#x53E5;&#x4ECE;&#x51E0;&#x4E2A;&#x5D4C;&#x5957;&#x51FD;&#x6570;&#x4E2D;&#x8FD4;&#x56DE;&#x54EA;&#x4E2A;&#x51FD;&#x6570;&#x3002;   </p>
+<footer class="page-footer"><span class="copyright">( no Copyright&#xFF0C;enjoy youself ! ) all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">The file was updated at :
+2021-04-13 08:59:40
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../gradle/Groovy.html" class="navigation navigation-prev " aria-label="Previous page: Groovy">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../flutter/flutter部分.html" class="navigation navigation-next " aria-label="Next page: flutter部分">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"kotlin部分","level":"1.14","depth":1,"next":{"title":"flutter部分","level":"1.15","depth":1,"path":"chinese/flutter/flutter部分.md","ref":"chinese/flutter/flutter部分.md","articles":[]},"previous":{"title":"Groovy","level":"1.13","depth":1,"path":"chinese/gradle/Groovy.md","ref":"chinese/gradle/Groovy.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","fontsettings","tbfed-pagefooter","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"( no Copyright，enjoy youself ! )","modify_label":"The file was updated at :","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/kotlin/kotlin部分.md","mtime":"2021-04-13T00:59:40.693Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-13T00:29:50.031Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
