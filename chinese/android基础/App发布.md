@@ -165,7 +165,27 @@ Gradle 是一款强大的 构建工具 ，而不是语言。
 它使用了 Groovy 这个语言，创造了一种 DSL ，但它本身不是语言。
 ```
 
+## gradle 打印日志 调试信息
+```text
+ println "hello gradle" 或 println ("hello gradle")
+然后在 Gradle 或 Build Console 中可以输出内容
+```
 
+## 输出 gradle 编译的详细信息
+```text
+gradlew compileDebug --stacktrace
+gradlew compileDebug --info
+gradlew compileDebug --debug
+gradlew compileDebug --scan
+```
+
+## gradle 编码GBK的不可映射字符
+```text
+在模块的 build.gradle 中加入:
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+```
 
 ## Gradle 基础命令
 ```text
@@ -336,8 +356,58 @@ defaultConfig {
 ```
 
 
+## Gradle 打多渠道包
+```text
+1、在 build.gradle 文件下的 android 标签下配置 
+productFlavors{ 
+// 渠道1，免费版
+    freeVersion{
+        applicationId "com.wk.freereader"
+        buildConfigField ("String", "BaseApi", '"http://baidu.com"')
+        resValue ("string", "tipTest", '"这是免费版"')
+        manifestPlaceholders = [
+                app_nameflavors: "@string/app_name_free" ,
+                app_logoflavors: "@mipmap/ic_launcher"
+        ]
+    }
+// 渠道2，专业版
+proVersion{
+    applicationId "com.wk.proreader"
+    buildConfigField ("String", "BaseApi", '"http://baidu.com"')
+    resValue ("string", "tipTest", '"这是专业版"')
+    manifestPlaceholders = [
+            app_nameflavors: "@string/app_name_pro" ,
+            app_logoflavors: "@mipmap/ic_launcher"
+    ]
+}
+} //
 
-## Gradle 生命周期监控
+2、如果报错 ERROR: All flavors must now belong to a named flavor dimension.
+在 defaultConfig 标签下配置  flavorDimensions "default" 即可。
+
+3、配置简单说明
+// 直接让不同的 apk 包名生效，
+applicationId "com.wk.freereader"
+// BuildConfig 中会生成对应的变量，在Java代码中可以调用 ，类型-变量名-变量值
+buildConfigField ("String", "BaseApi", '"http://baidu.com"')
+// 系统会生成对应的 xml 风格的变量名 ，在xml 中可以调用 
+resValue ("string", "tipTest", '"这是免费版"')
+manifestPlaceholders = [
+// 占位符 android:label="${app_nameflavors}"
+app_nameflavors: "@string/app_name_free" ,
+// 占位符  android:icon="${app_logoflavors}"
+app_logoflavors: "@mipmap/ic_launcher"
+]
+
+通过在代码中 调用 BuildConfig 中的变量，可以动态控制一些值，
+比如域名、默认配置等等。
+
+4、要想让占位符生效，需要在 main 同级目录下
+新建渠道包同名的文件夹，里面放置资源文件
+```
+
+
+## Gradle 生命周期监控 (不知道用来做什么)
 在 settings.gradle 中添加，
 ```text
 gradle.addBuildListener(new BuildListener() {
@@ -651,7 +721,7 @@ Marks a method as the action to run when the task is executed.
  
 
 
-## Gradle plugin 
+## Gradle plugin ( Gradle 插件) 
 ### 插件方式1  Build script
 ```text
 把插件写在 build.gradle 文件里，
@@ -745,12 +815,16 @@ this version of the Java Runtime only recognizes class file versions up to 52.0
 2、可以针对每个不同渠道的 APP配置不同的 APP名字 和APP logo、包名。
 例如 搜狗输入法小米版、搜狗输入法华为版。
 ```
+
 ##  多渠道 打包 方案
 目前公司APP集中于官网发布，暂时用不上。需要的时候再来更新具体使用方法。
 ```text
 1、gradle 官方方案。
 2、其他一些第三方的插件，例如美团就有一个 
 Walle（瓦力）https://github.com/Meituan-Dianping/walle
+
+gralde默认的配置，缺点是每个渠道包都会重新编译一次，编译速度慢。
+对大量的多渠道打包推荐用美团的walle 
 ```
 
 # Sqlite 数据库升级
