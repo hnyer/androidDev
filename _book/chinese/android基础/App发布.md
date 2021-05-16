@@ -725,15 +725,25 @@ Marks a method as the action to run when the task is executed.
 ### 插件方式1  Build script
 ```text
 把插件写在 build.gradle 文件里，
-一般用于简单的逻辑，仅仅在该 build.gradle 文件里可见
+一般用于简单的逻辑，仅仅在该 build.gradle 文件里可见。
+比如做一些简单的版本统一管理，apk重命名等
 ```
 
-### 插件方式2  buildSrc 项目 
+### 插件方式2  独立项目
+```text
+一个独立的 Groovy 和 Java 项目，
+能够把这个项目打包成 Jar 文件包，
+将文件包公布到托管平台上，供其它人使用。
+教程demo 暂缓。
+```
+
+
+### 插件方式3  buildSrc 项目 
+demo 地址在 https://gitee.com/Aivin_CodeShare/android_tool_code/tree/master/buildsrc
+
 ```text
 仅仅对该项目中可见，适用于逻辑较为复杂，但又不须要外部可见的插件。
-
 1、Module 的名字一定要是 buildsrc
-
 2、修改 module的 build.gradle文件内容为：
 apply plugin: 'groovy'
 apply plugin: 'maven'
@@ -746,42 +756,38 @@ repositories {
 }
 
 3、在main目录下新建groovy目录，在groovy目录下创建包名目录。
-Gradle插件本身用的是groovy语言，因为 groovy和Java可以互通，
-所以我们可以直接用Java来写。
+Gradle插件本身用的是groovy语言，groovy 和 Java可以互通，我们可以直接用Java来写。
 
 4、在包名目录下新建名为 xxx 的groovy文件,
-
 5、在main目录下新建resources目录，在resources目录里新建META-INF目录，
 再在META-INF里面新建gradle-plugins目录。
 
 6、gradle-plugins目录里面新建properties文件，
-如 xxx.properties,注意这个文件可以随意命名,但是后面使用这个插件的时候，
-apply plugin:'xxx'。
+如 aivingradleplugin.properties,注意这个文件可以随意命名,但是后面使用这个插件的时候，
+apply plugin:'aivingradleplugin'。
 
 7、properties 文件里指明Gradle插件的具体实现类：
-implementation-class=com.xxx.xxx.xxx
+implementation-class=com.aivin.buildsrc.AivinPluginX
 
 // 使用方法
 1、在项目的根目录下的 build.gradle 下引入这个 插件 
-apply plugin:  'mytestplugin'
+apply plugin:'aivingradleplugin'
 
-2、在命令行输入 
-gradlew checkResources 
+2、配置一些参数
+// fileMd5CheckTask 是 task名字 ，isOpenFileMd5Check 是被 @Input 标记注解的变量
+fileMd5CheckTask{ 
+    isOpenFileMd5Check true
+}
+
+3、在命令行输入命令即可
+gradlew fileMd5CheckTask
 // checkResources 是在代码中定义的 task 名字
-// GeekTask task = project.getTasks().create("checkResources", GeekTask.class)
-
-通过Androidstudio 创建task 自动运行的效果还未测试成功。
-稍缓。
+// GeekTask task = project.getTasks().create("fileMd5CheckTask", GeekTask.class)
 ```
 
-### 插件方式3  独立项目
-```text
-一个独立的 Groovy 和 Java 项目，
-能够把这个项目打包成 Jar 文件包，
-将文件包公布到托管平台上，供其它人使用。
+![](../pics/文件md5查重效果.png)
 
-教程暂缓。
-```
+
 
 # Androidstudio 插件开发
 ## 环境配置
