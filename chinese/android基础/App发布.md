@@ -729,21 +729,15 @@ Marks a method as the action to run when the task is executed.
 比如做一些简单的版本统一管理，apk重命名等
 ```
 
-### 插件方式2  独立项目
-```text
-一个独立的 Groovy 和 Java 项目，
-能够把这个项目打包成 Jar 文件包，
-将文件包公布到托管平台上，供其它人使用。
-教程demo 暂缓。
-```
 
 
-### 插件方式3  buildSrc 项目 
+
+### 插件方式2 buildSrc 项目 
 demo 地址在 https://gitee.com/Aivin_CodeShare/android_tool_code/tree/master/buildsrc
 
 ```text
 仅仅对该项目中可见，适用于逻辑较为复杂，但又不须要外部可见的插件。
-1、Module 的名字一定要是 buildsrc
+1、Module 的名字一定要是 buildSrc
 2、修改 module的 build.gradle文件内容为：
 apply plugin: 'groovy'
 apply plugin: 'maven'
@@ -783,10 +777,22 @@ fileMd5CheckTask{
 gradlew fileMd5CheckTask
 // checkResources 是在代码中定义的 task 名字
 // GeekTask task = project.getTasks().create("fileMd5CheckTask", GeekTask.class)
+
+4、如果其他项目引入你的 buildSrc 报错 Duplicate root element buildSrc ,
+是因为 buildSrc 被 Androidstudio 篡改成了 小写的 buildsrc ，手动改成 “buildSrc”即可
 ```
 
 ![](../pics/文件md5查重效果.png)
 
+
+
+### 插件方式3  独立项目
+```text
+一个独立的 Groovy 和 Java 项目，
+能够把这个项目打包成 Jar 文件包，
+将文件包公布到托管平台上，供其它人使用。
+这种方式我暂时用不上，没有去测试，有需要再弄。
+```
 
 
 # Androidstudio 插件开发

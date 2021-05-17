@@ -415,7 +415,7 @@
 - [x] 项目搭建过程中有什么经验,有用到什么 gradle 脚本
 - [x] Gradle 熟悉吗 ？ 常用哪些配置和命令
 - [x] 如何通过 Gradle 配置多渠道包
-- [ ] 有没有编写过 Gradle 插件
+- [x] 有没有编写过 Gradle 插件
 - [ ] 了解APK打包的过程吗？
 - [ ] 分包有做什么操作
 - [ ] Activity 与 AppCompactActivity 区别，Activity 会打包到包里面去吗？
