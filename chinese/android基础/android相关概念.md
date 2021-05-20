@@ -302,6 +302,54 @@ https://github.com/CymChad/BaseRecyclerViewAdapterHelper
 https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/PreFlightCheckAdapter.java
 ``` 
 
+
+# 约束布局 ConstraintLayout
+```text
+api 'androidx.constraintlayout:constraintlayout:2.0.2'
+
+// 角度约束 (版本1.1中加入)
+一个控件在某个控件的某个角度的位置，通过其他的布局其实是不太好实现的，
+但是 ConstraintLayout 提供了角度位置相关的属性
+app:layout_constraintCircle=""         目标控件id
+app:layout_constraintCircleAngle=""    对于目标的角度(0-360)
+app:layout_constraintCircleRadius=""   到目标中心的距离
+
+// 百分比偏移
+让控件在父布局的水平方向或垂直方向的百分之多少的位置，可以使用如下属性：
+app:layout_constraintHorizontal_bias=""   水平偏移 取值范围是0-1的小数
+app:layout_constraintVertical_bias=""     垂直偏移 取值范围是0-1的小数
+
+// A依赖B ，B被Gone时，A距离父控件的距离。
+app:layout_goneMarginBottom="0dp"
+app:layout_goneMarginEnd="0dp"
+app:layout_goneMarginLeft="0dp"
+app:layout_goneMarginRight="0dp"
+app:layout_goneMarginStart="0dp"
+app:layout_goneMarginTop="0dp"
+
+//设置宽高比例
+给宽或者高其中一个设置为0dp，然后设置该属性是一个比例，宽和高的比
+layout_constraintDimensionRatio
+
+// Chain 链
+Chain 链是一种特殊的约束让多个 chain 链连接的 Views 能够平分剩余空间位置。
+最相似的应该是 LinearLayout 中的权重比 weight ，
+但 Chains 链能做到的远远不止权重比 weight 的功能。
+Chain 链是由多个 Views 组合的，所以要创建一个 Chain 链就需要先选择多个想要链接到一起的 Views ，
+然后再右键选择 'Center Horizontally' 或者 'Center Vertically' 来创建水平链或者垂直链。
+Chain 链的创建定义的是 Chain 链组件之间的间隙关系，并不影响原有的非成员间的约束。
+
+Chain 链模式一共有三种，分别为：spread ，spread_inside 和 packed 。
+1、默认 spread 模式：
+将平分间隙让多个 Views 布局到剩余空间。
+2、spread_inside 模式：
+它将会把两边最边缘的两个 View 到外向父组件边缘的距离去除，
+然后让剩余的 Views 在剩余的空间内平分间隙布局。
+3、 packed ：
+它将所有 Views 打包到一起不分配多余的间隙 ，然后将整个组件组在可用的剩余位置居中。
+```
+
+
  
 # 序列化
 ```text
