@@ -312,3 +312,69 @@ f1.get(finalDemo)); // new_v1
 finalDemo.getV2()); // V2
 f2.get(finalDemo)); // new_v2
 ```
+
+
+# Android 注解库
+如果代码运行时不符合注解指定的条件就会报错，
+比如标记了是 @MainThread  ，但是在子线程中运行，就会报错
+```text
+implementation 'com.android.support:support-annotations:28.0.0'
+如果有添加 androidx 、material 等依赖，无需再添加 annotations 依赖
+implementation 'androidx.appcompat:appcompat:1.0.2'
+implementation 'com.google.android.material:material:1.2.0'
+```
+ 
+
+| 注解名                   | 释义                                                                                                                       | 修饰类型                                           |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
+| @AnimatorRes              | 用于描述一个整型的参数或字段，或者是一个期望返回 animator 资源引用的方法（例如：android.R.animator.fade_in）               | 参数、字段、方法                                   |
+| @AnimRes                  | 用于描述一个整型的参数或字段，或者是一个期望返回 anim 资源引用的方法（例如：android.R.anim.fade_in）                       | 参数、字段、方法                                   |
+| @AnyRes                   | 用于描述一个整型的参数或字段，或者是一个期望返回任意资源引用的方法                                                         | 参数、字段、方法                                   |
+| @AnyThread                | 被注解的元素可以在任意线程被调用                                                                                           | 方法、构造器、类、接口、枚举                       |
+| @ArrayRes                 | 用于描述一个整型的参数或字段，或者是一个期望返回 array 资源引用的方法（例如：android.R.array.phoneTypes）                  | 参数、字段、方法                                   |
+| @AttrRes                  | 用于描述一个整型的参数或字段，或者是一个期望返回 attr 资源引用的方法（例如：android.R.attr.action）                        | 参数、字段、方法                                   |
+| @BinderThread             | 用于描述一个方法、构造器、类、接口、枚举应该运行在 binder 线程                                                             | 方法、构造器、类、接口、枚举                       |
+| @BoolRes                  | 用于描述一个整型的参数或字段，或者是一个期望返回 boolean 资源引用的方法                                                    | 参数、字段、方法                                   |
+| @CallSuper                | 用于描述子类方法，希望它们重写父类方法时也要通过 super.() 调用父类方法                                                     | 方法                                               |
+| @CheckResult              | 用于描述一个方法，如果它的返回值被忽略了，那么就会报错                                                                     | 方法                                               |
+| @ColorInt                 | 用于描述一个整型的参数或字段，或者是一个期望返回 int 类型颜色值的方法                                                      | 参数、字段、方法                                   |
+| @ColorLong                | 用于描述一个整型的参数或字段，或者是一个期望返回 long 类型颜色值的方法                                                     | 参数、字段、方法                                   |
+| @ColorRes                 | 用于描述一个整型的参数或字段，或者是一个期望返回 color 资源引用的方法（例如：android.R.color.black）                       | 参数、字段、方法                                   |
+| @DimenRes                 | 用于描述一个整型的参数或字段，或者是一个期望返回 dimension 资源引用的方法（例如：android.R.dimen.app_icon_size）           | 参数、字段、方法                                   |
+| @Dimension                | 用于描述一个整型的参数或字段，或者是一个期望返回 dimension 的方法                                                          | 参数、字段、方法、注解                             |
+| @DrawableRes              | 用于描述一个整型的参数或字段，或者是一个期望返回 drawable 资源引用的方法（例如：android.R.attr.alertDialogIcon）           | 参数、字段、方法                                   |
+| @FloatRange               | 描述一个参数、字段或方法的返回值是一个指定范围内的 float 或 double 类型的值                                                | 参数、字段、方法                                   |
+| @FractionRes              | 用于描述一个分数类型的参数或字段，或者是一个期望返回 fraction 资源引用的方法                                               | 参数、字段、方法                                   |
+| @HalfFloat                | 用于描述一个半精度类型的参数或字段，或者是一个期望返回半精度值的方法                                                       | 参数、字段、方法                                   |
+| @IdRes                    | 用于描述一个整型的参数或字段，或者是一个期望返回 id 资源引用的方法（例如：android.R.id.copy）                              | 参数、字段、方法                                   |
+| @IntDef                   | 用于描述一个注解，然后再用这个被描述的注解去描述一个整形的参数或字段，或者是一个期望返回值是显示声明常量之一的方法         | 注解                                               |
+| @IntegerRes               | 用于描述一个整型的参数或字段，或者是一个期望返回 integer 资源引用的方法（例如：android.R.integer.config_shortAnimTime）    | 参数、字段、方法                                   |
+| @InterpolatorRes          | 用于描述一个整型的参数或字段，或者是一个期望返回 integer 资源引用的方法（例如：android.R.interpolator.cycle）              | 参数、字段、方法                                   |
+| @IntRange                 | 描述一个参数、字段或方法的返回值是一个指定范围内的 int 类型的值                                                            | 参数、字段、方法                                   |
+| @Keep                     | 被注解的元素不会被混淆                                                                                                     | 包、参数、字段、方法、类、接口、枚举、注解、构造器 |
+| @LayoutRes                | 用于描述一个整型的参数或字段，或者是一个期望返回 layout 资源引用的方法（例如：android.R.layout.list_content）              | 参数、字段、方法                                   |
+| @MainThread               | 被注解的元素只能在主线程被调用                                                                                             | 方法、构造器、类、接口、枚举                       |
+| @MenuRes                  | 用于描述一个整型的参数或字段，或者是一个期望返回 menu 资源引用的方法（例如：android.R.menu.content）                       | 参数、字段、方法                                   |
+| @NonNull                  | 用于描述一个参数或字段、或者一个方法的返回值不为空                                                                         | 参数、字段、方法                                   |
+| @Nullable                 | 用于描述一个参数或字段、或者一个方法的返回值可为空                                                                         | 参数、字段、方法                                   |
+| @PluralsRes               | 用于描述一个整型的参数或字段，或者是一个期望返回 plurals 资源引用的方法（例如：android.R.plurals.ph）                      | 参数、字段、方法                                   |
+| @Px                       | 用于描述一个整型的参数或字段，或者是一个期望返回像素尺寸的方法                                                             | 参数、字段、方法                                   |
+| @RawRes                   | 用于描述一个整型的参数或字段，或者是一个期望返回 raw 资源引用的方法（例如：android.R.raw.ph）                              | 参数、字段、方法                                   |
+| @RequiresApi              | 被注解的元素只能在被给的 API 版本或更高情况下才能被调用                                                                    | 类、接口、枚举、方法、构造器、字段                 |
+| @RequiresPermission       | 被注解的元素需要或者可能需要一个或多个权限                                                                                 | 注解、方法、构造器、字段                           |
+| @RequiresPermission.Read  |                                                                                                                            |                                                    |
+| @RequiresPermission.Write |                                                                                                                            |                                                    |
+| @RestrictTo               | 被注解的元素只能在特定的范围内被访问                                                                                       | 注解、类、接口、枚举、方法、构造器、字段、包       |
+| @Size                     | 被注解的元素需要提供其大小或长度                                                                                           | 参数、字段、方法、注解                             |
+| @StringDef                | 用于描述一个注解，然后再用这个被描述的注解去描述一个 string 类型的参数或字段，或者是一个期望返回值是显示声明常量之一的方法 | 注解                                               |
+| @StringRes                | 用于描述一个整型的参数或字段，或者是一个期望返回 string 资源引用的方法（例如：android.R.string.ok）                        | 参数、字段、方法                                   |
+| @StyleableRes             | 用于描述一个整型的参数或字段，或者是一个期望返回 styleable 资源引用的方法（例如：android.R.styleable.TextView_text）       | 方法、参数、字段                                   |
+| @StyleRes                 | 用于描述一个整型的参数或字段，或者是一个期望返回 style 资源引用的方法（例如：android.R.style.TextAppearance）              | 方法、参数、字段                                   |
+| @TransitionRes            | 用于描述一个整型的参数或字段，或者是一个期望返回 transitionRes 资源引用的方法（例如：android.R.transition.fade）           | 方法、参数、字段                                   |
+| @UiThread                 | 被注解的元素只能在主线程被调用                                                                                             | 方法、构造器、类、接口、枚举                       |
+| @WorkerThread             | 被注解的元素只能在工作线程被调用                                                                                           | 方法、构造器、类、接口、枚举                       |
+| @XmlRes                   | 用于描述一个整型的参数或字段，或者是一个期望返回 xml 资源引用的方法（例如：android.R.xml.test）                            | 参数、字段、方法                                   |
+| @SuppressLint             | Lint 静态检测工具将会忽略被注解元素的警告                                                                                  | 类、字段、方法、参数、构造器                       |
+| @TargetApi                | Lint 静态检测工具将会以指定 API 版本对待被注解元素                                                                         | 类、接口、枚举、方法、构造器                       |
+
+ 
