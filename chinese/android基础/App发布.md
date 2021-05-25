@@ -868,8 +868,37 @@ onCreate() onUpgrade() 是数据库创建和升级的重要函数，在里面进
 ```
 
 
+# appkey 、 token 防止泄密
+```text
+1、token
+token 是客服端登录成功后，服务器生成并下发给APP的。
+token 可以采用不可逆加密方式生成，有较短的有效期。
+客户端直接保存在本地就可以了。
+
+2、appkey
+有一些sdk，需要在 Application 进行初始化，需要授权 appkey ，
+此时我们对 appkey 不能加密，那么怎么防止别人反编译我们的apk 获得这个 appkey 去篡改数据 ？
+一般的做法就是服务器会将 appkey 和APP签名绑定好。 app 签名由开发者在后台手动填写。
+签名不对的，认为是非法APP在调用，可以拒绝服务。
+例如 高德地图 采用 key 和 apk 的  SHA1 绑定方案  。
+bmob sdk 采用 key 和apk 签名绑定方案。
+
+如果不采用 APP签名和appkey 绑定的方式，解决不了这个问题，
+你即使将 appkey 写入 jni 的so 中，别人只要拦截到了 就照样可以使用。
+```
 
 
+## apk 签名获取
+```text
+keytool -list -v -keystore xxx.keystore 
+然后输入密码，
+MD5:  80:60:94:3E:7C:97:xxx:0F:C9:B1:67:4C
+SHA1: B8:94:EC:79:72:DD:91:0E:19:D6:CD:xxx:C2:0C:BA:31
+SHA256: D5:3B:CB:D7:1D:B3:64:89:D6:FAxxxxxDB:3B:1B:4E:F0:FE:05:E4:15:BD
+
+其中，把 MD5 的值把 冒号去掉，然后转为小写，就是apk的签名 
+8060943e7c973xxx15fb0fc9b1674c
+```
 
 
 
