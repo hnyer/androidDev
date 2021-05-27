@@ -868,12 +868,14 @@ onCreate() onUpgrade() 是数据库创建和升级的重要函数，在里面进
 ```
 
 
-# appkey 、 token 防止泄密
+# appkey 、 token 保证数据安全
 ```text
 1、token
 token 是客服端登录成功后，服务器生成并下发给APP的。
 token 可以采用不可逆加密方式生成，有较短的有效期。
-客户端直接保存在本地就可以了。
+客户端直接保存在本地就可以了。请求数据时，带着token，
+服务器根据客户端上传的token 和保存在服务器上的对应客户端当前的token ，
+进行对比，来判断token是否有效。
 
 2、appkey
 有一些sdk，需要在 Application 进行初始化，需要授权 appkey ，

@@ -69,6 +69,7 @@
     * [项目参数配置](chinese/android基础/项目参数配置.md)
     * [App发布](chinese/android基础/App发布.md)
     * [Android外挂](chinese/android基础/Android外挂.md)
+    * [Android字节码插桩](chinese/android基础/Android字节码插桩.md)
     * [智能家居](chinese/android基础/智能家居.md)
 * [python部分](chinese/python/python基础.md)
     * [python基础](chinese/python/python基础.md)
