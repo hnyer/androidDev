@@ -181,10 +181,12 @@ gradlew compileDebug --scan
 
 ## gradle 编码GBK的不可映射字符
 ```text
-在模块的 build.gradle 中加入:
+1、在模块的 build.gradle 中加入:
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
+
+2、在Androidstudio 中搜索 File encoding ，将编码格式设置为 utf-8 
 ```
 
 ## Gradle 基础命令

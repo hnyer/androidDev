@@ -12,6 +12,10 @@ JRE是Java虚拟机(JVM)的一个实现，它可以分析字节码、解释代�
 ```
 
 # Java 字节码
+通俗来讲，字节码就是经过 javac 命令编译之后生成的 class 文件。 
+class文件包含了 Java 虚拟机指令集和符号表以及若干其他的辅助信息。
+
+## 字节码结构
 ```text
 cafe babe 0000 0034 001d 0a00 0600 0f09
 0010 0011 0800 120a 0013 0014 0700 1507
@@ -56,6 +60,23 @@ cafe babe 0000 0034 001d 0a00 0600 0f09
 -bootclasspath <path>    覆盖引导类文件的位置
 ```
 ![](../pics/字节码表.png)
+
+## 字节码查看工具
+```text
+1、jol-cli  ClassLayout 第三方工具
+2、 javap -v xxx  // xxx 是 class 文件  （貌似是信息最全面的）
+3、jclasslib ( Androidstudio 插件 )
+https://github.com/ingokegel/jclasslib
+```
+
+## ASM Bytecode Outline ，ASM 字节码查看工具
+```text
+在使用 ASM 插入字节码代码时、如果不熟悉字节码相关语法和规则 ,
+可能对于插入 字节码代码 就束手无策了、
+ASM官方开发了一款IDE插件，可以将 Java代码 转换成 ASM 字节码类型代码，
+这样再使用 ASM 插入字节码时就比较方便了。
+```
+
 
 # JVM 架构
 ```text
