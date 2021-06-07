@@ -187,6 +187,9 @@ tasks.withType(JavaCompile) {
 }
 
 2、在Androidstudio 中搜索 File encoding ，将编码格式设置为 utf-8 
+
+3、如果还不行，就在跟目录的 gradle.properties 加入参数
+org.gradle.jvmargs=-Xmx1536m -Dfile.encoding=UTF-8
 ```
 
 ## Gradle 基础命令
@@ -788,35 +791,71 @@ gradlew fileMd5CheckTask
 
 
 
-### 插件方式3  独立项目
+### 插件方式3  独立项目 (推荐)
 ```text
-一个独立的 Groovy 和 Java 项目，
-能够把这个项目打包成 Jar 文件包，
-将文件包公布到托管平台上，供其它人使用。
-这种方式我暂时用不上，没有去测试，有需要再弄。
+编写独立的gradle插件工程，将插件发布到本地或者远程仓库。
+具体demo参考我的 asm 工程。
+
+// build.gradle 配置
+apply plugin: 'groovy'
+apply plugin: 'maven'
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    //引入asm库
+    compile 'org.ow2.asm:asm:9.1'
+    compile 'org.ow2.asm:asm-commons:9.1'
+    compile 'org.ow2.asm:asm-analysis:9.1'
+    compile 'org.ow2.asm:asm-util:9.1'
+    compile 'org.ow2.asm:asm-tree:9.1'
+
+    compileOnly 'com.android.tools.build:gradle:3.4.1' , {
+        //排除gradle自带的asm库
+        exclude group:'org.ow2.asm'
+    }
+}
+repositories {
+    jcenter()
+}
+
+//在本地生成仓库 - uploadArchives 是个关键字，不能改成其他名字
+uploadArchives {
+    repositories.mavenDeployer {
+        //本地仓库路径，在项目根目录下的 生成 repo 的文件夹
+        repository(url: uri('F:\\mygradleplugin/aivinAsmRepo'))
+        //groupId ，组织id
+        pom.groupId = 'com.aivin.android'
+        //artifactId 项目id
+        pom.artifactId = 'asmplugin'
+        //插件版本号
+        pom.version = '1.0.0'
+    }
+}
+
+// 2、其他工程的可以直接饮用本地磁盘的插件
+maven {
+    //指定本地插件地址
+    url uri('F:\\mygradleplugin\\aivinAsmRepo')
+}
+
+// 引入插件
+classpath 'com.aivin.android:asmplugin:1.0.0'
+// 在需要插件的模块中启用插件 并进行相关配置
+apply plugin: 'aivin.asm.gradleplugin'
+thePluginForShowMethodTime {
+    isShowDebugInfo = true;
+    excludePackageList=[]
+    needModifyPackageList=[]
+}
+
+demo 地址
+https://gitee.com/aivinCompany/AsmgradlePlugin
+https://gitee.com/aivinCompany/AsmUseDemo
+
+其实，我感觉 groovy 的编译错误提示不是很好，可以使用java。
 ```
 
-
-# Androidstudio 插件开发
-## 环境配置
-```text
-1、使用 IntelliJ IDEA 进行开发 
-创建 Intelli Platform Plugin 项目
-创建项目时可能找不到sdk，选择 IntelliJ IDEA 的根目录即可。
- 
-2、如果开发的 plugin 拖放到 Androidstudio报错 
-com.intellij.diagnostic.PluginException: While loading class FirApkAction: 
-FirApkAction has been compiled by a more recent version of the Java Runtime (class file version 55.0), 
-this version of the Java Runtime only recognizes class file versions up to 52.0 
-[Plugin: com.aivin.firapkuploadplugin] [Plugin: com.aivin.firapkuploadplugin]
-
-这是由于 IntelliJ IDEA 版本过高导致的，我用的是 IntelliJ IDEA2021，结果需要 jdk11，
-但是 Androidstudio 用的是 jdk8 ，打不开 jdk11编译出来的jar包。
-最后我下载安装 ideaIC-2018.3.6.win 版本即可解决。
-```
-
-
-
+![](../pics/gradle独立插件.png)
 
 
 
