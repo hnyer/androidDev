@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chinese/pics/ASMBytecodeOutline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/gradle独立插件.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/方法耗时.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/Androidstudio插件开发.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/Androidstudio插件开发.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/Android字节码插桩.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/Android字节码插桩.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/App发布.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/App发布.md" afterDir="false" />
-    </list>
+    <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/chinese/android基础/App发布.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="859" lean-forward="true" selection-start-line="859" selection-end-line="859" />
+              <caret line="859" selection-start-line="859" selection-end-line="859" />
             </state>
           </provider>
         </entry>
@@ -57,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/chinese/android基础/Androidstudio插件开发.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -65,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="245" lean-forward="true" selection-start-line="245" selection-end-line="245" />
+            <state relative-caret-position="251">
+              <caret line="261" column="18" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -274,7 +264,7 @@
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.18488745" visible="true" weight="0.19529983" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.18488745" visible="true" weight="0.19529983" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Structure" order="5" sideWeight="0.81511253" weight="0.24959481" />
@@ -284,7 +274,7 @@
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.29421222" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.29421222" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329582" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.585209" />
@@ -630,21 +620,21 @@
     <entry file="file://$PROJECT_DIR$/chinese/android基础/App发布.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="859" lean-forward="true" selection-start-line="859" selection-end-line="859" />
+          <caret line="859" selection-start-line="859" selection-end-line="859" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/Androidstudio插件开发.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="245" lean-forward="true" selection-start-line="245" selection-end-line="245" />
+        <state relative-caret-position="251">
+          <caret line="261" column="18" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
         </state>
       </provider>
     </entry>
