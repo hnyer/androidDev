@@ -60,6 +60,7 @@ this.mHandler.sendMessageDelayed(msg, 10000L); // 10s
 ```text
 栈顶复用。
 栈顶有此实例就使用（调用 onNewIntent()方法） ，没有就重新创建。(调用onCreate()方法)
+栈顶模式只有在一种情况下有别于 standrad 默认模式，便是身处栈顶的时候。
 ```
 
 ## singleTask 模式
@@ -69,12 +70,19 @@ this.mHandler.sendMessageDelayed(msg, 10000L); // 10s
 并且会将它所在任务栈之前的所有activity实例移除掉。因此该实例就处于栈顶了。
 若栈中不存在该实例，将会onCreate()。
 可以用在 消除交互界面的嵌套循环 场景。
+
+例如主页面一般使用 SingleTask 模式，
+因为用户点击多次页面的相互跳转后，在点击回到主页，再次点击退出，
+这时他的实际需求就是要退出程序，
+而不是一次一次关闭刚才跳转过的页面最后才退出。
 ```
 
 ## singleInstance 模式
 ```text
-全局唯一。
-Activity单独占用一个Task栈 。整个系统中是单例的。
+全局唯一，整个系统中是单例的。
+Activity 单独占用一个Task栈 。
+例如 A 是 standard 模式 ，B 是 singleInstance ，
+那么 A 和 B 是在不同的栈内的。
 ```
 
 ## 启动模式属性

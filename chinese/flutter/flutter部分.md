@@ -276,7 +276,7 @@ BasicMessageChannel // 双向通信
 public class MainActivity extends FlutterActivity  implements MethodChannel.MethodCallHandler {
  int count = 0;
  @Override
- protected void onCreate(@Nullable Bundle savedInstanceState) {
+ protected void onCreate( ... ) {
      super.onCreate(savedInstanceState);
      Activity activity = this ;
 

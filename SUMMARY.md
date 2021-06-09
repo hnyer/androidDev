@@ -19,6 +19,7 @@
     * [大数相加](chinese/常用算法/大数相加.md)
     * [获得集合的所有子集](chinese/常用算法/集合的所有子集.md)
     * [扫描线种子填充算法](chinese/常用算法/扫描线种子填充算法.md)
+    * [其他算法](chinese/常用算法/其他算法.md)
 * [Java部分](chinese/java基础/原码补码反码.md)
     * [原码补码反码](chinese/java基础/原码补码反码.md)
     * [JVM详解](chinese/java基础/JVM详解.md)
@@ -88,4 +89,5 @@
 * [服务器部分](chinese/server/服务器部分.md)
 * [web部分](chinese/webDev/web部分.md)
 * [人工智能](chinese/人工智能/人工智能相关概念.md)
+* [面试真题](chinese/面试真题/极飞.md)
 

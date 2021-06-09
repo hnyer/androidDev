@@ -64,7 +64,7 @@
 # android 基础
 - [x] Android APP的 入口函数 在哪里 
 - [x] activity 启动模式
-- [ ] APP主页一般用哪种 启动模式 ，原因是什么
+- [x] APP主页一般用哪种 启动模式 ，原因是什么
 - [x] Activity 生命周期有哪些，知道 onRestart 么； A启动B ，A的 onStop 一定会执行吗；按 Home 按键后的生命周期
 - [x] activity 启动另外一个activity的时候横屏切换再点击返回，过程中发生的生命周期
 - [x] Fragment#onHiddenChanged 是生命周期方法么？如何触发？
@@ -84,7 +84,7 @@
 - [x] SharedPreferences 可以跨进程通信吗？ 如何改造成可以跨进程通信的?   
 - [ ] ContentProvider具体实现。
 - [ ] binderService方法中的回调具体运行在哪个线程？binder线程池最大线程数是多少？自定义的Callback远程调用，运行在哪个线程？为何不是主线程，如果运行在主线程会有哪些问题？
-- [ ] 悬浮窗如何实现
+- [x] 悬浮窗如何实现
 - [ ] ANR的log中关键字是什么
 - [ ] Activity的onSaveInstance方法何时调用？它跟onPause、onStop的调用顺序如何？
 - [ ] 讲下 leakCanary 原理，为什么不用虚引用？引用队列里面存的是什么？
@@ -94,22 +94,22 @@
 - [x] Activity怎么启动 Service 、Activity 与 Service 交互，Service 与 Thread 的区别
 - [x] ANR 了解过吗？有没有实际的ANR定位问题的经历
 - [x] AndroidManifest.xml 中 application 中配置 largeHeap ，真的能分配到大内存吗？
-- [ ] 通知的类别
 - [ ] ThreadLocal 实现
+- [ ] 通知的类别
 - [x] 全局广播与局部广播区别 
 - [x] 本地广播 LocalBroadcastManager  实现 ,为何效率高 ?
-- [ ] 广播与RxBus的区别
+- [ ] 广播与 RxBus 的区别
 - [ ] Rxjava 是怎么实现线程切换的
 - [ ] Rxjava 自定义操作符
 - [ ] RXJava 怎么切换线程
 - [ ] Bugly 日志收集的原理是什么？
-- [ ] 做过一些 SDK 的操作吗？
+- [x] 做过一些 SDK 的操作吗？
 - [x] 为什么会有 R文件映射表 ？直接使用资源的路径不好么？
 - [x] dex 文件结构了解过么？为何会有 65535 的限制 
 - [ ] mutildex 技术了解么？这项技术的目的是什么？
 - [x] Parcelable 和 Serializable 本质区别 。说原理 ,不要说用法
 - [ ] Bundle 是什么数据结构 ? 利用什么传递数据
-- [ ] 两个 getDrawable 取得的对象，有什么区别 ？
+- [x] 两个 getDrawable 取得的对象，有什么区别 ？
 - [x] onSaveInstanceState() 、onRestoreInstanceState() 平时是怎么用的 , 什么时候有值，什么时候为空
 - [ ] Scroller 有什么方法，怎么使用的
 - [ ] canvas lock的缓冲区是怎么回事
@@ -183,7 +183,7 @@
 - [ ] RecyclerView 和 ListView 区别、特点、缓存 、懒加载、局部刷新 ,多种type场景下怎么避免滑动卡顿 ,怎么优化滑动
 - [ ] RecyclerView 缓存结构，RecyclerView预取，RecyclerView局部刷新
 - [ ] RecyclerView 里面那个 changedSrape, attachedScrape 之类的到底是在做什么 ? 
-- [ ] RecyclerView 的 LayoutManager 有哪几种
+- [x] RecyclerView 的 LayoutManager 有哪几种
 - [x] 想改变 ListView 的高度，怎么做
 - [ ] Launcher启动图标，有几个进程？
 - [ ] Jetpack 组件用过哪些？
@@ -298,8 +298,8 @@
 
 
 # NDK JNI
-- [ ]  java 中 int 类型对应的本地类型是什么
-- [ ]  JNI 中静态注册和动态注册的区别
+- [x]  java 中 int 类型对应的本地类型是什么
+- [x]  JNI 中静态注册和动态注册的区别
 
 
 # 网络相关
@@ -322,15 +322,16 @@
 - [x] get 、 post 有什么区别
 
 # 算法
-- [ ] 了解哪些算法
-- [ ] 删除数组中的重复元素
-- [ ] 反转数组
+- [x] 了解哪些算法
+- [x] 如何让三个线程按照顺序依次打印 1-100
+- [x] 如何让两个线程循环交替打印
+- [x] 删除数组中的重复元素
+- [x] 反转数组
 - [ ] 一个大致有序的数组如何排序，最快时间复杂度
-- [ ] 实现一个快速排序
+- [x] 实现一个快速排序
 - [ ] 实现一个双向链表
 - [ ] 斐波那契台阶
-- [ ] 手写生产者消息者模型
-- [ ] 如何让两个线程循环交替打印
+- [-] 手写生产者消息者模型
 - [ ] 不同面值的几个硬币，怎么求满足条件的最小值
 - [ ] K个一组反转链表
 - [ ] 二叉树最长结点集合
@@ -349,7 +350,6 @@
 - [ ] 讲讲 LinkedHashMap 的数据结构
 - [ ] ConcurrentHashMap  锁分段技术
 - [ ] ArrayMap 和 SparseArray 的区别，实现。
-- [ ] t1、t2、t3三个线程 ，如何让三个线程按照顺序依次打印 1-100
 - [ ] 如何求当前 Activity View 的深度
 
 # 优化 、稳定性 、技术选型
@@ -358,12 +358,12 @@
 - [ ] 启动优化做过什么工作？ 如果首页就要用到的初始化 
 - [ ] 你的APP冷启动时间是多少，普通页面打开时间是多少，举例几个认为比较好的优化方法
 - [ ] 有没有做过什么 WebView 秒开的一些优化
-- [ ] 界面优化的一些方法，ConstraintLayout实现三等分,ConstraintLayout动画
-- [ ] 包体积的极致优化
-- [ ] 你做过什么 性能优化 的工作
+- [x] 界面优化的一些方法，ConstraintLayout实现三等分,ConstraintLayout动画
+- [x] 包体积的极致优化
+- [x] 你做过什么 性能优化 的工作
 - [ ] 性能优化做过什么工作? 有用过什么工具？有没有精确测量的工具？
-- [ ] 有什么实际解决UI卡顿优化的经历
-- [ ] 有做过什么Bitmap优化的实际经验
+- [x] 有什么实际解决UI卡顿优化的经历
+- [x] 有做过什么Bitmap优化的实际经验
 - [x] Apk的大小如何压缩
 - [ ] 看视频的时候网络请求很慢怎么优化？
 - [x] 如何提高线上代码质量 
@@ -371,19 +371,19 @@
 - [x] App上线后 用户使用时卡顿 ，怎么查看是什么原因
 - [x] 界面卡顿怎么排查和优化 ，何监测应用的 FPS
 - [x] 网络优化  
-- [ ] 数据库优化
+- [x] 数据库优化
 - [ ] view的优化，减少层级，异步加载，x2c框架引入，优缺点，textview的优化。
 - [ ] 怎么优化xml inflate的时间，涉及IO与反射。了解 compose 吗？
 - [ ] 讲下你做过的 首页优化
-- [ ] 你们项目的稳定性如何？有做过什么稳定性优化的工作？
+- [x] 你们项目的稳定性如何？有做过什么稳定性优化的工作？
 - [x] 如何进行单元测试，如何保证App稳定 
 - [x] 代码质量如何控制
 - [x] 技术选型是如何做 ，为什么这么考虑？从开发效率，产品性能，产品质量，产品体验等方面考虑
-- [ ] 你们网络框架用的什么？为什么？
+- [x] 你们网络框架用的什么？为什么？
 - [ ] 如果 Android 和 iOS 调一个接口，一个通了一个没通(或者响应速度一个块一个慢)，你会如何解决
 - [ ] 说一说Android中如何查看一个对象的回收情况 ？
 - [x] 冷启动、热启动 优化方案
-- [ ] 有什么提高编译速度的方法
+- [x] 有什么提高编译速度的方法
 
 
 

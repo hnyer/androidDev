@@ -501,6 +501,31 @@ JNIEnv代表Java运行环境,可以使用JNIEnv调用Java中的代码;
 Java对象传入JNI层就是Jobject对象, 需要使用JNIEnv来操作这个Java对象;
 ```
  
+## JNI 动态注册 、静态注册
+```text
+无论是动静态注册还是动态注册，
+Java端代码都是一样的，
+区别在于 C/C++里面的代码形式
+
+// 静态注册，简单易懂，Androidstudio 自动生成就采用这种方式
+extern "C" JNIEXPORT jstring JNICALL
+Java_com_mirkowu_jintest_jni_JniTest_stringFromJNI(JNIEnv *env, jclass clazz) {
+    std::string hello = "Hello from C++  by 静态注册";
+    return env->NewStringUTF(hello.c_str());
+}
+
+// 动态注册，事先维护好一张表，将 Java和 native 端的方法名对应起来，效率相对高一点
+static JNINativeMethod method_table[] = {
+        // 第一个参数a 是java native方法名，
+        // 第二个参数 是native方法参数,括号里面是传入参的类型，外边的是返回值类型，
+        // 第三个参数 是c/c++方法参数,括号里面是返回值类型，
+        {"a", "()Ljava/lang/String;",                                     (jstring *) aaa},
+        {"b", "(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;", (jstring *) getStringWithDynamicReg},
+
+};
+``` 
+ 
+ 
 
 ## JNI的数据类型
 

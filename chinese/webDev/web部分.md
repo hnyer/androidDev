@@ -1489,6 +1489,12 @@ text-rendering: optimizeLegibility;
 [我的小程序服务器API代码](https://gitee.com/hnyer/AivinInfo) <br>
  
 
-# 其他用过的一些
-主业不是搞这个的，看了忘记了，这里只记录常用的基础。
-http://hnyer.gitee.io/webdev/chinese/web/vueJS.html
+# 其他
+## css 禁止复制、禁止选择
+```text
+{
+	-webkit-box-sizing:border-box;
+	user-select:none  // 把这个去掉就可以选中并复制了
+}
+```
+
