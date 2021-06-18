@@ -50,6 +50,16 @@ R.java 定义了res目录中全部资源的id ，
 其他的等待补充。
 ```
 
+## R 文件的位置
+```text
+两种情况
+1、编码调试阶段 ，在Androidstudio查看 ，
+2、打成 apk 后，R文件的位置
+```
+
+![](../pics/R文件位置.png)
+
+
 # .dex 文件 为什么不能超过 65535 个方法
 ```text
 UNEXPECTED TOP-LEVEL EXCEPTION:  
@@ -405,3 +415,34 @@ Parcelable 是直接在内存中读写 ，
 在 Androidstudio 中，我们可以使用 插件 " Parcelable code generator " 
 来自动生成一些代码。减少代码书写量。
 ``` 
+
+
+# Activity 与 AppCompatActivity 区别
+```text
+随着 Android系统的更新，增加了一些新的特性，
+所以后续慢慢地推出了  FragmentActivity 、AppCompatActivity  。
+AppCompatActivity 加入了很多新特性，并且向下兼容(兼容老设备,旧系统版本)。
+
+AppCompatActivity extends FragmentActivity 
+FragmentActivity extends ComponentActivity 
+ComponentActivity extends Activity
+
+// Activity
+Activity是最基础的一个，是其它类的直接或间接父类。
+Activity中 只能使用系统自带的 FragmentTabHost+Fragment  ， 
+用 getFragmentManager() 来控制Activity和Fragment之间的交互。
+
+// FragmentActivity
+在v4包中引 入 FragmentActivity ，
+FragmentActivity 间接继承自Activity，并提供了对v4包中 support Fragment的支持。
+在 FragmentActivity 中必须使用 getSupportFragmentManager() 来处理support Fragment的交互。
+
+// AppCompatActivity
+AppCompatActivity 继承自FragmentActivity，同时取代了ActionBarActivity。
+AppCompatActivity 支持 ActionBar 功能，同时更推荐使用 ToolBar。
+而且 AppCompatActivity 为支持Material Design风格控件提供了便利。
+
+另外：与 Activity 相比较， AppCompatActivity 的 theme 只能用 android:theme=”@style/AppTheme ，而不能用android:style。 
+否则会提示错误： Caused by: java.lang.IllegalStateException: 
+You need to use a Theme.AppCompat theme (or descendant) with this activity.
+```

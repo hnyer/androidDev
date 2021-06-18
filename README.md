@@ -61,12 +61,16 @@
 - [x] 反射 是什么，在哪里用到，怎么利用反射创建一个对象
 - [x] 反射可以反射final修饰的字段吗？
 
+# 框架源码
+- [ ] 有看过哪些框架的源码
+
 # android 基础
 - [x] Android APP的 入口函数 在哪里 
 - [x] activity 启动模式
 - [x] APP主页一般用哪种 启动模式 ，原因是什么
 - [x] Activity 生命周期有哪些，知道 onRestart 么； A启动B ，A的 onStop 一定会执行吗；按 Home 按键后的生命周期
 - [x] activity 启动另外一个activity的时候横屏切换再点击返回，过程中发生的生命周期
+- [x] Activity 与 AppCompatActivity 区别
 - [x] Fragment#onHiddenChanged 是生命周期方法么？如何触发？
 - [ ] Fragment hide show生命周期变化
 - [ ] Fragment replace生命周期变化
@@ -188,7 +192,6 @@
 - [ ] Launcher启动图标，有几个进程？
 - [ ] Jetpack 组件用过哪些？
 - [ ] LifeCycle 的原理是什么？如果在onStart里面订阅，会回调onCreate吗？
-- [ ] 有看过哪些框架的源码吗？
 - [ ] Activity内 LinearLayout 红色 wrap_content ,包含View绿色 wrap_content ,求界面颜色
 - [ ] ViewPager 切换掉帧 有什么处理经验？
 - [ ] ViewPager2 原理
@@ -246,7 +249,7 @@
 
 
 
-# 插件化 热修复  组件化
+# 插件化 、热修复 (已过时，已废弃)
 - [ ] 说说插件化的原理，资源的插件化id重复如何解决？
 - [ ] 插件化 的原理是怎样的？
 - [ ] 插件化的原理是什么？有没有什么非运行时插件化的解决方案？
@@ -258,6 +261,9 @@
 - [ ] 热修复的原理，资源的热修复的原理,会不会有资源冲突的问题
 - [ ] tinker的原理是什么,还用过什么热修复框架，robust的原理是什么？
 - [ ] 热修复，主要说了ClassLoader的方式和Rubost的插装方式，重点介绍了Rubost的原理。
+
+
+# 组件化 模块化
 - [x] 多模块开发，不同的人可能会引入重复资源。相同的字符串，相同的icon等但是文件名并不一样，怎样去重
 - [x] 组件化有详细了解过吗？ 
 - [x] 组件化的实现方案 (参考 ARouter)
@@ -267,39 +273,6 @@
 - [x] ARouter 怎么实现页面拦截 (IInterceptor)
 - [x] 如果不用 ARouter ，你会怎么去解藕。接口？设计接口有什么需要注意的？
 
-
-
-
-# kotlin
-- [ ] 有用 Anko DSL  写过布局吗 
-- [ ] kotlin空安全的原理是什么？
-- [ ] kotlinc与javac编译字节码有什么区别？
-- [ ] kotlin lazy使用,lazy viewmodel
-- [ ] kotlin 与Java互相调用有什么问题？
-- [ ] kotlin ?的原理
-- [x] 说说你对 协程 的理解， 可以完全取代 rxjava 吗 , 协程 可以在Java项目中使用吗 
-- [x] 协程 怎么取消
-- [ ] 讲一个 协程 的 scope 与 context，协程的+号 代表什么
-
-# html5 
-- [ ] .h5 与 native 交互做过什么工作
-- [ ] 项目中的 Webview 与 native 通信
-- [ ] h5 与 native 交互，webView.loadUrl 与 webView.evaluateUrl 区别
-- [ ] 项目中对 WebView 的功能进行了怎样的增强
-- [ ] native 如何对 h5 进行鉴权，让某些页面可以调，某些页面不能调
-- [ ] @JavaScriptInterface为什么不通过多个方法来实现 
-- [ ] 为什么不利用同步方法来做 jsBridge交互？ 同步可以做异步，异步不能做同步 
-- [ ] jsBridge 实现方式
-- [ ] CoordinatorLayout自定义behavior,可以拦截什么？
-- [ ] 视频播放,一个player怎么实现预加载，避免loading
-- [ ] webView加载本地图片，如何从安全方面考虑 
-- [ ] webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗
-- [ ] retrofit怎么做post请求
-
-
-# NDK JNI
-- [x]  java 中 int 类型对应的本地类型是什么
-- [x]  JNI 中静态注册和动态注册的区别
 
 
 # 网络相关
@@ -321,23 +294,29 @@
 - [x] 在项目中有直接使用tcp 、socket 来发送消息吗
 - [x] get 、 post 有什么区别
 
+
+# NDK JNI
+- [x]  java 中 int 类型对应的本地类型是什么
+- [x]  JNI 中静态注册和动态注册的区别
+
+
 # 算法
 - [x] 了解哪些算法
+- [x] 手写生产者消息者模型
+- [x] 斐波那契台阶
 - [x] 如何让三个线程按照顺序依次打印 1-100
 - [x] 如何让两个线程循环交替打印
 - [x] 删除数组中的重复元素
 - [x] 反转数组
-- [ ] 一个大致有序的数组如何排序，最快时间复杂度
 - [x] 实现一个快速排序
-- [ ] 实现一个双向链表
-- [ ] 斐波那契台阶
-- [-] 手写生产者消息者模型
+- [ ] 一个大致有序的数组如何排序，最快时间复杂度
 - [ ] 不同面值的几个硬币，怎么求满足条件的最小值
+- [ ] 实现一个双向链表
 - [ ] K个一组反转链表
+- [ ] 链表求和
 - [ ] 二叉树最长结点集合
 - [ ] 二叉树的最大深度
 - [ ] 二叉树的每一层最左边节点
-- [ ] 链表求和
 - [x] 有用过什么加密算法？AES , RAS什么原理？
 - [x] 非对称加密 、对称加密
 - [x] appkey 、 token 放在本地如何保存？ 如何加密比较好
@@ -416,15 +395,44 @@
 - [x] Gradle 熟悉吗 ？ 常用哪些配置和命令
 - [x] 如何通过 Gradle 配置多渠道包
 - [x] 有没有编写过 Gradle 插件
-- [ ] 了解APK打包的过程吗？
+- [ ] 了解APK打包的过程吗 
 - [ ] 分包有做什么操作
-- [ ] Activity 与 AppCompactActivity 区别，Activity 会打包到包里面去吗？
+- [ ] Activity 会打包到包里面去吗
 
 
 # 适配
 - [x] 屏幕适配方案；头条适配方案核心原理。
 - [x] 屏幕适配做过什么工作 
 - [ ] Android11 有没有适配
+
+
+
+# kotlin
+- [ ] 有用 Anko DSL  写过布局吗 
+- [ ] kotlin空安全的原理是什么？
+- [ ] kotlinc与javac编译字节码有什么区别？
+- [ ] kotlin lazy使用,lazy viewmodel
+- [ ] kotlin 与Java互相调用有什么问题？
+- [ ] kotlin ?的原理
+- [x] 说说你对 协程 的理解， 可以完全取代 rxjava 吗 , 协程 可以在Java项目中使用吗 
+- [x] 协程 怎么取消
+- [ ] 讲一个 协程 的 scope 与 context，协程的+号 代表什么
+
+# html5 
+- [ ] .h5 与 native 交互做过什么工作
+- [ ] 项目中的 Webview 与 native 通信
+- [ ] h5 与 native 交互，webView.loadUrl 与 webView.evaluateUrl 区别
+- [ ] 项目中对 WebView 的功能进行了怎样的增强
+- [ ] native 如何对 h5 进行鉴权，让某些页面可以调，某些页面不能调
+- [ ] @JavaScriptInterface为什么不通过多个方法来实现 
+- [ ] 为什么不利用同步方法来做 jsBridge交互？ 同步可以做异步，异步不能做同步 
+- [ ] jsBridge 实现方式
+- [ ] CoordinatorLayout自定义behavior,可以拦截什么？
+- [ ] 视频播放,一个player怎么实现预加载，避免loading
+- [ ] webView加载本地图片，如何从安全方面考虑 
+- [ ] webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗
+- [ ] retrofit怎么做post请求
+
 
 # 设计能力
 - [ ] 如果让你来实现一个网络框架，你会考虑什么
