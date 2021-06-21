@@ -951,7 +951,7 @@ SHA256: D5:3B:CB:D7:1D:B3:64:89:D6:FAxxxxxDB:3B:1B:4E:F0:FE:05:E4:15:BD
  
 
 
-# 系统 apk 打包过程
+# Android apk 打包过程 、打包流程
 ```text
 一个完整的 Android 项目可能包含多个 module，
 而从宏观上看每一个 module 中的内容可以分为 资源文件 + 源代码。
@@ -977,7 +977,8 @@ SHA256: D5:3B:CB:D7:1D:B3:64:89:D6:FAxxxxxDB:3B:1B:4E:F0:FE:05:E4:15:BD
 如果有分包，那么也可能会生成多个 .dex 文件。
 
 注意，源代码文件也包括 AIDL 接口文件编译之后生成的 .java 文件，
-Android 项目中如果包含 .aidl 接口文件，这些 .aidl 文件会被编译成 .java 文件。
+Android 项目中如果包含 .aidl 接口文件，
+这些 .aidl 文件会通过aidl工具（源码位于system/tools/aidl）被编译成 .java 文件。
 ```
 
 
@@ -998,6 +999,9 @@ INDEX.LIST  // 它包含在应用程序或者扩展中定义的包的位置信�
 xxx.SF     //  签名文件。
 xxx.RSA // 与签名文件相关联的签名程序块文件， 存储了用于签名的公共签名。
 ```
+
+![](../pics/apk打包流程图.png)
+![](../pics/apk打包流程2.jpg)
 
 
 ## 优化阶段
