@@ -323,7 +323,6 @@ load from file...
 查看Profiler下方Top Down/Bottom Up 区域，以找出耗时的热点方法。
 ```
 
-2017华语辩论老友赛  完整辩词
 
 ## 冷启动
 ```text
@@ -1212,6 +1211,9 @@ RecyclerView：因为被回收不可见时第一选择是放进mCacheView中，
  
 
 
+## Android 查看一个对象的回收情况
+使用 Android profiler 来查看一个对象的回收情况 
+![](../pics/查看对象的回收情况.png)
 
 # 包体积优化 (完成)
 ## 优化 APK 体积的意义

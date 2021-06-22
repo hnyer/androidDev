@@ -320,6 +320,14 @@ https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/PreFlightCheckAda
 ```text
 api 'androidx.constraintlayout:constraintlayout:2.0.2'
 
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
 // 角度约束 (版本1.1中加入)
 一个控件在某个控件的某个角度的位置，通过其他的布局其实是不太好实现的，
 但是 ConstraintLayout 提供了角度位置相关的属性

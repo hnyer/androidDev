@@ -155,7 +155,7 @@
 - [ ] 生命周期都是通过什么调用的？有用过AIDL吗？
 - [x] AIDL in out oneWay 代表什么意思
 - [x] 你们用的什么消息通信机制
-- [ ] 多进程 怎么实现？如果启动一个多进程APP，会有几个进程运行？
+- [x] 多进程 怎么实现？如果启动一个多进程APP，会有几个进程运行？
 - [x] 怎么终止一个线程，thread.interrupt() 一定有效吗
 
 
@@ -195,7 +195,7 @@
 - [ ] Activity内 LinearLayout 红色 wrap_content ,包含View绿色 wrap_content ,求界面颜色
 - [ ] ViewPager 切换掉帧 有什么处理经验？
 - [ ] ViewPager2 原理
-- [ ] setFactory和setFactory2有什么区别？
+- [ ] setFactory 和 setFactory2 有什么区别？
 - [ ] 如何自定义实现一个 FlexLayout
 - [ ] A Activity打开B Activity的生命周期变化，会有什么方法打断吗？
 - [ ] 登陆功能，登陆成功然后跳转到一个新Activity，中间涉及什么？从事件传递，网络请求,AMS交互角度分析
@@ -332,7 +332,7 @@
 - [ ] 如何求当前 Activity View 的深度
 
 # 优化 、稳定性 、技术选型
-- [ ] Android 中如何查看一个对象的回收情况 ？
+- [ ] Android 中如何查看一个对象的回收情况
 - [x] 使用 Application. onTrimMemory( ) 优化
 - [ ] 启动优化做过什么工作？ 如果首页就要用到的初始化 
 - [ ] 你的APP冷启动时间是多少，普通页面打开时间是多少，举例几个认为比较好的优化方法

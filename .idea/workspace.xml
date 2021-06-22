@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chinese/pics/查看对象的回收情况.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/android基础/APP优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/APP优化.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/android零散知识.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/android零散知识.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,24 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="336" column="28" selection-start-line="336" selection-start-column="28" selection-end-line="336" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chinese/android基础/App发布.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1331">
-              <caret line="1110" column="20" lean-forward="true" selection-start-line="1110" selection-start-column="20" selection-end-line="1111" selection-end-column="13" />
-              <folding>
-                <element signature="e#20944#20967#0" />
-                <element signature="e#20968#21468#0" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="334" column="28" selection-start-line="334" selection-start-column="17" selection-end-line="334" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -53,12 +43,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="1211" column="1" lean-forward="true" selection-start-line="1211" selection-start-column="1" selection-end-line="1211" selection-end-column="1" />
+            <state relative-caret-position="243">
+              <caret line="1215" column="17" lean-forward="true" selection-start-line="1215" selection-start-column="17" selection-end-line="1215" selection-end-column="17" />
               <folding>
                 <element signature="e#16681#16692#0" />
-                <element signature="e#18243#18252#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chinese/android基础/android零散知识.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="324" column="40" lean-forward="true" selection-start-line="324" selection-start-column="40" selection-end-line="324" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -67,10 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AppCompatActivity</find>
-      <find>Activity</find>
-      <find>R文件的设计目的是啥，为什么不直接使用资源路径</find>
-      <find>FragmentActivity</find>
       <find>强制更新最新依赖，清除构建后再构建</find>
       <find>R文件的设计目的是啥，为什么不</find>
       <find>快捷键</find>
@@ -94,9 +88,13 @@
       <find>打包流程</find>
       <find>multiDexEnabled</find>
       <find>shrink</find>
-      <find>ClassLoader</find>
       <find>onTrimMemory</find>
       <find>内存优化</find>
+      <find>2017华语辩论老友赛</find>
+      <find>ClassLoader</find>
+      <find>约束布局</find>
+      <find>WebView</find>
+      <find>对象</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -164,10 +162,10 @@
         <option value="$PROJECT_DIR$/chinese/android基础/常用代码块.md" />
         <option value="$PROJECT_DIR$/chinese/doc/开发规范.md" />
         <option value="$PROJECT_DIR$/chinese/doc/常用网站.md" />
-        <option value="$PROJECT_DIR$/chinese/android基础/android零散知识.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/App发布.md" />
-        <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/android零散知识.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
       </list>
     </option>
   </component>
@@ -231,15 +229,15 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\gitbook\androidDev\chinese\pics" />
-      <recent name="F:\gitbook\androidDev" />
-      <recent name="F:\gitbook\androidDev\imgs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\gitbook\androidDev\chinese\pics" />
       <recent name="F:\gitbook\androidDev\chinese\android基础" />
       <recent name="F:\gitbook\androidDev\chinese\java基础" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\gitbook\androidDev\chinese\pics" />
+      <recent name="F:\gitbook\androidDev" />
+      <recent name="F:\gitbook\androidDev\imgs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -375,9 +373,6 @@
     <state x="341" y="114" width="598" height="536" key="find.popup/0.0.1280.764@0.0.1280.764" timestamp="1604277265246" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chinese/pics/buildscan.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/pics/ignore插件.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -646,13 +641,6 @@
     <entry file="file://$PROJECT_DIR$/chinese/pics/apk打包流程图.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/android零散知识.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/App发布.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1331">
@@ -660,17 +648,6 @@
           <folding>
             <element signature="e#20944#20967#0" />
             <element signature="e#20968#21468#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="1211" column="1" lean-forward="true" selection-start-line="1211" selection-start-column="1" selection-end-line="1211" selection-end-column="1" />
-          <folding>
-            <element signature="e#16681#16692#0" />
-            <element signature="e#18243#18252#0" />
           </folding>
         </state>
       </provider>
@@ -684,8 +661,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="336" column="28" selection-start-line="336" selection-start-column="28" selection-end-line="336" selection-end-column="28" />
+        <state relative-caret-position="187">
+          <caret line="334" column="28" selection-start-line="334" selection-start-column="17" selection-end-line="334" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="1215" column="17" lean-forward="true" selection-start-line="1215" selection-start-column="17" selection-end-line="1215" selection-end-column="17" />
+          <folding>
+            <element signature="e#16681#16692#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/pics/查看对象的回收情况.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/android零散知识.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="324" column="40" lean-forward="true" selection-start-line="324" selection-start-column="40" selection-end-line="324" selection-end-column="40" />
         </state>
       </provider>
     </entry>
