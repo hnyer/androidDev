@@ -1088,6 +1088,39 @@ WebView所在的进程可以根据业务的需要选择合适的时机进行销�
 加之不断的新建View势必会造成内存泄露。
 ```
 
+## Application 低内存回调
+```text
+// Android 4.0前 检测内存使用情况, 4.0 以后建议使用 onTrimMemory
+@Override
+public void onLowMemory() {
+    super.onLowMemory();
+}
+
+// 4.0 新增的 API ,level 值表示当前内存状态，
+// 可以根据返回的状态来适当回收资源避免 app 被杀死的风险。
+@Override
+public void onTrimMemory(int level) {
+    switch (level){
+           // 你的应用在运行且不会被杀掉，但设备可用内存低，系统正在执行杀掉LRU缓存里的进程
+        case TRIM_MEMORY_RUNNING_MODERATE:
+           // 你的应用在运行且不会被杀掉，但设备可用内存过低，你需要释放不再使用的资源来改善性能
+        case TRIM_MEMORY_RUNNING_LOW:
+            // 你的应用在运行，但系统已经杀死了其他LRU缓存里的大部分进程，你需要立刻释放所有不重要的资源。
+        case TRIM_MEMORY_RUNNING_CRITICAL:
+            // 你的进程当前是后台被缓存的，系统运行在低内存，你的应用临近LRU缓存List的开始位置。
+        case TRIM_MEMORY_BACKGROUND:
+            // 你的进程当前是后台被缓存的，系统运行在低内存，你的应用临近LRU缓存的中间位置，如果系统可用内存变得更糟糕你的应用很可能被杀掉
+        case TRIM_MEMORY_MODERATE:
+            // 你的进程当前是后台被缓存的，系统运行在低内存，如果系统可用内存无法恢复，你的应用是需要被首先杀死的进程中的一个。
+        // 等价于onLowMemory()
+        case TRIM_MEMORY_COMPLETE:
+            // 你的应用界面被隐藏并且你应该释放界面相关的资源。
+        case TRIM_MEMORY_UI_HIDDEN:
+            break;
+    }
+    super.onTrimMemory(level);
+}
+```
 
 ## 内存优化方案
 ###  减少自动装箱和拆箱 ，Autoboxing and unboxing 
