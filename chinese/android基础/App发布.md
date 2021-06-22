@@ -1014,3 +1014,120 @@ xxx.RSA // 与签名文件相关联的签名程序块文件， 存储了用于�
 如果每个资源的开始位置都是上一个资源之后的 4n 字节，
 那么访问下一个资源就不用遍历，直接跳到 4n 字节处判断是不是一个新的资源即可。
 ```
+
+
+## apk中是否会打包 Activity 、ListView 等系统组件的源码 
+```text
+安装在手机上的应用，用到的 Activity 、ListView ，
+这个SDK提供的api的内部的代码逻辑，是跟着系统变化，还是在应用打包的时候就已经确定？
+// 跟着系统变化
+
+Android 标准组件的代码在 /system/framework/framework.jar里面，
+它包含了所有系统自带的标准组件，包括 Activity 、View、Button 、ListView 等。
+Android 标准组件，编译器在编译时只是引用一下，apk 里面并没有这些标准组件的实现代码。
+apk 在设备里面启动后默认会将 framework.jar 加载进来，所以你的的apk运行的时候会有这些代码。
+另外，android-support-v4.jar 或者 v7 里面的扩展组件是会编译到apk里面去的，因为它并不是android的标准组件。
+```
+
+
+# 分包流程、分包过程
+## 需要分包的原因
+```text
+1、dex 中包含的方法包括了所有依赖的 jar包 和源码中的方法。
+而 dex 中表示方法数目的是 short 类型，所以最大只能表示到 65536 ，
+当项目比较大时，会出现一个 dex无法保存所有方法的问题，此时需要分包。
+新版本的Android系统中修复了这个问题， 
+但是我们仍然需要对低版本的 Android 系统做兼容.
+
+2、即使方法数没有超过 65536，能正常编译打包成 apk，
+在安装的时候，也有可能会提示 INSTALL_FAILED_DEXOPT 而导致安装失败，
+这个一般就是因为 LinearAlloc 的限制导致的。这个主要是因为 Dexopt (dex文件优化工具) 使用 LinearAlloc 来存储应用的方法信息。
+Dalvik LinearAlloc 是一个固定大小的缓冲区。
+在 Android 版本的历史上，LinearAlloc 分别经历了 4M/5M/8M/16M 限制。
+Android 2.2 和 2.3 的缓冲区只有 5MB，
+Android 4.x 提高到了 8MB 或 16MB。
+当方法数量过多导致超出缓冲区大小时，也会造成 Dexopt 崩溃。
+```
+
+## Android 5.0 以前 分包方案
+```text
+因为 Android 5.0 之前使用 Dalvik 执行应用代码，
+默认情况下，Dalvik限制每个APK只能使用一个 Classes.dex ，所以要支持运行时多Dex加载。
+需要引入支持包。
+defaultConfig ｛
+    multiDexEnabled true
+｝
+
+dependencies {
+   implementation  'com.android.support:multidex:1.0.3'
+}
+
+支持运行时多Dex加载，引入方法：
+方法 1、Application 继承  MultiDexApplication
+方法 2、
+protected void attachBaseContext(Context context) {
+    //其实方法1 最终也是调用这个方法
+    MultiDex.install(this);
+}
+```
+
+
+## Android 5.0 以后 分包方案
+```text
+Android 5.0 之后的版本使用 ART ，
+它支持从APK文件中加载多个Dex文件。
+并且 ART 在应用安装时会执行预编译，
+扫描所有的ClassesN.dex， 统一优化为.oat文件。
+所以 minSdkVersion >=21 , 不需要引入分包的 support 库。
+```
+
+
+## multidex 分包原理 , Dex 拆分
+```text
+dex拆分步骤分为：
+1、自动扫描整个工程代码得到 main-dex-list ；
+Android SDK 从 build tools 21 开始提供了 mainDexClasses 脚本来生成主 dex 的文件列表。
+它主要做了下面两件事情：
+①调用 proguard 的 shrink 操作来生成一个临时 jar 包； 
+②将生成的临时 jar 包和输入的文件集合作为参数，
+然后调用 com.android.multidex.MainDexListBuilder 来生成主 dex 文件列表。
+
+在 shrink 这一步，proguard 会根据 keep 规则保留需要的类和类成员，丢弃不需要的类和类成员。
+shrink 步骤生成的临时 jar 包里面保留了符合 keep 规则的类，这些类是需要放在主 dex 中的入口类。
+但是仅有这些入口类放在主 dex 还不够，还要找出入口类引用的其他类，不然仍然会在启动时出现 NoClassDefFoundError。
+而找出这些引用类，就是调用的 com.android.multidex.MainDexListBuilder
+
+2、根据 main-dex-list对 整个工程编译后的所有class进行拆分，将主、从dex的class文件分开；
+
+3、用dx工具对主、从dex的class文件分别打包成 .dex文件，并放在apk的合适目录。
+```
+
+
+## multidex 分包原理 , Dex 加载
+```text
+Android系统在启动应用时只加载了主dex ，其他的 dex 需要我们在应用启动后进行动态加载安装。
+
+Dex 加载的主要工作就是从 apk 中提取出所有的从 dex（classes2.dex，classes3.dex，...），
+然后通过 ClassLoader + 反射 依次安装加载从 dex，
+并将取出的文件包装成 Element 对象放在 ClassLoader 的 pathList
+
+//反射调用 ClassLoader 的 pathList
+Field pathListField = MultiDex.findField(loader, "pathList”); 
+//将取出的zip文件包装成 Element 对象并扩展 dexElements
+MultiDex.expandFieldArray(dexPathList, "dexElements", makeDexElements(dexPathList, new ArrayList(additionalClassPathEntries), optimizedDirectory));
+        
+注：（热修复、插件化技术中也有用到  ClassLoader + 反射 ）
+```
+
+
+## multidex 局限性
+```text
+1、如果分包的 Dex 过大，因为 install 过程涉及IO等操作，容易触发ANR问题 ；
+
+2、当运行的版本低于 Android 5.0 时，多 dex 文件 并不足以避开 linearalloc 限制。
+linearalloc 的缓冲区大小在 Android 4.0 中有所提高，但这并未完全解决该问题。
+在低于 Android 4.0 的版本中，可能会在达到 DEX 索引限制之前就达到 linearalloc 限制。
+所以一些大的、复杂的项目在低配机器上有很大概率会出现问题。
+为了解决这个问题，可以直接不支持低版本设备，或者针对旧版本设备提供精简版本。
+```
+

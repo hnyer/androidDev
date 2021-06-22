@@ -12,11 +12,13 @@ Dalvik 基于寄存器的架构， 更适合资源紧张的系统。
 
 ## ART 
 ```text
-Android runtime 。
-Android 4.4 开始加入 ART模式。
+ART , Android runtime 。
+Android 4.4 开始加入 ART模式 , 从 Android 5.0 开始 ART 就全面取代了 Dalvik。 
 ART下，应用在第一次安装的时候，字节码就会预编译成机器码，首次启动会变慢，
 但是以后每次启动执行的时候，都可以直接运行。（空间换时间）
 ```
+
+
 
 # R.java 文件结构 
 ![](../pics/R文件结构.png)
