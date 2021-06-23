@@ -104,6 +104,9 @@ var info2 = "$info 字符串长度是${info.length}"
 ```text
 // List
 val list: List<Any> = listOf<Any>(1, "2", 3)
+val list1 = mutableListOf<String>()  // mutableListOf 和 ArrayList 区别不大
+val list2 = ArrayList<String>()
+  
 
 // Array 
 val faces = Array(5) {  "a"   } // Array初始化，大小5，初始值为"a"

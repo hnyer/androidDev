@@ -1213,6 +1213,17 @@ RecyclerView：因为被回收不可见时第一选择是放进mCacheView中，
 
 ## Android 查看一个对象的回收情况
 使用 Android profiler 来查看一个对象的回收情况 
+```text
+对象内存回收情况
+
+Shallow Size是对象本身占据的内存的大小，不包含其引用的对象。
+对于常规对象的 Shallow Size 由其成员变量的数量和类型来定，
+而数组的 ShallowSize 由数组类型和数组长度来决定，它为数组元素大小的总和。 
+
+Retained size是该对象自己的shallow size，加上从该对象能直接或间接访问到对象的shallow size之和。
+换句话说，retained size 是该对象被GC之后所能回收到内存的总和。
+```
+
 ![](../pics/查看对象的回收情况.png)
 
 # 包体积优化 (完成)

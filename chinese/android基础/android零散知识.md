@@ -477,3 +477,44 @@ AppCompatActivity 支持 ActionBar 功能，同时更推荐使用 ToolBar。
 否则会提示错误： Caused by: java.lang.IllegalStateException: 
 You need to use a Theme.AppCompat theme (or descendant) with this activity.
 ```
+
+
+# android 严苛模式 、严格模式
+```text
+在代码中配置严苛模式，用来帮助我们更容易找到违规的代码。
+比如在主线程中访问网络、访问磁盘、Activity的泄露 等。
+
+// 线程策略
+StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder()
+        .detectAll() // 检测所有潜在的违例
+        .detectCustomSlowCalls()// 自定义耗时操作
+        .detectDiskReads() // 读磁盘
+        .detectDiskWrites() // 写磁盘
+        .detectNetwork() // 检查网络
+        .detectResourceMismatches() // 检查资源类型是否匹配
+        .penaltyLog() // 将警告输出到LogCat
+        .penaltyFlashScreen()// 屏幕闪烁
+        .penaltyDropBox() // 将违规信息记录到 dropbox 系统日志目录中（/data/system/dropbox）
+        .penaltyDeath() // 当触发违规条件时，直接Crash掉当前应用程序。
+        .penaltyDialog() // 弹出dialog
+        .penaltyDeathOnNetwork()// 当触发网络违规时，Crash掉当前应用程序
+        .build();
+
+// Vm 策略
+StrictMode.VmPolicy vmPolicy = new StrictMode.VmPolicy.Builder()
+        .detectAll() // 检测所有潜在的
+        .detectActivityLeaks()// 检测Activity的泄露
+        .detectCleartextNetwork() //检测明文的网络
+        .detectFileUriExposure() //  检测file:// 或 content://
+        .detectLeakedClosableObjects()  // 未关闭的Closable对象泄露
+        .detectLeakedRegistrationObjects() // 检测需要注册类型是否解注
+        .detectLeakedSqlLiteObjects() // 泄露的Sqlite对象
+        .setClassInstanceLimit(Stutent.class ,10)// 检测实例数量
+        .penaltyLog() //  将警告输出到LogCat
+        .penaltyDropBox() // 将违规信息记录到 dropbox 系统日志目录中（/data/system/dropbox）
+        .penaltyDeath() // 当触发违规条件时，直接Crash掉当前应用程序。
+        .build();
+
+StrictMode.setThreadPolicy(threadPolicy );
+StrictMode.setVmPolicy(vmPolicy  );
+```
