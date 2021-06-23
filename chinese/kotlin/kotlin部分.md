@@ -242,6 +242,21 @@ public class Student(info: String) : Person(info),Language{
 ```
 
 
+## Any 、 Unit 、Nothing
+```text
+Unit 类似于 Java中 的 Void 。
+一切方法/函数都是表达式，表达式是总是有值的，所以每一个方法都必有一个返回值。
+如果没有用 return 明确的指定，那么一般来说就会用自动帮我们加上 Unit .
+
+Nothing 在Java中并没有一个相似的概念。
+Nothing 类型表达式计算结果永远是不会反回的。
+//因为 pick 永远不会反回值，而是直接抛出了异常，这个时候可以用 Nothing 作为 pick 函数的返回值
+fun pick(index: Int): Nothing {
+    throw Exception()
+}
+```
+
+
 ## apply
 ```text
 调用对象的apply函数，在函数范围内，
@@ -341,7 +356,7 @@ fun main(arg:Array<String>){
 ```
 
 ## 伴生对象
-Kotlin移除了static的概念。
+Kotlin移除了static 的概念。
 通常用 object 和 companion object  来实现
 ```text
 使用"object"修饰静态类

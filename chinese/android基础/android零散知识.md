@@ -231,6 +231,21 @@ new AlertDialog.Builder(mContext);
 // 通过 Application  传值 缺点 
 ```
  
+ 
+# AlertDialog 按钮大小问题
+```text
+TextView textView =new TextView(this);
+textView.setText("Hello TextView");
+
+AlertDialog dialog =new AlertDialog.Builder(this)
+        .setTitle("Hello aivin")
+        .setView(textView)
+        .setPositiveButton("ok_Btn", null )
+        .show() ;
+Button btn = dialog.getButton(AlertDialog.BUTTON_POSITIVE) ;
+btn.setAllCaps(false); // 重新设置
+``` 
+ 
  #  ListView 动态改变高度
  ```text
  public void setListViewHeightBasedOnChildren2(ListView listView) {
@@ -482,7 +497,7 @@ You need to use a Theme.AppCompat theme (or descendant) with this activity.
 # android 严苛模式 、严格模式
 ```text
 在代码中配置严苛模式，用来帮助我们更容易找到违规的代码。
-比如在主线程中访问网络、访问磁盘、Activity的泄露 等。
+比如在主线程中访问网络、访问磁盘、Activity的泄露 等不合理的操作。
 
 // 线程策略
 StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder()
