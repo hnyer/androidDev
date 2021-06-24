@@ -63,6 +63,7 @@
 
 # 框架源码
 - [ ] 有看过哪些框架的源码
+- [ ] 讲下 leakCanary 原理，为什么不用虚引用？引用队列里面存的是什么？
 
 # android 基础
 - [x] Android APP的 入口函数 在哪里 
@@ -91,7 +92,6 @@
 - [x] 悬浮窗如何实现
 - [ ] ANR的log中关键字是什么
 - [ ] Activity的onSaveInstance方法何时调用？它跟onPause、onStop的调用顺序如何？
-- [ ] 讲下 leakCanary 原理，为什么不用虚引用？引用队列里面存的是什么？
 - [ ] 方法内部的匿名内部类，比如说给View设置的OnClickListener，它里面相关调用外部方法的形参，必须使用final修饰这个形参，为何？
 - [ ] Android里面进程间通信方式，ContentProvider可以用file实现么？
 - [ ] Activity启动模式，以及各启动模式生命周期问题
