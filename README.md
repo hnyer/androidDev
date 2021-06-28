@@ -63,7 +63,8 @@
 
 # 框架源码
 - [ ] 有看过哪些框架的源码
-- [ ] 讲下 leakCanary 原理，为什么不用虚引用？引用队列里面存的是什么？
+- [x] 讲下 leakCanary 原理 
+- [x] leakCanary为什么不用 虚引用？ 引用队列里面存的是什么？
 
 # android 基础
 - [x] Android APP的 入口函数 在哪里 
