@@ -547,3 +547,12 @@ StrictMode.VmPolicy vmPolicy = new StrictMode.VmPolicy.Builder()
 StrictMode.setThreadPolicy(threadPolicy );
 StrictMode.setVmPolicy(vmPolicy  );
 ```
+
+
+# 线程休眠方法
+```text
+Thread.sleep()  // 抛异常 ,可能会被中断  
+SystemClock.sleep( ) // 不能被中断 ，Android 推荐用这个
+LockSupport.parkNanos(1);//  LockSupport.unpark(thread);       
+object.wait() // object.notifyAll();  不推荐使用
+```
