@@ -1490,7 +1490,7 @@ text-rendering: optimizeLegibility;
  
 
 # 其他
-## css 禁止复制、禁止选择
+## css 禁止复制、禁止选择 、无法复制
 ```text
 {
 	-webkit-box-sizing:border-box;
