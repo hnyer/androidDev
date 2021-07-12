@@ -476,3 +476,56 @@ SystemClock.sleep( ) // 不能被中断 ，Android 推荐用这个
 LockSupport.parkNanos(1);//  LockSupport.unpark(thread);       
 object.wait() // object.notifyAll();  不推荐使用
 ```
+
+
+# Android 拖拽效果
+```text
+以前没看过这个知识点，以为绘制那个虚影有点麻烦。
+其实 Android api 有提供一个简单的 api view.startDrag( ) ，会自动生成虚影。
+在实际项目中，配合处理一下 拖动事件的监听和坐标的处理即可。
+可以参考一下这个项目 
+https://gitee.com/hnyer/RemoteControlView
+--------------------
+
+public void startDrag(View view ,DraggableInfo draggableInfo ){
+    Intent intent = new Intent();
+    intent.putExtra(MyConfig.KEY_DATA, draggableInfo);
+    //用 ClipData 来跨 activity 传值
+    ClipData dragData = ClipData.newIntent(MyConfig.KEY_Value, intent);
+    View.DragShadowBuilder myShadow = new View.DragShadowBuilder(view);
+    // 震动 (不需要震动权限)
+    view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+    // 执行startDrag后 ，系统就会生成view的拖拽影子
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        view.startDragAndDrop(dragData, myShadow, null, 0);
+    }else{
+        view.startDrag(dragData, myShadow, null, 0);
+    }
+}
+// 给一个控件添加拖动监听，可以监听到被拖动的那个控件的拖动事件和坐标
+frameLayout.setOnDragListener(onDragListener);
+private  View.OnDragListener onDragListener = new OnDragListener() {
+    public boolean onDrag(View v, DragEvent event) {
+        final int action = event.getAction();
+        switch(action) {
+            case DragEvent.ACTION_DRAG_STARTED:  // 开始拖动
+                break;
+            case DragEvent.ACTION_DRAG_ENTERED:  //  进入
+                break;
+            case DragEvent.ACTION_DRAG_EXITED:  //  移出
+                break;
+            case DragEvent.ACTION_DRAG_ENDED:  // 停止拖动
+                break;
+            case DragEvent.ACTION_DRAG_LOCATION: // 停留
+                break;
+            case DragEvent.ACTION_DROP: // 释放拖动
+                break;
+        }
+        return true;
+    }
+};
+```
+
+![](../pics/拖拽效果.gif)
+
+
