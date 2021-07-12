@@ -1,7 +1,6 @@
 # Summary
 
 * [首页](README.md)
-* [留言反馈](https://support.qq.com/products/312736)
 * [常用网站](chinese/doc/常用网站.md)
 * [常用软件和框架](chinese/常用软件/常用软件和框架.md)
 * [开发规范](chinese/doc/开发规范.md)
@@ -91,4 +90,4 @@
 * [web部分](chinese/webDev/web部分.md)
 * [人工智能](chinese/人工智能/人工智能相关概念.md)
 * [面试真题](chinese/面试真题/极飞.md)
-
+ 
