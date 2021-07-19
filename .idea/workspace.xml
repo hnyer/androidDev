@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chinese/pics/自定义滑动效果.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_book/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +27,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="389" column="35" lean-forward="true" selection-start-line="389" selection-start-column="35" selection-end-line="389" selection-end-column="35" />
+            <state relative-caret-position="158">
+              <caret line="423" column="18" lean-forward="true" selection-start-line="423" selection-start-column="18" selection-end-line="423" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="190" column="26" lean-forward="true" selection-start-line="190" selection-start-column="26" selection-end-line="190" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -36,9 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>leakcanary</find>
-      <find>源码</find>
-      <find>动画</find>
       <find>StaggeredGridLayoutManager</find>
       <find>线性布局</find>
       <find>ItemAnimator</find>
@@ -66,6 +76,9 @@
       <find>LayoutManager</find>
       <find>RecyclerView</find>
       <find>ANR</find>
+      <find>changedSrape</find>
+      <find>attachedScrape</find>
+      <find>mChangedScrap</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -129,7 +142,6 @@
         <option value="$PROJECT_DIR$/chinese/android基础/地图模块.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/项目参数配置.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/常用代码块.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/线程详解.md" />
         <option value="$PROJECT_DIR$/SUMMARY.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/智能家居.md" />
@@ -137,6 +149,7 @@
         <option value="$PROJECT_DIR$/chinese/产品经理/产品经理.md" />
         <option value="$PROJECT_DIR$/chinese/doc/常用网站.md" />
         <option value="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -192,7 +205,7 @@
     <property name="android.sdk.path" value="F:/sdk2" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="F:/test22/GeliAirConditionerTool" />
+    <property name="last_opened_file_path" value="F:/test23/GalleryDemo" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -201,8 +214,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\gitbook\androidDev\chinese\源码阅读" />
       <recent name="F:\gitbook\androidDev\chinese\pics" />
+      <recent name="F:\gitbook\androidDev\chinese\源码阅读" />
       <recent name="F:\gitbook\androidDev" />
       <recent name="F:\gitbook\androidDev\imgs" />
     </key>
@@ -243,10 +256,10 @@
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.18488745" weight="0.20259319" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.18488745" visible="true" weight="0.20259319" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info active="true" id="Structure" order="5" sideWeight="0.81511253" visible="true" weight="0.2350081" />
+      <window_info id="Structure" order="5" sideWeight="0.81511253" weight="0.2350081" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.27170417" weight="0.32901135" />
       <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="GenProtobuf" order="0" />
@@ -606,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="179" column="26" lean-forward="true" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/doc/常用网站.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -632,8 +638,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="389" column="35" lean-forward="true" selection-start-line="389" selection-start-column="35" selection-end-line="389" selection-end-column="35" />
+        <state relative-caret-position="158">
+          <caret line="423" column="18" lean-forward="true" selection-start-line="423" selection-start-column="18" selection-end-line="423" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="190" column="26" lean-forward="true" selection-start-line="190" selection-start-column="26" selection-end-line="190" selection-end-column="26" />
         </state>
       </provider>
     </entry>

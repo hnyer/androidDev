@@ -180,14 +180,13 @@
 - [x] PhoneWindow 是在哪里初始化的
 - [x] setContentView 是如何把xml文件 化成View并显示到 Activity中的 
 - [x] LayoutInflater 是如何把xml布局文件转换成View对象的（反射）？View树如何生成的？怎么优化？
-- [ ] RecyclerView 的缓存结构是怎样的？缓存的是什么？cachedView 会执行 onBindView 吗?
-- [ ] RecyclerView 嵌套 RecyclerView，NestScrollView 嵌套 ScrollView 滑动冲突
-- [ ] 讲一下 RecyclerView 的缓存机制,滑动10个，再滑回去，会有几个执行 onBindView
-- [ ] 如何实现 RecyclerView 的局部更新，用过 payload 吗, notifyItemChange 方法中的参数？
-- [ ] RecyclerView 防止内存OOM的一道题，充分利用自身的缓存机制
-- [ ] RecyclerView 和 ListView 区别、特点、缓存 、懒加载、局部刷新 ,多种type场景下怎么避免滑动卡顿 ,怎么优化滑动
-- [ ] RecyclerView 缓存结构，RecyclerView预取，RecyclerView局部刷新
-- [ ] RecyclerView 里面那个 changedSrape, attachedScrape 之类的到底是在做什么 ? 
+- [x] RecyclerView 的缓存结构是怎样的？缓存的是什么？cachedView 会执行 onBindView 吗?
+- [x] RecyclerView 嵌套 RecyclerView，NestScrollView 嵌套 ScrollView 滑动冲突
+- [x] 讲一下 RecyclerView 的缓存机制,滑动10个，再滑回去，会有几个执行 onBindView
+- [x] 如何实现 RecyclerView 的局部更新，用过 payload 吗, notifyItemChange 方法中的参数？
+- [x] RecyclerView 和 ListView 区别、特点、缓存 、懒加载、局部刷新 ,多种type场景下怎么避免滑动卡顿 ,怎么优化滑动
+- [x] RecyclerView 缓存结构，RecyclerView预取，RecyclerView局部刷新
+- [x] RecyclerView 里面那个 changedSrape, attachedScrape 之类的到底是在做什么 ? 
 - [x] RecyclerView 的 LayoutManager 有哪几种
 - [x] 想改变 ListView 的高度，怎么做
 - [ ] Launcher启动图标，有几个进程？
