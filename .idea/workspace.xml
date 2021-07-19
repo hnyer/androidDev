@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/doc/常用网站.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/doc/常用网站.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,38 +25,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SUMMARY.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chinese/产品经理/产品经理.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="457" column="13" lean-forward="true" selection-start-line="457" selection-start-column="13" selection-end-line="457" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chinese/doc/常用网站.md">
+        <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="519">
+              <caret line="357" lean-forward="true" selection-start-line="357" selection-end-line="357" />
             </state>
           </provider>
         </entry>
@@ -63,15 +38,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>零散</find>
-      <find>SystemClock</find>
       <find>leakcanary</find>
       <find>源码</find>
-      <find>RecyclerView</find>
       <find>动画</find>
       <find>StaggeredGridLayoutManager</find>
       <find>线性布局</find>
-      <find>recyclerview</find>
       <find>ItemAnimator</find>
       <find>禁止复制、禁止选择</find>
       <find>插值</find>
@@ -93,6 +64,10 @@
       <find>startDrag</find>
       <find>技术选型的 考虑纬度</find>
       <find>Product Backlog workbook</find>
+      <find>recyclerview</find>
+      <find>LayoutManager</find>
+      <find>RecyclerView</find>
+      <find>ANR</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -151,7 +126,6 @@
         <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
         <option value="$PROJECT_DIR$/chinese/kotlin/kotlin部分.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/GC机制.md" />
-        <option value="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" />
         <option value="$PROJECT_DIR$/chinese/webDev/web部分.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/动画详解.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/地图模块.md" />
@@ -164,6 +138,7 @@
         <option value="$PROJECT_DIR$/chinese/android基础/android零散知识.md" />
         <option value="$PROJECT_DIR$/chinese/产品经理/产品经理.md" />
         <option value="$PROJECT_DIR$/chinese/doc/常用网站.md" />
+        <option value="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" />
       </list>
     </option>
   </component>
@@ -178,40 +153,10 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-              <item name="chinese" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-              <item name="chinese" type="462c0819:PsiDirectoryNode" />
-              <item name="常用软件" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -277,7 +222,7 @@
       <window_info content_ui="combo" id="Project" order="2" sideWeight="0.18488745" weight="0.20259319" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info active="true" id="Structure" order="5" sideWeight="0.81511253" visible="true" weight="0.15153971" />
+      <window_info active="true" id="Structure" order="5" sideWeight="0.81511253" visible="true" weight="0.2350081" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.27170417" weight="0.32901135" />
       <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="GenProtobuf" order="0" />
@@ -560,20 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="131" column="3" lean-forward="true" selection-start-line="131" selection-start-column="3" selection-end-line="131" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/webDev/web部分.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -637,16 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/产品经理/产品经理.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
@@ -654,17 +575,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+    <entry file="file://$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="227">
+          <caret line="131" column="3" lean-forward="true" selection-start-line="131" selection-start-column="3" selection-end-line="131" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="179" column="26" lean-forward="true" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chinese/doc/常用网站.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="138">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Temp.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="357" lean-forward="true" selection-start-line="357" selection-end-line="357" />
         </state>
       </provider>
     </entry>
