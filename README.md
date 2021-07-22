@@ -62,9 +62,9 @@
 - [x] 反射可以反射final修饰的字段吗？
 
 # 框架源码
-- [ ] 有看过哪些框架的源码
+- [x] 有看过哪些框架的源码 (leakCanary / RecyclerView)
 - [x] 讲下 leakCanary 原理 
-- [x] leakCanary为什么不用 虚引用？ 引用队列里面存的是什么？
+- [x] leakCanary 为什么不用 虚引用？ 引用队列里面存的是什么？
 
 # android 基础
 - [x] Android APP的 入口函数 在哪里 
@@ -102,7 +102,7 @@
 - [ ] ThreadLocal 实现
 - [ ] 通知的类别
 - [x] 全局广播与局部广播区别 
-- [x] 本地广播 LocalBroadcastManager  实现 ,为何效率高 ?
+- [x] 本地广播 LocalBroadcastManager 实现 ,为何效率高 ?
 - [ ] 广播与 RxBus 的区别
 - [ ] Rxjava 是怎么实现线程切换的
 - [ ] Rxjava 自定义操作符
