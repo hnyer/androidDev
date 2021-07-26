@@ -189,7 +189,7 @@
 - [x] RecyclerView 里面那个 changedSrape, attachedScrape 之类的到底是在做什么 ? 
 - [x] RecyclerView 的 LayoutManager 有哪几种
 - [x] 想改变 ListView 的高度，怎么做
-- [ ] Launcher启动图标，有几个进程？
+- [ ] Launcher 启动图标，有几个进程？
 - [ ] Jetpack 组件用过哪些？
 - [ ] LifeCycle 的原理是什么？如果在onStart里面订阅，会回调onCreate吗？
 - [ ] Activity内 LinearLayout 红色 wrap_content ,包含View绿色 wrap_content ,求界面颜色
@@ -222,7 +222,7 @@
 - [ ] requestLayout调用后，都会调用哪些方法？
 - [ ] 手势操作 ActionCancel 后怎么取消
 - [ ] 说说你对屏幕刷新机制的了解，双重缓冲，三重缓冲，黄油模型
-- [ ] attachToWindow 什么时候调用？
+- [x] onAttachedToWindow 什么时候调用？
 
 # 事件分发 
 - [ ] 伪代码实现一个长按事件
@@ -232,8 +232,8 @@
 - [ ] 讲下事件传递 ，总体流程，DOWN事件拦截后，后续事件如何处理？，dispatchTouchEvent方法返回true后事件如何处理？
 - [ ] setOnTouchListener,onClickeListener 和 onTouchEvent 的关系
 - [ ] dispatchTouchEvent , onInterceptEvent , onTouchEvent 顺序，关系
-- [ ] 说说 事件分发机制，怎么写一个不能滑动的ViewPager
-- [ ] RecyclerView是怎么处理内部ViewClick冲突的
+- [ ] 说说 事件分发机制，怎么写一个不能滑动的 ViewPager
+- [ ] RecyclerView 是怎么处理内部ViewClick冲突的
 - [ ] ViewGroup在Action_Move时onIntercept返回true，事件怎么传递
 - [ ] ViewPager中嵌套ViewPager怎么处理滑动冲突
 - [ ] 怎么处理嵌套View的滑动冲突问题

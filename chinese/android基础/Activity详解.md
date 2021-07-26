@@ -202,3 +202,17 @@ protected void onSaveInstanceState(@NonNull Bundle outState) {
 在 onSaveInstanceState() 中保存数据 
 在 onCreate(Bundle )、onRestoreInstanceState(Bundle) 中恢复数据。
 ```
+
+## onAttachedToWindow() 调用时机
+```text
+/**
+ * Called when the main window associated with the activity has been
+ * attached to the window manager.
+ * See {@link View#onAttachedToWindow() View.onAttachedToWindow()}
+ * for more information.
+ */
+public void onAttachedToWindow() {   }
+```
+
+
+ 
