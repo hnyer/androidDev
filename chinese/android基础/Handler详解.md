@@ -569,4 +569,21 @@ handle 不仅仅只用于 主线程 和子线程的通信 ，也可以实现 子
 可以参考我的 demo  https://gitee.com/hnyer/my-handle  
 
 
- 
+# IdleHandler
+```text
+IdleHandler 主要是在 MessageQueue 出现空闲的时候被执行。
+1、MessageQueue 为空，没有消息； 
+2、MessageQueue 中最近需要处理的消息，是一个延迟消息（when>currentTime），需要滞后执行；
+
+IdleHandler 被定义在 MessageQueue 中 ,
+public static interface IdleHandler {
+    // 返回 ture ，执行完 queueIdle 方法之后会保留这个 IdleHandler ，
+    // 反之则删除这个 IdleHandler 。
+    boolean queueIdle();
+}
+
+IdleHandler 的处理时机不可控 ，
+我们一般用  IdleHandler 闲时特性来做一些性能优化。
+只能适合做一些优先级不高的功能。
+比如上报一个不重要的埋点日志。
+```

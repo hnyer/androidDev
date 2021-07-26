@@ -136,9 +136,9 @@
 - [x] 线程池 拒绝策略有几种 
 - [x] 如何禁止 手动创建线程 。使用 自定义 lint 
 - [x] 阿里编程规范 不建议使用 Executors 来创建线程池，为什么
-- [ ] IdleHandler 调用时机
-- [ ] IdleHandler用过吗 ？IdleHandler 应用场景
-- [ ] Handler休眠是怎样的？epoll的原理是什么？如何实现延时消息，如果移除一个延时消息会解除休眠吗？
+- [x] IdleHandler 调用时机
+- [x] IdleHandler用过吗 ？IdleHandler 应用场景
+- [ ] Handler休眠是怎样的？epoll 的原理是什么？如何实现延时消息，如果移除一个延时消息会解除休眠吗？
 - [x] Handler内存泄漏 的GCRoot是什么 ？
 - [x] 说说你对Handler机制的了解，同步消息，异步消息等
 - [x] Handler机制了解吗？一个线程有几个Looper？为什么？
