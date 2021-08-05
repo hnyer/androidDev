@@ -529,3 +529,14 @@ private  View.OnDragListener onDragListener = new OnDragListener() {
 ![](../pics/拖拽效果.gif)
 
 
+
+# 子控件超出父控件
+```text
+android:layout_gravity="bottom"   // 子控件配置
+android:clipChildren="false"  // 父容器配置
+
+至于 clipChildren = false 带来的超出部分无法点击的问题，
+可以通过 手指触摸点和子容器的坐标点来判断。
+如果在坐标范围内，就模拟手指点击。
+```
+![](../pics/clipChildrenFalse.png)
