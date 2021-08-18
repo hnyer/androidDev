@@ -540,3 +540,6 @@ android:clipChildren="false"  // 父容器配置
 如果在坐标范围内，就模拟手指点击。
 ```
 ![](../pics/clipChildrenFalse.png)
+
+
+daretogo tofuck

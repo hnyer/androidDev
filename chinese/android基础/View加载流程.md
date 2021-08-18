@@ -219,3 +219,32 @@ this.setContentView(rootView);
 
 具体流程参看 setContentView 的流程。
 ```
+
+
+# ViewGroup 相关方法
+## checkLayoutParams()
+```text
+用来检查你的 LayoutParams 是否是正确。
+@Override
+protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams p) {
+    return new SecondaryScreenView.LayoutParams(p);
+}
+```
+
+## generateDefaultLayoutParams()
+```text
+获取默认的  LayoutParams
+```
+
+## generateLayoutParams()
+```text
+//ViewGroup.LayoutParams generateLayoutParams(AttributeSet attrs)
+从 xml 获得的 LayoutParams
+
+//ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams p)
+if (!checkLayoutParams(params)) {
+   params = generateLayoutParams(params);
+}
+When a ViewGroup is passed a View whose layout params do not pass the test of
+checkLayoutParams(android.view.ViewGroup.LayoutParams ) , this method is invoked. 
+```
