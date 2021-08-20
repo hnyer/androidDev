@@ -22,6 +22,7 @@
     * [其他算法](chinese/常用算法/其他算法.md)
 * [Java部分](chinese/java基础/原码补码反码.md)
     * [原码补码反码](chinese/java基础/原码补码反码.md)
+    * [java常用代码](chinese/java基础/java常用代码.md)
     * [JVM详解](chinese/java基础/JVM详解.md)
     * [类加载机制](chinese/java基础/类加载机制.md)
     * [内存模型](chinese/java基础/内存模型.md)
