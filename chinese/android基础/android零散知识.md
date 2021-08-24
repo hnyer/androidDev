@@ -259,6 +259,47 @@ AlertDialog dialog =new AlertDialog.Builder(this)
 Button btn = dialog.getButton(AlertDialog.BUTTON_POSITIVE) ;
 btn.setAllCaps(false); // 重新设置
 ``` 
+
+
+## 全屏显示 Dialog
+```text
+public class LoadingDialogUtils {
+    public static Dialog getLoadingDialogInstance(Context context) {
+        // 根据样式创建 Dialog
+        Dialog loadingDialog = new Dialog(context, R.style.iosloading_dialog);
+        loadingDialog.setCancelable(false);
+        // 设置自定义布局
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View v = inflater.inflate(R.layout.wk_loading_dialog, null);
+        LinearLayout layout = v.findViewById(R.id.dialog_view);
+        int width = MyDeviceInforHelper.getWidth((Activity) context);
+        int height = MyDeviceInforHelper.getRealHeight( (Activity) context) ;
+        ViewGroup.LayoutParams layoutParams = new  ViewGroup.LayoutParams(  width   , height);
+        loadingDialog.setContentView(layout, layoutParams );
+        layout.setBackgroundColor(Color.parseColor("#80000000"));// 设置自定义背景颜色
+        loadingDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));// 设置window背景
+        loadingDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        return loadingDialog;
+    }
+}
+
+<style name="iosloading_dialog" parent="android:Theme.Dialog">
+    <item name="android:windowFrame">@null</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:backgroundDimEnabled">false</item>
+    <item  name= "android:windowFullscreen" >true </item>
+</style>
+
+public static int getRealHeight(Activity mActivity) {
+    mActivity.getWindowManager().getDefaultDisplay().getRealMetrics(myGetDisplayMetrics());
+    return  myGetDisplayMetrics().heightPixels;
+}
+```
+
  
  #  ListView 动态改变高度
  ```text
