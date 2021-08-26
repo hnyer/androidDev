@@ -41,6 +41,7 @@
     * [Java8新特性](chinese/java基础/java8新特性.md)
 * [Android部分](chinese/android基础/android零散知识.md)
     * [常用代码](chinese/android基础/常用代码块.md)
+    * [基础控件使用](chinese/android基础/基础控件使用.md)
     * [Android零散知识](chinese/android基础/android零散知识.md)
     * [Android坐标体系](chinese/android基础/android坐标体系.md)
     * [APP启动流程](chinese/android基础/APP的启动流程.md)

@@ -1,0 +1,3187 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>通信方式详解 · Aivin开发笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Aivin">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../android基础/Binder详解.html" />
+    
+    
+    <link rel="prev" href="../android基础/进程通信.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../doc/常用网站.html">
+            
+                <a href="../doc/常用网站.html">
+            
+                    
+                    常用网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../常用软件/常用软件和框架.html">
+            
+                <a href="../常用软件/常用软件和框架.html">
+            
+                    
+                    常用软件和框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../doc/开发规范.html">
+            
+                <a href="../doc/开发规范.html">
+            
+                    
+                    开发规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../源码阅读/源码阅读配置.html">
+            
+                <a href="../源码阅读/源码阅读配置.html">
+            
+                    
+                    源码阅读
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../源码阅读/其他框架源码.html">
+            
+                <a href="../源码阅读/其他框架源码.html">
+            
+                    
+                    其他框架源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../产品经理/产品经理.html">
+            
+                <a href="../产品经理/产品经理.html">
+            
+                    
+                    产品经理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../设计模式/设计模式.html">
+            
+                <a href="../设计模式/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../设计模式/设计模式.html">
+            
+                <a href="../设计模式/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../设计模式/模式详解.html">
+            
+                <a href="../设计模式/模式详解.html">
+            
+                    
+                    模式详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../设计模式/mvc等.html">
+            
+                <a href="../设计模式/mvc等.html">
+            
+                    
+                    mvc等
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../数据结构/常用数据结构.html">
+            
+                <a href="../数据结构/常用数据结构.html">
+            
+                    
+                    基本算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../数据结构/常用数据结构.html">
+            
+                <a href="../数据结构/常用数据结构.html">
+            
+                    
+                    常用数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../常用算法/算法术语.html">
+            
+                <a href="../常用算法/算法术语.html">
+            
+                    
+                    算法术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../常用算法/排序算法.html">
+            
+                <a href="../常用算法/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../常用算法/查找算法.html">
+            
+                <a href="../常用算法/查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../常用算法/大数相加.html">
+            
+                <a href="../常用算法/大数相加.html">
+            
+                    
+                    大数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../常用算法/集合的所有子集.html">
+            
+                <a href="../常用算法/集合的所有子集.html">
+            
+                    
+                    获得集合的所有子集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../常用算法/扫描线种子填充算法.html">
+            
+                <a href="../常用算法/扫描线种子填充算法.html">
+            
+                    
+                    扫描线种子填充算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../常用算法/其他算法.html">
+            
+                <a href="../常用算法/其他算法.html">
+            
+                    
+                    其他算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../java基础/原码补码反码.html">
+            
+                <a href="../java基础/原码补码反码.html">
+            
+                    
+                    Java部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../java基础/原码补码反码.html">
+            
+                <a href="../java基础/原码补码反码.html">
+            
+                    
+                    原码补码反码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../java基础/java常用代码.html">
+            
+                <a href="../java基础/java常用代码.html">
+            
+                    
+                    java常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../java基础/JVM详解.html">
+            
+                <a href="../java基础/JVM详解.html">
+            
+                    
+                    JVM详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../java基础/类加载机制.html">
+            
+                <a href="../java基础/类加载机制.html">
+            
+                    
+                    类加载机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../java基础/内存模型.html">
+            
+                <a href="../java基础/内存模型.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../java基础/GC机制.html">
+            
+                <a href="../java基础/GC机制.html">
+            
+                    
+                    GC机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../java基础/对象内存布局.html">
+            
+                <a href="../java基础/对象内存布局.html">
+            
+                    
+                    对象内存布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../java基础/继承多态.html">
+            
+                <a href="../java基础/继承多态.html">
+            
+                    
+                    继承和多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../java基础/相等判断.html">
+            
+                <a href="../java基础/相等判断.html">
+            
+                    
+                    相等判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../java基础/Java容器类.html">
+            
+                <a href="../java基础/Java容器类.html">
+            
+                    
+                    Java容器类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../java基础/Java枚举.html">
+            
+                <a href="../java基础/Java枚举.html">
+            
+                    
+                    Java枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../java基础/自定义异常.html">
+            
+                <a href="../java基础/自定义异常.html">
+            
+                    
+                    自定义异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../java基础/深度拷贝.html">
+            
+                <a href="../java基础/深度拷贝.html">
+            
+                    
+                    深度拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.14" data-path="../java基础/泛型详解.html">
+            
+                <a href="../java基础/泛型详解.html">
+            
+                    
+                    泛型详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15" data-path="../java基础/线程详解.html">
+            
+                <a href="../java基础/线程详解.html">
+            
+                    
+                    线程详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.16" data-path="../java基础/java注解.html">
+            
+                <a href="../java基础/java注解.html">
+            
+                    
+                    注解详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.17" data-path="../java基础/数据解析.html">
+            
+                <a href="../java基础/数据解析.html">
+            
+                    
+                    数据解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.18" data-path="../java基础/java8新特性.html">
+            
+                <a href="../java基础/java8新特性.html">
+            
+                    
+                    Java8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../android基础/android零散知识.html">
+            
+                <a href="../android基础/android零散知识.html">
+            
+                    
+                    Android部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../android基础/常用代码块.html">
+            
+                <a href="../android基础/常用代码块.html">
+            
+                    
+                    常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../android基础/基础控件使用.html">
+            
+                <a href="../android基础/基础控件使用.html">
+            
+                    
+                    基础控件使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../android基础/android零散知识.html">
+            
+                <a href="../android基础/android零散知识.html">
+            
+                    
+                    Android零散知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../android基础/android坐标体系.html">
+            
+                <a href="../android基础/android坐标体系.html">
+            
+                    
+                    Android坐标体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../android基础/APP的启动流程.html">
+            
+                <a href="../android基础/APP的启动流程.html">
+            
+                    
+                    APP启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../android基础/View加载流程.html">
+            
+                <a href="../android基础/View加载流程.html">
+            
+                    
+                    View加载流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../android基础/事件分发机制.html">
+            
+                <a href="../android基础/事件分发机制.html">
+            
+                    
+                    事件分发机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../android基础/控件绘制流程.html">
+            
+                <a href="../android基础/控件绘制流程.html">
+            
+                    
+                    控件绘制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../android基础/进程通信.html">
+            
+                <a href="../android基础/进程通信.html">
+            
+                    
+                    进程通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.10" data-path="通信方式详解.html">
+            
+                <a href="通信方式详解.html">
+            
+                    
+                    通信方式详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../android基础/Binder详解.html">
+            
+                <a href="../android基础/Binder详解.html">
+            
+                    
+                    Binder详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../android基础/Handler详解.html">
+            
+                <a href="../android基础/Handler详解.html">
+            
+                    
+                    Handle详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../android基础/Fragment详解.html">
+            
+                <a href="../android基础/Fragment详解.html">
+            
+                    
+                    Fragment详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="../android基础/Activity详解.html">
+            
+                <a href="../android基础/Activity详解.html">
+            
+                    
+                    Activity详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="../android基础/BroadcastReceiver.html">
+            
+                <a href="../android基础/BroadcastReceiver.html">
+            
+                    
+                    BroadcastReceiver详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.16" data-path="../android基础/Service服务.html">
+            
+                <a href="../android基础/Service服务.html">
+            
+                    
+                    Service详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.17" data-path="../android基础/动画详解.html">
+            
+                <a href="../android基础/动画详解.html">
+            
+                    
+                    动画详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.18" data-path="../android基础/屏幕刷新机制.html">
+            
+                <a href="../android基础/屏幕刷新机制.html">
+            
+                    
+                    屏幕刷新机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.19" data-path="../android基础/屏幕适配.html">
+            
+                <a href="../android基础/屏幕适配.html">
+            
+                    
+                    屏幕适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.20" data-path="../android基础/图片加载详解.html">
+            
+                <a href="../android基础/图片加载详解.html">
+            
+                    
+                    图片加载详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.21" data-path="../android基础/WebView详解.html">
+            
+                <a href="../android基础/WebView详解.html">
+            
+                    
+                    WebView详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.22" data-path="../android基础/沉浸式.html">
+            
+                <a href="../android基础/沉浸式.html">
+            
+                    
+                    沉浸式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.23" data-path="../android基础/相机模块.html">
+            
+                <a href="../android基础/相机模块.html">
+            
+                    
+                    相机模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.24" data-path="../android基础/地图模块.html">
+            
+                <a href="../android基础/地图模块.html">
+            
+                    
+                    地图模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.25" data-path="../android基础/Androidstudio插件开发.html">
+            
+                <a href="../android基础/Androidstudio插件开发.html">
+            
+                    
+                    Androidstudio插件开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.26" data-path="../android基础/Apk插件化开发.html">
+            
+                <a href="../android基础/Apk插件化开发.html">
+            
+                    
+                    Apk插件化开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.27" data-path="../android基础/App组件化开发.html">
+            
+                <a href="../android基础/App组件化开发.html">
+            
+                    
+                    App组件化开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.28" data-path="../android基础/sdk开发.html">
+            
+                <a href="../android基础/sdk开发.html">
+            
+                    
+                    sdk开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.29" data-path="../android基础/APP优化.html">
+            
+                <a href="../android基础/APP优化.html">
+            
+                    
+                    APP优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.30" data-path="../android基础/项目参数配置.html">
+            
+                <a href="../android基础/项目参数配置.html">
+            
+                    
+                    项目参数配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.31" data-path="../android基础/App发布.html">
+            
+                <a href="../android基础/App发布.html">
+            
+                    
+                    App发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.32" data-path="../android基础/Android外挂.html">
+            
+                <a href="../android基础/Android外挂.html">
+            
+                    
+                    Android外挂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.33" data-path="../android基础/Android字节码插桩.html">
+            
+                <a href="../android基础/Android字节码插桩.html">
+            
+                    
+                    Android字节码插桩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.34" data-path="../android基础/智能家居.html">
+            
+                <a href="../android基础/智能家居.html">
+            
+                    
+                    智能家居
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../python/python基础.html">
+            
+                <a href="../python/python基础.html">
+            
+                    
+                    python部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../python/python基础.html">
+            
+                <a href="../python/python基础.html">
+            
+                    
+                    python基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../python/python爬虫.html">
+            
+                <a href="../python/python爬虫.html">
+            
+                    
+                    python爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../gradle/Groovy.html">
+            
+                <a href="../gradle/Groovy.html">
+            
+                    
+                    Groovy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../kotlin/kotlin部分.html">
+            
+                <a href="../kotlin/kotlin部分.html">
+            
+                    
+                    kotlin部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../flutter/flutter部分.html">
+            
+                <a href="../flutter/flutter部分.html">
+            
+                    
+                    flutter部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../native/ccpp.html">
+            
+                <a href="../native/ccpp.html">
+            
+                    
+                    native部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../native/Linux.html">
+            
+                <a href="../native/Linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../native/ccpp.html">
+            
+                <a href="../native/ccpp.html">
+            
+                    
+                    cCpp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../native/NDK.html">
+            
+                <a href="../native/NDK.html">
+            
+                    
+                    NDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../native/系统编译剪裁.html">
+            
+                <a href="../native/系统编译剪裁.html">
+            
+                    
+                    系统编译剪裁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../native/音视频.html">
+            
+                <a href="../native/音视频.html">
+            
+                    
+                    音视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../native/音视频第三方库.html">
+            
+                <a href="../native/音视频第三方库.html">
+            
+                    
+                    音视频第三方库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../native/相关代码.html">
+            
+                <a href="../native/相关代码.html">
+            
+                    
+                    相关代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../server/服务器部分.html">
+            
+                <a href="../server/服务器部分.html">
+            
+                    
+                    服务器部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../webDev/web部分.html">
+            
+                <a href="../webDev/web部分.html">
+            
+                    
+                    web部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../人工智能/人工智能相关概念.html">
+            
+                <a href="../人工智能/人工智能相关概念.html">
+            
+                    
+                    人工智能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../面试真题/极飞.html">
+            
+                <a href="../面试真题/极飞.html">
+            
+                    
+                    面试真题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >通信方式详解</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#http-&#x3001;https-&#x65B9;&#x5F0F;"><b>1. </b>http &#x3001;https &#x65B9;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#http-content-type"><b>1.1. </b>HTTP Content-type</a></li><li><span class="title-icon "></span><a href="#&#x5EFA;&#x7ACB;&#x3001;&#x65AD;&#x5F00;-http&#x8FDE;&#x63A5;"><b>1.2. </b>&#x5EFA;&#x7ACB;&#x3001;&#x65AD;&#x5F00; http&#x8FDE;&#x63A5;</a></li><li><span class="title-icon "></span><a href="#tcpip&#x534F;&#x8BAE;&#x65CF;"><b>1.3. </b>TCP/IP&#x534F;&#x8BAE;&#x65CF;</a></li><li><span class="title-icon "></span><a href="#https&#x8BF7;&#x6C42;"><b>1.4. </b>https&#x8BF7;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#https&#x76F8;&#x5173;&#x672F;&#x8BED;"><b>1.5. </b>https&#x76F8;&#x5173;&#x672F;&#x8BED;</a></li><ul><li><span class="title-icon "></span><a href="#ssl-&#x3001;tls"><b>1.5.1. </b>SSL &#x3001;TLS</a></li><li><span class="title-icon "></span><a href="#&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;"><b>1.5.2. </b>&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;</a></li><li><span class="title-icon "></span><a href="#&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;-&#x3001;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;"><b>1.5.3. </b>&#x5BF9;&#x79F0;&#x52A0;&#x5BC6; &#x3001;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;</a></li><li><span class="title-icon "></span><a href="#&#x516C;&#x94A5;-&#x3001;&#x79C1;&#x94A5;"><b>1.5.4. </b>&#x516C;&#x94A5; &#x3001;&#x79C1;&#x94A5;</a></li><li><span class="title-icon "></span><a href="#md5"><b>1.5.5. </b>md5</a></li></ul><li><span class="title-icon "></span><a href="#http-&#x4E0E;-https-&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;"><b>1.6. </b>http &#x4E0E; https &#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#http-&#x5404;&#x4E2A;&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;"><b>1.7. </b>http &#x5404;&#x4E2A;&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#post-&#x548C;-get-&#x7684;&#x533A;&#x522B;"><b>1.8. </b>post &#x548C; get &#x7684;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#http-&#x72B6;&#x6001;&#x7801;"><b>1.9. </b>HTTP &#x72B6;&#x6001;&#x7801;</a></li><li><span class="title-icon "></span><a href="#udp--user-datagram-protocol"><b>1.10. </b>UDP  (User Datagram Protocol)</a></li><li><span class="title-icon "></span><a href="#tcp-&#x4E0E;-udp-&#x7684;&#x533A;&#x522B;"><b>1.11. </b>TCP &#x4E0E; UDP &#x7684;&#x533A;&#x522B;</a></li></ul><li><span class="title-icon "></span><a href="#ftp"><b>2. </b>ftp</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;ftp4j"><b>2.1. </b>&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;ftp4j</a></li><ul><li><span class="title-icon "></span><a href="#ftp&#x767B;&#x5F55;"><b>2.1.1. </b>ftp&#x767B;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#ftp&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF08;&#x5939;&#xFF09;"><b>2.1.2. </b>ftp&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF08;&#x5939;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#ftp&#x65AD;&#x5F00;&#x8FDE;&#x63A5;"><b>2.1.3. </b>ftp&#x65AD;&#x5F00;&#x8FDE;&#x63A5;</a></li><li><span class="title-icon "></span><a href="#ftp&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;"><b>2.1.4. </b>ftp&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#ftp-&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5217;&#x8868;"><b>2.1.5. </b>ftp &#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5217;&#x8868;</a></li><li><span class="title-icon "></span><a href="#ftp-&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#xFF08;&#x8FDB;&#x5EA6;&#x6761;&#xFF09;"><b>2.1.6. </b>ftp &#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#xFF08;&#x8FDB;&#x5EA6;&#x6761;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#ftp-&#x8FDE;&#x63A5;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;"><b>2.1.7. </b>ftp &#x8FDE;&#x63A5;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#ftp-&#x4F20;&#x8F93;&#x8FDB;&#x5EA6;-&#x56DE;&#x8C03;"><b>2.1.8. </b>FTP &#x4F20;&#x8F93;&#x8FDB;&#x5EA6; &#x56DE;&#x8C03;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x573A;&#x666F;"><b>2.1.9. </b>&#x4F7F;&#x7528;&#x573A;&#x666F;</a></li></ul></ul><li><span class="title-icon "></span><a href="#sockt--tcpudp"><b>3. </b>sockt  tcp_udp</a></li><ul><li><span class="title-icon "></span><a href="#tcp&#x6807;&#x5FD7;&#x4F4D;-&#x4F4D;&#x7801;"><b>3.1. </b>TCP&#x6807;&#x5FD7;&#x4F4D; (&#x4F4D;&#x7801;)</a></li><li><span class="title-icon "></span><a href="#&#x672F;&#x8BED;"><b>3.2. </b>&#x672F;&#x8BED;</a></li><ul><li><span class="title-icon "></span><a href="#sequence-number"><b>3.2.1. </b>Sequence number</a></li><li><span class="title-icon "></span><a href="#acknowledge-number"><b>3.2.2. </b>Acknowledge number</a></li><li><span class="title-icon "></span><a href="#msl"><b>3.2.3. </b>MSL</a></li></ul><li><span class="title-icon "></span><a href="#tcp&#x76F8;&#x5173;&#x95EE;&#x9898;"><b>3.3. </b>tcp&#x76F8;&#x5173;&#x95EE;&#x9898;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;2&#x6B21;&#x4E0D;&#x884C;&#x5417;"><b>3.3.1. </b>&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;2&#x6B21;&#x4E0D;&#x884C;&#x5417;?</a></li><li><span class="title-icon "></span><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#x5374;&#x662F;&#x56DB;&#x6B21;&#x6325;&#x624B;&#xFF1F;"><b>3.3.2. </b>&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#x5374;&#x662F;&#x56DB;&#x6B21;&#x6325;&#x624B;&#xFF1F;</a></li><li><span class="title-icon "></span><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x5BA2;&#x6237;&#x7AEF;&#x5728;time-wait&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x7B49;&#x5F85;2msl-maximum-segment-lifetime-&#x7684;&#x65F6;&#x95F4;&#xFF1F;"><b>3.3.3. </b>&#x4E3A;&#x4EC0;&#x4E48;&#x5BA2;&#x6237;&#x7AEF;&#x5728;TIME-WAIT&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x7B49;&#x5F85;2MSL (Maximum Segment Lifetime) &#x7684;&#x65F6;&#x95F4;&#xFF1F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7C98;&#x5305;&#x5904;&#x7406;"><b>3.4. </b>&#x7C98;&#x5305;&#x5904;&#x7406;</a></li><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E09;&#x65B9;&#x5E93;-netty"><b>3.5. </b>&#x7B2C;&#x4E09;&#x65B9;&#x5E93; netty</a></li><li><span class="title-icon "></span><a href="#&#x62D3;&#x5C55;&#x77E5;&#x8BC6;"><b>3.6. </b>&#x62D3;&#x5C55;&#x77E5;&#x8BC6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x5B57;&#x4FE1;&#x53F7;-&#x3001;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;"><b>3.6.1. </b>&#x6570;&#x5B57;&#x4FE1;&#x53F7; &#x3001;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#osi--open-system-interconnection--&#x4E03;&#x5C42;&#x6A21;&#x578B;"><b>3.6.2. </b>OSI ( Open System Interconnection ) &#x4E03;&#x5C42;&#x6A21;&#x578B;</a></li></ul></ul><li><span class="title-icon "></span><a href="#usb-&#x901A;&#x4FE1;"><b>4. </b>usb &#x901A;&#x4FE1;</a></li><ul><li><span class="title-icon "></span><a href="#aoa&#x534F;&#x8BAE;"><b>4.1. </b>AOA&#x534F;&#x8BAE;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E00;-&#xFF1A;android&#x8BBE;&#x5907;&#x4F5C;&#x4E3A;&#x4ECE;&#x673A;"><b>4.2. </b>&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E00; &#xFF1A;android&#x8BBE;&#x5907;&#x4F5C;&#x4E3A;&#x4ECE;&#x673A;</a></li><li><span class="title-icon "></span><a href="#usb&#x901A;&#x4FE1;demo"><b>4.3. </b>usb&#x901A;&#x4FE1;demo</a></li><ul><li><span class="title-icon "></span><a href="#musbaccessorymanagerjava"><b>4.3.1. </b>MusbAccessoryManager.java</a></li><li><span class="title-icon "></span><a href="#usbmsgclientjava"><b>4.3.2. </b>UsbMsgClient.java</a></li><li><span class="title-icon "></span><a href="#mystateconfigjava"><b>4.3.3. </b>MyStateConfig.java</a></li><li><span class="title-icon "></span><a href="#xml&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x3001;usb&#x63D2;&#x5165;&#x3001;&#x62D4;&#x51FA;&#x76D1;&#x542C;"><b>4.3.4. </b>xml&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x3001;usb&#x63D2;&#x5165;&#x3001;&#x62D4;&#x51FA;&#x76D1;&#x542C;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;"><b>4.3.5. </b>&#x4F7F;&#x7528;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x79C1;&#x6709;&#x534F;&#x8BAE;"><b>5. </b>&#x79C1;&#x6709;&#x534F;&#x8BAE;</a></li><ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x8282;&#x6570;"><b>5.1. </b>&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x8282;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5FC3;&#x8DF3;&#x673A;&#x5236;"><b>6. </b>&#x5FC3;&#x8DF3;&#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x5B9A;&#x65F6;&#x6279;&#x91CF;&#x6267;&#x884C;-jobscheduler"><b>7. </b>&#x5B9A;&#x65F6;&#x6279;&#x91CF;&#x6267;&#x884C; JobScheduler</a></li></ul></div><a href="#http-&#x3001;https-&#x65B9;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="http-&#x3001;https-&#x65B9;&#x5F0F;"><a name="http-&#x3001;https-&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#http-&#x3001;https-&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. http &#x3001;https &#x65B9;&#x5F0F;</h1>
+<pre><code class="lang-text">1&#x3001;http&#x662F;&#x57FA;&#x4E8E; TCP/IP &#x7684;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE; &#x3002;
+2&#x3001; &#x91C7;&#x7528; &#x201C;&#x4E00;&#x95EE;&#x4E00;&#x7B54;&#x201D; &#x6A21;&#x5F0F; &#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x4FDD;&#x6301;&#x957F;&#x8FDE;&#x63A5;&#x3002;
+3&#x3001;HTTP&#x5141;&#x8BB8;&#x4F20;&#x8F93;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x3002;&#x4F20;&#x8F93;&#x7684;&#x7C7B;&#x578B;&#x7531;Content-Type&#x52A0;&#x4EE5;&#x6807;&#x8BB0;&#x3002;
+</code></pre>
+<h2 id="http-content-type"><a name="http-content-type" class="anchor-navigation-ex-anchor" href="#http-content-type"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. HTTP Content-type</h2>
+<p><a href="http://tool.oschina.net/commons" target="_blank">HTTP Content-type &#x624B;&#x518C;</a></p>
+<table>
+<thead>
+<tr>
+<th>&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;</th>
+<th>Content-Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.*&#xFF08; &#x4E8C;&#x8FDB;&#x5236;&#x6D41;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF09;</td>
+<td>application/octet-stream</td>
+</tr>
+<tr>
+<td>.txt</td>
+<td>text/plain</td>
+</tr>
+<tr>
+<td>.xml</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.css</td>
+<td>text/css</td>
+</tr>
+<tr>
+<td>.html</td>
+<td>text/html</td>
+</tr>
+<tr>
+<td>.js</td>
+<td>application/x-javascript</td>
+</tr>
+<tr>
+<td>&#x65E0;&#x6587;&#x4EF6;&#x7684;&#x8868;&#x5355;&#x63D0;&#x4EA4;</td>
+<td>application/x-www-form-urlencoded</td>
+</tr>
+<tr>
+<td>&#x6709;&#x6587;&#x4EF6;&#x7684;&#x8868;&#x5355;&#x63D0;&#x4EA4;</td>
+<td>multipart/form-data</td>
+</tr>
+<tr>
+<td>json&#x683C;&#x5F0F;&#x7684;&#x8BF7;&#x6C42;</td>
+<td>application/json</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5EFA;&#x7ACB;&#x3001;&#x65AD;&#x5F00;-http&#x8FDE;&#x63A5;"><a name="&#x5EFA;&#x7ACB;&#x3001;&#x65AD;&#x5F00;-http&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x5EFA;&#x7ACB;&#x3001;&#x65AD;&#x5F00;-http&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5EFA;&#x7ACB;&#x3001;&#x65AD;&#x5F00; http&#x8FDE;&#x63A5;</h2>
+<p>http&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x5E95;&#x5C42;&#x662F;&#x901A;&#x8FC7; Tcp&#x534F;&#x8BAE; &#x7ECF;&#x8FC7;&#x4E86;3&#x6B21;&#x63E1;&#x624B;&#x3001;&#x65AD;&#x5F00;&#x7ECF;&#x8FC7;4&#x6B21;&#x6325;&#x624B;&#x3002;&#x5177;&#x4F53;&#x8BF7;&#x67E5;&#x770B;tcp&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x3002;</p>
+<h2 id="tcpip&#x534F;&#x8BAE;&#x65CF;"><a name="tcpip&#x534F;&#x8BAE;&#x65CF;" class="anchor-navigation-ex-anchor" href="#tcpip&#x534F;&#x8BAE;&#x65CF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. TCP/IP&#x534F;&#x8BAE;&#x65CF;</h2>
+<p><img src="../pics/201802071433_osChina_tcp_ip&#x534F;&#x8BAE;&#x65CF;.png" alt=""></p>
+<h2 id="https&#x8BF7;&#x6C42;"><a name="https&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#https&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. https&#x8BF7;&#x6C42;</h2>
+<p>&#x5373;&#x4F7F;&#x91C7;&#x7528;&#x4E86; HTTPS&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#xFF0C;&#x6216;&#x8005;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B49;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x76EE;&#x524D; HTTPS &#x76EE;&#x524D;&#x4F7F;&#x7528;&#x7684;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x9700;&#x8981;&#x5DE8;&#x5927;&#x7684;&#x8BA1;&#x7B97;&#x91CF;&#x624D;&#x80FD;&#x7834;&#x89E3;</p>
+<pre><code class="lang-text">HTTPS &#x7684;&#x76EE;&#x7684;&#x4E3B;&#x8981;&#x6709;&#x4E09;&#x4E2A;&#xFF0C;
+&#x4E00;&#x4E2A;&#x662F;&#x6570;&#x636E;&#x7684;&#x4FDD;&#x5BC6;&#x6027;&#xFF0C;&#x4F60;&#x7ED9;&#x522B;&#x4EBA;&#x9001;&#x4E2A;&#x90AE;&#x5305;&#xFF0C;&#x4F46;&#x90AE;&#x5305;&#x662F;&#x6253;&#x4E86;&#x5C01;&#x5370;&#x7684;&#xFF0C;&#x5FEB;&#x9012;&#x5458;&#x4E0D;&#x77E5;&#x9053;&#x5305;&#x91CC;&#x88C5;&#x7684;&#x662F;&#x5565;&#x3002;
+&#x7B2C;&#x4E8C;&#x662F;&#x6570;&#x636E;&#x7684;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x5FEB;&#x9012;&#x5458;&#x4E0D;&#x77E5;&#x9053;&#x90AE;&#x5305;&#x662F;&#x5565;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x8C03;&#x5305;&#x554A;&#xFF0C;HTTPS &#x53D1;&#x73B0;&#x4E86;&#x8C03;&#x5305;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x62D2;&#x6536;&#x3002;
+&#x7B2C;&#x4E09;&#x5C31;&#x662F;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF0C;HTTPS &#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x90AE;&#x5305;&#x88AB;&#x6B63;&#x786E;&#x7684;&#x9001;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x63A5;&#x6536;&#x65B9;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7B2C;&#x4E09;&#x65B9;&#x3002;
+</code></pre>
+<h2 id="https&#x76F8;&#x5173;&#x672F;&#x8BED;"><a name="https&#x76F8;&#x5173;&#x672F;&#x8BED;" class="anchor-navigation-ex-anchor" href="#https&#x76F8;&#x5173;&#x672F;&#x8BED;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. https&#x76F8;&#x5173;&#x672F;&#x8BED;</h2>
+<h3 id="ssl-&#x3001;tls"><a name="ssl-&#x3001;tls" class="anchor-navigation-ex-anchor" href="#ssl-&#x3001;tls"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.1. SSL &#x3001;TLS</h3>
+<pre><code class="lang-text">SSL&#xFF08;Secure Sockets Layer&#xFF09; , &#x7F51;&#x666F;&#x516C;&#x53F8;&#x8BBE;&#x8BA1;&#x7684;&#x3002;
+&#x5230;&#x4E86;1999&#x5E74;&#xFF0C;SSL &#x56E0;&#x4E3A;&#x5E94;&#x7528;&#x5E7F;&#x6CDB;&#xFF0C;&#x5DF2;&#x7ECF;&#x6210;&#x4E3A;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x7684;&#x4E8B;&#x5B9E;&#x6807;&#x51C6;&#x3002;
+IETF &#x5C31;&#x5728;&#x90A3;&#x5E74;&#x628A; SSL &#x6807;&#x51C6;&#x5316;&#x3002;
+&#x6807;&#x51C6;&#x5316;&#x4E4B;&#x540E;&#x7684;&#x540D;&#x79F0;&#x6539;&#x4E3A; TLS (Transport Layer Security ) ,
+&#x8FD9;&#x4E24;&#x8005;&#x53EF;&#x4EE5;&#x89C6;&#x4F5C;&#x540C;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#x7684;&#x4E0D;&#x540C;&#x9636;&#x6BB5;&#x3002;
+</code></pre>
+<h3 id="&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;"><a name="&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.2. &#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;</h3>
+<pre><code class="lang-text">&#x5355;&#x5411;&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;: &#x4EFB;&#x4F55;&#x5BA2;&#x6237;&#x7AEF;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;
+&#x53CC;&#x5411;&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;: &#x88AB;&#x5141;&#x8BB8;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;
+</code></pre>
+<h3 id="&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;-&#x3001;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;"><a name="&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;-&#x3001;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;-&#x3001;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.3. &#x5BF9;&#x79F0;&#x52A0;&#x5BC6; &#x3001;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;</h3>
+<pre><code class="lang-text">&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#xFF1A;&#x52A0;&#x5BC6;&#x548C;&#x89E3;&#x5BC6;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x79D8;&#x94A5;
+// &#x5BF9;&#x79F0;&#x52A0;&#x5BC6;
+&#x5E38;&#x89C1;&#x7684; &#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5; &#x6709; DES&#x3001;3DES&#x3001;Blowfish&#x3001;IDEA&#x3001;RC4&#x3001;RC5&#x3001;RC6 &#x3001; AES &#x3002;
+&#x5728;&#x6570;&#x636E;&#x4F20;&#x9001;&#x524D;&#xFF0C;&#x53D1;&#x9001;&#x65B9;&#x548C;&#x63A5;&#x6536;&#x65B9;&#x5FC5;&#x987B;&#x5546;&#x5B9A;&#x597D;&#x79D8;&#x94A5;&#x3002;
+&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x79D8;&#x94A5;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x548C;&#x89E3;&#x5BC6;&#x3002;&#x5982;&#x679C;&#x4E00;&#x65B9;&#x7684;&#x79D8;&#x94A5;&#x906D;&#x6CC4;&#x9732;&#xFF0C;&#x90A3;&#x4E48;&#x6574;&#x4E2A;&#x901A;&#x4FE1;&#x5C31;&#x4F1A;&#x88AB;&#x7834;&#x89E3;&#x3002;
+
+&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#xFF1A;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#xFF0C;&#x79C1;&#x94A5;&#x89E3;&#x5BC6;
+https &#x5728;&#x5185;&#x5BB9;&#x4F20;&#x8F93;&#x7684;&#x52A0;&#x5BC6;&#x4E0A;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#xFF0C;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x53EA;&#x4F5C;&#x7528;&#x5728;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;&#x9636;&#x6BB5;&#x3002;
+// &#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;
+&#x5E38;&#x89C1;&#x7684;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x6709;: RSA&#x3001;ECC &#x3001;Diffie-Hellman&#x3001;El Gamal&#x3001;DSA 
+&#x79D8;&#x94A5;&#x81EA;&#x5DF1;&#x79C1;&#x4E0B;&#x4FDD;&#x7BA1;&#xFF0C;&#x516C;&#x94A5;&#x53EF;&#x4EE5;&#x516C;&#x5F00; &#xFF0C;&#x522B;&#x4EBA;&#x901A;&#x8FC7;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x7684;&#x4FE1;&#x606F;&#x53D1;&#x7ED9;&#x4F60;&#xFF0C;&#x53EA;&#x6709;&#x901A;&#x8FC7;&#x79C1;&#x94A5;&#x624D;&#x80FD;&#x89E3;&#x5BC6;&#x3002;
+&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x522B;&#x4EBA;&#x628A;&#x79D8;&#x94A5;&#x6CC4;&#x9732;&#x800C;&#x5BFC;&#x81F4;&#x6574;&#x4E2A;&#x901A;&#x4FE1;&#x88AB;&#x7834;&#x89E3;&#x3002;
+</code></pre>
+<h3 id="&#x516C;&#x94A5;-&#x3001;&#x79C1;&#x94A5;"><a name="&#x516C;&#x94A5;-&#x3001;&#x79C1;&#x94A5;" class="anchor-navigation-ex-anchor" href="#&#x516C;&#x94A5;-&#x3001;&#x79C1;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.4. &#x516C;&#x94A5; &#x3001;&#x79C1;&#x94A5;</h3>
+<pre><code class="lang-text">&#x516C;&#x94A5;&#xFF1A;&#x8D1F;&#x8D23;&#x52A0;&#x5BC6; &#xFF0C;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x4F20;&#x8F93;
+&#x79C1;&#x94A5;&#xFF1A;&#x8D1F;&#x8D23;&#x89E3;&#x5BC6; &#xFF0C;&#x672C;&#x5730;&#x4FDD;&#x7BA1;&#xFF0C;&#x522B;&#x4EBA;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;
+</code></pre>
+<h3 id="md5"><a name="md5" class="anchor-navigation-ex-anchor" href="#md5"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.5. md5</h3>
+<pre><code class="lang-text">md5 &#x4E0D;&#x662F;&#x5BF9;&#x79F0;&#x548C;&#x975E;&#x5BF9;&#x79F0;&#x7B97;&#x6CD5;&#x3002;&#x800C;&#x662F;&#x4E00;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6765;&#x505A;&#x4E00;&#x81F4;&#x6027;&#x6821;&#x9A8C;&#x3002;
+&#x5BF9;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x6216;&#x5185;&#x5BB9; &#x90FD;&#x751F;&#x6210; &#x4E00;&#x4E32; 32&#x4F4D;&#x7684;&#x5B57;&#x7B26;&#x3002;&#x4E0D;&#x80FD;&#x6839;&#x636E;&#x5B57;&#x7B26;&#x53CD;&#x63A8;&#x3002;
+&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x8981;&#x9A8C;&#x8BC1;&#x4E0B; md5&#x548C;&#x7ED9;&#x51FA;&#x7684;&#x662F;&#x5426;&#x4E00;&#x81F4;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x4E00;&#x81F4; &#x8BF4;&#x660E;&#x4F60;&#x4E0B;&#x8F7D;&#x51FA;&#x9519;&#x4E86;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x88AB;&#x522B;&#x4EBA;&#x4FEE;&#x6539;&#x8FC7;&#x3002;
+&#x867D;&#x7136;MD5 &#x6709;&#x5F88;&#x5C0F;&#x5F88;&#x5C0F;&#x7684;&#x6982;&#x7387;&#x53D1;&#x751F;&#x78B0;&#x649E;(&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x4E0D;&#x8BA1;)&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x975E;&#x5E38;&#x4F18;&#x79C0;&#x7684;&#x7B97;&#x6CD5;&#x3002;
+</code></pre>
+<h2 id="http-&#x4E0E;-https-&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;"><a name="http-&#x4E0E;-https-&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#http-&#x4E0E;-https-&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. http &#x4E0E; https &#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;</h2>
+<pre><code class="lang-text">
+http&#x662F;&#x8D85;&#x6587;&#x672C;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF0C;&#x4FE1;&#x606F;&#x662F;&#x660E;&#x6587;&#x4F20;&#x8F93;&#x3002;
+https &#x591A;&#x4E86; SSL/tls &#x5C42;&#x3002;&#x4F7F;&#x7528;&#x4E86;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;(&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x548C;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;) ,
+&#x5927;&#x5927;&#x589E;&#x52A0;&#x4E86;&#x6570;&#x636E;&#x7684;&#x4F20;&#x8F93;&#x5B89;&#x5168;&#x3002;
+
+&#x7F51;&#x666F;&#x516C;&#x53F8;&#x8BBE;&#x8BA1;&#x4E86; SSL &#x534F;&#x8BAE;&#x7528;&#x4E8E;&#x5BF9;HTTP&#x534F;&#x8BAE;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#xFF0C;&#x4ECE;&#x800C;&#x5C31;&#x8BDE;&#x751F;&#x4E86;HTTPS&#x3002;
+(https &#x5728;&#x5185;&#x5BB9;&#x4F20;&#x8F93;&#x7684;&#x52A0;&#x5BC6;&#x4E0A;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#xFF0C;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x53EA;&#x4F5C;&#x7528;&#x5728;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;&#x9636;&#x6BB5;&#x3002;)
+</code></pre>
+<h2 id="http-&#x5404;&#x4E2A;&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;"><a name="http-&#x5404;&#x4E2A;&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#http-&#x5404;&#x4E2A;&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. http &#x5404;&#x4E2A;&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;</h2>
+<pre><code class="lang-text">// HTTP/0.9 
+&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x7684;HTTP&#x534F;&#x8BAE; &#x3002;
+&#x53EA;&#x652F;&#x6301; GET &#x8BF7;&#x6C42;&#x65B9;&#x5F0F; &#x3002;
+
+// HTTP/1.0
+&#x5F00;&#x59CB;&#x652F;&#x6301;&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x8FC7;POST&#x65B9;&#x6CD5; &#x3002;
+&#x9700;&#x8981;&#x4F7F;&#x7528; keep-alive &#x53C2;&#x6570;&#x6765;&#x544A;&#x77E5;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x8981;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x957F;&#x8FDE;&#x63A5;&#x3002;
+
+// HTTP/1.1
+&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x957F;&#x8FDE;&#x63A5;&#x3002;
+
+// http1.2 
+&#x4F7F;&#x7528;&#x4E86;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x505A;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x5E76;&#x53D1;&#x5904;&#x7406;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x800C;&#x4E14;&#x5E76;&#x53D1;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x91CF;&#x6BD4;HTTP1.1&#x5927;&#x4E86;&#x597D;&#x51E0;&#x4E2A;&#x6570;&#x91CF;&#x7EA7;&#x3002;
+
+// http2.0
+&#x4F7F;&#x7528; HPACK &#x7B97;&#x6CD5;&#x5BF9; header &#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x538B;&#x7F29;&#xFF0C; &#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x4F20;&#x8F93;&#x5C31;&#x4F1A;&#x66F4;&#x5FEB;&#x3002;
+&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x5BF9;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x591A;&#x4E2A;&#x54CD;&#x5E94;&#x3002;
+
+// HTTP3.0 
+HTTP2.0 &#x89E3;&#x51B3;&#x4E86;&#x5F88;&#x591A; 1.1&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F46;HTTP/2&#x4ECD;&#x7136;&#x5B58;&#x5728;&#x4E00;&#x4E9B;&#x7F3A;&#x9677;&#xFF0C;
+&#x8FD9;&#x4E9B;&#x7F3A;&#x9677;&#x5E76;&#x4E0D;&#x662F;&#x6765;&#x81EA;&#x4E8E;HTTP/2&#x534F;&#x8BAE;&#x672C;&#x8EAB;&#xFF0C;&#x800C;&#x662F;&#x6765;&#x6E90;&#x4E8E;&#x5E95;&#x5C42;&#x7684;TCP&#x534F;&#x8BAE;&#xFF0C;
+&#x6211;&#x4EEC;&#x77E5;&#x9053;TCP&#x94FE;&#x63A5;&#x662F;&#x53EF;&#x9760;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E86;&#x4E22;&#x5305;&#xFF0C;&#x90A3;&#x4E48;&#x6574;&#x4E2A;&#x8FDE;&#x63A5;&#x90FD;&#x8981;&#x7B49;&#x5F85;&#x91CD;&#x4F20;&#xFF0C;
+HTTP/1.1&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x4F7F;&#x7528;6&#x4E2A;TCP&#x8FDE;&#x63A5;&#xFF0C;&#x4E00;&#x4E2A;&#x963B;&#x585E;&#x53E6;&#x5916;&#x4E94;&#x4E2A;&#x8FD8;&#x80FD;&#x5DE5;&#x4F5C;&#xFF0C;
+&#x4F46;HTTP/2&#x53EA;&#x6709;&#x4E00;&#x4E2A;TCP&#x8FDE;&#x63A5;&#xFF0C;&#x963B;&#x585E;&#x7684;&#x95EE;&#x9898;&#x4FBF;&#x88AB;&#x653E;&#x5927;&#x4E86;&#x3002;
+&#x7531;&#x4E8E;TCP&#x534F;&#x8BAE;&#x5DF2;&#x7ECF;&#x88AB;&#x5E7F;&#x6CDB;&#x4F7F;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x5F88;&#x96BE;&#x76F4;&#x63A5;&#x4FEE;&#x6539;TCP&#x534F;&#x8BAE;&#xFF0C;
+&#x57FA;&#x4E8E;&#x6B64;&#xFF0C;HTTP/3&#x9009;&#x62E9;&#x4E86;&#x4E00;&#x4E2A;&#x6298;&#x8877;&#x7684;&#x65B9;&#x6CD5;&#x2014;&#x2014;UDP&#x534F;&#x8BAE;&#x3002;
+</code></pre>
+<h2 id="post-&#x548C;-get-&#x7684;&#x533A;&#x522B;"><a name="post-&#x548C;-get-&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#post-&#x548C;-get-&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. post &#x548C; get &#x7684;&#x533A;&#x522B;</h2>
+<pre><code class="lang-text">1&#x3001;get&#x53C2;&#x6570;&#x901A;&#x8FC7;url&#x4F20;&#x9012;&#xFF0C;post&#x653E;&#x5728;request body&#x4E2D;&#x3002;
+2&#x3001;get&#x8BF7;&#x6C42;&#x5728;url&#x4E2D;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x662F;&#x6709;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x7684;&#xFF0C;&#x800C;post&#x6CA1;&#x6709;&#x3002;
+3&#x3001;get&#x6BD4;post&#x66F4;&#x4E0D;&#x5B89;&#x5168;&#xFF0C;&#x56E0;&#x4E3A;&#x53C2;&#x6570;&#x76F4;&#x63A5;&#x66B4;&#x9732;&#x5728;url&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x7528;&#x6765;&#x4F20;&#x9012;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x3002;
+4&#x3001;get&#x8BF7;&#x6C42;&#x53EA;&#x80FD;&#x8FDB;&#x884C; UrlEncode&#x7F16;&#x89E3;&#x7801; &#xFF0C;&#x800C;post&#x652F;&#x6301;&#x591A;&#x79CD;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3002;
+5&#x3001;get&#x8BF7;&#x6C42;&#x4F1A;&#x6D4F;&#x89C8;&#x5668;&#x4E3B;&#x52A8;cache&#xFF0C;&#x800C;POST&#x4E0D;&#x4F1A;&#xFF0C;&#x9664;&#x975E;&#x624B;&#x52A8;&#x8BBE;&#x7F6E;&#x3002;
+6&#x3001;get&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x4F1A;&#x88AB;&#x5B8C;&#x6574;&#x4FDD;&#x7559;&#x5728;&#x6D4F;&#x89C8;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x91CC;&#xFF0C;&#x800C;post&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x4E0D;&#x4F1A;&#x88AB;&#x4FDD;&#x7559;&#x3002;
+7&#x3001;GET&#x548C;POST&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F;TCP&#x94FE;&#x63A5;&#xFF0C;&#x5E76;&#x65E0;&#x5DEE;&#x522B;&#x3002;
+&#x4F46;&#x662F;&#x7531;&#x4E8E;HTTP&#x7684;&#x89C4;&#x5B9A;&#x548C;&#x6D4F;&#x89C8;&#x5668;/&#x670D;&#x52A1;&#x5668;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x5BFC;&#x81F4;&#x4ED6;&#x4EEC;&#x5728;&#x5E94;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F53;&#x73B0;&#x51FA;&#x4E00;&#x4E9B;&#x4E0D;&#x540C;&#x3002;
+</code></pre>
+<h2 id="http-&#x72B6;&#x6001;&#x7801;"><a name="http-&#x72B6;&#x6001;&#x7801;" class="anchor-navigation-ex-anchor" href="#http-&#x72B6;&#x6001;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. HTTP &#x72B6;&#x6001;&#x7801;</h2>
+<pre><code class="lang-text">&#x5F53;&#x6D4F;&#x89C8;&#x5668;&#x63A5;&#x6536;&#x5E76;&#x663E;&#x793A;&#x7F51;&#x9875;&#x524D;&#xFF0C;
+&#x6B64;&#x7F51;&#x9875;&#x6240;&#x5728;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;HTTP&#x72B6;&#x6001;&#x7801;&#x7684;&#x4FE1;&#x606F;&#x5934;&#x7528;&#x4EE5;&#x54CD;&#x5E94;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8BF7;&#x6C42;&#x3002;
+
+&#x4E0B;&#x9762;&#x662F;&#x5E38;&#x89C1;&#x7684;HTTP&#x72B6;&#x6001;&#x7801;&#xFF1A;
+200 - &#x8BF7;&#x6C42;&#x6210;&#x529F;
+301 - &#x8D44;&#x6E90;&#xFF08;&#x7F51;&#x9875;&#x7B49;&#xFF09;&#x88AB;&#x6C38;&#x4E45;&#x8F6C;&#x79FB;&#x5230;&#x5176;&#x5B83;URL
+404 - &#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#xFF08;&#x7F51;&#x9875;&#x7B49;&#xFF09;&#x4E0D;&#x5B58;&#x5728;
+500 - &#x5185;&#x90E8;&#x670D;&#x52A1;&#x5668;&#x9519;&#x8BEF;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>100</th>
+<th>Continue</th>
+<th>&#x7EE7;&#x7EED;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x5E94;&#x7EE7;&#x7EED;&#x5176;&#x8BF7;&#x6C42;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>Switching Protocols</td>
+<td>&#x5207;&#x6362;&#x534F;&#x8BAE;&#x3002;&#x670D;&#x52A1;&#x5668;&#x6839;&#x636E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x5207;&#x6362;&#x534F;&#x8BAE;&#x3002;&#x53EA;&#x80FD;&#x5207;&#x6362;&#x5230;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5207;&#x6362;&#x5230;HTTP&#x7684;&#x65B0;&#x7248;&#x672C;&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>&#x8BF7;&#x6C42;&#x6210;&#x529F;&#x3002;&#x4E00;&#x822C;&#x7528;&#x4E8E;GET&#x4E0E;POST&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td>&#x5DF2;&#x521B;&#x5EFA;&#x3002;&#x6210;&#x529F;&#x8BF7;&#x6C42;&#x5E76;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x7684;&#x8D44;&#x6E90;</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Accepted</td>
+<td>&#x5DF2;&#x63A5;&#x53D7;&#x3002;&#x5DF2;&#x7ECF;&#x63A5;&#x53D7;&#x8BF7;&#x6C42;&#xFF0C;&#x4F46;&#x672A;&#x5904;&#x7406;&#x5B8C;&#x6210;</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Non-Authoritative Information</td>
+<td>&#x975E;&#x6388;&#x6743;&#x4FE1;&#x606F;&#x3002;&#x8BF7;&#x6C42;&#x6210;&#x529F;&#x3002;&#x4F46;&#x8FD4;&#x56DE;&#x7684;meta&#x4FE1;&#x606F;&#x4E0D;&#x5728;&#x539F;&#x59CB;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x526F;&#x672C;</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td>&#x65E0;&#x5185;&#x5BB9;&#x3002;&#x670D;&#x52A1;&#x5668;&#x6210;&#x529F;&#x5904;&#x7406;&#xFF0C;&#x4F46;&#x672A;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x3002;&#x5728;&#x672A;&#x66F4;&#x65B0;&#x7F51;&#x9875;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x786E;&#x4FDD;&#x6D4F;&#x89C8;&#x5668;&#x7EE7;&#x7EED;&#x663E;&#x793A;&#x5F53;&#x524D;&#x6587;&#x6863;</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Reset Content</td>
+<td>&#x91CD;&#x7F6E;&#x5185;&#x5BB9;&#x3002;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x6210;&#x529F;&#xFF0C;&#x7528;&#x6237;&#x7EC8;&#x7AEF;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x5E94;&#x91CD;&#x7F6E;&#x6587;&#x6863;&#x89C6;&#x56FE;&#x3002;&#x53EF;&#x901A;&#x8FC7;&#x6B64;&#x8FD4;&#x56DE;&#x7801;&#x6E05;&#x9664;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8868;&#x5355;&#x57DF;</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Partial Content</td>
+<td>&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x3002;&#x670D;&#x52A1;&#x5668;&#x6210;&#x529F;&#x5904;&#x7406;&#x4E86;&#x90E8;&#x5206;GET&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>300</td>
+<td>Multiple Choices</td>
+<td>&#x591A;&#x79CD;&#x9009;&#x62E9;&#x3002;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x5305;&#x62EC;&#x591A;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x76F8;&#x5E94;&#x53EF;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x7279;&#x5F81;&#x4E0E;&#x5730;&#x5740;&#x7684;&#x5217;&#x8868;&#x7528;&#x4E8E;&#x7528;&#x6237;&#x7EC8;&#x7AEF;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x9009;&#x62E9;</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Moved Permanently</td>
+<td>&#x6C38;&#x4E45;&#x79FB;&#x52A8;&#x3002;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x5DF2;&#x88AB;&#x6C38;&#x4E45;&#x7684;&#x79FB;&#x52A8;&#x5230;&#x65B0;URI&#xFF0C;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x4F1A;&#x5305;&#x62EC;&#x65B0;&#x7684;URI&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x5B9A;&#x5411;&#x5230;&#x65B0;URI&#x3002;&#x4ECA;&#x540E;&#x4EFB;&#x4F55;&#x65B0;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x5E94;&#x4F7F;&#x7528;&#x65B0;&#x7684;URI&#x4EE3;&#x66FF;</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Found</td>
+<td>&#x4E34;&#x65F6;&#x79FB;&#x52A8;&#x3002;&#x4E0E;301&#x7C7B;&#x4F3C;&#x3002;&#x4F46;&#x8D44;&#x6E90;&#x53EA;&#x662F;&#x4E34;&#x65F6;&#x88AB;&#x79FB;&#x52A8;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x5E94;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#x539F;&#x6709;URI</td>
+</tr>
+<tr>
+<td>303</td>
+<td>See Other</td>
+<td>&#x67E5;&#x770B;&#x5176;&#x5B83;&#x5730;&#x5740;&#x3002;&#x4E0E;301&#x7C7B;&#x4F3C;&#x3002;&#x4F7F;&#x7528;GET&#x548C;POST&#x8BF7;&#x6C42;&#x67E5;&#x770B;</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified</td>
+<td>&#x672A;&#x4FEE;&#x6539;&#x3002;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x672A;&#x4FEE;&#x6539;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x6B64;&#x72B6;&#x6001;&#x7801;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#x4EFB;&#x4F55;&#x8D44;&#x6E90;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x5E38;&#x4F1A;&#x7F13;&#x5B58;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5934;&#x4FE1;&#x606F;&#x6307;&#x51FA;&#x5BA2;&#x6237;&#x7AEF;&#x5E0C;&#x671B;&#x53EA;&#x8FD4;&#x56DE;&#x5728;&#x6307;&#x5B9A;&#x65E5;&#x671F;&#x4E4B;&#x540E;&#x4FEE;&#x6539;&#x7684;&#x8D44;&#x6E90;</td>
+</tr>
+<tr>
+<td>305</td>
+<td>Use Proxy</td>
+<td>&#x4F7F;&#x7528;&#x4EE3;&#x7406;&#x3002;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x4EE3;&#x7406;&#x8BBF;&#x95EE;</td>
+</tr>
+<tr>
+<td>306</td>
+<td>Unused</td>
+<td>&#x5DF2;&#x7ECF;&#x88AB;&#x5E9F;&#x5F03;&#x7684;HTTP&#x72B6;&#x6001;&#x7801;</td>
+</tr>
+<tr>
+<td>307</td>
+<td>Temporary Redirect</td>
+<td>&#x4E34;&#x65F6;&#x91CD;&#x5B9A;&#x5411;&#x3002;&#x4E0E;302&#x7C7B;&#x4F3C;&#x3002;&#x4F7F;&#x7528;GET&#x8BF7;&#x6C42;&#x91CD;&#x5B9A;&#x5411;</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x7406;&#x89E3;</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>&#x8BF7;&#x6C42;&#x8981;&#x6C42;&#x7528;&#x6237;&#x7684;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;</td>
+</tr>
+<tr>
+<td>402</td>
+<td>Payment Required</td>
+<td>&#x4FDD;&#x7559;&#xFF0C;&#x5C06;&#x6765;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x7406;&#x89E3;&#x8BF7;&#x6C42;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4F46;&#x662F;&#x62D2;&#x7EDD;&#x6267;&#x884C;&#x6B64;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x6839;&#x636E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x627E;&#x5230;&#x8D44;&#x6E90;&#xFF08;&#x7F51;&#x9875;&#xFF09;&#x3002;&#x901A;&#x8FC7;&#x6B64;&#x4EE3;&#x7801;&#xFF0C;&#x7F51;&#x7AD9;&#x8BBE;&#x8BA1;&#x4EBA;&#x5458;&#x53EF;&#x8BBE;&#x7F6E;&quot;&#x60A8;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x65E0;&#x6CD5;&#x627E;&#x5230;&quot;&#x7684;&#x4E2A;&#x6027;&#x9875;&#x9762;</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x88AB;&#x7981;&#x6B62;</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x6839;&#x636E;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x5185;&#x5BB9;&#x7279;&#x6027;&#x5B8C;&#x6210;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>407</td>
+<td>Proxy Authentication Required</td>
+<td>&#x8BF7;&#x6C42;&#x8981;&#x6C42;&#x4EE3;&#x7406;&#x7684;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#xFF0C;&#x4E0E;401&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x8BF7;&#x6C42;&#x8005;&#x5E94;&#x5F53;&#x4F7F;&#x7528;&#x4EE3;&#x7406;&#x8FDB;&#x884C;&#x6388;&#x6743;</td>
+</tr>
+<tr>
+<td>408</td>
+<td>Request Time-out</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x7B49;&#x5F85;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x8BF7;&#x6C42;&#x65F6;&#x95F4;&#x8FC7;&#x957F;&#xFF0C;&#x8D85;&#x65F6;</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x5B8C;&#x6210;&#x5BA2;&#x6237;&#x7AEF;&#x7684; PUT &#x8BF7;&#x6C42;&#x65F6;&#x53EF;&#x80FD;&#x8FD4;&#x56DE;&#x6B64;&#x4EE3;&#x7801;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x65F6;&#x53D1;&#x751F;&#x4E86;&#x51B2;&#x7A81;</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x5DF2;&#x7ECF;&#x4E0D;&#x5B58;&#x5728;&#x3002;410&#x4E0D;&#x540C;&#x4E8E;404&#xFF0C;&#x5982;&#x679C;&#x8D44;&#x6E90;&#x4EE5;&#x524D;&#x6709;&#x73B0;&#x5728;&#x88AB;&#x6C38;&#x4E45;&#x5220;&#x9664;&#x4E86;&#x53EF;&#x4F7F;&#x7528;410&#x4EE3;&#x7801;&#xFF0C;&#x7F51;&#x7AD9;&#x8BBE;&#x8BA1;&#x4EBA;&#x5458;&#x53EF;&#x901A;&#x8FC7;301&#x4EE3;&#x7801;&#x6307;&#x5B9A;&#x8D44;&#x6E90;&#x7684;&#x65B0;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>411</td>
+<td>Length Required</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x4E0D;&#x5E26;Content-Length&#x7684;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>412</td>
+<td>Precondition Failed</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#x7684;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Request Entity Too Large</td>
+<td>&#x7531;&#x4E8E;&#x8BF7;&#x6C42;&#x7684;&#x5B9E;&#x4F53;&#x8FC7;&#x5927;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#xFF0C;&#x56E0;&#x6B64;&#x62D2;&#x7EDD;&#x8BF7;&#x6C42;&#x3002;&#x4E3A;&#x9632;&#x6B62;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8FDE;&#x7EED;&#x8BF7;&#x6C42;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x53EF;&#x80FD;&#x4F1A;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x3002;&#x5982;&#x679C;&#x53EA;&#x662F;&#x670D;&#x52A1;&#x5668;&#x6682;&#x65F6;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#xFF0C;&#x5219;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x4E2A;Retry-After&#x7684;&#x54CD;&#x5E94;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>414</td>
+<td>Request-URI Too Large</td>
+<td>&#x8BF7;&#x6C42;&#x7684;URI&#x8FC7;&#x957F;&#xFF08;URI&#x901A;&#x5E38;&#x4E3A;&#x7F51;&#x5740;&#xFF09;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x5904;&#x7406;</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported Media Type</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x9644;&#x5E26;&#x7684;&#x5A92;&#x4F53;&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>416</td>
+<td>Requested range not satisfiable</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x8303;&#x56F4;&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>417</td>
+<td>Expectation Failed</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x6EE1;&#x8DB3;Expect&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x5185;&#x90E8;&#x9519;&#x8BEF;&#xFF0C;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not Implemented</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x652F;&#x6301;&#x8BF7;&#x6C42;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway</td>
+<td>&#x4F5C;&#x4E3A;&#x7F51;&#x5173;&#x6216;&#x8005;&#x4EE3;&#x7406;&#x5DE5;&#x4F5C;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5C1D;&#x8BD5;&#x6267;&#x884C;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x4ECE;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x65E0;&#x6548;&#x7684;&#x54CD;&#x5E94;</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>&#x7531;&#x4E8E;&#x8D85;&#x8F7D;&#x6216;&#x7CFB;&#x7EDF;&#x7EF4;&#x62A4;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x6682;&#x65F6;&#x7684;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x3002;&#x5EF6;&#x65F6;&#x7684;&#x957F;&#x5EA6;&#x53EF;&#x5305;&#x542B;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7684;Retry-After&#x5934;&#x4FE1;&#x606F;&#x4E2D;</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Gateway Time-out</td>
+<td>&#x5145;&#x5F53;&#x7F51;&#x5173;&#x6216;&#x4EE3;&#x7406;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x672A;&#x53CA;&#x65F6;&#x4ECE;&#x8FDC;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td>505</td>
+<td>HTTP Version not supported</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x652F;&#x6301;&#x8BF7;&#x6C42;&#x7684;HTTP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="udp--user-datagram-protocol"><a name="udp--user-datagram-protocol" class="anchor-navigation-ex-anchor" href="#udp--user-datagram-protocol"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. UDP  (User Datagram Protocol)</h2>
+<pre><code class="lang-text">UDP &#x534F;&#x8BAE; &#x4E0D;&#x4F1A;&#x5BF9;&#x6570;&#x636E;&#x62A5;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x5373;&#x4E0D;&#x5408;&#x5E76;&#xFF0C;&#x4E5F;&#x4E0D;&#x62C6;&#x5206;&#x6570;&#x636E;&#x3002;
+UDP &#x7684;&#x7279;&#x8272;&#x5728;&#x4E8E;&#x5B83;&#x6240;&#x7701;&#x7565;&#x7684;&#x90A3;&#x4E9B;&#x529F;&#x80FD;:
+&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x3001;&#x63E1;&#x624B;&#x3001;&#x91CD;&#x53D1;&#x3001;&#x91CD;&#x7EC4;&#x3001;&#x91CD;&#x6392;&#x3001;&#x62E5;&#x585E;&#x63A7;&#x5236;&#x3001;
+&#x62E5;&#x585E;&#x9884;&#x9632;&#x3001;&#x6D41;&#x91CF;&#x63A7;&#x5236;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x9009;&#x7684;&#x9519;&#x8BEF;&#x68C0;&#x6D4B;&#xFF0C;&#x7EDF;&#x7EDF;&#x6CA1;&#x6709;&#x3002;
+
+UDP &#x7279;&#x70B9;
+1&#x3001;&#x65E0;&#x8FDE;&#x63A5;
+&#x901A;&#x4FE1;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x524D;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x3002;
+
+2&#x3001;&#x4E0D;&#x4FDD;&#x8BC1;&#x53EF;&#x9760;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4ED8;
+&#x60F3;&#x53D1;&#x5C31;&#x53D1;&#xFF0C;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x5728;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x4E2D;&#x662F;&#x5426;&#x4E22;&#x5931;&#x3002;
+
+3&#x3001;&#x9762;&#x5411;&#x62A5;&#x6587;&#x4F20;&#x8F93;
+&#x4E0D;&#x5BF9;&#x6570;&#x636E;&#x505A;&#x4EFB;&#x4F55;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x5C06;&#x5E94;&#x7528;&#x5C42;&#x6570;&#x636E;&#x585E;&#x8FDB;&#x62A5;&#x6587;&#x91CC;&#x9762;&#x3002;
+
+4&#x3001;&#x6CA1;&#x6709;&#x62E5;&#x585E;&#x63A7;&#x5236;
+&#x4E0D;&#x7BA1;&#x7F51;&#x7EDC;&#x662F;&#x5426;&#x62E5;&#x585E;&#xFF0C;&#x5B83;&#x90FD;&#x4F1A;&#x628A;&#x6570;&#x636E;&#x7ED9;&#x4EA4;&#x4ED8;&#x51FA;&#x53BB;&#x3002;
+
+5&#x3001;&#x9996;&#x90E8;&#x5F00;&#x9500;&#x5F88;&#x5C0F;
+&#x9996;&#x90E8;&#x4EC5;&#x4EC5;&#x5360;&#x7528;8&#x4E2A;&#x5B57;&#x8282;&#x3002;
+
+1&#xFF09;&#x3001;&#x4E0D;&#x4FDD;&#x8BC1;&#x6D88;&#x606F;&#x4EA4;&#x4ED8;&#xFF1A;&#x4E0D;&#x786E;&#x8BA4;&#xFF0C;&#x4E0D;&#x91CD;&#x4F20;&#xFF0C;&#x65E0;&#x8D85;&#x65F6;&#x3002;
+2&#xFF09;&#x3001;&#x4E0D;&#x4FDD;&#x8BC1;&#x4EA4;&#x4ED8;&#x987A;&#x5E8F;&#xFF1A;&#x4E0D;&#x8BBE;&#x7F6E;&#x5305;&#x5E8F;&#x53F7;&#xFF0C;&#x4E0D;&#x91CD;&#x6392;&#xFF0C;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x961F;&#x9996;&#x963B;&#x585E;&#x3002;
+3&#xFF09;&#x3001;&#x4E0D;&#x8DDF;&#x8E2A;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#xFF1A;&#x4E0D;&#x5FC5;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x6216;&#x91CD;&#x542F;&#x72B6;&#x6001;&#x673A;&#x3002;
+4&#xFF09;&#x3001;&#x4E0D;&#x9700;&#x8981;&#x62E5;&#x585E;&#x63A7;&#x5236;&#xFF1A;&#x4E0D;&#x5185;&#x7F6E;&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x7F51;&#x7EDC;&#x53CD;&#x9988;&#x673A;&#x5236;&#x3002;
+</code></pre>
+<h2 id="tcp-&#x4E0E;-udp-&#x7684;&#x533A;&#x522B;"><a name="tcp-&#x4E0E;-udp-&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#tcp-&#x4E0E;-udp-&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. TCP &#x4E0E; UDP &#x7684;&#x533A;&#x522B;</h2>
+<pre><code class="lang-text">1&#x3001;UDP &#x901A;&#x5E38;&#x7528;&#x4E8E;&#x591A;&#x5A92;&#x4F53;&#x4FE1;&#x606F;&#x5206;&#x53D1;&#xFF0C; 
+&#x800C; TCP &#x901A;&#x5E38;&#x7528;&#x4E8E;&#x53EF;&#x9760;&#x4FE1;&#x606F;&#x7684;&#x4F20;&#x8F93;&#xFF0C;&#x4F8B;&#x5982;&#x91D1;&#x878D;&#x4EA4;&#x6613;&#x3001;&#x53EF;&#x9760;&#x901A;&#x4FE1;&#x7B49;&#x3002;
+
+2&#x3001;TCP &#x9762;&#x5411;&#x8FDE;&#x63A5;&#xFF0C;UDP &#x662F;&#x65E0;&#x8FDE;&#x63A5;&#x7684;&#x3002;
+
+3&#x3001;TCP &#x63D0;&#x4F9B;&#x53EF;&#x9760;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x901A;&#x8FC7; TCP &#x8FDE;&#x63A5;&#x4F20;&#x9001;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x65E0;&#x5DEE;&#x9519;&#xFF0C;&#x4E0D;&#x4E22;&#x5931;&#xFF0C;&#x4E0D;&#x91CD;&#x590D;&#xFF0C;&#x4E14;&#x6309;&#x5E8F;&#x5230;&#x8FBE;&#xFF1B;
+UDP &#x5C3D;&#x6700;&#x5927;&#x52AA;&#x529B;&#x4EA4;&#x4ED8;&#xFF0C;&#x5373;&#x4E0D;&#x4FDD;&#x8BC1;&#x53EF;&#x9760;&#x4EA4;&#x4ED8;&#x3002;
+
+4&#x3001;TCP &#x7684;&#x903B;&#x8F91;&#x901A;&#x4FE1;&#x4FE1;&#x9053;&#x662F;&#x5168;&#x53CC;&#x5DE5;&#x7684;&#x53EF;&#x9760;&#x4FE1;&#x9053;&#xFF1B;
+UDP &#x5219;&#x662F;&#x4E0D;&#x53EF;&#x9760;&#x4FE1;&#x9053;&#x3002;
+
+5&#x3001;&#x6BCF;&#x4E00;&#x6761; TCP &#x8FDE;&#x63A5;&#x53EA;&#x80FD;&#x662F;&#x70B9;&#x5230;&#x70B9;&#x7684;&#xFF1B;
+UDP &#x652F;&#x6301;&#x4E00;&#x5BF9;&#x4E00;&#xFF0C;&#x4E00;&#x5BF9;&#x591A;&#xFF0C;&#x591A;&#x5BF9;&#x4E00;&#x548C;&#x591A;&#x5BF9;&#x591A;&#x7684;&#x4EA4;&#x4E92;&#x901A;&#x4FE1;&#x3002;
+
+6&#x3001;TCP &#x9762;&#x5411;&#x5B57;&#x8282;&#x6D41;&#xFF08;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x9ECF;&#x5305;&#x95EE;&#x9898;&#xFF09;&#xFF0C;
+&#x5B9E;&#x9645;&#x4E0A;&#x662F; TCP &#x628A;&#x6570;&#x636E;&#x770B;&#x6210;&#x4E00;&#x8FDE;&#x4E32;&#x65E0;&#x7ED3;&#x6784;&#x7684;&#x5B57;&#x8282;&#x6D41;&#xFF1B;
+UDP &#x662F;&#x9762;&#x5411;&#x62A5;&#x6587;&#x7684;&#xFF08;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x9ECF;&#x5305;&#x95EE;&#x9898;&#xFF09;&#x3002;
+
+7&#x3001;UDP &#x6CA1;&#x6709;&#x62E5;&#x585E;&#x63A7;&#x5236;&#xFF0C;&#x56E0;&#x6B64;&#x7F51;&#x7EDC;&#x51FA;&#x73B0;&#x62E5;&#x585E;&#x4E0D;&#x4F1A;&#x4F7F;&#x6E90;&#x4E3B;&#x673A;&#x7684;&#x53D1;&#x9001;&#x901F;&#x7387;&#x964D;&#x4F4E;&#x3002;
+
+8&#x3001;TCP &#x9996;&#x90E8;&#x5F00;&#x9500;20&#x5B57;&#x8282;&#xFF1B;
+UDP &#x7684;&#x9996;&#x90E8;&#x5F00;&#x9500;&#x5C0F;&#xFF0C;&#x53EA;&#x6709; 8 &#x4E2A;&#x5B57;&#x8282;&#x3002;
+</code></pre>
+<h1 id="ftp"><a name="ftp" class="anchor-navigation-ex-anchor" href="#ftp"><i class="fa fa-link" aria-hidden="true"></i></a>2. ftp</h1>
+<h2 id="&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;ftp4j"><a name="&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;ftp4j" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;ftp4j"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;ftp4j</h2>
+<h3 id="ftp&#x767B;&#x5F55;"><a name="ftp&#x767B;&#x5F55;" class="anchor-navigation-ex-anchor" href="#ftp&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.1. ftp&#x767B;&#x5F55;</h3>
+<pre><code class="lang-text">public void run(){
+     //&#x6807;&#x8BB0;&#x662F;&#x5426;&#x767B;&#x5F55;&#x6210;&#x529F;
+    boolean loginError = false ;
+    try {
+        mFTPClient.setType(FTPClient.TYPE_BINARY);
+        //&#x4E2D;&#x6587;&#x6587;&#x4EF6;&#x540D; &#x4E71;&#x7801;&#x5904;&#x7406;
+        mFTPClient.setCharset(&quot;GBK&quot;);
+        //&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;FTP&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6B22;&#x8FCE;&#x8BED;&#x53E5;
+        String[] welcome = mFTPClient.connect(FTP.HOST_IP, FTP.HOST_PORT);
+        mFTPClient.login(FTP.HOST_USER, FTP.HOST_PASSWORD);
+        mHandler.sendEmptyMessage(FTP.MSG_CMD_CONNECT_OK);
+    }catch (Exception e) {
+        loginError = true ;
+    }
+    if(loginError &amp;&amp; FTP.mDameonRunning){
+        mHandler.sendEmptyMessageDelayed(FTP.MSG_CMD_CONNECT_FAILED, 2000);
+    }
+}
+</code></pre>
+<h3 id="ftp&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF08;&#x5939;&#xFF09;"><a name="ftp&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF08;&#x5939;&#xFF09;" class="anchor-navigation-ex-anchor" href="#ftp&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF08;&#x5939;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.2. ftp&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF08;&#x5939;&#xFF09;</h3>
+<pre><code class="lang-text">public void run(){
+    try {
+        if (isDirectory)  {
+            //&#x5220;&#x9664;&#x6587;&#x4EF6;&#x5939;
+            mFTPClient.deleteDirectory(realivePath);
+        } else {
+            //&#x5220;&#x9664;&#x6587;&#x4EF6;
+            mFTPClient.deleteFile(realivePath);
+        }
+        mHandler.sendEmptyMessage(FTP.MSG_CMD_DELE_OK);
+    } catch (Exception ex) {
+        mHandler.sendEmptyMessage(FTP.MSG_CMD_DELE_FAILED);
+    }
+}
+</code></pre>
+<h3 id="ftp&#x65AD;&#x5F00;&#x8FDE;&#x63A5;"><a name="ftp&#x65AD;&#x5F00;&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#ftp&#x65AD;&#x5F00;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.3. ftp&#x65AD;&#x5F00;&#x8FDE;&#x63A5;</h3>
+<pre><code class="lang-text">if (mFTPClient != null){
+    try {
+        mFTPClient.disconnect(true);
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+}
+</code></pre>
+<h3 id="ftp&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;"><a name="ftp&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#ftp&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.4. ftp&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;</h3>
+<pre><code class="lang-text">if(! localFile.exists()){
+    long fileSize = ftpFile.getSize() ;
+    if(fileSize &gt; 0){
+        mFTPClient.download( ftpFile.getName(), new File(localFilePath),  
+                             new DownloadFTPDataTransferListener(ftpFile.getSize()));
+    }else{
+        //&#x6587;&#x4EF6;&#x5F02;&#x5E38;&#x7684;&#x60C5;&#x51B5;  &#x4E0B;&#x8F7D;&#x53D1;&#x751F;&#x5F02;&#x5E38;the size of file muset be larger than zero.
+    }
+}
+</code></pre>
+<h3 id="ftp-&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5217;&#x8868;"><a name="ftp-&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#ftp-&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.5. ftp &#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5217;&#x8868;</h3>
+<pre><code class="lang-text">@Override
+public void run(){
+    try {
+        mFTPClient.changeDirectory(FTP.FTPSMAllPICDIR);
+        FTPFile[] ftpFiles = mFTPClient.list();
+        synchronized (mLock){
+            mFileList.clear();
+            //&#x6570;&#x7EC4;&#x62F7;&#x8D1D;&#x5230;list&#x4E2D;&#x53BB;
+            mFileList.addAll(Arrays.asList(ftpFiles));
+        }
+        mHandler.sendEmptyMessage(FTP.MSG_CMD_LIST_OK);
+    } catch (Exception ex) {
+        mHandler.sendEmptyMessage(FTP.MSG_CMD_LIST_FAILED);
+    }
+}//
+</code></pre>
+<h3 id="ftp-&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#xFF08;&#x8FDB;&#x5EA6;&#x6761;&#xFF09;"><a name="ftp-&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#xFF08;&#x8FDB;&#x5EA6;&#x6761;&#xFF09;" class="anchor-navigation-ex-anchor" href="#ftp-&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#xFF08;&#x8FDB;&#x5EA6;&#x6761;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.6. ftp &#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#xFF08;&#x8FDB;&#x5EA6;&#x6761;&#xFF09;</h3>
+<pre><code class="lang-text">try {
+    File file = new File(path);
+    mFTPClient.upload(file, new DownloadFTPDataTransferListener( file.length()));
+} catch (Exception ex) {
+    return false;
+}
+</code></pre>
+<h3 id="ftp-&#x8FDE;&#x63A5;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;"><a name="ftp-&#x8FDE;&#x63A5;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#ftp-&#x8FDE;&#x63A5;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.7. ftp &#x8FDE;&#x63A5;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;</h3>
+<pre><code class="lang-text">//&#x5728;&#x5B50;&#x7EBF;&#x7A0B;&#x4E2D;&#x5B9A;&#x65F6;&#x5224;&#x65AD;
+if (mFTPClient != null &amp;&amp; !mFTPClient.isConnected()){
+    try {
+        //&#x89E3;&#x51B3;&#x4E2D;&#x6587;&#x4EF6;&#x540D;&#x4E71;&#x7801;&#x95EE;&#x9898;
+        mFTPClient.setType(FTPClient.TYPE_BINARY);
+        mFTPClient.setCharset(&quot;GBK&quot;);
+        mFTPClient.connect(FTP.HOST_IP, FTP.HOST_PORT);
+        mFTPClient.login(FTP.HOST_USER, FTP.HOST_PASSWORD);
+        Thread.sleep(FTP.MAX_DAMEON_TIME_WAIT);
+    } catch (Exception ex) {
+    }
+}
+</code></pre>
+<h3 id="ftp-&#x4F20;&#x8F93;&#x8FDB;&#x5EA6;-&#x56DE;&#x8C03;"><a name="ftp-&#x4F20;&#x8F93;&#x8FDB;&#x5EA6;-&#x56DE;&#x8C03;" class="anchor-navigation-ex-anchor" href="#ftp-&#x4F20;&#x8F93;&#x8FDB;&#x5EA6;-&#x56DE;&#x8C03;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.8. FTP &#x4F20;&#x8F93;&#x8FDB;&#x5EA6; &#x56DE;&#x8C03;</h3>
+<pre><code class="lang-text">public class DownloadFTPDataTransferListener implements  FTPDataTransferListener{
+    /**&#x5DF2;&#x7ECF;&#x4F20;&#x9001;&#x91CF;*/
+    private int totolTransferred = 0;
+    /**&#x6570;&#x636E;&#x603B;&#x91CF;*/
+    private long fileSize = -1;
+
+    public DownloadFTPDataTransferListener(long fileSize){
+        if (fileSize &lt;= 0) {
+            throw new RuntimeException( &quot;the size of file muset be larger than zero.&quot;);
+        }
+        this.fileSize = fileSize;
+    }
+
+    @Override
+    public void aborted()  {}
+
+    @Override
+    public void completed(){  }
+
+    @Override
+    public void failed()  {  }
+
+    @Override
+    public void started()  {  }
+
+    @Override
+    public void transferred(int length){
+        totolTransferred += length;
+        float percent = (float) totolTransferred / this.fileSize;
+    }
+}
+</code></pre>
+<h3 id="&#x4F7F;&#x7528;&#x573A;&#x666F;"><a name="&#x4F7F;&#x7528;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.9. &#x4F7F;&#x7528;&#x573A;&#x666F;</h3>
+<pre><code class="lang-text">FtpManager ftpManager = new FtpManager();
+//&#x7136;&#x540E; ftp &#x7684;&#x76F8;&#x5173;&#x64CD;&#x4F5C; &#x8981;&#x653E;&#x5230;&#x5B50;&#x7EBF;&#x7A0B;&#x4E2D;&#x53BB;&#x6267;&#x884C;&#x3002; &#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x6C60;&#x3002;
+</code></pre>
+<h1 id="sockt--tcpudp"><a name="sockt--tcpudp" class="anchor-navigation-ex-anchor" href="#sockt--tcpudp"><i class="fa fa-link" aria-hidden="true"></i></a>3. sockt  tcp_udp</h1>
+<p>&#x8FDB;&#x884C;tcp&#x901A;&#x4FE1;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x5904;&#x7406; &#x7C98;&#x5305;&#x7684;&#x95EE;&#x9898;&#x3002;&#x7136;&#x540E;&#x63A7;&#x5236;&#x597D;&#x4F11;&#x7720;&#x65F6;&#x95F4; &#x548C; &#x63A5;&#x6536;&#x7684; buffer[] &#x5927;&#x5C0F;&#x3002;</p>
+<h2 id="tcp&#x6807;&#x5FD7;&#x4F4D;-&#x4F4D;&#x7801;"><a name="tcp&#x6807;&#x5FD7;&#x4F4D;-&#x4F4D;&#x7801;" class="anchor-navigation-ex-anchor" href="#tcp&#x6807;&#x5FD7;&#x4F4D;-&#x4F4D;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. TCP&#x6807;&#x5FD7;&#x4F4D; (&#x4F4D;&#x7801;)</h2>
+<table>
+<thead>
+<tr>
+<th>&#x6807;&#x8BB0;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYN</td>
+<td>synchronous &#x5EFA;&#x7ACB;&#x8054;&#x673A;</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>acknowledgement &#x786E;&#x8BA4;</td>
+</tr>
+<tr>
+<td>PSH</td>
+<td>push&#x4F20;&#x9001;</td>
+</tr>
+<tr>
+<td>FIN</td>
+<td>finish&#x7ED3;&#x675F;</td>
+</tr>
+<tr>
+<td>RST</td>
+<td>reset&#x91CD;&#x7F6E;</td>
+</tr>
+<tr>
+<td>URG</td>
+<td>urgent&#x7D27;&#x6025;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x672F;&#x8BED;"><a name="&#x672F;&#x8BED;" class="anchor-navigation-ex-anchor" href="#&#x672F;&#x8BED;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x672F;&#x8BED;</h2>
+<h3 id="sequence-number"><a name="sequence-number" class="anchor-navigation-ex-anchor" href="#sequence-number"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.1. Sequence number</h3>
+<p>&#x987A;&#x5E8F;&#x53F7;&#x7801;</p>
+<h3 id="acknowledge-number"><a name="acknowledge-number" class="anchor-navigation-ex-anchor" href="#acknowledge-number"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.2. Acknowledge number</h3>
+<p>&#x786E;&#x8BA4;&#x53F7;&#x7801;</p>
+<h3 id="msl"><a name="msl" class="anchor-navigation-ex-anchor" href="#msl"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.3. MSL</h3>
+<p>Maximum Segment Lifetime &#xFF0C;&#x62A5;&#x6587;&#x6700;&#x957F;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;</p>
+<h2 id="tcp&#x76F8;&#x5173;&#x95EE;&#x9898;"><a name="tcp&#x76F8;&#x5173;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#tcp&#x76F8;&#x5173;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. tcp&#x76F8;&#x5173;&#x95EE;&#x9898;</h2>
+<h3 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;2&#x6B21;&#x4E0D;&#x884C;&#x5417;"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;2&#x6B21;&#x4E0D;&#x884C;&#x5417;" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;2&#x6B21;&#x4E0D;&#x884C;&#x5417;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.1. &#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;2&#x6B21;&#x4E0D;&#x884C;&#x5417;?</h3>
+<p>&#x4E3A;&#x4E86;&#x8BA9;&#x670D;&#x52A1;&#x5668;&#x3001;&#x5BA2;&#x6237;&#x7AEF;&#x7AEF;&#x5F7C;&#x6B64;&#x77E5;&#x9053; &#x81EA;&#x5DF1;+&#x5BF9;&#x65B9;&#x7684; &#x63A5;&#x6536;&#x3001;&#x53D1;&#x9001;&#x529F;&#x80FD;&#x6B63;&#x5E38;&#x3002; &#x81EA;&#x5DF1;&#x6A21;&#x62DF;&#x4E00;&#x4E0B;&#x5C31;&#x77E5;&#x9053;&#x81F3;&#x5C11;&#x9700;&#x8981;&#x4E09;&#x6B21;&#x3002;</p>
+<p><img src="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201802071556_osChina_TCP&#x4E09;&#x6B21;&#x63E1;&#x624B;.png" alt=""></p>
+<h3 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#x5374;&#x662F;&#x56DB;&#x6B21;&#x6325;&#x624B;&#xFF1F;"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#x5374;&#x662F;&#x56DB;&#x6B21;&#x6325;&#x624B;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#x5374;&#x662F;&#x56DB;&#x6B21;&#x6325;&#x624B;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.2. &#x4E3A;&#x4EC0;&#x4E48;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF0C;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#x5374;&#x662F;&#x56DB;&#x6B21;&#x6325;&#x624B;&#xFF1F;</h3>
+<pre><code class="lang-text">&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x5F53;Server&#x7AEF;&#x6536;&#x5230;FIN&#x62A5;&#x6587;&#x65F6;&#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x5173;&#x95ED;SOCKET&#xFF0C; 
+&#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x5148;&#x56DE;&#x590D;&#x4E00;&#x4E2A;ACK&#x62A5;&#x6587;&#xFF0C;&#x544A;&#x8BC9;Client&#x7AEF;&#xFF0C;&quot;&#x4F60;&#x53D1;&#x7684;FIN&#x62A5;&#x6587;&#x6211;&#x6536;&#x5230;&#x4E86;&quot;&#x3002;
+&#x53EA;&#x6709;&#x7B49;&#x5230;&#x6211;Server&#x7AEF;&#x6240;&#x6709;&#x7684;&#x62A5;&#x6587;&#x90FD;&#x53D1;&#x9001;&#x5B8C;&#x4E86;&#xFF0C;&#x6211;&#x624D;&#x80FD;&#x53D1;&#x9001;FIN&#x62A5;&#x6587;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x80FD;&#x4E00;&#x8D77;&#x53D1;&#x9001;&#x3002;
+&#x6545;&#x9700;&#x8981;&#x56DB;&#x6B65;&#x6325;&#x624B;&#x3002; &#xFF08;&#x4E3A;&#x4E86;&#x4E89;&#x53D6;&#x4E00;&#x6BB5;&#x7F13;&#x51B2;&#x65F6;&#x95F4;&#xFF0C;&#x5B8C;&#x6210;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#xFF09;
+</code></pre>
+<p><img src="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201802071556_osChina_tcp&#x56DB;&#x6B21;&#x6325;&#x624B;.png" alt=""></p>
+<h3 id="&#x4E3A;&#x4EC0;&#x4E48;&#x5BA2;&#x6237;&#x7AEF;&#x5728;time-wait&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x7B49;&#x5F85;2msl-maximum-segment-lifetime-&#x7684;&#x65F6;&#x95F4;&#xFF1F;"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x5BA2;&#x6237;&#x7AEF;&#x5728;time-wait&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x7B49;&#x5F85;2msl-maximum-segment-lifetime-&#x7684;&#x65F6;&#x95F4;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x5BA2;&#x6237;&#x7AEF;&#x5728;time-wait&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x7B49;&#x5F85;2msl-maximum-segment-lifetime-&#x7684;&#x65F6;&#x95F4;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.3. &#x4E3A;&#x4EC0;&#x4E48;&#x5BA2;&#x6237;&#x7AEF;&#x5728;TIME-WAIT&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x7B49;&#x5F85;2MSL (Maximum Segment Lifetime) &#x7684;&#x65F6;&#x95F4;&#xFF1F;</h3>
+<pre><code class="lang-text">&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;ACK&#x62A5;&#x6587;&#x6BB5;&#x80FD;&#x591F;&#x5230;&#x8FBE;&#x670D;&#x52A1;&#x5668;&#x3002;
+&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;ACK&#x62A5;&#x6587;&#x6BB5;&#x6709;&#x53EF;&#x80FD;&#x4E22;&#x5931;&#xFF0C;&#x56E0;&#x800C;&#x4F7F;&#x5904;&#x5728;LAST-ACK&#x72B6;&#x6001;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6536;&#x4E0D;&#x5230;&#x5BF9;&#x5DF2;&#x53D1;&#x9001;&#x7684;FIN+ACK&#x62A5;&#x6587;&#x6BB5;&#x7684;&#x786E;&#x8BA4;&#x3002;
+&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x8D85;&#x65F6;&#x91CD;&#x4F20;&#x8FD9;&#x4E2A;FIN+ACK&#x62A5;&#x6587;&#x6BB5;&#x3002;&#x800C;&#x5BA2;&#x6237;&#x7AEF;&#x5C31;&#x80FD;&#x5728;2MSL&#x65F6;&#x95F4;&#x5185;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x91CD;&#x4F20;&#x7684;FIN+ACK&#x62A5;&#x6587;&#x6BB5;&#x3002;
+&#x63A5;&#x7740;&#x5BA2;&#x6237;&#x7AEF;&#x91CD;&#x4F20;&#x4E00;&#x6B21;&#x786E;&#x8BA4;&#xFF0C;&#x91CD;&#x65B0;&#x542F;&#x52A8;2MSL&#x8BA1;&#x65F6;&#x5668;&#x3002;
+&#x6700;&#x540E;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x90FD;&#x6B63;&#x5E38;&#x8FDB;&#x5165;&#x5230;CLOSED&#x72B6;&#x6001;&#x3002;
+</code></pre>
+<h2 id="&#x7C98;&#x5305;&#x5904;&#x7406;"><a name="&#x7C98;&#x5305;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x7C98;&#x5305;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. &#x7C98;&#x5305;&#x5904;&#x7406;</h2>
+<p>&#x76EE;&#x524D;&#x4E0D;&#x662F;&#x6700;&#x4F18;&#x65B9;&#x6CD5;&#xFF0C;&#x901F;&#x5EA6;&#x6709;&#x70B9;&#x6162;&#x3002;&#x60F3;&#x5230;&#x9AD8;&#x6548;&#x7684;&#x65B9;&#x6CD5;&#x518D;&#x8865;&#x5145;&#x3002;</p>
+<pre><code class="lang-text">public class AirUnPackTools{
+    /**&#x5E27;&#x5934;*/
+    private static final byte packHead1= (byte) 0xDD;
+    /**&#x662F;&#x5426;&#x5728;&#x6709;&#x6548;&#x6570;&#x636E;&#x4E4B;&#x5185;*/
+    private static boolean isContinue = false ;
+    private static byte mlastByte =(byte) 0x00 ;
+    /**byte&#x7D22;&#x5F15; &#xFF0C; &#x7528;&#x6765;&#x6307;&#x793A; &#x5173;&#x952E;&#x5B57; &#x548C; &#x957F;&#x5EA6; */
+    private static  int mByteIndex = 0;
+    /**&#x5F53;&#x524D;&#x5E27;&#x7684;&#x957F;&#x5EA6;*/
+    private static  int mFrameLengh =0 ;
+    /**&#x4E34;&#x65F6;list*/
+    private static List&lt;Byte&gt;  lastBytesList = new ArrayList&lt;&gt;() ;
+    /**&#x6570;&#x636E;&#x6BB5; &#x6570;&#x636E;&#x957F;&#x5EA6; */
+    private static  int mbyteCount = 0;
+    /**&#x9065;&#x63A7;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x578B; = 0x55 ,5a ,5b &#xFF0C; 00&#x4E3A;&#x9ED8;&#x8BA4;&#x72B6;&#x6001;&#xFF0C;&#x65E0;&#x610F;&#x4E49;*/
+    private static byte msgType =0x00 ;
+
+    public static DronePacket320 unPackageofGround(byte mByte){
+        DronePacket320 packetGround  = null ;
+        //&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x5E27;&#x5F00;&#x5934;
+        switch (mByte)  {
+            case packHead1:
+                // &#x8FDE;&#x7EED;&#x51FA;&#x73B0;2&#x4E2A;DD &#xFF0C;&#x8BF4;&#x660E;&#x8FD9;&#x662F;&#x5E27;&#x5934;
+                if(mlastByte == packHead1 )  {
+                    lastBytesList.clear();
+                    lastBytesList.add(packHead1) ;
+                    mByteIndex = 0;
+                    isContinue = true ;
+                }
+                break;
+        }
+
+        if(isContinue) {
+           boolean reslut =  getUnpackagedFrame(mByte);
+            if(reslut)  {
+                packetGround = new DronePacket320() ;
+                packetGround.msgType = msgType ;
+                packetGround.bytes =  listToBytesArray(lastBytesList) ;
+            }else{
+                packetGround = null ;
+            }
+        }else{
+            packetGround = null ;
+        }
+        mlastByte =  mByte ;
+        return  packetGround ;
+    }
+
+    public static byte [] listToBytesArray(List&lt;Byte&gt; list)  {
+        byte[] bytes = new byte[list.size()] ;
+        for(int i= 0; i&lt;list.size() ;i++)  {
+            bytes[i] = list.get(i) ;
+        }
+        return  bytes;
+    }
+
+    private static boolean getUnpackagedFrame( byte mBytes ){
+        mByteIndex ++ ;
+
+        if(mByteIndex == 2)   {  // &#x5E27;&#x7C7B;&#x578B;
+            lastBytesList.add(mBytes) ;
+            msgType  =mBytes;
+            return  false ;
+        }else  if(mByteIndex == 3)  {  //&#x957F;&#x5EA6;
+            lastBytesList.add(mBytes) ;
+            mbyteCount = 0;
+            mFrameLengh = MyStringUtils.byte1ToInt(mBytes) ;
+            return  false ;
+        } else{
+            mbyteCount ++ ;
+            lastBytesList.add(mBytes) ;
+            if(mbyteCount == mFrameLengh +1 )  {
+                //&#x6570;&#x636E;&#x6BB5;+&#x6821;&#x9A8C;&#x4F4D;&#x8BFB;&#x53D6;&#x5B8C;&#x6BD5; &#xFF0C;&#x8FD4;&#x56DE;&#x7EC4;&#x88C5;&#x6807;&#x8BB0;true
+                isContinue =false ;
+                return  true ;
+            }else {
+                return  false ;
+            }
+        } //end  else
+    }//
+}
+</code></pre>
+<pre><code class="lang-text">public class DronePacket320{
+    public short msgType;
+    public byte[] bytes;
+}
+
+//&#x4F7F;&#x7528;
+for (int i = 0; i &lt; bytesGet.length; i++){
+    DronePacket320 packetAir = AirUnPackTools.unPackageofGround(tcpResultBean.reslut[i]);
+    if (packetAir != null){
+        //&#x5904;&#x7406;&#x683C;&#x5F0F;&#x5316;&#x540E;&#x7684;&#x6570;&#x636E;...
+    }
+}
+</code></pre>
+<h2 id="&#x7B2C;&#x4E09;&#x65B9;&#x5E93;-netty"><a name="&#x7B2C;&#x4E09;&#x65B9;&#x5E93;-netty" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E09;&#x65B9;&#x5E93;-netty"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. &#x7B2C;&#x4E09;&#x65B9;&#x5E93; netty</h2>
+<p>&#x7528;&#x6765;&#x8FDE;&#x63A5;tcp&#x3001;&#x63A5;&#x6536; &#x548C;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;</p>
+<pre><code class="lang-text">public interface MyNettyCallBack{
+    /**tcp&#x6210;&#x529F;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;*/
+    public static final int Key_State_connect=1 ;
+    /**tcp&#x65AD;&#x5F00;*/
+    public static final int Key_State_disConnect=2 ;
+    /**tcp&#x6B63;&#x5728;&#x91CD;&#x8FDE;*/
+    public static final int Key_State_isReConnect=3 ;
+    /**&#x8FDE;&#x63A5;&#x53D1;&#x751F;&#x5F02;&#x5E38;*/
+    public static final int Key_State_error=4;
+    /**&#x8FDE;&#x63A5;&#x624B;&#x52A8;&#x5173;&#x95ED;*/
+    public static final int Key_State_close=5;
+    /**&#x8FDE;&#x63A5;&#x6B63;&#x5E38;-&#x6B63;&#x5728;&#x63A5;&#x6536;&#x6570;&#x636E;*/
+    public static final int Key_State_recevieData=6;
+    /**&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;*/
+    public void sendMsgToUser(byte[] reslut , int state ,String stateMsg) ;
+}
+</code></pre>
+<pre><code class="lang-text">public class NettyTcpTools{
+    private int port;
+    private String host;
+    private SocketChannel socketChannel;
+    private Bootstrap bootstrap;
+    private boolean isConnect = false;
+    /**&#x662F;&#x5426;&#x9700;&#x8981;&#x91CD;&#x8FDE;*/
+    private boolean isRepeate = false;
+    /**&#x7528;&#x6765;&#x533A;&#x5206;&#x662F;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x65AD;&#x5F00;&#x8FD8;&#x662F;&#x5F02;&#x5E38;&#x5BFC;&#x81F4;&#x65AD;&#x5F00;&lt;br&gt;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x65AD;&#x5F00;&#x7684;&#x8BDD;&#x5C31;&#x4E0D;&#x7528;&#x53BB;&#x91CD;&#x8FDE;*/
+    private  boolean isStopByUser =false ;
+    /**&#x901A;&#x4FE1;&#x7BA1;&#x9053;*/
+    private ChannelFuture future = null;
+    /**&#x72B6;&#x6001;&#x56DE;&#x8C03;*/
+    private MyNettyCallBack myNettyCallBack ;
+    /**&#x7EBF;&#x7A0B;&#x6C60;&#x5DE5;&#x5177;*/
+    private MyThreadPoolTools myThreadPoolTools ;
+
+    public NettyTcpTools(String host , int port){
+        this.port = port;
+        this.host = host;
+        bootstrap = new Bootstrap();
+        bootstrap.channel(NioSocketChannel.class);
+        //&#x4FDD;&#x6301;&#x957F;&#x8FDE;&#x63A5;
+        bootstrap.option(ChannelOption.SO_KEEPALIVE, true);
+        //&#x81EA;&#x52A8;&#x8C03;&#x6574;&#x4E0B;&#x4E00;&#x6B21;&#x7F13;&#x51B2;&#x533A;&#x5EFA;&#x7ACB;&#x65F6;&#x5206;&#x914D;&#x7684;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#xFF0C;&#x907F;&#x514D;&#x5185;&#x5B58;&#x7684;&#x6D6A;&#x8D39;
+        bootstrap.option(ChannelOption.RCVBUF_ALLOCATOR, new AdaptiveRecvByteBufAllocator(1024, 1024 * 32, 1024 * 64));
+        bootstrap.group( new NioEventLoopGroup());
+        bootstrap.remoteAddress(host, port);
+        bootstrap.handler(new ChannelInitializer&lt;SocketChannel&gt;() {
+            @Override
+            protected void initChannel(SocketChannel socketChannel) throws Exception {
+                //&#x8D85;&#x65F6;&#x5904;&#x7406;
+                socketChannel.pipeline().addLast(new IdleStateHandler(3, 3, 3 ,TimeUnit.SECONDS));
+                //&#x63A5;&#x6536;&#x670D;&#x52A1;&#x5668;&#x4FE1;&#x606F;
+                socketChannel.pipeline().addLast(  new NettyClientHandler());
+            }
+        });
+    }
+
+    private void gotoConnectTcp(){
+        closeThreadPool();
+        myThreadPoolTools= new MyThreadPoolTools();
+
+        Runnable task = new Runnable() {
+            @Override
+            public void run() {
+                isStopByUser = false ;
+                try {
+                    if (future != null)  {
+                        boolean isActive = future.channel().isActive() ;
+                        boolean isOpen = future.channel().isOpen() ;
+                        MyLogUtils.mLog_iNormal(&quot;&#x8FDE;&#x63A5;&#x6D4B;&#x8BD5;&#xFF1A;isActive=&quot; + isActive +&quot;  isOpen=&quot;+ isOpen);
+                       /* &#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x6CE8;&#x610F;&#x4E86;&#xFF1A; &#x5982;&#x679C; &#x6CA1;&#x6709;&#x5173;&#x95ED;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x591A;&#x4E2A;tcp&#x8FDE;&#x63A5;
+                        &#x4F7F;&#x7528; &#x7F51;&#x7EDC;&#x8C03;&#x8BD5;&#x52A9;&#x624B;.exe &#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#x67E5;&#x770B;*/
+                        future.channel().close();
+                    }
+
+                    future = bootstrap.connect(new InetSocketAddress(host, port)).sync();
+                    if (future.isSuccess())  {
+                        socketChannel = (SocketChannel) future.channel();
+                        sendMsgToUser(null ,MyNettyCallBack.Key_State_connect ,&quot;connect server  Success&quot;);
+                        isConnect = true;
+                        return;
+                    }
+                } catch (Exception cause) {
+                    sendMsgToUser(null ,MyNettyCallBack.Key_State_error ,&quot;error2:&quot;+cause.toString());
+                }
+                //&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x5728;&#x6B64;&#x5904;&#x5904;&#x7406;
+                repeateTcp();
+            }
+        };
+        if (myThreadPoolTools == null) {
+            myThreadPoolTools= new MyThreadPoolTools();
+        }
+        myThreadPoolTools.addTask(task);
+    }
+
+    public  void startTcpTools(){
+      gotoConnectTcp();
+    }
+
+    private void closeThreadPool(){
+        if(myThreadPoolTools!=null)  {
+            myThreadPoolTools.shutdownThreadPool();
+            myThreadPoolTools=null ;
+        }
+    }
+
+    public void nettySendBytes(final  byte[] bytesSend)  {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                if (isConnect)  {
+                    ByteBuf buf = Unpooled.buffer(bytesSend.length);
+                    buf.writerIndex();
+                    buf.writeBytes(bytesSend);
+                    socketChannel.writeAndFlush(buf);
+                }
+            }
+        } ;
+        if (myThreadPoolTools == null) {
+            myThreadPoolTools= new MyThreadPoolTools();
+        }
+        myThreadPoolTools.addTask(runnable);
+    }
+
+    public class NettyClientHandler extends SimpleChannelInboundHandler&lt;ByteBuf&gt;{
+        @Override
+        protected void channelRead0(ChannelHandlerContext channelHandlerContext,ByteBuf byteBuf) throws Exception  {
+            //&#x8FD9;&#x91CC;&#x662F;&#x63A5;&#x53D7;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x6D88;&#x606F;
+            byte[] result  = new byte[byteBuf.readableBytes()];
+            byteBuf.readBytes(result);
+            /*&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4F1A;&#x5B9A;&#x957F;&#x8BFB;&#x53D6;&#xFF0C;&#x540E;&#x9762;&#x6709;&#x5F88;&#x591A;00 00 00
+            byte[] bytes = byteBuf.array();*/
+            sendMsgToUser(result ,MyNettyCallBack.Key_State_recevieData ,&quot;channelRead0&quot;);
+        }
+
+        /**&#x8FD9;&#x91CC;&#x662F;&#x65AD;&#x7EBF;&#x8981;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;*/
+        @Override
+        public void channelInactive(ChannelHandlerContext ctx) throws Exception  {
+            super.channelInactive(ctx);
+            ctx.close() ;
+            if(!isStopByUser)  {
+                sendMsgToUser(null ,MyNettyCallBack.Key_State_disConnect ,&quot;channelInactive&quot;);
+                repeateTcp();
+            }
+        }
+
+        /**&#x8FD9;&#x91CC;&#x662F;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x7684;&#x8BDD;&#x8981;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;*/
+        @Override
+        public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+            //ctx.close() ;
+            sendMsgToUser(null ,MyNettyCallBack.Key_State_error ,&quot;error1:&quot;+cause.toString());
+            repeateTcp();
+        }
+
+        /**&#x7528;&#x6765;&#x5904;&#x7406;&#x8BFB;&#x5199;&#x8D85;&#x65F6;&#x7684; &#x81EA;&#x5B9A;&#x4E49;&#x64CD;&#x4F5C;*/
+        @Override
+        public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception  {
+            super.userEventTriggered(ctx, evt);
+            if (evt instanceof IdleStateEvent) {
+                IdleStateEvent event = (IdleStateEvent) evt;
+                if (event.state().equals(IdleState.READER_IDLE)) {
+                    // &#x5728;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x6536;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x53CD;&#x9988;&#x4FE1;&#x606F;
+                } else if (event.state().equals(IdleState.WRITER_IDLE)) {
+                    //&#x5728;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x50CF;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8FC7;&#x4FE1;&#x606F;
+                } else if (event.state().equals(IdleState.ALL_IDLE)) {
+                    //&#x5728;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185; &#x65E2;&#x6CA1;&#x6709;&#x6536;&#x5230;&#x8FC7;&#x4FE1;&#x606F; &#x4E5F;&#x6CA1;&#x6709;&#x53D1;&#x9001;&#x8FC7;&#x4FE1;&#x606F;
+                }
+
+            }
+        }
+    }
+
+    // &#x8BBE;&#x7F6E;&#x6D88;&#x606F;&#x56DE;&#x8C03;&#x63A5;&#x53E3;&#xFF0C;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6D88;&#x606F;&#x3002;
+    public void setMyNettyCallBack(MyNettyCallBack myNettyCallBack)  {
+        this.myNettyCallBack =  myNettyCallBack ;
+    }
+
+    private void sendMsgToUser(byte[] result , int state ,String sendMsgToUser)  {
+        if (myNettyCallBack != null) {
+            myNettyCallBack.sendMsgToUser(result ,state ,sendMsgToUser);
+        }
+    }
+
+   // tcp&#x91CD;&#x8FDE;
+    private void repeateTcp()  {
+        if(isStopByUser)    {
+           return;
+        }
+        if (!isRepeate) {
+            if (isConnect)  {
+                isConnect = false;
+                //&#x65AD;&#x7EBF;&#x76D1;&#x542C;&#x5728;&#x6B64;&#x5904;&#x5904;&#x7406;
+            }
+            isRepeate = true;
+            sendMsgToUser(null ,MyNettyCallBack.Key_State_isReConnect ,&quot;repeateTcp&quot;);
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            isRepeate = false;
+            startTcpTools();
+        }
+    }
+
+  // &#x5173;&#x95ED; tcp&#x8FDE;&#x63A5;
+    public void nettyToolsClose()  {
+        resetState();
+        closeThreadPool();
+        if (future != null &amp;&amp; future.channel() != null)  {
+            if (future.channel().isOpen())  {
+                sendMsgToUser(null ,MyNettyCallBack.Key_State_close ,&quot;close&quot;);
+                future.channel().close();
+            }
+        }
+    }
+
+    private void resetState()  {
+        isConnect = false;
+        isRepeate=false;
+        isStopByUser = true ;
+    }
+}
+</code></pre>
+<h2 id="&#x62D3;&#x5C55;&#x77E5;&#x8BC6;"><a name="&#x62D3;&#x5C55;&#x77E5;&#x8BC6;" class="anchor-navigation-ex-anchor" href="#&#x62D3;&#x5C55;&#x77E5;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. &#x62D3;&#x5C55;&#x77E5;&#x8BC6;</h2>
+<h3 id="&#x6570;&#x5B57;&#x4FE1;&#x53F7;-&#x3001;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;"><a name="&#x6570;&#x5B57;&#x4FE1;&#x53F7;-&#x3001;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x5B57;&#x4FE1;&#x53F7;-&#x3001;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.1. &#x6570;&#x5B57;&#x4FE1;&#x53F7; &#x3001;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;</h3>
+<p>&#x6A21;&#x62DF;&#x4FE1;&#x53F7;&#x548C;&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#x4E4B;&#x95F4;&#x662F;&#x53EF;&#x4EE5;&#x76F8;&#x4E92;&#x8F6C;&#x6362;&#x7684;&#x3002;</p>
+<p><img src="../pics/&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;.jpg" alt=""></p>
+<pre><code class="lang-text">&#x6A21;&#x62DF;&#x4FE1;&#x53F7;&#xFF1A;&#x65F6;&#x95F4;&#x8FDE;&#x7EED;&#xFF0C;&#x5E45;&#x503C;&#x8FDE;&#x7EED;&#x3002;
+&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#xFF1A;&#x65F6;&#x95F4;&#x79BB;&#x6563;&#xFF0C;&#x5E45;&#x503C;&#x79BB;&#x6563;&#x3002;
+
+&#x5728;&#x7535;&#x5B66;&#x4E2D;&#xFF0C;&#x5C06;&#x8FDE;&#x7EED;&#x53D8;&#x5316;&#x7684;&#x7535;&#x538B;&#x3001;&#x7535;&#x6D41;&#x7B49;&#x7269;&#x7406;&#x91CF;&#x79F0;&#x4E3A;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;&#xFF0C;&#x800C;&#x79BB;&#x6563;&#x53D8;&#x5316;&#x7684;&#x7535;&#x538B;&#x3001;&#x7535;&#x6D41;&#x5219;&#x79F0;&#x4E3A;&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#x3002;
+&#x6A21;&#x62DF;&#x4FE1;&#x53F7;&#x5728;&#x65E5;&#x5E38;&#x751F;&#x6D3B;&#x4E2D;&#x5F88;&#x5E38;&#x89C1;&#xFF0C;&#x8B6C;&#x5982;&#x5BB6;&#x7528;&#x7684;220V&#x4EA4;&#x6D41;&#x7535;&#x538B;&#x3001;&#x73AF;&#x5883;&#x6E29;&#x5EA6;&#x53CA;&#x5149;&#x7EBF;&#x7684;&#x53D8;&#x5316;&#x3001;&#x84C4;&#x7535;&#x6C60;&#x7684;&#x653E;&#x7535;&#x3001;&#x4EBA;&#x7684;&#x8BF4;&#x8BDD;&#x58F0;&#xFF0C;&#x8FD9;&#x4E9B;&#x7686;&#x4E3A;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;&#x3002;
+
+&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#x7684;&#x6CE2;&#x5F62;&#x5982;&#x4E0A;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x7531;&#x4E00;&#x7CFB;&#x5217;&#x9AD8;&#x4F4E;&#x7535;&#x5E73;&#x7EC4;&#x6210;&#x7684;&#x79BB;&#x6563;&#x53D8;&#x5316;&#x7684;&#x7269;&#x7406;&#x91CF;&#x3002;&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#x5728;&#x751F;&#x6D3B;&#x4E2D;&#x8F83;&#x5C11;&#x89C1;&#x3002;
+&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#x5C31;&#x662F;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x201C;0&#x201D;&#x548C;&#x201C;1&#x201D;&#x7684;&#x7EC4;&#x5408;&#x3002;
+
+&#x54B1;&#x4EEC;&#x81EA;&#x7136;&#x754C;&#x4E2D;&#x5404;&#x79CD;&#x4E8B;&#x7269;&#x53D8;&#x5316;&#xFF0C;&#x90FD;&#x662F;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x7684;&#x6D41;&#x901D;&#xFF0C;&#x592A;&#x9633;&#x7F13;&#x7F13;&#x5347;&#x8D77;&#xFF0C;
+&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x65F6;&#x95F4;&#x662F;&#x8FDE;&#x7EED;&#x53D8;&#x5316;&#x7684;&#xFF0C;&#x592A;&#x9633;&#x7684;&#x4F4D;&#x7F6E;&#x4E5F;&#x662F;&#x8FDE;&#x7EED;&#x53D8;&#x5316;&#x7684;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x5BF9;&#x5E94;&#x4E8E;&#x4E00;&#x4E2A;&#x592A;&#x9633;&#x7684;&#x4F4D;&#x7F6E;&#x3002;
+&#x73B0;&#x5728;&#xFF0C;&#x54B1;&#x4EEC;&#x4E3A;&#x4E86;&#x7814;&#x7A76;&#x592A;&#x9633;&#x4F4D;&#x7F6E;&#x7684;&#x53D8;&#x5316;&#x89C4;&#x5F8B;&#xFF0C;&#x8981;&#x5C06;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x4E0E;&#x592A;&#x9633;&#x7684;&#x4F4D;&#x7F6E;&#x53D8;&#x5316;&#x5173;&#x7CFB;&#x4EA4;&#x7ED9;&#x8BA1;&#x7B97;&#x673A;&#x7814;&#x7A76;&#x3002;
+&#x6709;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;&#x54B1;&#x4EEC;&#x7684;&#x65F6;&#x95F4;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x5206;&#x4E0B;&#x53BB;&#x7684;&#xFF0C;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x592A;&#x9633;&#x7684;&#x4F4D;&#x7F6E;&#x70B9;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x65E0;&#x7A77;&#x591A;&#x4E2A;&#xFF0C;&#x54B1;&#x4EEC;&#x8BE5;&#x5982;&#x4F55;&#x628A;&#x8FD9;&#x4E48;&#x591A;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x8D77;&#x6765;&#x5462;&#xFF1F;
+&#x5E76;&#x4E14;&#xFF0C;&#x5BF9;&#x4E8E;&#x54B1;&#x4EEC;&#x7684;&#x7814;&#x7A76;&#x6765;&#x8BF4;&#xFF0C;&#x771F;&#x7684;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E48;&#x591A;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x4E0B;&#x6765;&#x5417;&#xFF1F;
+&#x6240;&#x4EE5;&#x54B1;&#x4EEC;&#x8981;&#x8FDB;&#x884C;&#x79BB;&#x6563;&#x5316;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x6BD4;&#x5982;&#x65E9;&#x6668;8&#x70B9;&#x5230;10&#x70B9;&#xFF0C;&#x6BCF;&#x9694;5&#x5206;&#x949F;&#xFF0C;&#x54B1;&#x4EEC;&#x8BB0;&#x5F55;&#x4E00;&#x4E2A;&#x592A;&#x9633;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FD9;&#x6837;&#xFF0C;&#x50A8;&#x5B58;&#x7684;&#x6570;&#x636E;&#x662F;&#x4E0D;&#x662F;&#x5927;&#x5927;&#x51CF;&#x5C11;&#x4E86;&#xFF1F;
+&#x73B0;&#x5728;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x54B1;&#x4EEC;&#x7684;&#x65F6;&#x95F4;&#x53D8;&#x91CF;&#xFF0C;&#x53D8;&#x6210;&#x4E86;&#x6BCF;&#x9694;&#x4E94;&#x5206;&#x949F;&#x4E00;&#x4E2A;&#xFF0C;&#x54B1;&#x4EEC;&#x7684;&#x592A;&#x9633;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x53D8;&#x6210;&#x4E86;&#x79BB;&#x6563;&#x5316;&#x7684;&#xFF0C;
+&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x65F6;&#x95F4;&#x662F;&#x79BB;&#x6563;&#x5316;&#x7684;&#xFF0C;&#x5E45;&#x503C;&#x4E5F;&#x662F;&#x79BB;&#x6563;&#x5316;&#x7684;&#x3002;&#x53D8;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#xFF0C;&#x4E5F;&#x5C31;&#x53EF;&#x4EE5;&#x4EA4;&#x7ED9;&#x8BA1;&#x7B97;&#x673A;&#x5904;&#x7406;&#x5566;&#x3002;
+</code></pre>
+<h3 id="osi--open-system-interconnection--&#x4E03;&#x5C42;&#x6A21;&#x578B;"><a name="osi--open-system-interconnection--&#x4E03;&#x5C42;&#x6A21;&#x578B;" class="anchor-navigation-ex-anchor" href="#osi--open-system-interconnection--&#x4E03;&#x5C42;&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.2. OSI ( Open System Interconnection ) &#x4E03;&#x5C42;&#x6A21;&#x578B;</h3>
+<p><img src="../pics/&#x4E03;&#x5C42;&#x6A21;&#x578B;.jpg" alt=""></p>
+<pre><code class="lang-text">// &#x7269;&#x7406;&#x5C42;
+&#x7269;&#x7406;&#x8BBE;&#x5907;&#x3001;&#x4F8B;&#x5982;&#x7F51;&#x7EBF;&#x3001;&#x7535;&#x7F06;&#x3001;&#x96C6;&#x7EBF;&#x5668;&#x7B49;.
+
+// &#x94FE;&#x8DEF;&#x5C42;
+&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#xFF0C;&#x8D1F;&#x8D23;&#x5BF9;&#x4E8E;&#x5E95;&#x5C42;&#x7269;&#x7406;&#x4FE1;&#x53F7;&#x8BC6;&#x522B;&#x6210;&#x67D0;&#x79CD;&#x4FE1;&#x606F;&#x3002;&#x4E3A;&#x4E86;&#x5339;&#x914D;&#x7269;&#x7406;&#x5C42;&#x7535;&#x6C14;&#x7279;&#x5F81;&#x3002;
+&#x5C06;&#x6BD4;&#x7279;&#x7EC4;&#x5408;&#x6210;&#x5B57;&#x8282;,&#x518D;&#x5C06;&#x5B57;&#x8282;&#x7EC4;&#x5408;&#x6210;&#x5E27;,&#x4F7F;&#x7528;&#x94FE;&#x8DEF;&#x5C42;&#x5730;&#x5740; (&#x4EE5;&#x592A;&#x7F51;&#x4F7F;&#x7528;MAC&#x5730;&#x5740;)&#x6765;&#x8BBF;&#x95EE;&#x4ECB;&#x8D28;,&#x5E76;&#x8FDB;&#x884C;&#x5DEE;&#x9519;&#x68C0;&#x6D4B;&#x3002;
+
+&#x94FE;&#x8DEF;&#x5C42;&#x5C31;&#x50CF;&#x540C;&#x57CE;&#x8DD1;&#x817F;&#xFF08;&#x7F51;&#x7EDC;&#x5C42;&#x662F;&#x8DE8;&#x57CE;&#x8DD1;&#x817F;&#xFF0C;&#x7C7B;&#x4F3C;&#x90AE;&#x5C40;&#x5FEB;&#x9012;&#x7B49;&#xFF09;&#xFF0C;&#x4F60;&#x628A;&#x8D27;&#x4EA4;&#x7ED9;&#x4ED6;&#xFF0C;&#x544A;&#x8BC9;&#x4ED6;&#x5730;&#x5740;&#xFF0C;&#x4ED6;&#x76F4;&#x63A5;&#x9001;&#x8FBE;&#x3002;
+&#x94FE;&#x8DEF;&#x5C42;&#x8BC6;&#x522B;mac&#x5730;&#x5740;&#xFF0C;&#x94FE;&#x8DEF;&#x8054;&#x901A;&#x540E;&#xFF0C;&#x4EA4;&#x6362;&#x673A;&#x5B66;&#x4E60;&#x5404;&#x7AEF;&#x53E3;&#x7684;mac&#x5730;&#x5740;&#xFF0C;&#x5EFA;&#x7ACB;mac&#x5730;&#x5740;&#x8F6C;&#x53D1;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x94FE;&#x8DEF;&#x5C42;&#x5C31;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#x4E86;&#x3002;
+
+// &#x7F51;&#x7EDC;&#x5C42;
+&#x5C31;&#x662F;&#x901A;&#x5E38;&#x8BF4;&#x7684;IP&#x5C42;&#x3002;&#x8FD9;&#x4E00;&#x5C42;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x8BF4;&#x7684;IP&#x534F;&#x8BAE;&#x5C42;&#x3002;IP&#x5BFB;&#x5740;&#x3001;IPV4 / IPV6 &#x7B49;&#x3002;
+
+&#x672C;&#x5C42;&#x901A;&#x8FC7;IP&#x5BFB;&#x5740;&#x6765;&#x5EFA;&#x7ACB;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x4E3A;&#x6E90;&#x7AEF;&#x7684;&#x8FD0;&#x8F93;&#x5C42;&#x9001;&#x6765;&#x7684;&#x5206;&#x7EC4;&#xFF0C;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x8DEF;&#x7531;&#x548C;&#x4EA4;&#x6362;&#x8282;&#x70B9;&#xFF0C;
+&#x6B63;&#x786E;&#x65E0;&#x8BEF;&#x5730;&#x6309;&#x7167;&#x5730;&#x5740;&#x4F20;&#x9001;&#x7ED9;&#x76EE;&#x7684;&#x7AEF;&#x7684;&#x8FD0;&#x8F93;&#x5C42;&#x3002;
+
+&#x7F51;&#x7EDC;&#x5C42;&#x6309;&#x7406;&#x6765;&#x8BF4;&#xFF0C;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#x5DF2;&#x7ECF;&#x80FD;&#x591F;&#x8D77;&#x5230;&#x4FE1;&#x606F;&#x8BC6;&#x522B;&#x7684;&#x4F5C;&#x7528;&#x4E86;&#xFF0C;&#x4E3A;&#x4F55;&#x8FD8;&#x9700;&#x8981;&#x7F51;&#x7EDC;&#x5C42;&#x5462;&#xFF1F;
+&#x5173;&#x952E;&#x5C31;&#x5728;&#x4E8E;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#x6240;&#x80FD;&#x8BC6;&#x522B;&#x51FA;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x80FD;&#x591F;&#x5F88;&#x597D;&#x7684;&#x88AB;&#x673A;&#x5668;&#x7406;&#x89E3;&#x3002;&#x4F46;&#x4E0D;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x88AB;&#x4EBA;&#x6240;&#x7406;&#x89E3;&#x3002;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x6784;&#x5EFA;&#x4E00;&#x5C42;&#x6765;&#x65B9;&#x4FBF;&#x4EBA;&#x6765;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;
+
+&#x4E3A;&#x4EC0;&#x4E48;&#x6709;&#x4E86;MAC&#x5730;&#x5740;&#xFF0C;&#x8FD8;&#x9700;&#x8981;IP&#x5730;&#x5740;&#xFF1F;
+&#x5386;&#x53F2;&#x539F;&#x56E0;&#xFF1A;&#x4EE5;&#x592A;&#x7F51;&#x8BDE;&#x751F;&#x4E8E;&#x56E0;&#x7279;&#x7F51;&#x4E4B;&#x524D;&#xFF0C;&#x5728;IP&#x5730;&#x5740;&#x4E4B;&#x524D;MAC&#x5730;&#x5740;&#x5C31;&#x5DF2;&#x7ECF;&#x5728;&#x4F7F;&#x7528;&#x4E86;&#x3002;&#x4E24;&#x8005;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x4E0D;&#x5F71;&#x54CD;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x534F;&#x8BAE;
+&#x5206;&#x5C42;&#x5B9E;&#x73B0;&#xFF1A;&#x5BF9;&#x7F51;&#x8DEF;&#x534F;&#x8BAE;&#x8FDB;&#x884C;&#x5206;&#x5C42;&#x4EE5;&#x540E;&#xFF0C;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#x7684;&#x5B9E;&#x73B0;&#x4E0D;&#x9700;&#x8981;&#x8003;&#x8651;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x53D1;&#xFF0C;&#x7F51;&#x7EDC;&#x5C42;&#x7684;&#x5B9E;&#x73B0;&#x4E0D;&#x9700;&#x8981;&#x8003;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#x7684;&#x5F71;&#x54CD;&#x3002;
+&#x5206;&#x5DE5;&#x5408;&#x4F5C;&#xFF1A;IP&#x5730;&#x5740;&#x662F;&#x4F1A;&#x968F;&#x7740;&#x4E3B;&#x673A;&#x63A5;&#x5165;&#x7F51;&#x7EDC;&#x7684;&#x4E0D;&#x540C;&#x800C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x7684;&#xFF0C;&#x800C;MAC&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;IP&#x5730;&#x5740;&#x8FDB;&#x884C;&#x5BFB;&#x5740;&#xFF0C;&#x5F53;&#x6570;&#x636E;&#x62A5;&#x548C;&#x76EE;&#x7684;&#x4E3B;&#x673A;&#x5904;&#x4E8E;&#x540C;&#x4E00;&#x7F51;&#x7EDC;&#x65F6;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;MAC&#x5730;&#x5740;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4EA4;&#x4ED8;&#x3002;
+
+// &#x4F20;&#x8F93;&#x5C42;
+&#x5BF9;&#x7F51;&#x7EDC;&#x5C42;&#x7684;&#x8FDB;&#x4E00;&#x6B65;&#x5C01;&#x88C5;&#xFF0C;TCP &#x3001;UDP  &#x5C31;&#x662F;&#x8FD9;&#x4E00;&#x5C42;&#x3002;
+
+// &#x4F1A;&#x8BDD;&#x5C42;
+&#x8D1F;&#x8D23;&#x5EFA;&#x7ACB;&#x548C;&#x65AD;&#x5F00;&#x901A;&#x4FE1;&#x8FDE;&#x63A5;&#xFF08;&#x6570;&#x636E;&#x6D41;&#x52A8;&#x7684;&#x903B;&#x8F91;&#x901A;&#x8DEF;&#xFF09;&#x3002;
+&#x4F8B;&#x5982;&#x8981;&#x6839;&#x636E;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x6765;&#x51B3;&#x5B9A;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x8981;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x3001;&#x6570;&#x636E;&#x91CD;&#x8FDE;&#x3001;&#x8FDE;&#x63A5;&#x65AD;&#x5F00;&#x7B49;&#x3002;
+
+// &#x8868;&#x793A;&#x5C42;
+&#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x7684;&#x8F6C;&#x6362;&#x3002;&#x5C06;&#x8BBE;&#x5907;&#x56FA;&#x6709;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A;&#x7F51;&#x7EDC;&#x6807;&#x51C6;&#x4F20;&#x8F93;&#x683C;&#x5F0F;&#xFF0C;&#x4E0D;&#x540C;&#x8BBE;&#x5907;&#x5BF9;&#x540C;&#x4E00;&#x6BD4;&#x7279;&#x6D41;&#x89E3;&#x91CA;&#x7684;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x4F1A;&#x4E0D;&#x540C;&#x3002;
+&#x4F8B;&#x5982;&#x540C;&#x6837;&#x7684;&#x4E00;&#x4E32; byte[]&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x540C;&#x7684;APP&#x91C7;&#x7528;&#x7684;&#x4E0D;&#x662F;&#x540C;&#x4E00;&#x5957;&#x89E3;&#x6790;&#x534F;&#x8BAE;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x534F;&#x8BAE;&#x8F6C;&#x4E3A;APP&#x80FD;&#x8BC6;&#x522B;&#x7684;&#x4FE1;&#x606F;&#x3002;
+
+// &#x5E94;&#x7528;&#x5C42; 
+&#x6709;&#x4E9B;&#x5206;&#x5C42;&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x5C06; &#x4F1A;&#x8BDD;&#x5C42;+&#x8868;&#x793A;&#x5C42;+ &#x5E94;&#x7528;&#x5C42; =  &#x7EDF;&#x4E00;&#x79F0;&#x4E3A;&#x5E94;&#x7528;&#x5C42;&#x3002; 
+&#x56E0;&#x4E3A;&#x4F1A;&#x8BDD;&#x5C42;&#x548C;&#x8868;&#x793A;&#x5C42;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x5B8C;&#x5168;&#x62BD;&#x8C61;&#x6210;&#x516C;&#x5171;&#x5C42;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x548C;&#x5E94;&#x7528;&#x5C42;&#x4E00;&#x8D77;&#x5B9E;&#x73B0;&#x3002;
+
+&#x5C31;&#x662F;&#x5404;&#x4E2A;&#x516C;&#x53F8;&#x5F00;&#x53D1;&#x7684;&#x4E0D;&#x540C;&#x7684;&#x5E94;&#x7528;&#x3002;&#x4F8B;&#x5982; HTTP&#x8D85;&#x6587;&#x672C;&#x4F20;&#x8F93;&#x3001;  HTTPS  FTP&#x6587;&#x4EF6;&#x4F20;&#x8F93; &#x3001;SMTP&#x90AE;&#x4EF6;&#x4F20;&#x8F93; &#x7B49;&#x4E0D;&#x540C;&#x4FA7;&#x91CD;&#x65B9;&#x5411;&#x7684;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x3002;
+</code></pre>
+<h1 id="usb-&#x901A;&#x4FE1;"><a name="usb-&#x901A;&#x4FE1;" class="anchor-navigation-ex-anchor" href="#usb-&#x901A;&#x4FE1;"><i class="fa fa-link" aria-hidden="true"></i></a>4. usb &#x901A;&#x4FE1;</h1>
+<h2 id="aoa&#x534F;&#x8BAE;"><a name="aoa&#x534F;&#x8BAE;" class="anchor-navigation-ex-anchor" href="#aoa&#x534F;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. AOA&#x534F;&#x8BAE;</h2>
+<pre><code class="lang-text">Google&#x63A8;&#x51FA;&#x7684; Android&#x5F00;&#x653E;&#x914D;&#x4EF6;&#x534F;&#x8BAE;AOA&#xFF08;Android Open Accessory Protocol&#xFF09;&#x53CA;&#x914D;&#x4EF6;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x5305;ADK&#xFF08;Accessory Development Kit&#xFF09;
+&#x63D0;&#x4F9B;&#x4E86;Android&#x8BBE;&#x5907;&#x4E0E;Android&#x914D;&#x4EF6;&#x901A;&#x8FC7;USB&#x6216;&#x84DD;&#x7259;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x7684;API&#xFF0C;
+&#x4E3A;&#x57FA;&#x4E8E;Android&#x7CFB;&#x7EDF;&#x7684;&#x667A;&#x80FD;&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x5916;&#x8BBE;&#x63D0;&#x4F9B;&#x4E86;&#x6761;&#x4EF6;&#x3002;
+&#x5229;&#x7528;Android&#xFF0C;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x8FDE;&#x63A5;&#x4ECE;&#x5BB6;&#x7528;&#x7535;&#x5668;&#x5230;&#x91CD;&#x578B;&#x673A;&#x68B0;&#x3001;&#x673A;&#x5668;&#x4EBA;&#x7B49;&#x591A;&#x79CD;&#x8BBE;&#x5907;&#x3002;
+</code></pre>
+<p>&#x5F53;&#x524D;&#x9879;&#x76EE;&#x7528;&#x5230;&#x7684;&#x662F; android &#x7684;<a href="http://www.hackermi.com/2015-04/aoa-analyse/" target="_blank">AOA&#x534F;&#x8BAE;</a>&#x3002;&#x9065;&#x63A7;&#x5668;&#x4F5C;&#x4E3A;&#x4E3B;&#x673A;&#x4F9B;&#x7535;&#xFF0C;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#xFF08;&#x624B;&#x673A;&#x3001;&#x5E73;&#x677F;&#xFF09;&#x4F5C;&#x4E3A;&#x4ECE;&#x673A;&#x3002;
+&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BF7;&#x81EA;&#x884C;&#x67E5;&#x9605;&#x76F8;&#x5173;&#x6587;&#x6863;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E00;-&#xFF1A;android&#x8BBE;&#x5907;&#x4F5C;&#x4E3A;&#x4ECE;&#x673A;"><a name="&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E00;-&#xFF1A;android&#x8BBE;&#x5907;&#x4F5C;&#x4E3A;&#x4ECE;&#x673A;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E00;-&#xFF1A;android&#x8BBE;&#x5907;&#x4F5C;&#x4E3A;&#x4ECE;&#x673A;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E00; &#xFF1A;android&#x8BBE;&#x5907;&#x4F5C;&#x4E3A;&#x4ECE;&#x673A;</h2>
+<p><a href="http://www.hackermi.com/2015-04/aoa-analyse/" target="_blank">&#x53C2;&#x8003;&#x8D44;&#x6599;</a></p>
+<p><img src="https://gitee.com/hnyer/filesOfGitbook/raw/master/files/201801231626_osChina_usb&#x914D;&#x4EF6;&#x6A21;&#x5F0F;.png" alt=""></p>
+<p>&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x662F;Android&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x901A;&#x8BAF;&#x6A21;&#x5F0F;&#xFF0C;&#x5B83;&#x5C06;usb&#x914D;&#x4EF6;&#x4F5C;&#x4E3A;&#x534F;&#x8BAE;&#x4EA4;&#x4E92;&#x7684;&#x4E3B;&#x8981;&#x89D2;&#x8272;&#xFF0C;&#x914D;&#x4EF6;&#x5185;&#x7F6E;USB Embedded Host&#x7AEF;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;Android&#x624B;&#x673A;&#x4F9B;&#x7535;&#xFF0C;&#x5E76;&#x4E14;&#x8BC6;&#x522B;Android&#x624B;&#x673A;&#xFF0C;&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x901A;&#x9053;&#x3002;&#x4F7F;&#x5F97;&#x914D;&#x4EF6;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x7B80;&#x5316;&#x7248;&#x7684;PC Host&#x7AEF;&#x3002;</p>
+<h2 id="usb&#x901A;&#x4FE1;demo"><a name="usb&#x901A;&#x4FE1;demo" class="anchor-navigation-ex-anchor" href="#usb&#x901A;&#x4FE1;demo"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. usb&#x901A;&#x4FE1;demo</h2>
+<h3 id="musbaccessorymanagerjava"><a name="musbaccessorymanagerjava" class="anchor-navigation-ex-anchor" href="#musbaccessorymanagerjava"><i class="fa fa-link" aria-hidden="true"></i></a>4.3.1. MusbAccessoryManager.java</h3>
+<pre><code class="lang-text">public class MusbAccessoryManager{
+    private Context mCtx;
+    private ParcelFileDescriptor fileDescriptor;
+    private FileInputStream inputStream;
+    private FileOutputStream outputStream;
+    private AccessoryReadThread readThread;
+    private AccessoryWriteThread writeThread;
+    private BytesDataRepackThread repackThread ;
+    private boolean enableThread;
+    /**&#x53D1;&#x9001;&#x961F;&#x5217;*/
+    private BlockingQueue&lt;MyBytesTransfer&gt; outQueue;
+    private BlockingQueue&lt;byte[]&gt; readQuene;
+    private IOperateResultCallBack iUsbResultCallBack ;
+    //private IBytesTransferInterface iGetBytesInterface ;
+    private IUsbPackageTransferInterface iusbpackageTransInterface ;
+    /**&#x8BFB;&#x5165;&#x6D41; &#x65F6;&#x7684;&#x4F11;&#x7720;&#x95F4;&#x9694;  &#x5FAE;&#x79D2;*/
+    private final long READ_STRING_SLEEPTIME= 20L;
+    /**&#x5199;&#x5165;&#x6D41; &#x65F6;&#x7684;&#x4F11;&#x7720;&#x95F4;&#x9694;*/
+    private final long WRITE_STRING_SLEEPTIME= 60L;
+    /**&#x89E3;&#x6790; byte[] &#x65F6;&#x7684;&#x4F11;&#x7720;&#x95F4;&#x9694;*/
+    private final long REPACKAGE_SLEEPTIME= 0L;
+    /** &#x8C03;&#x6574;&#x8BFB;&#x53D6;&#x5927;&#x5C0F;*/
+    private byte[] buffer= new byte[2048 * 3] ;
+
+    public MusbAccessoryManager(Context context  , IOperateResultCallBack iUsbResultCallBack ,
+                                IUsbPackageTransferInterface iusbpackageTransInterface)    {
+        this.mCtx = context;
+        fileDescriptor = null;
+        inputStream = null;
+        outputStream = null;
+        readThread = null;
+        writeThread = null;
+        repackThread =null ;
+        enableThread = false;
+        this.iUsbResultCallBack= iUsbResultCallBack;
+        this.iusbpackageTransInterface = iusbpackageTransInterface;
+        outQueue = new LinkedBlockingQueue&lt; &gt;(Integer.MAX_VALUE);
+        readQuene = new LinkedBlockingQueue&lt;&gt;(Integer.MAX_VALUE) ;
+    }
+
+    // &#x6DFB;&#x52A0;&#x6570;&#x636E; &#x5230;&#x53D1;&#x9001;&#x961F;&#x5217;
+    public void addMessage(MyBytesTransfer msg)    {
+        try    {
+            outQueue.put(msg);
+        }catch (Exception e)    {
+            MyLogUtils.mLog_iNormal(&quot;usb&#x8BBE;&#x5907;== &#x53D1;&#x9001;&#x5F02;&#x5E38;1 =&quot;+e.getMessage());
+        }
+    }
+
+    //  &#x6253;&#x5F00;USB&#x901A;&#x4FE1;
+    public void OpenAccessory(UsbAccessory accessory)  {
+        if (!enableThread)        {
+            fileDescriptor = ((UsbManager) mCtx.getSystemService(Context.USB_SERVICE)).openAccessory(accessory);
+            if (fileDescriptor != null)    {
+                FileDescriptor fd = fileDescriptor.getFileDescriptor();
+                inputStream = new FileInputStream(fd);
+                outputStream = new FileOutputStream(fd);
+
+                if (inputStream == null || outputStream == null)    {
+                    // &#x8BFB;&#x53D6;&#x6D41;&#x5F02;&#x5E38;
+                    return;
+                }
+                //&#x8FDE;&#x63A5;&#x6210;&#x529F;
+                iUsbResultCallBack.onResultCallBack(MyStateConfig.STATE_14);
+                enableThread = true;
+                readThread = new AccessoryReadThread(inputStream);
+                readThread.start();
+                writeThread = new AccessoryWriteThread(outputStream);
+                writeThread.start();
+                repackThread = new BytesDataRepackThread() ;
+                repackThread.start();
+            }else{
+                toastMsg(&quot;fileDescriptor==null &quot;   ) ;
+            }
+        }
+    }//
+
+    // &#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x3001;&#x6E05;&#x7A7A;&#x961F;&#x5217;&#x3001;&#x505C;&#x6B62;&#x7EBF;&#x7A0B;
+    public void CloseAccessory()  {
+        try    {
+            if (fileDescriptor != null)        {
+                fileDescriptor.close();
+            }
+            if (outputStream != null)        {
+                outputStream.close();
+            }
+            if (inputStream != null)    {
+                inputStream.close();
+            }
+        }catch (Exception ie)    {
+            ie.printStackTrace();
+        }
+        outQueue.clear();
+        readQuene.clear();
+        enableThread = false;
+        fileDescriptor = null;
+        outputStream = null;
+        inputStream = null;
+    }
+
+   // &#x8BFB;&#x53D6;&#x5B50;&#x7EBF;&#x7A0B;
+    private class AccessoryReadThread extends Thread  {
+        private FileInputStream inStream;
+
+        public AccessoryReadThread(FileInputStream stream)     {
+              this.inStream = stream;
+           }
+        @Override
+        public void run()     {
+            while (enableThread)     {
+                try {
+                    int realReaded = inStream.read(buffer);
+                    if(realReaded&gt;0)     {
+                        byte [] realBytes = MyStringUtils.subBytes(buffer, 0 , realReaded) ;
+                        readQuene.put(realBytes);
+                    }
+                } catch (Exception e) {
+                    //&#x53D1;&#x751F;&#x5F02;&#x5E38;&#xFF0C;&#x7EE7;&#x7EED;&#x6267;&#x884C;
+                    continue;
+                }
+                MyApplication.usbReadStreamState=  MyStateConfig.STATE_9;
+                try {
+                    TimeUnit.MICROSECONDS.sleep(READ_STRING_SLEEPTIME);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } // end while
+
+        } // end run
+    }//
+
+    // &#x53D1;&#x9001;&#x5B50;&#x7EBF;&#x7A0B;
+    private class AccessoryWriteThread extends Thread     {
+        private FileOutputStream outStream;
+        public AccessoryWriteThread(FileOutputStream outputStream)     {
+            this.outStream = outputStream;
+        }
+
+        @Override
+        public void run()  {
+            MyBytesTransfer msg;
+            while (enableThread){
+                try{
+                    if (outStream != null)    {
+                        msg = outQueue.poll();
+                        if (msg != null)    {
+                            sendByteDataToServer(msg.bytes );
+                            msg = null;
+                        }else{
+                        }
+                    } else{
+                        MyApplication.usbWriteStreamState=  MyStateConfig.STATE_11;
+                        outQueue.clear();
+                    }
+                    MyApplication.usbWriteStreamState=  MyStateConfig.STATE_10;
+                    try {
+                        Thread.sleep(WRITE_STRING_SLEEPTIME);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }catch (Exception ex)
+                {
+                    com.walkera.base.utils.MyLogUtils.mLog_iNormal(&quot;&#x53D1;&#x9001;&#x6D4B;&#x8BD5;3=  msg=&quot;+ex.getMessage());
+                    MyApplication.usbWriteStreamState=  MyStateConfig.STATE_11;
+                }
+            }
+        }
+
+        // &#x5C06;&#x6570;&#x636E;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x5668;
+        private void sendByteDataToServer(byte[] buffer) {
+            try    {
+                if (outStream != null)    {
+                    iUsbResultCallBack.onResultCallBack(MyStateConfig.STATE_13);
+                    outStream.write(buffer, 0, buffer.length);
+                    outStream.flush();
+                }
+            }catch (IOException ex)    {
+                iUsbResultCallBack.onResultCallBack(MyStateConfig.STATE_12);
+            }
+        }//
+    }
+
+    //  &#x89E3;&#x6790; &#x91CD;&#x7EC4;&#x5305; &#x5B50;&#x7EBF;&#x7A0B;
+    private class BytesDataRepackThread extends Thread{
+        @Override
+        public void run()    {
+            while (enableThread)    {
+                if(readQuene!=null)        {
+                    byte[] realBytes =    readQuene.poll() ;
+                    if(realBytes!=null)    {
+                        rePackageForBytes(realBytes) ;
+                    }
+                }
+                try    {
+                    Thread.sleep(REPACKAGE_SLEEPTIME);
+                } catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+            } //  while
+        }//end run
+    }
+
+    // &#x91CD;&#x7EC4;&#x5305; &#xFF0C; &#x5C06;&#x9065;&#x63A7;&#x5668; &#x3001; &#x98DE;&#x63A7;&#x3001;&#x89C6;&#x5C4F;&#x6570;&#x636E;&#x5206;&#x5F00; .
+    private void rePackageForBytes(byte[] bytes)    {
+        if(bytes!=null)    {
+            int size =bytes.length ;
+            for(int i=0 ; i&lt; size ;i++)    {
+                MyBytesTransfer myBytesTransfer = MyUsbUnPackTools.unPackageofUsb(bytes[i]) ;
+                if(myBytesTransfer!=null)    {
+                    iusbpackageTransInterface.transferUsbPackageBean(myBytesTransfer);
+                }
+            }
+        } // end if
+    } //
+
+    private void toastMsg(String msg){
+        Toast.makeText(mCtx, msg ,Toast.LENGTH_SHORT) .show();
+    }
+}
+</code></pre>
+<h3 id="usbmsgclientjava"><a name="usbmsgclientjava" class="anchor-navigation-ex-anchor" href="#usbmsgclientjava"><i class="fa fa-link" aria-hidden="true"></i></a>4.3.2. UsbMsgClient.java</h3>
+<pre><code class="lang-text">public class UsbMsgClient{
+    private Context mCtx ;
+    private UsbManager usbmanager ;
+    /**usb &#x64CD;&#x4F5C;&#x7BA1;&#x7406;&#x7C7B;*/
+    private MusbAccessoryManager mubAccessoryManager;
+    private IUsbMsgBackInterface iUsbMsgBackInterface ;
+
+    public UsbMsgClient (Context mCtx ,IUsbMsgBackInterface iUsbMsgBackInterface ,IOperateResultCallBack iUsbResultCallBack)  {
+        this.mCtx = mCtx;
+        this.iUsbMsgBackInterface= iUsbMsgBackInterface ;
+        usbmanager=((UsbManager) mCtx.getSystemService(Context.USB_SERVICE)) ;
+        mubAccessoryManager = new MusbAccessoryManager(mCtx , iUsbResultCallBack   ,iusbpackageTransInterface);
+        discoverAccessories();
+    }
+
+   // &#x56DE;&#x8C03; &#x6765;&#x81EA;usb&#x7684;&#x6570;&#x636E;
+    private IUsbPackageTransferInterface iusbpackageTransInterface = new IUsbPackageTransferInterface()  {
+        @Override
+        public void transferUsbPackageBean(MyBytesTransfer myBytesTransfer)  {
+            if(myBytesTransfer != null)    {
+                // 4759&#x56FE;&#x4F20;  -  3678&#x98DE;&#x63A7;    - 5869 &#x9065;&#x63A7;&#x5668;
+                if( Arrays.equals(myBytesTransfer.msgType, MyStateConfig.VEDEO_DATA_RECEIVE))  {  //&#x89C6;&#x5C4F;&#x6570;&#x636E;
+                    iUsbMsgBackInterface.getUsbVedioByte(myBytesTransfer);
+                }else if(Arrays.equals(myBytesTransfer.msgType, MyStateConfig.FC_DATA_RECEIVE))  {
+                    //&#x98DE;&#x63A7;&#x6570;&#x636E;
+                    iUsbMsgBackInterface.getUsbFcByte(myBytesTransfer);
+                }else if(Arrays.equals(myBytesTransfer.msgType, MyStateConfig.RC_DATA_RECEIVE))  {
+                    //&#x9065;&#x63A7;&#x5668;&#x6570;&#x636E;
+                    iUsbMsgBackInterface.getUsbRcByte(myBytesTransfer);
+
+                }
+            }
+        }
+    } ;
+
+   // &#x626B;&#x63CF;usb&#x8BBE;&#x5907; &#x53D1;&#x73B0;&#x4ECE;&#x8BBE;&#x5907;
+    private void discoverAccessories()  {
+        UsbAccessory[] list = usbmanager.getAccessoryList();
+        if (list != null &amp;&amp; list.length!=0)  {
+            openTheAccessory(list[0]);
+        }else  {
+            //MyToastTools.toastWarning(mCtx ,mCtx.getString( R.string.v5_str_1));
+        }
+    }//
+
+    // &#x8FDE;&#x63A5; &#x6307;&#x5B9A;&#x8BBE;&#x5907;
+    private void openAccessory(UsbAccessory accessory)  {
+        mubAccessoryManager.OpenAccessory(accessory);
+        new Handler().postDelayed(new Runnable()  {
+            @Override
+            public void run()  {
+                byte[] openSession = { (byte)0xDD , (byte)0xDF  ,(byte)0x06 ,(byte)0x00 } ;
+                sendBytesToDevices(openSession);
+            }
+        } , 2000) ;
+    }
+
+   // &#x8FDE;&#x63A5;USB&#x8BBE;&#x5907;
+    private void openTheAccessory(UsbAccessory accessory)  {
+        if (accessory == null)  {
+            MyToastTools.toastWarning(mCtx ,mCtx.getString( R.string.v5_str_2));
+        }else {
+            if (usbmanager.hasPermission(accessory))  {
+                openAccessory(accessory);
+            }else  {
+                com.walkera.base.utils.MyLogUtils.mLog_iNormal(&quot;usb&#x8BBE;&#x5907;== &#x65E0;&#x6743;&#x9650;1&quot;);
+            }
+        }
+    }
+
+    // &#x901A;&#x77E5;&#x9065;&#x63A7;&#x5668;&#x5173;&#x95ED;
+    private void closeSession()  {
+        byte[] closeSession = { (byte)0xDD , (byte)0xDF  ,(byte)0x07 ,(byte)0x00 } ;
+        sendBytesToDevices(closeSession);
+    }
+
+    // &#x5173;&#x95ED;usb&#x6536;&#x53D1;&#x5DE5;&#x5177;
+    public void closeUsbMsgClinet()  {
+        closeSession();
+        new Handler().postDelayed(new Runnable()  {
+            @Override
+            public void run()  {
+                closeAccessory();
+            }
+        }, 500);
+    }
+
+    // &#x65AD;&#x5F00;&#x8BBE;&#x5907;
+    private void closeAccessory(){
+        if (mubAccessoryManager != null)  {
+            mubAccessoryManager.CloseAccessory();
+        }
+    }
+
+    // &#x53D1;&#x9001;&#x6570;&#x636E;
+    public void sendBytesToDevices( byte[] data )  {
+        if (mubAccessoryManager != null)  {
+            mubAccessoryManager.addMessage(new MyBytesTransfer(data , MyStateConfig.STATE_6,null));
+        }
+    }
+}
+</code></pre>
+<h3 id="mystateconfigjava"><a name="mystateconfigjava" class="anchor-navigation-ex-anchor" href="#mystateconfigjava"><i class="fa fa-link" aria-hidden="true"></i></a>4.3.3. MyStateConfig.java</h3>
+<pre><code class="lang-text">public class MyStateConfig{
+    /**&#x8BF7;&#x6C42;usb&#x8BBF;&#x95EE;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x6743;&#x9650;*/
+    public static final String ACTION_USB_ACCESSORY_PERMISSION = &quot;com.wk.USB_ACCESSORY_PERMISSION&quot;;
+    /**&#x5F53;&#x524D;&#x53C2;&#x6570;&#x65E0;&#x610F;&#x4E49; */
+    public final  static int STATE_NULL = -100 ;
+    /**&#x6240;&#x6709;&#x7684;&#x72B6;&#x6001;&#x7684;&#x521D;&#x59CB;&#x5316;&#x72B6;&#x6001; */
+    public final  static int STATE_0 = 0 ;
+    /** usb&#x9000;&#x51FA; */
+    public final  static int STATE_1 =1 ;
+    /** usb&#x8FDE;&#x63A5;&#x5F02;&#x5E38; , &#x8BFB;&#x53D6;&#x6D41;&#x5F02;&#x5E38; */
+    public final static int STATE_2 =2 ;
+    /** usb &#x6743;&#x9650;&#x88AB;&#x62D2;&#x7EDD;&#x4E86; */
+    public final static int STATE_3 =3;
+    /**&#x63A5;&#x6536;usb byte &#x6B63;&#x5F0F;*/
+    public final static int STATE_4 =4;
+    /**&#x63A5;&#x6536;usb byte &#x6D4B;&#x8BD5;*/
+    public final static int STATE_5 =5;
+    /**&#x53D1;&#x9001;&#x7684;bytes[]*/
+    public final static int STATE_6 =6;
+    /**&#x63A5;&#x6536;&#x5230;&#x7684;byte[]*/
+    public final static int STATE_7 =7;
+    /**usb&#x8F93;&#x5165;&#x6D41;&#x5F02;&#x5E38;*/
+    public final static int STATE_8 =8;
+    /**usb&#x8F93;&#x5165;&#x6D41;&#x6B63;&#x5E38;*/
+    public final static int STATE_9 =9;
+    /**usb&#x8F93;&#x51FA;&#x6D41;&#x6B63;&#x5E38;*/
+    public final static int STATE_10 =10;
+    /**usb&#x8F93;&#x51FA;&#x6D41;&#x5F02;&#x5E38;*/
+    public final static int STATE_11 =11;
+    /**&#x53D1;&#x9001;&#x5931;&#x8D25;*/
+    public final static int STATE_12 =12;
+    /**&#x53D1;&#x9001;&#x6210;&#x529F;*/
+    public final static int STATE_13 =13;
+    /**Usb&#x8FDE;&#x63A5;&#x6210;&#x529F;*/
+    public final static int STATE_14 =14;
+    /**&#x5C5E;&#x4E8E;&#x76F8;&#x673A;&#x6570;&#x636E; */
+    public final  static int STATE_15 = 15 ;
+}
+</code></pre>
+<h3 id="xml&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x3001;usb&#x63D2;&#x5165;&#x3001;&#x62D4;&#x51FA;&#x76D1;&#x542C;"><a name="xml&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x3001;usb&#x63D2;&#x5165;&#x3001;&#x62D4;&#x51FA;&#x76D1;&#x542C;" class="anchor-navigation-ex-anchor" href="#xml&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x3001;usb&#x63D2;&#x5165;&#x3001;&#x62D4;&#x51FA;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3.4. xml&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x3001;usb&#x63D2;&#x5165;&#x3001;&#x62D4;&#x51FA;&#x76D1;&#x542C;</h3>
+<p>&#x8BF7;&#x53C2;&#x8003;&#x5B98;&#x7F51;</p>
+<h3 id="&#x4F7F;&#x7528;"><a name="&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3.5. &#x4F7F;&#x7528;</h3>
+<pre><code class="lang-text">/**usb&#x6536;&#x53D1;&#x5DE5;&#x5177;*/
+private UsbMsgClient usbMsgClient ;
+//&#x521D;&#x59CB;&#x5316;usb&#x6570;&#x636E;&#x63A5;&#x6536;&#x5668;
+usbMsgClient = new UsbMsgClient( mContext ,iUsbMsgBackInterface ,iUsbResultCallBack) ;
+//&#x53D1;&#x9001;byte[]&#x6570;&#x636E;
+usbMsgClient.sendBytesToDevices(code);
+//&#x5173;&#x95ED;&#x8FDE;&#x63A5;
+usbMsgClient.closeUsbMsgClinet();
+
+/**
+ * &#x63A5;&#x6536; usb &#x8FD4;&#x56DE;&#x6570;&#x636E;
+ */
+private IUsbMsgBackInterface iUsbMsgBackInterface = new IUsbMsgBackInterface(){
+    /**&#x89C6;&#x5C4F;&#x6570;&#x636E;*/
+    @Override
+    public void getUsbVedioByte(MyBytesTransfer vedioData)  {
+        //&#x89E3;&#x7801;...
+    }
+
+    /**&#x98DE;&#x63A7;&#x6570;&#x636E;*/
+    @Override
+    public void getUsbFcByte(MyBytesTransfer fcData)  {
+        //&#x89E3;&#x6790;&#x98DE;&#x63A7;&#x6570;&#x636E;
+    }
+
+    /**&#x9065;&#x63A7;&#x5668;&#x6570;&#x636E;*/
+    @Override
+    public void getUsbRcByte(MyBytesTransfer rcData)  {
+        //&#x89E3;&#x6790;&#x9065;&#x63A7;&#x5668;&#x6570;&#x636E;
+    }
+} ;
+
+/**
+ * &#x63A5;&#x6536; usb &#x64CD;&#x4F5C;&#x3001;&#x72B6;&#x6001;&#x7801;
+ */
+private IOperateResultCallBack iUsbResultCallBack = new IOperateResultCallBack(){
+    @Override
+    public void onResultCallBack(int state ){
+        //&#x72B6;&#x6001;&#x7801;
+    }
+};
+</code></pre>
+<h1 id="&#x79C1;&#x6709;&#x534F;&#x8BAE;"><a name="&#x79C1;&#x6709;&#x534F;&#x8BAE;" class="anchor-navigation-ex-anchor" href="#&#x79C1;&#x6709;&#x534F;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x79C1;&#x6709;&#x534F;&#x8BAE;</h1>
+<h2 id="&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x8282;&#x6570;"><a name="&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x8282;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x8282;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. &#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x8282;&#x6570;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5BF9;&#x5E94;&#x5B57;&#x8282;&#x6570;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit</td>
+<td>1/8</td>
+<td></td>
+</tr>
+<tr>
+<td>byte</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>char</td>
+<td>1 (char&#x5728;java&#x4E2D;&#x662F;2&#x4E2A;&#x5B57;&#x8282;)</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>uint8</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>uint8_t</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>uint16</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>uint16_t</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>int16</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>short</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>float</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>int32</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>uint32_t</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td>8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x5FC3;&#x8DF3;&#x673A;&#x5236;"><a name="&#x5FC3;&#x8DF3;&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x5FC3;&#x8DF3;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x5FC3;&#x8DF3;&#x673A;&#x5236;</h1>
+<p>&#x5728;&#x79C1;&#x6709;&#x534F;&#x8BAE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5E38;&#x5E38;&#x9700;&#x8981;&#x7528;&#x5FC3;&#x8DF3;&#x6765;&#x5224;&#x65AD;&#x5BF9;&#x65B9;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6389;&#x7EBF;&#x3002;&#x6BD4;&#x5982;&#x6301;&#x7EED;20&#x79D2;&#x6536;&#x4E0D;&#x5230;&#x7EA6;&#x5B9A;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x5224;&#x65AD;&#x4E3A;&#x5BF9;&#x65B9;&#x6389;&#x7EBF;&#x3002;</p>
+<pre><code class="lang-text">public abstract class HeartBeatTask implements Runnable {
+    private String taskName  ;
+    public HeartBeatTask( ){
+        taskName = &quot;beatTask_&quot;+System.nanoTime() ;
+    }  
+
+    public String getTaskName() {
+        return taskName;
+    }
+}
+
+public class WkHeartBeatTool {
+private ScheduledExecutorService mScheduledExecutorService;
+private HashMap&lt;String, Future &gt; map  ;
+
+public WkHeartBeatTool() {
+    initTool();
+}
+
+public int getTaskNum(){
+    return map==null? 0 : map.size() ;
+}
+
+private void initTool() {
+    mScheduledExecutorService = Executors.newScheduledThreadPool(5);// &#x7EBF;&#x7A0B;&#x6C60;&#x5927;&#x5C0F;  5
+    map = new HashMap&lt;String, Future&gt;() ;
+}
+
+public void startTheBeatAction(HeartBeatTask task , int period){
+    if(map.containsKey(task.getTaskName())){
+        System.out.println(&quot;&#x5FC3;&#x8DF3;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#xFF0C;&#x65E0;&#x9700;&#x91CD;&#x590D;&#x6DFB;&#x52A0;&quot;);
+        return ;
+    }
+    Future  future = mScheduledExecutorService.scheduleAtFixedRate( task , 0, period, TimeUnit.MILLISECONDS);
+    map.put(task.getTaskName() , future) ;
+}
+
+public void shutDownTheBeatAction(HeartBeatTask task ){
+    Future future = map.get(task.getTaskName()) ;
+    if(future!=null){
+        future.cancel(true) ; 
+        map.remove(task.getTaskName()) ;
+    }else{
+        System.out.println(&quot;&#x4F60;&#x6307;&#x5B9A;&#x7684;&#x8FD9;&#x4E2A;&#x5FC3;&#x8DF3;&#x4EFB;&#x52A1;&#x5DF2;&#x7ECF;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x65E0;&#x9700;&#x5173;&#x95ED;&quot;);
+    }
+}
+
+public void startDelayedAction( HeartBeatTask task , int delayTime){
+    mScheduledExecutorService.schedule( task, delayTime ,TimeUnit.MILLISECONDS );
+}
+
+public void shutDownAll() {
+    if (mScheduledExecutorService != null) {
+        mScheduledExecutorService.shutdownNow();  // &#x5F3A;&#x5236;&#x5173;&#x95ED;
+        mScheduledExecutorService = null;
+    }
+
+    map.clear();
+    map=null ;
+}
+
+}
+
+WkHeartBeatTool heartBeatTool = new WkHeartBeatTool() ;
+HeartBeatTask task1 = new HeartBeatTask() {
+  public void run() { ...}
+};
+
+heartBeatTool.startTheBeatAction(task1, 1000) ;// &#x5F00;&#x59CB;&#x5FC3;&#x8DF3;
+heartBeatTool.shutDownTheBeatAction(task1) ;// &#x505C;&#x6B62;&#x5FC3;&#x8DF3;
+heartBeatTool.startDelayedAction(task1, 5 * 1000) ;// &#x53D1;&#x9001;&#x5EF6;&#x65F6;&#x4EFB;&#x52A1;
+int sum = heartBeatTool.getTaskNum() ;// &#x83B7;&#x53D6; &#x5FC3;&#x8DF3;&#x4EFB;&#x52A1;&#x603B;&#x6570;
+heartBeatTool.shutDownAll() ;// &#x5173;&#x95ED;&#x6240;&#x6709;&#x4EFB;&#x52A1; &#x5E76;&#x9500;&#x6BC1;&#x5DE5;&#x5177;
+</code></pre>
+<h1 id="&#x5B9A;&#x65F6;&#x6279;&#x91CF;&#x6267;&#x884C;-jobscheduler"><a name="&#x5B9A;&#x65F6;&#x6279;&#x91CF;&#x6267;&#x884C;-jobscheduler" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x65F6;&#x6279;&#x91CF;&#x6267;&#x884C;-jobscheduler"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x5B9A;&#x65F6;&#x6279;&#x91CF;&#x6267;&#x884C; JobScheduler</h1>
+<pre><code class="lang-text">&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528; Timer &#x6216;&#x8005;&#x5F00;&#x542F;&#x7EBF;&#x7A0B;&#x6765;&#x8FDB;&#x884C;&#x5B9A;&#x65F6;&#x6267;&#x884C;&#xFF0C;
+&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x4F1A;&#x6BD4;&#x8F83;&#x6D88;&#x8017;&#x8D44;&#x6E90;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x662F;&#x4E00;&#x76F4;&#x5728;&#x8DD1;&#x7684;&#x3002;
+&#x4ECE;&#x8017;&#x7535;&#x4F18;&#x5316;&#x7684;&#x89D2;&#x5EA6;&#x51FA;&#x53D1;&#xFF0C;google &#x4ECE; Android 5.0 &#x5F00;&#x59CB;&#x5C31;&#x63A8;&#x51FA;&#x4E86; JobScheduler &#x3002;
+
+&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F; JobScheduler &#x548C; AlarmManager &#x4E0D;&#x4E00;&#x6837;&#xFF0C;
+&#x6267;&#x884C;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x95F4;&#x5E76;&#x4E0D;&#x662F;&#x4E25;&#x683C;&#x51C6;&#x786E;&#x7684;&#x3002; 
+JobScheduler &#x4F1A;&#x628A;&#x4E00;&#x7CFB;&#x5217;&#x7684;job&#x6536;&#x96C6;&#x8D77;&#x6765;&#x4E00;&#x8D77;&#x6267;&#x884C;&#xFF0C;
+&#x8FD9;&#x6837;&#x65E2;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x7684;job&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x53C8;&#x80FD;&#x517C;&#x987E;&#x5230;&#x624B;&#x673A;&#x7535;&#x91CF;&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x8FBE;&#x5230;&#x8282;&#x7535;&#x7684;&#x76EE;&#x7684;&#x3002;
+JobScheduler &#x652F;&#x6301;&#x7684;&#x6700;&#x5C0F;&#x7248;&#x672C;&#x662F; Android5.0 &#xFF0C;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x8FD8;&#x6CA1;&#x6709;&#x517C;&#x5BB9;&#x5305;&#x6765;&#x517C;&#x5BB9;&#x6240;&#x6709;&#x7248;&#x672C;&#x3002;
+
+// &#x81EA;&#x5B9A;&#x4E49; JobService
+public class MyJobService extends JobService {
+    @Override
+    public boolean onStartJob(JobParameters params) {
+        PersistableBundle extras = params.getExtras();
+        int age = extras.getInt() ; // &#x83B7;&#x53D6;&#x53C2;&#x6570;
+        String name = extras.getString() ;
+        doJob(params);
+
+        /*
+        &#x5F53;&#x8FD4;&#x56DE;false&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x8BA4;&#x4E3A;onStartJob&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x505A;&#x7684;&#x5DE5;&#x4F5C;&#x5DF2;&#x7ECF;&#x505A;&#x5B8C;&#x4E86;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x8017;&#x65F6;&#x7684;&#x5DE5;&#x4F5C;&#x3002;
+        &#x5F53;&#x8FD4;&#x56DE;true&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x8BA4;&#x4E3A;&#x6211;&#x4EEC;&#x8981;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x8017;&#x65F6;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x5728;onStartJob&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x4ECD;&#x7136;&#x5728;&#x5F02;&#x6B65;&#x6267;&#x884C;&#x3002;
+        &#x5F53;&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x624B;&#x52A8;&#x8C03;&#x7528; jobFinished(JobParameters params, boolean needRescheduled)
+        &#x5982;&#x679C;&#x4E0D;&#x8C03;&#x7528;jobFinished&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x4E00;&#x76F4;&#x8BA4;&#x4E3A;&#x6211;&#x4EEC;&#x5728;&#x6267;&#x884C;&#x5F53;&#x524D;Job&#xFF0C;&#x90A3;&#x4E48;&#x7CFB;&#x7EDF;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x5165;&#x961F;&#x5176;&#x4ED6;&#x7684;Job&#x53BB;&#x6267;&#x884C;&#xFF0C;
+        &#x4E5F;&#x5C31;&#x662F;&#x8BF4;JobScheduler&#x7684;&#x6267;&#x884C;&#x961F;&#x5217;&#x5C31;&#x4F1A;&#x88AB;&#x963B;&#x585E;&#x4E86;
+         */
+        return true;
+    }
+
+    /*
+     &#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728;&#x7CFB;&#x7EDF;&#x53D7;&#x5230;&#x53D6;&#x6D88;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x4E00;&#x5B9A;&#x4F1A;&#x8C03;&#x7528;onStopJob&#x65B9;&#x6CD5;&#xFF0C;
+     &#x53EA;&#x6709;onStartJob&#x8FD4;&#x56DE;true&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x624D;&#x4F1A;&#x8C03;&#x7528;onStopJob&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x8C03;&#x7528;&#x3002;
+     &#x4F46;&#x4E0D;&#x8BBA;&#x662F;&#x5426;&#x8C03;&#x7528;onStopJob&#x65B9;&#x6CD5;&#xFF0C;&#x7CFB;&#x7EDF;&#x53D7;&#x5230;&#x53D6;&#x6D88;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x53D6;&#x6D88;&#x8BE5; job
+     */
+    @Override
+    public boolean onStopJob(JobParameters params) {
+        Log.i(&quot;stop service&quot;,&quot;stop job service&quot;);
+        return false;
+    }
+
+    private void doJob(JobParameters params) {
+        Log.i(&quot;do service&quot;,&quot;do job service&quot;);
+        jobFinished(params ,false);
+    }
+
+// &#x670D;&#x52A1;&#x7533;&#x660E;
+&lt;service
+    android:name=&quot;.MyJobService&quot;
+    android:permission=&quot;android.permission.BIND_JOB_SERVICE&quot; /&gt;
+
+# &#x4F7F;&#x7528; demo    
+JobInfo.Builder builder = new JobInfo.Builder(1, new ComponentName(this, MyJobService.class));
+// &#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x65F6;&#x95F4; &#xFF0C; &#x4E0E; setPeriodic &#x4E92;&#x65A5;&#xFF0C;&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;
+builder.setMinimumLatency(TimeUnit.MILLISECONDS.toMillis(10));
+//&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x65F6;&#x95F4; ,&#x5728;&#x67D0;&#x6BB5;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x5FC5;&#x987B;&#x6267;&#x884C;&#xFF0C;&#x5373;&#x4F7F;&#x8BBE;&#x7F6E;&#x7684;&#x5176;&#x4ED6;&#x6761;&#x4EF6;&#x4E0D;&#x6EE1;&#x8DB3;(&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x8FD8;&#x8BBE;&#x7F6E;&#x4E86;&#x8981;&#x6C42;&#x5145;&#x7535;&#xFF0C;&#x8FDE;&#x63A5;wifi&#x7B49;&#x6761;&#x4EF6;)&#x3002;
+// &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4E25;&#x683C;&#x51C6;&#x65F6;&#x7684;&#x6267;&#x884C; ,&#x4E0E; setPeriodic &#x4E92;&#x65A5;&#xFF0C;&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;
+builder.setOverrideDeadline(TimeUnit.MILLISECONDS.toMillis(15));
+//  &#x6267;&#x884C;&#x5468;&#x671F;
+builder.setPeriodic( TimeUnit.MILLISECONDS.toSeconds(5000));
+// &#x662F;&#x5426;&#x4E3A;&#x6301;&#x4E45;&#x4EFB;&#x52A1;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x6301;&#x4E45;&#x4EFB;&#x52A1;&#xFF0C;&#x5219;&#x7CFB;&#x7EDF;&#x4F1A;&#x5C06;&#x8BE5;&#x4EFB;&#x52A1;&#x5199;&#x5165;&#x78C1;&#x76D8; &#xFF0C;&#x5728;&#x5173;&#x673A;&#x91CD;&#x542F;&#x540E;&#xFF0C;&#x8BE5;&#x4EFB;&#x52A1;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x6062;&#x590D;&#x6267;&#x884C;
+// &#x9700;&#x8981;&#x58F0;&#x660E;&#x6743;&#x9650;RECEIVE_BOOT_COMPLETED
+builder.setPersisted(false) ;
+// &#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x5931;&#x8D25;&#x540E;&#x7684;&#x91CD;&#x65B0;&#x8C03;&#x5EA6;&#x7B56;&#x7565;&#x548C;&#x65F6;&#x95F4;
+builder.setBackoffCriteria(TimeUnit.MILLISECONDS.toMillis(10),JobInfo.BACKOFF_POLICY_LINEAR);
+//&#x542F;&#x52A8;Job&#x65F6;&#x6240;&#x9700;&#x8981;&#x7684;&#x7F51;&#x7EDC;&#x7C7B;&#x578B; ,&#x6CA1;&#x6709;&#x8FBE;&#x5230;&#x8FD9;&#x6761;&#x4EF6;&#x5C31;&#x4E0D;&#x4F1A;&#x6267;&#x884C;job
+// NETWORK_TYPE_NONE &#x4E0D;&#x9700;&#x8981;&#x7F51;&#x7EDC; &#xFF0C;NETWORK_TYPE_ANY &#x4EFB;&#x4F55;&#x7F51;&#x7EDC; &#xFF0C;NETWORK_TYPE_UNMETERED &#x9700;&#x8981;WiFi
+builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED);
+// &#x662F;&#x5426;&#x9700;&#x8981;&#x8FDE;&#x63A5;&#x7535;&#x6E90;
+builder.setRequiresCharging(true);
+// &#x662F;&#x5426;&#x9700;&#x8981;&#x673A;&#x5668;&#x5904;&#x4E8E;&#x7A7A;&#x95F2;&#x72B6;&#x6001;&#x3002;
+builder.setRequiresDeviceIdle(false) ;
+//  &#x662F;&#x5426;&#x9700;&#x8981;&#x975E;&#x4F4E;&#x7535;&#x91CF; &#xFF0C;requires API level 26
+builder.setRequiresBatteryNotLow(false) ;
+// &#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x975E;&#x4F4E;&#x91CF;&#xFF0C; requires API level 26
+builder.setRequiresStorageNotLow(false) ;
+// &#x8BBE;&#x7F6E;&#x989D;&#x5916;&#x53C2;&#x6570; , &#x5728; onStartJob &#x53EF;&#x4EE5;&#x83B7;&#x53D6;
+PersistableBundle extras = new PersistableBundle();
+extras.putString();
+extras.putInt();
+builder.setExtras ( extras) ;
+
+JobScheduler jobScheduler = (JobScheduler)getSystemService(Context.JOB_SCHEDULER_SERVICE);
+if(jobScheduler==null){
+    throw new RuntimeException(&quot;JobScheduler is null...&quot;) ;
+}
+jobScheduler.schedule(builder.build());
+// &#x542F;&#x52A8; JobService
+Intent intent = new Intent(this, MyJobService.class);
+startService(intent);
+</code></pre>
+<footer class="page-footer"><span class="copyright">( no Copyright&#xFF0C;enjoy youself ! ) all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">The file was updated at :
+2021-04-08 10:38:20
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../android基础/进程通信.html" class="navigation navigation-prev " aria-label="Previous page: 进程通信">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../android基础/Binder详解.html" class="navigation navigation-next " aria-label="Next page: Binder详解">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"通信方式详解","level":"1.10.10","depth":2,"next":{"title":"Binder详解","level":"1.10.11","depth":2,"path":"chinese/android基础/Binder详解.md","ref":"chinese/android基础/Binder详解.md","articles":[]},"previous":{"title":"进程通信","level":"1.10.9","depth":2,"path":"chinese/android基础/进程通信.md","ref":"chinese/android基础/进程通信.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","fontsettings","tbfed-pagefooter","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"( no Copyright，enjoy youself ! )","modify_label":"The file was updated at :","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/通信方式/通信方式详解.md","mtime":"2021-04-08T02:38:20.493Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-26T08:48:00.674Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
