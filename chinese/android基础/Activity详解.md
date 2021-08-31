@@ -214,5 +214,28 @@ protected void onSaveInstanceState(@NonNull Bundle outState) {
 public void onAttachedToWindow() {   }
 ```
 
+## Context 类型
+```text
+//1、 class MainActivity : Activity() { ...
+var TAG ="aivin"
+Log.i(TAG, "Activity--> " + this.javaClass.name);
+Log.i(TAG, "Activity BaseContext--> " + getBaseContext().javaClass.name);
+Log.i(TAG, "Application--> " + getApplication().javaClass.name);
+Log.i(TAG, "ApplicationContext--> " + getApplicationContext().javaClass.name);
+Log.i(TAG, "Application BaseContext--> " + getApplication().getBaseContext().javaClass.name);
+
+Activity--> com.qtalk.sample.MainActivity
+Activity BaseContext--> android.app.ContextImpl
+Application--> androidx.multidex.MultiDexApplication
+ApplicationContext--> androidx.multidex.MultiDexApplication
+Application BaseContext--> android.app.ContextImpl
+
+//2、 class MainActivity : AppCompatActivity() { ...
+Activity--> com.qtalk.sample.MainActivity
+Activity BaseContext--> androidx.appcompat.view.ContextThemeWrapper
+Application--> androidx.multidex.MultiDexApplication
+ApplicationContext--> androidx.multidex.MultiDexApplication
+Application BaseContext--> android.app.ContextImpl
+```
 
  
