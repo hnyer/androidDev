@@ -96,4 +96,50 @@ externalNativeBuild {
 5、刷新工程即可。
 ```
 
+
+## 打包 aar
+```text
+// 1、生成 aar 文件：
+对 library 进行 build 即可生成 AAR 。
+
+// 2、 使用 aar
+场景：将 aar 放到一个基础 library ，base_library 的libs下。
+然后其他 library 都可以使用到这个aar 。
+
+① base_library 的 build.gradle配置 
+android {
+    repositories {
+        flatDir {
+            dirs 'libs',aar_comm_path
+        }
+    }
+}
+dependencies {
+    api(name: 'aar名', ext: 'aar')
+}
+
+② 整个项目下的 build.gradle 配置
+allprojects {
+    repositories {
+        flatDir {
+            dirs aar_comm_path
+        }
+    }
+}
+
+③ 配置其他所有依赖 base_library 并且需要使用 aar 的 library    
+android {
+    repositories {
+        flatDir {
+            dirs 'libs', aar_comm_path
+        }
+    }
+}
+
+④  配置自定义变量 aar_comm_path 的路径
+在 gradle.properties中进行了配置
+aar_comm_path=../base_library/libs
+```
+
+
  

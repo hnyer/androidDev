@@ -134,9 +134,9 @@ var ageString : String ?
 //?.    为空就返回null ，不是空 就返回 对应的值
 ageString =student ?. name
 
-// ?:  ageString 为空就用默认值 ，否则用取得的值
+// ?:  
 var info :String?
-info =  ageString ?:  "21"
+info =  ageString ?:  "21"  // ageString 为空 info 就赋值为 21 ，不为空就赋值为 ageString
 
 // !!  非空断言 ageString不为空时获取对应的值 ，否则直接报错 。
 val length : Int  = ageString!!.length
@@ -147,7 +147,7 @@ var flag : Boolean = ageString.isNullOrBlank()
 
 ## let
 ```text
-常与非空判断符?. 一起使用
+常与非空判断符 ?. 一起使用
 mSurfaceTexture?.let {
     // compoundDrawables 不为空就执行...
     // it 是指 mSurfaceTexture
@@ -281,10 +281,31 @@ fun pick(index: Int): Nothing {
 
 ## intArrayOf
 ```text
-创建一个int数组
+创建一个int数组 ，同时赋值
+val arr = intArrayOf(1, 2 ,3) 
+```
+
+## IntArray
+```text
+创建一个int数组 ，没有初始值
+ var firstPostions = IntArray(3) ;
 ```
 
 
+## takeIf
+```text
+val postion =
+findFirstPosition().takeIf { it != RecyclerView.NO_POSITION } ?: 10
+
+findFirstPosition 的返回结果(假如为A) 等于  RecyclerView.NO_POSITION  ，
+postion最后的值 就是 A ，否则就是 10 。
+```
+
+
+## takeUnless
+```text
+与 takeIf 相反
+```
 
 ## 循环
 ```text
@@ -360,9 +381,8 @@ fun main(arg:Array<String>){
 Kotlin移除了static 的概念。
 通常用 object 和 companion object  来实现
 ```text
-使用"object"修饰静态类
-被修饰的类，可以使用类名.方法名的形式调用
-var version_name1 = Util.getName()
+被 object 修饰的类，可以使用类名.方法名的形式调用
+var version_name1 = Util.getName() //
 object Util {
     fun getName(): String {
         return BuildConfig.VERSION_NAME
@@ -507,13 +527,13 @@ external fun getWXAPPID(): String
 ``` 
 
 ## init
-kotlin增加了一个新的关键字 init 用来处理类的初始化问题，
+kotlin 的关键字 init 用来处理类的初始化问题，
 init模块中的内容可以直接使用构造函数的参数。
 
 
 ## 对象表达式
 对象表达式，是一种代替Java中的匿名内部类的方法。
-使用object关键字来进行编写。比匿名内部类更先进。
+使用 object 关键字来进行编写。比匿名内部类更先进。
 可以实现多个接口。
 ```text
 // 关键  object : 指明
@@ -537,15 +557,15 @@ java中新建对象要用到new 关键字。 kotlin中没有new关键字。
 
 ## get set 方法
 kotlin中可以直接使用对象的属性，不用调用 get和set方法。 
-```text 
+```text
 //这是FragmentActivity.java中的源码
 public FragmentManager getSupportFragmentManager() {
     return mFragments.getSupportFragmentManager();
 }
 为了获得一个 FragmentManager 实例，
-java中需要这样写  this.getSupportFragmentManager() , 
-而kotlin中可以直接这样使用 this.supportFragmentManager
-注意 getSupportFragmentManager 和getSupportFragmentManager 之间的特点。（符合set和get的命名规范的）
+java中需要这样写 this.getSupportFragmentManager() , 
+而 kotlin 中可以直接这样使用 this.supportFragmentManager
+注意 getSupportFragmentManager 和 getSupportFragmentManager 之间的特点。（符合set和get的命名规范的）
 
 //var 默认有get set方法。不写就用默认的。
 var heiht: Float = 145.4f
@@ -614,3 +634,46 @@ private fun sumTest( vararg values :Int ){
  
 ## return@
 return@XXlabel 语法用于指定此语句从几个嵌套函数中返回哪个函数。  
+
+
+## inline 内联 , noinline
+```text
+内联函数起初是在 C++ 里面的。
+
+kotlin 中 当一个函数被内联 inline 标注后，
+在调用它的时候，会把这个函数方法体中的所有代码移动到调用的地方，而不是通过方法间压栈进栈的方式。
+
+JVM 内部已经实现了内联优化，它会在任何可以通过内联来提升性能的地方将函数调用内联化，
+并且与开发者手动将普通函数定义为内联相比，
+通过 JVM 内联优化所生成的字节码，每个函数的实现只会出现一次，
+这样在保证减少运行时开销的同时，也没有增加字节码的尺寸；
+所以 inline 不适合在无参数的函数中(会有黄色的提示)。
+
+inline 能带来的性能提升，往往是在参数是 lambda 的函数上。
+因为如果参数是 lambda 却没有使用 inline ,
+在编译过程中，因为 lambda 参数 多出来的类，会增加内存的分配。
+
+noinline 用来区部取消内联
+inline fun mainInline(func1: () -> Unit, noinline func2: () -> Unit) {
+    func1()
+    func2()
+}
+```
+
+
+## 注解
+```text
+@JvmOverloads
+如果没有这个注解 ，
+Java 代码不能调用在 Kotlin 中使用默认值实现的重载函数或构造函数。
+
+fun f(a: String, b: Int= 0, c: String="abc"){ }
+// 相当于 
+void f(String a, int b, String c){ }
+
+@JvmOverloads fun f(a: String, b: Int= 0, c:String="abc"){ }
+// 相当于同时对应下面三个函数
+void f(String a)
+void f(String a, int b)
+void f(String a, int b, String c)
+```

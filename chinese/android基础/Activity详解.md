@@ -203,7 +203,7 @@ protected void onSaveInstanceState(@NonNull Bundle outState) {
 在 onCreate(Bundle )、onRestoreInstanceState(Bundle) 中恢复数据。
 ```
 
-## onAttachedToWindow() 调用时机
+## onAttachedToWindow()  / onDetachedFromWindow
 ```text
 /**
  * Called when the main window associated with the activity has been
@@ -238,4 +238,19 @@ ApplicationContext--> androidx.multidex.MultiDexApplication
 Application BaseContext--> android.app.ContextImpl
 ```
 
+## 构造方法
+```text
+在实际开发过程中，我们使用一个 Activity 时 ，
+会将初始化的一些操作放到 onCreate() 中执行，并不会实现其构造方法。
+我们调用 startActivity / startActivityForResult ,
+Android 框架中的代码会完成 Activity 对象的创建。
+在创建对象时会执行 Activity 类的构造方法。
+
+// android.app.Instrumentation
+public Activity newActivity(ClassLoader cl, String className, Intent intent)  {
+    // ClassLoader 的 loadClass()加载 Activity 类 ,并 newInstance
+    return (Activity)cl.loadClass(className).newInstance();
+}
+// 一个Activity类中只有无参的构造方法会被执行，定义有参数的构造方法是没有意义的。
+```
  
