@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/设计模式/模式详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/设计模式/模式详解.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/APP优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/APP优化.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,22 +46,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/FastScrollRecyclerView.java">
+        <entry file="file://$PROJECT_DIR$/chinese/设计模式/模式详解.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="151" column="7" lean-forward="true" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="7" />
-              <folding>
-                <element signature="method#scrollToPositionAtProgress#0;class#FastScrollRecyclerView#0" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="113" column="56" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chinese/设计模式/模式详解.md">
+        <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            <state relative-caret-position="455">
+              <caret line="241" selection-start-line="241" selection-end-line="241" />
             </state>
           </provider>
         </entry>
@@ -72,8 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>udp</find>
-      <find>rtsp</find>
       <find>单例模式</find>
       <find>脚本</find>
       <find>构造</find>
@@ -102,6 +95,8 @@
       <find>getAvailableScrollHeight</find>
       <find>回调函数</find>
       <find>StaggeredGridLayoutManager</find>
+      <find>merge</find>
+      <find>做完布局优化有哪些成果产出</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -144,7 +139,6 @@
         <option value="$PROJECT_DIR$/chinese/android基础/android相关概念.md" />
         <option value="$PROJECT_DIR$/chinese/doc/开发规范.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/App发布.md" />
-        <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/GC机制.md" />
         <option value="$PROJECT_DIR$/chinese/webDev/web部分.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/线程详解.md" />
@@ -173,24 +167,39 @@
         <option value="$PROJECT_DIR$/chinese/android基础/sdk开发.md" />
         <option value="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" />
         <option value="$PROJECT_DIR$/chinese/设计模式/模式详解.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="400" />
+    <option name="y" value="212" />
+    <option name="width" value="1022" />
+    <option name="height" value="710" />
   </component>
   <component name="ProjectId" id="1jaZAoFfnKmD8tOMBrh82tjwXBP" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -263,17 +272,17 @@
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.18488745" weight="0.17909238" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.18488745" visible="true" weight="0.17909238" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info active="true" id="Structure" order="5" sideWeight="0.81511253" visible="true" weight="0.16450568" />
+      <window_info id="Structure" order="5" sideWeight="0.81511253" weight="0.16450568" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.27170417" weight="0.32901135" />
       <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="GenProtobuf" order="0" weight="0.32850242" />
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32850242" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.43017656" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.42926046" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329582" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.58038586" />
@@ -474,13 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="1164" lean-forward="true" selection-start-line="1164" selection-end-line="1164" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8142">
@@ -654,8 +656,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chinese/设计模式/模式详解.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        <state relative-caret-position="220">
+          <caret line="113" column="56" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="241" selection-start-line="241" selection-end-line="241" />
         </state>
       </provider>
     </entry>

@@ -192,6 +192,54 @@ fpsviewer 就是基于 Choreographer 开发的。
 ```
 
 
+##  merge 标签
+merge 用来帮助在视图树中减少重复布局。
+```text
+1、 没有使用 merge 
+// layout1.xml
+<FrameLayout>
+   <include layout="@layout/layout2"/>
+</FrameLayout>
+
+// layout2.xml
+<FrameLayout>
+   <TextView />
+</FrameLayout>
+
+// 最终的效果为
+<FrameLayout>
+   <FrameLayout>  // 这里有冗余的一层，可以优化
+      <TextView />
+   </FrameLayout>
+</FrameLayout>
+
+2、使用 merge 
+// layout1.xml
+<FrameLayout>
+   <include layout="@layout/layout2"/>
+</FrameLayout>
+
+// layout2.xml
+<merge>
+   <TextView />
+</merge>
+// 最终的效果为
+<FrameLayout>
+   <TextView />
+</FrameLayout>
+
+// 其他
+1、merge 必须放在布局文件的根节点上。
+merge 标签被添加到A容器下，那么 merge 下的所有视图将被添加到A容器下。
+
+2、merge 并不是一个 ViewGroup ，也不是一个 View ，它相当于声明了一些视图，等待被添加。
+merge 不是 View ，所以对merge标签设置的所有属性都是无效的。
+
+3、 merge 标签是 View，在通过 LayoutInflate.inflate 方法渲染的时候， 
+第二个参数必须指定一个父容器，且第三个参数必须为true，也就是必须为merge下的视图指定一个父亲节点。
+// View inflate(@LayoutRes int resource, ViewGroup root, boolean attachToRoot)
+inflater.inflate(layoutResId, this, true);
+```
 
 
 # 卡顿优化 （完成）
