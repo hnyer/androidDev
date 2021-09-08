@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/APP优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/APP优化.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/android坐标体系.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/android坐标体系.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/doc/常用网站.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/doc/常用网站.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SUMMARY.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+            <state relative-caret-position="69">
+              <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -36,29 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="552" column="30" selection-start-line="552" selection-start-column="30" selection-end-line="552" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chinese/设计模式/模式详解.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="113" column="56" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="241" selection-start-line="241" selection-end-line="241" />
+            <state relative-caret-position="218">
+              <caret line="571" column="22" lean-forward="true" selection-start-line="571" selection-start-column="22" selection-end-line="571" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -67,13 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>单例模式</find>
-      <find>脚本</find>
-      <find>构造</find>
-      <find>JvmOverloads</find>
-      <find>constructor</find>
-      <find>object</find>
-      <find>import</find>
       <find>set</find>
       <find>onDetachedFromWindow</find>
       <find>onAttachedToWindow</find>
@@ -97,6 +75,13 @@
       <find>StaggeredGridLayoutManager</find>
       <find>merge</find>
       <find>做完布局优化有哪些成果产出</find>
+      <find>坐标系统</find>
+      <find>computeVerticalScrollOffset</find>
+      <find>setTranslationX</find>
+      <find>速度</find>
+      <find>ArrayList</find>
+      <find>subList</find>
+      <find>瀑布流</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -117,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chinese/gradle/Groovy.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/插件化开发.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/数据解析.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/Apk插件化开发.md" />
@@ -159,23 +143,24 @@
         <option value="$PROJECT_DIR$/chinese/android基础/常用代码块.md" />
         <option value="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" />
         <option value="$PROJECT_DIR$/chinese/native/音视频.md" />
-        <option value="$PROJECT_DIR$/chinese/doc/常用网站.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/Activity详解.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/基础控件使用.md" />
         <option value="$PROJECT_DIR$/chinese/kotlin/kotlin部分.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/sdk开发.md" />
-        <option value="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" />
         <option value="$PROJECT_DIR$/chinese/设计模式/模式详解.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/android坐标体系.md" />
+        <option value="$PROJECT_DIR$/chinese/doc/常用网站.md" />
+        <option value="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="400" />
-    <option name="y" value="212" />
-    <option name="width" value="1022" />
-    <option name="height" value="710" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectId" id="1jaZAoFfnKmD8tOMBrh82tjwXBP" />
   <component name="ProjectLevelVcsManager">
@@ -186,8 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,6 +182,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -267,22 +252,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1293" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1293" height="777" extended-state="7" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.18488745" visible="true" weight="0.17909238" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.18488745" weight="0.18233387" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info id="Structure" order="5" sideWeight="0.81511253" weight="0.16450568" />
+      <window_info active="true" id="Structure" order="5" sideWeight="0.81511253" visible="true" weight="0.23419774" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.27170417" weight="0.32901135" />
       <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="GenProtobuf" order="0" weight="0.32850242" />
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32850242" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.42926046" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.42580646" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329582" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.58038586" />
@@ -374,7 +358,6 @@
     <state x="341" y="114" width="598" height="536" key="find.popup/0.0.1280.764@0.0.1280.764" timestamp="1604277265246" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/新建文件夹/test/com/wk/vitus320app/R.class" />
     <entry file="file://$USER_HOME$/Desktop/新建文件夹/test/com/walkera/wktools/R.class" />
     <entry file="file://$PROJECT_DIR$/chinese/doc/开发规范.md">
       <provider selected="true" editor-type-id="text-editor">
@@ -542,13 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/常用代码块.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13938">
-          <caret line="606" column="19" selection-start-line="606" selection-start-column="19" selection-end-line="606" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/图片加载详解.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4140">
@@ -581,20 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/通信方式/通信方式详解.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7406">
-          <caret line="322" column="29" selection-start-line="322" selection-start-column="29" selection-end-line="322" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/sdk开发.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -613,13 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
           <caret line="305" column="7" selection-start-line="305" selection-start-column="7" selection-end-line="305" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/doc/常用网站.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -647,10 +602,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
+    <entry file="file://$PROJECT_DIR$/chinese/通信方式/通信方式详解.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="552" column="30" selection-start-line="552" selection-start-column="30" selection-end-line="552" selection-end-column="30" />
+        <state relative-caret-position="7406">
+          <caret line="322" column="29" selection-start-line="322" selection-start-column="29" selection-end-line="322" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/doc/常用网站.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="979">
+          <caret line="124" column="58" lean-forward="true" selection-start-line="124" selection-start-column="58" selection-end-line="124" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/android坐标体系.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
         </state>
       </provider>
     </entry>
@@ -661,10 +644,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/常用代码块.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="241" selection-start-line="241" selection-end-line="241" />
+        <state relative-caret-position="335">
+          <caret line="610" selection-start-line="610" selection-end-line="610" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="571" column="22" lean-forward="true" selection-start-line="571" selection-start-column="22" selection-end-line="571" selection-end-column="22" />
         </state>
       </provider>
     </entry>
