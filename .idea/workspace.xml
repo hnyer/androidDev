@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chinese/pics/全屏加载等待.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/沉浸式.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/沉浸式.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,11 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chinese/android基础/控件绘制流程.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="929" lean-forward="true" selection-start-line="929" selection-end-line="929" />
+            <state relative-caret-position="155">
+              <caret line="930" column="23" lean-forward="true" selection-start-line="930" selection-start-column="23" selection-end-line="930" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chinese/android基础/沉浸式.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="23" column="90" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -69,7 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>onDetachedFromWindow</find>
       <find>onAttachedToWindow</find>
       <find>let</find>
       <find>onFinishInflate</find>
@@ -99,6 +106,7 @@
       <find>瀑布流</find>
       <find>EditText 默认不获取焦点</find>
       <find>自定义控件</find>
+      <find>Android 至4.4才开始支持沉浸式状态栏</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -119,7 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chinese/android基础/插件化开发.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/数据解析.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/Apk插件化开发.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/App组件化开发.md" />
@@ -170,10 +177,11 @@
         <option value="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/基础控件使用.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/沉浸式.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="400" />
     <option name="y" value="212" />
     <option name="width" value="1022" />
@@ -288,7 +296,7 @@
       <window_info content_ui="combo" id="Project" order="2" sideWeight="0.18488745" weight="0.18233387" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info active="true" id="Structure" order="5" sideWeight="0.81511253" visible="true" weight="0.21312805" />
+      <window_info id="Structure" order="5" sideWeight="0.81511253" visible="true" weight="0.21312805" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.27170417" weight="0.32901135" />
       <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="GenProtobuf" order="0" weight="0.32850242" />
@@ -387,13 +395,6 @@
     <state x="341" y="114" width="598" height="536" key="find.popup/0.0.1280.764@0.0.1280.764" timestamp="1604277265246" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chinese/doc/开发规范.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="71" column="7" lean-forward="true" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/pics/apk打包流程2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -675,8 +676,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/控件绘制流程.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="929" lean-forward="true" selection-start-line="929" selection-end-line="929" />
+        <state relative-caret-position="155">
+          <caret line="930" column="23" lean-forward="true" selection-start-line="930" selection-start-column="23" selection-end-line="930" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/沉浸式.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="23" column="90" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
         </state>
       </provider>
     </entry>
