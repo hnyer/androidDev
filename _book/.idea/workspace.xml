@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chinese/pics/conemu右键.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/SUMMARY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/gitbook-plugin-anchor-navigation-ex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/gitbook-plugin-anchor-navigation-ex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/markdown-navigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-anchor-navigation-ex/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-back-to-top-button/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-back-to-top-button/assets/plugin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-back-to-top-button/assets/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-back-to-top-button/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-back-to-top-button/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/book/toggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/book/toggle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-copy-code-button/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/assets/plugin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/assets/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/book/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-edit-link/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/.project" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/book/expandable-chapters.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/book/expandable-chapters.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/book/expandable-chapters.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/book/expandable-chapters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-expandable-chapters/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/_layouts/favicon.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/_layouts/favicon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/_layouts/website/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/_layouts/website/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-favicon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/assets/fontsettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/assets/fontsettings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/assets/website.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/assets/website.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-fontsettings/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/assets/video.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/assets/video.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-local-video/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/_layouts/website/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/_layouts/website/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/jquery.mark.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/jquery.mark.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/assets/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-search-plus/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/assets/buttons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-sharing/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/book/splitter.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/book/splitter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/book/splitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/book/splitter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/assets/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/assets/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-tbfed-pagefooter/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/book/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/book/test.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/book/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/book/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-theme-comscore/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gitbook-plugin-todo/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-valine/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-valine/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-valine/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-valine/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/assets/plugin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/assets/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gitbook-plugin-versions-select/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/新建文本文档 (2).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/新建文本文档.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="androidDev" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>recycl</find>
+      <find>Unit</find>
+      <find>RecyclerView 快速</find>
+      <find>ext</find>
+      <find>aar</find>
+      <find>数组</find>
+      <find>findFirstPosition</find>
+      <find>scrollToPositionAtProgress</find>
+      <find>getAvailableScrollHeight</find>
+      <find>回调函数</find>
+      <find>StaggeredGridLayoutManager</find>
+      <find>merge</find>
+      <find>做完布局优化有哪些成果产出</find>
+      <find>坐标系统</find>
+      <find>computeVerticalScrollOffset</find>
+      <find>setTranslationX</find>
+      <find>速度</find>
+      <find>ArrayList</find>
+      <find>subList</find>
+      <find>瀑布流</find>
+      <find>EditText 默认不获取焦点</find>
+      <find>自定义控件</find>
+      <find>Android 至4.4才开始支持沉浸式状态栏</find>
+      <find>播放器</find>
+      <find>MediaPlayer</find>
+      <find>缩略图</find>
+      <find>菊花</find>
+      <find>瀑布</find>
+      <find>additemdecoration</find>
+      <find>shape</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
+      <replace>- [ ]</replace>
+      <replace>text</replace>
+      <replace />
+      <replace>```text</replace>
+      <replace>、</replace>
+      <replace>#</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>F:\gitbook\androidDev</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/chinese/java基础/数据解析.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/Apk插件化开发.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/App组件化开发.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/java注解.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/对象内存布局.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/JVM详解.md" />
+        <option value="$PROJECT_DIR$/../../Windows/System32/drivers/etc/hosts" />
+        <option value="$PROJECT_DIR$/Temp.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/Android字节码插桩.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/Androidstudio插件开发.md" />
+        <option value="$PROJECT_DIR$/chinese/native/NDK.md" />
+        <option value="$PROJECT_DIR$/chinese/面试真题/极飞.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/Android外挂.md" />
+        <option value="$PROJECT_DIR$/chinese/native/相关代码.md" />
+        <option value="$PROJECT_DIR$/chinese/flutter/flutter部分.md" />
+        <option value="$PROJECT_DIR$/chinese/常用算法/其他算法.md" />
+        <option value="$PROJECT_DIR$/chinese/常用算法/排序算法.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/android相关概念.md" />
+        <option value="$PROJECT_DIR$/chinese/doc/开发规范.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/App发布.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/GC机制.md" />
+        <option value="$PROJECT_DIR$/chinese/webDev/web部分.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/线程详解.md" />
+        <option value="$PROJECT_DIR$/chinese/产品经理/产品经理.md" />
+        <option value="$PROJECT_DIR$/chinese/数据结构/常用数据结构.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/Handler详解.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/View加载流程.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/项目参数配置.md" />
+        <option value="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" />
+        <option value="$PROJECT_DIR$/chinese/java基础/java常用代码.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/动画详解.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/地图模块.md" />
+        <option value="$PROJECT_DIR$/SUMMARY.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/android零散知识.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/图片加载详解.md" />
+        <option value="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" />
+        <option value="$PROJECT_DIR$/chinese/native/音视频.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/Activity详解.md" />
+        <option value="$PROJECT_DIR$/chinese/kotlin/kotlin部分.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/sdk开发.md" />
+        <option value="$PROJECT_DIR$/chinese/设计模式/模式详解.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/APP优化.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/android坐标体系.md" />
+        <option value="$PROJECT_DIR$/chinese/doc/常用网站.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/基础控件使用.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/沉浸式.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/智能家居.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/常用代码块.md" />
+        <option value="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectId" id="1jaZAoFfnKmD8tOMBrh82tjwXBP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+              <item name="chinese" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+              <item name="chinese" type="462c0819:PsiDirectoryNode" />
+              <item name="源码阅读" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="AnalyzeApkAction.lastApkPath" value="F:/apks2/myFabu/release/AG1100P.apk" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="F:/sdk2" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/chinese/pics" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitee_git_book\androidDev\chinese\pics" />
+      <recent name="F:\gitbook\androidDev\chinese\pics" />
+      <recent name="F:\gitbook\androidDev\chinese\源码阅读" />
+      <recent name="F:\gitbook\androidDev" />
+      <recent name="F:\gitbook\androidDev\imgs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\gitbook\androidDev\chinese\pics" />
+      <recent name="F:\gitbook\androidDev\chinese\android基础" />
+      <recent name="F:\gitbook\androidDev\chinese\java基础" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="" />
+      <created>1598402836357</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598402836357</updated>
+      <workItem from="1632378458870" duration="52000" />
+      <workItem from="1632462781597" duration="1322000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1293" height="777" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info id="Designer" order="1" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.18488745" weight="0.1821798" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info active="true" id="Structure" order="5" sideWeight="0.81511253" visible="true" weight="0.13842481" />
+      <window_info id="Resources Explorer" order="6" sideWeight="0.27170417" weight="0.32901135" />
+      <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
+      <window_info anchor="bottom" id="GenProtobuf" order="0" weight="0.32850242" />
+      <window_info anchor="bottom" id="Run" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.32850242" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.31672025" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329582" />
+      <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.58038586" />
+      <window_info anchor="bottom" id="Statistic" order="8" weight="0.32850242" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.33440515" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Flutter Inspector" order="2" />
+      <window_info anchor="right" id="Flutter Outline" order="3" weight="0.3298217" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="ASMPlugin" order="5" weight="0.3298217" />
+      <window_info anchor="right" id="ASM" order="6" weight="0.3298217" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info id="Designer" order="1" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.17684887" weight="0.16207455" />
+      <window_info active="true" id="Structure" order="3" sideWeight="0.7009646" side_tool="true" visible="true" weight="0.22447325" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Resources Explorer" order="6" sideWeight="0.29903537" weight="0.32901135" />
+      <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
+      <window_info anchor="bottom" id="GenProtobuf" order="0" />
+      <window_info anchor="bottom" id="Run" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.43729904" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329582" />
+      <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.41157556" />
+      <window_info anchor="bottom" id="Statistic" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.329582" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Flutter Inspector" order="2" />
+      <window_info anchor="right" id="Flutter Outline" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="ASMPlugin" order="5" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/chinese/pics/apk打包流程图.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/pics/查看对象的回收情况.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/产品经理/常用概念.md" />
+    <entry file="file://$PROJECT_DIR$/chinese/pics/leakcanary检测流程.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/lodash/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="4409" column="37" selection-start-line="4409" selection-start-column="37" selection-end-line="4409" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/源码阅读/源码阅读配置.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/进程通信.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="119" column="13" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/GC机制.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="214" column="5" lean-forward="true" selection-start-line="214" selection-start-column="5" selection-end-line="214" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/webDev/web部分.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="1498" column="3" lean-forward="true" selection-start-line="1498" selection-start-column="3" selection-end-line="1498" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/pics/手写线程池.png" />
+    <entry file="file://$PROJECT_DIR$/chinese/pics/手写线程池1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/pics/拖拽效果.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/线程详解.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-433">
+          <caret line="586" selection-start-line="586" selection-end-line="586" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/产品经理/产品经理.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="457" column="13" lean-forward="true" selection-start-line="457" selection-start-column="13" selection-end-line="457" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Temp.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/flutter/flutter部分.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="306" column="18" lean-forward="true" selection-start-line="306" selection-start-column="18" selection-end-line="306" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/数据结构/常用数据结构.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/Handler详解.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="577" column="33" lean-forward="true" selection-start-line="577" selection-start-column="33" selection-end-line="577" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runServe.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/pics/圆角矩形drawable.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/pics/ideaLicense.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/java基础/java常用代码.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/动画详解.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="260" column="26" selection-start-line="260" selection-start-column="26" selection-end-line="260" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/项目参数配置.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="111" column="13" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/View加载流程.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="238" column="25" selection-start-line="238" selection-start-column="25" selection-end-line="238" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/地图模块.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="160" column="7" lean-forward="true" selection-start-line="160" selection-start-column="7" selection-end-line="160" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_book/chinese/android基础/基础控件使用.html" />
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/android零散知识.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9269">
+          <caret line="403" column="3" selection-start-line="403" selection-start-column="3" selection-end-line="403" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/图片加载详解.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4140">
+          <caret line="180" selection-start-line="180" selection-end-line="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/App发布.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7130">
+          <caret line="310" selection-start-line="310" selection-end-line="310" />
+          <folding>
+            <element signature="e#20944#20967#0" />
+            <element signature="e#20968#21468#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/Activity详解.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="203" column="3" lean-forward="true" selection-start-line="203" selection-start-column="3" selection-end-line="203" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/sdk开发.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="108" column="32" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/kotlin/kotlin部分.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="305" column="7" selection-start-line="305" selection-start-column="7" selection-end-line="305" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/FastScrollRecyclerView.java" />
+    <entry file="file://$PROJECT_DIR$/chinese/doc/常用网站.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="979">
+          <caret line="124" column="58" lean-forward="true" selection-start-line="124" selection-start-column="58" selection-end-line="124" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/android坐标体系.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/APP优化.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/设计模式/模式详解.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="113" column="56" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/通信方式/通信方式详解.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7406">
+          <caret line="322" column="29" selection-start-line="322" selection-start-column="29" selection-end-line="322" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/systemSource/test.python" />
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/沉浸式.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/native/音视频.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26841">
+          <caret line="1167" column="29" selection-start-line="1167" selection-start-column="29" selection-end-line="1167" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/native/相关代码.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33764">
+          <caret line="1468" column="31" selection-start-line="1468" selection-start-column="31" selection-end-line="1468" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/基础控件使用.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/智能家居.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8850">
+          <caret line="354" column="17" selection-start-line="354" selection-start-column="17" selection-end-line="354" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/常用代码块.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24000">
+          <caret line="960" column="7" selection-start-line="960" selection-start-column="7" selection-end-line="960" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="562" column="70" selection-start-line="562" selection-start-column="70" selection-end-line="562" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/控件绘制流程.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="612" column="20" selection-start-line="612" selection-start-column="20" selection-end-line="612" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>androidDev</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
