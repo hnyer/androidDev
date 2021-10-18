@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chinese/pics/author设置.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/gradle默认路径.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chinese/pics/图片进度条.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/androidDev.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/codeStyles/Project.xml" beforeDir="false" />
@@ -177,6 +176,7 @@
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/android类加载器.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/apk打包流程2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/apk打包流程图.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/pics/author设置.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/buildscan.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/clipChildrenFalse.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/conemu右键.png" beforeDir="false" />
@@ -184,6 +184,7 @@
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/gpio.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/gpio1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/gradle独立插件.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/pics/gradle默认路径.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/ideaLicense.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/ignore插件.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/pics/io类型.png" beforeDir="false" />
@@ -316,7 +317,6 @@
       <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/styles/website.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/android基础/基础控件使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/基础控件使用.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -525,6 +525,8 @@
       <workItem from="1632462781597" duration="1947000" />
       <workItem from="1632479962397" duration="2344000" />
       <workItem from="1632655985445" duration="1277000" />
+      <workItem from="1634354165929" duration="597000" />
+      <workItem from="1634537799406" duration="1122000" />
     </task>
     <servers />
   </component>
