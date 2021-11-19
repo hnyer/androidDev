@@ -411,3 +411,75 @@ https://github.com/kyleduo/SwitchButton
 新版本的 isPressed 已经可以正确判断来自用户切换。
 boolean isByUser = buttonView.isPressed() ;
 ```
+
+
+# Android 11 Scoped Storage
+## 作用域存储
+```text
+Scoped Storage： 域存储、分区存储、沙盒存储 。
+
+Google 在 Android 10 就加入了作用域存储功能(沙盒机制)。
+每个应用程序只能有权在自己的外置存储空间关联目录下读取和创建文件。
+关联目录对应的路径如下：/storage/emulated/0/Android/data/<包名>/files
+这个目录中的文件会被计入到应用程序的占用空间当中，同时也会随着应用程序的卸载而被删除。
+
+为了给开发者一定的缓冲时间进行适配，我们可以在 Android10中 进行 
+<application android:requestLegacyExternalStorage="true"> 既可不用进行适配。
+但是从 Android11开始，已经强制使用 沙盒机制，不适的将无法访问。 
+
+Android11 没法遍历 /sdcard/目录 。
+无法在 sd 目录下新建和读写文件夹。以前那种在sd卡根目录下创建一个目录进行读写的做法已经行不通了。
+
+Android 11开始，将强制开启分区存储，我们就无法再以绝对路径的方式去读写非沙盒目录下的文件
+```
+
+## 存储访问框架 SAF
+```text
+Android 4.4 引入了 ASF(Android Storage Access Framework) ，相当于系统内置了文件选择器。
+```
+
+
+## APP相关的存储目录
+```text
+cacheDir	       /data/user/0/<包名>/cache
+dataDir	           /data/user/0/<包名>
+filesDir	       /data/user/0/<包名>/files
+codeCacheDir	   /data/user/0/<包名>/code_cache
+noBackupFilesDir   /data/user/0/<包名>/no_backup
+obbDir	           /storage/emulated/0/Android/obb/<包名>
+externalCacheDir   /storage/emulated/0/Android/data/<包名>/cache
+externalFilesDir   /storage/emulated/0/Android/data/<包名>/files/Download
+```
+
+
+## 适配方案
+```text
+1、App自身产生的文件应该存放在自己的目录下：
+/sdcard/Android/data/packagename/ 
+/data/data/packagename/
+这两个目录本App无需申请访问权限即可申请，其它App无法访问本App的目录。
+
+2、公有存储空间里的文件需要通过Uri构造输入输出流访问，
+Uri获取方式有两种：MediaStore 和 SAF。
+公有目录指的是系统根目录下的 Download 、 DCIM 、 Documents 、 Screenshots 、Music 等文件夹。
+
+Scoped Storage 规定，
+每个应用程序都有权限向 MediaStore 贡献数据，比如说插入一张图片到手机相册当中。
+也有权限读取其他应用程序所贡献的数据，比如说获取手机相册中的所有图片。
+但是，禁止修改其他应用程序所贡献的数据,
+如果你确实需要修改其他应用提供的文件，例如你要对一张图片原图进行ps修改，
+你可以通过对这些文件进行授权，
+createWriteRequest()  //用于请求对多个文件的写入权限。
+createFavoriteRequest()  //用于请求将多个文件加入到Favorite（收藏）的权限。
+createTrashRequest()  //用于请求将多个文件移至回收站的权限。
+createDeleteRequest() // 用于请求将多个文件删除的权限。
+
+3、访问其它目录(特殊性质的APP)
+比如根目录下 一个 /sdcard/abctest 
+在 Android 11上要申请访问所有文件的权限 MANAGE_EXTERNAL_STORAGE  ---- 这个结论还有点问题，我需要再看下博客
+(普通的应用申请这个权限,应用商店是不给你通过的 ,Most apps are not allowed to use MANAGE_EXTERNAL_STORAGE)。 
+注意 其他应用的 Android/data/ 和 android/obb  目录 你无论如何是访问不了的了。
+```
+
+
+

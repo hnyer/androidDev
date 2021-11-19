@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/chinese/pics/图片进度条.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/t.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/androidDev.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/codeStyles/Project.xml" beforeDir="false" />
@@ -316,7 +317,12 @@
       <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/styles/website.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/WebView详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/WebView详解.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/android零散知识.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/android零散知识.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/地图模块.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/地图模块.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/android基础/基础控件使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/基础控件使用.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/android基础/常用代码块.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/常用代码块.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,6 +380,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -488,7 +502,7 @@
     <property name="android.sdk.path" value="F:/sdk2" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/chinese/pics" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -526,7 +540,20 @@
       <workItem from="1632479962397" duration="2344000" />
       <workItem from="1632655985445" duration="1277000" />
       <workItem from="1634354165929" duration="597000" />
-      <workItem from="1634537799406" duration="1122000" />
+      <workItem from="1634537799406" duration="1863000" />
+      <workItem from="1634558148850" duration="46000" />
+      <workItem from="1634728203842" duration="2870000" />
+      <workItem from="1634806330234" duration="23000" />
+      <workItem from="1634971379266" duration="645000" />
+      <workItem from="1635131236641" duration="807000" />
+      <workItem from="1635216052668" duration="93000" />
+      <workItem from="1635239433036" duration="1380000" />
+      <workItem from="1635296758148" duration="4000" />
+      <workItem from="1635303149520" duration="10691000" />
+      <workItem from="1635326418344" duration="5000" />
+      <workItem from="1635333984572" duration="3484000" />
+      <workItem from="1635474107706" duration="2025000" />
+      <workItem from="1635489705667" duration="16162000" />
     </task>
     <servers />
   </component>
