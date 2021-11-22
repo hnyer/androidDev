@@ -438,6 +438,53 @@ Android 11开始，将强制开启分区存储，我们就无法再以绝对路�
 Android 4.4 引入了 ASF(Android Storage Access Framework) ，相当于系统内置了文件选择器。
 ```
 
+## 访问SD卡的文件 (传统和沙盒)
+```text
+/**
+ * 获取存取 离线文件 的文件夹 <br/>
+ *  APP卸载时不会自动删除里面的内容  <br/>
+ *  注意，此方法不适合 Android 11 版本的 APP。  <br/>
+ *  Android 11 强制推行 沙盒机制，这种方法是没有读取和存储权限的。 <br/>
+ */
+@Deprecated
+public static String getOffLineMapDataFileDir() {
+    if(Build.VERSION.SDK_INT >=  Build.VERSION_CODES.O){
+        WkLog.showErrorLog("Android 10 以上请使用 getExternalFilesDir 这个方法");
+    }
+    boolean hasSD= Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED) ;
+    File rootDirecory =hasSD ?  Environment.getExternalStorageDirectory() : Environment.getDataDirectory();
+    String lastPath = rootDirecory+ "/haoxing/" ;
+    File file = new File(lastPath);
+    if (!file.exists()) {
+        boolean result =file.mkdirs();
+        WkLog.showLog("mkdirs result="+result);
+    }
+    //  下面这段代码是为了方便提示 不小心在 Android 10 以上用上了这个方法，
+    //  而没有 mkdirs 返回 false 的报错原因 ，方便开发者排除错误
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+        if (!file.exists()) {
+            Path path = Paths.get(lastPath);
+            try {
+                Files.createDirectory(path);
+            } catch (IOException e) {
+                e.printStackTrace();
+                WkLog.showLog("mkdirs result IOException="+e.getMessage());
+            }
+        }
+    }
+    return lastPath;
+}
+
+/**
+ * 获取存储路径 getExternalFilesDir <br>
+ *  /storage/emulated/0/Android/data/com.bgy.smartagriculture.release/files/  <br>
+ *  String filePath =HXFileTool.getExternalFilesDir(this)+"/shiyantian_tiles.mbtiles" ;
+ */
+public static String getExternalFilesDir(Context context){
+    return  context.getExternalFilesDir(null).getAbsolutePath();
+}
+```
+
 
 ## APP相关的存储目录
 ```text
