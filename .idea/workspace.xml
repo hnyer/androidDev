@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chinese/pics/动态条纹进度条.gif" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/chinese/pics/图片进度条.gif" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/t.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -326,6 +327,7 @@
       <change beforePath="$PROJECT_DIR$/chinese/android基础/屏幕适配.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/屏幕适配.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/android基础/常用代码块.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/常用代码块.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/doc/常用网站.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/doc/常用网站.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chinese/doc/开发规范.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/doc/开发规范.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/java基础/深度拷贝.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/深度拷贝.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/native/相关代码.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/native/相关代码.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/常用软件/常用软件和框架.md" afterDir="false" />
@@ -509,7 +511,7 @@
     <property name="android.sdk.path" value="F:/sdk2" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/chinese/pics" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -561,7 +563,9 @@
       <workItem from="1635333984572" duration="3484000" />
       <workItem from="1635474107706" duration="2025000" />
       <workItem from="1635489705667" duration="16162000" />
-      <workItem from="1637551252354" duration="10508000" />
+      <workItem from="1637551252354" duration="10531000" />
+      <workItem from="1637574505677" duration="62000" />
+      <workItem from="1637628091590" duration="4905000" />
     </task>
     <servers />
   </component>
