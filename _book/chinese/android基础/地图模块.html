@@ -1494,7 +1494,123 @@ EPSG 3857 (&#x53C8;&#x540D;Pseudo-Mercator&#xFF0C;&#x7403;&#x5F62;&#x58A8;&#x536
 &#x6B63;&#x5728;&#x6574;&#x7406;&#xFF0C;&#x7B49;&#x5F85;&#x66F4;&#x65B0;...
 </code></pre>
 <h2 id="&#x9053;&#x683C;&#x62C9;&#x65AF;-&#x666E;&#x514B;&#xFF08;douglas-peuker-&#x62BD;&#x7A00;&#x7B97;&#x6CD5;"><a name="&#x9053;&#x683C;&#x62C9;&#x65AF;-&#x666E;&#x514B;&#xFF08;douglas-peuker-&#x62BD;&#x7A00;&#x7B97;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x9053;&#x683C;&#x62C9;&#x65AF;-&#x666E;&#x514B;&#xFF08;douglas-peuker-&#x62BD;&#x7A00;&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x9053;&#x683C;&#x62C9;&#x65AF;-&#x666E;&#x514B;&#xFF08;Douglas-Peuker) &#x62BD;&#x7A00;&#x7B97;&#x6CD5;</h2>
-<pre><code class="lang-text">123
+<pre><code class="lang-text">/**
+ * &#x9053;&#x683C;&#x62C9;&#x65AF;-&#x666E;&#x514B;&#x7B97;&#x6CD5;
+ * double dMax =0.5 ;
+ * localGeopoints =DouglasPeuckerTool.douglasPeucker(localGeopoints ,dMax) ;
+ */
+public class DouglasPeuckerTool {
+    /**
+     * &#x8BA1;&#x7B97;&#x4E24;&#x70B9;&#x8DDD;&#x79BB;&#x3002; &lt;br&gt;
+     * gps &#x5750;&#x6807;&#x7CFB;&#x7684;&#x70B9; &#xFF0C; &#x8DDD;&#x79BB;&#x5355;&#x4F4D;&#x4E3A;&#x7C73;
+     */
+    private static double calculationDistance(double[] point1, double[] point2) {
+        double lat1 = point1[0];
+        double lat2 = point2[0];
+        double lng1 = point1[1];
+        double lng2 = point2[1];
+        double radLat1 = lat1 * Math.PI / 180.0;
+        double radLat2 = lat2 * Math.PI / 180.0;
+        double a = radLat1 - radLat2;
+        double b = (lng1 * Math.PI / 180.0) - (lng2 * Math.PI / 180.0);
+        double s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
+        return s * 6370996.81;
+    }
+
+    /**
+     * &#x8BA1;&#x7B97;&#x70B9; pX&#x5230;&#x70B9;pA&#x548C;pB&#x6240;&#x786E;&#x5B9A;&#x7684;&#x76F4;&#x7EBF;&#x7684;&#x8DDD;&#x79BB;.&lt;br&gt;
+     * &#x8DDD;&#x79BB;&#x5355;&#x4F4D;&#x4E3A;&#x7C73;
+     */
+    private static double distToSegment(double[] start, double[] end, double[] center) {
+        double a = Math.abs(calculationDistance(start, end));
+        double b = Math.abs(calculationDistance(start, center));
+        double c = Math.abs(calculationDistance(end, center));
+
+        double p = (a + b + c) / 2.0;
+        double s = Math.sqrt(Math.abs(p * (p - a) * (p - b) * (p - c)));
+        return s * 2.0 / a;
+    }
+
+    /**
+     * &#x9012;&#x5F52;&#x65B9;&#x5F0F;&#x5224;&#x65AD;&#x662F;&#x5426;&#x8981;&#x8FC7;&#x6EE4;&#x6389;&#x5BF9;&#x5E94;&#x7684;&#x70B9;
+     */
+    private static void compressLine(List&lt;double[]&gt; coordinate, List&lt;double[]&gt; result, int start, int end, double dMax) {
+        if (start &lt; end) {
+            double maxDist = 0;
+            int currentIndex = 0;
+            double[] startPoint = coordinate.get(start);
+            double[] endPoint = coordinate.get(end);
+
+            for (int i = start + 1; i &lt; end; i++) {
+                double currentDist = distToSegment(startPoint, endPoint, coordinate.get(i));
+                if (currentDist &gt; maxDist) {
+                    maxDist = currentDist;
+                    currentIndex = i;
+                }
+            }
+
+            if (maxDist &gt;= dMax) {
+                // &#x5982;&#x679C; &#x6700;&#x5927;&#x8DDD;&#x79BB;&#x8D85;&#x8FC7; &#x5141;&#x8BB8;&#x8D85;&#x8FC7;&#x7684;&#x6700;&#x5927;&#x8DDD;&#x79BB;&#xFF0C; &#x8FD9;&#x4E2A;&#x70B9;&#x4E0D;&#x5141;&#x8BB8;&#x8FC7;&#x6EE4;&#x6389;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x7559;
+                result.add(coordinate.get(currentIndex));
+                //&#x5C06;&#x539F;&#x6765;&#x7684;&#x7EBF;&#x6BB5;&#x4EE5;&#x5F53;&#x524D;&#x70B9;&#x4E3A;&#x4E2D;&#x5FC3;&#x62C6;&#x6210;&#x4E24;&#x6BB5;&#xFF0C;&#x5206;&#x522B;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x5904;&#x7406;
+                compressLine(coordinate, result, start, currentIndex, dMax); //left
+                compressLine(coordinate, result, currentIndex, end, dMax); //right
+            }
+        }
+
+    }
+
+    /**
+     * @param geoPoints &#x539F;&#x59CB;&#x70B9;(&#x7ECF;&#x7EAC;&#x5EA6;&#x5750;&#x6807;&#x7CFB;)
+     * @param dMax  &#x5141;&#x8BB8;&#x6700;&#x5927;&#x8DDD;&#x79BB;&#x8BEF;&#x5DEE;&#xFF08;&#x5355;&#x4F4D;&#x7C73;&#xFF09;&#x3002; &#x5C0F;&#x4E8E;&#x8FD9;&#x4E2A;&#x503C;&#x7684;&#x70B9;&#x4F1A;&#x88AB;&#x629B;&#x5F03;&#xFF0C; dMax&#x8D8A;&#x5927;&#xFF0C;&#x62BD;&#x7684;&#x8D8A;&#x72E0;
+     * @return  &#x62BD;&#x7A00;&#x540E;&#x7684;&#x70B9;
+     */
+    public static List&lt;GeoPoint&gt; douglasPeucker(List&lt;GeoPoint&gt; geoPoints, double dMax) {
+        if (geoPoints == null ) {
+            Log.e(&quot;DouglasPeuckerTool&quot; ,&quot;geoPoints &#x4E0D;&#x80FD;&#x4E3A;null&quot;) ;
+            return new ArrayList&lt;&gt;();
+        }
+
+        if (geoPoints.size() &lt;= 2) {
+            Log.e(&quot;DouglasPeuckerTool&quot; ,&quot;geoPoints &#x70B9;&#x6570;&#x4E0D;&#x80FD;&#x5C0F;&#x4E8E;2&quot;) ;
+            return geoPoints;
+        }
+
+        List&lt;double[]&gt; coordinateInfos = new ArrayList&lt;&gt;();
+        for(int i=0 ;i&lt; geoPoints.size() ;i++){
+            GeoPoint geoPoint = geoPoints.get(i) ;
+            double[] point = new double[3];
+            point[0]= geoPoint.getLatitude();
+            point[1]= geoPoint.getLongitude() ;
+            point[2]= i;// &#x7528;&#x6765;&#x62BD;&#x7A00;&#x540E;&#x91CD;&#x65B0;&#x6392;&#x5E8F;
+            coordinateInfos.add(point);
+        }
+
+        List&lt;double[]&gt; result = new ArrayList&lt;&gt;();
+        compressLine(coordinateInfos, result, 0, coordinateInfos.size() - 1, dMax); // start
+
+        // &#x786E;&#x4FDD;&#x7B2C;&#x4E00;&#x4E2A;&#x548C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x70B9;&#x4E0D;&#x88AB;&#x8FC7;&#x6EE4;&#x6389;
+        result.add(coordinateInfos.get(0));
+        result.add(coordinateInfos.get(coordinateInfos.size() - 1));
+
+        // &#x5C06;&#x6700;&#x540E;&#x7684;&#x70B9; &#x91CD;&#x65B0;&#x6392;&#x5E8F;
+        Collections.sort(result, (dataA, dataB) -&gt; {
+            if (dataA[2] &gt; dataB[2]) {
+                return 1;
+            } else if (dataA[2] &lt; dataB[2]) {
+                return -1;
+            }
+            return 0;
+        });
+
+
+        List&lt;GeoPoint&gt; lastGeopoints = new ArrayList&lt;&gt;();
+        for(double[] value : result){
+            lastGeopoints.add(new GeoPoint(value[0 ],value[1]));
+        }
+        return lastGeopoints;
+    }
+}
 </code></pre>
 <h1 id="&#x9AD8;&#x5FB7;&#x5730;&#x56FE;"><a name="&#x9AD8;&#x5FB7;&#x5730;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x9AD8;&#x5FB7;&#x5730;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x9AD8;&#x5FB7;&#x5730;&#x56FE;</h1>
 <h2 id="&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7ECF;&#x7EAC;&#x5EA6;&#x663E;&#x793A;&#x548C;&#x5BFC;&#x822A;"><a name="&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7ECF;&#x7EAC;&#x5EA6;&#x663E;&#x793A;&#x548C;&#x5BFC;&#x822A;" class="anchor-navigation-ex-anchor" href="#&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7ECF;&#x7EAC;&#x5EA6;&#x663E;&#x793A;&#x548C;&#x5BFC;&#x822A;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x6839;&#x636E;&#x6307;&#x5B9A;&#x7ECF;&#x7EAC;&#x5EA6;&#x663E;&#x793A;&#x548C;&#x5BFC;&#x822A;</h2>
@@ -1802,7 +1918,7 @@ public class DistanceTool {
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">( no Copyright&#xFF0C;enjoy youself ! ) all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">The file was updated at :
-2021-11-23 09:57:02
+2021-11-23 15:38:37
 </span></footer>
                                 
                                 </section>
@@ -1846,7 +1962,7 @@ public class DistanceTool {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"地图模块","level":"1.10.24","depth":2,"next":{"title":"Androidstudio插件开发","level":"1.10.25","depth":2,"path":"chinese/android基础/Androidstudio插件开发.md","ref":"chinese/android基础/Androidstudio插件开发.md","articles":[]},"previous":{"title":"相机模块","level":"1.10.23","depth":2,"path":"chinese/android基础/相机模块.md","ref":"chinese/android基础/相机模块.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","fontsettings","tbfed-pagefooter","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"( no Copyright，enjoy youself ! )","modify_label":"The file was updated at :","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/android基础/地图模块.md","mtime":"2021-11-23T01:57:02.805Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-23T01:57:36.157Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"地图模块","level":"1.10.24","depth":2,"next":{"title":"Androidstudio插件开发","level":"1.10.25","depth":2,"path":"chinese/android基础/Androidstudio插件开发.md","ref":"chinese/android基础/Androidstudio插件开发.md","articles":[]},"previous":{"title":"相机模块","level":"1.10.23","depth":2,"path":"chinese/android基础/相机模块.md","ref":"chinese/android基础/相机模块.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","fontsettings","tbfed-pagefooter","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"( no Copyright，enjoy youself ! )","modify_label":"The file was updated at :","modify_format":"YYYY-MM-DD HH:mm:ss"},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/android基础/地图模块.md","mtime":"2021-11-23T07:38:37.368Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-23T08:48:33.977Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
