@@ -1,11 +1,12 @@
 ﻿本博客不保证完整性和正确性,请自行甄别。 善用左上角的搜索功能。  <br>
 托管地址 https://gitee.com/hnyer/androidDev
 
-| 博客链接  |
+| 联系我  |
 | --- |
 | email：aivin666@qq.com 、wechat: Aivin666666|
 |https://blog.csdn.net/dengpanwen  //CSDN |
 |https://hnyer.gitee.io  //红尘之声 |
+|http://hnyer.gitee.io/resume //在线简历 |
 
 
 
