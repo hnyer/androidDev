@@ -49,6 +49,7 @@
     * [View加载流程](chinese/android基础/View加载流程.md)
     * [事件分发机制](chinese/android基础/事件分发机制.md)
     * [控件绘制流程](chinese/android基础/控件绘制流程.md)
+    * [常用shape](chinese/android基础/常用shape.md)
     * [进程通信](chinese/android基础/进程通信.md)
     * [通信方式详解](chinese/通信方式/通信方式详解.md)
     * [Binder详解](chinese/android基础/Binder详解.md)

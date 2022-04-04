@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chinese/pics/圆角实心背景.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chinese/pics/多层背景.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chinese/pics/线框背景.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/SUMMARY.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/androidDev.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/codeStyles/Project.xml" beforeDir="false" />
@@ -72,8 +74,6 @@
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/屏幕刷新机制.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/屏幕适配.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/屏幕适配.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/常用代码块.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/常用代码块.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/控件绘制流程.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/控件绘制流程.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/智能家居.html" beforeDir="false" />
@@ -86,10 +86,14 @@
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/进程通信.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/项目参数配置.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/项目参数配置.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/doc/Android常用代码.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/doc/Android常用代码.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/doc/常用网站.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/doc/常用网站.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/doc/开发规范.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/doc/开发规范.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/doc/开源软件.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/doc/开源软件.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/flutter/flutter部分.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/flutter/flutter部分.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/gradle/Groovy.html" beforeDir="false" />
@@ -323,24 +327,63 @@
       <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/styles/website.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/地图模块.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/地图模块.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/常用代码块.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/doc/常用网站.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/doc/常用网站.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/doc/开发规范.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/doc/开发规范.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/常用算法/集合的所有子集.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/常用算法/集合的所有子集.md" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="androidDev" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1348">
+              <caret line="344" column="24" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chinese/android基础/常用shape.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chinese/android基础/控件绘制流程.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="610" selection-start-line="610" selection-end-line="610" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>recycl</find>
       <find>Unit</find>
       <find>RecyclerView 快速</find>
       <find>ext</find>
@@ -370,6 +413,7 @@
       <find>瀑布</find>
       <find>additemdecoration</find>
       <find>shape</find>
+      <find>shape</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br/&gt;</replace>
@@ -398,13 +442,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chinese/java基础/数据解析.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/Apk插件化开发.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/App组件化开发.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/java注解.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/对象内存布局.md" />
         <option value="$PROJECT_DIR$/chinese/java基础/JVM详解.md" />
-        <option value="$PROJECT_DIR$/../../Windows/System32/drivers/etc/hosts" />
+        <option value="D:/Windows/System32/drivers/etc/hosts" />
         <option value="$PROJECT_DIR$/Temp.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/Android字节码插桩.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/Androidstudio插件开发.md" />
@@ -431,7 +474,6 @@
         <option value="$PROJECT_DIR$/chinese/java基础/java常用代码.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/动画详解.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/地图模块.md" />
-        <option value="$PROJECT_DIR$/SUMMARY.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/android零散知识.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/图片加载详解.md" />
         <option value="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" />
@@ -448,15 +490,17 @@
         <option value="$PROJECT_DIR$/chinese/android基础/智能家居.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/常用代码块.md" />
         <option value="$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md" />
+        <option value="$PROJECT_DIR$/SUMMARY.md" />
         <option value="$PROJECT_DIR$/chinese/android基础/控件绘制流程.md" />
+        <option value="$PROJECT_DIR$/chinese/android基础/常用shape.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="x" value="400" />
+    <option name="y" value="210" />
+    <option name="width" value="1025" />
+    <option name="height" value="710" />
   </component>
   <component name="ProjectId" id="1jaZAoFfnKmD8tOMBrh82tjwXBP" />
   <component name="ProjectLevelVcsManager">
@@ -467,8 +511,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -485,12 +527,20 @@
               <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
               <item name="androidDev" type="462c0819:PsiDirectoryNode" />
               <item name="chinese" type="462c0819:PsiDirectoryNode" />
+              <item name="pics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
+              <item name="chinese" type="462c0819:PsiDirectoryNode" />
               <item name="源码阅读" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -508,7 +558,7 @@
     <property name="android.sdk.path" value="F:/sdk2" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="D:/test100/glide-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/chinese/pics" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -517,20 +567,32 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\gitee_git_book\androidDev\chinese\pics" />
-      <recent name="D:\gitee_git_book\androidDev\chinese\filedata" />
-      <recent name="F:\gitbook\androidDev\chinese\pics" />
-      <recent name="F:\gitbook\androidDev\chinese\源码阅读" />
-      <recent name="F:\gitbook\androidDev" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\gitbook\androidDev\chinese\pics" />
       <recent name="F:\gitbook\androidDev\chinese\android基础" />
       <recent name="F:\gitbook\androidDev\chinese\java基础" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitbook\androidDev\chinese\pics" />
+      <recent name="D:\gitee_git_book\androidDev\chinese\pics" />
+      <recent name="D:\gitee_git_book\androidDev\chinese\filedata" />
+      <recent name="F:\gitbook\androidDev\chinese\pics" />
+      <recent name="F:\gitbook\androidDev\chinese\源码阅读" />
+    </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -583,22 +645,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1293" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.18488745" weight="0.1821798" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.18488745" visible="true" weight="0.18163805" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info active="true" id="Structure" order="5" sideWeight="0.81511253" visible="true" weight="0.13842481" />
+      <window_info id="Structure" order="5" sideWeight="0.81511253" weight="0.13804491" />
       <window_info id="Resources Explorer" order="6" sideWeight="0.27170417" weight="0.32901135" />
       <window_info id="Favorites" order="7" side_tool="true" weight="0.32955465" />
       <window_info anchor="bottom" id="GenProtobuf" order="0" weight="0.32850242" />
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32850242" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.31672025" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.49008498" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329582" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.58038586" />
@@ -650,7 +711,14 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -669,15 +737,8 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chinese/pics/apk打包流程图.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/pics/查看对象的回收情况.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/产品经理/常用概念.md" />
     <entry file="file://$PROJECT_DIR$/chinese/pics/leakcanary检测流程.png">
       <provider selected="true" editor-type-id="images" />
@@ -738,9 +799,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Temp.md" />
     <entry file="file://$PROJECT_DIR$/chinese/flutter/flutter部分.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -918,13 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/基础控件使用.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="925">
@@ -939,20 +991,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8850">
-          <caret line="354" column="17" selection-start-line="354" selection-start-column="17" selection-end-line="354" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese/android基础/常用代码块.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24000">
-          <caret line="960" column="7" selection-start-line="960" selection-start-column="7" selection-end-line="960" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/常用代码块.md" />
     <entry file="file://$PROJECT_DIR$/chinese/源码阅读/其他框架源码.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -960,10 +999,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1348">
+          <caret line="344" column="24" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chinese/android基础/控件绘制流程.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="612" column="20" selection-start-line="612" selection-start-column="20" selection-end-line="612" selection-end-column="20" />
+        <state relative-caret-position="60">
+          <caret line="610" selection-start-line="610" selection-end-line="610" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/pics/圆角实心背景.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chinese/android基础/常用shape.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
         </state>
       </provider>
     </entry>
