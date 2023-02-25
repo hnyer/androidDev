@@ -86,7 +86,7 @@
     * [Linux](chinese/native/Linux.md)
     * [cCpp](chinese/native/ccpp.md)
     * [NDK](chinese/native/NDK.md)
-    * [车机开发](chinese/native/车机开发.md)
+    * [车机APP开发](chinese/native/车机APP开发.md)
     * [系统编译剪裁](chinese/native/系统编译剪裁.md)
     * [音视频](chinese/native/音视频.md)
     * [音视频第三方库](chinese/native/音视频第三方库.md)
