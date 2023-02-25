@@ -1,5 +1,8 @@
 ﻿本博客不保证完整性和正确性,请自行甄别。 善用左上角的搜索功能。  <br>
-托管地址 https://gitee.com/hnyer/androidDev
+托管地址 
+~~https://gitee.com/hnyer/androidDev~~
+https://github.com/hnyer/androidDev/
+https://aivin666.netlify.app/
 
 | 联系我  |
 | --- |
