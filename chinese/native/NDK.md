@@ -1225,3 +1225,10 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved)
     return JNI_VERSION_1_4;
 }
 ```
+
+
+## JNI与混淆
+```text
+如果jni中有调用Java类的方法，
+一定不能对Java文件进行混淆，否则so中是找不到对应的类和方法的。
+```

@@ -90,6 +90,26 @@ fun vars(vararg v:Int){
         //...
     }
 }
+
+```
+
+### 高阶函数- 函数作为参数
+```text
+fun main(args: Array<String>) {
+    val info = getPeopleInfo(20, ::getName)
+    println("---->${info}")
+}
+
+fun getPeopleInfo(age: Int, nameFunc: (String,String) -> String): String {
+    val name = nameFunc("tom" ,"上海")
+    val info = "${name}‘s age is ${age}"
+    return info
+}
+
+fun getName(name: String, address: String): String {
+    return "${address} ,the fuck $name"
+}
+// ---->上海 ,the fuck tom11‘s age is 20
 ```
 
 ## 字符串模板
@@ -153,6 +173,12 @@ mSurfaceTexture?.let {
     // it 是指 mSurfaceTexture
    mCamera?.setSurfaceTexture(it)  
 }
+```
+
+
+## 非空判断、为空判断
+```text
+holder.id?.text = childModel.piid.ifEmpty { "N/A" }  
 ```
 
 ## @标签
@@ -319,6 +345,52 @@ for(i in 0..9){
 ```
 
 
+##  return break continue
+```text
+fun main(args: Array<String>) {
+//    myBreakDemo(3)
+//    myContinueDemo(3)
+    myReturnDemo(3)
+}
+
+// break
+fun myBreakDemo(index: Int) {
+    val arr = intArrayOf(1, 2, 3, 4, 5, 6, 7)
+    run myBreaking@{
+        arr.forEach {
+            if (it == index) {
+                return@myBreaking
+            }
+            println("it=${it} ,index=${index}")
+        }
+    }
+    println("index=${index} end---")
+}
+// continue
+fun myContinueDemo(index: Int) {
+    val arr = intArrayOf(1, 2, 3, 4, 5, 6, 7)
+    arr.forEach {
+        if (it == index) {
+            return@forEach
+        }
+        println("it=${it} ,index=${index}")
+    }
+    println("index=${index} end---")
+}
+// return
+fun myReturnDemo(index: Int) {
+    val arr = intArrayOf(1, 2, 3, 4, 5, 6, 7)
+    arr.forEach {
+        if (it == index) {
+            return
+        }
+        println("it=${it} ,index=${index}")
+    }
+    println("index=${index} end---")
+}
+``` 
+
+
 ## mapTo
 ```text
 // mapTo 与循环搭配使用。此处的解释是：
@@ -432,6 +504,21 @@ enum class Color(val rgb: Int) {
 等xx函数执行完才会输入某个结果。 但是线程并不会阻塞。
 类似回调的使用
 ```
+
+## 回调函数
+```text
+函数的参数，最后一个参数是lambda时，为了美观要写在括号外面，
+否IDE 会提示 Lambda argument should be moved out of parentheses 
+
+// 以下这两种写法是等价的
+val cc = SingletonHolder<String, String>("tom",{ name: String, age: Int ->
+    "hello,fuck you"
+})
+val cc = SingletonHolder<String, String>("tom") { name: String, age: Int ->
+    "hello,fuck you"
+}
+```
+
 
 
 ## 协程  Coroutine
@@ -676,4 +763,19 @@ void f(String a, int b, String c){ }
 void f(String a)
 void f(String a, int b)
 void f(String a, int b, String c)
+```
+
+
+## 单例
+```text
+class XfCheryAsrReslutDispatcherTool<Any> private constructor() {
+    companion object {
+        fun getInstance(): XfCheryAsrReslutDispatcherTool<Any> {
+            return SingletonFactory.INSTANCE
+        }
+    }
+    private object SingletonFactory {
+        val INSTANCE = XfCheryAsrReslutDispatcherTool<Any>()
+    }
+}
 ```

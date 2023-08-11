@@ -230,6 +230,7 @@ p  //  粘贴剪切板中的内容
 
 ## 文件上传 ftp
 ```text
+安装ftp服务即可。
 ```
 
 ## 文件上传 sz rz
@@ -238,6 +239,9 @@ p  //  粘贴剪切板中的内容
 sz xxx.zip  // 下载服务器上的文件  
 rz   // 将指定的文件 上传到 服务器当前的目录下
 rz -be // 批量上传
+
+linux系统中打rz命令后出现waiting to receive.**B0100000023be50。
+rz 与 sz 需要端支持。 linux默认终端是不支持的。例如 XShell、SecureCRT 等。如果发现使用的软件不行，使用 XShell 一般即可。
 ```
 
 
@@ -279,6 +283,13 @@ Windows下虚拟机中安装Ubuntu
 atom 、    git  、 FillZilla Ftp   、tomcat 、 进程查看工具 htop 、  截图软件 flameshot
 
 
+##  Ubuntu 命令行模式和图像界面模式切换
+```text
+从命令行切换到图形界面：ctrl+alt+F7
+从图形界面切换到命令行模式(快捷键)：
+CTRL+ALT+F1 / F2 / F3 / F4 / F5 / F6
+（其中F1 / F2 / F3 / F4 / F5 / F6这6个键选其中一个就行，这就意味着Ubuntu可以同时打开6个命令行界面。）
+```
 
 
 

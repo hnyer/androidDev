@@ -23,3 +23,17 @@ public static String get(String url) throws Exception {
     return content;
 }
 ```
+
+
+##  try-with-resources 写法
+```text
+使用try-with-resources优雅的关闭IO流
+ try(FileInputStream input = new FileInputStream("file.txt")) {
+      int data = input.read();
+      while(data != -1){
+          System.out.print((char) data);
+          data = input.read();
+      }
+  }
+注意方法中的第一行：这就是try-with-resource 结构的用法。
+```

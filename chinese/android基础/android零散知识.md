@@ -528,5 +528,140 @@ createDeleteRequest() // 用于请求将多个文件删除的权限。
 注意 其他应用的 Android/data/ 和 android/obb  目录 你无论如何是访问不了的了。
 ```
 
+## 隐式跳转
+```text
+Activity的隐式跳转,不明确指定启动哪个Activity，而是设置Action、Data、Category，让系统来筛选出合适的Activity。
+<activity
+    android:name=".ui.activity.DeviceListActivity"
+    android:launchMode="singleTask" // 注意启动模式
+    android:exported="true"
+    android:screenOrientation="sensorLandscape"
+    android:theme="@style/LyLauncherAIoT">
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data
+            android:scheme="lyprivateapp"
+            android:host="aiot"
+            android:path="/searchdevices" />
+    </intent-filter>
+</activity>
+
+@Override
+protected void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+    getSchemeData("onNewIntent" ,intent); 
+}
+
+@Override
+protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    getSchemeData("onCreate" ,getIntent());
+}
+
+// 要注意从 onCreate 还是 onNewIntent 中来的
+private void getSchemeData(String tag ,Intent intent){
+    LyLog.showLog("tag="+tag);
+    if (intent==null){
+        LyLog.showLog("intent is null");
+        return;
+    }
+    Uri uri =intent.getData();
+    if (uri==null){
+        LyLog.showLog("uri is null");
+        return;
+    }
+    /*
+    String scheme = intent.getScheme() ;
+    String host = uri.getHost() ;
+    String path = uri.getPath() ;
+    String value= uri.getQueryParameter("value") ;*/
+    String framgTag= uri.getQueryParameter("framgTag") ;
+    LyLog.showLog("framgTag="+framgTag);
+    if ("launcher".equals(framgTag)){
+        startScanActivity(); //  SchemeData
+    }
+}
+
+// 调用
+String uriStr ="lyprivateapp://aiot/searchdevices?framgTag=launcher&value=100" ;
+Intent intent = new Intent(Intent.ACTION_VIEW , Uri.parse(uriStr));
+mContext.startActivity(intent);
+```
+
+# 电话号码判断
+```text
+// 根据国家代码和手机号  判断手机号是否有效
+public static boolean checkPhoneNumber(long phoneNumber, int countryCode){
+    Phonenumber.PhoneNumber pn = new Phonenumber.PhoneNumber();
+    pn.setCountryCode(countryCode);
+    pn.setNationalNumber(phoneNumber);
+    return PhoneNumberUtil.getInstance().isValidNumber(pn);
+}
+implementation files('libs/libphonenumber-8.12.57.jar')
+https://github.com/google/libphonenumber
+
+用正则表达式也可以用来判断电话号码是否合法，
+但是需要根据每个国家的号码规则进行判断。
+```
+
+# 隐藏桌面图标
+```text
+测试在android 11 （小米手机和奇瑞车机） 和鸿蒙2上测试了，均可隐藏桌面图标。
+网上有人说在 android 10 上会隐藏不了，没有android10的设备，没有测试这个版本的。
+也有部分厂商的机型，比如华为的某些机型，也隐藏不了。
+在一些车机系统上，也是不允许隐藏桌面图标的。
+```
+
+# 网络是否可用
+```text
+@Deprecated
+public static boolean getNetWorkState(Context context) {
+    ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+    NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+    // 这个方法在奇瑞星途上，不管网络是否连接都会返回 true
+    return networkInfo != null && networkInfo.isConnected();
+}
+// 判断网络是否真正可用 （最终方案）
+public static boolean isNetworkRealAvailable(Context context) {
+    boolean isOnline = false;
+    try {
+        ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        // need ACCESS_NETWORK_STATE permission
+        NetworkCapabilities capabilities = manager.getNetworkCapabilities(manager.getActiveNetwork());
+        isOnline = capabilities != null && capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return isOnline;
+}
+
+// 这个方法没有经过严格测试，如果是面向多种机型的，需要多测试
+public static boolean isAvailableByPing() {
+    ShellUtils.CommandResult result = ShellUtils.execCmd("ping -c 1 -w 1 223.5.5.5", false);
+    boolean isAvailable = result.result == 0;
+    LyLog.showLog("网络是否可用="+isAvailable+"  "+result.errorMsg+"  "+result.successMsg);
+    return isAvailable;
+}
+```
+
+# 动态监听网络
+```text
+参考奇瑞项目中的代码。
+```
 
 
+# 输入法
+```text
+// 外部应用关闭输入法 ok
+/*InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+imm.hideSoftInputFromWindow(this.getWindowToken(), 0);
+LyLog.showLog("关闭输入法");*/
+
+// 输入法自己关闭自己 ok
+InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+imm.hideSoftInputFromWindow(this.getWindowToken(), 0);
+if (lyIMEService != null) {
+    lyIMEService.requestHideSelf(0);
+}
+```

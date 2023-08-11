@@ -79,11 +79,16 @@ rm dir -rf com.dfl.aiot   // 强制删除文件夹
 
 ## 推送和拉取文件
 ```text
-// 拉取文件到电脑
-adb pull   /storage/emulated/0/Android/data/com.dfl.aiot/cache/asrdata.txt    D:\fucktest\log\
-
 // 推送文件到车机
 adb push D:\fucktest\aiot-v0.1.14-debug.apk /vendor/app/DflAIOT/
+
+// 拉取文件到电脑指定目录
+adb pull   /storage/emulated/0/Android/data/com.dfl.aiot/cache/asrdata.txt    D:\fucktest\log\
+
+// 拉取文件夹到当前目录(先将目录压缩)
+tar -zcvf 123.tar  logger/
+chmod 777 123.tar
+adb pull
 ```
 
 
@@ -91,4 +96,17 @@ adb push D:\fucktest\aiot-v0.1.14-debug.apk /vendor/app/DflAIOT/
 ```text
 // 授权
 adb shell pm revoke com.szlanyou.cheryaiot  android.permission.SYSTEM_OVERLAY_WINDOW
+```
+
+
+## adb logcat
+```text
+adb logcat -c  // 清除历史log
+```
+
+## dump 调试信息
+```text
+adb shell dumpsys activity
+adb dump windows
+adb logcat -b events -v threadtime > D:\LOG2.TXT
 ```

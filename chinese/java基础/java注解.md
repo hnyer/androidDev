@@ -313,6 +313,17 @@ finalDemo.getV2()); // V2
 f2.get(finalDemo)); // new_v2
 ```
 
+###  android 反射库
+```text
+Android P (android 9)引入了针对非 SDK 接口（俗称为隐藏API）的使用限制。
+这是继 Android N (Android 7)上针对 NDK 中私有库的链接限制之后的又一次重大调整。
+从今以后，不论是native层的NDK还是 Java层的SDK，我们只能使用Google提供的、公开的标准接口。
+
+FreeReflection 是一个破解反射限制的库
+FreeReflection is a library that lets you use reflection without any restriction above Android P (includes Q and R).
+https://github.com/tiann/FreeReflection
+```
+
 
 # Android 注解库
 如果代码运行时不符合注解指定的条件就会报错，

@@ -254,3 +254,15 @@ public Activity newActivity(ClassLoader cl, String className, Intent intent)  {
 // 一个Activity类中只有无参的构造方法会被执行，定义有参数的构造方法是没有意义的。
 ```
  
+ 
+## activity 之间传值
+```text
+// 设置
+Intent intent = new Intent(mContext ,DeviceBindActivity.class);
+intent.putParcelableArrayListExtra(DeviceBindActivity.MODE_DETAIL,  new ArrayList<>(selectedProduct)) ;
+mContext.startActivity(intent);
+// 取出
+selectedProduct = getIntent().getParcelableArrayListExtra(MODE_DETAIL) ;
+// 前置条件
+实现了 Parcelable 接口
+``` 
