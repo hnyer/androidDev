@@ -1,0 +1,2882 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基础控件使用 · Aivin开发笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Aivin">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="android零散知识.html" />
+    
+    
+    <link rel="prev" href="android零散知识.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../doc/常用网站.html">
+            
+                <a href="../doc/常用网站.html">
+            
+                    
+                    常用网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../常用软件/常用软件.html">
+            
+                <a href="../常用软件/常用软件.html">
+            
+                    
+                    常用软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../doc/常用框架.html">
+            
+                <a href="../doc/常用框架.html">
+            
+                    
+                    常用框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../doc/开发规范.html">
+            
+                <a href="../doc/开发规范.html">
+            
+                    
+                    开发规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../doc/Android常用代码.html">
+            
+                <a href="../doc/Android常用代码.html">
+            
+                    
+                    Android常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../源码阅读/源码阅读配置.html">
+            
+                <a href="../源码阅读/源码阅读配置.html">
+            
+                    
+                    源码阅读
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../源码阅读/其他框架源码.html">
+            
+                <a href="../源码阅读/其他框架源码.html">
+            
+                    
+                    其他框架源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../产品经理/产品经理.html">
+            
+                <a href="../产品经理/产品经理.html">
+            
+                    
+                    产品经理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../设计模式/设计模式.html">
+            
+                <a href="../设计模式/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../设计模式/设计模式.html">
+            
+                <a href="../设计模式/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../设计模式/模式详解.html">
+            
+                <a href="../设计模式/模式详解.html">
+            
+                    
+                    模式详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../设计模式/mvc等.html">
+            
+                <a href="../设计模式/mvc等.html">
+            
+                    
+                    mvc等
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../数据结构/常用数据结构.html">
+            
+                <a href="../数据结构/常用数据结构.html">
+            
+                    
+                    基本算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../数据结构/常用数据结构.html">
+            
+                <a href="../数据结构/常用数据结构.html">
+            
+                    
+                    常用数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../常用算法/算法术语.html">
+            
+                <a href="../常用算法/算法术语.html">
+            
+                    
+                    算法术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../常用算法/排序算法.html">
+            
+                <a href="../常用算法/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../常用算法/查找算法.html">
+            
+                <a href="../常用算法/查找算法.html">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../常用算法/大数相加.html">
+            
+                <a href="../常用算法/大数相加.html">
+            
+                    
+                    大数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../常用算法/集合的所有子集.html">
+            
+                <a href="../常用算法/集合的所有子集.html">
+            
+                    
+                    获得集合的所有子集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../常用算法/扫描线种子填充算法.html">
+            
+                <a href="../常用算法/扫描线种子填充算法.html">
+            
+                    
+                    扫描线种子填充算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../常用算法/其他算法.html">
+            
+                <a href="../常用算法/其他算法.html">
+            
+                    
+                    其他算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../java基础/原码补码反码.html">
+            
+                <a href="../java基础/原码补码反码.html">
+            
+                    
+                    Java部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../java基础/原码补码反码.html">
+            
+                <a href="../java基础/原码补码反码.html">
+            
+                    
+                    原码补码反码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../java基础/java常用代码.html">
+            
+                <a href="../java基础/java常用代码.html">
+            
+                    
+                    java常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../java基础/JVM详解.html">
+            
+                <a href="../java基础/JVM详解.html">
+            
+                    
+                    JVM详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../java基础/类加载机制.html">
+            
+                <a href="../java基础/类加载机制.html">
+            
+                    
+                    类加载机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../java基础/内存模型.html">
+            
+                <a href="../java基础/内存模型.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../java基础/GC机制.html">
+            
+                <a href="../java基础/GC机制.html">
+            
+                    
+                    GC机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../java基础/对象内存布局.html">
+            
+                <a href="../java基础/对象内存布局.html">
+            
+                    
+                    对象内存布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../java基础/继承多态.html">
+            
+                <a href="../java基础/继承多态.html">
+            
+                    
+                    继承和多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../java基础/相等判断.html">
+            
+                <a href="../java基础/相等判断.html">
+            
+                    
+                    相等判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="../java基础/Java容器类.html">
+            
+                <a href="../java基础/Java容器类.html">
+            
+                    
+                    Java容器类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="../java基础/Java枚举.html">
+            
+                <a href="../java基础/Java枚举.html">
+            
+                    
+                    Java枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.12" data-path="../java基础/自定义异常.html">
+            
+                <a href="../java基础/自定义异常.html">
+            
+                    
+                    自定义异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.13" data-path="../java基础/深度拷贝.html">
+            
+                <a href="../java基础/深度拷贝.html">
+            
+                    
+                    深度拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.14" data-path="../java基础/泛型详解.html">
+            
+                <a href="../java基础/泛型详解.html">
+            
+                    
+                    泛型详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.15" data-path="../java基础/线程详解.html">
+            
+                <a href="../java基础/线程详解.html">
+            
+                    
+                    线程详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.16" data-path="../java基础/java注解.html">
+            
+                <a href="../java基础/java注解.html">
+            
+                    
+                    注解详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.17" data-path="../java基础/数据解析.html">
+            
+                <a href="../java基础/数据解析.html">
+            
+                    
+                    数据解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.18" data-path="../java基础/java8新特性.html">
+            
+                <a href="../java基础/java8新特性.html">
+            
+                    
+                    Java8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="android零散知识.html">
+            
+                <a href="android零散知识.html">
+            
+                    
+                    Android部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.12.1" data-path="基础控件使用.html">
+            
+                <a href="基础控件使用.html">
+            
+                    
+                    基础控件使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="android零散知识.html">
+            
+                <a href="android零散知识.html">
+            
+                    
+                    Android零散知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="android坐标体系.html">
+            
+                <a href="android坐标体系.html">
+            
+                    
+                    Android坐标体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="APP的启动流程.html">
+            
+                <a href="APP的启动流程.html">
+            
+                    
+                    APP启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="View加载流程.html">
+            
+                <a href="View加载流程.html">
+            
+                    
+                    View加载流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="事件分发机制.html">
+            
+                <a href="事件分发机制.html">
+            
+                    
+                    事件分发机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="控件绘制流程.html">
+            
+                <a href="控件绘制流程.html">
+            
+                    
+                    控件绘制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="常用shape.html">
+            
+                <a href="常用shape.html">
+            
+                    
+                    常用shape
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="进程通信.html">
+            
+                <a href="进程通信.html">
+            
+                    
+                    进程通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="../通信方式/通信方式详解.html">
+            
+                <a href="../通信方式/通信方式详解.html">
+            
+                    
+                    通信方式详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.11" data-path="Binder详解.html">
+            
+                <a href="Binder详解.html">
+            
+                    
+                    Binder详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12" data-path="Handler详解.html">
+            
+                <a href="Handler详解.html">
+            
+                    
+                    Handle详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.13" data-path="Fragment详解.html">
+            
+                <a href="Fragment详解.html">
+            
+                    
+                    Fragment详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.14" data-path="Activity详解.html">
+            
+                <a href="Activity详解.html">
+            
+                    
+                    Activity详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.15" data-path="BroadcastReceiver.html">
+            
+                <a href="BroadcastReceiver.html">
+            
+                    
+                    BroadcastReceiver详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.16" data-path="Service服务.html">
+            
+                <a href="Service服务.html">
+            
+                    
+                    Service详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.17" data-path="动画详解.html">
+            
+                <a href="动画详解.html">
+            
+                    
+                    动画详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.18" data-path="屏幕刷新机制.html">
+            
+                <a href="屏幕刷新机制.html">
+            
+                    
+                    屏幕刷新机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.19" data-path="屏幕适配.html">
+            
+                <a href="屏幕适配.html">
+            
+                    
+                    屏幕适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.20" data-path="图片加载详解.html">
+            
+                <a href="图片加载详解.html">
+            
+                    
+                    图片加载详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.21" data-path="沉浸式.html">
+            
+                <a href="沉浸式.html">
+            
+                    
+                    沉浸式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.22" data-path="相机模块.html">
+            
+                <a href="相机模块.html">
+            
+                    
+                    相机模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.23" data-path="地图模块.html">
+            
+                <a href="地图模块.html">
+            
+                    
+                    地图模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.24" data-path="蓝牙详解.html">
+            
+                <a href="蓝牙详解.html">
+            
+                    
+                    蓝牙详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.25" data-path="Androidstudio插件开发.html">
+            
+                <a href="Androidstudio插件开发.html">
+            
+                    
+                    Androidstudio插件开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.26" data-path="Apk插件化开发.html">
+            
+                <a href="Apk插件化开发.html">
+            
+                    
+                    Apk插件化开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.27" data-path="App组件化开发.html">
+            
+                <a href="App组件化开发.html">
+            
+                    
+                    App组件化开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.28" data-path="sdk开发.html">
+            
+                <a href="sdk开发.html">
+            
+                    
+                    sdk开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.29" data-path="APP优化.html">
+            
+                <a href="APP优化.html">
+            
+                    
+                    APP优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.30" data-path="项目参数配置.html">
+            
+                <a href="项目参数配置.html">
+            
+                    
+                    项目参数配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.31" data-path="App发布.html">
+            
+                <a href="App发布.html">
+            
+                    
+                    App发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.32" data-path="Android外挂.html">
+            
+                <a href="Android外挂.html">
+            
+                    
+                    Android外挂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.33" data-path="Android字节码插桩.html">
+            
+                <a href="Android字节码插桩.html">
+            
+                    
+                    Android字节码插桩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.34" data-path="智能家居.html">
+            
+                <a href="智能家居.html">
+            
+                    
+                    智能家居
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../python/python基础.html">
+            
+                <a href="../python/python基础.html">
+            
+                    
+                    python部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../python/python基础.html">
+            
+                <a href="../python/python基础.html">
+            
+                    
+                    python基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../python/python爬虫.html">
+            
+                <a href="../python/python爬虫.html">
+            
+                    
+                    python爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../python/自动化工具.html">
+            
+                <a href="../python/自动化工具.html">
+            
+                    
+                    自动化工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../gradle/Groovy.html">
+            
+                <a href="../gradle/Groovy.html">
+            
+                    
+                    Groovy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../kotlin/kotlin部分.html">
+            
+                <a href="../kotlin/kotlin部分.html">
+            
+                    
+                    kotlin部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../flutter/flutter部分.html">
+            
+                <a href="../flutter/flutter部分.html">
+            
+                    
+                    flutter部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../native/ccpp.html">
+            
+                <a href="../native/ccpp.html">
+            
+                    
+                    native部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../native/Linux.html">
+            
+                <a href="../native/Linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../native/ccpp.html">
+            
+                <a href="../native/ccpp.html">
+            
+                    
+                    cCpp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../native/NDK.html">
+            
+                <a href="../native/NDK.html">
+            
+                    
+                    NDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../native/车机APP开发.html">
+            
+                <a href="../native/车机APP开发.html">
+            
+                    
+                    车机APP开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../native/系统编译剪裁.html">
+            
+                <a href="../native/系统编译剪裁.html">
+            
+                    
+                    系统编译剪裁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../native/音视频.html">
+            
+                <a href="../native/音视频.html">
+            
+                    
+                    音视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../native/音视频第三方库.html">
+            
+                <a href="../native/音视频第三方库.html">
+            
+                    
+                    音视频第三方库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="../native/相关代码.html">
+            
+                <a href="../native/相关代码.html">
+            
+                    
+                    相关代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.9" data-path="../native/c常用代码.html">
+            
+                <a href="../native/c常用代码.html">
+            
+                    
+                    c常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../server/服务器部分.html">
+            
+                <a href="../server/服务器部分.html">
+            
+                    
+                    服务器部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../webDev/web部分.html">
+            
+                <a href="../webDev/web部分.html">
+            
+                    
+                    web部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../人工智能/人工智能相关概念.html">
+            
+                <a href="../人工智能/人工智能相关概念.html">
+            
+                    
+                    人工智能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../面试真题/极飞.html">
+            
+                <a href="../面试真题/极飞.html">
+            
+                    
+                    面试真题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../java基础/奇技淫巧.html">
+            
+                <a href="../java基础/奇技淫巧.html">
+            
+                    
+                    奇技淫巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >基础控件使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#application"><b>1. </b>Application</a></li><li><span class="title-icon "></span><a href="#edittext"><b>2. </b>EditText</a></li><ul><li><span class="title-icon "></span><a href="#edittext-&#x9ED8;&#x8BA4;&#x4E0D;&#x83B7;&#x53D6;&#x7126;&#x70B9;"><b>2.1. </b>EditText &#x9ED8;&#x8BA4;&#x4E0D;&#x83B7;&#x53D6;&#x7126;&#x70B9;</a></li><li><span class="title-icon "></span><a href="#edittext-&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#x9690;&#x85CF;&#x5149;&#x6807;-&#x548C;&#x6536;&#x8D77;&#x952E;&#x76D8;"><b>2.2. </b>EditText &#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#x9690;&#x85CF;&#x5149;&#x6807; &#x548C;&#x6536;&#x8D77;&#x952E;&#x76D8;</a></li></ul><li><span class="title-icon "></span><a href="#imageview"><b>3. </b>ImageView</a></li><ul><li><span class="title-icon "></span><a href="#&#x957F;&#x6309;&#x548C;&#x77ED;&#x6309;&#x70B9;&#x51FB;"><b>3.1. </b>&#x957F;&#x6309;&#x548C;&#x77ED;&#x6309;/&#x70B9;&#x51FB;</a></li></ul><li><span class="title-icon "></span><a href="#textview"><b>4. </b>TextView</a></li><ul><li><span class="title-icon "></span><a href="#drawablepadding"><b>4.1. </b>drawablePadding</a></li><li><span class="title-icon "></span><a href="#drawable-&#x548C;&#x6587;&#x5B57;&#x90FD;&#x5C45;&#x4E2D;"><b>4.2. </b>drawable &#x548C;&#x6587;&#x5B57;&#x90FD;&#x5C45;&#x4E2D;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x7F6E;&#x884C;&#x95F4;&#x8DDD;"><b>4.3. </b>&#x8BBE;&#x7F6E;&#x884C;&#x95F4;&#x8DDD;</a></li><li><span class="title-icon "></span><a href="#&#x7701;&#x7565;&#x53F7;"><b>4.4. </b>&#x7701;&#x7565;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#textview&#x4E0B;&#x5212;&#x7EBF;"><b>4.5. </b>textView&#x4E0B;&#x5212;&#x7EBF;</a></li><li><span class="title-icon "></span><a href="#textview-&#x5C55;&#x793A;-emoji"><b>4.6. </b>textView &#x5C55;&#x793A; Emoji</a></li><li><span class="title-icon "></span><a href="#textview-&#x8BBE;&#x7F6E;&#x6EDA;&#x52A8;&#x6548;&#x679C;"><b>4.7. </b>TextView &#x8BBE;&#x7F6E;&#x6EDA;&#x52A8;&#x6548;&#x679C;</a></li></ul><li><span class="title-icon "></span><a href="#popupwindow"><b>5. </b>PopupWindow</a></li><ul><li><span class="title-icon "></span><a href="#popupwindow-&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;"><b>5.1. </b>PopupWindow &#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;</a></li><li><span class="title-icon "></span><a href="#popupwindow-&#x534A;&#x900F;&#x660E;"><b>5.2. </b>PopupWindow &#x534A;&#x900F;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;"><b>5.3. </b>&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;&#x5B8C;&#x6574;&#x7248;"><b>5.4. </b>&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;(&#x5B8C;&#x6574;&#x7248;)</a></li><li><span class="title-icon "></span><a href="#&#x900F;&#x660E;&#x5EA6;&#x767E;&#x5206;&#x6BD4;&#x8F6C;&#x6362;&#x6210;&#x5341;&#x516D;&#x8FDB;&#x5236;"><b>5.5. </b>&#x900F;&#x660E;&#x5EA6;&#x767E;&#x5206;&#x6BD4;&#x8F6C;&#x6362;&#x6210;&#x5341;&#x516D;&#x8FDB;&#x5236;</a></li><li><span class="title-icon "></span><a href="#popupwindow-&#x91CC;&#x89E6;&#x53D1;&#x5F39;&#x7A97;--&#x4E8C;&#x7EA7;&#x5F39;&#x7A97;"><b>5.6. </b>PopupWindow &#x91CC;&#x89E6;&#x53D1;&#x5F39;&#x7A97; , &#x4E8C;&#x7EA7;&#x5F39;&#x7A97;</a></li><li><span class="title-icon "></span><a href="#popupwindow-&#x89E6;&#x78B0;&#x5916;&#x8FB9;&#x5173;&#x95ED;"><b>5.7. </b>PopupWindow &#x89E6;&#x78B0;&#x5916;&#x8FB9;&#x5173;&#x95ED;</a></li><li><span class="title-icon "></span><a href="#popupwindow-&#x83B7;&#x53D6;-showatlocation-&#x7684;-parent"><b>5.8. </b>PopupWindow &#x83B7;&#x53D6; showAtLocation &#x7684; parent</a></li><li><span class="title-icon "></span><a href="#popupwindow-&#x5185;&#x90E8;&#x8FDB;&#x884C;&#x89C6;&#x56FE;&#x5207;&#x6362;"><b>5.9. </b>PopupWindow &#x5185;&#x90E8;&#x8FDB;&#x884C;&#x89C6;&#x56FE;&#x5207;&#x6362;</a></li></ul><li><span class="title-icon "></span><a href="#sharedpreferences"><b>6. </b>SharedPreferences</a></li><ul><li><span class="title-icon "></span><a href="#sharedpreferences--apply-&#x548C;--commit-&#x7684;&#x533A;&#x522B;"><b>6.1. </b>SharedPreferences  apply &#x548C;  commit &#x7684;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#sharedpreferences---&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;"><b>6.2. </b>SharedPreferences   &#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;</a></li><li><span class="title-icon "></span><a href="#sharedpreferences-&#x662F;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;&#xFF1F;-&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;"><b>6.3. </b>SharedPreferences &#x662F;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;&#xFF1F; &#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;</a></li></ul><li><span class="title-icon "></span><a href="#alertdialog-&#x6309;&#x94AE;&#x5927;&#x5C0F;&#x95EE;&#x9898;"><b>7. </b>AlertDialog &#x6309;&#x94AE;&#x5927;&#x5C0F;&#x95EE;&#x9898;</a></li><li><span class="title-icon "></span><a href="#dialog-&#x5168;&#x5C4F;&#x663E;&#x793A;"><b>8. </b>Dialog &#x5168;&#x5C4F;&#x663E;&#x793A;</a></li><li><span class="title-icon "></span><a href="#seekbar"><b>9. </b>SeekBar</a></li><ul><li><span class="title-icon "></span><a href="#seekbar-&#x8FDB;&#x5EA6;&#x6761;&#x663E;&#x793A;&#x4E0D;&#x5168;&#x3001;&#x663E;&#x793A;&#x4E0D;&#x9876;&#x683C;&#x7684;&#x95EE;&#x9898;"><b>9.1. </b>SeekBar &#x8FDB;&#x5EA6;&#x6761;&#x663E;&#x793A;&#x4E0D;&#x5168;&#x3001;&#x663E;&#x793A;&#x4E0D;&#x9876;&#x683C;&#x7684;&#x95EE;&#x9898;</a></li><li><span class="title-icon "></span><a href="#&#x70B9;&#x51FB;&#x6216;&#x62D6;&#x52A8;&#x7684;&#x5206;&#x6BB5;&#x8FDB;&#x5EA6;&#x6761;"><b>9.2. </b>&#x70B9;&#x51FB;&#x6216;&#x62D6;&#x52A8;&#x7684;&#x5206;&#x6BB5;&#x8FDB;&#x5EA6;&#x6761;</a></li><li><span class="title-icon "></span><a href="#clipdrawable-&#x5B9E;&#x73B0;&#x56FE;&#x7247;&#x8FDB;&#x5EA6;&#x6761;-&#x6548;&#x679C;"><b>9.3. </b>ClipDrawable &#x5B9E;&#x73B0;&#x56FE;&#x7247;&#x8FDB;&#x5EA6;&#x6761; &#x6548;&#x679C;</a></li><li><span class="title-icon "></span><a href="#&#x52A8;&#x6001;&#x6761;&#x7EB9;&#x80CC;&#x666F;&#x8FDB;&#x5EA6;&#x6761;"><b>9.4. </b>&#x52A8;&#x6001;&#x6761;&#x7EB9;&#x80CC;&#x666F;&#x8FDB;&#x5EA6;&#x6761;</a></li></ul><li><span class="title-icon "></span><a href="#listview-&#x52A8;&#x6001;&#x6539;&#x53D8;&#x9AD8;&#x5EA6;"><b>10. </b>ListView &#x52A8;&#x6001;&#x6539;&#x53D8;&#x9AD8;&#x5EA6;</a></li><li><span class="title-icon "></span><a href="#&#x7EA6;&#x675F;&#x5E03;&#x5C40;-constraintlayout"><b>11. </b>&#x7EA6;&#x675F;&#x5E03;&#x5C40; ConstraintLayout</a></li><ul><li><span class="title-icon "></span><a href="#constraintlayout-&#x5E38;&#x7528;&#x5C5E;&#x6027;"><b>11.1. </b>ConstraintLayout &#x5E38;&#x7528;&#x5C5E;&#x6027;</a></li><li><span class="title-icon "></span><a href="#constraintlayout-&#x4E24;&#x4E2A;&#x6309;&#x94AE;&#x5C45;&#x4E2D;&#x8BBE;&#x7F6E;"><b>11.2. </b>ConstraintLayout &#x4E24;&#x4E2A;&#x6309;&#x94AE;&#x5C45;&#x4E2D;&#x8BBE;&#x7F6E;</a></li></ul><li><span class="title-icon "></span><a href="#placeholder"><b>12. </b>Placeholder</a></li><li><span class="title-icon "></span><a href="#viewpager2"><b>13. </b>viewpager2</a></li><li><span class="title-icon "></span><a href="#webview&#x8BE6;&#x89E3;"><b>14. </b>WebView&#x8BE6;&#x89E3;</a></li><ul><li><span class="title-icon "></span><a href="#webview-&#x4E0E;&#x53CD;&#x5C04;&#x7684;&#x5904;&#x7406;"><b>14.1. </b>webView &#x4E0E;&#x53CD;&#x5C04;&#x7684;&#x5904;&#x7406;</a></li></ul><li><span class="title-icon "></span><a href="#recyclerview-&#x63A7;&#x4EF6;"><b>15. </b>RecyclerView &#x63A7;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#recyclerview-&#x6E90;&#x7801;&#x9605;&#x8BFB;"><b>15.1. </b>recyclerview &#x6E90;&#x7801;&#x9605;&#x8BFB;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x63D2;&#x62D4;&#x5F0F;&#x8BBE;&#x8BA1;"><b>15.2. </b>RecyclerView &#x63D2;&#x62D4;&#x5F0F;&#x8BBE;&#x8BA1;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x7684;&#x4F18;&#x70B9;"><b>15.3. </b>RecyclerView &#x7684;&#x4F18;&#x70B9;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x4E0E;-listview-&#x7684;&#x533A;&#x522B;"><b>15.4. </b>RecyclerView &#x4E0E; listview &#x7684;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;-layoutmanager"><b>15.5. </b>RecyclerView &#x81EA;&#x5B9A;&#x4E49; LayoutManager</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x95F4;&#x9694;&#x7EBF;--&#x3001;&#x8FB9;&#x754C;&#x6837;&#x5F0F;-&#x3001;itemdecoration"><b>15.6. </b>RecyclerView &#x81EA;&#x5B9A;&#x4E49;&#x95F4;&#x9694;&#x7EBF;  &#x3001;&#x8FB9;&#x754C;&#x6837;&#x5F0F; &#x3001;ItemDecoration</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x4F7F;&#x7528;&#x81EA;&#x5E26;&#x52A8;&#x753B;"><b>15.7. </b>RecyclerView &#x4F7F;&#x7528;&#x81EA;&#x5E26;&#x52A8;&#x753B;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x3001;&#x6DFB;&#x52A0;&#x52A8;&#x753B;"><b>15.8. </b>RecyclerView &#x81EA;&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x3001;&#x6DFB;&#x52A0;&#x52A8;&#x753B;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x6ED1;&#x52A8;&#x6548;&#x679C;"><b>15.9. </b>RecyclerView &#x81EA;&#x5B9A;&#x4E49;&#x6ED1;&#x52A8;&#x6548;&#x679C;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x56DE;&#x6536;&#x7B56;&#x7565;"><b>15.10. </b>RecyclerView &#x81EA;&#x5B9A;&#x4E49;&#x56DE;&#x6536;&#x7B56;&#x7565;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x7ED8;&#x5236;&#x6D41;&#x7A0B;"><b>15.11. </b>RecyclerView &#x7ED8;&#x5236;&#x6D41;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x5C40;&#x90E8;&#x5237;&#x65B0;"><b>15.12. </b>RecyclerView &#x5C40;&#x90E8;&#x5237;&#x65B0;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x6EDA;&#x52A8;&#x673A;&#x5236;"><b>15.13. </b>RecyclerView &#x6EDA;&#x52A8;&#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x7F13;&#x5B58;-&#x3001;&#x590D;&#x7528;-&#x673A;&#x5236;"><b>15.14. </b>RecyclerView &#x7F13;&#x5B58; &#x3001;&#x590D;&#x7528; &#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x5224;&#x65AD;-item-&#x662F;&#x5426;&#x590D;&#x7528;"><b>15.15. </b>&#x5982;&#x4F55;&#x5224;&#x65AD; item &#x662F;&#x5426;&#x590D;&#x7528;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x5D4C;&#x5957;&#x6ED1;&#x52A8;-&#x673A;&#x5236;"><b>15.16. </b>RecyclerView &#x5D4C;&#x5957;&#x6ED1;&#x52A8; &#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x6ED1;&#x52A8;&#x5361;&#x987F;"><b>15.17. </b>RecyclerView &#x6ED1;&#x52A8;&#x5361;&#x987F;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x4E07;&#x80FD;&#x9002;&#x914D;&#x5668;"><b>15.18. </b>RecyclerView &#x4E07;&#x80FD;&#x9002;&#x914D;&#x5668;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x4E0D;&#x89C4;&#x5219;&#x5E03;&#x5C40;"><b>15.19. </b>RecyclerView &#x4E0D;&#x89C4;&#x5219;&#x5E03;&#x5C40;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x95EE;&#x7B54;"><b>15.20. </b>RecyclerView &#x95EE;&#x7B54;</a></li><ul><li><span class="title-icon "></span><a href="#recyclerview-&#x7684;&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#x662F;&#x600E;&#x6837;&#x7684;&#xFF1F;-&#x7F13;&#x5B58;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;cachedview-&#x4F1A;&#x6267;&#x884C;-onbindview-&#x5417;"><b>15.20.1. </b>RecyclerView &#x7684;&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#x662F;&#x600E;&#x6837;&#x7684;&#xFF1F; &#x7F13;&#x5B58;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;cachedView &#x4F1A;&#x6267;&#x884C; onBindView &#x5417;?</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x5D4C;&#x5957;-recyclerview&#xFF0C;nestscrollview-&#x5D4C;&#x5957;-scrollview-&#x6ED1;&#x52A8;&#x51B2;&#x7A81;"><b>15.20.2. </b>RecyclerView &#x5D4C;&#x5957; RecyclerView&#xFF0C;NestScrollView &#x5D4C;&#x5957; ScrollView &#x6ED1;&#x52A8;&#x51B2;&#x7A81;</a></li><li><span class="title-icon "></span><a href="#&#x8BB2;&#x4E00;&#x4E0B;-recyclerview-&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x6ED1;&#x52A8;10&#x4E2A;&#xFF0C;&#x518D;&#x6ED1;&#x56DE;&#x53BB;&#xFF0C;&#x4F1A;&#x6709;&#x51E0;&#x4E2A;&#x6267;&#x884C;-onbindview"><b>15.20.3. </b>&#x8BB2;&#x4E00;&#x4E0B; RecyclerView &#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;,&#x6ED1;&#x52A8;10&#x4E2A;&#xFF0C;&#x518D;&#x6ED1;&#x56DE;&#x53BB;&#xFF0C;&#x4F1A;&#x6709;&#x51E0;&#x4E2A;&#x6267;&#x884C; onBindView</a></li><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x5B9E;&#x73B0;-recyclerview-&#x7684;&#x5C40;&#x90E8;&#x66F4;&#x65B0;&#xFF0C;&#x7528;&#x8FC7;-payload-&#x5417;-notifyitemchange-&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF1F;"><b>15.20.4. </b>&#x5982;&#x4F55;&#x5B9E;&#x73B0; RecyclerView &#x7684;&#x5C40;&#x90E8;&#x66F4;&#x65B0;&#xFF0C;&#x7528;&#x8FC7; payload &#x5417;, notifyItemChange &#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF1F;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x9632;&#x6B62;&#x5185;&#x5B58;oom&#x7684;&#x4E00;&#x9053;&#x9898;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528;&#x81EA;&#x8EAB;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;"><b>15.20.5. </b>RecyclerView &#x9632;&#x6B62;&#x5185;&#x5B58;OOM&#x7684;&#x4E00;&#x9053;&#x9898;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528;&#x81EA;&#x8EAB;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x548C;-listview-&#x533A;&#x522B;&#x3001;&#x7279;&#x70B9;&#x3001;&#x7F13;&#x5B58;-&#x3001;&#x61D2;&#x52A0;&#x8F7D;&#x3001;&#x5C40;&#x90E8;&#x5237;&#x65B0;-&#x591A;&#x79CD;type&#x573A;&#x666F;&#x4E0B;&#x600E;&#x4E48;&#x907F;&#x514D;&#x6ED1;&#x52A8;&#x5361;&#x987F;-&#x600E;&#x4E48;&#x4F18;&#x5316;&#x6ED1;&#x52A8;"><b>15.20.6. </b>RecyclerView &#x548C; ListView &#x533A;&#x522B;&#x3001;&#x7279;&#x70B9;&#x3001;&#x7F13;&#x5B58; &#x3001;&#x61D2;&#x52A0;&#x8F7D;&#x3001;&#x5C40;&#x90E8;&#x5237;&#x65B0; ,&#x591A;&#x79CD;type&#x573A;&#x666F;&#x4E0B;&#x600E;&#x4E48;&#x907F;&#x514D;&#x6ED1;&#x52A8;&#x5361;&#x987F; ,&#x600E;&#x4E48;&#x4F18;&#x5316;&#x6ED1;&#x52A8;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#xFF0C;recyclerview-&#x9884;&#x53D6;&#xFF0C;recyclerview-&#x5C40;&#x90E8;&#x5237;&#x65B0;"><b>15.20.7. </b>RecyclerView &#x7F13;&#x5B58;&#x7ED3;&#x6784;&#xFF0C;RecyclerView &#x9884;&#x53D6;&#xFF0C;RecyclerView &#x5C40;&#x90E8;&#x5237;&#x65B0;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x91CC;&#x9762;&#x90A3;&#x4E2A;-mchangedscrap-mattachedscrap--&#x4E4B;&#x7C7B;&#x7684;&#x5230;&#x5E95;&#x662F;&#x5728;&#x505A;&#x4EC0;&#x4E48;-"><b>15.20.8. </b>RecyclerView &#x91CC;&#x9762;&#x90A3;&#x4E2A; mChangedScrap, mAttachedScrap  &#x4E4B;&#x7C7B;&#x7684;&#x5230;&#x5E95;&#x662F;&#x5728;&#x505A;&#x4EC0;&#x4E48; ?</a></li></ul><li><span class="title-icon "></span><a href="#recyclerview-&#x5E38;&#x7528;&#x51FD;&#x6570;"><b>15.21. </b>RecyclerView &#x5E38;&#x7528;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#computeverticalscrolloffset"><b>15.21.1. </b>computeVerticalScrollOffset</a></li><li><span class="title-icon "></span><a href="#computeverticalscrollrange"><b>15.21.2. </b>computeVerticalScrollRange</a></li><li><span class="title-icon "></span><a href="#computeverticalscrollextent"><b>15.21.3. </b>computeVerticalScrollExtent</a></li></ul><li><span class="title-icon "></span><a href="#recyclerview-&#x5B9E;&#x9645;&#x4F7F;&#x7528;"><b>15.22. </b>RecyclerView &#x5B9E;&#x9645;&#x4F7F;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#recyclerview----radiogroup-radiobutton-&#x9632;&#x6B62;&#x6570;&#x636E;&#x9519;&#x4E71;-&#x5904;&#x7406;"><b>15.22.1. </b>RecyclerView  +  RadioGroup RadioButton &#x9632;&#x6B62;&#x6570;&#x636E;&#x9519;&#x4E71; &#x5904;&#x7406;</a></li><li><span class="title-icon "></span><a href="#recyclerview--&#x7011;&#x5E03;&#x6D41;---glide-&#x957F;&#x5BBD;&#x6BD4;&#x52A0;&#x8F7D;"><b>15.22.2. </b>RecyclerView + &#x7011;&#x5E03;&#x6D41;  + Glide &#x957F;&#x5BBD;&#x6BD4;&#x52A0;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#recyclerview--&#x7011;&#x5E03;&#x6D41;-bug"><b>15.22.3. </b>RecyclerView + &#x7011;&#x5E03;&#x6D41; bug</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x4FEE;&#x6539;&#x6ED1;&#x52A8;&#x901F;&#x5EA6;"><b>15.22.4. </b>RecyclerView &#x4FEE;&#x6539;&#x6ED1;&#x52A8;&#x901F;&#x5EA6;</a></li><li><span class="title-icon "></span><a href="#recyclerview-&#x5FEB;&#x901F;&#x62D6;&#x52A8;&#x6761;"><b>15.22.5. </b>RecyclerView &#x5FEB;&#x901F;&#x62D6;&#x52A8;&#x6761;</a></li></ul></ul><li><span class="title-icon "></span><a href="#textclock"><b>16. </b>TextClock</a></li></ul></div><a href="#application" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="application"><a name="application" class="anchor-navigation-ex-anchor" href="#application"><i class="fa fa-link" aria-hidden="true"></i></a>1. Application</h1>
+<pre><code class="lang-text">// Application &#x4E2D;&#x663E;&#x793A; Dialog (AlertDialog) 
+&#x501F;&#x52A9; ActivityLifecycleCallbacks &#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x56DE;&#x8C03; &#x83B7;&#x5F97; Context
+new AlertDialog.Builder(mContext);   
+
+// &#x901A;&#x8FC7; Application  &#x4F20;&#x503C; &#x7F3A;&#x70B9;
+</code></pre>
+<h1 id="edittext"><a name="edittext" class="anchor-navigation-ex-anchor" href="#edittext"><i class="fa fa-link" aria-hidden="true"></i></a>2. EditText</h1>
+<h2 id="edittext-&#x9ED8;&#x8BA4;&#x4E0D;&#x83B7;&#x53D6;&#x7126;&#x70B9;"><a name="edittext-&#x9ED8;&#x8BA4;&#x4E0D;&#x83B7;&#x53D6;&#x7126;&#x70B9;" class="anchor-navigation-ex-anchor" href="#edittext-&#x9ED8;&#x8BA4;&#x4E0D;&#x83B7;&#x53D6;&#x7126;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. EditText &#x9ED8;&#x8BA4;&#x4E0D;&#x83B7;&#x53D6;&#x7126;&#x70B9;</h2>
+<pre><code class="lang-text">1&#x3001;&#x89E3;&#x51B3; &#x5728; PopupWindow &#x4E2D; &#xFF0C;EditText &#x6709;&#x65F6;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x6CD5;&#x7126;&#x70B9;&#x3002;
+&#x5728; PopupWindow &#x4E2D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E0B;  this.setFocusable(true);
+
+2&#x3001;&#x8BA9; EditText &#x9ED8;&#x8BA4;&#x4E0D;&#x83B7;&#x53D6;&#x7126;&#x70B9;
+&#x5728; EditText &#x7684;&#x7236;&#x5BB9;&#x5668;&#x4E2D;&#x52A0;&#x5165;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#xFF0C;&#x8BA9;&#x5176;&#x62A2;&#x593A;&#x5230;&#x7126;&#x70B9;&#x3002;
+android:focusableInTouchMode=&quot;true&quot;
+android:focusable=&quot;true&quot;
+</code></pre>
+<h2 id="edittext-&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#x9690;&#x85CF;&#x5149;&#x6807;-&#x548C;&#x6536;&#x8D77;&#x952E;&#x76D8;"><a name="edittext-&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#x9690;&#x85CF;&#x5149;&#x6807;-&#x548C;&#x6536;&#x8D77;&#x952E;&#x76D8;" class="anchor-navigation-ex-anchor" href="#edittext-&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#x9690;&#x85CF;&#x5149;&#x6807;-&#x548C;&#x6536;&#x8D77;&#x952E;&#x76D8;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. EditText &#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#x9690;&#x85CF;&#x5149;&#x6807; &#x548C;&#x6536;&#x8D77;&#x952E;&#x76D8;</h2>
+<pre><code class="lang-text">private void closeInputMethod(EditText theEditText) {
+    theEditText.setCursorVisible(false); //&#x5173;&#x95ED;&#x5149;&#x6807;
+    InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+    boolean isOpen = imm.isActive();
+    if (isOpen) {
+        imm.hideSoftInputFromWindow(theEditText.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+}
+</code></pre>
+<h1 id="imageview"><a name="imageview" class="anchor-navigation-ex-anchor" href="#imageview"><i class="fa fa-link" aria-hidden="true"></i></a>3. ImageView</h1>
+<h2 id="&#x957F;&#x6309;&#x548C;&#x77ED;&#x6309;&#x70B9;&#x51FB;"><a name="&#x957F;&#x6309;&#x548C;&#x77ED;&#x6309;&#x70B9;&#x51FB;" class="anchor-navigation-ex-anchor" href="#&#x957F;&#x6309;&#x548C;&#x77ED;&#x6309;&#x70B9;&#x51FB;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x957F;&#x6309;&#x548C;&#x77ED;&#x6309;/&#x70B9;&#x51FB;</h2>
+<pre><code class="lang-text">&#x76D1;&#x542C;&#x70B9;&#x51FB;&#xFF0C;&#x957F;&#x6309;&#x5F00;&#x59CB;&#x548C;&#x957F;&#x6309;&#x7ED3;&#x675F;
+public class LyLongPressImageView extends AppCompatImageView {
+    private OnClickTypeCallback clickTypeCallback;
+     // &#x957F;&#x6309;&#x662F;&#x5426;&#x89E6;&#x53D1;&#x4E86;
+    private boolean isLongPressTriggered = false;
+
+    public LyLongPressImageView(@NonNull Context context) {
+        super(context);
+        init();
+    }
+
+    public LyLongPressImageView(@NonNull Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+        init();
+    }
+
+    public LyLongPressImageView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init();
+    }
+    private void init() {
+        setOnClickListener(v -&gt; {
+            if (clickTypeCallback != null) {
+                clickTypeCallback.onSingleClick();
+            }
+        });
+
+        setOnLongClickListener(v -&gt; {
+            isLongPressTriggered = true;
+            if (clickTypeCallback != null) {
+                clickTypeCallback.onLongPress(true);
+            }
+            return true;
+        });
+    }
+
+    public void setClickTypeCallback(OnClickTypeCallback clickTypeCallback) {
+        this.clickTypeCallback = clickTypeCallback;
+    }
+
+    @SuppressLint(&quot;ClickableViewAccessibility&quot;)
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            isLongPressTriggered = false;
+        } else if (event.getAction() == MotionEvent.ACTION_UP) {
+            if (isLongPressTriggered) {
+                if (clickTypeCallback != null) {
+                    clickTypeCallback.onLongPress(false);
+                }
+            }
+        }
+        return super.onTouchEvent(event);
+    }
+
+    public interface OnClickTypeCallback {
+        // &#x70B9;&#x51FB;
+        void onSingleClick();
+         // &#x957F;&#x6309; @param isStart true &#x957F;&#x6309;&#x5F00;&#x59CB; &#xFF0C;false &#x957F;&#x6309;&#x7ED3;&#x675F;
+        void onLongPress(boolean isStart);
+    }
+}
+</code></pre>
+<h1 id="textview"><a name="textview" class="anchor-navigation-ex-anchor" href="#textview"><i class="fa fa-link" aria-hidden="true"></i></a>4. TextView</h1>
+<h2 id="drawablepadding"><a name="drawablepadding" class="anchor-navigation-ex-anchor" href="#drawablepadding"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. drawablePadding</h2>
+<pre><code class="lang-text">// &#x5728; xml &#x4E2D;&#x914D;&#x7F6E;
+&lt;TextView
+    android:drawableStart=&quot;@mipmap/icon_itemvideo_normal&quot;
+    android:drawablePadding=&quot;20dp&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot; /&gt;
+
+// &#x7528;&#x4EE3;&#x7801;&#x914D;&#x7F6E;    
+private void setDrawable(TextView textView ,int drawableId){
+    Drawable drawable= mContext.getResources().getDrawable(drawableId);
+    drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+    textView.setCompoundDrawables(drawable,null,null,null);
+}
+</code></pre>
+<h2 id="drawable-&#x548C;&#x6587;&#x5B57;&#x90FD;&#x5C45;&#x4E2D;"><a name="drawable-&#x548C;&#x6587;&#x5B57;&#x90FD;&#x5C45;&#x4E2D;" class="anchor-navigation-ex-anchor" href="#drawable-&#x548C;&#x6587;&#x5B57;&#x90FD;&#x5C45;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. drawable &#x548C;&#x6587;&#x5B57;&#x90FD;&#x5C45;&#x4E2D;</h2>
+<pre><code class="lang-text">/**
+&lt;com.example.unlockview.HXDrawableCenterTextView
+    android:layout_width=&quot;300dp&quot;
+    android:layout_height=&quot;100dp&quot;
+    android:background=&quot;@drawable/dispatch_round_corner_btn_green&quot;
+    android:drawableLeft=&quot;@mipmap/icon_create_add&quot;
+    android:drawablePadding=&quot;30dp&quot;
+    android:gravity=&quot;start|center_vertical&quot;
+    android:text=&quot;&#x6DFB;&#x52A0;&quot;
+    android:textColor=&quot;@color/white&quot; /&gt;
+
+ &#x6CE8;&#x610F; android:gravity &#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x8981; start
+ */
+public class HXDrawableCenterTextView extends AppCompatTextView {
+
+    public HXDrawableCenterTextView(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+    }
+
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        translateView(canvas);
+        super.onDraw(canvas);
+    }
+
+    private void translateView(Canvas canvas){
+        Drawable[] drawables = getCompoundDrawables();
+        if(drawables==null){
+            return;
+        }
+
+        Drawable drawableLeft = drawables[0]; // &#x8FD9;&#x91CC;&#x8981;&#x6839;&#x636E; drawableTop &#x8FD8;&#x662F;&#x5176;&#x4ED6;&#x6765;&#x4FEE;&#x6539;
+        if(drawableLeft==null){
+            return;
+        }
+
+        float textWidth = getPaint().measureText(getText().toString());
+        int drawablePadding = getCompoundDrawablePadding();
+        int drawableWidth = drawableLeft.getIntrinsicWidth();
+        float bodyWidth = textWidth + drawableWidth + drawablePadding;
+        canvas.translate((getWidth() - bodyWidth) /2,0);
+    }
+}
+</code></pre>
+<h2 id="&#x8BBE;&#x7F6E;&#x884C;&#x95F4;&#x8DDD;"><a name="&#x8BBE;&#x7F6E;&#x884C;&#x95F4;&#x8DDD;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x7F6E;&#x884C;&#x95F4;&#x8DDD;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. &#x8BBE;&#x7F6E;&#x884C;&#x95F4;&#x8DDD;</h2>
+<pre><code class="lang-text">1&#x3001;android:lineSpacingExtra
+&#x8BBE;&#x7F6E;&#x884C;&#x95F4;&#x8DDD;&#xFF0C;&#x5982;&#x201D;3dp&#x201D;&#x3002;
+2&#x3001;android:lineSpacingMultiplier
+&#x8BBE;&#x7F6E;&#x884C;&#x95F4;&#x8DDD;&#x7684;&#x500D;&#x6570;&#xFF0C;&#x5982;&#x201D;1.2&#x2033;&#x3002;
+</code></pre>
+<h2 id="&#x7701;&#x7565;&#x53F7;"><a name="&#x7701;&#x7565;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x7701;&#x7565;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>4.4. &#x7701;&#x7565;&#x53F7;</h2>
+<pre><code class="lang-text">android:ellipsize=&quot;end&quot;
+android:singleLine=&quot;true&quot;
+</code></pre>
+<h2 id="textview&#x4E0B;&#x5212;&#x7EBF;"><a name="textview&#x4E0B;&#x5212;&#x7EBF;" class="anchor-navigation-ex-anchor" href="#textview&#x4E0B;&#x5212;&#x7EBF;"><i class="fa fa-link" aria-hidden="true"></i></a>4.5. textView&#x4E0B;&#x5212;&#x7EBF;</h2>
+<pre><code class="lang-text">getDataBinding().tvBindFaildReason.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
+&#x6216;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;item
+        android:left=&quot;-2dp&quot;
+        android:right=&quot;-2dp&quot;
+        android:top=&quot;-2dp&quot;&gt;
+        &lt;shape&gt;
+            &lt;stroke
+                android:width=&quot;2dp&quot;
+                android:color=&quot;@color/color_00BC8E&quot; /&gt;
+        &lt;/shape&gt;
+    &lt;/item&gt;
+&lt;/layer-list&gt;
+</code></pre>
+<h2 id="textview-&#x5C55;&#x793A;-emoji"><a name="textview-&#x5C55;&#x793A;-emoji" class="anchor-navigation-ex-anchor" href="#textview-&#x5C55;&#x793A;-emoji"><i class="fa fa-link" aria-hidden="true"></i></a>4.6. textView &#x5C55;&#x793A; Emoji</h2>
+<pre><code class="lang-text">https://emojipedia.org/animated-noto-color-emoji/
+binding.tvSceneInfo.setText(&quot;&#x8F66;&#x673A;&#x6682;&#x4E0D;&#x652F;&#x6301;&#x573A;&#x666F;&#x670D;&#x52A1;\n\n&#x573A;&#x666F;&#x670D;&#x52A1;&#x8BF7;&#x4F7F;&#x7528;&#x5FAE;&#x4FE1;&#x626B;&#x63CF;&#x5DE6;&#x4FA7;&#x4E8C;&#x7EF4;&#x7801;&#x8FDB;&#x5165;&#x201C;&#x523A;&#x732C;&#x7269;&#x8054;&#x5C0F;&#x7A0B;&#x5E8F;&#x201D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x4F7F;&#x7528;&#x5594;\uD83D\uDDA4&quot;); 
+&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x8981;&#x5728;xml&#x4E2D;&#x914D;&#x7F6E;&#xFF0C;&#x4F1A;&#x63D0;&#x793A;&#x7F16;&#x8BD1;&#x4E0D;&#x8FC7;&#xFF0C;&#x8981;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8F6C;&#x4E49;&#x540E;&#x8BBE;&#x7F6E;&#x3002;
+</code></pre>
+<h2 id="textview-&#x8BBE;&#x7F6E;&#x6EDA;&#x52A8;&#x6548;&#x679C;"><a name="textview-&#x8BBE;&#x7F6E;&#x6EDA;&#x52A8;&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#textview-&#x8BBE;&#x7F6E;&#x6EDA;&#x52A8;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>4.7. TextView &#x8BBE;&#x7F6E;&#x6EDA;&#x52A8;&#x6548;&#x679C;</h2>
+<pre><code class="lang-text">setMovementMethod
+</code></pre>
+<h1 id="popupwindow"><a name="popupwindow" class="anchor-navigation-ex-anchor" href="#popupwindow"><i class="fa fa-link" aria-hidden="true"></i></a>5. PopupWindow</h1>
+<h2 id="popupwindow-&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;"><a name="popupwindow-&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;" class="anchor-navigation-ex-anchor" href="#popupwindow-&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. PopupWindow &#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;</h2>
+<p><a href="https://gitee.com/hnyer/PopuwindowDemo" target="_blank">https://gitee.com/hnyer/PopuwindowDemo</a></p>
+<pre><code class="lang-text">1&#x3001;PopupWindow  &#x5728; xml &#x4E2D;&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;&#x65E0;&#x6548;&#x7684;&#x539F;&#x56E0;&#x548C;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;
+PopupWindow &#x6CA1;&#x6709;&#x7EE7;&#x627F; Viewgroup &#xFF0C;&#x56E0;&#x6B64;&#x6700;&#x5916;&#x5C42;&#x5E03;&#x5C40;&#x5C5E;&#x6027;&#x7684;&#x5BBD;&#x9AD8;&#x65E0;&#x6548;&#xFF0C;
+&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;
+1&#x3001;&#x5728;&#x5728;xml&#x4E2D;&#x5957;&#x4E24;&#x5C42;&#xFF0C;&#x7B2C;&#x4E8C;&#x5C42;&#x6307;&#x5B9A;&#x957F;&#x5BBD;&#x3002; (&#x7B2C;&#x4E00;&#x5C42;&#x5176;&#x5B9E;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A; Viewgroup )
+3&#x3001;&#x6216;&#x8005;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x52A0;&#x4E00;&#x4E2A; Viewgroup &#x5C31;&#x884C;&#x4E86;
+2&#x3001;&#x6216;&#x8005;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8BBE;&#x7F6E;&#x5177;&#x4F53;&#x5BBD;&#x9AD8;&#x3002;
+
+public View  initView( Context context ) {
+    LayoutInflater inflater = (LayoutInflater) context .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    LinearLayout linearLayout = new LinearLayout(context);
+    View rootView  = inflater.inflate(R.layout.oofaywindow, linearLayout);
+    return rootView ;
+}
+
+PopupWindow + ViewPager + fragment &#x7684;&#x7EC4;&#x5408;&#x4F1A;&#x51FA;&#x73B0;&#x95EE;&#x9898; No view found for id 0xxxxxxxxx
+&#x53EF;&#x4EE5;&#x91C7;&#x7528; DialogFragment + ViewPager + fragment &#x7EC4;&#x5408;
+https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/precheck2.zip
+</code></pre>
+<h2 id="popupwindow-&#x534A;&#x900F;&#x660E;"><a name="popupwindow-&#x534A;&#x900F;&#x660E;" class="anchor-navigation-ex-anchor" href="#popupwindow-&#x534A;&#x900F;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. PopupWindow &#x534A;&#x900F;&#x660E;</h2>
+<pre><code class="lang-text">&#x65B9;&#x6848;&#x6709;&#x4E24;&#x4E2A;
+1&#x3001;&#x65B9;&#x6848;1
+void setWindowFilter(float alpha ,Activity activity) {
+    WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
+    lp.alpha = alpha;
+    lp.dimAmount = alpha;
+    activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+    activity.getWindow().setAttributes(lp);
+}
+
+setOnDismissListener(new OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                setWindowFilter(1f , (Activity) context);
+            }
+        });
+
+@Override
+public void showAtLocation(View parent, int gravity, int x, int y) {
+    setWindowFilter(alpha , (Activity) context);
+    super.showAtLocation(parent, gravity, x, y);
+}
+
+2&#x3001;&#x65B9;&#x6848;2
+android:background=&quot;#XXxxxxxx&quot;
+&#x8BF4;&#x660E;&#xFF1A;&#x534A;&#x900F;&#x660E;&#x989C;&#x8272;&#x503C;&#x5171;8&#x4F4D;&#xFF0C;&#x524D;2&#x4F4D;&#x662F;&#x900F;&#x660E;&#x5EA6;&#xFF0C;&#x540E;6&#x4F4D;&#x662F;&#x989C;&#x8272;&#x3002;
+&#x5168;&#x900F;&#x660E;&#xFF1A;#00000000
+&#x534A;&#x900F;&#x660E;&#xFF1A;#80000000
+&#x4E0D;&#x900F;&#x660E;&#xFF1A;#FF000000
+&#x767D;&#x8272;&#x534A;&#x900F;&#x660E;&#xFF1A;#80FFFFFF
+&#x7EA2;&#x8272;30%&#x900F;&#x660E;&#xFF1A;#4Dca0d0d
+</code></pre>
+<h2 id="&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;"><a name="&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3. &#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x900F;&#x660E;&#x5EA6;</th>
+<th>&#x767E;&#x5206;&#x6BD4;</th>
+<th>&#x6570;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x4E0D;&#x900F;&#x660E;</td>
+<td>100%</td>
+<td>FF</td>
+</tr>
+<tr>
+<td></td>
+<td>95%</td>
+<td>F2</td>
+</tr>
+<tr>
+<td></td>
+<td>90%</td>
+<td>E6</td>
+</tr>
+<tr>
+<td></td>
+<td>85%</td>
+<td>D9</td>
+</tr>
+<tr>
+<td></td>
+<td>80%</td>
+<td>CC</td>
+</tr>
+<tr>
+<td></td>
+<td>75%</td>
+<td>BF</td>
+</tr>
+<tr>
+<td></td>
+<td>70%</td>
+<td>B3</td>
+</tr>
+<tr>
+<td></td>
+<td>65%</td>
+<td>A6</td>
+</tr>
+<tr>
+<td></td>
+<td>60%</td>
+<td>99</td>
+</tr>
+<tr>
+<td></td>
+<td>55%</td>
+<td>8C</td>
+</tr>
+<tr>
+<td>&#x534A;&#x900F;&#x660E;</td>
+<td>50%</td>
+<td>80</td>
+</tr>
+<tr>
+<td></td>
+<td>45%</td>
+<td>73</td>
+</tr>
+<tr>
+<td></td>
+<td>40%</td>
+<td>66</td>
+</tr>
+<tr>
+<td></td>
+<td>35%</td>
+<td>59</td>
+</tr>
+<tr>
+<td></td>
+<td>30%</td>
+<td>4D</td>
+</tr>
+<tr>
+<td></td>
+<td>25%</td>
+<td>40</td>
+</tr>
+<tr>
+<td></td>
+<td>20%</td>
+<td>33</td>
+</tr>
+<tr>
+<td></td>
+<td>15%</td>
+<td>26</td>
+</tr>
+<tr>
+<td></td>
+<td>10%</td>
+<td>1A</td>
+</tr>
+<tr>
+<td></td>
+<td>5%</td>
+<td>0D</td>
+</tr>
+<tr>
+<td>&#x5168;&#x900F;&#x660E;</td>
+<td>0%</td>
+<td>00</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;&#x5B8C;&#x6574;&#x7248;"><a name="&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;&#x5B8C;&#x6574;&#x7248;" class="anchor-navigation-ex-anchor" href="#&#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;&#x5B8C;&#x6574;&#x7248;"><i class="fa fa-link" aria-hidden="true"></i></a>5.4. &#x900F;&#x660E;&#x5EA6;&#x5BF9;&#x7167;&#x8868;(&#x5B8C;&#x6574;&#x7248;)</h2>
+<pre><code class="lang-text">100% &#x2014; FF    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=255
+99% &#x2014; FC    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=252
+98% &#x2014; FA    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=250
+97% &#x2014; F7    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=247
+96% &#x2014; F5    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=245
+95% &#x2014; F2    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=242
+94% &#x2014; F0    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=240
+93% &#x2014; ED    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=237
+92% &#x2014; EB    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=235
+91% &#x2014; E8    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=232
+90% &#x2014; E6    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=230
+89% &#x2014; E3    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=227
+88% &#x2014; E0    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=224
+87% &#x2014; DE    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=222
+86% &#x2014; DB    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=219
+85% &#x2014; D9    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=217
+84% &#x2014; D6    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=214
+83% &#x2014; D4    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=212
+82% &#x2014; D1    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=209
+81% &#x2014; CF    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=207
+80% &#x2014; CC    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=204
+79% &#x2014; C9    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=201
+78% &#x2014; C7    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=199
+77% &#x2014; C4    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=196
+76% &#x2014; C2    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=194
+75% &#x2014; BF    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=191
+74% &#x2014; BD    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=189
+73% &#x2014; BA    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=186
+72% &#x2014; B8    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=184
+71% &#x2014; B5    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=181
+70% &#x2014; B3    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=179
+69% &#x2014; B0    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=176
+68% &#x2014; AD    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=173
+67% &#x2014; AB    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=171
+66% &#x2014; A8    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=168
+65% &#x2014; A6    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=166
+64% &#x2014; A3    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=163
+63% &#x2014; A1    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=161
+62% &#x2014; 9E    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=158
+61% &#x2014; 9C    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=156
+60% &#x2014; 99    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=153
+58% &#x2014; 96    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=150
+58% &#x2014; 94    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=148
+57% &#x2014; 91    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=145
+56% &#x2014; 8F    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=143
+55% &#x2014; 8C    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=140
+54% &#x2014; 8A    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=138
+52% &#x2014; 87    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=135
+52% &#x2014; 85    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=133
+51% &#x2014; 82    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=130
+50% &#x2014; 80    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=128
+49% &#x2014; 7D    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=125
+48% &#x2014; 7A    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=122
+47% &#x2014; 78    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=120
+46% &#x2014; 75    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=117
+45% &#x2014; 73    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=115
+44% &#x2014; 70    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=112
+43% &#x2014; 6E    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=110
+42% &#x2014; 6B    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=107
+41% &#x2014; 69    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=105
+40% &#x2014; 66    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=102
+39% &#x2014; 63    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=99
+38% &#x2014; 61    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=97
+37% &#x2014; 5E    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=94
+36% &#x2014; 5C    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=92
+35% &#x2014; 59    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=89
+34% &#x2014; 57    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=87
+33% &#x2014; 54    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=84
+32% &#x2014; 52    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=82
+31% &#x2014; 4F    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=79
+30% &#x2014; 4D    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=77
+29% &#x2014; 4A    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=74
+28% &#x2014; 47    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=71
+27% &#x2014; 45    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=69
+26% &#x2014; 42    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=66
+25% &#x2014; 40    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=64
+24% &#x2014; 3D    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=61
+23% &#x2014; 3B    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=59
+22% &#x2014; 38    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=56
+21% &#x2014; 36    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=54
+20% &#x2014; 33    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=51
+19% &#x2014; 30    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=48
+18% &#x2014; 2E    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=46
+17% &#x2014; 2B    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=43
+16% &#x2014; 29    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=41
+15% &#x2014; 26    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=38
+14% &#x2014; 24    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=36
+13% &#x2014; 21    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=33
+12% &#x2014; 1F    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=31
+11% &#x2014; 1C    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=28
+10% &#x2014; 1A    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=26
+9% &#x2014; 17    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=23
+8% &#x2014; 14    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=20
+7% &#x2014; 12    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=18
+6% &#x2014; 0F    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=15
+5% &#x2014; 0D    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=13
+4% &#x2014; 0A    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=10
+3% &#x2014; 08    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=8
+2% &#x2014; 05    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=5
+1% &#x2014; 03    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=3
+0% &#x2014; 00    &#x4E0D;&#x900F;&#x660E;&#x5EA6;=0
+</code></pre>
+<h2 id="&#x900F;&#x660E;&#x5EA6;&#x767E;&#x5206;&#x6BD4;&#x8F6C;&#x6362;&#x6210;&#x5341;&#x516D;&#x8FDB;&#x5236;"><a name="&#x900F;&#x660E;&#x5EA6;&#x767E;&#x5206;&#x6BD4;&#x8F6C;&#x6362;&#x6210;&#x5341;&#x516D;&#x8FDB;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x900F;&#x660E;&#x5EA6;&#x767E;&#x5206;&#x6BD4;&#x8F6C;&#x6362;&#x6210;&#x5341;&#x516D;&#x8FDB;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>5.5. &#x900F;&#x660E;&#x5EA6;&#x767E;&#x5206;&#x6BD4;&#x8F6C;&#x6362;&#x6210;&#x5341;&#x516D;&#x8FDB;&#x5236;</h2>
+<pre><code class="lang-text">&#x900F;&#x660E;&#x5EA6;&#x4EE5;0&#x5230;255&#x8868;&#x793A;&#xFF0C;&#x603B;&#x5171;&#x6709;256&#x7EA7;&#xFF0C;&#x900F;&#x660E;&#x662F;0&#xFF0C;&#x4E0D;&#x900F;&#x660E;&#x662F;255&#x3002;
+for(float i=100 ;i&gt;=0 ;i-=1){
+    float temp = i/100f;
+    int alpha =  Math.round(temp * 255); // &#x7528;&#x56DB;&#x820D;&#x4E94;&#x5165;&#x7684;&#x65B9;&#x5F0F;&#x83B7;&#x5F97; 255&#x7EF4;&#x5EA6;&#x7684;&#x767E;&#x5206;&#x6BD4;
+    String hex = Integer.toHexString(alpha).toUpperCase();
+    if (hex.length() == 1){
+        hex = &quot;0&quot; + hex;
+    }
+    int percent = (int) (temp * 100);
+    System.out.println( String.format(&quot;%d%% &#x2014; %s&quot;, percent, hex) );
+}
+</code></pre>
+<h2 id="popupwindow-&#x91CC;&#x89E6;&#x53D1;&#x5F39;&#x7A97;--&#x4E8C;&#x7EA7;&#x5F39;&#x7A97;"><a name="popupwindow-&#x91CC;&#x89E6;&#x53D1;&#x5F39;&#x7A97;--&#x4E8C;&#x7EA7;&#x5F39;&#x7A97;" class="anchor-navigation-ex-anchor" href="#popupwindow-&#x91CC;&#x89E6;&#x53D1;&#x5F39;&#x7A97;--&#x4E8C;&#x7EA7;&#x5F39;&#x7A97;"><i class="fa fa-link" aria-hidden="true"></i></a>5.6. PopupWindow &#x91CC;&#x89E6;&#x53D1;&#x5F39;&#x7A97; , &#x4E8C;&#x7EA7;&#x5F39;&#x7A97;</h2>
+<pre><code class="lang-text">&#x5728;popupWindow&#x91CC;&#x9762;&#x518D;&#x5F39;&#x51FA;popupWindow&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x62A5;&#x8FD9;&#x6837;&#x7684;&#x9519;&#x8BEF;
+ERROR/AndroidRuntime(888): android.view.WindowManager$BadTokenException: Unable to add window -- token android.view.ViewRoot$W@44ef1b68 is not valid; is your activity running? 
+
+&#x89E3;&#x51B3;&#x65B9;&#x6CD5;1
+&#x4E0D;&#x8981;&#x5728;&#x5F53;&#x524D;&#x7684; popupWindow &#x91CC;&#x9762;&#x7EE7;&#x7EED;show&#x4E00;&#x4E2A; popupWindow &#xFF0C;&#x5E94;&#x8BE5;&#x5199;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x56DE;&#x8C03;&#x5230;Activity&#x91CC;&#x9762;&#x8FDB;&#x884C;show&#xFF0C;
+
+&#x89E3;&#x51B3;&#x65B9;&#x6CD5;2
+&#x7B2C;&#x4E8C;&#x6B21;&#x5F39;&#x7A97;&#x6539;&#x4E3A; Dialog
+</code></pre>
+<h2 id="popupwindow-&#x89E6;&#x78B0;&#x5916;&#x8FB9;&#x5173;&#x95ED;"><a name="popupwindow-&#x89E6;&#x78B0;&#x5916;&#x8FB9;&#x5173;&#x95ED;" class="anchor-navigation-ex-anchor" href="#popupwindow-&#x89E6;&#x78B0;&#x5916;&#x8FB9;&#x5173;&#x95ED;"><i class="fa fa-link" aria-hidden="true"></i></a>5.7. PopupWindow &#x89E6;&#x78B0;&#x5916;&#x8FB9;&#x5173;&#x95ED;</h2>
+<pre><code class="lang-text">    void setThisOutTouchCancel(final boolean able) { 
+        setOutsideTouchable(able);
+        setTouchInterceptor(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (!isOutsideTouchable()) {
+                    View mView = getContentView();
+                    if (null != mView)
+                        mView.dispatchTouchEvent(event);
+                }
+                return isFocusable() &amp;&amp; !isOutsideTouchable();
+            }
+        });
+    }
+</code></pre>
+<h2 id="popupwindow-&#x83B7;&#x53D6;-showatlocation-&#x7684;-parent"><a name="popupwindow-&#x83B7;&#x53D6;-showatlocation-&#x7684;-parent" class="anchor-navigation-ex-anchor" href="#popupwindow-&#x83B7;&#x53D6;-showatlocation-&#x7684;-parent"><i class="fa fa-link" aria-hidden="true"></i></a>5.8. PopupWindow &#x83B7;&#x53D6; showAtLocation &#x7684; parent</h2>
+<pre><code class="lang-text">popupWindow.showAtLocation( getContentView(MainActivity.this),  Gravity.CENTER, 0, 0);
+private View getContentView(Activity activity) {
+    ViewGroup view = (ViewGroup) activity.getWindow().getDecorView();
+    FrameLayout content = view.findViewById(android.R.id.content);
+    return content.getChildAt(0);
+}
+&#x6216;&#x8005;&#x76F4;&#x63A5;&#x6839;&#x636E;id&#x83B7;&#x53D6;&#x5230;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;view.
+</code></pre>
+<h2 id="popupwindow-&#x5185;&#x90E8;&#x8FDB;&#x884C;&#x89C6;&#x56FE;&#x5207;&#x6362;"><a name="popupwindow-&#x5185;&#x90E8;&#x8FDB;&#x884C;&#x89C6;&#x56FE;&#x5207;&#x6362;" class="anchor-navigation-ex-anchor" href="#popupwindow-&#x5185;&#x90E8;&#x8FDB;&#x884C;&#x89C6;&#x56FE;&#x5207;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>5.9. PopupWindow &#x5185;&#x90E8;&#x8FDB;&#x884C;&#x89C6;&#x56FE;&#x5207;&#x6362;</h2>
+<pre><code class="lang-text">PopupWindow +  HorizontalScrollView &#x65B9;&#x6848;&#x6765;&#x505A; &#x3002;
+scrollView.scrollTo(viewWidth*2, 0); // 
+&#x8FD9;&#x79CD;&#x65B9;&#x6848;&#x4E00;&#x822C;&#x4E0D;&#x8981;&#x653E;&#x5F88;&#x591A;&#x7279;&#x522B;&#x590D;&#x6742;&#x7684;&#x5E03;&#x5C40;&#xFF0C;
+&#x56E0;&#x4E3A;&#x90A3;&#x4E9B;&#x9875;&#x9762;&#x90FD;&#x662F;&#x4E00;&#x6B21;&#x52A0;&#x8F7D;&#x5230; HorizontalScrollView&#x4E2D;&#x7684; &#x3002;
+&#x5177;&#x4F53;&#x53C2;&#x8003;&#x8FD9;&#x4E2A;demo.
+https://gitee.com/hnyer/PopuwindowDemo
+</code></pre>
+<h1 id="sharedpreferences"><a name="sharedpreferences" class="anchor-navigation-ex-anchor" href="#sharedpreferences"><i class="fa fa-link" aria-hidden="true"></i></a>6. SharedPreferences</h1>
+<p>&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x7684;&#x3001;&#x65E0;&#x5B89;&#x5168;&#x98CE;&#x9669;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; SharedPreferences &#x4FDD;&#x5B58;&#x3002;
+SharedPreferences &#x662F;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;xml&#x952E;&#x503C;&#x5BF9;&#x6587;&#x4EF6; &#x3002;</p>
+<pre><code class="lang-text">SharedPreferences &#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6848; &#xFF0C;&#x4F7F;&#x7528;&#x817E;&#x8BAF;&#x7684; MMKV .
+https://github.com/Tencent/MMKV
+// &#x8BBE;&#x7F6E; &#x7F13;&#x5B58;&#x5931;&#x6548;&#x65F6;&#x95F4;
+&#x601D;&#x8DEF;&#x662F; MMKV &#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x65F6;&#xFF0C;&#x5C06;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x548C;&#x8981;&#x6709;&#x6548;&#x65F6;&#x957F;&#x4E00;&#x8D77;&#x4FDD;&#x5B58;&#x8FDB;&#x53BB;&#xFF0C; 
+&#x53D6;&#x51FA;&#x6765;&#x7684;&#x65F6;&#x5019;&#x5224;&#x65AD;&#x4E00;&#x4E0B;&#xFF0C;&#x662F;&#x5426;&#x8D85;&#x65F6;&#x4E86;&#x3002;
+&#x5982;&#x679C;&#x8D85;&#x65F6;&#x4E86;&#x5C31;&#x8FD4;&#x56DE;NULL&#x3002;
+
+&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5728; /data/data/&lt;package name&gt;/shared_prefs &#x4E2D;&#xFF0C;&#x660E;&#x6587;&#x53EF;&#x89C1;&#x3002;
+&#x7528;&#x771F;&#x673A;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x7BA1;&#x7406;&#x5668;&#x4E00;&#x822C;&#x770B;&#x4E0D;&#x5230;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x8FC7; Androidstudio &#x53BB;&#x770B;&#x3002;
+
+&#x5728; SharedPreferencesImpl.java &#x4E2D;
+private void startLoadFromDisk() {
+    new Thread(&quot;SharedPreferencesImpl-load&quot;) {
+    ...
+            loadFromDisk(); // &#x5F00;&#x542F;&#x5B50;&#x7EBF;&#x7A0B;&#x8BFB;&#x53D6;
+    }.start();
+}
+</code></pre>
+<h2 id="sharedpreferences--apply-&#x548C;--commit-&#x7684;&#x533A;&#x522B;"><a name="sharedpreferences--apply-&#x548C;--commit-&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#sharedpreferences--apply-&#x548C;--commit-&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>6.1. SharedPreferences  apply &#x548C;  commit &#x7684;&#x533A;&#x522B;</h2>
+<pre><code class="lang-text">apply()&#xFF1A;&#x63D0;&#x4EA4;&#x540E;&#x540C;&#x6B65;&#x5199;&#x5165;&#x5185;&#x5B58;&#xFF0C;&#x7136;&#x540E;&#x5F02;&#x6B65;&#x5199;&#x5165;&#x78C1;&#x76D8;&#xFF0C;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;
+commit()&#xFF1A;&#x9700;&#x8981;&#x7B49;&#x5F02;&#x6B65;&#x56DE;&#x5199;&#x78C1;&#x76D8;&#x5B8C;&#x6210;&#x540E;&#x624D;&#x8FD4;&#x56DE;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;
+&#x5982;&#x679C;&#x9891;&#x7E41;&#x64CD;&#x4F5C;&#x7684;&#x8BDD; apply &#x7684;&#x6027;&#x80FD;&#x4F1A;&#x4F18;&#x4E8E; commit &#x3002;
+</code></pre>
+<h2 id="sharedpreferences---&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;"><a name="sharedpreferences---&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;" class="anchor-navigation-ex-anchor" href="#sharedpreferences---&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2. SharedPreferences   &#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;</h2>
+<pre><code class="lang-text">SharedPreferences &#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5185;&#x90E8;&#x6709; synchronized &#x5173;&#x952E;&#x5B57;&#x4FDD;&#x969C;&#x3002;
+</code></pre>
+<h2 id="sharedpreferences-&#x662F;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;&#xFF1F;-&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;"><a name="sharedpreferences-&#x662F;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;&#xFF1F;-&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;" class="anchor-navigation-ex-anchor" href="#sharedpreferences-&#x662F;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;&#xFF1F;-&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3. SharedPreferences &#x662F;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x5417;&#xFF1F; &#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;</h2>
+<pre><code class="lang-text">&#x56E0;&#x4E3A; SharedPreferences &#x4F1A;&#x4ECE;&#x5185;&#x5B58;&#x53D6;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#x8FDB;&#x7A0B;&#x95F4;&#x5185;&#x5B58;&#x4E0D;&#x662F;&#x5171;&#x4EAB;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x662F;&#x591A;&#x8FDB;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x3002;
+// SharedPreferencesImpl.java
+public String getString(String key, @Nullable String defValue) {
+    synchronized (mLock) {
+        awaitLoadedLocked();
+        String v = (String)mMap.get(key); // &#x4ECE;&#x5185;&#x5B58;&#x53D6;&#x503C;
+        return v != null ? v : defValue;
+    }
+}
+
+SharedPreferences sharedPreferences =
+context.getSharedPreferences(&quot;xxxName&quot;, Context.MODE_MULTI_PROCESS);
+// &#x56E0;&#x4E3A;&#x5BF9;&#x591A;&#x8FDB;&#x7A0B;&#x652F;&#x6301;&#x4E0D;&#x5B8C;&#x5584;&#xFF0C;MODE_MULTI_PROCESS (&#x4E5F;&#x4E0D;&#x53EF;&#x9760;) &#x6A21;&#x5F0F;&#x4E5F;&#x5DF2;&#x7ECF;&#x88AB;&#x5E9F;&#x5F03;&#xFF0C;
+//  &#x5B98;&#x65B9;&#x63A8;&#x8350; ContentProvider &#x6216;&#x8005; &#x7B2C;&#x4E09;&#x65B9;&#x6846;&#x67B6; MMKV
+</code></pre>
+<h1 id="alertdialog-&#x6309;&#x94AE;&#x5927;&#x5C0F;&#x95EE;&#x9898;"><a name="alertdialog-&#x6309;&#x94AE;&#x5927;&#x5C0F;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#alertdialog-&#x6309;&#x94AE;&#x5927;&#x5C0F;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>7. AlertDialog &#x6309;&#x94AE;&#x5927;&#x5C0F;&#x95EE;&#x9898;</h1>
+<pre><code class="lang-text">TextView textView =new TextView(this);
+textView.setText(&quot;Hello TextView&quot;);
+
+AlertDialog dialog =new AlertDialog.Builder(this)
+        .setTitle(&quot;Hello aivin&quot;)
+        .setView(textView)
+        .setPositiveButton(&quot;ok_Btn&quot;, null )
+        .show() ;
+Button btn = dialog.getButton(AlertDialog.BUTTON_POSITIVE) ;
+btn.setAllCaps(false); // &#x91CD;&#x65B0;&#x8BBE;&#x7F6E;
+</code></pre>
+<h1 id="dialog-&#x5168;&#x5C4F;&#x663E;&#x793A;"><a name="dialog-&#x5168;&#x5C4F;&#x663E;&#x793A;" class="anchor-navigation-ex-anchor" href="#dialog-&#x5168;&#x5C4F;&#x663E;&#x793A;"><i class="fa fa-link" aria-hidden="true"></i></a>8. Dialog &#x5168;&#x5C4F;&#x663E;&#x793A;</h1>
+<pre><code class="lang-text">public class LoadingDialogUtils {
+    public static Dialog getLoadingDialogInstance(Context context) {
+        // &#x6839;&#x636E;&#x6837;&#x5F0F;&#x521B;&#x5EFA; Dialog
+        Dialog loadingDialog = new Dialog(context, R.style.iosloading_dialog);
+        loadingDialog.setCancelable(false);
+        // &#x8BBE;&#x7F6E;&#x81EA;&#x5B9A;&#x4E49;&#x5E03;&#x5C40;
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View v = inflater.inflate(R.layout.wk_loading_dialog, null);
+        LinearLayout layout = v.findViewById(R.id.dialog_view);
+        int width = MyDeviceInforHelper.getWidth((Activity) context);
+        int height = MyDeviceInforHelper.getRealHeight( (Activity) context) ;
+        ViewGroup.LayoutParams layoutParams = new  ViewGroup.LayoutParams(  width   , height);
+        loadingDialog.setContentView(layout, layoutParams );
+        layout.setBackgroundColor(Color.parseColor(&quot;#80000000&quot;));// &#x8BBE;&#x7F6E;&#x81EA;&#x5B9A;&#x4E49;&#x80CC;&#x666F;&#x989C;&#x8272;
+        loadingDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));// &#x8BBE;&#x7F6E;window&#x80CC;&#x666F;
+        loadingDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        return loadingDialog;
+    }
+}
+
+&lt;style name=&quot;iosloading_dialog&quot; parent=&quot;android:Theme.Dialog&quot;&gt;
+    &lt;item name=&quot;android:windowFrame&quot;&gt;@null&lt;/item&gt;
+    &lt;item name=&quot;android:windowBackground&quot;&gt;@android:color/transparent&lt;/item&gt;
+    &lt;item name=&quot;android:windowNoTitle&quot;&gt;true&lt;/item&gt;
+    &lt;item name=&quot;android:windowIsTranslucent&quot;&gt;true&lt;/item&gt;
+    &lt;item name=&quot;android:windowIsFloating&quot;&gt;true&lt;/item&gt;
+    &lt;item name=&quot;android:windowContentOverlay&quot;&gt;@null&lt;/item&gt;
+    &lt;item name=&quot;android:backgroundDimEnabled&quot;&gt;false&lt;/item&gt;
+    &lt;item  name= &quot;android:windowFullscreen&quot; &gt;true &lt;/item&gt;
+&lt;/style&gt;
+
+public static int getRealHeight(Activity mActivity) {
+    mActivity.getWindowManager().getDefaultDisplay().getRealMetrics(myGetDisplayMetrics());
+    return  myGetDisplayMetrics().heightPixels;
+}
+</code></pre>
+<h1 id="seekbar"><a name="seekbar" class="anchor-navigation-ex-anchor" href="#seekbar"><i class="fa fa-link" aria-hidden="true"></i></a>9. SeekBar</h1>
+<h2 id="seekbar-&#x8FDB;&#x5EA6;&#x6761;&#x663E;&#x793A;&#x4E0D;&#x5168;&#x3001;&#x663E;&#x793A;&#x4E0D;&#x9876;&#x683C;&#x7684;&#x95EE;&#x9898;"><a name="seekbar-&#x8FDB;&#x5EA6;&#x6761;&#x663E;&#x793A;&#x4E0D;&#x5168;&#x3001;&#x663E;&#x793A;&#x4E0D;&#x9876;&#x683C;&#x7684;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#seekbar-&#x8FDB;&#x5EA6;&#x6761;&#x663E;&#x793A;&#x4E0D;&#x5168;&#x3001;&#x663E;&#x793A;&#x4E0D;&#x9876;&#x683C;&#x7684;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1. SeekBar &#x8FDB;&#x5EA6;&#x6761;&#x663E;&#x793A;&#x4E0D;&#x5168;&#x3001;&#x663E;&#x793A;&#x4E0D;&#x9876;&#x683C;&#x7684;&#x95EE;&#x9898;</h2>
+<pre><code class="lang-text">&lt;SeekBar
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:layout_gravity=&quot;center_vertical&quot;
+    android:thumbOffset=&quot;0dp&quot; // &#x89E3;&#x51B3;thumb&#x53EA;&#x663E;&#x793A;&#x4E00;&#x534A;&#x7684;&#x95EE;&#x9898;
+    android:paddingEnd=&quot;0dp&quot;// &#x89E3;&#x51B3;&#x663E;&#x793A;&#x4E0D;&#x9876;&#x683C;&#x7684;&#x95EE;&#x9898;
+    android:paddingStart=&quot;0dp&quot;
+    android:maxHeight=&quot;1.5dp&quot;
+    android:minHeight=&quot;1.5dp&quot;
+    android:progressDrawable=&quot;@drawable/seek_progress&quot;
+    android:thumb=&quot;@drawable/seek_thumb&quot; /&gt;
+</code></pre>
+<h2 id="&#x70B9;&#x51FB;&#x6216;&#x62D6;&#x52A8;&#x7684;&#x5206;&#x6BB5;&#x8FDB;&#x5EA6;&#x6761;"><a name="&#x70B9;&#x51FB;&#x6216;&#x62D6;&#x52A8;&#x7684;&#x5206;&#x6BB5;&#x8FDB;&#x5EA6;&#x6761;" class="anchor-navigation-ex-anchor" href="#&#x70B9;&#x51FB;&#x6216;&#x62D6;&#x52A8;&#x7684;&#x5206;&#x6BB5;&#x8FDB;&#x5EA6;&#x6761;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2. &#x70B9;&#x51FB;&#x6216;&#x62D6;&#x52A8;&#x7684;&#x5206;&#x6BB5;&#x8FDB;&#x5EA6;&#x6761;</h2>
+<pre><code class="lang-text">https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/WkProgressView.java
+</code></pre>
+<p><img src="../pics/&#x5206;&#x6BB5;&#x8FDB;&#x5EA6;&#x6761;.gif" alt=""></p>
+<h2 id="clipdrawable-&#x5B9E;&#x73B0;&#x56FE;&#x7247;&#x8FDB;&#x5EA6;&#x6761;-&#x6548;&#x679C;"><a name="clipdrawable-&#x5B9E;&#x73B0;&#x56FE;&#x7247;&#x8FDB;&#x5EA6;&#x6761;-&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#clipdrawable-&#x5B9E;&#x73B0;&#x56FE;&#x7247;&#x8FDB;&#x5EA6;&#x6761;-&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3. ClipDrawable &#x5B9E;&#x73B0;&#x56FE;&#x7247;&#x8FDB;&#x5EA6;&#x6761; &#x6548;&#x679C;</h2>
+<pre><code class="lang-text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;clip xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:drawable=&quot;@mipmap/pic_1&quot;
+    android:clipOrientation=&quot;vertical&quot;
+    android:gravity=&quot;bottom&quot;&gt;
+&lt;/clip&gt;
+
+ImageView imageview =  findViewById(R.id.clipImg);
+final ClipDrawable drawable = (ClipDrawable) imageview.getDrawable();
+drawable.setLevel( 0);
+
+// 10000 &#x662F;&#x6EE1;&#x7EA7;
+int level = (int) (10000 *  i* 0.01);
+drawable.setLevel( level);
+
+demo &#x5730;&#x5740; https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/PicProgressDemo.zip
+</code></pre>
+<p><img src="../pics/&#x56FE;&#x7247;&#x8FDB;&#x5EA6;&#x6761;.gif" alt=""></p>
+<h2 id="&#x52A8;&#x6001;&#x6761;&#x7EB9;&#x80CC;&#x666F;&#x8FDB;&#x5EA6;&#x6761;"><a name="&#x52A8;&#x6001;&#x6761;&#x7EB9;&#x80CC;&#x666F;&#x8FDB;&#x5EA6;&#x6761;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x6001;&#x6761;&#x7EB9;&#x80CC;&#x666F;&#x8FDB;&#x5EA6;&#x6761;"><i class="fa fa-link" aria-hidden="true"></i></a>9.4. &#x52A8;&#x6001;&#x6761;&#x7EB9;&#x80CC;&#x666F;&#x8FDB;&#x5EA6;&#x6761;</h2>
+<pre><code class="lang-text">&#x65B9;&#x6848;1&#x3001;&#x7B80;&#x5355;&#x4F7F;&#x7528;
+&lt;ImageView
+   android:layout_width=&quot;90dp&quot;
+   android:layout_height=&quot;10dp&quot;
+   android:scaleType=&quot;centerCrop&quot;
+   // &#x4E00;&#x5F20;&#x9759;&#x6001;&#x7684;&#x6761;&#x7EB9;&#x56FE;&#x7247;
+   android:src=&quot;@drawable/pic_cover_blue_white&quot; /&gt;
+
+ViewGroup.LayoutParams lp = mProgressIv.getLayoutParams();
+lp.width = (int) (ivWidth* percentFloat); // &#x4E0D;&#x65AD;&#x66F4;&#x6539; imageview&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x914D;&#x5408; android:scaleType=&quot;centerCrop&quot;
+mProgressIv.setLayoutParams(lp);
+mProgressIv.postInvalidate();
+
+&#x65B9;&#x6848;2 &#xFF0C;&#x53C2;&#x8003;&#x65E0;&#x9650;&#x5FAA;&#x73AF;&#x7684;&#x6E38;&#x620F;&#x80CC;&#x666F;&#x601D;&#x8DEF;&#xFF0C;&#x7528;&#x4E24;&#x5F20;&#x56FE;&#x7247;&#x4E0D;&#x65AD;&#x5730;&#x52A8;&#x753B;&#x5FAA;&#x73AF;&#x3002;
+</code></pre>
+<p><img src="../pics/&#x52A8;&#x6001;&#x6761;&#x7EB9;&#x8FDB;&#x5EA6;&#x6761;.gif" alt=""></p>
+<h1 id="listview-&#x52A8;&#x6001;&#x6539;&#x53D8;&#x9AD8;&#x5EA6;"><a name="listview-&#x52A8;&#x6001;&#x6539;&#x53D8;&#x9AD8;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#listview-&#x52A8;&#x6001;&#x6539;&#x53D8;&#x9AD8;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>10. ListView &#x52A8;&#x6001;&#x6539;&#x53D8;&#x9AD8;&#x5EA6;</h1>
+<pre><code class="lang-text"> public void setListViewHeightBasedOnChildren2(ListView listView) {
+     ListAdapter listAdapter = listView.getAdapter();
+     if (listAdapter == null) {
+         return;
+     }
+     int totalHeight = 0;
+     for (int i = 0; i &lt; listAdapter.getCount(); i++) {
+         View listItem = listAdapter.getView(i, null, listView);
+         // &#x5BF9; &#x5B50;View item &#x4E0D;&#x505A;&#x9650;&#x5236;&#xFF0C;&#x8981;&#x591A;&#x5927;&#x5C31;&#x62A5;&#x4E0A;&#x6765;&#x591A;&#x5927;
+         listItem.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+         totalHeight += listItem.getMeasuredHeight();
+     }
+
+     ViewGroup.LayoutParams params = listView.getLayoutParams();
+     params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() -1));
+     listView.setLayoutParams(params);
+ }
+</code></pre>
+<h1 id="&#x7EA6;&#x675F;&#x5E03;&#x5C40;-constraintlayout"><a name="&#x7EA6;&#x675F;&#x5E03;&#x5C40;-constraintlayout" class="anchor-navigation-ex-anchor" href="#&#x7EA6;&#x675F;&#x5E03;&#x5C40;-constraintlayout"><i class="fa fa-link" aria-hidden="true"></i></a>11. &#x7EA6;&#x675F;&#x5E03;&#x5C40; ConstraintLayout</h1>
+<p>ConstraintLayout &#x662F;&#x4E00;&#x4E2A;ViewGroup&#xFF0C;&#x53EF;&#x4EE5;&#x5728; Api9 &#x4EE5;&#x4E0A;&#x7684;Android&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#x5B83;&#xFF0C;&#x5B83;&#x7684;&#x51FA;&#x73B0;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x5E03;&#x5C40;&#x5D4C;&#x5957;&#x8FC7;&#x591A;&#x7684;&#x95EE;&#x9898;&#x3002;
+&#x5728;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#x7ECF;&#x5E38;&#x80FD;&#x9047;&#x5230;&#x4E00;&#x4E9B;&#x590D;&#x6742;&#x7684;UI&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x5E03;&#x5C40;&#x5D4C;&#x5957;&#x8FC7;&#x591A;&#x7684;&#x95EE;&#x9898;&#xFF0C;ConstraintLayout &#x4F7F;&#x7528;&#x8D77;&#x6765;&#x6BD4; RelativeLayout &#x66F4;&#x7075;&#x6D3B;&#x3002;</p>
+<pre><code class="lang-text">api &apos;androidx.constraintlayout:constraintlayout:2.0.2&apos;
+
+&lt;Button
+    android:layout_width=&quot;wrap_content&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+    app:layout_constraintRight_toRightOf=&quot;parent&quot;
+    app:layout_constraintTop_toTopOf=&quot;parent&quot;
+    app:layout_constraintBottom_toBottomOf=&quot;parent&quot; /&gt;
+
+// &#x89D2;&#x5EA6;&#x7EA6;&#x675F; (&#x7248;&#x672C;1.1&#x4E2D;&#x52A0;&#x5165;)
+&#x4E00;&#x4E2A;&#x63A7;&#x4EF6;&#x5728;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x67D0;&#x4E2A;&#x89D2;&#x5EA6;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x7684;&#x5E03;&#x5C40;&#x5176;&#x5B9E;&#x662F;&#x4E0D;&#x592A;&#x597D;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;
+&#x4F46;&#x662F; ConstraintLayout &#x63D0;&#x4F9B;&#x4E86;&#x89D2;&#x5EA6;&#x4F4D;&#x7F6E;&#x76F8;&#x5173;&#x7684;&#x5C5E;&#x6027;
+app:layout_constraintCircle=&quot;&quot;         &#x76EE;&#x6807;&#x63A7;&#x4EF6;id
+app:layout_constraintCircleAngle=&quot;&quot;    &#x5BF9;&#x4E8E;&#x76EE;&#x6807;&#x7684;&#x89D2;&#x5EA6;(0-360)
+app:layout_constraintCircleRadius=&quot;&quot;   &#x5230;&#x76EE;&#x6807;&#x4E2D;&#x5FC3;&#x7684;&#x8DDD;&#x79BB;
+
+// &#x767E;&#x5206;&#x6BD4;&#x504F;&#x79FB;
+&#x8BA9;&#x63A7;&#x4EF6;&#x5728;&#x7236;&#x5E03;&#x5C40;&#x7684;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x6216;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7684;&#x767E;&#x5206;&#x4E4B;&#x591A;&#x5C11;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;
+app:layout_constraintHorizontal_bias=&quot;&quot;   &#x6C34;&#x5E73;&#x504F;&#x79FB; &#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;0-1&#x7684;&#x5C0F;&#x6570;
+app:layout_constraintVertical_bias=&quot;&quot;     &#x5782;&#x76F4;&#x504F;&#x79FB; &#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;0-1&#x7684;&#x5C0F;&#x6570;
+
+// A&#x4F9D;&#x8D56;B &#xFF0C;B&#x88AB;Gone&#x65F6;&#xFF0C;A&#x8DDD;&#x79BB;&#x7236;&#x63A7;&#x4EF6;&#x7684;&#x8DDD;&#x79BB;&#x3002;
+app:layout_goneMarginBottom=&quot;0dp&quot;
+app:layout_goneMarginEnd=&quot;0dp&quot;
+app:layout_goneMarginLeft=&quot;0dp&quot;
+app:layout_goneMarginRight=&quot;0dp&quot;
+app:layout_goneMarginStart=&quot;0dp&quot;
+app:layout_goneMarginTop=&quot;0dp&quot;
+
+//&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;&#x6BD4;&#x4F8B;
+&#x7ED9;&#x5BBD;&#x6216;&#x8005;&#x9AD8;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x8BBE;&#x7F6E;&#x4E3A;0dp&#xFF0C;&#x7136;&#x540E;&#x8BBE;&#x7F6E;&#x8BE5;&#x5C5E;&#x6027;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x4F8B;&#xFF0C;&#x5BBD;&#x548C;&#x9AD8;&#x7684;&#x6BD4;
+layout_constraintDimensionRatio
+
+// Chain &#x94FE;
+Chain &#x94FE;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x7EA6;&#x675F;&#x8BA9;&#x591A;&#x4E2A; chain &#x94FE;&#x8FDE;&#x63A5;&#x7684; Views &#x80FD;&#x591F;&#x5E73;&#x5206;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x4F4D;&#x7F6E;&#x3002;
+&#x6700;&#x76F8;&#x4F3C;&#x7684;&#x5E94;&#x8BE5;&#x662F; LinearLayout &#x4E2D;&#x7684;&#x6743;&#x91CD;&#x6BD4; weight &#xFF0C;
+&#x4F46; Chains &#x94FE;&#x80FD;&#x505A;&#x5230;&#x7684;&#x8FDC;&#x8FDC;&#x4E0D;&#x6B62;&#x6743;&#x91CD;&#x6BD4; weight &#x7684;&#x529F;&#x80FD;&#x3002;
+Chain &#x94FE;&#x662F;&#x7531;&#x591A;&#x4E2A; Views &#x7EC4;&#x5408;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Chain &#x94FE;&#x5C31;&#x9700;&#x8981;&#x5148;&#x9009;&#x62E9;&#x591A;&#x4E2A;&#x60F3;&#x8981;&#x94FE;&#x63A5;&#x5230;&#x4E00;&#x8D77;&#x7684; Views &#xFF0C;
+&#x7136;&#x540E;&#x518D;&#x53F3;&#x952E;&#x9009;&#x62E9; &apos;Center Horizontally&apos; &#x6216;&#x8005; &apos;Center Vertically&apos; &#x6765;&#x521B;&#x5EFA;&#x6C34;&#x5E73;&#x94FE;&#x6216;&#x8005;&#x5782;&#x76F4;&#x94FE;&#x3002;
+Chain &#x94FE;&#x7684;&#x521B;&#x5EFA;&#x5B9A;&#x4E49;&#x7684;&#x662F; Chain &#x94FE;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x9699;&#x5173;&#x7CFB;&#xFF0C;&#x5E76;&#x4E0D;&#x5F71;&#x54CD;&#x539F;&#x6709;&#x7684;&#x975E;&#x6210;&#x5458;&#x95F4;&#x7684;&#x7EA6;&#x675F;&#x3002;
+
+Chain &#x94FE;&#x6A21;&#x5F0F;&#x4E00;&#x5171;&#x6709;&#x4E09;&#x79CD;&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#xFF1A;spread &#xFF0C;spread_inside &#x548C; packed &#x3002;
+1&#x3001;&#x9ED8;&#x8BA4; spread &#x6A21;&#x5F0F;&#xFF1A;
+&#x5C06;&#x5E73;&#x5206;&#x95F4;&#x9699;&#x8BA9;&#x591A;&#x4E2A; Views &#x5E03;&#x5C40;&#x5230;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x3002;
+2&#x3001;spread_inside &#x6A21;&#x5F0F;&#xFF1A;
+&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x4E24;&#x8FB9;&#x6700;&#x8FB9;&#x7F18;&#x7684;&#x4E24;&#x4E2A; View &#x5230;&#x5916;&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x8FB9;&#x7F18;&#x7684;&#x8DDD;&#x79BB;&#x53BB;&#x9664;&#xFF0C;
+&#x7136;&#x540E;&#x8BA9;&#x5269;&#x4F59;&#x7684; Views &#x5728;&#x5269;&#x4F59;&#x7684;&#x7A7A;&#x95F4;&#x5185;&#x5E73;&#x5206;&#x95F4;&#x9699;&#x5E03;&#x5C40;&#x3002;
+3&#x3001; packed &#xFF1A;
+&#x5B83;&#x5C06;&#x6240;&#x6709; Views &#x6253;&#x5305;&#x5230;&#x4E00;&#x8D77;&#x4E0D;&#x5206;&#x914D;&#x591A;&#x4F59;&#x7684;&#x95F4;&#x9699; &#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6574;&#x4E2A;&#x7EC4;&#x4EF6;&#x7EC4;&#x5728;&#x53EF;&#x7528;&#x7684;&#x5269;&#x4F59;&#x4F4D;&#x7F6E;&#x5C45;&#x4E2D;&#x3002;
+</code></pre>
+<h2 id="constraintlayout-&#x5E38;&#x7528;&#x5C5E;&#x6027;"><a name="constraintlayout-&#x5E38;&#x7528;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#constraintlayout-&#x5E38;&#x7528;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>11.1. ConstraintLayout &#x5E38;&#x7528;&#x5C5E;&#x6027;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x610F;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app:layout_constraintLeft_toLeftOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x8FB9;&#x6846;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x8FB9;&#x6846;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>app:layout_constraintLeft_toRightOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x8FB9;&#x6846;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x53F3;&#x8FB9;&#x6846;&#x5BF9;&#x9F50;&#x6216;&#x8005;&#x5728;&#x5176;&#x53F3;&#x8FB9;</td>
+</tr>
+<tr>
+<td>app:layout_constraintRight_toLeftOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x53F3;&#x8FB9;&#x6846;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x8FB9;&#x6846;&#x5BF9;&#x9F50;&#x6216;&#x5728;&#x5176;&#x5DE6;&#x8FB9;</td>
+</tr>
+<tr>
+<td>app:layout_constraintRight_toRightOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x53F3;&#x8FB9;&#x6846;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x53F3;&#x8FB9;&#x6846;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>app:layout_constraintTop_toTopOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x9876;&#x90E8;&#x8FB9;&#x6846;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x9876;&#x90E8;&#x8FB9;&#x6846;&#x6C34;&#x5E73;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>layout_constraintTop_toBottomOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x9876;&#x90E8;&#x8FB9;&#x6846;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x5E95;&#x90E8;&#x8FB9;&#x6846;&#x6C34;&#x5E73;&#x5BF9;&#x9F50;&#x6216;&#x5728;&#x5176;&#x4E0B;&#x8FB9;</td>
+</tr>
+<tr>
+<td>app:layout_constraintBottom_toTopOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x5E95;&#x90E8;&#x8FB9;&#x6846;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x9876;&#x90E8;&#x8FB9;&#x6846;&#x6C34;&#x5E73;&#x5BF9;&#x9F50;&#x6216;&#x5176;&#x4E0A;&#x8FB9;</td>
+</tr>
+<tr>
+<td>app:layout_constraintBottom_toBottomOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x5E95;&#x90E8;&#x8FB9;&#x6846;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x5E95;&#x90E8;&#x8FB9;&#x6846;&#x6C34;&#x5E73;&#x5BF9;&#x9F50;&#x6216;&#x5176;&#x4E0A;&#x8FB9;</td>
+</tr>
+<tr>
+<td>app:layout_constraintBaseline_toBaselineOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x6C34;&#x5E73;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>layout_constraintStart_toEndOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5728;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x53F3;&#x8FB9;&#x754C;&#x7684;&#x53F3;&#x8FB9;&#xFF0C;&#x53CA;&#x8868;&#x793A;&#x6B64;&#x63A7;&#x4EF6;&#x5728;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x53F3;&#x8FB9;</td>
+</tr>
+<tr>
+<td>layout_constraintStart_toStartOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5728;&#x540C;&#x4E00;&#x5782;&#x76F4;&#x7EBF;&#x4E0A;</td>
+</tr>
+<tr>
+<td>layout_constraintEnd_toStartOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5728;&#x540C;&#x4E00;&#x5782;&#x76F4;&#x7EBF;&#x4E0A;</td>
+</tr>
+<tr>
+<td>layout_constraintEnd_toEndOf</td>
+<td>&#x6B64;&#x63A7;&#x4EF6;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x4E0E;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x5BF9;&#x9F50;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="constraintlayout-&#x4E24;&#x4E2A;&#x6309;&#x94AE;&#x5C45;&#x4E2D;&#x8BBE;&#x7F6E;"><a name="constraintlayout-&#x4E24;&#x4E2A;&#x6309;&#x94AE;&#x5C45;&#x4E2D;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#constraintlayout-&#x4E24;&#x4E2A;&#x6309;&#x94AE;&#x5C45;&#x4E2D;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>11.2. ConstraintLayout &#x4E24;&#x4E2A;&#x6309;&#x94AE;&#x5C45;&#x4E2D;&#x8BBE;&#x7F6E;</h2>
+<pre><code class="lang-text">&lt;androidx.constraintlayout.widget.ConstraintLayout&gt;
+    &lt;Button
+        android:id=&quot;@+id/button1&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;match_parent&quot;
+        app:layout_constraintHorizontal_chainStyle=&quot;packed&quot;
+        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+        app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+        app:layout_constraintRight_toLeftOf=&quot;@id/button2&quot;/&gt;
+    &lt;Button
+        android:id=&quot;@+id/button2&quot;
+        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+        app:layout_constraintHorizontal_chainStyle=&quot;packed&quot;
+        app:layout_constraintLeft_toRightOf=&quot;@id/button1&quot;
+        app:layout_constraintRight_toRightOf=&quot;parent&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;match_parent&quot;
+        app:layout_goneMarginStart=&quot;0dp&quot;
+        android:layout_marginStart=&quot;120dp&quot; /&gt;
+&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;
+</code></pre>
+<h1 id="placeholder"><a name="placeholder" class="anchor-navigation-ex-anchor" href="#placeholder"><i class="fa fa-link" aria-hidden="true"></i></a>12. Placeholder</h1>
+<pre><code class="lang-text">&#x5360;&#x4F4D;&#x63A7;&#x4EF6; androidx.constraintlayout.widget.Placeholder&#xFF0C;&#x5982;&#x679C;&#x53EA;&#x662F;&#x5355;&#x7EAF;&#x5360;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x505A;&#x95F4;&#x9694;&#x4F7F;&#x7528;&#x3002;&#x8DDF;View &#x5360;&#x4F4D;&#x5DEE;&#x4E0D;&#x591A;&#x3002;
+&#x4F46;&#x662F; Placeholder &#x652F;&#x6301;&#x52A8;&#x6001;&#x5C06;&#x5176;&#x4ED6;&#x63A7;&#x4EF6;&#x52A0;&#x8F7D;&#x5230;&#x8FD9;&#x4E2A;&#x5360;&#x4F4D;&#x4E2D;&#x6765;&#x3002; 
+placeholder.setContentId(R.id.iv_device);
+</code></pre>
+<h1 id="viewpager2"><a name="viewpager2" class="anchor-navigation-ex-anchor" href="#viewpager2"><i class="fa fa-link" aria-hidden="true"></i></a>13. viewpager2</h1>
+<pre><code class="lang-text">&#x6539;&#x53D8; viewpager&#x7684;&#x7ED8;&#x5236;&#x987A;&#x5E8F;
+RecyclerView recyclerView = (RecyclerView) getViewPager2().getChildAt(0);
+recyclerView.setChildDrawingOrderCallback((childCount, i) -&gt; {
+    int indexOfView;
+    if (1 == i) {
+        indexOfView = 2;
+    } else if (2 == i) {
+        indexOfView = 1;
+    } else {
+        indexOfView = i;
+    }
+    if (indexOfView &lt;= childCount - 1) {
+        return indexOfView;
+    } else {
+        return i;
+    }
+});*/
+</code></pre>
+<h1 id="webview&#x8BE6;&#x89E3;"><a name="webview&#x8BE6;&#x89E3;" class="anchor-navigation-ex-anchor" href="#webview&#x8BE6;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>14. WebView&#x8BE6;&#x89E3;</h1>
+<pre><code class="lang-text">[ Android4.4, +&#x221E;) Chromium&#x5185;&#x6838;&#x53D6;&#x4EE3;&#x4E86;Webkit&#x5185;&#x6838;&#x3002;
+[ Android5.0, +&#x221E;) WebView&#x79FB;&#x690D;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;apk&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x4F9D;&#x8D56;&#x7CFB;&#x7EDF;&#x800C;&#x72EC;&#x7ACB;&#x5B58;&#x5728;&#x548C;&#x66F4;&#x65B0;&#x3002;
+[ Android7.0, +&#x221E;) &#x5982;&#x679C;&#x7528;&#x6237;&#x624B;&#x673A;&#x91CC;&#x5B89;&#x88C5;&#x4E86; Chrome &#xFF0C; &#x7CFB;&#x7EDF;&#x4F18;&#x5148;&#x9009;&#x62E9; Chrome &#x4E3A;&#x5E94;&#x7528;&#x63D0;&#x4F9B; WebView &#x6E32;&#x67D3;&#x3002;
+[ Android8.0, +&#x221E;) &#x9ED8;&#x8BA4;&#x5F00;&#x542F;WebView&#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;WebView&#x8FD0;&#x884C;&#x5728;&#x72EC;&#x7ACB;&#x7684;&#x6C99;&#x76D2;&#x8FDB;&#x7A0B;&#x4E2D;&#x3002;
+
+WebView&#x5C4F;&#x853D;&#x957F;&#x6309;&#x51FA;&#x73B0;&#x7684;&#x590D;&#x5236; &#x5206;&#x4EAB; &#x5168;&#x9009;&#x7B49;&#xFF1A;
+webview.setOnLongClickListener(new View.OnLongClickListener() {
+@Override
+public boolean onLongClick(View v) {
+return true;
+}
+});
+</code></pre>
+<h2 id="webview-&#x4E0E;&#x53CD;&#x5C04;&#x7684;&#x5904;&#x7406;"><a name="webview-&#x4E0E;&#x53CD;&#x5C04;&#x7684;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#webview-&#x4E0E;&#x53CD;&#x5C04;&#x7684;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>14.1. webView &#x4E0E;&#x53CD;&#x5C04;&#x7684;&#x5904;&#x7406;</h2>
+<pre><code class="lang-text">&#x56E0;&#x4E3A; WebView &#x53EF;&#x4EE5;&#x4F7F;&#x7528;js&#xFF0C;&#x5F53;&#x7CFB;&#x7EDF;&#x7EA7;&#x5E94;&#x7528;&#x4F7F;&#x7528; WebView &#x65F6;&#xFF0C;
+&#x8FD9;&#x4E2A; WebView &#x5C31;&#x4F1A;&#x56E0;&#x4E3A;&#x662F;&#x7CFB;&#x7EDF;&#x7EA7;&#x5E94;&#x7528;&#x800C;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x4F7F;&#x5F97;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x53D8;&#x5F97;&#x4E0D;&#x5B89;&#x5168;&#xFF0C;&#x56E0;&#x6B64;&#x7CFB;&#x7EDF;&#x7EA7;&#x5E94;&#x7528;&#x88AB;&#x7981;&#x6B62;&#x4F7F;&#x7528; WebView &#x3002;
+&#x5982;&#x679C;&#x7CFB;&#x7EDF;&#x5E94;&#x7528;&#x60F3;&#x8981;&#x4F7F;&#x7528; WebView &#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5BF9; webview &#x8FDB;&#x884C;&#x53CD;&#x5C04;&#x5904;&#x7406;&#x3002;&#x5904;&#x7406;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5947;&#x745E;iot APP&#x4E2D;&#x6709;&#x3002;
+</code></pre>
+<h1 id="recyclerview-&#x63A7;&#x4EF6;"><a name="recyclerview-&#x63A7;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x63A7;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>15. RecyclerView &#x63A7;&#x4EF6;</h1>
+<pre><code class="lang-text">RecyclerView &#x662F; Google &#x5728;2014&#x5E74;&#x7684;IO&#x5927;&#x4F1A;&#x9996;&#x6B21;&#x63D0;&#x51FA;&#x6765;&#x3002;
+implementation &apos;com.android.support:recyclerview-v7:26.1.0&apos;
+implementation &apos;com.android.support:recyclerview-v7:26.0.0&apos;
+implementation &apos;androidx.recyclerview:recyclerview:1.0.0&apos;
+RecyclerView &#x53EF;&#x4EE5;&#x66FF;&#x4EE3; ListView &#x548C; GridView &#x3002;
+</code></pre>
+<h2 id="recyclerview-&#x6E90;&#x7801;&#x9605;&#x8BFB;"><a name="recyclerview-&#x6E90;&#x7801;&#x9605;&#x8BFB;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x6E90;&#x7801;&#x9605;&#x8BFB;"><i class="fa fa-link" aria-hidden="true"></i></a>15.1. recyclerview &#x6E90;&#x7801;&#x9605;&#x8BFB;</h2>
+<pre><code class="lang-text">androidx.recyclerview:recyclerview:1.0.0 &#x7684;&#x6E90;&#x7801;&#x62F7;&#x8D1D;&#x51FA;&#x6765;
+&#x91CD;&#x65B0;&#x7406;&#x89E3;&#x3001;&#x6CE8;&#x91CA;&#x4E00;&#x90E8;&#x5206;&#x3002;
+https://gitee.com/hnyer/AndroidxRecyclerviewSource
+</code></pre>
+<h2 id="recyclerview-&#x63D2;&#x62D4;&#x5F0F;&#x8BBE;&#x8BA1;"><a name="recyclerview-&#x63D2;&#x62D4;&#x5F0F;&#x8BBE;&#x8BA1;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x63D2;&#x62D4;&#x5F0F;&#x8BBE;&#x8BA1;"><i class="fa fa-link" aria-hidden="true"></i></a>15.2. RecyclerView &#x63D2;&#x62D4;&#x5F0F;&#x8BBE;&#x8BA1;</h2>
+<pre><code class="lang-text">RecyclerView &#x5728;&#x8BBE;&#x8BA1;&#x65B9;&#x9762;&#x4E0A;&#x975E;&#x5E38;&#x7684;&#x7075;&#x6D3B;&#xFF0C;
+&#x4E0D;&#x540C;&#x7684;&#x90E8;&#x5206;&#x627F;&#x62C5;&#x7740;&#x4E0D;&#x540C;&#x7684;&#x804C;&#x8D23;&#x3002;
+&#x6BCF;&#x4E00;&#x4E2A;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x7684;&#x9700;&#x6C42;&#x6765;&#x5B9A;&#x4E49;&#x4E0D;&#x540C;&#x7684;&#x90E8;&#x5206;&#x3002;
+
+Adapter &#x8D1F;&#x8D23;&#x63D0;&#x4F9B;&#x6570;&#x636E;&#x3001;&#x521B;&#x5EFA;ViewHolder&#x3001;&#x7ED1;&#x5B9A;&#x6570;&#x636E;&#xFF0C;
+LayoutManager &#x8D1F;&#x8D23; ItemView &#x7684;&#x6D4B;&#x91CF;&#x548C;&#x5E03;&#x5C40;&#xFF0C;
+ItemAnimator &#x8D1F;&#x8D23;&#x6BCF;&#x4E2A;ItemView&#x7684;&#x52A8;&#x753B;&#xFF0C;
+ItemDecoration &#x8D1F;&#x8D23;&#x6BCF;&#x4E2A; ItemView &#x7684;&#x95F4;&#x9699;&#x3002;
+</code></pre>
+<h2 id="recyclerview-&#x7684;&#x4F18;&#x70B9;"><a name="recyclerview-&#x7684;&#x4F18;&#x70B9;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x7684;&#x4F18;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>15.3. RecyclerView &#x7684;&#x4F18;&#x70B9;</h2>
+<pre><code class="lang-text">RecyclerView &#x662F;&#x4E00;&#x4E2A;&#x5C55;&#x793A;&#x5927;&#x91CF;&#x6570;&#x636E;&#x7684;&#x63A7;&#x4EF6;&#xFF0C;
+&#x76F8;&#x6BD4;&#x8F83; ListView ,RecyclerView &#x6709;&#x975E;&#x5E38;&#x51FA;&#x8272;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#xFF0C;
+&#x5728;&#x6027;&#x80FD;&#x65B9;&#x9762;&#x76F8;&#x6BD4;&#x4E8E; ListView &#x63D0;&#x5347;&#x4E86;&#x4E0D;&#x5C11;&#x3002;
+&#x540C;&#x65F6;&#x7531;&#x4E8E; LayoutManager &#x7684;&#x5B58;&#x5728;,
+&#x8BA9; RecyclerView &#x4E0D;&#x4EC5;&#x6709; ListView &#x7684;&#x7279;&#x70B9;&#xFF0C;
+&#x540C;&#x65F6;&#x517C;&#x6709; GridView &#x7684;&#x7279;&#x70B9; &#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x6709;&#x7011;&#x5E03;&#x6D41;&#x5E03;&#x5C40;&#x3002;
+</code></pre>
+<h2 id="recyclerview-&#x4E0E;-listview-&#x7684;&#x533A;&#x522B;"><a name="recyclerview-&#x4E0E;-listview-&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x4E0E;-listview-&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>15.4. RecyclerView &#x4E0E; listview &#x7684;&#x533A;&#x522B;</h2>
+<pre><code class="lang-text">RecyclerView &#x662F; listview &#x7684;&#x5347;&#x7EA7;&#x7248;&#xFF0C;&#x5177;&#x6709;&#x66F4;&#x9AD8;&#x7075;&#x6D3B;&#x3001;&#x6269;&#x5C55; &#x3002;
+1&#x3001;RecyclerView &#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x4E86; &#x7EBF;&#x6027;&#x5E03;&#x5C40;&#x3001;&#x7F51;&#x683C;&#x5E03;&#x5C40;&#x3001;&#x6D41;&#x5F0F;&#x5E03;&#x5C40;&#x3002;
+2&#x3001;RecyclerView &#x53D6;&#x6D88;&#x4E86; setEmptyView() &#x3001; addHeaderView() &#x3001; addFooterView() &#x5BF9;&#x5E94;&#x7684; UI&#x6548;&#x679C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x53BB;&#x5B9E;&#x73B0;&#x3002;
+3&#x3001;RecyclerView &#x63D0;&#x4F9B;&#x4E86; &#x5C40;&#x90E8;&#x5237;&#x65B0;&#x7684; &#x63A5;&#x53E3;  notifyItemChanged(position) 
+4&#x3001;RecyclerView &#x63D0;&#x4F9B;&#x4E86;&#x90E8;&#x5206; &#x52A8;&#x753B;&#x6548;&#x679C;&#x3002;listview &#x5B8C;&#x5168;&#x9760;&#x81EA;&#x5B9A;&#x4E49; &#x3002;
+5&#x3001;RecyclerView &#x5B9E;&#x73B0;&#x5D4C;&#x5957;&#x6EDA;&#x52A8;&#x673A;&#x5236; &#x3002;
+</code></pre>
+<h2 id="recyclerview-&#x81EA;&#x5B9A;&#x4E49;-layoutmanager"><a name="recyclerview-&#x81EA;&#x5B9A;&#x4E49;-layoutmanager" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;-layoutmanager"><i class="fa fa-link" aria-hidden="true"></i></a>15.5. RecyclerView &#x81EA;&#x5B9A;&#x4E49; LayoutManager</h2>
+<pre><code class="lang-text">&#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x4E86; 
+&#x7EBF;&#x6027;&#x5E03;&#x5C40; LinearLayoutManager &#x3001;
+&#x7F51;&#x683C;&#x5E03;&#x5C40; GridLayoutManager &#x3001;
+&#x7011;&#x5E03;&#x6D41;&#x5E03;&#x5C40; StaggeredGridLayoutManager &#x3002;
+------------------
+extends RecyclerView.LayoutManager 
+&#x91CD;&#x5199;&#x4EE5;&#x4E0B;&#x51FD;&#x6570;
+onLayoutChildren()  // 
+getItemCount() 
+canScrollVertically() 
+scrollVerticallyBy()
+</code></pre>
+<h2 id="recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x95F4;&#x9694;&#x7EBF;--&#x3001;&#x8FB9;&#x754C;&#x6837;&#x5F0F;-&#x3001;itemdecoration"><a name="recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x95F4;&#x9694;&#x7EBF;--&#x3001;&#x8FB9;&#x754C;&#x6837;&#x5F0F;-&#x3001;itemdecoration" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x95F4;&#x9694;&#x7EBF;--&#x3001;&#x8FB9;&#x754C;&#x6837;&#x5F0F;-&#x3001;itemdecoration"><i class="fa fa-link" aria-hidden="true"></i></a>15.6. RecyclerView &#x81EA;&#x5B9A;&#x4E49;&#x95F4;&#x9694;&#x7EBF;  &#x3001;&#x8FB9;&#x754C;&#x6837;&#x5F0F; &#x3001;ItemDecoration</h2>
+<pre><code class="lang-text">recyclerView.addItemDecoration(xx);
+https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/RecyclerView/RecyclerViewMarginDecoration.java
+
+// &#x7011;&#x5E03;&#x6D41;&#x548C;&#x7F51;&#x683C;&#x5E03;&#x5C40;&#x7684;&#xFF0C;&#x56DB;&#x5468;&#x6709;&#x989C;&#x8272;&#x8FB9;&#x7EBF;&#x7684;
+https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/MarginDecorationForStaggered.java
+</code></pre>
+<h2 id="recyclerview-&#x4F7F;&#x7528;&#x81EA;&#x5E26;&#x52A8;&#x753B;"><a name="recyclerview-&#x4F7F;&#x7528;&#x81EA;&#x5E26;&#x52A8;&#x753B;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x4F7F;&#x7528;&#x81EA;&#x5E26;&#x52A8;&#x753B;"><i class="fa fa-link" aria-hidden="true"></i></a>15.7. RecyclerView &#x4F7F;&#x7528;&#x81EA;&#x5E26;&#x52A8;&#x753B;</h2>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4F7F;&#x7528; notifyDataSetChanged() &#x65F6;&#x65E0;&#x6CD5;&#x89E6;&#x53D1;&#x52A8;&#x753B;&#x7684;&#x3002;</p>
+<pre><code class="lang-text">RecyclerView &#x81EA;&#x5E26;&#x4E00;&#x4E2A;&#x52A8;&#x753B; DefaultItemAnimator &#xFF0C;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x3002;
+&#x5728;&#x589E;&#x52A0;&#x3001;&#x5220;&#x9664; &#x3001;&#x66F4;&#x65B0; item &#x65F6;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#x3002;
+recyclerView.setItemAnimator(null); // &#x53BB;&#x6389;&#x9ED8;&#x8BA4;&#x52A8;&#x753B;
+
+Adapterxxx &#x9002;&#x914D;&#x5668;&#x4E2D;...
+public void addOneItem(int position ,String value){
+    if(datas==null){
+        return ;
+    }
+    datas.add(position,value) ; 
+    notifyItemInserted(position);// !
+    if (position == 0) {
+        recyclerView.scrollToPosition(0);
+    }
+}
+
+public void removeOnItem(int position){
+    if(datas==null){
+        return ;
+    }
+    if(datas.size()&lt;=0){
+        return ;
+    }
+    datas.remove(position) ;
+    notifyItemRemoved(position); // !
+}
+
+public void itemSwap(int from, int to) {
+    Collections.swap(datas, from, to);
+    if (to == 0) {
+        recyclerView.scrollToPosition(0);
+    }
+    notifyItemMoved(from, to); // !
+}
+
+public void updateItem(int position, String s) {
+    datas.set(position, s);
+    notifyItemRangeChanged(position, 1); // !
+}
+
+// &#x52A8;&#x753B;&#x65F6;&#x95F4;
+DefaultItemAnimator defaultItemAnimator = new DefaultItemAnimator();
+defaultItemAnimator.setRemoveDuration(200);
+defaultItemAnimator.setAddDuration(200);
+defaultItemAnimator.setMoveDuration(200);
+defaultItemAnimator.setChangeDuration(2000);
+recyclerView.setItemAnimator(defaultItemAnimator);
+</code></pre>
+<h2 id="recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x3001;&#x6DFB;&#x52A0;&#x52A8;&#x753B;"><a name="recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x3001;&#x6DFB;&#x52A0;&#x52A8;&#x753B;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x3001;&#x6DFB;&#x52A0;&#x52A8;&#x753B;"><i class="fa fa-link" aria-hidden="true"></i></a>15.8. RecyclerView &#x81EA;&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x3001;&#x6DFB;&#x52A0;&#x52A8;&#x753B;</h2>
+<pre><code class="lang-text">&#x4E00;&#x822C;&#x90FD;&#x662F;&#x6A21;&#x4EFF;&#x81EA;&#x5E26;&#x7684;&#x52A8;&#x753B; DefaultItemAnimator &#x53BB;&#x5B9E;&#x73B0;&#x3002;
+
+&#x53EF;&#x4EE5;&#x53C2;&#x8003; https://github.com/wasabeef/recyclerview-animators &#x7684;&#x5B9E;&#x73B0;&#x3002;
+val recyclerView = findViewById&lt;RecyclerView&gt;(R.id.list)
+recyclerView.itemAnimator = SlideInUpAnimator(OvershootInterpolator(1f))
+</code></pre>
+<h2 id="recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x6ED1;&#x52A8;&#x6548;&#x679C;"><a name="recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x6ED1;&#x52A8;&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x6ED1;&#x52A8;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>15.9. RecyclerView &#x81EA;&#x5B9A;&#x4E49;&#x6ED1;&#x52A8;&#x6548;&#x679C;</h2>
+<pre><code class="lang-text">&#x53EF;&#x4EE5;&#x901A;&#x8FC7; &#x81EA;&#x5B9A;&#x4E49;  RecyclerView &#x7684; LayoutManager &#x53BB;&#x5B9E;&#x73B0;&#x3002;
+
+&#x53EF;&#x4EE5;&#x53C2;&#x8003; https://gitee.com/hnyer/GalleryDemo
+</code></pre>
+<p><img src="../pics/&#x81EA;&#x5B9A;&#x4E49;&#x6ED1;&#x52A8;&#x6548;&#x679C;.gif" alt=""></p>
+<h2 id="recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x56DE;&#x6536;&#x7B56;&#x7565;"><a name="recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x56DE;&#x6536;&#x7B56;&#x7565;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x81EA;&#x5B9A;&#x4E49;&#x56DE;&#x6536;&#x7B56;&#x7565;"><i class="fa fa-link" aria-hidden="true"></i></a>15.10. RecyclerView &#x81EA;&#x5B9A;&#x4E49;&#x56DE;&#x6536;&#x7B56;&#x7565;</h2>
+<pre><code class="lang-text">&#x81EA;&#x5B9A;&#x4E49; ViewCacheExtension &#x3002;&#x7528;&#x7684;&#x8F83;&#x5C11;&#x3002;
+</code></pre>
+<h2 id="recyclerview-&#x7ED8;&#x5236;&#x6D41;&#x7A0B;"><a name="recyclerview-&#x7ED8;&#x5236;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x7ED8;&#x5236;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>15.11. RecyclerView &#x7ED8;&#x5236;&#x6D41;&#x7A0B;</h2>
+<pre><code class="lang-text">RecyclerView &#x5C31;&#x662F;&#x4E00;&#x4E2A; ViewGroup &#xFF0C;
+</code></pre>
+<h2 id="recyclerview-&#x5C40;&#x90E8;&#x5237;&#x65B0;"><a name="recyclerview-&#x5C40;&#x90E8;&#x5237;&#x65B0;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x5C40;&#x90E8;&#x5237;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a>15.12. RecyclerView &#x5C40;&#x90E8;&#x5237;&#x65B0;</h2>
+<pre><code class="lang-text">DiffUtil &#x662F; &#x4E13;&#x95E8;&#x4E3A;RecyclerView&#x66F4;&#x65B0;item&#x8BBE;&#x8BA1;&#x7684;&#x3002;
+&#x53EF;&#x4EE5;&#x7CBE;&#x786E;&#x5230;&#x67D0;&#x4E2A;Item&#x4E0A;&#x67D0;&#x4E2A;&#x5177;&#x4F53;&#x7684;TextView&#xFF0C;&#x6216;&#x8005;ImageView&#x7684;&#x5237;&#x65B0;&#x3002;
+&#x4F7F;&#x6211;&#x4EEC;&#x7684;app&#x6BCF;&#x6B21;&#x5237;&#x65B0;&#x6D88;&#x8017;&#x7684;&#x8D44;&#x6E90;&#x8F83;&#x5C0F;&#x3002; 
+
+adapter.notifyDataSetChanged(); //  &#x5168;&#x90E8;&#x5237;&#x65B0;
+adapter.notifyItemChanged(position);//&#x5237;&#x65B0;&#x67D0;Item&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7EC4;&#x4EF6;
+adapter.notifyItemChanged(position, payloads); //&#x5237;&#x65B0;&#x67D0;Item&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x7EC4;&#x4EF6;&#x3002; &#x914D;&#x5408; DiffUtil
+</code></pre>
+<h2 id="recyclerview-&#x6EDA;&#x52A8;&#x673A;&#x5236;"><a name="recyclerview-&#x6EDA;&#x52A8;&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x6EDA;&#x52A8;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>15.13. RecyclerView &#x6EDA;&#x52A8;&#x673A;&#x5236;</h2>
+<pre><code class="lang-text">RecyclerView &#x4E4B;&#x6240;&#x4EE5;&#x80FD;&#x6EDA;&#x52A8;&#xFF0C;&#x5C31;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x5728;&#x76D1;&#x542C;&#x5230;&#x624B;&#x6307;&#x6ED1;&#x52A8;&#x4E4B;&#x540E;&#xFF0C;&#x53CD;&#x590D; layout &#x5B50;View&#xFF0C;&#x4E0D;&#x65AD;&#x66F4; Item &#x7684;&#x4F4D;&#x7F6E;&#x3002;
+</code></pre>
+<h2 id="recyclerview-&#x7F13;&#x5B58;-&#x3001;&#x590D;&#x7528;-&#x673A;&#x5236;"><a name="recyclerview-&#x7F13;&#x5B58;-&#x3001;&#x590D;&#x7528;-&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x7F13;&#x5B58;-&#x3001;&#x590D;&#x7528;-&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>15.14. RecyclerView &#x7F13;&#x5B58; &#x3001;&#x590D;&#x7528; &#x673A;&#x5236;</h2>
+<pre><code class="lang-text">// &#x7F13;&#x5B58;&#x5339;&#x914D;&#x987A;&#x5E8F;
+&#x5148;&#x4ECE; 1 &#x7EA7;&#x627E;&#xFF0C;&#x7136;&#x540E; 2 &#x7EA7; &#xFF0C;&#x7136;&#x540E;3&#x7EA7; &#xFF0C;&#x7136;&#x540E;4 &#x7EA7;&#xFF0C;&#x82E5;&#x627E;&#x4E0D;&#x5230;&#x5C31;&#x8D70; onCreateViewHolder &#x3002;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7F13;&#x5B58;&#x7EA7;&#x522B;</th>
+<th style="text-align:left">&#x5173;&#x952E;&#x5BF9;&#x8C61;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1&#x7EA7;</td>
+<td style="text-align:left">mAttachedScrap &#x548C; mChangedScrap</td>
+<td style="text-align:left">&#x5C4F;&#x5E55;&#x4E0A;&#x7684; HolderView &#x4ECE; RecyclerView &#x7684;&#x5E03;&#x5C40;&#x4E2D;&#x88AB; &#x62FF;&#x4E0B;&#x6765;&#x540E;&#xFF0C;&#x5B58;&#x653E;&#x5230; mAttachedScrap &#x4E2D; &#xFF0C; &#x8FD9;&#x4E9B; holderView &#x5E76;&#x4E0D;&#x53C2;&#x4E0E;&#x56DE;&#x6536;&#x590D;&#x7528;&#xFF0C; &#x5355;&#x7EAF;&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x5148;&#x4ECE;RecyclerView&#x4E2D;&#x62FF;&#x4E0B;&#x6765;&#xFF0C;&#x518D;&#x91CD;&#x65B0;&#x5E03;&#x5C40;&#x4E0A;&#x53BB;&#x3002;&#x5BF9;&#x4E8E;&#x65B0;&#x5E03;&#x5C40;&#x4E2D;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x7684;HolderView&#xFF0C;&#x624D;&#x4F1A;&#x4ECE; mAttachedScrap &#x79FB;&#x5230; mCachedViews &#x4E2D;&#xFF0C;&#x8BA9;&#x5B83;&#x53C2;&#x4E0E;&#x590D;&#x7528;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">mCachedViews</td>
+<td style="text-align:left">&#x5B83;&#x7684; size &#x9ED8;&#x8BA4;&#x662F; DEFAULT_CACHE_SIZE= 2&#xFF0C;&#x53EA;&#x80FD;&#x4FDD;&#x5B58;&#x4E24;&#x4E2A;HolderView&#x3002;   <br>&#x8FD9;&#x91CC;&#x4FDD;&#x5B58;&#x7684;&#x59CB;&#x7EC8;&#x662F;&#x6700;&#x65B0;&#x9C9C;&#x88AB;&#x79FB;&#x9664;&#x7684;HolderView&#xFF0C;   <br>&#x5F53; mCachedViews &#x6EE1;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x4F1A;&#x5229;&#x7528;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#x539F;&#x5219;&#xFF0C;&#x628A;&#x8001;&#x7684; HolderView &#x5B58;&#x653E;&#x5728; mRecyclerPool &#x4E2D;&#x3002;   <br>&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5728;&#x9700;&#x8981;&#x65B0;&#x7684; HolderView &#x65F6;&#xFF0C;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x662F;&#x4E0D;&#x662F;&#x521A;&#x79FB;&#x9664;&#x7684;&#x90A3;&#x4E2A;&#xFF0C;     &#x5982;&#x679C;&#x662F;&#xFF0C;&#x5C31;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x7ED9; RecyclerView &#x5C55;&#x793A;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x5B83;&#xFF0C;&#x90A3;&#x4E48;&#x5373;&#x4F7F;&#x8FD9;&#x91CC;&#x6709; HolderView &#x5B9E;&#x4F8B;&#xFF0C; &#x4E5F;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#x7ED9; RecyclerView&#xFF0C;&#x800C;&#x662F;&#x5230; mRecyclerPool &#x4E2D;&#x53BB;&#x627E;&#x4E00;&#x4E2A;HolderView&#x5B9E;&#x4F8B;&#x8FD4;&#x56DE;&#x7ED9; RecyclerView &#xFF0C;&#x8BA9;&#x5B83;&#x91CD;&#x65B0;&#x7ED1;&#x5B9A;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">3&#x7EA7;</td>
+<td style="text-align:left">mViewCacheExtension</td>
+<td style="text-align:left">&#x662F;&#x4E00;&#x4E2A;&#x5E2E;&#x52A9;&#x7C7B;&#xFF0C;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x63A7;&#x5236;View &#x7F13;&#x5B58;&#x3002;<br>Recycler&#x4E0D;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x7C7B;&#x4E2D;&#x505A;&#x4EFB;&#x4F55;&#x7F13;&#x5B58;View&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x662F;&#x5426;&#x9700;&#x8981;&#x7F13;&#x5B58;View&#x7531;&#x5F00;&#x53D1;&#x8005;&#x81EA;&#x5DF1;&#x63A7;&#x5236;&#x3002;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x7528;&#x5230;&#xFF0C;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684;&#x56DE;&#x6536;&#x6C60;&#x5373;&#x53EF;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">4&#x7EA7;</td>
+<td style="text-align:left">mRecyclerPool</td>
+<td style="text-align:left">mRecyclerPool  &#x9ED8;&#x8BA4;size&#x662F;  DEFAULT_MAX_SCRAP =5&#x3002;   <br> &#x5728; mAttachedScrap &#x3001;mCachedViews &#x4E2D;&#x7684; holderView &#x90FD;&#x662F;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x7684;&#xFF0C; &#x771F;&#x6B63;&#x88AB;&#x6807;&#x8BC6;&#x4E3A;&#x5E9F;&#x5F03;&#x7684;&#x662F;&#x5B58;&#x653E;&#x5728; mRecyclerPool &#x4E2D;&#x7684; holderView &#xFF0C;  <br> &#x5F53;&#x6211;&#x4EEC;&#x5411; RecyclerView &#x7533;&#x8BF7;&#x4E00;&#x4E2A; HolderView &#x6765;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#xFF0C;  <br> &#x5982;&#x679C;&#x5728; mAttachedScrap &#x3001; mCachedViews &#x7CBE;&#x786E;&#x5339;&#x914D;&#x4E0D;&#x5230;&#xFF0C;  <br> &#x5373;&#x4F7F;&#x4ED6;&#x4EEC;&#x4E2D;&#x6709; HolderView &#x4E5F;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#x7ED9;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#xFF0C;  <br>&#x800C;&#x662F;&#x4F1A;&#x5230; mRecyclerPool &#x4E2D;&#x53BB;&#x62FF;&#x4E00;&#x4E2A;&#x5E9F;&#x5F03;&#x7684;HolderView&#x8FD4;&#x56DE;&#x7ED9;&#x6211;&#x4EEC;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5982;&#x4F55;&#x5224;&#x65AD;-item-&#x662F;&#x5426;&#x590D;&#x7528;"><a name="&#x5982;&#x4F55;&#x5224;&#x65AD;-item-&#x662F;&#x5426;&#x590D;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x5224;&#x65AD;-item-&#x662F;&#x5426;&#x590D;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>15.15. &#x5982;&#x4F55;&#x5224;&#x65AD; item &#x662F;&#x5426;&#x590D;&#x7528;</h2>
+<pre><code class="lang-text">&#x5982;&#x679C;&#x662F;&#x65B0;&#x521B;&#x5EFA;&#x7684;View&#xFF0C;
+&#x5219;&#x4F1A;&#x5148;&#x8C03;&#x7528; onCreateViewHolder &#x6765;&#x521B;&#x5EFA;View&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; onBindViewHolder &#x6765;&#x7ED1;&#x5B9A;&#x6570;&#x636E; &#xFF1B;
+&#x5982;&#x679C;&#x662F;&#x590D;&#x7528;&#x7684;View&#xFF0C;&#x5C31;&#x53EA;&#x4F1A;&#x8C03;&#x7528; onBindViewHolder &#x800C;&#x4E0D;&#x4F1A;&#x8C03;&#x7528; onCreateViewHolder &#x3002;
+
+&#x5982;&#x679C;&#x6570;&#x636E;&#x6709; 100 &#x4E2A;&#xFF0C;
+&#x6CA1;&#x6709;&#x590D;&#x7528;&#x673A;&#x5236;&#xFF0C;&#x4F1A;&#x521B;&#x5EFA; 100&#x4E2A; itemView + &#x7ED1;&#x5B9A;100&#x6B21;&#x6570;&#x636E;&#x3002;
+&#x6709;&#x590D;&#x7528;&#x673A;&#x5236;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x53EA;&#x7ED1;&#x5B9A; 20&#x4E2A; itemView + 100&#x6B21;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF0C;
+&#x5E76;&#x4E14;&#x662F;&#x4E00;&#x6B21;&#x6027;&#x521B;&#x5EFA;&#x5E76;&#x7ED1;&#x5B9A;&#x5B8C;&#xFF0C;&#x5BB9;&#x6613;&#x5BFC;&#x81F4; ANR &#x3002;
+</code></pre>
+<h2 id="recyclerview-&#x5D4C;&#x5957;&#x6ED1;&#x52A8;-&#x673A;&#x5236;"><a name="recyclerview-&#x5D4C;&#x5957;&#x6ED1;&#x52A8;-&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x5D4C;&#x5957;&#x6ED1;&#x52A8;-&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>15.16. RecyclerView &#x5D4C;&#x5957;&#x6ED1;&#x52A8; &#x673A;&#x5236;</h2>
+<pre><code class="lang-text">Android 5.0&#x63A8;&#x51FA;&#x4E86;&#x5D4C;&#x5957;&#x6ED1;&#x52A8;&#x673A;&#x5236;&#xFF0C;&#x5728;&#x4E4B;&#x524D;&#xFF0C;&#x4E00;&#x65E6;&#x5B50;View&#x5904;&#x7406;&#x4E86;&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#xFF0C;
+&#x7236;View&#x5C31;&#x6CA1;&#x6709;&#x673A;&#x4F1A;&#x518D;&#x5904;&#x7406;&#x8FD9;&#x6B21;&#x7684;&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#xFF0C;&#x800C;&#x5D4C;&#x5957;&#x6ED1;&#x52A8;&#x673A;&#x5236;&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;
+
+&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x5D4C;&#x5957;&#x6ED1;&#x52A8;&#xFF0C;
+&#x5B50;View&#x5FC5;&#x987B;&#x5B9E;&#x73B0; NestedScrollingChild &#x63A5;&#x53E3;&#xFF0C;
+&#x7236;View&#x5FC5;&#x987B;&#x5B9E;&#x73B0; NestedScrollingParent &#x63A5;&#x53E3;&#x3002;
+</code></pre>
+<h2 id="recyclerview-&#x6ED1;&#x52A8;&#x5361;&#x987F;"><a name="recyclerview-&#x6ED1;&#x52A8;&#x5361;&#x987F;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x6ED1;&#x52A8;&#x5361;&#x987F;"><i class="fa fa-link" aria-hidden="true"></i></a>15.17. RecyclerView &#x6ED1;&#x52A8;&#x5361;&#x987F;</h2>
+<pre><code class="lang-text">1&#x3001;&#x5D4C;&#x5957;&#x5E03;&#x5C40;&#x6ED1;&#x52A8;&#x51B2;&#x7A81; &#x5BFC;&#x81F4;&#x5361;&#x987F;&#x5047;&#x8C61;
+&#x5185;&#x90E8;&#x7684;&#x6ED1;&#x52A8;&#x63A7;&#x4EF6;&#x6D88;&#x8D39;&#x4E86;&#x6ED1;&#x52A8;&#x64CD;&#x4F5C;, &#x5916;&#x90E8;&#x7684;&#x6ED1;&#x52A8;&#x63A7;&#x4EF6;&#x5C31;&#x518D;&#x4E5F;&#x6CA1;&#x673A;&#x4F1A;&#x54CD;&#x5E94;&#x8FD9;&#x4E2A;&#x6ED1;&#x52A8;&#x64CD;&#x4F5C;&#x4E86;&#x3002;
+
+2&#x3001;&#x5D4C;&#x5957;&#x5E03;&#x5C40;&#x5C42;&#x6B21;&#x592A;&#x6DF1;&#x3002;&#x8FC7;&#x591A;&#x7684;&#x6D4B;&#x91CF;&#xFF0C;&#x7ED8;&#x5236;&#x5E03;&#x5C40;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x6ED1;&#x52A8;&#x5361;&#x987F;&#x3002;
+
+3&#x3001;&#x5728; onCreateViewHolder / onBindViewHolder &#x4E2D;&#x505A;&#x4E86;&#x8017;&#x65F6;&#x7684;&#x64CD;&#x4F5C;&#x5BFC;&#x81F4;&#x5361;&#x987F;&#x3002;
+&#x7C7B;&#x4F3C; Bitmap &#x89E3;&#x7801;&#x4E00;&#x7C7B;&#x7684;&#x8017;&#x65F6;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x5B83;&#x4EEC;&#x91CC;&#x9762;&#x8FDB;&#x884C;&#x3002;
+
+4&#x3001;&#x5982;&#x679C; ScrollView &#x4E2D;&#x6709; RecyclerView &#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x6ED1;&#x52A8;&#x4E0D;&#x6D41;&#x7545;&#xFF0C;
+&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A;&#x6ED1;&#x52A8;&#x51B2;&#x7A81;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x7981;&#x7528; RecyclerView &#x7684;&#x6ED1;&#x52A8;&#x5373;&#x53EF;&#x3002;
+xx.setNestedScrollingEnabled(false);
+</code></pre>
+<h2 id="recyclerview-&#x4E07;&#x80FD;&#x9002;&#x914D;&#x5668;"><a name="recyclerview-&#x4E07;&#x80FD;&#x9002;&#x914D;&#x5668;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x4E07;&#x80FD;&#x9002;&#x914D;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>15.18. RecyclerView &#x4E07;&#x80FD;&#x9002;&#x914D;&#x5668;</h2>
+<p>&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D; &#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x4E00;&#x4E9B;&#x5C01;&#x88C5;&#x8FC7;&#x7684; &#x7B2C;&#x4E09;&#x65B9; &#x9002;&#x914D;&#x5668;&#xFF0C;&#x63D0;&#x9AD8;&#x5F00;&#x53D1;&#x901F;&#x5EA6;&#x3002;</p>
+<pre><code class="lang-text">https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+</code></pre>
+<h2 id="recyclerview-&#x4E0D;&#x89C4;&#x5219;&#x5E03;&#x5C40;"><a name="recyclerview-&#x4E0D;&#x89C4;&#x5219;&#x5E03;&#x5C40;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x4E0D;&#x89C4;&#x5219;&#x5E03;&#x5C40;"><i class="fa fa-link" aria-hidden="true"></i></a>15.19. RecyclerView &#x4E0D;&#x89C4;&#x5219;&#x5E03;&#x5C40;</h2>
+<pre><code class="lang-text">&#x53EF;&#x4EE5;&#x5229;&#x7528; setSpanSizeLookup( )&#x5B9E;&#x73B0;&#x3002;
+&#x6BD4;&#x5982; &#x6BD4;&#x5982;&#x7B2C;&#x4E00;&#x884C;&#x4E00;&#x5217;&#xFF0C;&#x7B2C;&#x4E8C;&#x884C; 3&#x5217;&#x3002;
+</code></pre>
+<h2 id="recyclerview-&#x95EE;&#x7B54;"><a name="recyclerview-&#x95EE;&#x7B54;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x95EE;&#x7B54;"><i class="fa fa-link" aria-hidden="true"></i></a>15.20. RecyclerView &#x95EE;&#x7B54;</h2>
+<h3 id="recyclerview-&#x7684;&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#x662F;&#x600E;&#x6837;&#x7684;&#xFF1F;-&#x7F13;&#x5B58;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;cachedview-&#x4F1A;&#x6267;&#x884C;-onbindview-&#x5417;"><a name="recyclerview-&#x7684;&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#x662F;&#x600E;&#x6837;&#x7684;&#xFF1F;-&#x7F13;&#x5B58;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;cachedview-&#x4F1A;&#x6267;&#x884C;-onbindview-&#x5417;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x7684;&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#x662F;&#x600E;&#x6837;&#x7684;&#xFF1F;-&#x7F13;&#x5B58;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;cachedview-&#x4F1A;&#x6267;&#x884C;-onbindview-&#x5417;"><i class="fa fa-link" aria-hidden="true"></i></a>15.20.1. RecyclerView &#x7684;&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#x662F;&#x600E;&#x6837;&#x7684;&#xFF1F; &#x7F13;&#x5B58;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;cachedView &#x4F1A;&#x6267;&#x884C; onBindView &#x5417;?</h3>
+<h3 id="recyclerview-&#x5D4C;&#x5957;-recyclerview&#xFF0C;nestscrollview-&#x5D4C;&#x5957;-scrollview-&#x6ED1;&#x52A8;&#x51B2;&#x7A81;"><a name="recyclerview-&#x5D4C;&#x5957;-recyclerview&#xFF0C;nestscrollview-&#x5D4C;&#x5957;-scrollview-&#x6ED1;&#x52A8;&#x51B2;&#x7A81;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x5D4C;&#x5957;-recyclerview&#xFF0C;nestscrollview-&#x5D4C;&#x5957;-scrollview-&#x6ED1;&#x52A8;&#x51B2;&#x7A81;"><i class="fa fa-link" aria-hidden="true"></i></a>15.20.2. RecyclerView &#x5D4C;&#x5957; RecyclerView&#xFF0C;NestScrollView &#x5D4C;&#x5957; ScrollView &#x6ED1;&#x52A8;&#x51B2;&#x7A81;</h3>
+<h3 id="&#x8BB2;&#x4E00;&#x4E0B;-recyclerview-&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x6ED1;&#x52A8;10&#x4E2A;&#xFF0C;&#x518D;&#x6ED1;&#x56DE;&#x53BB;&#xFF0C;&#x4F1A;&#x6709;&#x51E0;&#x4E2A;&#x6267;&#x884C;-onbindview"><a name="&#x8BB2;&#x4E00;&#x4E0B;-recyclerview-&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x6ED1;&#x52A8;10&#x4E2A;&#xFF0C;&#x518D;&#x6ED1;&#x56DE;&#x53BB;&#xFF0C;&#x4F1A;&#x6709;&#x51E0;&#x4E2A;&#x6267;&#x884C;-onbindview" class="anchor-navigation-ex-anchor" href="#&#x8BB2;&#x4E00;&#x4E0B;-recyclerview-&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x6ED1;&#x52A8;10&#x4E2A;&#xFF0C;&#x518D;&#x6ED1;&#x56DE;&#x53BB;&#xFF0C;&#x4F1A;&#x6709;&#x51E0;&#x4E2A;&#x6267;&#x884C;-onbindview"><i class="fa fa-link" aria-hidden="true"></i></a>15.20.3. &#x8BB2;&#x4E00;&#x4E0B; RecyclerView &#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;,&#x6ED1;&#x52A8;10&#x4E2A;&#xFF0C;&#x518D;&#x6ED1;&#x56DE;&#x53BB;&#xFF0C;&#x4F1A;&#x6709;&#x51E0;&#x4E2A;&#x6267;&#x884C; onBindView</h3>
+<h3 id="&#x5982;&#x4F55;&#x5B9E;&#x73B0;-recyclerview-&#x7684;&#x5C40;&#x90E8;&#x66F4;&#x65B0;&#xFF0C;&#x7528;&#x8FC7;-payload-&#x5417;-notifyitemchange-&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF1F;"><a name="&#x5982;&#x4F55;&#x5B9E;&#x73B0;-recyclerview-&#x7684;&#x5C40;&#x90E8;&#x66F4;&#x65B0;&#xFF0C;&#x7528;&#x8FC7;-payload-&#x5417;-notifyitemchange-&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x5B9E;&#x73B0;-recyclerview-&#x7684;&#x5C40;&#x90E8;&#x66F4;&#x65B0;&#xFF0C;&#x7528;&#x8FC7;-payload-&#x5417;-notifyitemchange-&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>15.20.4. &#x5982;&#x4F55;&#x5B9E;&#x73B0; RecyclerView &#x7684;&#x5C40;&#x90E8;&#x66F4;&#x65B0;&#xFF0C;&#x7528;&#x8FC7; payload &#x5417;, notifyItemChange &#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF1F;</h3>
+<h3 id="recyclerview-&#x9632;&#x6B62;&#x5185;&#x5B58;oom&#x7684;&#x4E00;&#x9053;&#x9898;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528;&#x81EA;&#x8EAB;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;"><a name="recyclerview-&#x9632;&#x6B62;&#x5185;&#x5B58;oom&#x7684;&#x4E00;&#x9053;&#x9898;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528;&#x81EA;&#x8EAB;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x9632;&#x6B62;&#x5185;&#x5B58;oom&#x7684;&#x4E00;&#x9053;&#x9898;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528;&#x81EA;&#x8EAB;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>15.20.5. RecyclerView &#x9632;&#x6B62;&#x5185;&#x5B58;OOM&#x7684;&#x4E00;&#x9053;&#x9898;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528;&#x81EA;&#x8EAB;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;</h3>
+<h3 id="recyclerview-&#x548C;-listview-&#x533A;&#x522B;&#x3001;&#x7279;&#x70B9;&#x3001;&#x7F13;&#x5B58;-&#x3001;&#x61D2;&#x52A0;&#x8F7D;&#x3001;&#x5C40;&#x90E8;&#x5237;&#x65B0;-&#x591A;&#x79CD;type&#x573A;&#x666F;&#x4E0B;&#x600E;&#x4E48;&#x907F;&#x514D;&#x6ED1;&#x52A8;&#x5361;&#x987F;-&#x600E;&#x4E48;&#x4F18;&#x5316;&#x6ED1;&#x52A8;"><a name="recyclerview-&#x548C;-listview-&#x533A;&#x522B;&#x3001;&#x7279;&#x70B9;&#x3001;&#x7F13;&#x5B58;-&#x3001;&#x61D2;&#x52A0;&#x8F7D;&#x3001;&#x5C40;&#x90E8;&#x5237;&#x65B0;-&#x591A;&#x79CD;type&#x573A;&#x666F;&#x4E0B;&#x600E;&#x4E48;&#x907F;&#x514D;&#x6ED1;&#x52A8;&#x5361;&#x987F;-&#x600E;&#x4E48;&#x4F18;&#x5316;&#x6ED1;&#x52A8;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x548C;-listview-&#x533A;&#x522B;&#x3001;&#x7279;&#x70B9;&#x3001;&#x7F13;&#x5B58;-&#x3001;&#x61D2;&#x52A0;&#x8F7D;&#x3001;&#x5C40;&#x90E8;&#x5237;&#x65B0;-&#x591A;&#x79CD;type&#x573A;&#x666F;&#x4E0B;&#x600E;&#x4E48;&#x907F;&#x514D;&#x6ED1;&#x52A8;&#x5361;&#x987F;-&#x600E;&#x4E48;&#x4F18;&#x5316;&#x6ED1;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>15.20.6. RecyclerView &#x548C; ListView &#x533A;&#x522B;&#x3001;&#x7279;&#x70B9;&#x3001;&#x7F13;&#x5B58; &#x3001;&#x61D2;&#x52A0;&#x8F7D;&#x3001;&#x5C40;&#x90E8;&#x5237;&#x65B0; ,&#x591A;&#x79CD;type&#x573A;&#x666F;&#x4E0B;&#x600E;&#x4E48;&#x907F;&#x514D;&#x6ED1;&#x52A8;&#x5361;&#x987F; ,&#x600E;&#x4E48;&#x4F18;&#x5316;&#x6ED1;&#x52A8;</h3>
+<h3 id="recyclerview-&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#xFF0C;recyclerview-&#x9884;&#x53D6;&#xFF0C;recyclerview-&#x5C40;&#x90E8;&#x5237;&#x65B0;"><a name="recyclerview-&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#xFF0C;recyclerview-&#x9884;&#x53D6;&#xFF0C;recyclerview-&#x5C40;&#x90E8;&#x5237;&#x65B0;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x7F13;&#x5B58;&#x7ED3;&#x6784;&#xFF0C;recyclerview-&#x9884;&#x53D6;&#xFF0C;recyclerview-&#x5C40;&#x90E8;&#x5237;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a>15.20.7. RecyclerView &#x7F13;&#x5B58;&#x7ED3;&#x6784;&#xFF0C;RecyclerView &#x9884;&#x53D6;&#xFF0C;RecyclerView &#x5C40;&#x90E8;&#x5237;&#x65B0;</h3>
+<h3 id="recyclerview-&#x91CC;&#x9762;&#x90A3;&#x4E2A;-mchangedscrap-mattachedscrap--&#x4E4B;&#x7C7B;&#x7684;&#x5230;&#x5E95;&#x662F;&#x5728;&#x505A;&#x4EC0;&#x4E48;-"><a name="recyclerview-&#x91CC;&#x9762;&#x90A3;&#x4E2A;-mchangedscrap-mattachedscrap--&#x4E4B;&#x7C7B;&#x7684;&#x5230;&#x5E95;&#x662F;&#x5728;&#x505A;&#x4EC0;&#x4E48;-" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x91CC;&#x9762;&#x90A3;&#x4E2A;-mchangedscrap-mattachedscrap--&#x4E4B;&#x7C7B;&#x7684;&#x5230;&#x5E95;&#x662F;&#x5728;&#x505A;&#x4EC0;&#x4E48;-"><i class="fa fa-link" aria-hidden="true"></i></a>15.20.8. RecyclerView &#x91CC;&#x9762;&#x90A3;&#x4E2A; mChangedScrap, mAttachedScrap  &#x4E4B;&#x7C7B;&#x7684;&#x5230;&#x5E95;&#x662F;&#x5728;&#x505A;&#x4EC0;&#x4E48; ?</h3>
+<h2 id="recyclerview-&#x5E38;&#x7528;&#x51FD;&#x6570;"><a name="recyclerview-&#x5E38;&#x7528;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x5E38;&#x7528;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>15.21. RecyclerView &#x5E38;&#x7528;&#x51FD;&#x6570;</h2>
+<h3 id="computeverticalscrolloffset"><a name="computeverticalscrolloffset" class="anchor-navigation-ex-anchor" href="#computeverticalscrolloffset"><i class="fa fa-link" aria-hidden="true"></i></a>15.21.1. computeVerticalScrollOffset</h3>
+<p>&#x5DF2;&#x7ECF;&#x5411;&#x4E0B;&#x6EDA;&#x52A8;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x4E3A;0&#x65F6;&#x8868;&#x793A;&#x5DF2;&#x5904;&#x4E8E;&#x9876;&#x90E8;&#x3002;</p>
+<h3 id="computeverticalscrollrange"><a name="computeverticalscrollrange" class="anchor-navigation-ex-anchor" href="#computeverticalscrollrange"><i class="fa fa-link" aria-hidden="true"></i></a>15.21.2. computeVerticalScrollRange</h3>
+<p>&#x6574;&#x4F53;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C; &#x5305;&#x62EC;&#x5728;&#x663E;&#x793A;&#x533A;&#x57DF;&#x4E4B;&#x5916;&#x7684;&#x3002;</p>
+<h3 id="computeverticalscrollextent"><a name="computeverticalscrollextent" class="anchor-navigation-ex-anchor" href="#computeverticalscrollextent"><i class="fa fa-link" aria-hidden="true"></i></a>15.21.3. computeVerticalScrollExtent</h3>
+<p>&#x663E;&#x793A;&#x533A;&#x57DF;&#x7684;&#x9AD8;&#x5EA6;&#x3002;</p>
+<h2 id="recyclerview-&#x5B9E;&#x9645;&#x4F7F;&#x7528;"><a name="recyclerview-&#x5B9E;&#x9645;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x5B9E;&#x9645;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>15.22. RecyclerView &#x5B9E;&#x9645;&#x4F7F;&#x7528;</h2>
+<h3 id="recyclerview----radiogroup-radiobutton-&#x9632;&#x6B62;&#x6570;&#x636E;&#x9519;&#x4E71;-&#x5904;&#x7406;"><a name="recyclerview----radiogroup-radiobutton-&#x9632;&#x6B62;&#x6570;&#x636E;&#x9519;&#x4E71;-&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#recyclerview----radiogroup-radiobutton-&#x9632;&#x6B62;&#x6570;&#x636E;&#x9519;&#x4E71;-&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>15.22.1. RecyclerView  +  RadioGroup RadioButton &#x9632;&#x6B62;&#x6570;&#x636E;&#x9519;&#x4E71; &#x5904;&#x7406;</h3>
+<pre><code class="lang-text">https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/PreFlightCheckAdapter.java
+</code></pre>
+<h3 id="recyclerview--&#x7011;&#x5E03;&#x6D41;---glide-&#x957F;&#x5BBD;&#x6BD4;&#x52A0;&#x8F7D;"><a name="recyclerview--&#x7011;&#x5E03;&#x6D41;---glide-&#x957F;&#x5BBD;&#x6BD4;&#x52A0;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#recyclerview--&#x7011;&#x5E03;&#x6D41;---glide-&#x957F;&#x5BBD;&#x6BD4;&#x52A0;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>15.22.2. RecyclerView + &#x7011;&#x5E03;&#x6D41;  + Glide &#x957F;&#x5BBD;&#x6BD4;&#x52A0;&#x8F7D;</h3>
+<p>RecyclerView &#x3001;&#x7011;&#x5E03;&#x6D41;  &#x3001; Glide &#x957F;&#x5BBD;&#x6BD4;&#x52A0;&#x8F7D; &#x3001;&#x52A0;&#x8F7D;&#x66F4;&#x591A;&#x3001;&#x7F29;&#x7565;&#x56FE;</p>
+<pre><code class="lang-text">&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x8BF7;&#x53C2;&#x770B; AivinReader &#xFF0C;&#x91CC;&#x9762;&#x6709;&#x793A;&#x4F8B;&#x3002;
+StaggeredGridLayoutManager layoutManager ;// &#x7011;&#x5E03;&#x6D41;  
+recyclerView.setLayoutManager(layoutManager);
+recyclerView.addItemDecoration( ); // &#x95F4;&#x9694;
+
+// &#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x76D1;&#x542C;&#xFF0C;&#x5B9E;&#x73B0;&#x52A0;&#x8F7D;&#x66F4;&#x591A;&#x529F;&#x80FD;
+recyclerView.addOnScrollListener 
+
+ if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+    int []  positions = manager.findLastVisibleItemPositions(null);
+    int lastPos=0 ;
+    for(int pos : positions){
+        if(pos &gt; lastPos){
+            lastPos = pos;
+        }
+    }
+    int itemCount = manager.getItemCount();
+
+    // &#x5224;&#x65AD;&#x662F;&#x5426;&#x6ED1;&#x52A8;&#x5230;&#x4E86;&#x6700;&#x540E;&#x4E00;&#x4E2A;item&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x5411;&#x4E0A;&#x6ED1;&#x52A8;
+    if (lastPos == (itemCount - 1) &amp;&amp; isSlidingUpward) {
+        //&#x52A0;&#x8F7D;&#x66F4;&#x591A;
+        onLoadMore();
+    }
+}
+
+public void getItemOffsets( ) {
+    super.getItemOffsets(outRect, view, parent, state);
+
+    int left;
+    int right= margin;
+    int top;
+    int bottom =0;
+
+    StaggeredGridLayoutManager.LayoutParams params = (StaggeredGridLayoutManager.LayoutParams) view.getLayoutParams();
+    int position = params.getSpanIndex();
+    if (position == RecyclerView.NO_POSITION) {
+        return;
+    }
+
+    WkLog.showLog(&quot;position==&quot;+position);
+    // top
+    if(position &lt; columnCount ){
+        top = margin ;
+    }else{
+        top = 0 ;
+    }
+
+    // left
+    if(position%columnCount == 0){
+        left = margin ;
+    }else{
+        left = 0 ;
+    }
+    outRect.set(left, top, right, bottom);
+}
+
+// &#x5148;&#x901A;&#x8FC7; glide &#x83B7;&#x5F97;&#x5B9E;&#x9645;&#x7684;&#x56FE;&#x7247;&#x957F;&#x5BBD;&#x6BD4; &#xFF0C;&#x6700;&#x540E;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#x6309;&#x7167;&#x957F;&#x5BBD;&#x6BD4;&#x6765;&#x52A0;&#x8F7D;        
+private void loadPic2GetScale(PicBean picBean){
+    Glide.with(context)
+            .load(picBean.getPicUrl())
+            .into(new SimpleTarget&lt;Drawable&gt;() {
+                @Override
+                public void onResourceReady(@NonNull Drawable resource, @Nullable Transition&lt;? super Drawable&gt; transition) {
+                    float scale = resource.getIntrinsicWidth() / (float) resource.getIntrinsicHeight();
+                    picBean.setScale(scale); // k = w / h
+                    notifyDataSetChanged();
+                }
+                @Override
+                public void onLoadFailed(@Nullable Drawable errorDrawable) {
+                    super.onLoadFailed(errorDrawable);
+                    WkLog.showLog(&quot;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x957F;&#x5BBD;&#x6BD4;&#x5931;&#x8D25;0=&quot; );
+                }
+            });
+}
+
+int screenWidth = (int) (MyDeviceInforHelper.getScreenWidth(context)/columnCount);
+            final ViewGroup.LayoutParams layoutParams =chooseHolder.picShowIv.getLayoutParams();
+            layoutParams.width = screenWidth ;
+            layoutParams.height = (int) (layoutParams.width / bean.getScale());
+Glide.with(context)
+        .load(bean.getPicUrl())
+        .placeholder(R.mipmap.loading2)
+        .thumbnail(0.5f) // &#x7F29;&#x7565;&#x56FE;&#x4E3A;&#x539F;&#x56FE;&#x7684; 0.1&#x500D;
+        .transition(new DrawableTransitionOptions().crossFade())
+        .into(chooseHolder.picShowIv);
+</code></pre>
+<h3 id="recyclerview--&#x7011;&#x5E03;&#x6D41;-bug"><a name="recyclerview--&#x7011;&#x5E03;&#x6D41;-bug" class="anchor-navigation-ex-anchor" href="#recyclerview--&#x7011;&#x5E03;&#x6D41;-bug"><i class="fa fa-link" aria-hidden="true"></i></a>15.22.3. RecyclerView + &#x7011;&#x5E03;&#x6D41; bug</h3>
+<pre><code class="lang-text">&#x7011;&#x5E03;&#x6D41;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x65F6;&#xFF0C;&#x5F80;&#x56DE;&#x6ED1;&#x52A8;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x56FE;&#x7247;&#x91CD;&#x6392;&#x5217;&#x7684;&#x52A8;&#x753B;&#x3002;
+
+// &#x51FA;&#x73B0;&#x8DF3;&#x52A8;&#x548C;&#x91CD;&#x65B0;&#x6392;&#x5217;&#x7684;&#x539F;&#x56E0;
+&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x52A0;&#x8F7D;&#x7684;&#x56FE;&#x7247;&#x9AD8;&#x5EA6;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x800C;&#x5F53;&#x6211;&#x4EEC;&#x5411;RecyclerView&#x4E0B;&#x65B9;&#x6ED1;&#x52A8;&#x4E00;&#x6BB5;&#x8DDD;&#x79BB;&#x540E;&#xFF0C;
+&#x7531;&#x4E8E;ViewHolder&#x7684;&#x56DE;&#x6536;&#x673A;&#x5236;&#xFF0C;item&#x7684;&#x5C3A;&#x5BF8;&#x5E76;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x6ED1;&#x56DE;&#x5230;&#x4E0A;&#x65B9;&#x65F6;Item&#x9700;&#x8981;&#x91CD;&#x65B0;&#x81EA;&#x884C;&#x7ED8;&#x5236;&#xFF0C;
+&#x4E8E;&#x662F;&#x8FD9;&#x4E2A;&#x53C8;&#x5BFC;&#x81F4;&#x91CD;&#x7ED8;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x6709;&#x95EA;&#x70C1;&#x3001;&#x8DF3;&#x52A8;&#x7B49;&#x95EE;&#x9898;&#x3002;
+
+// &#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x5C31;&#x662F;&#xFF1A;
+&#x5728; onBindViewHolder &#x524D;&#x786E;&#x5B9A;&#x4E86;Item&#x7684;&#x5C3A;&#x5BF8;&#x3002;
+
+&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;
+1&#x3001;&#x81EA;&#x5DF1;&#x672C;&#x5730;&#x505A;&#x4E00;&#x4E2A;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x670D;&#x52A1;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;
+&#x53EA;&#x6709;&#x56FE;&#x7247;&#x4FE1;&#x606F;&#x83B7;&#x53D6;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x53BB;&#x52A0;&#x8F7D; adapter
+2&#x3001;&#x5982;&#x679C;&#x89C9;&#x5F97;&#x65B9;&#x6CD5;1&#x8981;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x592A;&#x957F;&#x5F71;&#x54CD;&#x4F53;&#x9A8C;&#xFF0C;
+&#x53EF;&#x4EE5;&#x8BA9;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE; json &#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5E26;&#x4E0A;&#x56FE;&#x7247;&#x7684;&#x957F;&#x5BBD;&#x6BD4;&#x4F8B;&#x5373;&#x53EF;&#x3002;
+
+&#x641C;&#x7D22;&#x7F51;&#x7EDC;&#x4E0A;&#x6709;&#x4EBA;&#x7ED9;&#x51FA;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848; 
+layoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE) 
+&#x6211;&#x8BD5;&#x4E86;&#x4E4B;&#x540E;&#x5E76;&#x6CA1;&#x6709;&#x7528;&#xFF0C;&#x8BBE;&#x7F6E;&#x540E; RecyclerView &#x663E;&#x793A;&#x7A7A;&#x767D;&#xFF0C;&#x52A0;&#x8F7D;&#x4E0D;&#x51FA;&#x56FE;&#x7247;&#x3002;&#x6240;&#x4EE5;&#x653E;&#x5F03;&#x3002;
+
+// &#x6700;&#x7EC8;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;
+1&#x3001;&#x901A;&#x8FC7;&#x4E8B;&#x5148;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x7684;&#x957F;&#x5BBD;&#x6BD4; &#x89E3;&#x51B3;&#x91CD;&#x65B0;&#x5BF9;&#x5176;&#x95EE;&#x9898;&#x3002;
+2&#x3001;&#x5982;&#x679C;&#x6709;&#x4E0A;&#x6ED1;&#x52A0;&#x8F7D;&#x66F4;&#x591A;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x8FDB;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;&#x3002;
+if(mFirst){
+    notifyDataSetChanged();
+    mFirst = false ;
+}else {
+    notifyItemRangeInserted(start ,pageData.size()); // &#x9700;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5C40;&#x90E8;&#x5237;&#x65B0;
+}
+
+&#x6CE8;&#x610F;&#x4E0D;&#x8981;&#x5728;&#x6EDA;&#x52A8;&#x76D1;&#x542C;&#x91CC;&#x8C03;&#x7528; invalidateSpanAssignments &#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x91CD;&#x6392;&#x3002;
+manager.invalidateSpanAssignments(); // &#xFF01;
+
+&#x8FD9;&#x91CC;&#x653E;&#x4E86;&#x4E00;&#x4E2A; &#x7011;&#x5E03;&#x6D41;demo .
+https://gitee.com/hnyer/WaterfallFlow
+</code></pre>
+<h3 id="recyclerview-&#x4FEE;&#x6539;&#x6ED1;&#x52A8;&#x901F;&#x5EA6;"><a name="recyclerview-&#x4FEE;&#x6539;&#x6ED1;&#x52A8;&#x901F;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x4FEE;&#x6539;&#x6ED1;&#x52A8;&#x901F;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>15.22.4. RecyclerView &#x4FEE;&#x6539;&#x6ED1;&#x52A8;&#x901F;&#x5EA6;</h3>
+<pre><code class="lang-text">&#x5982;&#x679C; RecyclerView item &#x5E03;&#x5C40;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x867D;&#x7136;&#x6709;&#x590D;&#x7528;&#x673A;&#x5236;&#xFF0C;
+&#x4F46;&#x662F;&#x5982;&#x679C;&#x901F;&#x5EA6;&#x8FC7;&#x4E8E;&#x5FEB;&#x901F;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x98D9;&#x5347;&#x6BD4;&#x8F83;&#x5FEB;&#x3002;
+&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x53CD;&#x5C04;&#x7684;&#x65B9;&#x5F0F; &#x5BF9; RecyclerView &#x7684;&#x6ED1;&#x52A8;&#x901F;&#x5EA6;&#x505A;&#x4E00;&#x4E2A;&#x9650;&#x5236;&#x3002;
+&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x8FC7;&#x5FEB;&#x52A0;&#x8F7D;&#x5185;&#x5BB9;&#xFF0C;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x51CF;&#x5C11;APP&#x4E0D;&#x5361;&#x987F;&#x4E0D;&#x6389;&#x5E27;&#x3002;
+
+private void setMaxFligVelocity(RecyclerView recyclerView ,int velocity){
+    try {
+        Field field = recyclerView.getClass().getDeclaredField(&quot;mMaxFlingVelocity&quot;);
+        field.setAccessible(true);
+        field.set(recyclerView ,velocity);
+    } catch ( Exception e) {
+        e.printStackTrace();
+    }
+    int speedAfter =recyclerView.getMaxFlingVelocity();
+    WkLog.showLog(&quot;&#x8BBE;&#x7F6E;&#x540E;&#x6700;&#x5927;&#x6ED1;&#x52A8;&#x901F;&#x5EA6;=&quot;+ speedAfter);
+}
+</code></pre>
+<h3 id="recyclerview-&#x5FEB;&#x901F;&#x62D6;&#x52A8;&#x6761;"><a name="recyclerview-&#x5FEB;&#x901F;&#x62D6;&#x52A8;&#x6761;" class="anchor-navigation-ex-anchor" href="#recyclerview-&#x5FEB;&#x901F;&#x62D6;&#x52A8;&#x6761;"><i class="fa fa-link" aria-hidden="true"></i></a>15.22.5. RecyclerView &#x5FEB;&#x901F;&#x62D6;&#x52A8;&#x6761;</h3>
+<p>&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x8BF7;&#x53C2;&#x770B; AivinReader </p>
+<pre><code class="lang-text">app:fastScrollEnabled=&quot;true&quot;
+app:fastScrollHorizontalThumbDrawable=&quot;@drawable/recyclerview_thumb_drawable&quot;
+app:fastScrollVerticalThumbDrawable=  &quot;@drawable/recyclerview_thumb_drawable&quot;
+app:fastScrollHorizontalTrackDrawable=&quot;@drawable/recyclerview_line_drawable&quot;
+app:fastScrollVerticalTrackDrawable=  &quot;@drawable/recyclerview_line_drawable&quot;
+
+&#x5BBD;&#x5EA6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x3002;&#x6CE8;&#xFF1A;&#x9AD8;&#x5EA6;&#x4E0D;&#x751F;&#x6548;&#x3002;
+&lt;size android:height=&quot;80dp&quot;
+    android:width=&quot;50dp&quot;/&gt;
+&#x5982;&#x679C; Thumb &#x3001;TrackDrawable &#x7684;&#x5BBD;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F;&#x5927;&#x7684;&#x90A3;&#x4E2A;&#x6765;&#x786E;&#x5B9A;&#x3002;
+
+
+&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684;&#xFF0C;&#x6709;&#x4EBA;&#x89C9;&#x5F97;&#x6570;&#x636E;&#x592A;&#x591A;&#x7684;&#x65F6;&#x5019;&#x6ED1;&#x5757;&#x7684;&#x9AD8;&#x5EA6;&#x592A;&#x5C0F;&#x4E86;&#xFF0C;
+&#x60F3;&#x8981;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x9AD8;&#x5EA6;&#x7684;&#x6ED1;&#x5757;&#x3002;&#x7CFB;&#x7EDF;&#x7684;&#x662F;&#x6CA1;&#x529E;&#x6CD5;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x5E76;&#x6CA1;&#x6709;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x7684;&#x4E1C;&#x897F;&#x3002;
+
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x5E93;
+//1&#x3001; https://github.com/quiph/RecyclerView-FastScroller  
+&#x8026;&#x5408;&#x6027;&#x5F31; &#xFF0C;&#x4F20;&#x5165;&#x4E00;&#x4E2A; RecyclerView &#x4F5C;&#x4E3A;&#x53C2;&#x6570; , &#x4E0D;&#x652F;&#x6301;&#x7011;&#x5E03;&#x6D41; StaggeredGridLayoutManager &#x5E03;&#x5C40;
+
+//2&#x3001;  https://github.com/timusus/RecyclerView-FastScroll
+FastScrollRecyclerView extends RecyclerView  ,&#x6548;&#x679C;&#x8DDF;&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684;&#x6BD4;&#x8F83;&#x50CF;
+Supports vertical RecyclerViews using either LinearLayoutManager or GridLayoutManager
+&#x4E0D;&#x652F;&#x6301;  StaggeredGridLayoutManager
+
+// 3&#x3001; https://github.com/myinnos/AlphabetIndex-Fast-Scroll-RecyclerView
+A Powerful AlphabetIndex FastScroller for Android&apos;s RecyclerView 
+&#x4EFF;&#x7167;&#x5FAE;&#x4FE1;&#x5E26;&#x5B57;&#x6BCD;&#x7D22;&#x5F15;&#x7684;&#x90A3;&#x79CD;&#x6837;&#x5F0F;
+
+//4 &#x3001;RecyclerViewFastScroller &#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E2A; View
+&#x652F;&#x6301;  StaggeredGridLayoutManager &#xFF0C;AivinReader &#x4E2D;&#x6709;&#x7528;&#x4E0A;&#x3002;
+https://gitee.com/Aivin_CodeShare/android_tool_code/raw/master/RecyclerViewFastScroller.java
+https://github.com/AndroidDeveloperLB/LollipopContactsRecyclerViewFastScroller
+</code></pre>
+<h1 id="textclock"><a name="textclock" class="anchor-navigation-ex-anchor" href="#textclock"><i class="fa fa-link" aria-hidden="true"></i></a>16. TextClock</h1>
+<pre><code class="lang-text">&#x5229;&#x7528; TextClock &#x663E;&#x793A;&#x5B9E;&#x65F6;&#x65F6;&#x95F4;&#x3002;
+&lt;TextClock
+    android:id=&quot;@+id/tvTest2&quot;
+    android:textSize=&quot;30dp&quot;
+    android:background=&quot;#ff0000&quot;
+    android:textColor=&quot;#ffffff&quot;
+    android:format12Hour=&quot;HH:mm:ss&quot;
+    android:format24Hour=&quot;HH:mm:ss&quot;
+    android:text=&quot;23:40&quot;
+    android:layout_centerInParent=&quot;true&quot;
+    android:layout_width=&quot;wrap_content&quot;
+    android:layout_height=&quot;wrap_content&quot;/&gt;
+</code></pre>
+<footer class="page-footer"><span class="copyright">( no Copyright&#xFF0C;enjoy youself ! ) all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">The file was updated at :
+2023-08-12 17:02:10
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="android零散知识.html" class="navigation navigation-prev " aria-label="Previous page: Android部分">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="android零散知识.html" class="navigation navigation-next " aria-label="Next page: Android零散知识">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基础控件使用","level":"1.12.1","depth":2,"next":{"title":"Android零散知识","level":"1.12.2","depth":2,"path":"chinese/android基础/android零散知识.md","ref":"chinese/android基础/android零散知识.md","articles":[]},"previous":{"title":"Android部分","level":"1.12","depth":1,"path":"chinese/android基础/android零散知识.md","ref":"chinese/android基础/android零散知识.md","articles":[{"title":"基础控件使用","level":"1.12.1","depth":2,"path":"chinese/android基础/基础控件使用.md","ref":"chinese/android基础/基础控件使用.md","articles":[]},{"title":"Android零散知识","level":"1.12.2","depth":2,"path":"chinese/android基础/android零散知识.md","ref":"chinese/android基础/android零散知识.md","articles":[]},{"title":"Android坐标体系","level":"1.12.3","depth":2,"path":"chinese/android基础/android坐标体系.md","ref":"chinese/android基础/android坐标体系.md","articles":[]},{"title":"APP启动流程","level":"1.12.4","depth":2,"path":"chinese/android基础/APP的启动流程.md","ref":"chinese/android基础/APP的启动流程.md","articles":[]},{"title":"View加载流程","level":"1.12.5","depth":2,"path":"chinese/android基础/View加载流程.md","ref":"chinese/android基础/View加载流程.md","articles":[]},{"title":"事件分发机制","level":"1.12.6","depth":2,"path":"chinese/android基础/事件分发机制.md","ref":"chinese/android基础/事件分发机制.md","articles":[]},{"title":"控件绘制流程","level":"1.12.7","depth":2,"path":"chinese/android基础/控件绘制流程.md","ref":"chinese/android基础/控件绘制流程.md","articles":[]},{"title":"常用shape","level":"1.12.8","depth":2,"path":"chinese/android基础/常用shape.md","ref":"chinese/android基础/常用shape.md","articles":[]},{"title":"进程通信","level":"1.12.9","depth":2,"path":"chinese/android基础/进程通信.md","ref":"chinese/android基础/进程通信.md","articles":[]},{"title":"通信方式详解","level":"1.12.10","depth":2,"path":"chinese/通信方式/通信方式详解.md","ref":"chinese/通信方式/通信方式详解.md","articles":[]},{"title":"Binder详解","level":"1.12.11","depth":2,"path":"chinese/android基础/Binder详解.md","ref":"chinese/android基础/Binder详解.md","articles":[]},{"title":"Handle详解","level":"1.12.12","depth":2,"path":"chinese/android基础/Handler详解.md","ref":"chinese/android基础/Handler详解.md","articles":[]},{"title":"Fragment详解","level":"1.12.13","depth":2,"path":"chinese/android基础/Fragment详解.md","ref":"chinese/android基础/Fragment详解.md","articles":[]},{"title":"Activity详解","level":"1.12.14","depth":2,"path":"chinese/android基础/Activity详解.md","ref":"chinese/android基础/Activity详解.md","articles":[]},{"title":"BroadcastReceiver详解","level":"1.12.15","depth":2,"path":"chinese/android基础/BroadcastReceiver.md","ref":"chinese/android基础/BroadcastReceiver.md","articles":[]},{"title":"Service详解","level":"1.12.16","depth":2,"path":"chinese/android基础/Service服务.md","ref":"chinese/android基础/Service服务.md","articles":[]},{"title":"动画详解","level":"1.12.17","depth":2,"path":"chinese/android基础/动画详解.md","ref":"chinese/android基础/动画详解.md","articles":[]},{"title":"屏幕刷新机制","level":"1.12.18","depth":2,"path":"chinese/android基础/屏幕刷新机制.md","ref":"chinese/android基础/屏幕刷新机制.md","articles":[]},{"title":"屏幕适配","level":"1.12.19","depth":2,"path":"chinese/android基础/屏幕适配.md","ref":"chinese/android基础/屏幕适配.md","articles":[]},{"title":"图片加载详解","level":"1.12.20","depth":2,"path":"chinese/android基础/图片加载详解.md","ref":"chinese/android基础/图片加载详解.md","articles":[]},{"title":"沉浸式","level":"1.12.21","depth":2,"path":"chinese/android基础/沉浸式.md","ref":"chinese/android基础/沉浸式.md","articles":[]},{"title":"相机模块","level":"1.12.22","depth":2,"path":"chinese/android基础/相机模块.md","ref":"chinese/android基础/相机模块.md","articles":[]},{"title":"地图模块","level":"1.12.23","depth":2,"path":"chinese/android基础/地图模块.md","ref":"chinese/android基础/地图模块.md","articles":[]},{"title":"蓝牙详解","level":"1.12.24","depth":2,"path":"chinese/android基础/蓝牙详解.md","ref":"chinese/android基础/蓝牙详解.md","articles":[]},{"title":"Androidstudio插件开发","level":"1.12.25","depth":2,"path":"chinese/android基础/Androidstudio插件开发.md","ref":"chinese/android基础/Androidstudio插件开发.md","articles":[]},{"title":"Apk插件化开发","level":"1.12.26","depth":2,"path":"chinese/android基础/Apk插件化开发.md","ref":"chinese/android基础/Apk插件化开发.md","articles":[]},{"title":"App组件化开发","level":"1.12.27","depth":2,"path":"chinese/android基础/App组件化开发.md","ref":"chinese/android基础/App组件化开发.md","articles":[]},{"title":"sdk开发","level":"1.12.28","depth":2,"path":"chinese/android基础/sdk开发.md","ref":"chinese/android基础/sdk开发.md","articles":[]},{"title":"APP优化","level":"1.12.29","depth":2,"path":"chinese/android基础/APP优化.md","ref":"chinese/android基础/APP优化.md","articles":[]},{"title":"项目参数配置","level":"1.12.30","depth":2,"path":"chinese/android基础/项目参数配置.md","ref":"chinese/android基础/项目参数配置.md","articles":[]},{"title":"App发布","level":"1.12.31","depth":2,"path":"chinese/android基础/App发布.md","ref":"chinese/android基础/App发布.md","articles":[]},{"title":"Android外挂","level":"1.12.32","depth":2,"path":"chinese/android基础/Android外挂.md","ref":"chinese/android基础/Android外挂.md","articles":[]},{"title":"Android字节码插桩","level":"1.12.33","depth":2,"path":"chinese/android基础/Android字节码插桩.md","ref":"chinese/android基础/Android字节码插桩.md","articles":[]},{"title":"智能家居","level":"1.12.34","depth":2,"path":"chinese/android基础/智能家居.md","ref":"chinese/android基础/智能家居.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","search-plus","todo","anchor-navigation-ex","copy-code-button","fontsettings","tbfed-pagefooter","local-video","splitter","expandable-chapters","favicon","theme-comscore","local-video","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"( no Copyright，enjoy youself ! )","modify_label":"The file was updated at :","modify_format":"YYYY-MM-DD HH:mm:ss"},"livereload":{},"todo":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"theme-comscore":{},"local-video":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Aivin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Aivin开发笔记","language":"zh-hans","gitbook":"*","description":"Aivin开发笔记"},"file":{"path":"chinese/android基础/基础控件使用.md","mtime":"2023-08-12T09:02:10.881Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-12T09:04:56.212Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
