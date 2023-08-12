@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chinese/pics/as默认不打开项目.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chinese/pics/mqtt配置.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/BroadcastReceiver.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/BroadcastReceiver.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/android零散知识.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/android零散知识.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/地图模块.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/地图模块.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/基础控件使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/基础控件使用.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/android基础/常用shape.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/android基础/常用shape.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/doc/常用框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/doc/常用框架.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/java基础/奇技淫巧.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/java基础/奇技淫巧.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/kotlin/kotlin部分.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/kotlin/kotlin部分.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/native/车机APP开发.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/native/车机APP开发.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/常用软件/常用软件.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/常用软件/常用软件.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/chinese/通信方式/通信方式详解.md" afterDir="false" />
-    </list>
+    <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,11 +162,6 @@
             <path>
               <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
               <item name="androidDev" type="462c0819:PsiDirectoryNode" />
-              <item name="chinese" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="androidDev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="androidDev" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -324,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691752575246</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="新增内容">
+      <created>1691831417594</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691831417594</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -351,7 +338,7 @@
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32719547" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.5439094" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.5141643" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329582" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.55807364" />
@@ -444,7 +431,8 @@
     <MESSAGE value="增加常用的adb命令" />
     <MESSAGE value="更新一些东西" />
     <MESSAGE value="更新_book" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新_book" />
+    <MESSAGE value="新增内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增内容" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/chinese/android基础/android坐标体系.md">
