@@ -9,7 +9,8 @@ https://aivin666.netlify.app/
 | email：aivin666@qq.com 、wechat: Aivin666666|
 |https://blog.csdn.net/dengpanwen  //CSDN |
 |https://hnyer.gitee.io  //红尘之声 |
-|http://hnyer.gitee.io/resume //在线简历 |
+|~~http://hnyer.gitee.io/resume~~ //在线简历 |
+|https://aivinresume.netlify.app/ //在线简历 |
 
 
 
