@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0680efdc-3806-4a3c-8b6a-37f646c653fa" name="Default Changelist" comment="新增内容">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/SUMMARY.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_book/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/APP优化.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chinese/android基础/APP优化.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/APP的启动流程.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chinese/android基础/APP的启动流程.html" afterDir="false" />
@@ -36,6 +33,7 @@
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/屏幕适配.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chinese/android基础/屏幕适配.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/常用shape.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chinese/android基础/常用shape.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/控件绘制流程.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chinese/android基础/控件绘制流程.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/无人机开发.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chinese/android基础/无人机开发.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/智能家居.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chinese/android基础/智能家居.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/沉浸式.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chinese/android基础/沉浸式.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chinese/android基础/相机模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chinese/android基础/相机模块.html" afterDir="false" />
@@ -122,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/SUMMARY.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="227">
-              <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
+              <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -130,8 +128,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="492" column="20" selection-start-line="492" selection-start-column="20" selection-end-line="492" selection-end-column="20" />
+            <state relative-caret-position="62">
+              <caret line="492" column="20" lean-forward="true" selection-start-line="492" selection-start-column="20" selection-end-line="492" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -452,7 +450,7 @@
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32719547" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.69448376" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.69405097" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.329582" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.45042494" />
@@ -838,14 +836,14 @@
     <entry file="file://$PROJECT_DIR$/SUMMARY.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
-          <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
+          <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="492" column="20" selection-start-line="492" selection-start-column="20" selection-end-line="492" selection-end-column="20" />
+        <state relative-caret-position="62">
+          <caret line="492" column="20" lean-forward="true" selection-start-line="492" selection-start-column="20" selection-end-line="492" selection-end-column="20" />
         </state>
       </provider>
     </entry>
