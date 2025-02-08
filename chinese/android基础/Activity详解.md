@@ -266,3 +266,17 @@ selectedProduct = getIntent().getParcelableArrayListExtra(MODE_DETAIL) ;
 // 前置条件
 实现了 Parcelable 接口
 ``` 
+
+##  进场、退场动画
+```text
+public void goSecendActivity() {
+    Intent intent = new Intent(this, MainActivity2.class);
+    startActivity(intent);
+    overridePendingTransition(0, 0);
+}
+
+public void finish() {
+    super.finish();
+    overridePendingTransition(0, 0);
+}
+```

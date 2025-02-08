@@ -521,46 +521,6 @@ val cc = SingletonHolder<String, String>("tom") { name: String, age: Int ->
 
 
 
-## 协程  Coroutine
-```text
-协程并不是 Kotlin 提出的，概念已经提出很久了。
-java 原生语法暂未支持 ,但是可以通过一些第三方的框架来实现。
-
-对操作系统来说，线程是最小的执行单元，进程是最小的资源管理单元。
-协程不是被操作系统内核所管理，是完全由程序所控制的。
-一个进程可以拥有多个线程一样，一个线程可以拥有多个协程。
-
-当系统线程较少的时候没有什么问题，当线程数量非常多的时候，却产生了问题。
-一是系统线程会占用非常多的内存空间，二是过多的线程切换会占用大量的系统时间。
-
-协程运行在线程之上，当一个协程执行完成后，可以选择主动让出，让另一个协程运行在当前线程之上。
-协程并没有增加线程数量，只是在线程的基础之上通过 分时复用 的方式运行多个协程，
-协程的切换在用户态完成，切换的代价比线程从用户态到内核态的代价小很多。
-
-协程跑在单个线程内，是单线程下的并发 。不适合 CPU 密集型任务 ，适合 IO密集型任务。
-此外，协程代码中决不能出现阻塞，否则整个线程都会停下来等待该操作完成。
-```
-
-## kotlin 协程 引入
-https://github.com/Kotlin/kotlinx.coroutines
-```text
-implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
-implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
-val jobWork= GlobalScope.launch( Dispatchers.Main ){    }// 工作线程
-val mainWork =GlobalScope.launch(Dispatchers.IO) {   }// 主线程切换
-jobWork.cancel() // 取消协程
-```
-
-## 协程作用域 CoroutineScope
-```text
-暂未学习
-```
-
-## 协程上下文 CoroutineContext
-```text
-暂未学习
-```
-
 
 ## 命名参数 、 默认参数
 ```text
@@ -796,6 +756,66 @@ class XfAsrReslutTool private constructor() {
     fun dispatcherAsrReslut(result: String) {
         for (callback in asrResultCallbacks) {
             callback.onGetAsrResult(result)
+        }
+    }
+}
+```
+
+
+
+# 协程  Coroutine
+```text
+协程并不是 Kotlin 提出的，概念已经提出很久了。
+java 原生语法暂未支持 ,但是可以通过一些第三方的框架来实现。
+
+对操作系统来说，线程是最小的执行单元，进程是最小的资源管理单元。
+协程不是被操作系统内核所管理，是完全由程序所控制的。
+一个进程可以拥有多个线程一样，一个线程可以拥有多个协程。
+
+当系统线程较少的时候没有什么问题，当线程数量非常多的时候，却产生了问题。
+一是系统线程会占用非常多的内存空间，二是过多的线程切换会占用大量的系统时间。
+
+协程运行在线程之上，当一个协程执行完成后，可以选择主动让出，让另一个协程运行在当前线程之上。
+协程并没有增加线程数量，只是在线程的基础之上通过 分时复用 的方式运行多个协程，
+协程的切换在用户态完成，切换的代价比线程从用户态到内核态的代价小很多。
+
+协程跑在单个线程内，是单线程下的并发 。不适合 CPU 密集型任务 ，适合 IO密集型任务。
+此外，协程代码中决不能出现阻塞，否则整个线程都会停下来等待该操作完成。
+```
+
+## kotlin 协程 引入
+https://github.com/Kotlin/kotlinx.coroutines
+```text
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+val jobWork= GlobalScope.launch( Dispatchers.Main ){    }// 工作线程
+val mainWork =GlobalScope.launch(Dispatchers.IO) {   }// 主线程切换
+jobWork.cancel() // 取消协程
+```
+
+## 协程作用域 CoroutineScope
+```text
+private val coroutineScope =CoroutineScope(CoroutineName("LyOfflineModeTool") + SupervisorJob())
+```
+
+## 协程上下文 CoroutineContext
+```text
+暂未学习
+```
+
+## 协程异步
+```text
+private suspend fun hasAgileBoundByQueryDb(): Boolean {
+    return suspendCoroutine { cont ->
+        val resultList = mutableListOf<List<Int>>()
+        coroutineScope.launch(Dispatchers.IO) {
+            val agileList =
+                deviceDao.getDeviceTuple4Pid(LyPidConfig.PID_AGILE_BUTTON.toString())
+            if (agileList.isEmpty()) {
+                cont.resume(false)
+                return@launch
+            }
+            cont.resume(true)
         }
     }
 }

@@ -70,6 +70,7 @@
     * [Apk插件化开发](chinese/android基础/Apk插件化开发.md)
     * [App组件化开发](chinese/android基础/App组件化开发.md)
     * [sdk开发](chinese/android基础/sdk开发.md)
+    * [gradle详解](chinese/android基础/gradle详解.md)
     * [APP优化](chinese/android基础/APP优化.md)
     * [项目参数配置](chinese/android基础/项目参数配置.md)
     * [App发布](chinese/android基础/App发布.md)
